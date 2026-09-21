@@ -37,6 +37,9 @@ Accepted on 2026-09-19 unless marked otherwise. New proposals wait for your word
 | **D-023** | Each operation has its own input zone: `inbox/sources/` for `/ingest`, `inbox/questions.md` for `/ask`, `inbox/checks.md` for `/lint`. A command reads only its own zone and never re-routes misfiled material. | **Accepted 2026-09-19** | Keeps the three operations from mixing ([[13 Input Zones]]) |
 | **D-024** | The draft queue is renamed `mine/drafts/`, so "inbox" means the input zones and nothing else | **Accepted 2026-09-19** | Two folders called inbox would be confusing from day one |
 | **D-025** | All three operations run as Claude Code commands in a vault session. No plugins, scripts, or separate apps. | **Accepted 2026-09-19** | Your preference for Claude as the platform; one place to learn |
+| **D-026** | **The Obsidian curriculum is removed.** Doc 05 becomes a one-page reference; no stages, lessons, or exercises. Skills are picked up inside the modules. | New, proposed 2026-09-19 | Speed. Under the adopted pattern Claude writes the wiki, so hand-authoring practice isn't on the critical path |
+| **D-027** | Goal G5 changes from "fluent in Obsidian" to "able to verify any wiki claim against its source" | New, proposed 2026-09-19 | The review loop is what keeps the wiki honest; general tool fluency isn't |
+| **D-028** | The project documents live in a private GitHub repo, synced into this Project's knowledge. The repo is the master copy: Claude sends changed files, you commit, push, and click Sync. | **Accepted 2026-09-21** (you set it up) | No re-uploading between modules; history and rollback for free |
 | **D-022** | Sources are ingested one at a time, with you reading the result, at least through M3 | **Accepted 2026-09-19** | Karpathy's own preference, and how you learn what good output looks like |
 
 **Superseded:** D-004 (Claude writes only to an AI-drafts folder) and D-005 (PARA structure) are replaced by D-019 and D-020. D-007 (no automatic saving) still holds: operations run when you ask. D-009 (hyphenated folder names) and D-016 (templates early) are folded into [[04 Vault Blueprint]] and module M2.
@@ -55,6 +58,7 @@ Accepted on 2026-09-19 unless marked otherwise. New proposals wait for your word
 | Q-011 | Review method | Document loop | **Comments in chat** |
 | Q-012 | Session style | Chat structure | **One chat per module** |
 | **Q-013** | **What are the first 5 sources?** The LLM Wiki gist is source 1; four more are yours | Module M3 needs them, and they set the wiki's first shape | Open, due at the start of M3 |
+| **Q-014** | Once M1 creates the vault repo, does it replace the separate documents repo? | Two repos holding the same documents will drift apart | Open, due at the end of M1. Recommendation: yes, with project knowledge pointed at `mine/projects/thinking-system/` |
 
 ## Plugin and MCP register
 | Name | Type | Why it's needed | Source | Date added |

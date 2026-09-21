@@ -26,7 +26,7 @@ tags: [project/thinking-system, moc]
 | 02 | [[02 System Architecture]] | The three layers, the three operations, and what we add on top | **Accepted** |
 | 03 | [[03 Trust and Provenance]] | Citation rules, verified and unverified claims, what is parked | **Accepted** |
 | 04 | [[04 Vault Blueprint]] | Folders, page types, properties, index and log formats | **Accepted** |
-| 05 | [[05 Learning Path]] | Curriculum for using Obsidian as a second brain | **Accepted** |
+| 05 | [[05 Obsidian Essentials]] | The one page of Obsidian this system needs | **Accepted** |
 | 06 | [[06 Roadmap]] | MVP definition, phases, modules M0–M8 | **Accepted** |
 | 07 | [[07 Decision Log]] | Decisions made and questions still open | Living document |
 | 08 | [[08 Claude Operating Instructions]] | The schema file, permission settings, skills, and tests | **Accepted** |
@@ -46,7 +46,7 @@ tags: [project/thinking-system, moc]
 4. [[03 Trust and Provenance]]: what keeps a compiled wiki honest.
 5. [[08 Claude Operating Instructions]]: exactly what Claude will be told and allowed to do.
 6. [[07 Decision Log]]: accept or reject the proposed decisions.
-7. [[05 Learning Path]]: start Stage 0 whenever you like.
+7. [[05 Obsidian Essentials]]: the one page of Obsidian you need.
 
 ## Origin of the pattern
 The foundation is Andrej Karpathy's "LLM Wiki" idea file, at https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f. It will also be the first source you ingest, so the vault's first pages will be about the pattern the vault is built on.
@@ -68,3 +68,5 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | **1.0** | 2026-09-18 | **Adopted the LLM Wiki pattern as the foundation.** Vault restructured into `raw/`, `wiki/`, `mine/`; ingest, query, and lint become the core operations; doc 03 narrowed to trust and provenance, with bank data governance parked as doc 12 |
 | 1.1 | 2026-09-19 | **Documents 00–09 accepted** and promoted to `working`. Doc 13 (Input Zones) added: one input door per operation, all run inside Claude. |
 | 1.2 | 2026-09-19 | Input zones accepted (D-023 to D-025); draft queue renamed `mine/drafts/`; M0 closed and handover written |
+| 1.3 | 2026-09-19 | Obsidian curriculum removed (D-026): doc 05 becomes a reference page, goal G5 narrowed to verification (D-027), module estimates cut |
+| 1.4 | 2026-09-21 | Documents moved to a private GitHub repo synced into project knowledge (D-028); the repo is now the master copy; Q-014 opened |

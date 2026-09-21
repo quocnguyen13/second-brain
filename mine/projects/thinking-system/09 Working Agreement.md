@@ -37,13 +37,13 @@ Back to [[00 Project Home]] · Decisions go in [[07 Decision Log]]
 ## 2. Where things live
 | What | Where | Master copy |
 |---|---|---|
-| Project documents | Vault: `01-Projects/Thinking-System/` | **Claude's latest delivered version.** Replace your vault copy each time Claude sends changed files. |
+| Project documents | Private GitHub repo, synced into this Project's knowledge (D-028); from M1 also in the vault at `mine/projects/thinking-system/` | **The GitHub repo.** Commit Claude's changed files, push, then click Sync. |
 | Discussion and first drafts | Chats inside the "Obsidian x Claude" Claude Project | None (working space) |
-| Background for new module chats | The Project's files: upload the latest documents at the end of each module | A copy of the master |
+| Background for new module chats | Project knowledge, synced from the repo | A synced copy of the master |
 | Decisions | [[07 Decision Log]] | Vault |
 | Version history | Change log in [[00 Project Home]] until Phase 2, then git | Vault |
 
-Claude can't see your vault from this chat. Because you review by commenting in chat, **Claude's latest delivered version is the master**. If you ever edit a document directly in Obsidian, upload that file before Claude revises it, so your edits aren't lost.
+Claude reads the documents through project knowledge, not from GitHub directly. **After every push, click Sync before working in a chat;** otherwise Claude reads the previous version. If you edit a document yourself, push it and sync before asking Claude to revise it, so your edits aren't lost.
 
 ## 3. The document loop
 ```mermaid
@@ -90,7 +90,7 @@ Rules:
   - the state of the vault
   - the entry conditions for the next module
 
-  Then upload the latest documents to the Project's files and start the next module's chat with that handover.
+  Then push, sync, and start the next module's chat with that handover.
 - **At the end of each phase, hold a short retrospective** covering what worked, what to change in the system, and what to change in this agreement.
 
 ## 5. How decisions are made
@@ -113,11 +113,11 @@ Rules:
 - [ ] The exit criteria in [[06 Roadmap]] are met
 - [ ] The retrospective is done, and changes to this agreement are recorded
 
-## 7. How Claude teaches
-- **Learn by doing.** Every Obsidian lesson is tied to a real step in this project.
-- **Why, then how, then practice.** Claude explains the concept, gives the steps, then sets a short exercise. You report what you saw, and Claude adjusts.
+## 7. Explanations, not lessons
+- **Build first.** Claude gives the steps to take, not a curriculum. No exercises, no stages, no homework (D-026).
+- **Explain on demand, or when it costs something.** Claude explains a choice unprompted only when getting it wrong would be expensive to undo, such as folder names the permission rules depend on. Otherwise, ask and you'll get it.
 - **Screenshots are welcome** when you're stuck in Obsidian, as long as they show no confidential content.
-- **Detailed by default,** as you asked. Say "short version" when you want less.
+- **One exception that isn't negotiable:** reviewing what an ingest produced ([[05 Obsidian Essentials]] §3). Skipping that turns the provenance rules into decoration.
 
 ## 8. Communication
 - **Every reply opens with a stage marker** so you always know where the project stands:

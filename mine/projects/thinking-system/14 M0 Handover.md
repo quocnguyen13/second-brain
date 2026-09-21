@@ -36,9 +36,9 @@ Nothing is built yet. Obsidian is not installed, and the vault does not exist. M
 2. The folder structure from [[04 Vault Blueprint]] §1, including the three zones in `inbox/`.
 3. Git initialised in the vault, with `.gitignore` and a first commit.
 4. This document set placed in `mine/projects/thinking-system/`.
-5. Learning Path Stages 0–2 complete.
+5. Obsidian set up per [[05 Obsidian Essentials]] §1, including the Web Clipper.
 
-**M1 is done when** you can navigate the vault without the mouse, every project document opens through its links, and the local graph makes sense to you.
+**M1 is done when** the folder structure matches the blueprint, git is initialised with a first commit, and the project documents open through their links in Obsidian.
 
 ## Open questions
 | ID | Question | Due |

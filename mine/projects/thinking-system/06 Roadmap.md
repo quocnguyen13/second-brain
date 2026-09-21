@@ -16,10 +16,10 @@ Back to [[00 Project Home]] · MVP defined in [[01 Project Charter]] §4
 ## 1. Shape of the plan
 ```mermaid
 flowchart LR
-    M0[M0<br/>Foundation] --> M1[M1<br/>Vault and<br/>Obsidian basics]
+    M0[M0<br/>Foundation] --> M1[M1<br/>Vault and git]
     M1 --> M2[M2<br/>Connect<br/>Claude Code]
     M2 --> M3[M3<br/>First ingests]
-    M3 --> M4[M4<br/>Query and<br/>file-back]
+    M3 --> M4[M4<br/>Ask and<br/>file-back]
     M4 --> M5[M5<br/>Lint and<br/>review]
     M5 -.->|MVP complete| M6[M6<br/>Thinking<br/>layer]
     M6 --> M7[M7<br/>PO workflows]
@@ -27,18 +27,18 @@ flowchart LR
 ```
 
 ## 2. Modules
-One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6 hours a week.
+One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6 hours a week, with no curriculum in the path (D-026).
 
 | Module | Goal | Main outputs | Done when | Estimate |
 |---|---|---|---|---|
-| **M0 – Foundation** | Agree the pattern, scope, and ways of working | Documents 00–09 and 13 | **Closed 2026-09-19** | Done |
-| **M1 – Vault and Obsidian Basics** | A vault you can navigate | Vault created with `raw/`, `wiki/`, `mine/`, `system/`; git initialised; Learning Stages 0–2 | You can move around the vault and read the graph | 2–3 days |
-| **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings, the three `inbox/` zones; doc 10 (Templates) | Setup checks in [[08 Claude Operating Instructions]] §6 pass | 2–3 days |
-| **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live; Learning Stages 3–4 | Ingesting source 5 updates at least 3 existing pages | About 1 week |
-| **M4 – Query and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | At least 9 of 10 pass; one answer filed as an analysis page | 3–4 days |
-| **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; two Bases views; the weekly routine; Learning Stage 6 | A lint pass catches a planted contradiction and a planted uncited claim | 3–4 days |
-| **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met | ~3 weeks from M1 |
-| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; Learning Stage 5; the inbox routine | 5 insight pages you wrote, linked to wiki pages | About 1 week |
+| **M0 – Foundation** | Agree the pattern, scope, and ways of working | Documents 00–09, 13, 14 | **Closed 2026-09-19** | Done |
+| **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[04 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | The structure matches the blueprint and the documents open through their links | Half a day |
+| **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; doc 10 (Templates) | Setup checks in [[08 Claude Operating Instructions]] §6 pass | 1–2 days |
+| **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | Ingesting source 5 updates at least 3 existing pages, and you've traced one claim back to `raw/` | 3–4 days |
+| **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | At least 9 of 10 pass; one answer filed as an analysis page | 2–3 days |
+| **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a planted contradiction and a planted uncited claim | 2 days |
+| **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met | **~2 weeks from M1** |
+| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; the drafts routine | 5 insight pages you wrote, linked to wiki pages | 3–4 days |
 | **M7 – Product-Owner Workflows** | The system supports real work | Doc 11 (Playbook); skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning | 3 workflows used weekly for 4 weeks | 4 weeks (set by the calendar) |
 | **M8 – Retrospective and Governance** | Decide what comes next, and unpark the rules | Retrospective; doc 12 (Data Governance); Phase 5 scope | Doc 12 written before any work material enters the vault | 1 week |
 
@@ -49,4 +49,5 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Decisions D-001 to D-025 accepted
 - [x] Q-005 to Q-007 settled or deferred; Q-013 (first sources) moves to the start of M3
 - [x] Handover written: [[14 M0 Handover]]
-- [ ] **Next:** upload the documents to the Project's files, then open the `M1 – Vault and Obsidian Basics` chat with the handover
+- [x] Documents moved to a private GitHub repo synced into project knowledge (D-028)
+- [ ] **Next:** M1 in progress; decide Q-014 at its close

@@ -34,7 +34,7 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 - The three operations: ingest, query, lint
 - `index.md` and `log.md`, maintained by Claude
 - A thinking layer I own, for insights and decisions
-- Enough Obsidian skill to read, navigate, and write in the vault
+- Enough Obsidian to read, review, and search the vault ([[05 Obsidian Essentials]])
 
 **Out of scope for the MVP**
 - **Bank data governance (parked as doc 12).** The MVP takes personal and public sources only, so the rules aren't needed yet. They get written before any work material enters the vault.
@@ -49,7 +49,7 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 | G2 | **Grounded:** answers come from my wiki with citations back to sources | Test prompts pass; every wiki claim traces to a source in `raw/` |
 | G3 | **Honest:** the wiki shows contradictions and gaps instead of hiding them | Lint finds planted contradictions and uncited claims |
 | G4 | **Mine:** my conclusions are recorded in a layer Claude cannot rewrite | Insight and decision pages accumulate in `mine/` |
-| G5 | **Fluent:** I can navigate and extend the vault without Claude | Learning Path Stages 0–4 complete |
+| G5 | **Checkable:** I can verify any claim in the wiki in under a minute | I trace a claim from a wiki page to its file in `raw/` |
 
 ## 6. Success criteria for the MVP
 - 5 sources ingested; `index.md` and `log.md` current.
