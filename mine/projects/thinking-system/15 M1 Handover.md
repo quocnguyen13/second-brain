@@ -2,7 +2,7 @@
 type: project-doc
 project: thinking-system
 status: active
-trust: ai-draft
+trust: working
 origin: claude
 created: 2026-09-21
 reviewed: 2026-09-21

@@ -72,3 +72,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.3 | 2026-09-19 | Obsidian curriculum removed (D-026): doc 05 becomes a reference page, goal G5 narrowed to verification (D-027), module estimates cut |
 | 1.4 | 2026-09-21 | Documents moved to a private GitHub repo synced into project knowledge (D-028); the repo is now the master copy; Q-014 opened |
 | **1.5** | 2026-09-21 | **M1 closed.** D-026 and D-027 accepted. D-029: your own new notes go to `mine/scratch/`. D-030: the vault repo is the single source of truth, project knowledge syncs `mine/projects/thinking-system/`, and the documents repo is archived (supersedes D-028). Docs 02, 03, 04, 05, 06, 08, 09 and 13 updated to match, including two broken links to the retired 05 Learning Path; doc 15 (M1 Handover) added |
+| 1.6 | 2026-09-21 | Doc 15 (M1 Handover) accepted and promoted to `working` |
