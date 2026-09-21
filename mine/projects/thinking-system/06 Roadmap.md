@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, roadmap]
 ---
 
@@ -32,7 +32,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 | Module | Goal | Main outputs | Done when | Estimate |
 |---|---|---|---|---|
 | **M0 – Foundation** | Agree the pattern, scope, and ways of working | Documents 00–09, 13, 14 | **Closed 2026-09-19** | Done |
-| **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[04 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | The structure matches the blueprint and the documents open through their links | Half a day |
+| **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[04 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | **Closed 2026-09-21** | Done |
 | **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; doc 10 (Templates) | Setup checks in [[08 Claude Operating Instructions]] §6 pass | 1–2 days |
 | **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | Ingesting source 5 updates at least 3 existing pages, and you've traced one claim back to `raw/` | 3–4 days |
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | At least 9 of 10 pass; one answer filed as an analysis page | 2–3 days |
@@ -50,4 +50,14 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Q-005 to Q-007 settled or deferred; Q-013 (first sources) moves to the start of M3
 - [x] Handover written: [[14 M0 Handover]]
 - [x] Documents moved to a private GitHub repo synced into project knowledge (D-028)
-- [ ] **Next:** M1 in progress; decide Q-014 at its close
+- [x] M1 run; Q-014 decided at its close (D-030)
+
+## 4. M1 closed on 2026-09-21
+- [x] Obsidian installed and configured per [[05 Obsidian Essentials]] §1
+- [x] Folder structure matches [[04 Vault Blueprint]] §1, including the three `inbox/` zones and `mine/scratch/` (D-029)
+- [x] Git initialised with `.gitignore` and `.gitattributes`; first commit made
+- [x] Web Clipper saving to `inbox/sources/`
+- [x] Documents in `mine/projects/thinking-system/`, opening through their links
+- [x] Q-014 decided: the vault repo is the single source of truth, pushed to the private repo `second-brain`; the documents repo is archived (D-030)
+- [x] Handover written: [[15 M1 Handover]]
+- [ ] **Next:** M2 – Connect Claude Code

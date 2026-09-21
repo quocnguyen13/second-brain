@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, claude]
 ---
 
@@ -71,7 +71,7 @@ When I run `/ask`, take the oldest unanswered line in `inbox/questions.md`; when
 4. Offer to file a substantial answer as `wiki/analyses/<title>.md`, then tick the question off in the zone file.
 
 ## Operation: lint
-When I run `/lint`, run the standing checks, then work through `inbox/checks.md`, and write the result to `system/lint/report-<YYYY-MM-DD>.md`. Standing checks: contradictions between pages, claims a newer source supersedes, pages with no citation, orphan pages, concepts mentioned but missing a page, pages not updated in 6 months on fast-moving topics, gaps worth a new source. Change nothing without my approval.
+When I run `/lint`, run the standing checks, then work through `inbox/checks.md`, tick off each check you covered, and write the result to `system/lint/report-<YYYY-MM-DD>.md`. Standing checks: contradictions between pages, claims a newer source supersedes, pages with no citation, orphan pages, concepts mentioned but missing a page, pages not updated in 6 months on fast-moving topics, gaps worth a new source. Change nothing else without my approval.
 
 ## Standing rules
 - Never edit `raw/`. Never write in `mine/` outside `mine/drafts/`. Never delete anything; propose deletions.
@@ -111,7 +111,7 @@ When I run `/lint`, run the standing checks, then work through `inbox/checks.md`
 }
 ```
 - **Allow rules** are what Claude owns: the wiki, the draft queue, the input zones (so it can tick items off), lint reports, and the two navigation files. Ingest therefore runs without a prompt per page.
-- **Manual mode** means every other edit, including anything in `mine/` and `system/`, waits for your approval.
+- **Manual mode** means every other edit, including anything in `mine/` and `system/`, waits for your approval. That covers your own notes in `mine/scratch/` ([[07 Decision Log]] D-029) with no extra rule.
 - **`Edit(/raw/**)` denied:** sources stay immutable, enforced rather than requested. Moving a file from `inbox/sources/` into `raw/` is a shell command you approve once per ingest ([[13 Input Zones]] §2).
 - Allow rules take effect after you accept the workspace trust prompt on first run. Deny rules apply immediately.
 - Shell rules only catch the usual command forms, so git remains the real safety net.
@@ -145,14 +145,15 @@ Record results in `system/test-results.md`.
 
 ## 6. M2 setup steps (Windows)
 Check against the current docs as you go; Claude Code changes often.
-1. Install **Git for Windows**.
-2. Install **Claude Code** (the docs list a PowerShell installer and `winget install Anthropic.ClaudeCode`).
-3. Confirm no `ANTHROPIC_API_KEY` variable is set, or Claude Code bills the API instead of your Pro plan.
-4. In the vault: `git init`, add `.gitignore`, first commit.
-5. Create `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, the three zones in `inbox/`, and empty `index.md` and `log.md`.
-6. Run `claude` in the vault, sign in, accept the workspace trust prompt.
-7. Verify: `/context` lists the schema files; `/permissions` shows the rules; `/memory` shows auto memory off.
-8. Ingest the LLM Wiki gist as source 1 and read every page it produces.
+
+**Already done in M1:** Git for Windows installed; the vault initialised as a git repo with the `.gitignore` and `.gitattributes` below, committed, and pushed to the private repo `second-brain` ([[07 Decision Log]] D-030); the three zones in `inbox/` created.
+
+1. Install **Claude Code** (the docs list a PowerShell installer and `winget install Anthropic.ClaudeCode`).
+2. Confirm no `ANTHROPIC_API_KEY` variable is set, or Claude Code bills the API instead of your Pro plan.
+3. Create `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, and empty `index.md` and `log.md`. Commit and push.
+4. Run `claude` in the vault from a normal terminal, never one opened with "Run as administrator". Sign in and accept the workspace trust prompt.
+5. Verify: `/context` lists the schema files; `/permissions` shows the rules; `/memory` shows auto memory off.
+6. Ingest the LLM Wiki gist as source 1 and read every page it produces.
 
 `.gitignore`:
 ```
@@ -161,6 +162,12 @@ Check against the current docs as you go; Claude Code changes often.
 .trash/
 .claude/settings.local.json
 ```
+
+`.gitattributes`:
+```
+* text=auto eol=lf
+```
+Stores every text file with Unix line endings, so a file whose line endings flip never shows as a whole-file change in `git diff`. Files created in PowerShell trigger a "CRLF will be replaced by LF" warning on `git add`; that's expected.
 
 ## Sources
 - LLM Wiki pattern: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f

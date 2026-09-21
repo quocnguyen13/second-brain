@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, vault-design]
 ---
 
@@ -15,10 +15,13 @@ Back to [[00 Project Home]] · Related: [[02 System Architecture]] · [[03 Trust
 
 ## 1. Structure
 ```
-Second-Brain/              ← the vault, and a git repository
+Second-Brain/              ← the vault; a git repository pushed to the private repo second-brain (D-030)
 ├── CLAUDE.md              the schema: rules Claude loads every session
 ├── index.md               catalog of every wiki page (Claude maintains)
 ├── log.md                 append-only history of ingests, filings, lints (Claude appends)
+├── .gitignore             files git never tracks (doc 08 §6)
+├── .gitattributes         one line-ending rule for every text file (doc 08 §6)
+├── .obsidian/             Obsidian's own settings; git ignores workspace*.json
 ├── inbox/                 THREE INPUT ZONES, one per operation (doc 13)
 │   ├── sources/           files and links awaiting /ingest
 │   ├── questions.md       questions awaiting /ask
@@ -33,7 +36,8 @@ Second-Brain/              ← the vault, and a git repository
 │   ├── concepts/          ideas, methods, patterns, regulations
 │   └── analyses/          comparisons and answers worth keeping
 ├── mine/                  YOURS. Claude drafts into drafts/ only.
-│   ├── drafts/            insight drafts awaiting your decision
+│   ├── scratch/           your own new notes, not yet sorted (D-029)
+│   ├── drafts/            Claude's insight drafts awaiting your decision
 │   ├── insights/          single ideas, in your words
 │   ├── decisions/         what you decided and why
 │   ├── projects/          your active work
@@ -46,6 +50,8 @@ Second-Brain/              ← the vault, and a git repository
 └── .claude/               Claude Code settings and skills (hidden in Obsidian)
 ```
 Three rules make the structure work: **`raw/` is immutable, `wiki/` is Claude's, `mine/` is yours.** Everything enters through `inbox/`, where each operation has its own door ([[13 Input Zones]]).
+
+Every folder that would otherwise be empty holds a hidden `.gitkeep` file, because git doesn't track empty folders. Without them, a fresh clone of the repo would come back without the structure.
 
 ## 2. Page types
 | `type` | Folder | Purpose | Title style |

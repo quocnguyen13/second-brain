@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, governance]
 ---
 
@@ -41,7 +41,7 @@ Pages in `mine/` use `status: draft` until you accept them, then `active`. Only 
 Doc 12 (Data Governance) is deliberately not written yet. Until it is, one rule stands in its place:
 
 > [!warning] Personal and public sources only
-> Nothing confidential from work goes into `raw/`, `wiki/`, `mine/`, or these chats: no customer data, no internal documents, no non-public figures, no internal system details. Public regulation, industry material, books, articles, courses, and your own general reflections are all fine.
+> Nothing confidential from work goes into `raw/`, `wiki/`, `mine/`, the vault's GitHub repo, or these chats: no customer data, no internal documents, no non-public figures, no internal system details. Public regulation, industry material, books, articles, courses, and your own general reflections are all fine.
 
 This isn't a feature waiting to be built. It's the condition that makes parking the governance work safe: while the vault holds nothing confidential, there's nothing to govern. Doc 12 gets written before the first piece of work material goes in, along with your bank's policy position.
 

@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, architecture]
 ---
 
@@ -32,18 +32,18 @@ His summary of the roles fits this project exactly: Obsidian is the IDE, the LLM
 | **Provenance rules** | Every wiki claim cites a source in `raw/`. Uncited claims are marked unverified. This stops Claude's own summaries from becoming evidence for later summaries ([[03 Trust and Provenance]]). |
 | **Insight extraction at ingest** | Each ingest also proposes 1–3 single-idea drafts into `mine/drafts/`, so reading feeds your thinking layer, not only the reference layer. |
 | **An enforcement layer** | Permission rules and git, so the zones hold in practice and every change can be undone ([[08 Claude Operating Instructions]]). |
-| **An Obsidian curriculum** | You're learning the tool while building the system ([[05 Learning Path]]). |
+| **A one-page Obsidian reference** | Just the Obsidian this system needs, picked up while building; no curriculum ([[05 Obsidian Essentials]], D-026). |
 | **Product-owner workflows** | After the MVP: meeting notes to decisions, stakeholder briefs, prioritization reasoning (module M7). |
 
 ## 4. Components
 | Layer | Component |
 |---|---|
-| Memory | The vault: a git repository of Markdown files on your PC |
+| Memory | The vault: a git repository of Markdown files on your PC, pushed to a private GitHub repo (D-030) |
 | Reading surface | Obsidian |
 | Reasoning and maintenance | Claude Code, started inside the vault (Windows Terminal, or the Code tab in Claude Desktop) |
 | Navigation | `index.md` (a catalog of every page) and `log.md` (an append-only history) |
 | Rules | `CLAUDE.md`, which imports `system/context.md` and `system/conventions.md` |
-| Procedures | Claude Code skills: `ingest`, `file-answer`, `lint` |
+| Procedures | Claude Code skills: `ingest`, `ask`, `file-answer`, `lint` |
 | Enforcement | `.claude/settings.json` permission rules, plus git history |
 
 > [!important] Claude on the web or phone can't see your vault

@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, decisions]
 ---
 
@@ -37,12 +37,14 @@ Accepted on 2026-09-19 unless marked otherwise. New proposals wait for your word
 | **D-023** | Each operation has its own input zone: `inbox/sources/` for `/ingest`, `inbox/questions.md` for `/ask`, `inbox/checks.md` for `/lint`. A command reads only its own zone and never re-routes misfiled material. | **Accepted 2026-09-19** | Keeps the three operations from mixing ([[13 Input Zones]]) |
 | **D-024** | The draft queue is renamed `mine/drafts/`, so "inbox" means the input zones and nothing else | **Accepted 2026-09-19** | Two folders called inbox would be confusing from day one |
 | **D-025** | All three operations run as Claude Code commands in a vault session. No plugins, scripts, or separate apps. | **Accepted 2026-09-19** | Your preference for Claude as the platform; one place to learn |
-| **D-026** | **The Obsidian curriculum is removed.** Doc 05 becomes a one-page reference; no stages, lessons, or exercises. Skills are picked up inside the modules. | New, proposed 2026-09-19 | Speed. Under the adopted pattern Claude writes the wiki, so hand-authoring practice isn't on the critical path |
-| **D-027** | Goal G5 changes from "fluent in Obsidian" to "able to verify any wiki claim against its source" | New, proposed 2026-09-19 | The review loop is what keeps the wiki honest; general tool fluency isn't |
-| **D-028** | The project documents live in a private GitHub repo, synced into this Project's knowledge. The repo is the master copy: Claude sends changed files, you commit, push, and click Sync. | **Accepted 2026-09-21** (you set it up) | No re-uploading between modules; history and rollback for free |
+| **D-026** | **The Obsidian curriculum is removed.** Doc 05 becomes a one-page reference; no stages, lessons, or exercises. Skills are picked up inside the modules. | **Accepted 2026-09-21** | Speed. Under the adopted pattern Claude writes the wiki, so hand-authoring practice isn't on the critical path |
+| **D-027** | Goal G5 changes from "fluent in Obsidian" to "able to verify any wiki claim against its source" | **Accepted 2026-09-21** | The review loop is what keeps the wiki honest; general tool fluency isn't |
+| **D-028** | The project documents live in a private GitHub repo, synced into this Project's knowledge. The repo is the master copy: Claude sends changed files, you commit, push, and click Sync. | **Accepted 2026-09-21** (you set it up), superseded by D-030 the same day | No re-uploading between modules; history and rollback for free |
 | **D-022** | Sources are ingested one at a time, with you reading the result, at least through M3 | **Accepted 2026-09-19** | Karpathy's own preference, and how you learn what good output looks like |
+| **D-029** | Your own new notes go to `mine/scratch/`. `mine/drafts/` holds only Claude's insight drafts. | **Accepted 2026-09-20** | `mine/drafts/` is on Claude's allow list, so your rough notes stay outside it and G4 is enforced by the permission rules; the draft queue stays unmixed ([[04 Vault Blueprint]] §1) |
+| **D-030** | **The vault repo is the single source of truth.** It is pushed to the private GitHub repo `second-brain`; project knowledge syncs only `mine/projects/thinking-system/` from it. The separate documents repo is archived. | **Accepted 2026-09-21**, supersedes D-028 | One master copy, so documents can't drift between two repos; the push also gives the vault an off-site backup ([[09 Working Agreement]] §2) |
 
-**Superseded:** D-004 (Claude writes only to an AI-drafts folder) and D-005 (PARA structure) are replaced by D-019 and D-020. D-007 (no automatic saving) still holds: operations run when you ask. D-009 (hyphenated folder names) and D-016 (templates early) are folded into [[04 Vault Blueprint]] and module M2.
+**Superseded:** D-004 (Claude writes only to an AI-drafts folder) and D-005 (PARA structure) are replaced by D-019 and D-020. D-028 (a separate documents repo) is replaced by D-030. D-007 (no automatic saving) still holds: operations run when you ask. D-009 (hyphenated folder names) and D-016 (templates early) are folded into [[04 Vault Blueprint]] and module M2.
 
 ## Open questions
 | ID | Question | Why it matters | Answer |
@@ -58,7 +60,7 @@ Accepted on 2026-09-19 unless marked otherwise. New proposals wait for your word
 | Q-011 | Review method | Document loop | **Comments in chat** |
 | Q-012 | Session style | Chat structure | **One chat per module** |
 | **Q-013** | **What are the first 5 sources?** The LLM Wiki gist is source 1; four more are yours | Module M3 needs them, and they set the wiki's first shape | Open, due at the start of M3 |
-| **Q-014** | Once M1 creates the vault repo, does it replace the separate documents repo? | Two repos holding the same documents will drift apart | Open, due at the end of M1. Recommendation: yes, with project knowledge pointed at `mine/projects/thinking-system/` |
+| **Q-014** | Once M1 creates the vault repo, does it replace the separate documents repo? | Two repos holding the same documents will drift apart | **Yes**, decided 2026-09-21 (D-030). Project knowledge syncs `mine/projects/thinking-system/` from the private repo `second-brain`; the documents repo is archived |
 
 ## Plugin and MCP register
 | Name | Type | Why it's needed | Source | Date added |

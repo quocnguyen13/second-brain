@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, obsidian]
 ---
 
@@ -20,9 +20,11 @@ Back to [[00 Project Home]] · Structure in [[04 Vault Blueprint]]
 
 ## 1. One-time setup (module M1, about 20 minutes)
 - Install Obsidian; create the vault `Second-Brain` at `C:\Users\<you>\Vaults\Second-Brain`, outside OneDrive.
-- Settings → Files and links: "Automatically update internal links" on; new notes to `mine/drafts`; attachment folder `raw/assets`.
-- Settings → Core plugins: Backlinks, Outgoing links, Graph view, Properties view, Bases, Templates, Daily notes, Bookmarks.
-- Install the Obsidian Web Clipper browser extension and point it at `inbox/sources/`. This isn't learning, it's the capture pipeline for [[13 Input Zones]].
+- Settings → Files and links: "Automatically update internal links" on; new notes to `mine/scratch` ([[07 Decision Log]] D-029); attachment folder `raw/assets`.
+- Settings → Core plugins: Backlinks, Outgoing links, Graph view, Properties view, Bases, Templates, Daily notes, Bookmarks. Sync and Publish off.
+- Settings → Daily notes: new file location `mine/journal`. Settings → Templates: template folder location `system/templates`.
+- Install the Obsidian Web Clipper browser extension. In its settings, add `Second-Brain` under General → Vaults, then set the Default template's Note location to `inbox/sources` (the folder only, no vault name). This isn't learning, it's the capture pipeline for [[13 Input Zones]].
+- Inside Obsidian and in Markdown, folder paths use `/`. PowerShell uses `\`.
 
 ## 2. The whole toolkit
 | Need | How |
@@ -53,7 +55,7 @@ If you stop doing this, the provenance rules in [[03 Trust and Provenance]] beco
 - **Needs attention:** `status` is `unverified` or `contested`.
 - **Draft queue:** everything in `mine/drafts`.
 
-Your weekly review starts from these two plus a `/lint` run.
+Your weekly review starts from these two plus a `/lint` run, and ends with a pass through `mine/scratch` to file or delete your own loose notes.
 
 ## 5. Where the thinking layer fits
 `mine/` is not a learning exercise; it's goal G4. Claude proposes insight drafts into `mine/drafts/`, and you keep the ones you'd defend, in your own words. Module M6 sets up that routine.

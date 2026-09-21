@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-21
 tags: [project/thinking-system, ways-of-working]
 ---
 
@@ -37,13 +37,13 @@ Back to [[00 Project Home]] · Decisions go in [[07 Decision Log]]
 ## 2. Where things live
 | What | Where | Master copy |
 |---|---|---|
-| Project documents | Private GitHub repo, synced into this Project's knowledge (D-028); from M1 also in the vault at `mine/projects/thinking-system/` | **The GitHub repo.** Commit Claude's changed files, push, then click Sync. |
+| Project documents | The vault, at `mine/projects/thinking-system/`, pushed to the private GitHub repo `second-brain` (D-030) | **The vault repo.** Drop Claude's changed files into that folder, check `git diff`, commit, push, then click Sync. |
 | Discussion and first drafts | Chats inside the "Obsidian x Claude" Claude Project | None (working space) |
-| Background for new module chats | Project knowledge, synced from the repo | A synced copy of the master |
+| Background for new module chats | Project knowledge, synced from `mine/projects/thinking-system/` in the vault repo | A synced copy of the master |
 | Decisions | [[07 Decision Log]] | Vault |
-| Version history | Change log in [[00 Project Home]] until Phase 2, then git | Vault |
+| Version history | Git, plus the change log in [[00 Project Home]] | Vault repo |
 
-Claude reads the documents through project knowledge, not from GitHub directly. **After every push, click Sync before working in a chat;** otherwise Claude reads the previous version. If you edit a document yourself, push it and sync before asking Claude to revise it, so your edits aren't lost.
+Claude reads the documents through project knowledge, which syncs only `mine/projects/thinking-system/`, not the rest of the vault. **After every push, click Sync before working in a chat;** otherwise Claude reads the previous version. If you edit a document yourself, push it and sync before asking Claude to revise it, so your edits aren't lost.
 
 ## 3. The document loop
 ```mermaid
@@ -64,8 +64,8 @@ Rules:
    07 D-006: accept
    ```
    Short replies such as "accept 01, 03" are fine.
-2. **Claude delivers only the files that changed**, with a short summary of the changes. Replace those files in your vault. You get a full zip only when you ask for one, or at the end of a phase.
-3. **If you edit a file directly in Obsidian, upload it first.** Otherwise Claude's next revision will overwrite your edits.
+2. **Claude delivers only the files that changed**, with a short summary of the changes. Replace those files in `mine/projects/thinking-system/`, read `git diff`, then commit and push. You get a full zip only when you ask for one, or at the end of a phase.
+3. **If you edit a file directly in Obsidian, commit, push, and Sync first.** Otherwise Claude's next revision will overwrite your edits.
 4. **Once you accept a document, Claude sets its `trust` to `working`** and adds an entry to the change log. Only you move a document to `verified`.
 5. **Document numbers never change.** New documents take the next free number.
 
@@ -139,3 +139,5 @@ The same traffic-light rule that governs the vault applies to anything you paste
 | Review method | You comment in chat; Claude revises (see §3) | 2026-09-16 |
 | Session style | One chat per module (see §4) | 2026-09-16 |
 | Progress visibility | Every reply opens with a stage marker (see §8) | 2026-09-19 |
+| Guidance style | Steps only; explanations on request, or when a mistake would be expensive to undo (see §7) | 2026-09-21 |
+| Document master | The vault repo; project knowledge syncs `mine/projects/thinking-system/` (see §2) | 2026-09-21 |
