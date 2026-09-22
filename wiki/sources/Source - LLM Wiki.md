@@ -28,6 +28,8 @@ A GitHub Gist proposing a pattern for personal knowledge bases: instead of RAG-s
 - [[wiki/concepts/Wiki query]]
 - [[wiki/concepts/Wiki lint]]
 - [[wiki/concepts/Wiki index and log]]
+- [[wiki/concepts/Memex]]
+- [[wiki/entities/Vannevar Bush]]
 
 ## Conflicts and open points
 - None found. This is the first source in the wiki, and it is also the design document this vault's own `CLAUDE.md` implements.
