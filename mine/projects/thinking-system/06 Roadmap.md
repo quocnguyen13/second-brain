@@ -89,9 +89,14 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Skill revised after source 1: a page citing one source can be `verified`; links checked before the report; the move check uses file tools; the move is yours (D-045)
 - [x] Source 2 ingested: Bush, "As We May Think", from MIT's full-text PDF after the first clip was only page 1 of 4. The review added the links to source 1 that the ingest missed
 - [x] Skill revised after source 2: ground rules, a search of `wiki/` and `raw/` for every new source, PDF page citations (D-046), partial-clip check
-- [ ] Source 3 ingested: Matuschak, "Evergreen notes"
+- [x] Source 3 ingested: Matuschak, "Evergreen notes" — the hub page only, so the five principles are recorded as titles and the 15 linked notes as gaps
 - [ ] Source 4 ingested: Anthropic, "Introducing Contextual Retrieval"
 - [ ] Source 5 ingested: Forte, "The PARA Method", updating at least 3 existing source, entity or concept pages (`overview.md`, `index.md` and `log.md` don't count, D-044)
 - [ ] Each ingest reviewed as in [[05 Obsidian Essentials]] §3 and committed before the next
 - [ ] One claim traced from a wiki page to its file in `raw/`
 - [ ] Handover written: 17 M3 Handover
+
+**Parked in M3, to pick up after the MVP unless they start to hurt:**
+- Matuschak's five principle notes and the Zettelkasten sources. The gaps are recorded in `wiki/overview.md` and on [[07 Decision Log]]'s next-sources list, so nothing is lost.
+- The `ingest` report splitting "updated" into pages that gained a claim and pages that only gained a link.
+- D-040's `skillOverrides` entry, which waits for the list of names in `~/.claude/skills/synced`.
