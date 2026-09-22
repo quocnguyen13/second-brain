@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-21
+reviewed: 2026-09-22
 tags: [project/thinking-system, moc]
 ---
 
@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M2 – Connect Claude Code, in progress (see [[06 Roadmap]] §5)
+**Current module:** M2 closed 2026-09-22 → next, M3 – First Ingests (see [[06 Roadmap]])
 
 ## Document set
 
@@ -34,7 +34,8 @@ tags: [project/thinking-system, moc]
 | 10 | [[10 Templates]] | One template per page type, in `system/templates/` | Draft |
 | 13 | [[13 Input Zones]] | One input door per operation, all triggered inside Claude | **Accepted** |
 | 14 | [[14 M0 Handover]] | Closing state of M0, used to open the M1 chat | Closed |
-| 15 | [[15 M1 Handover]] | Closing state of M1, to open the M2 chat with | Current |
+| 15 | [[15 M1 Handover]] | Closing state of M1, used to open the M2 chat | Closed |
+| 16 | [[16 M2 Handover]] | Closing state of M2, to open the M3 chat with | Current |
 
 **Planned (not written yet)**
 - 11 Workflow Playbook (module M7): product-owner routines
@@ -75,3 +76,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.6 | 2026-09-21 | Doc 15 (M1 Handover) accepted and promoted to `working` |
 | 1.7 | 2026-09-21 | **M2 started.** Schema files created in the vault: `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`, and eight templates. Doc 10 (Templates) added. Tool facts rechecked against the current Claude Code docs; D-031 to D-035 proposed. Docs 04, 06, 08 and 13 updated to match |
 | 1.8 | 2026-09-22 | First Claude Code session: claude.ai connectors, the synced `data` plugin and synced skills found loading into vault sessions. D-036 (connectors off) and D-037 (`data` plugin off) proposed; Q-015 opened (remaining synced skills, due at M3). Docs 06, 07 and 08 updated |
+| **1.9** | 2026-09-22 | **M2 closed.** D-031 to D-037 accepted; D-038 added and accepted (stop when a permission rule blocks). All setup checks and the smoke test passed. Docs 06, 07, 08 and `CLAUDE.md` updated; doc 16 (M2 Handover) added |

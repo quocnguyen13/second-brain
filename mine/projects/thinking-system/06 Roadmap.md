@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-21
+reviewed: 2026-09-22
 tags: [project/thinking-system, roadmap]
 ---
 
@@ -33,7 +33,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 |---|---|---|---|---|
 | **M0 – Foundation** | Agree the pattern, scope, and ways of working | Documents 00–09, 13, 14 | **Closed 2026-09-19** | Done |
 | **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[04 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | **Closed 2026-09-21** | Done |
-| **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 10 (Templates) | Steps 1–7 in [[08 Claude Operating Instructions]] §6 pass: setup checks plus a permission smoke test (D-033) | 1–2 days · **in progress** since 2026-09-21 |
+| **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 10 (Templates) | **Closed 2026-09-22** | Done |
 | **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | Ingesting source 5 updates at least 3 existing pages, and you've traced one claim back to `raw/` | 3–4 days |
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | At least 9 of 10 pass; one answer filed as an analysis page | 2–3 days |
 | **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a planted contradiction and a planted uncited claim | 2 days |
@@ -62,17 +62,18 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Handover written: [[15 M1 Handover]]
 - [x] Next: M2 – Connect Claude Code, started 2026-09-21
 
-## 5. M2 in progress
+## 5. M2 closed on 2026-09-22
 - [x] Tool facts rechecked against the Claude Code docs (2026-09-21); D-031 to D-035 proposed
 - [x] Vault checked against [[04 Vault Blueprint]] §1: every folder and zone file in place
 - [x] Schema files placed in the vault: `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`
 - [x] Eight templates in `system/templates/`; [[10 Templates]] written
-- [ ] D-031 to D-037 accepted
+- [x] D-031 to D-038 accepted
 - [x] `system/context.md` filled in by you
 - [x] Claude Code 2.1.278 installed with the native installer; no API key set ([[08 Claude Operating Instructions]] §6 steps 1–2)
 - [x] Schema files committed and pushed (step 3)
 - [x] First run: signed in, trust prompt accepted; `/context` loads 3 memory files
 - [x] Connectors switched off (D-036); auto memory off and permission rules as expected
-- [ ] `data` plugin switched off (D-037); `/mcp` empty; `claude doctor` clean (steps 4–6)
-- [ ] Permission smoke test passes (step 7)
-- [ ] Handover written: 16 M2 Handover
+- [x] `data` plugin switched off (D-037); `/mcp` empty; `claude doctor` clean (steps 4–6)
+- [x] Permission smoke test passes (step 7); a workaround offer after the `raw/` block led to D-038
+- [x] Handover written: [[16 M2 Handover]]
+- [ ] **Next:** M3 – First Ingests
