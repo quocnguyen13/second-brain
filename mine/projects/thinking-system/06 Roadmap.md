@@ -90,7 +90,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Source 2 ingested: Bush, "As We May Think", from MIT's full-text PDF after the first clip was only page 1 of 4. The review added the links to source 1 that the ingest missed
 - [x] Skill revised after source 2: ground rules, a search of `wiki/` and `raw/` for every new source, PDF page citations (D-046), partial-clip check
 - [x] Source 3 ingested: Matuschak, "Evergreen notes" — the hub page only, so the five principles are recorded as titles and the 15 linked notes as gaps
-- [x] Source 4 ingested: Anthropic, "Introducing Contextual Retrieval" — the disagreement with source 1 recorded on both sides; D-047 narrows which pages carry `contested`
+- [x] Source 4 ingested: Anthropic, "Introducing Contextual Retrieval" — the disagreement with source 1 recorded on both sides; D-047 narrows which pages carry `contested`, accepted the same day
 - [ ] Source 5 ingested: Forte, "The PARA Method", updating at least 3 existing source, entity or concept pages (`overview.md`, `index.md` and `log.md` don't count, D-044)
 - [ ] Each ingest reviewed as in [[05 Obsidian Essentials]] §3 and committed before the next
 - [ ] One claim traced from a wiki page to its file in `raw/`
