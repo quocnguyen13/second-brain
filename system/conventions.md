@@ -24,7 +24,7 @@ When you create a page, read its template first and follow its properties and he
 ## Linking
 - Link in sentences with `[[wikilinks]]`, using page titles.
 - Every entity and concept page links to the source pages that mention it, and each source page links back.
-- Cite a claim inline with a link to the raw file, e.g. `([[raw/karpathy-llm-wiki.md]])`.
+- Cite a claim inline with a link to the raw file, e.g. `([[raw/karpathy-llm-wiki.md]])`. For a PDF, add the page, e.g. `([[raw/bush-as-we-may-think.pdf#page=16]])`; Obsidian opens the PDF at that page.
 - Insight pages end with a Relations block: `- supports:: [[...]]`, `- contradicts:: [[...]]`, `- extends:: [[...]]`, `- source:: [[...]]`.
 
 ## `index.md`
