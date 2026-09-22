@@ -1,7 +1,7 @@
 ---
 type: source
 status: verified
-sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
 tags: ["compiled-wiki", "knowledge-management"]
@@ -37,3 +37,7 @@ A GitHub Gist proposing a pattern for personal knowledge bases: instead of [[wik
 ## Conflicts and open points
 - This is the first source in the wiki, and it is also the design document this vault's own `CLAUDE.md` implements.
 - **Disagreement with the Contextual Retrieval post: does RAG build anything up?** This source says in RAG "the LLM is rediscovering knowledge from scratch on every question. There's no accumulation" ([[raw/karpathy-llm-wiki.md]]). [[wiki/sources/Source - Contextual Retrieval]] describes RAG preprocessing where an LLM generates context for each chunk once and prepends it before embedding and before building the BM25 index ([[raw/anthropic-contextual-retrieval.md]]). What persists there is per-chunk context, not cross-document synthesis. Contested; both positions are shown on [[wiki/concepts/Compiled wiki]] and [[wiki/concepts/Retrieval-augmented generation]].
+- **Open point with the PARA post: topic pages vs. project folders.**
+  - This source organises the wiki into entity and concept pages ([[raw/karpathy-llm-wiki.md]]).
+  - [[wiki/sources/Source - The PARA Method]] puts projects first and topics in "resources" ([[raw/forte-para-method.md]]).
+  - Neither addresses the other, so this is not contested. See [[wiki/concepts/Organizing by actionability]].

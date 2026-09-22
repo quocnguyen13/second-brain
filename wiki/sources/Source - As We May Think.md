@@ -1,7 +1,7 @@
 ---
 type: source
 status: verified
-sources: ["[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]"]
+sources: ["[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
 tags: ["memex", "hypertext", "knowledge-management"]
@@ -28,3 +28,7 @@ Bush, then Director of the U.S. Office of Scientific Research and Development, a
 
 ## Conflicts and open points
 - [[wiki/sources/Source - LLM Wiki]] names this piece's [[wiki/concepts/Memex]] as the compiled-wiki pattern's forerunner, describing Bush's vision as private and actively curated ([[raw/karpathy-llm-wiki.md]]). One difference, not a conflict: Bush has people build the trails — he even anticipates a profession of "trail blazers" ([[raw/bush-as-we-may-think.pdf#page=17]]) — while the gist has the LLM do the upkeep ([[raw/karpathy-llm-wiki.md]]). See [[wiki/overview.md]] for the synthesis.
+- **Disagreement with the PARA post: is one home per item the problem or the fix?**
+  - Bush says filing an item in one place under one classification path is artificial ([[raw/bush-as-we-may-think.pdf#page=14]]).
+  - [[wiki/sources/Source - The PARA Method]] files each item in one place, chosen by project and actionability, so you know exactly where to find it ([[raw/forte-para-method.md]]).
+  - Both reject broad subject classification. Contested on [[wiki/concepts/Associative indexing]] and [[wiki/concepts/PARA method]].

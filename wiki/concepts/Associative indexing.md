@@ -1,7 +1,7 @@
 ---
 type: concept
-status: verified
-sources: ["[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]"]
+status: contested
+sources: ["[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
 tags: ["hypertext", "information-retrieval"]
@@ -18,13 +18,20 @@ The idea, proposed by [[wiki/entities/Vannevar Bush]], that records should be fi
 - Matuschak states the same preference as a principle, "prefer associative ontologies to hierarchical taxonomies" ([[raw/matuschak-evergreen-notes.md]]).
 
 ## Where sources disagree
-- None found.
+- **Is one home per item the problem or the fix?**
+  - Bush: filing an item in one place under one classification path is artificial. Finding it means following cumbersome rules, while the mind works by association ([[raw/bush-as-we-may-think.pdf#page=14]]).
+  - Forte: file each item under its one project, area, resource or archive, and "you'll know exactly where to put everything, and exactly where to find it" ([[raw/forte-para-method.md]]). See [[wiki/concepts/PARA method]].
+  - Common ground: both reject broad subject classification ([[raw/bush-as-we-may-think.pdf#page=14]], [[raw/forte-para-method.md]]). They split on the fix: association, or a single home chosen by actionability.
+  - Scope: Bush is writing about the whole scientific record; Forte about one person's working files.
 
 ## Mentioned in
 - [[wiki/sources/Source - As We May Think]]
 - [[wiki/sources/Source - Evergreen notes]]
+- [[wiki/sources/Source - The PARA Method]]
 
 ## Related
 - [[wiki/concepts/Memex]]
 - [[wiki/concepts/Compiled wiki]]
 - [[wiki/concepts/Evergreen notes]]
+- [[wiki/concepts/PARA method]]
+- [[wiki/concepts/Organizing by actionability]]

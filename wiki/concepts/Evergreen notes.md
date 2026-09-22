@@ -1,7 +1,7 @@
 ---
 type: concept
-status: verified
-sources: ["[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]"]
+status: contested
+sources: ["[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
 tags: ["knowledge-management", "note-taking"]
@@ -23,13 +23,20 @@ Notes "written and organized to evolve, contribute, and accumulate over time, ac
 - **Densely linked vs. compiled-wiki cross-references.** In the compiled wiki the LLM maintains cross-references and lint flags missing ones ([[raw/karpathy-llm-wiki.md]]). Evergreen notes are written for yourself ([[raw/matuschak-evergreen-notes.md]]), so there the writer makes the links.
 
 ## Where sources disagree
-- None found. There is an open tension over who writes, recorded on [[wiki/sources/Source - Evergreen notes]].
+- **Organise around concepts and associations, or around projects in a hierarchy.**
+  - Matuschak: notes are "concept-oriented", accumulate "across projects", and follow "prefer associative ontologies to hierarchical taxonomies" ([[raw/matuschak-evergreen-notes.md]]).
+  - Forte: organise by the projects and goals you are committed to now, in four top-level folders with subfolders, so each item has one known home ([[raw/forte-para-method.md]]). See [[wiki/concepts/Organizing by actionability]] and [[wiki/concepts/PARA method]].
+  - Scope: Matuschak aims at "better thinking" ([[raw/matuschak-evergreen-notes.md]]); Forte aims at getting projects done ([[raw/forte-para-method.md]]). Matuschak's reasons are in linked notes that were not captured.
+- There is also an open tension over who writes, recorded on [[wiki/sources/Source - Evergreen notes]].
 
 ## Mentioned in
 - [[wiki/sources/Source - Evergreen notes]]
+- [[wiki/sources/Source - The PARA Method]]
 
 ## Related
 - [[wiki/entities/Andy Matuschak]]
 - [[wiki/concepts/Associative indexing]]
 - [[wiki/concepts/Memex]]
 - [[wiki/concepts/Compiled wiki]]
+- [[wiki/concepts/PARA method]]
+- [[wiki/concepts/Organizing by actionability]]

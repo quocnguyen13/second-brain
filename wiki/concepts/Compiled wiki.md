@@ -1,7 +1,7 @@
 ---
 type: concept
 status: contested
-sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
 tags: ["compiled-wiki", "knowledge-management"]
@@ -19,6 +19,10 @@ A knowledge base an LLM incrementally builds and maintains, structured in three 
 
 - Anthropic's retrieval post does not mention compiled wikis. The nearest approaches it tested, generic document summaries on chunks and summary-based indexing, gave "very limited gains" and "low performance" for retrieval ([[raw/anthropic-contextual-retrieval.md]]). They are retrieval aids, not compiled wikis.
 - For small corpora both sources skip RAG, by different routes: the compiled wiki reads an index at ~100 sources ([[raw/karpathy-llm-wiki.md]]); Anthropic puts the whole knowledge base in the prompt under 200,000 tokens ([[raw/anthropic-contextual-retrieval.md]]).
+- **Organised by topic, not by project.**
+  - The wiki's pages are "summaries, entity pages, concept pages, comparisons, an overview, a synthesis" ([[raw/karpathy-llm-wiki.md]]).
+  - The [[wiki/concepts/PARA method]] puts projects first and keeps topics in a lower-priority "resources" category ([[raw/forte-para-method.md]]).
+  - Neither source addresses the other, so this is an open point, not a disagreement. See [[wiki/concepts/Organizing by actionability]].
 
 ## Where sources disagree
 - **The premise that RAG builds nothing up.**
@@ -31,6 +35,7 @@ A knowledge base an LLM incrementally builds and maintains, structured in three 
 ## Mentioned in
 - [[wiki/sources/Source - LLM Wiki]]
 - [[wiki/sources/Source - Contextual Retrieval]]
+- [[wiki/sources/Source - The PARA Method]]
 
 ## Related
 - [[wiki/concepts/Wiki ingest]]
@@ -42,3 +47,5 @@ A knowledge base an LLM incrementally builds and maintains, structured in three 
 - [[wiki/concepts/Evergreen notes]]
 - [[wiki/concepts/Retrieval-augmented generation]]
 - [[wiki/concepts/Contextual Retrieval]]
+- [[wiki/concepts/PARA method]]
+- [[wiki/concepts/Organizing by actionability]]

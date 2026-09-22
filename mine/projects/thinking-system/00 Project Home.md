@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M3 – First Ingests, started 2026-09-22 (see [[06 Roadmap]] §6)
+**Current module:** M3 closed 2026-09-22 → next, M4 – Ask and File-back (see [[06 Roadmap]] §2)
 
 ## Document set
 
@@ -35,7 +35,8 @@ tags: [project/thinking-system, moc]
 | 13 | [[13 Input Zones]] | One input door per operation, all triggered inside Claude | **Accepted** |
 | 14 | [[14 M0 Handover]] | Closing state of M0, used to open the M1 chat | Closed |
 | 15 | [[15 M1 Handover]] | Closing state of M1, used to open the M2 chat | Closed |
-| 16 | [[16 M2 Handover]] | Closing state of M2, to open the M3 chat with | Current |
+| 16 | [[16 M2 Handover]] | Closing state of M2, used to open the M3 chat | Closed |
+| 17 | [[17 M3 Handover]] | Closing state of M3, to open the M4 chat with | Current |
 
 **Planned (not written yet)**
 - 11 Workflow Playbook (module M7): product-owner routines
@@ -85,3 +86,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.15 | 2026-09-22 | Source 2 (As We May Think) ingested. The ingest missed that source 1 already discusses Bush's Memex, so the skill now searches `wiki/` and `raw/` for every new source, and also gets ground rules (file tools only, no working files, no deletions), PDF page citations (D-046, accepted) and a partial-clip check. `system/conventions.md` and docs 06, 07 and 08 updated |
 | 1.16 | 2026-09-22 | Source 3 (Evergreen notes) ingested from the hub page. Its principle notes, the D-040 settings entry and one skill tweak are parked; doc 06 §6 lists them |
 | 1.17 | 2026-09-22 | Source 4 (Contextual Retrieval) ingested, with the first real disagreement between sources recorded on both sides. D-047 proposed and accepted: `contested` belongs on the pages carrying the disputed claim, not on source pages or the overview. Docs 03, 06, 07 and 08 and the `ingest` skill updated |
+| **1.18** | 2026-09-22 | **M3 closed.** Source 5 (The PARA Method) ingested: 6 existing pages updated, 3 with new cited claims, against a bar of 3, and a second disagreement recorded on both sides. Five sources in `raw/`, 26 wiki pages, 11 insight drafts. Doc 17 (M3 Handover) added; docs 00 and 06 updated |

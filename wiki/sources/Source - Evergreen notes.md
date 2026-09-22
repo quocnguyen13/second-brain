@@ -1,7 +1,7 @@
 ---
 type: source
 status: verified
-sources: ["[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]"]
+sources: ["[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
 tags: ["knowledge-management", "note-taking"]
@@ -39,6 +39,10 @@ A hub page defining [[wiki/concepts/Evergreen notes]]: notes written and organiz
 - Plain-text mentions only: Zettelkasten, Niklas Luhmann, Sönke Ahrens.
 
 ## Conflicts and open points
+- **Disagreement with the PARA post: concepts and associations, or projects in a hierarchy.**
+  - This page says notes are "concept-oriented", accumulate "across projects", and follow "prefer associative ontologies to hierarchical taxonomies" ([[raw/matuschak-evergreen-notes.md]]).
+  - [[wiki/sources/Source - The PARA Method]] says to organise by current projects and goals, in a four-category folder hierarchy ([[raw/forte-para-method.md]]).
+  - Contested; both positions are shown on [[wiki/concepts/Evergreen notes]], [[wiki/concepts/Organizing by actionability]] and [[wiki/concepts/PARA method]].
 - **Who writes. This is a tension, not a contested claim.** Matuschak tells you to write notes for yourself, because the point is better thinking ([[raw/matuschak-evergreen-notes.md]]). The gist says of the wiki "you read it; the LLM writes it" ([[raw/karpathy-llm-wiki.md]]). The two sources aim at different things (developing insight vs. maintaining a knowledge base), so neither claim contradicts the other. In this vault the split falls between `mine/` and `wiki/`.
 - **Partial clip.** The hub names these notes but they were not captured. Each is a gap, not something to fill from general knowledge:
   - Most people take only transient notes
