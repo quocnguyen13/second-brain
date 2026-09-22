@@ -14,7 +14,7 @@ tags: [project/thinking-system, claude]
 Back to [[00 Project Home]] · Implements [[02 System Architecture]], [[03 Trust and Provenance]], and [[13 Input Zones]]
 
 > [!info] What this is
-> The schema layer: the files that turn Claude Code into a disciplined wiki maintainer. In module M2 these drafts become real files. Until then, this is the version you review.
+> The schema layer: the files that turn Claude Code into a disciplined wiki maintainer. Since M2 (2026-09-21) they are live files in the vault, and this document mirrors them. If the two ever differ, the vault files are what Claude runs on; change both in the same commit.
 
 ## 1. What goes where
 | File | Loaded | Purpose |
@@ -23,12 +23,15 @@ Back to [[00 Project Home]] · Implements [[02 System Architecture]], [[03 Trust
 | `system/context.md` | Every session (imported) | Who you are, current focus, glossary. You maintain it. |
 | `system/conventions.md` | Every session (imported) | Page types, properties, naming, link vocabulary |
 | `.claude/settings.json` | Every session | Permission rules, manual mode, auto memory off. **Enforced.** |
-| `.claude/skills/<name>/SKILL.md` | On use | `ingest`, `file-answer`, `lint` |
+| `.claude/skills/<name>/SKILL.md` | On use | `ingest`, `ask`, `file-answer`, `lint` (from M3) |
+| `system/templates/<Type> template.md` | On use | The shape of each page type; Claude reads one before creating a page ([[10 Templates]]) |
 
 Keep `CLAUDE.md` under 200 lines, and the imported files short, since they load at startup too. Procedures belong in skills.
 
-## 2. Draft `CLAUDE.md`
+## 2. `CLAUDE.md`
+At the vault root. The first line is an HTML comment, which Claude Code strips before loading, so it costs no context.
 ````markdown
+<!-- Live schema. Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §2; change both in the same commit. Keep under 200 lines. -->
 # Vault schema
 
 This vault is a compiled knowledge base with three layers:
@@ -83,7 +86,7 @@ When I run `/lint`, run the standing checks, then work through `inbox/checks.md`
 - I'm a product owner in a commercial bank. Be concise and structured; state trade-offs; end with a recommendation.
 ````
 
-## 3. Draft `.claude/settings.json`
+## 3. `.claude/settings.json`
 ```json
 {
   "autoMemoryEnabled": false,
@@ -94,7 +97,8 @@ When I run `/lint`, run the standing checks, then work through `inbox/checks.md`
     "allow": [
       "Edit(/wiki/**)",
       "Edit(/mine/drafts/**)",
-      "Edit(/inbox/**)",
+      "Edit(/inbox/questions.md)",
+      "Edit(/inbox/checks.md)",
       "Edit(/system/lint/**)",
       "Edit(/index.md)",
       "Edit(/log.md)"
@@ -105,14 +109,20 @@ When I run `/lint`, run the standing checks, then work through `inbox/checks.md`
       "Bash(rm *)",
       "Bash(git clean *)",
       "Bash(git reset *)",
-      "PowerShell(Remove-Item *)"
+      "PowerShell(Remove-Item *)",
+      "PowerShell(git clean *)",
+      "PowerShell(git reset *)"
     ]
   }
 }
 ```
-- **Allow rules** are what Claude owns: the wiki, the draft queue, the input zones (so it can tick items off), lint reports, and the two navigation files. Ingest therefore runs without a prompt per page.
+- **Allow rules** are what Claude owns: the wiki, the draft queue, the two queue files in `inbox/` (so it can tick items off), lint reports, and the two navigation files. Ingest therefore runs without a prompt per page. Files in `inbox/sources/` are not on the list, so a captured source can't change before it reaches `raw/` ([[07 Decision Log]] D-032).
 - **Manual mode** means every other edit, including anything in `mine/` and `system/`, waits for your approval. That covers your own notes in `mine/scratch/` ([[07 Decision Log]] D-029) with no extra rule.
 - **`Edit(/raw/**)` denied:** sources stay immutable, enforced rather than requested. Moving a file from `inbox/sources/` into `raw/` is a shell command you approve once per ingest ([[13 Input Zones]] §2).
+- **Paths starting with `/` anchor at the folder you start Claude Code in.** Always start it at the vault root; started in a subfolder, `/raw/**` would point at the wrong place.
+- **Auto mode stays off.** On Pro, sessions start in auto mode unless a settings file disables it; `disableAutoMode` makes them start in Manual ([[07 Decision Log]] D-011).
+- **Two shells, one rule set.** With Git for Windows installed, Claude Code has both a Bash tool and a PowerShell tool, so every shell deny rule appears in both forms ([[07 Decision Log]] D-031). PowerShell rules also match aliases, so `Remove-Item` covers `rm` and `del`.
+- **`.claude/` and `.git/` are protected.** Claude Code always asks before writing there, whatever the allow rules say, so Claude can't quietly change its own settings.
 - Allow rules take effect after you accept the workspace trust prompt on first run. Deny rules apply immediately.
 - Shell rules only catch the usual command forms, so git remains the real safety net.
 
@@ -144,16 +154,29 @@ Set up the conditions first: ingest 5 sources, plant one contradiction between t
 Record results in `system/test-results.md`.
 
 ## 6. M2 setup steps (Windows)
-Check against the current docs as you go; Claude Code changes often.
+Checked against the Claude Code docs on 2026-09-21. Recheck anything more than about three months old; Claude Code changes often.
 
 **Already done in M1:** Git for Windows installed; the vault initialised as a git repo with the `.gitignore` and `.gitattributes` below, committed, and pushed to the private repo `second-brain` ([[07 Decision Log]] D-030); the three zones in `inbox/` created.
+**Done in M2 by Claude (2026-09-21):** `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`, and the eight templates in `system/templates/` placed in the vault.
 
-1. Install **Claude Code** (the docs list a PowerShell installer and `winget install Anthropic.ClaudeCode`).
-2. Confirm no `ANTHROPIC_API_KEY` variable is set, or Claude Code bills the API instead of your Pro plan.
-3. Create `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, and empty `index.md` and `log.md`. Commit and push.
-4. Run `claude` in the vault from a normal terminal, never one opened with "Run as administrator". Sign in and accept the workspace trust prompt.
-5. Verify: `/context` lists the schema files; `/permissions` shows the rules; `/memory` shows auto memory off.
-6. Ingest the LLM Wiki gist as source 1 and read every page it produces.
+1. **Install Claude Code** from a normal PowerShell window, never one opened with "Run as administrator": `irm https://claude.ai/install.ps1 | iex`, then `claude --version` ([[07 Decision Log]] D-035).
+2. **Check no API key is set.** Each of these prints nothing: `$env:ANTHROPIC_API_KEY`, `[Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY','User')`, `[Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY','Machine')`. If Claude Code ever asks you to approve an API key, answer No; otherwise it bills the API instead of your Pro plan.
+3. **Review and commit the schema files:** `git add -A`, then `git diff --staged` to read every change, new files included. Commit and push.
+4. **Check the install and settings:** from the vault root, `claude doctor` reports no settings errors.
+5. **First run:** from the vault root, `claude`. Sign in with your Claude account in the browser, then accept the workspace trust prompt. It lists the allow rules, which apply only once you accept.
+6. **Verify the session:**
+   - The status bar shows `⏸ manual mode on`, and Shift+Tab cycles Manual → accept edits → plan, never auto or bypass.
+   - `/context` lists `CLAUDE.md`, `system/context.md`, and `system/conventions.md` under Memory files.
+   - `/permissions` shows the 7 allow rules and 8 deny rules from project settings.
+   - `/memory` shows auto memory off.
+7. **Permission smoke test** ([[07 Decision Log]] D-033). Three prompts in the session:
+   - "Add the line `- [ ] 2026-09-21 smoke test` to inbox/checks.md." Claude edits without asking.
+   - "Add the line `smoke test` to system/context.md." Claude asks first. Answer No.
+   - "Create raw/smoke-test.md containing `test`." Blocked by the deny rule, with no prompt.
+
+   Then `/exit`, `git restore inbox/checks.md`, and `git status` shows a clean tree.
+
+**M2 is done when** steps 1–7 pass. The first ingest, the LLM Wiki gist, opens M3.
 
 `.gitignore`:
 ```
@@ -173,5 +196,6 @@ Stores every text file with Unix line endings, so a file whose line endings flip
 - LLM Wiki pattern: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - Memory and imports: https://code.claude.com/docs/en/memory
 - Permissions: https://code.claude.com/docs/en/permissions
+- Permission modes, protected paths: https://code.claude.com/docs/en/permission-modes
 - Setup: https://code.claude.com/docs/en/setup
 - Pro plan and usage: https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan

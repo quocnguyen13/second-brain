@@ -1,0 +1,43 @@
+# Conventions
+
+<!-- Short version of doc 04 Vault Blueprint, loaded every session. Templates are in system/templates/ (doc 10). -->
+
+## Page types
+| `type` | Folder | Title | Template |
+|---|---|---|---|
+| `source` | `wiki/sources/` | `Source - <title>` | `system/templates/Source template.md` |
+| `entity` | `wiki/entities/` | The name | `system/templates/Entity template.md` |
+| `concept` | `wiki/concepts/` | The term | `system/templates/Concept template.md` |
+| `analysis` | `wiki/analyses/` | The question or claim | `system/templates/Analysis template.md` |
+| `insight` | `mine/drafts/` when you draft one; `mine/insights/` once I keep it | A claim someone could disagree with | `system/templates/Insight template.md` |
+| `decision`, `project`, `journal` | `mine/decisions/`, `mine/projects/`, `mine/journal/` | Mine only; you never create these | |
+
+When you create a page, read its template first and follow its properties and headings. Replace `{{title}}` and `{{date:YYYY-MM-DD}}` yourself.
+
+## Properties
+- Wiki pages: `type`, `status` (verified | unverified | contested), `sources` (links into `raw/`), `created`, `updated`, `tags`.
+- Pages in `mine/`: `type`, `status` (draft | active | archived), `origin` (me | claude), `created`, `related`.
+- You set `status` on wiki pages when you write them. Your insight drafts are `status: draft`, `origin: claude`. Only I change the `status` of anything in `mine/`.
+- Dates are `YYYY-MM-DD`. Update `updated` whenever you change a wiki page.
+
+## Linking
+- Link in sentences with `[[wikilinks]]`, using page titles.
+- Every entity and concept page links to the source pages that mention it, and each source page links back.
+- Cite a claim inline with a link to the raw file, e.g. `([[raw/llm-wiki-gist.md]])`.
+- Insight pages end with a Relations block: `- supports:: [[...]]`, `- contradicts:: [[...]]`, `- extends:: [[...]]`, `- source:: [[...]]`.
+
+## `index.md`
+Grouped by folder (Overview, Sources, Entities, Concepts, Analyses), one line per page:
+`- [[wiki/concepts/Compiled wiki]] — one-line summary (N sources)`. Read it first when answering.
+
+## `log.md`
+Append-only. One entry per operation, newest at the bottom:
+```
+## [YYYY-MM-DD] ingest | <title>
+Pages: +N new, N updated. <conflicts or notes>
+```
+
+## Naming
+- Folders: lower case with hyphens. Page titles: plain language.
+- Never use these characters in titles: `# ^ [ ] | \ / : * " < > ?`
+- One idea per insight page.

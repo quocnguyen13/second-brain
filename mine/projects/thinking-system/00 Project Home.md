@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M1 closed 2026-09-21 → next, M2 – Connect Claude Code (see [[06 Roadmap]])
+**Current module:** M2 – Connect Claude Code, in progress (see [[06 Roadmap]] §5)
 
 ## Document set
 
@@ -31,12 +31,12 @@ tags: [project/thinking-system, moc]
 | 07 | [[07 Decision Log]] | Decisions made and questions still open | Living document |
 | 08 | [[08 Claude Operating Instructions]] | The schema file, permission settings, skills, and tests | **Accepted** |
 | 09 | [[09 Working Agreement]] | How you and Claude work together on this project | **Accepted** |
+| 10 | [[10 Templates]] | One template per page type, in `system/templates/` | Draft |
 | 13 | [[13 Input Zones]] | One input door per operation, all triggered inside Claude | **Accepted** |
 | 14 | [[14 M0 Handover]] | Closing state of M0, used to open the M1 chat | Closed |
 | 15 | [[15 M1 Handover]] | Closing state of M1, to open the M2 chat with | Current |
 
 **Planned (not written yet)**
-- 10 Templates (module M2): page templates for each type
 - 11 Workflow Playbook (module M7): product-owner routines
 - 12 Data Governance (parked, before any work material enters the vault)
 
@@ -73,3 +73,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.4 | 2026-09-21 | Documents moved to a private GitHub repo synced into project knowledge (D-028); the repo is now the master copy; Q-014 opened |
 | **1.5** | 2026-09-21 | **M1 closed.** D-026 and D-027 accepted. D-029: your own new notes go to `mine/scratch/`. D-030: the vault repo is the single source of truth, project knowledge syncs `mine/projects/thinking-system/`, and the documents repo is archived (supersedes D-028). Docs 02, 03, 04, 05, 06, 08, 09 and 13 updated to match, including two broken links to the retired 05 Learning Path; doc 15 (M1 Handover) added |
 | 1.6 | 2026-09-21 | Doc 15 (M1 Handover) accepted and promoted to `working` |
+| 1.7 | 2026-09-21 | **M2 started.** Schema files created in the vault: `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`, and eight templates. Doc 10 (Templates) added. Tool facts rechecked against the current Claude Code docs; D-031 to D-035 proposed. Docs 04, 06, 08 and 13 updated to match |

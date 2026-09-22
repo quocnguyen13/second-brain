@@ -1,0 +1,27 @@
+{
+  "autoMemoryEnabled": false,
+  "permissions": {
+    "defaultMode": "default",
+    "disableAutoMode": "disable",
+    "disableBypassPermissionsMode": "disable",
+    "allow": [
+      "Edit(/wiki/**)",
+      "Edit(/mine/drafts/**)",
+      "Edit(/inbox/questions.md)",
+      "Edit(/inbox/checks.md)",
+      "Edit(/system/lint/**)",
+      "Edit(/index.md)",
+      "Edit(/log.md)"
+    ],
+    "deny": [
+      "Edit(/raw/**)",
+      "Read(/.obsidian/**)",
+      "Bash(rm *)",
+      "Bash(git clean *)",
+      "Bash(git reset *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(git clean *)",
+      "PowerShell(git reset *)"
+    ]
+  }
+}

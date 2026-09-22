@@ -46,7 +46,7 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 │   ├── context.md         who you are, current focus, glossary (you maintain)
 │   ├── conventions.md     short version of this document, for Claude
 │   ├── lint/              dated lint reports
-│   └── templates/
+│   └── templates/         one template per page type (doc 10)
 └── .claude/               Claude Code settings and skills (hidden in Obsidian)
 ```
 Three rules make the structure work: **`raw/` is immutable, `wiki/` is Claude's, `mine/` is yours.** Everything enters through `inbox/`, where each operation has its own door ([[13 Input Zones]]).

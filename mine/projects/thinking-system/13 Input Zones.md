@@ -35,7 +35,7 @@ inbox/
 **Queue format.** `questions.md` and `checks.md` hold one item per line as a checkbox: `- [ ] YYYY-MM-DD text`. The command ticks an item off (`- [ ]` becomes `- [x]`) once it has handled it. Each file's first lines describe the format and are not items.
 
 ## 2. Zone 1: sources → `/ingest`
-**What goes in:** anything you want compiled. The Web Clipper saves straight to `inbox/sources/`. You can also paste a link into the session and ask Claude to fetch it into the zone.
+**What goes in:** anything you want compiled. The Web Clipper saves straight to `inbox/sources/`. You can also paste a link into the session and ask Claude to fetch it into the zone; creating that file asks your approval once, because Claude's edit rights in `inbox/` cover only the two queue files ([[07 Decision Log]] D-032).
 **Contract:** one file per source, and one source per ingest ([[07 Decision Log]] D-022).
 **What `/ingest` does:**
 1. Reads the next file in the zone and tells you the key takeaways, asking what to emphasise.
