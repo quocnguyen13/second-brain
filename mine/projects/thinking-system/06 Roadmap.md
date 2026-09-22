@@ -85,8 +85,8 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] D-040 to D-044 accepted
 - [ ] Q-015 settled: synced skills hidden in vault sessions; `/skills` shows only the vault's and Claude Code's own (D-040)
 - [x] Skill moved into `.claude/skills/ingest/SKILL.md`, committed and pushed; `/ingest` appears after a restart
-- [ ] Source 1 ingested: Karpathy, LLM Wiki gist. Record whether the move into `raw/` asked or was blocked
-- [x] Skill revised after source 1: a page citing one source can be `verified`; links checked before the report; the move check uses file tools
+- [x] Source 1 ingested: Karpathy, LLM Wiki gist, committed 2026-09-22. The move into `raw/` was blocked, so you moved it (D-045)
+- [x] Skill revised after source 1: a page citing one source can be `verified`; links checked before the report; the move check uses file tools; the move is yours (D-045, proposed)
 - [ ] Source 2 ingested: Bush, "As We May Think"
 - [ ] Source 3 ingested: Matuschak, "Evergreen notes"
 - [ ] Source 4 ingested: Anthropic, "Introducing Contextual Retrieval"

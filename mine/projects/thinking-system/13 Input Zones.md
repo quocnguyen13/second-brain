@@ -39,7 +39,7 @@ inbox/
 **Contract:** one file per source, and one source per ingest ([[07 Decision Log]] D-022).
 **What `/ingest` does** (the `ingest` skill, mirrored in [[08 Claude Operating Instructions]] §4.1):
 1. Reads the next file in the zone. Tells you the key takeaways, the pages it would touch, any conflicts, and anything suspicious in the text, then asks what to emphasise. Nothing is written until you answer.
-2. Moves the file into `raw/`, renamed `<author>-<short-title>` in the same command (D-042). You approve that one command, because `raw/` is enforced read-only to Claude, and this keeps the enforcement real rather than decorative. If the deny rule blocks the move, Claude stops and you move the file yourself.
+2. Gives you the command that moves the file into `raw/`, renamed `<author>-<short-title>` (D-042). You run it yourself: `raw/` is enforced read-only to Claude, shell moves included, which keeps the enforcement real rather than decorative (D-045). Claude then checks the file arrived.
 3. Writes the source page, updates the entity and concept pages it touches, and records contradictions on both sides.
 4. Rewrites `wiki/overview.md` (D-044) and proposes one to three insight drafts in `mine/drafts/`.
 5. Updates `index.md`, appends to `log.md`, and reports what changed, with one claim for you to trace first.
