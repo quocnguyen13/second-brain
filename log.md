@@ -8,3 +8,6 @@ Pages: +7 new, 0 updated. No conflicts (first source in the wiki). 3 draft insig
 ## [2026-09-22] ingest | As We May Think
 Pages: +4 new (source, entity, 2 concepts), 0 updated. Overview rewritten (now unverified: carries one general-knowledge claim connecting this source to the compiled-wiki pattern). No conflicts — first source on memex/associative indexing. 2 draft insights filed in mine/drafts/.
 Review: 2 existing pages updated (Compiled wiki, Source - LLM Wiki); links to source 1 added; overview now verified.
+
+## [2026-09-22] ingest | Evergreen notes
+Pages: +3 new (source, entity, concept), 2 updated (Associative indexing, Compiled wiki: Related links only). No conflicts; open tension on who writes (Matuschak vs Karpathy) noted, not contested. Flag: partial clip, 15 linked notes not captured, listed as gaps. Overview rewritten. 2 draft insights filed in mine/drafts/.

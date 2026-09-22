@@ -30,3 +30,4 @@ A knowledge base an LLM incrementally builds and maintains, structured in three 
 - [[wiki/concepts/Wiki index and log]]
 - [[wiki/entities/Karpathy]]
 - [[wiki/concepts/Memex]]
+- [[wiki/concepts/Evergreen notes]]
