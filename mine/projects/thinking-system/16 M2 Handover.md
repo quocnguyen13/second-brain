@@ -44,6 +44,7 @@ All accepted on 2026-09-22.
 - **D-036:** claude.ai connectors are off for vault sessions.
 - **D-037:** The synced `data` plugin is off for vault sessions.
 - **D-038:** When a permission rule blocks an action, Claude stops and tells you, and doesn't look for another way.
+- **D-039:** The first five sources (answers Q-013), listed below.
 
 ## State of the vault
 - Branch `main`. After you commit and push this batch, it's in step with `origin/main`.
@@ -53,7 +54,14 @@ All accepted on 2026-09-22.
 - [[10 Templates]] is still `ai-draft`, waiting for your review.
 
 ## What M3 must produce
-1. **Q-013 answered first:** the first five sources. Source 1 is the LLM Wiki gist; the reading interests in `system/context.md` point to the other four.
+1. **The first five sources are chosen** (Q-013, D-039). Ingest them in this order:
+   1. Karpathy, LLM Wiki gist
+   2. Vannevar Bush, "As We May Think" (1945)
+   3. Andy Matuschak, "Evergreen notes"
+   4. Anthropic, "Introducing Contextual Retrieval" (2024): argues for retrieval where the gist argues for compiling
+   5. Tiago Forte, "The PARA Method": should update pages from sources 1–3
+
+   Clip each into `inbox/sources/` only when its turn comes. Your work-domain topics follow in the next iteration.
 2. **The `ingest` skill** at `.claude/skills/ingest/SKILL.md`, following [[13 Input Zones]] §2 and the ingest steps in `CLAUDE.md`. Once it exists, the ingest section of `CLAUDE.md` shrinks to a pointer (D-012). Settle Q-015 at the same time.
 3. **Five sources ingested one at a time** (D-022), starting with the gist. That means `wiki/` populated, `wiki/overview.md` written, and `index.md` and `log.md` live.
 
@@ -62,7 +70,6 @@ All accepted on 2026-09-22.
 ## Open questions
 | ID | Question | Due |
 |---|---|---|
-| Q-013 | Your first five sources. The LLM Wiki gist is source 1; four more are yours. | Start of M3 |
 | Q-015 | Keep the remaining synced skills in vault sessions, or switch some off? | Start of M3 |
 | Q-008 | Which product-owner routines matter most | M7 |
 | Q-004 | Your bank's AI-tools policy | M8, with doc 12 |
