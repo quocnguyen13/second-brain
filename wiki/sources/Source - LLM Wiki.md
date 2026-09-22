@@ -1,7 +1,7 @@
 ---
 type: source
 status: verified
-sources: ["[[raw/karpathy-llm-wiki.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
 tags: ["compiled-wiki", "knowledge-management"]
@@ -11,7 +11,7 @@ tags: ["compiled-wiki", "knowledge-management"]
 **Raw file:** [[raw/karpathy-llm-wiki.md]] · **Author or publisher:** Karpathy (per the gist URL, `github.com/karpathy`) · **Published:** not dated in the clip · **Ingested:** 2026-09-22
 
 ## Summary
-A GitHub Gist proposing a pattern for personal knowledge bases: instead of RAG-style retrieval that rediscovers knowledge from scratch on every query, an LLM incrementally builds and maintains a persistent, interlinked wiki from a curated collection of raw sources. The wiki compounds over time — cross-references, contradictions, and synthesis accumulate rather than being re-derived ([[raw/karpathy-llm-wiki.md]]).
+A GitHub Gist proposing a pattern for personal knowledge bases: instead of [[wiki/concepts/Retrieval-augmented generation|RAG]]-style retrieval that rediscovers knowledge from scratch on every query, an LLM incrementally builds and maintains a persistent, interlinked wiki from a curated collection of raw sources. The wiki compounds over time — cross-references, contradictions, and synthesis accumulate rather than being re-derived ([[raw/karpathy-llm-wiki.md]]).
 
 ## Key claims
 - Three-layer architecture: **raw sources** (immutable, source of truth), **the wiki** (LLM-owned markdown pages — summaries, entities, concepts, overview), and **the schema** (a doc like `CLAUDE.md` that defines conventions and workflows) ([[raw/karpathy-llm-wiki.md]]).
@@ -30,6 +30,10 @@ A GitHub Gist proposing a pattern for personal knowledge bases: instead of RAG-s
 - [[wiki/concepts/Wiki index and log]]
 - [[wiki/concepts/Memex]]
 - [[wiki/entities/Vannevar Bush]]
+- [[wiki/concepts/Retrieval-augmented generation]]
+- [[wiki/concepts/BM25]]
+- [[wiki/concepts/Reranking]]
 
 ## Conflicts and open points
-- None found. This is the first source in the wiki, and it is also the design document this vault's own `CLAUDE.md` implements.
+- This is the first source in the wiki, and it is also the design document this vault's own `CLAUDE.md` implements.
+- **Disagreement with the Contextual Retrieval post: does RAG build anything up?** This source says in RAG "the LLM is rediscovering knowledge from scratch on every question. There's no accumulation" ([[raw/karpathy-llm-wiki.md]]). [[wiki/sources/Source - Contextual Retrieval]] describes RAG preprocessing where an LLM generates context for each chunk once and prepends it before embedding and before building the BM25 index ([[raw/anthropic-contextual-retrieval.md]]). What persists there is per-chunk context, not cross-document synthesis. Contested; both positions are shown on [[wiki/concepts/Compiled wiki]] and [[wiki/concepts/Retrieval-augmented generation]].

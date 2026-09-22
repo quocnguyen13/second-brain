@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-21
+reviewed: 2026-09-22
 tags: [project/thinking-system, governance]
 ---
 
@@ -32,7 +32,7 @@ Back to [[00 Project Home]] · Related: [[02 System Architecture]]
 Pages in `mine/` use `status: draft` until you accept them, then `active`. Only you change those.
 
 ## 3. Conflicts, staleness, and gaps
-- **Two sources disagree:** Claude records both positions on the page, marks it `contested`, and names the sources. It never silently picks one.
+- **Two sources disagree:** Claude records both positions on the page, marks it `contested`, and names the sources. It never silently picks one. `contested` goes on the pages that carry the disputed claim; source pages and `wiki/overview.md` record the conflict and keep their own status ([[07 Decision Log]] D-047).
 - **A newer source supersedes an older claim:** the old claim stays visible, marked as superseded, with a link to what replaced it. Deleted history is lost history.
 - **Out of date:** every page carries an `updated` date. Lint flags pages on fast-moving topics that haven't been touched in six months.
 - **Nothing there:** "the wiki has nothing on this" is a required answer when it's true, before Claude falls back to general knowledge.

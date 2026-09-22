@@ -11,3 +11,7 @@ Review: 2 existing pages updated (Compiled wiki, Source - LLM Wiki); links to so
 
 ## [2026-09-22] ingest | Evergreen notes
 Pages: +3 new (source, entity, concept), 2 updated (Associative indexing, Compiled wiki: Related links only). No conflicts; open tension on who writes (Matuschak vs Karpathy) noted, not contested. Flag: partial clip, 15 linked notes not captured, listed as gaps. Overview rewritten. 2 draft insights filed in mine/drafts/.
+
+## [2026-09-22] ingest | Contextual Retrieval
+Pages: +7 new (source, entity Anthropic, 5 concepts), 3 updated (Compiled wiki, Wiki index and log, Source - LLM Wiki). Conflict: Karpathy's "RAG builds nothing up" vs Anthropic's one-time per-chunk LLM pass; contested on Compiled wiki, Retrieval-augmented generation, both source pages, overview. Flags: incomplete clip (footnote 1 missing, charts and Appendix I as images, Appendix II not captured); vendor benchmark; embedded contextualizer prompt treated as data. Overview rewritten. 2 draft insights filed in mine/drafts/.
+Review: contested narrowed to Compiled wiki and Retrieval-augmented generation; the two source pages and the overview are verified and record the disagreement. The accumulation claim now cites the preprocessing wording, not the cost figure.

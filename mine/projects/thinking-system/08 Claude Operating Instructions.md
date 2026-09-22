@@ -142,7 +142,7 @@ Every vault skill follows the same pattern ([[07 Decision Log]] D-041):
 - **Skills synced from claude.ai** (such as `pdf` and `xlsx`) are hidden in vault sessions ([[07 Decision Log]] D-040). At the start of each module, `/skills` should list only the vault's own skills and Claude Code's bundled ones.
 
 ### 4.1 `ingest`
-`.claude/skills/ingest/SKILL.md`, written in M3 (2026-09-22) and revised after sources 1 and 2. After source 1: the status rule is clarified, links are checked before the report, and the move is yours (D-045). After source 2: ground rules (file tools only, no working files in the vault, no deletions), a search of `wiki/` and `raw/` for every new source so earlier pages get updated, PDF citations with page numbers (D-046), and a check that clips aren't partial. It runs the zone contract in [[13 Input Zones]] §2. Two points to know before the first run:
+`.claude/skills/ingest/SKILL.md`, written in M3 (2026-09-22) and revised after sources 1 and 2. After source 1: the status rule is clarified, links are checked before the report, and the move is yours (D-045). After source 2: ground rules (file tools only, no working files in the vault, no deletions), a search of `wiki/` and `raw/` for every new source so earlier pages get updated, PDF citations with page numbers (D-046), and a check that clips aren't partial. After source 4: which pages `contested` belongs on (D-047). It runs the zone contract in [[13 Input Zones]] §2. Two points to know before the first run:
 - **The move into `raw/` is yours.** On the first ingest the deny rule `Edit(/raw/**)` blocked Claude's shell move, and Claude stopped as D-038 requires. So Claude's first message now includes the exact `Move-Item` command; you run it in a second PowerShell window at the vault root, then reply with what to emphasise ([[07 Decision Log]] D-045). Dragging the file in Obsidian works too, as long as you rename it to the proposed name.
 - **What counts as "updated".** The report and the log count existing source, entity and concept pages only. `overview.md`, `index.md` and `log.md` change on every ingest, so they don't count toward the M3 exit test ([[07 Decision Log]] D-044).
 
@@ -207,6 +207,7 @@ Write nothing until I answer.
 ## 5. Record conflicts
 - Two sources disagree: show both positions, each with its citation, under "Where sources disagree"; set `status: contested`; note it on the source page under "Conflicts and open points".
 - A newer source supersedes a claim: keep the old claim, mark it "superseded by", with a link and a citation. Never delete it.
+- `contested` marks only the pages that carry the disputed claim. A source page records the conflict under "Conflicts and open points" and keeps its own status; `overview.md` reports the disagreement and stays `verified` while its own claims are cited.
 
 ## 6. Set status on every page you wrote or changed
 - `verified` when every claim on the page, including the one-line definition under the title, cites a file in `raw/`. One source is enough: status records whether claims are cited, not how many sources agree.
