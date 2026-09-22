@@ -48,6 +48,8 @@ Accepted on 2026-09-19 unless marked otherwise. New proposals wait for your word
 | **D-033** | M2 closes when the setup checks and a three-part permission smoke test pass. Ingesting the LLM Wiki gist moves to M3, where it is already source 1. | *Proposed 2026-09-21* | Doc 08 §6 listed the ingest as an M2 step, while the roadmap puts it in M3 with the `ingest` skill. The smoke test proves the rules hold before any real content goes in ([[08 Claude Operating Instructions]] §6) |
 | **D-034** | One template per page type, in `system/templates/`, named `<Type> template`. Claude reads the wiki templates before creating a page; the `mine/` templates are yours. The files are the source of truth; doc 10 describes them. | *Proposed 2026-09-21* | Delivers D-016. The names can't collide with a wiki page called "Concept" or "Decision", and the templates hold no wikilinks, so no ghost links ([[10 Templates]]) |
 | **D-035** | Install Claude Code with the native PowerShell installer, not WinGet | *Proposed 2026-09-21* | The native install updates itself in the background; a WinGet install doesn't, so it would drift behind on fixes. Behaviour can change with updates, which is why tool facts get rechecked ([[09 Working Agreement]] §5) |
+| **D-036** | Claude.ai connectors are switched off for vault sessions (`disableClaudeAiConnectors: true` in `.claude/settings.json`) | *Proposed 2026-09-22* | Signed in with your claude.ai account, Claude Code loads your claude.ai connectors automatically. Connected, they would let a vault session read mail and cloud files that sit outside the vault and outside the personal-and-public boundary ([[03 Trust and Provenance]] §4). The vault stays the only thing Claude reads, in line with D-003 |
+| **D-037** | The `data` plugin synced from your claude.ai account is switched off for vault sessions (`"enabledPlugins": {"data@synced": false}` in `.claude/settings.json`) | *Proposed 2026-09-22* | It brings 8 MCP servers for analytics tools (Amplitude, Atlassian, BigQuery, Hex and others) and 10 skills into every vault session. None has a job in the vault; the servers are ways out of it, and D-025 keeps the operations free of plugins. The setting applies to this project only; the plugin stays on everywhere else |
 
 **Superseded:** D-004 (Claude writes only to an AI-drafts folder) and D-005 (PARA structure) are replaced by D-019 and D-020. D-028 (a separate documents repo) is replaced by D-030. D-007 (no automatic saving) still holds: operations run when you ask. D-009 (hyphenated folder names) is folded into [[04 Vault Blueprint]]; D-016 (templates early) is delivered in M2 by [[10 Templates]] (D-034).
 
@@ -66,8 +68,10 @@ Accepted on 2026-09-19 unless marked otherwise. New proposals wait for your word
 | Q-012 | Session style | Chat structure | **One chat per module** |
 | **Q-013** | **What are the first 5 sources?** The LLM Wiki gist is source 1; four more are yours | Module M3 needs them, and they set the wiki's first shape | Open, due at the start of M3 |
 | **Q-014** | Once M1 creates the vault repo, does it replace the separate documents repo? | Two repos holding the same documents will drift apart | **Yes**, decided 2026-09-21 (D-030). Project knowledge syncs `mine/projects/thinking-system/` from the private repo `second-brain`; the documents repo is archived |
+| **Q-015** | Keep the skills synced from your claude.ai account in vault sessions? 38 loaded at first run; the 10 from the `data` plugin go with D-037, the rest (such as `pdf` and `xlsx`) remain | They cost little context, but they're procedures the vault didn't define; `pdf` may help ingest PDF sources | Open, due at the start of M3, when the `ingest` skill is written |
 
 ## Plugin and MCP register
 | Name | Type | Why it's needed | Source | Date added |
 |---|---|---|---|---|
-| (none yet) | | | | |
+| claude.ai connectors | MCP | None; switched off for vault sessions (D-036) | Your claude.ai account | Not added |
+| `data` plugin (8 MCP servers, 10 skills) | Plugin | None; switched off for vault sessions (D-037) | Synced from your claude.ai account | Not added |

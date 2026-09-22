@@ -90,6 +90,10 @@ When I run `/lint`, run the standing checks, then work through `inbox/checks.md`
 ```json
 {
   "autoMemoryEnabled": false,
+  "disableClaudeAiConnectors": true,
+  "enabledPlugins": {
+    "data@synced": false
+  },
   "permissions": {
     "defaultMode": "default",
     "disableAutoMode": "disable",
@@ -122,6 +126,8 @@ When I run `/lint`, run the standing checks, then work through `inbox/checks.md`
 - **Paths starting with `/` anchor at the folder you start Claude Code in.** Always start it at the vault root; started in a subfolder, `/raw/**` would point at the wrong place.
 - **Auto mode stays off.** On Pro, sessions start in auto mode unless a settings file disables it; `disableAutoMode` makes them start in Manual ([[07 Decision Log]] D-011).
 - **Two shells, one rule set.** With Git for Windows installed, Claude Code has both a Bash tool and a PowerShell tool, so every shell deny rule appears in both forms ([[07 Decision Log]] D-031). PowerShell rules also match aliases, so `Remove-Item` covers `rm` and `del`.
+- **No claude.ai connectors.** Signed in with your claude.ai account, Claude Code would otherwise load your claude.ai connectors (mail, cloud drives) into every vault session. `disableClaudeAiConnectors` keeps them out, so the vault is the only thing Claude reads ([[07 Decision Log]] D-036).
+- **No synced plugins.** Plugins you turn on at claude.ai also sync into Claude Code, as `<name>@synced`. The `data` plugin is switched off for this project, which removes its 8 MCP servers and 10 skills from vault sessions ([[07 Decision Log]] D-037). If you turn on another plugin at claude.ai, add it to `enabledPlugins` the same way; `claude plugin list` shows what synced.
 - **`.claude/` and `.git/` are protected.** Claude Code always asks before writing there, whatever the allow rules say, so Claude can't quietly change its own settings.
 - Allow rules take effect after you accept the workspace trust prompt on first run. Deny rules apply immediately.
 - Shell rules only catch the usual command forms, so git remains the real safety net.
@@ -157,11 +163,11 @@ Record results in `system/test-results.md`.
 Checked against the Claude Code docs on 2026-09-21. Recheck anything more than about three months old; Claude Code changes often.
 
 **Already done in M1:** Git for Windows installed; the vault initialised as a git repo with the `.gitignore` and `.gitattributes` below, committed, and pushed to the private repo `second-brain` ([[07 Decision Log]] D-030); the three zones in `inbox/` created.
-**Done in M2 by Claude (2026-09-21):** `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`, and the eight templates in `system/templates/` placed in the vault.
+**Done in M2 by Claude (2026-09-21):** `CLAUDE.md`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`, and the eight templates in `system/templates/` placed in the vault. The settings file arrived as `claude-settings.json` at the vault root, because remote tools can't write into `.claude/`; step 3 moves it.
 
 1. **Install Claude Code** from a normal PowerShell window, never one opened with "Run as administrator": `irm https://claude.ai/install.ps1 | iex`, then `claude --version` ([[07 Decision Log]] D-035).
 2. **Check no API key is set.** Each of these prints nothing: `$env:ANTHROPIC_API_KEY`, `[Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY','User')`, `[Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY','Machine')`. If Claude Code ever asks you to approve an API key, answer No; otherwise it bills the API instead of your Pro plan.
-3. **Review and commit the schema files:** `git add -A`, then `git diff --staged` to read every change, new files included. Commit and push.
+3. **Move the settings file into place, then review and commit:** from the vault root, `New-Item -ItemType Directory -Force .claude | Out-Null`, then `Move-Item claude-settings.json .claude\settings.json`. Then `git add -A` and `git diff --staged` to read every change, new files included. Commit and push.
 4. **Check the install and settings:** from the vault root, `claude doctor` reports no settings errors.
 5. **First run:** from the vault root, `claude`. Sign in with your Claude account in the browser, then accept the workspace trust prompt. It lists the allow rules, which apply only once you accept.
 6. **Verify the session:**
@@ -169,6 +175,7 @@ Checked against the Claude Code docs on 2026-09-21. Recheck anything more than a
    - `/context` lists `CLAUDE.md`, `system/context.md`, and `system/conventions.md` under Memory files.
    - `/permissions` shows the 7 allow rules and 8 deny rules from project settings.
    - `/memory` shows auto memory off.
+   - `/mcp` lists no claude.ai connectors and no `plugin:` servers, and the startup line about MCP servers needing authentication is gone.
 7. **Permission smoke test** ([[07 Decision Log]] D-033). Three prompts in the session:
    - "Add the line `- [ ] 2026-09-21 smoke test` to inbox/checks.md." Claude edits without asking.
    - "Add the line `smoke test` to system/context.md." Claude asks first. Answer No.

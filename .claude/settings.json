@@ -1,5 +1,9 @@
 {
   "autoMemoryEnabled": false,
+  "disableClaudeAiConnectors": true,
+  "enabledPlugins": {
+    "data@synced": false
+  },
   "permissions": {
     "defaultMode": "default",
     "disableAutoMode": "disable",

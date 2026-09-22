@@ -67,10 +67,12 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Vault checked against [[04 Vault Blueprint]] §1: every folder and zone file in place
 - [x] Schema files placed in the vault: `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`
 - [x] Eight templates in `system/templates/`; [[10 Templates]] written
-- [ ] D-031 to D-035 accepted
-- [ ] `system/context.md` filled in by you
-- [ ] Claude Code installed; no API key set ([[08 Claude Operating Instructions]] §6 steps 1–2)
-- [ ] Schema files committed and pushed (step 3)
-- [ ] `claude doctor`, first run, and session checks pass (steps 4–6)
+- [ ] D-031 to D-037 accepted
+- [x] `system/context.md` filled in by you
+- [x] Claude Code 2.1.278 installed with the native installer; no API key set ([[08 Claude Operating Instructions]] §6 steps 1–2)
+- [x] Schema files committed and pushed (step 3)
+- [x] First run: signed in, trust prompt accepted; `/context` loads 3 memory files
+- [x] Connectors switched off (D-036); auto memory off and permission rules as expected
+- [ ] `data` plugin switched off (D-037); `/mcp` empty; `claude doctor` clean (steps 4–6)
 - [ ] Permission smoke test passes (step 7)
 - [ ] Handover written: 16 M2 Handover
