@@ -32,7 +32,7 @@ Write nothing until I answer.
 - One command that moves and renames in a single step: `Move-Item -LiteralPath 'inbox/sources/<file>' -Destination 'raw/<name>'` in PowerShell, or `mv` in Bash. Never copy and delete, never re-create the file with a write tool, never change its content.
 - Name: lower case with hyphens; the author's surname (or the organisation), then 2–4 words of the title; the original extension. Example: `raw/karpathy-llm-wiki.md`. If the name is taken, add `-2`.
 - If a permission rule blocks the command, stop and tell me. I'll move the file myself and give you the final path. Don't try another way.
-- Confirm the file reads from its `raw/` path and is gone from `inbox/sources/`. Every citation from here on uses that path.
+- Confirm with your file tools (Glob or Read), not a shell command, that the file is in `raw/` and gone from `inbox/sources/`. Every citation from here on uses that path.
 
 ## 3. Write the source page
 - Read `system/templates/Source template.md`, then write `wiki/sources/Source - <title>.md`.
@@ -52,9 +52,10 @@ Write nothing until I answer.
 - A newer source supersedes a claim: keep the old claim, mark it "superseded by", with a link and a citation. Never delete it.
 
 ## 6. Set status on every page you wrote or changed
-- `verified` only if every claim on the page cites a file in `raw/`.
-- `unverified` if any claim lacks one, including anything from general knowledge, which you label "(general knowledge)".
+- `verified` when every claim on the page, including the one-line definition under the title, cites a file in `raw/`. One source is enough: status records whether claims are cited, not how many sources agree.
+- `unverified` if any claim lacks a citation, including anything from general knowledge, which you label "(general knowledge)".
 - `contested` as in step 5.
+- Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims and need no citation.
 
 ## 7. Rewrite wiki/overview.md
 - First ingest: create it from `system/templates/Overview template.md`.
@@ -76,6 +77,7 @@ Write nothing until I answer.
   "Updated" counts existing source, entity and concept pages only; `overview.md`, `index.md` and `log.md` don't count.
 
 ## 10. Report, then stop
+Before reporting, check that every `[[wiki/...]]` link you wrote points to a page that exists, under its exact file name.
 - **Created:** each new page, one line each
 - **Updated:** each existing source, entity or concept page, and what changed
 - **Also changed:** `overview.md`, `index.md`, `log.md`, and the drafts in `mine/drafts/`
