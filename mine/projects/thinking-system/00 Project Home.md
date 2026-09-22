@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M2 closed 2026-09-22 → next, M3 – First Ingests (see [[06 Roadmap]])
+**Current module:** M3 – First Ingests, started 2026-09-22 (see [[06 Roadmap]] §6)
 
 ## Document set
 
@@ -78,3 +78,5 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.8 | 2026-09-22 | First Claude Code session: claude.ai connectors, the synced `data` plugin and synced skills found loading into vault sessions. D-036 (connectors off) and D-037 (`data` plugin off) proposed; Q-015 opened (remaining synced skills, due at M3). Docs 06, 07 and 08 updated |
 | **1.9** | 2026-09-22 | **M2 closed.** D-031 to D-037 accepted; D-038 added and accepted (stop when a permission rule blocks). All setup checks and the smoke test passed. Docs 06, 07, 08 and `CLAUDE.md` updated; doc 16 (M2 Handover) added |
 | 1.10 | 2026-09-22 | Q-013 answered: the first five sources are the LLM-knowledge set (D-039). Docs 07 and 16 updated |
+| **1.11** | 2026-09-22 | **M3 started.** `ingest` skill drafted (arrives as `ingest-SKILL.md` for you to move into `.claude/skills/ingest/`) and mirrored in doc 08 §4.1; the ingest section of `CLAUDE.md` becomes a pointer. Overview page type and template added. D-040 (answers Q-015) to D-044 proposed. Docs 04, 06, 07, 08, 10 and 13 and `system/conventions.md` updated |
+| 1.12 | 2026-09-22 | D-040 to D-044 accepted. Q-015 decided: synced skills hidden in vault sessions, which takes effect once their names are in `.claude/settings.json`. Docs 06, 07 and 08 updated |

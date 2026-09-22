@@ -5,7 +5,7 @@ status: active
 trust: ai-draft
 origin: claude
 created: 2026-09-21
-reviewed: 2026-09-21
+reviewed: 2026-09-22
 tags: [project/thinking-system, templates]
 ---
 
@@ -23,6 +23,7 @@ Back to [[00 Project Home]] · Page types in [[04 Vault Blueprint]] §2–3 · R
 | `Entity template` | entity | Claude | `wiki/entities/` | What the sources say · Mentioned in · Related |
 | `Concept template` | concept | Claude | `wiki/concepts/` | What the sources say · Where sources disagree · Mentioned in · Related |
 | `Analysis template` | analysis | Claude, when filing an answer | `wiki/analyses/` | Answer · Evidence · Caveats and gaps · Related |
+| `Overview template` | overview | Claude, at the first ingest; rewritten at each one after | `wiki/overview.md` | The picture so far · Where sources agree · Where sources disagree · Gaps worth a new source · Sources so far |
 | `Insight template` | insight | You; Claude for drafts | `mine/insights/`, `mine/drafts/` | Why I think this · Relations |
 | `Decision template` | decision | You | `mine/decisions/` | Context · Options · Decision · Reasoning · Revisit when |
 | `Project template` | project | You | `mine/projects/` | Goal · Status · Next steps · Links |

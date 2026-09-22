@@ -17,21 +17,13 @@ Page types, properties, naming: @system/conventions.md
 - Anything you add from general knowledge is labelled "(general knowledge)" and is not a source.
 
 ## Input zones
-- `inbox/sources/` -> `/ingest`   files and links to compile
+- `inbox/sources/` -> `/ingest`   files to compile
 - `inbox/questions.md` -> `/ask`  questions for the wiki
 - `inbox/checks.md` -> `/lint`    things to verify or re-check
 Never start an operation because material appeared in a zone; wait until I run the command. If something is in the wrong zone, say so and ask me to move it. Never re-route it yourself.
 
 ## Operation: ingest
-When I run `/ingest`, take the next file in `inbox/sources/`:
-1. Read it. Tell me the key takeaways and ask what to emphasise before writing.
-2. Propose moving the file into `raw/`. Once I approve, use that final path in every citation below.
-3. Write `wiki/sources/<title>.md`: what it says, in your words, with citations.
-4. Create or update every entity and concept page it touches. Prefer updating over duplicating.
-5. Where it contradicts or supersedes an existing page, say so on both pages and mark them.
-6. Propose 1–3 insight drafts in `mine/drafts/`: one idea each, titled as a claim I could agree or disagree with, linked to the pages that support it.
-7. Update `index.md` and append to `log.md`.
-8. Report what you created, updated, and found in conflict.
+Runs only when I type `/ingest`; the procedure is `.claude/skills/ingest/SKILL.md`. One source per run. The file moves into `raw/` before any page cites it. Stop after the report so I can review.
 
 ## Operation: ask
 When I run `/ask`, take the oldest unanswered line in `inbox/questions.md`; when I ask directly in the session, answer that instead.

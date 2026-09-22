@@ -76,4 +76,20 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] `data` plugin switched off (D-037); `/mcp` empty; `claude doctor` clean (steps 4–6)
 - [x] Permission smoke test passes (step 7); a workaround offer after the `raw/` block led to D-038
 - [x] Handover written: [[16 M2 Handover]]
-- [ ] **Next:** M3 – First Ingests
+- [x] Next: M3 – First Ingests, started 2026-09-22
+
+## 6. M3 in progress, started 2026-09-22
+- [x] Tool facts rechecked against the Claude Code docs (skills, permissions, settings scopes, tools); D-040 to D-044 proposed
+- [x] `ingest` skill drafted, mirrored in [[08 Claude Operating Instructions]] §4.1; `CLAUDE.md` ingest section cut to a pointer (D-041)
+- [x] Overview page type and template added (D-044)
+- [x] D-040 to D-044 accepted
+- [ ] Q-015 settled: synced skills hidden in vault sessions; `/skills` shows only the vault's and Claude Code's own (D-040)
+- [ ] Skill moved into `.claude/skills/ingest/SKILL.md`, committed and pushed; `/ingest` appears after a restart
+- [ ] Source 1 ingested: Karpathy, LLM Wiki gist. Record whether the move into `raw/` asked or was blocked
+- [ ] Source 2 ingested: Bush, "As We May Think"
+- [ ] Source 3 ingested: Matuschak, "Evergreen notes"
+- [ ] Source 4 ingested: Anthropic, "Introducing Contextual Retrieval"
+- [ ] Source 5 ingested: Forte, "The PARA Method", updating at least 3 existing source, entity or concept pages (`overview.md`, `index.md` and `log.md` don't count, D-044)
+- [ ] Each ingest reviewed as in [[05 Obsidian Essentials]] §3 and committed before the next
+- [ ] One claim traced from a wiki page to its file in `raw/`
+- [ ] Handover written: 17 M3 Handover

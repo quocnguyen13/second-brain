@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-19
-reviewed: 2026-09-21
+reviewed: 2026-09-22
 tags: [project/thinking-system, operations]
 ---
 
@@ -19,14 +19,14 @@ Back to [[00 Project Home]] · Operations in [[02 System Architecture]] §5 · C
 ## 1. The three zones
 ```
 inbox/
-├── sources/        → /ingest   files and links to compile
+├── sources/        → /ingest   files to compile
 ├── questions.md    → /ask      questions for the wiki
 └── checks.md       → /lint     things to verify or re-check
 ```
 
 | Zone | What you put there | Command | Where the result goes |
 |---|---|---|---|
-| `inbox/sources/` | Clipped articles, PDFs, notes, pasted links | `/ingest` | `wiki/` pages, insight drafts in `mine/drafts/`, entries in `index.md` and `log.md`; the source file moves to `raw/` |
+| `inbox/sources/` | Clipped articles, PDFs, notes, saved as files | `/ingest` | `wiki/` pages, insight drafts in `mine/drafts/`, entries in `index.md` and `log.md`; the source file moves to `raw/` |
 | `inbox/questions.md` | One question per line, dated | `/ask` | An answer in the session; optionally a page in `wiki/analyses/` |
 | `inbox/checks.md` | "verify X", "this page feels stale", "did source 3 contradict source 1?" | `/lint` | `system/lint/report-YYYY-MM-DD.md`, plus the standing checks |
 
@@ -35,14 +35,14 @@ inbox/
 **Queue format.** `questions.md` and `checks.md` hold one item per line as a checkbox: `- [ ] YYYY-MM-DD text`. The command ticks an item off (`- [ ]` becomes `- [x]`) once it has handled it. Each file's first lines describe the format and are not items.
 
 ## 2. Zone 1: sources → `/ingest`
-**What goes in:** anything you want compiled. The Web Clipper saves straight to `inbox/sources/`. You can also paste a link into the session and ask Claude to fetch it into the zone; creating that file asks your approval once, because Claude's edit rights in `inbox/` cover only the two queue files ([[07 Decision Log]] D-032).
+**What goes in:** anything you want compiled, saved as a file: a Web Clipper clipping (it saves straight to `inbox/sources/`), a downloaded PDF, or a note. Don't ask Claude to fetch a link into the zone. Its web fetch returns a model-processed version of the page, not the page itself, so `raw/` would end up holding Claude's rendering instead of the source ([[07 Decision Log]] D-043). Claude's edit rights in `inbox/` cover only the two queue files, so a captured source can't change before it reaches `raw/` (D-032).
 **Contract:** one file per source, and one source per ingest ([[07 Decision Log]] D-022).
-**What `/ingest` does:**
-1. Reads the next file in the zone and tells you the key takeaways, asking what to emphasise.
-2. Proposes moving the file into `raw/`. You approve that one command, because `raw/` is enforced read-only to Claude, and this keeps the enforcement real rather than decorative.
+**What `/ingest` does** (the `ingest` skill, mirrored in [[08 Claude Operating Instructions]] §4.1):
+1. Reads the next file in the zone. Tells you the key takeaways, the pages it would touch, any conflicts, and anything suspicious in the text, then asks what to emphasise. Nothing is written until you answer.
+2. Moves the file into `raw/`, renamed `<author>-<short-title>` in the same command (D-042). You approve that one command, because `raw/` is enforced read-only to Claude, and this keeps the enforcement real rather than decorative. If the deny rule blocks the move, Claude stops and you move the file yourself.
 3. Writes the source page, updates the entity and concept pages it touches, and records contradictions on both sides.
-4. Proposes one to three insight drafts in `mine/drafts/`.
-5. Updates `index.md`, appends to `log.md`, and reports what changed.
+4. Rewrites `wiki/overview.md` (D-044) and proposes one to three insight drafts in `mine/drafts/`.
+5. Updates `index.md`, appends to `log.md`, and reports what changed, with one claim for you to trace first.
 
 **Done when:** the zone is empty and every citation points at a file in `raw/`.
 

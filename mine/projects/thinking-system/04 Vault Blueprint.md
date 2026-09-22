@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-21
+reviewed: 2026-09-22
 tags: [project/thinking-system, vault-design]
 ---
 
@@ -23,7 +23,7 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 ├── .gitattributes         one line-ending rule for every text file (doc 08 §6)
 ├── .obsidian/             Obsidian's own settings; git ignores workspace*.json
 ├── inbox/                 THREE INPUT ZONES, one per operation (doc 13)
-│   ├── sources/           files and links awaiting /ingest
+│   ├── sources/           files awaiting /ingest
 │   ├── questions.md       questions awaiting /ask
 │   └── checks.md          things awaiting /lint
 ├── raw/                   YOUR sources, after ingest. Claude reads, never edits.
@@ -60,6 +60,7 @@ Every folder that would otherwise be empty holds a hidden `.gitkeep` file, becau
 | `entity` | wiki/entities | A person, company, product, or tool | The name |
 | `concept` | wiki/concepts | An idea, method, or regulation | The term |
 | `analysis` | wiki/analyses | A comparison or filed answer | The question or claim |
+| `overview` | wiki/overview.md | The current picture across all sources, rewritten at each ingest (D-044) | "Overview" |
 | `insight` | mine/insights | One idea of yours | A claim: "Compiled wikis need a provenance rule to stay honest" |
 | `decision` | mine/decisions | Context, options, choice, reasoning | "Decision - <topic> - YYYY-MM-DD" |
 | `project` | mine/projects | Goal, status, links | The project name |
@@ -71,7 +72,7 @@ Wiki pages:
 ---
 type: concept
 status: verified        # verified | unverified | contested
-sources: ["[[raw/llm-wiki-gist.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]"]
 created: 2026-09-18
 updated: 2026-09-18
 tags: [knowledge-management]
@@ -121,5 +122,6 @@ Pages: +4 new, 3 updated. Contradiction noted on [[wiki/concepts/RAG]].
 ## 7. Naming
 - Folders are lower case with hyphens; page titles are plain language.
 - Avoid these characters in titles: `# ^ [ ] | \ / : * " < > ?`
+- Files in `raw/` are named as they move in: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. The content is never changed (D-042).
 - Dates as `YYYY-MM-DD`.
 - One idea per insight page, titled as a statement you could agree or disagree with.

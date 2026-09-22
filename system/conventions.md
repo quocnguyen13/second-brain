@@ -9,6 +9,7 @@
 | `entity` | `wiki/entities/` | The name | `system/templates/Entity template.md` |
 | `concept` | `wiki/concepts/` | The term | `system/templates/Concept template.md` |
 | `analysis` | `wiki/analyses/` | The question or claim | `system/templates/Analysis template.md` |
+| `overview` | `wiki/overview.md`, one page | `Overview` | `system/templates/Overview template.md` |
 | `insight` | `mine/drafts/` when you draft one; `mine/insights/` once I keep it | A claim someone could disagree with | `system/templates/Insight template.md` |
 | `decision`, `project`, `journal` | `mine/decisions/`, `mine/projects/`, `mine/journal/` | Mine only; you never create these | |
 
@@ -23,7 +24,7 @@ When you create a page, read its template first and follow its properties and he
 ## Linking
 - Link in sentences with `[[wikilinks]]`, using page titles.
 - Every entity and concept page links to the source pages that mention it, and each source page links back.
-- Cite a claim inline with a link to the raw file, e.g. `([[raw/llm-wiki-gist.md]])`.
+- Cite a claim inline with a link to the raw file, e.g. `([[raw/karpathy-llm-wiki.md]])`.
 - Insight pages end with a Relations block: `- supports:: [[...]]`, `- contradicts:: [[...]]`, `- extends:: [[...]]`, `- source:: [[...]]`.
 
 ## `index.md`
@@ -39,5 +40,6 @@ Pages: +N new, N updated. <conflicts or notes>
 
 ## Naming
 - Folders: lower case with hyphens. Page titles: plain language.
+- Files in `raw/`: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. Named when they move in; content never changed.
 - Never use these characters in titles: `# ^ [ ] | \ / : * " < > ?`
 - One idea per insight page.
