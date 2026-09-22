@@ -58,6 +58,7 @@ Write nothing until I answer.
 ## 5. Record conflicts
 - Two sources disagree: show both positions, each with its citation, under "Where sources disagree"; set `status: contested`; note it on the source page under "Conflicts and open points".
 - A newer source supersedes a claim: keep the old claim, mark it "superseded by", with a link and a citation. Never delete it.
+- `contested` marks only the pages that carry the disputed claim. A source page records the conflict under "Conflicts and open points" and keeps its own status; `overview.md` reports the disagreement and stays `verified` while its own claims are cited.
 
 ## 6. Set status on every page you wrote or changed
 - `verified` when every claim on the page, including the one-line definition under the title, cites a file in `raw/`. One source is enough: status records whether claims are cited, not how many sources agree.
