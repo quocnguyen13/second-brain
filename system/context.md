@@ -8,9 +8,7 @@
 - The vault is written in English.
 
 ## Current focus
-- Building this system. Module M2 (Connect Claude Code); next is M3, the first five ingests.
-- Reading interests for the first sources: LLM-based knowledge management, product discovery, UK consumer credit regulation, open banking, Github knowledge
-
+- Building this system. Module M3 - First Ingest 
 ## Glossary
 | Term              | Meaning here                                                            |
 | ----------------- | ----------------------------------------------------------------------- |
