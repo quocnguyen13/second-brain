@@ -21,3 +21,6 @@ Pages: +4 new (source, entity Tiago Forte, concepts PARA method and Organizing b
 
 ## [2026-09-24] file | Compare the PARA method and evergreen notes as ways to organise what I read
 Pages: +1 analysis, 3 updated (Related links). Status: contested. Reworded: "Resources rank below projects and areas" is not in raw/forte-para-method.md; dropped from Evidence and moved to Caveats as uncited on Organizing by actionability. Other evidence confirmed in raw/.
+
+## [2026-09-24] lint | report-2026-09-24
+Scanned 27 pages, deep-checked 27. Findings: 14 (7 high, 6 medium, 1 low). Checks ticked: 1. No wiki pages changed.
