@@ -30,3 +30,6 @@ Applied: 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14. Skipped: none (5 not reques
 
 ## [2026-09-24] lint | report-2026-09-24-2
 Scanned 27 pages, deep-checked 13. Findings: 3 (2 high, 0 medium, 1 low). Checks ticked: 0. No wiki pages changed.
+
+## [2026-09-24] lint | apply report-2026-09-24-2
+Applied: 1, 2, 3. Skipped: none. Pages changed: 8. Status changes: none.

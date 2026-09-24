@@ -25,7 +25,7 @@ A hub page defining [[wiki/concepts/Evergreen notes]]: notes written and organiz
 
 ## Compared with earlier sources
 **Atomic**
-- Matuschak makes the note itself the unit and says it should be atomic ([[raw/matuschak-evergreen-notes.md]]). Bush's unit of linking is whatever sits on a memex viewing position. The user joins two such items at a time ([[raw/bush-as-we-may-think.pdf#page=16]]). In his example the items are pages from an encyclopedia, a history book and elasticity tables, with the user's own notes added along the way ([[raw/bush-as-we-may-think.pdf#page=16]]). So Bush links existing documents, while Matuschak links notes the writer composes to be units.
+- Matuschak makes the note itself the unit and says it should be atomic ([[raw/matuschak-evergreen-notes.md]]). Bush's unit of linking is whatever sits on a memex viewing position. The user joins two such items at a time ([[raw/bush-as-we-may-think.pdf#page=16]]). In his example the items are pages from an encyclopedia, a history book and elasticity tables, with the user's own notes added along the way ([[raw/bush-as-we-may-think.pdf#page=16]], [[raw/bush-as-we-may-think.pdf#page=17]]). So Bush links existing documents, while Matuschak links notes the writer composes to be units.
 - The compiled wiki's units are "summaries, entity pages, concept pages, comparisons, an overview, a synthesis" ([[raw/karpathy-llm-wiki.md]]). That matches Matuschak's *concept-oriented* principle in name. The gist states no atomicity rule ([[raw/karpathy-llm-wiki.md]]). This vault adds one only for insight pages ("one idea per insight page").
 
 **Densely linked**

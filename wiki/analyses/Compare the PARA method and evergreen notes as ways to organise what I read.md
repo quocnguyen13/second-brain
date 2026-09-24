@@ -27,7 +27,7 @@ The two methods answer different needs, and the sources disagree on how notes sh
   - Forte: four top-level folders with subfolders, organised by project, so each item has one known home ([[raw/forte-para-method.md]]).
   - Matuschak: "Prefer associative ontologies to hierarchical taxonomies". Notes are concept-oriented and outlive any one project ([[raw/matuschak-evergreen-notes.md]]).
   - Bush agrees with Matuschak. Filing an item in "only one place" under one classification path is artificial, because "the human mind does not work that way. It operates by association" ([[raw/bush-as-we-may-think.pdf#page=14]]).
-  - Scope: Forte files working material for action; Matuschak aims at "better thinking". They may suit different layers more than they compete.
+  - Scope: Forte files working material for action ([[raw/forte-para-method.md]]); Matuschak aims at "better thinking" ([[raw/matuschak-evergreen-notes.md]]). This page's reading: they may suit different layers more than they compete.
 
 ## Caveats and gaps
 - The captured Matuschak page gives each principle and practice as a title only. His reasons, and how "Write about what you read" works, are in linked notes not yet ingested. Ingesting that note would settle how he handles reading.

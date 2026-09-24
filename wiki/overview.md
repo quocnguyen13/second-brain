@@ -15,7 +15,7 @@ The current picture across every source, on one page. Rewritten at each ingest, 
   - three layers: raw sources, wiki, schema
   - three operations: ingest, query, lint
   - navigation through an index and a log ([[raw/karpathy-llm-wiki.md]])
-- **As We May Think.** [[wiki/sources/Source - As We May Think]] (1945) argues that one-path indexing can't keep up with a growing record. It proposes the [[wiki/concepts/Memex]], built on [[wiki/concepts/Associative indexing]] ([[raw/bush-as-we-may-think.pdf#page=14]]): any two items can be permanently linked, and the trails that result can be replayed, branched and shared ([[raw/bush-as-we-may-think.pdf#page=16]]).
+- **As We May Think.** [[wiki/sources/Source - As We May Think]] (1945) argues that one-path indexing can't keep up with a growing record. It proposes the [[wiki/concepts/Memex]], built on [[wiki/concepts/Associative indexing]] ([[raw/bush-as-we-may-think.pdf#page=14]]): any two items can be permanently linked, and the trails that result can be replayed, branched and shared ([[raw/bush-as-we-may-think.pdf#page=16]], [[raw/bush-as-we-may-think.pdf#page=17]]).
 - **Evergreen notes.** [[wiki/sources/Source - Evergreen notes]] defines [[wiki/concepts/Evergreen notes]]: notes that accumulate across projects, under five principles, aimed at "better thinking" ([[raw/matuschak-evergreen-notes.md]]). The clip is a hub page and states the principles by title only.
 - **Contextual Retrieval.** [[wiki/sources/Source - Contextual Retrieval]] argues for retrieval rather than compiling:
   - below 200,000 tokens, put the whole knowledge base in the prompt
