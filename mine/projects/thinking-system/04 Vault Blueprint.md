@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-22
+reviewed: 2026-09-24
 tags: [project/thinking-system, vault-design]
 ---
 
@@ -46,6 +46,7 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 │   ├── context.md         who you are, current focus, glossary (you maintain)
 │   ├── conventions.md     short version of this document, for Claude
 │   ├── lint/              dated lint reports
+│   ├── views/             Review.base: the weekly review views (D-058)
 │   └── templates/         one template per page type (doc 10)
 └── .claude/               Claude Code settings and skills (hidden in Obsidian)
 ```

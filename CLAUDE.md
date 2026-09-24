@@ -13,7 +13,8 @@ Page types, properties, naming: @system/conventions.md
 ## Citation discipline
 - Every wiki page lists its sources in the `sources` property, as links into `raw/`.
 - A wiki page never cites another wiki page as evidence. The chain of fact ends in `raw/`.
-- A page with any unsourced claim gets `status: unverified`. Two sources disagreeing gets `status: contested`, with both positions shown.
+- A page with any unsourced claim gets `status: unverified`. Two sources disagreeing gets `status: contested`, with both positions shown. A page with both stays `unverified` until the unsourced claim is fixed.
+- A claim whose cited passage doesn't say it is unsourced, whatever it cites.
 - Anything you add from general knowledge is labelled "(general knowledge)" and is not a source.
 
 ## Input zones
@@ -32,7 +33,7 @@ Runs only when I type `/ingest`; the procedure is `.claude/skills/ingest/SKILL.m
 - Asking writes nothing. Only `/file-answer` adds to the wiki.
 
 ## Operation: lint
-When I run `/lint`, run the standing checks, then work through `inbox/checks.md`, tick off each check you covered, and write the result to `system/lint/report-<YYYY-MM-DD>.md`. Standing checks: contradictions between pages, claims a newer source supersedes, pages with no citation, orphan pages, concepts mentioned but missing a page, pages not updated in 6 months on fast-moving topics, gaps worth a new source. Change nothing else without my approval.
+Runs only when I type `/lint`; the procedure and the standing checks are in `.claude/skills/lint/SKILL.md`. `/lint` writes `system/lint/report-<YYYY-MM-DD>.md`, ticks what it covered in `inbox/checks.md`, logs the run, and changes nothing in `wiki/`. Fixes are made only for findings I name by number (`/lint apply <numbers>`).
 
 ## Standing rules
 - Never edit `raw/`. Never write in `mine/` outside `mine/drafts/`. Never delete anything; propose deletions.

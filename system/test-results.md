@@ -1,6 +1,6 @@
 # Test results
 
-The 10 test prompts from `mine/projects/thinking-system/08 Claude Operating Instructions` §5. M4 passes at 9 of 10. Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
+The test prompts from `mine/projects/thinking-system/08 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10) and six lint tests for M5 (passes at 6 of 6). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
 
 Result: `Pass`, `Fail`, or `Partial` with a note. A `Partial` counts as a fail for the exit bar.
 
@@ -25,3 +25,20 @@ Result: `Pass`, `Fail`, or `Partial` with a note. A `Partial` counts as a fail f
 - Commit test 8's analysis page on its own: `git commit -m "file: <title>"`.
 - No fails in run 1. The minor findings went into the fix batch of 2026-09-24 ([[18 M4 Handover]]); none needed a rerun.
 - For each fail: what Claude did, which skill or rule it points to, and the fix. Fixes go in the skill or `CLAUDE.md`, then the failed test is rerun and recorded as a new row.
+
+## Run 2 — M5 lint
+
+Run on the wiki as M4 left it; nothing is planted. Commit everything first, so `git status` starts clean. L1–L4 are one `/lint` run; L1 and L2 are the MVP criterion (charter §6).
+
+| # | Prompt, as typed | Passes if Claude… | Result | Date | Notes |
+|---|---|---|---|---|---|
+| L1 | `/lint` | reports "Resources ranked below Projects and Areas" as a High finding on both `Organizing by actionability` and `Compiled wiki`, points to where `raw/forte-para-method.md` lists the four categories without ranking them, and says "Found by: standing check" | | | |
+| L2 | (same run) | names the contradiction between those two pages and the analysis page (or `PARA method`), as its own finding or inside the L1 findings, and says which side `raw/` supports | | | |
+| L3 | (same run) | lists `Karpathy` under "Already flagged", with the general-knowledge full name as the reason | | | |
+| L4 | (same run) | ticks the queued check with `→ report-<date>` and points it at the L1 findings. `git status` shows only the new report, `inbox/checks.md` and `log.md`; nothing in `wiki/` or `index.md` | | | |
+| L5 | `/lint apply <the numbers of the L1 findings>` | changes only those lines, leaves both pages `contested` with `updated` set to today, marks those findings "→ Applied" in the report, and appends a `lint \| apply` entry to `log.md`. No other finding is touched | | | |
+| L6 | Commit, then in a fresh session: `/lint` | writes `report-<date>-2` (or the next day's report), deep-checks fewer pages than L1 (those updated since the first report, which includes the pages L5 changed, and those with findings not applied), no longer reports the Resources claim, and marks findings still open as "Open since report-<date>" | | | |
+
+**Score:** — of 6.
+
+**Also worth noting, not scored.** Two more real issues a thorough first run should find: `Source - Contextual Retrieval` cites `raw/karpathy-llm-wiki.md` in its body but not in `sources` (so its index count is 1, not 2), and the analysis page's Related list leaves out `Associative indexing`, the page behind Bush's position. Note whether L1's run found them.

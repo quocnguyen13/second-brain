@@ -36,7 +36,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 | **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 10 (Templates) | **Closed 2026-09-22** | Done |
 | **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | **Closed 2026-09-22** | Done |
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | **Closed 2026-09-24** | Done |
-| **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a planted contradiction and a planted uncited claim | 2 days |
+| **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Started 2026-09-24** |
 | **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met | **~2 weeks from M1** |
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; the drafts routine | 5 insight pages you wrote, linked to wiki pages | 3–4 days |
 | **M7 – Product-Owner Workflows** | The system supports real work | Doc 11 (Playbook); skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning | 3 workflows used weekly for 4 weeks | 4 weeks (set by the calendar) |
@@ -113,8 +113,23 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Tests 9 and 10 run: **10 of 10**
 - [x] Fix batch from the test findings: answer sections, recommendation rule (D-053), no installing (D-054), unreadable raw files, Related links. No rerun needed
 - [x] Handover written: [[18 M4 Handover]]
-- [ ] **Next:** M5 – Lint and Review
+- [x] Next: M5 – Lint and Review, started 2026-09-24
 
 **Parked in M4, to pick up when they start to hurt:**
 - A naming rule for a source with no author (test 7 produced `unknown-...`).
 - Analysis page titles are the question word for word, which can be long.
+
+## 8. M5 in progress (started 2026-09-24)
+- [x] D-053 and D-054 accepted
+- [x] `lint` skill drafted and mirrored in [[08 Claude Operating Instructions]] §4.4; the lint section of `CLAUDE.md` cut to a pointer, and two citation rules added (D-055 to D-057)
+- [x] `system/views/Review.base` drafted with both views (D-058), mirrored in [[05 Obsidian Essentials]] §6
+- [x] Weekly review written as steps in [[05 Obsidian Essentials]] §4
+- [x] Lint tests L1–L6 written in [[08 Claude Operating Instructions]] §5 and `system/test-results.md` (D-059)
+- [ ] D-055 to D-059 accepted
+- [ ] Files placed: the skill in `.claude/skills/lint/`, `Review.base` in `system/views/` and bookmarked; committed and pushed; `/lint` listed in `/skills`
+- [ ] Views checked: Needs attention shows 8 pages (1 `unverified`, 7 `contested`); Draft queue shows 11
+- [ ] L1–L4: first `/lint`, report read and committed
+- [ ] L5: fixes applied for the Resources claim, reviewed and committed
+- [ ] L6: second `/lint` in a fresh session
+- [ ] One weekly review run end to end ([[05 Obsidian Essentials]] §4)
+- [ ] MVP criteria in [[01 Project Charter]] §6 checked; handover written: 19 M5 Handover

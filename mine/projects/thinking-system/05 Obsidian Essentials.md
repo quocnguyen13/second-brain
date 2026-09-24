@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-21
+reviewed: 2026-09-24
 tags: [project/thinking-system, obsidian]
 ---
 
@@ -51,11 +51,76 @@ The wiki is only trustworthy if someone checks it, and that someone is you. Afte
 
 If you stop doing this, the provenance rules in [[03 Trust and Provenance]] become decoration. Nothing else in this document is load-bearing; this is.
 
-## 4. Two views worth building (module M5)
-- **Needs attention:** `status` is `unverified` or `contested`.
-- **Draft queue:** everything in `mine/drafts`.
+## 4. The weekly review (module M5)
+Two views live in one Bases file, `system/views/Review.base` ([[07 Decision Log]] D-058). Bookmark it once (right-click the file → Bookmark); the view switcher at the top of the table moves between the two.
+- **Needs attention:** wiki pages that are `unverified` or `contested`, `unverified` first. `unverified` means a claim needs a citation or a fix; `contested` means two sources disagree and the call is yours (D-057).
+- **Draft queue:** Claude's insight drafts in `mine/drafts/`, oldest first.
 
-Your weekly review starts from these two plus a `/lint` run, and ends with a pass through `mine/scratch` to file or delete your own loose notes.
+About 30 minutes, once a week. The first `/lint` takes longest, because it checks every page against `raw/` (D-056).
+1. **Start clean.** At the vault root, `git status`; commit anything left over.
+2. **Lint.** Start `claude` at the vault root and run `/lint`. Open the new report in `system/lint/`. Trace any finding you doubt to `raw/`, as in §3.
+3. **Apply.** Run `/lint apply <numbers>` for the fixes you agree with, adding the letter where a finding offers options, e.g. `/lint apply 1 2 4b`. Then `git add -A`, `git diff --staged`, and `git commit -m "lint: report-YYYY-MM-DD"`. Findings you leave come back next week marked "Open since".
+4. **Needs attention.** For each page, read its one-line reason under "Already flagged" in the report. Leave it, add a check to `inbox/checks.md`, or clip a source that would settle it.
+5. **Draft queue.** For each draft, keep it or delete it. To keep one, move it to `mine/insights/`, rewrite it in your own words, and set `status: active`. Five insights kept or written is the last MVP criterion ([[01 Project Charter]] §6).
+6. **Scratch.** Empty `mine/scratch/`: a source goes to `inbox/sources/`, a question to `inbox/questions.md`, a doubt about a wiki page to `inbox/checks.md`, your own thinking to `mine/insights/`, `mine/decisions/` or `mine/projects/`. Delete the rest.
+7. **Commit and push.** `git add -A`, `git diff --staged`, `git commit -m "review: YYYY-Www"`, then `git push`.
 
 ## 5. Where the thinking layer fits
 `mine/` is not a learning exercise; it's goal G4. Claude proposes insight drafts into `mine/drafts/`, and you keep the ones you'd defend, in your own words. Module M6 sets up that routine.
+
+## 6. `system/views/Review.base`
+Mirrored here because project chats can't see `system/`; change both in the same commit. Bases syntax: https://obsidian.md/help/bases/syntax (checked 2026-09-24).
+```yaml
+properties:
+  file.name:
+    displayName: Page
+  note.status:
+    displayName: Status
+  note.type:
+    displayName: Type
+  note.updated:
+    displayName: Updated
+  note.sources:
+    displayName: Sources
+  note.created:
+    displayName: Created
+  note.origin:
+    displayName: Origin
+  note.related:
+    displayName: Related
+views:
+  - type: table
+    name: Needs attention
+    filters:
+      and:
+        - 'file.inFolder("wiki")'
+        - 'file.ext == "md"'
+        - or:
+            - 'status == "unverified"'
+            - 'status == "contested"'
+    groupBy:
+      property: note.status
+      direction: DESC
+    order:
+      - file.name
+      - note.type
+      - note.updated
+      - note.sources
+    sort:
+      - property: note.updated
+        direction: ASC
+  - type: table
+    name: Draft queue
+    filters:
+      and:
+        - 'file.inFolder("mine/drafts")'
+        - 'file.ext == "md"'
+    order:
+      - file.name
+      - note.created
+      - note.origin
+      - note.related
+    sort:
+      - property: note.created
+        direction: ASC
+```

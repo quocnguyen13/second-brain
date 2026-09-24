@@ -54,7 +54,8 @@ inbox/
 
 ## 4. Zone 3: checks → `/lint`
 **What goes in:** anything you want verified or re-examined, one per line as `- [ ] YYYY-MM-DD what to verify`. A page that felt thin, a claim you doubt, a topic you suspect has gaps.
-**What `/lint` does:** runs the standing checks from [[03 Trust and Provenance]] — contradictions, superseded claims, uncited claims, orphan pages, missing concept pages, pages not updated in six months — and then works through your queued checks, ticking off each one it covers. It writes a dated report in `system/lint/` and changes nothing else without your approval.
+**What `/lint` does** (the `lint` skill, [[08 Claude Operating Instructions]] §4.4): runs the standing checks from [[03 Trust and Provenance]] — contradictions, superseded claims, uncited claims and claims whose cited passage doesn't say them, orphan pages, missing cross-references, pages not updated in six months — and then works through your queued checks, ticking off each one it covers with `→ report-<date>`. It writes a numbered report in `system/lint/` and changes nothing in `wiki/`.
+**Fixing:** `/lint apply <numbers>` makes the fixes you name from the report, and only those ([[07 Decision Log]] D-055).
 **Rhythm:** weekly, as part of the review in [[05 Obsidian Essentials]] §4.
 
 ## 5. Using Claude as the platform
