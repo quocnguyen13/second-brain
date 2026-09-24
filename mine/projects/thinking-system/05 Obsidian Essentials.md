@@ -56,7 +56,7 @@ Two views live in one Bases file, `system/views/Review.base` ([[07 Decision Log]
 - **Needs attention:** wiki pages that are `unverified` or `contested`, `unverified` first. `unverified` means a claim needs a citation or a fix; `contested` means two sources disagree and the call is yours (D-057).
 - **Draft queue:** Claude's insight drafts in `mine/drafts/`, oldest first.
 
-About 30 minutes, once a week. The first `/lint` takes longest, because it checks every page against `raw/` (D-056).
+About 30 minutes, once a week. The first `/lint` of each month takes longest, because it checks every page against `raw/` (D-060); other weeks check only what changed (D-056).
 1. **Start clean.** At the vault root, `git status`; commit anything left over.
 2. **Lint.** Start `claude` at the vault root and run `/lint`. Open the new report in `system/lint/`. Trace any finding you doubt to `raw/`, as in §3.
 3. **Apply.** Run `/lint apply <numbers>` for the fixes you agree with, adding the letter where a finding offers options, e.g. `/lint apply 1 2 4b`. Then `git add -A`, `git diff --staged`, and `git commit -m "lint: report-YYYY-MM-DD"`. Findings you leave come back next week marked "Open since".

@@ -383,9 +383,9 @@ Before reporting, check every `[[wiki/...]]` link on the new page points to a pa
 ````
 
 ### 4.4 `lint`
-`.claude/skills/lint/SKILL.md`, written in M5 (2026-09-24) and revised after the first run: an analysis page's Answer needs no citations of its own, as D-051 says (the first run flagged one wrongly), and a contradiction finding names both pages. Two modes: `/lint` checks and writes a numbered report, and `/lint apply <numbers>` makes the fixes you approve ([[07 Decision Log]] D-055). Three points to know:
+`.claude/skills/lint/SKILL.md`, written in M5 (2026-09-24) and revised after the first run: an analysis page's Answer needs no citations of its own, as D-051 says (the first run flagged one wrongly), and a contradiction finding names both pages. Revised again after the second run: the first run of each month deep-checks every page (D-060), and a PDF citation to the wrong page is a Low location fix (D-061). Two modes: `/lint` checks and writes a numbered report, and `/lint apply <numbers>` makes the fixes you approve ([[07 Decision Log]] D-055). Three points to know:
 - **The report run changes nothing in `wiki/`.** `wiki/` is on the allow list, so no prompt would stop an edit; the skill's own rule does. It writes the report, the ticks in `inbox/checks.md` and a log entry, then stops. `apply` works from the report file, so you can read the report in Obsidian first and apply in a later session.
-- **Citations are checked at the source, not counted.** The deep check opens the cited passage in `raw/` for each claim: on every page the first time, then on the pages that changed since the last report, pages with findings not yet applied, and pages named in a check (D-056). A claim whose passage doesn't say it counts as unsourced (D-057).
+- **Citations are checked at the source, not counted.** The deep check opens the cited passage in `raw/` for each claim: on every page in the first run of each month (D-060), and in other runs on the pages that changed since the last report, pages with findings not yet applied, and pages named in a check (D-056). A claim whose passage doesn't say it counts as unsourced (D-057).
 - **It reads `inbox/checks.md` last.** The standing checks run first, so the report shows what they found on their own (D-059).
 
 ````markdown
@@ -415,14 +415,14 @@ Part A writes exactly three things: the report, the ticks in `inbox/checks.md`, 
 ### A0. Set the scope
 - Glob `wiki/**/*.md`. Every page gets the scan in A1.
 - Read the latest earlier report in `system/lint/`, if there is one. The deep check in A2 covers:
-  - every page, when there is no earlier report;
+  - every page, when there is no earlier report or none yet this calendar month (D-060);
   - otherwise, pages whose `updated` is on or after that report's date, and pages it left with a finding not marked "Applied".
 - Pages named in `inbox/checks.md` join the deep check in A4. Don't read that file before then, so the report shows what the standing checks found on their own.
 
 ### A1. Scan every page
 Read each page in full and check:
 1. **Citations present.** Every claim cites a file in `raw/`, including the one-line definition under the title. Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims. A claim labelled "(general knowledge)" is uncited. On an analysis page, Evidence cites `raw/`; the Answer needs no citations of its own, but a fact in it that Evidence doesn't hold is uncited (D-051). Labelled lines under "Caveats and gaps" are allowed there.
-2. **PDF citations carry a page:** `([[raw/<name>.pdf#page=N]])` (D-046). Report the ones that don't as a single Low finding for the whole wiki, with the page for each claim you located in A2.
+2. **PDF citations carry the right page:** `([[raw/<name>.pdf#page=N]])` (D-046). Report citations with no page, or with a page that doesn't hold all of the claim, as a single Low finding for the whole wiki, with the right pages for each claim you located in A2. When the claim is in the cited file, a wrong page is a location fix, not an unsupported claim, and the page's status stands (D-061).
 3. **`sources` matches the body.** The property lists every raw file the page cites, each listed file is cited on the page, and each exists in `raw/`.
 4. **Status matches the page.** `verified` only if every claim is cited. `unverified` if any claim is uncited, and that wins over `contested` until the claim is fixed. `contested` only if the page carries a disputed claim and shows both positions, with citations, under "Where sources disagree". Source pages and `wiki/overview.md` record disagreements and keep their own status (D-047).
 5. **Links.** Every `[[wiki/...]]` link points to a page that exists under its exact name. Every page except `wiki/overview.md` has a link from another page in `wiki/`; links from `index.md` and `log.md` don't count. A page with none is an orphan.
@@ -463,7 +463,7 @@ Write `system/lint/report-<YYYY-MM-DD>.md`, adding `-2` if today's exists. Keep 
    **Fix:** the exact edit: the words to remove or the new wording, and the status and `updated` it leaves.
 
 ### Across the wiki
-N. **Low · PDF citations without a page** · one line per citation: page, line, and the PDF page the claim sits on.
+N. **Low · PDF citations without the right page** · one line per citation: page, line, and the PDF pages the claim sits on.
 
 ## Queued checks
 - YYYY-MM-DD <check text> → findings 1, 2 (or "nothing wrong: <why>")
@@ -481,7 +481,7 @@ N. **Low · PDF citations without a page** · one line per citation: page, line,
 - **Findings** are problems the wiki doesn't already show, or shows wrongly. Group them by page, pages with a High finding first, then "Across the wiki". Number them once across the report.
   - **High:** a citation that doesn't support its claim; two pages contradicting each other; a status that hides a problem, such as `verified` with an uncited claim; instructions found in a source.
   - **Medium:** a broken link, an orphan, a missing cross-reference, `sources` out of step with the body, an index line wrong or missing, a superseded claim not marked.
-  - **Low:** a PDF citation without a page, a stale page.
+  - **Low:** a PDF citation without a page or with the wrong page, a stale page.
 - **Every fix is exact enough to apply without judgement.** When it needs a decision from me, give lettered options (3a, 3b) and say which you'd pick. Every option must leave the wiki honest: removing or rewording an unsupported claim, or labelling it uncited and making the page `unverified`. Keeping a claim with a citation that doesn't support it is never an option.
 - One finding per problem. If an uncited claim also leaves the page's status wrong, the fix for that claim says so; it isn't a second finding.
 - A finding also in the earlier report and not applied ends with "Open since report-YYYY-MM-DD".
@@ -561,7 +561,7 @@ The wiki as M4 left it, with its real cases; nothing is planted ([[07 Decision L
 | L5 | `/lint apply 1 2 3 4 6 7 8 9 10 11 12 13 14` (all but 5) | makes exactly those fixes, keeps both Resources pages `contested`, sets `updated`, marks the findings Applied, logs the apply, and leaves finding 5 alone |
 | L6 | commit, then `/lint` in a fresh session | deep-checks only the pages updated since the first report and those with open findings, reports none of the applied findings again, and doesn't report finding 5 under the revised rule |
 
-**Run 2, first report (2026-09-24): L1–L4 pass.** 14 findings, 13 confirmed against `raw/`. Finding 5 was wrong because of the skill's own wording on analysis pages, fixed the same day (§4.4). Details in `system/test-results.md`.
+**Run 2 (2026-09-24): 6 of 6.** First report: 14 findings, 13 confirmed against `raw/`; finding 5 was wrong because of the skill's own wording on analysis pages, fixed the same day (§4.4). The apply made exactly the 13 fixes named. The second report deep-checked 13 pages and found 3 new, real problems, two of them on pages the first run had passed, which led to D-060. Details in `system/test-results.md`.
 
 ## 6. M2 setup steps (Windows)
 Checked against the Claude Code docs on 2026-09-21. Recheck anything more than about three months old; Claude Code changes often.
