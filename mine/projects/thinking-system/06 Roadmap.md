@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-22
+reviewed: 2026-09-24
 tags: [project/thinking-system, roadmap]
 ---
 
@@ -95,9 +95,21 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] Each ingest reviewed as in [[05 Obsidian Essentials]] §3 and committed before the next
 - [x] One claim traced from a wiki page to its file in `raw/`: `Associative indexing` → Bush on cumbersome rules → `raw/bush-as-we-may-think.pdf` page 14
 - [x] Handover written: [[17 M3 Handover]]
-- [ ] **Next:** M4 – Ask and File-back
+- [x] Next: M4 – Ask and File-back, started 2026-09-24
 
 **Parked in M3, to pick up after the MVP unless they start to hurt:**
 - Matuschak's five principle notes and the Zettelkasten sources. The gaps are recorded in `wiki/overview.md` and on [[07 Decision Log]]'s next-sources list, so nothing is lost.
 - The `ingest` report splitting "updated" into pages that gained a claim and pages that only gained a link.
 - D-040's `skillOverrides` entry, which waits for the list of names in `~/.claude/skills/synced`.
+
+## 7. M4 in progress, started 2026-09-24
+- [x] `ask` and `file-answer` skills drafted (arrive as `ask-SKILL.md` and `file-answer-SKILL.md`), mirrored in [[08 Claude Operating Instructions]] §4.2–4.3; the ask section of `CLAUDE.md` cut to a pointer plus the rules for direct questions
+- [x] Test prompts made concrete for this wiki ([[08 Claude Operating Instructions]] §5); `system/test-results.md` and `test-injection.md` drafted; D-048 to D-052 proposed
+- [ ] D-048 to D-052 accepted
+- [ ] Skills moved into `.claude/skills/ask/` and `.claude/skills/file-answer/`, committed and pushed; `/ask` and `/file-answer` appear in `/skills`
+- [ ] Tests 1–6 run and recorded
+- [ ] Test 7 run with `test-injection.md`; the file deleted afterwards
+- [ ] Test 8 run: one answer filed in `wiki/analyses/`, reviewed and committed
+- [ ] Tests 9 and 10 run and recorded; score of 9 or more
+- [ ] Any fixes made to the skills, and failed tests rerun
+- [ ] Handover written: 18 M4 Handover

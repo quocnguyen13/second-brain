@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-22
+reviewed: 2026-09-24
 tags: [project/thinking-system, moc]
 ---
 
@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M3 closed 2026-09-22 → next, M4 – Ask and File-back (see [[06 Roadmap]] §2)
+**Current module:** M4 – Ask and File-back, started 2026-09-24 (see [[06 Roadmap]] §7)
 
 ## Document set
 
@@ -87,3 +87,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.16 | 2026-09-22 | Source 3 (Evergreen notes) ingested from the hub page. Its principle notes, the D-040 settings entry and one skill tweak are parked; doc 06 §6 lists them |
 | 1.17 | 2026-09-22 | Source 4 (Contextual Retrieval) ingested, with the first real disagreement between sources recorded on both sides. D-047 proposed and accepted: `contested` belongs on the pages carrying the disputed claim, not on source pages or the overview. Docs 03, 06, 07 and 08 and the `ingest` skill updated |
 | **1.18** | 2026-09-22 | **M3 closed.** Source 5 (The PARA Method) ingested: 6 existing pages updated, 3 with new cited claims, against a bar of 3, and a second disagreement recorded on both sides. Five sources in `raw/`, 26 wiki pages, 11 insight drafts. Doc 17 (M3 Handover) added; docs 00 and 06 updated |
+| **1.19** | 2026-09-24 | **M4 started.** `ask` and `file-answer` skills drafted (arrive as `ask-SKILL.md` and `file-answer-SKILL.md` for you to move into `.claude/skills/`) and mirrored in doc 08 §4.2–4.3; the ask section of `CLAUDE.md` becomes a pointer. Test prompts made concrete, `system/test-results.md` and the test 7 file drafted. D-048 to D-052 proposed. Docs 06, 07, 08 and 13 updated |

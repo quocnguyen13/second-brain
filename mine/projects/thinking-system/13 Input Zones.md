@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-19
-reviewed: 2026-09-22
+reviewed: 2026-09-24
 tags: [project/thinking-system, operations]
 ---
 
@@ -49,7 +49,8 @@ inbox/
 ## 3. Zone 2: questions → `/ask`
 **What goes in:** questions you want the wiki to answer, one per line as `- [ ] YYYY-MM-DD question`. Add them whenever they occur to you, especially while reading what an ingest produced.
 **Why a queue when you could just ask:** asking directly in a session is still the normal path. The queue is for questions that arrive when you're not at the PC, and it keeps a record of what you've been curious about, which is useful raw material later.
-**What `/ask` does:** takes the oldest unticked question, reads `index.md` and the relevant pages, answers with links and citations, then asks whether to file the answer as an analysis page. It ticks the question off in the zone file.
+**What `/ask` does** (the `ask` skill, [[08 Claude Operating Instructions]] §4.2): answers the question you typed after the command or, failing that, the oldest unticked one. It reads `index.md`, searches `wiki/`, answers with links and with evidence traced to `raw/`, and ticks the question off. It writes nothing else ([[07 Decision Log]] D-048).
+**Filing:** if the answer is worth keeping, run `/file-answer` in the same session (§4.3 of doc 08). It re-checks the evidence in `raw/`, writes `wiki/analyses/<title>.md`, links it from the pages it drew on, and updates `index.md` and `log.md` (D-050, D-051).
 
 ## 4. Zone 3: checks → `/lint`
 **What goes in:** anything you want verified or re-examined, one per line as `- [ ] YYYY-MM-DD what to verify`. A page that felt thin, a claim you doubt, a topic you suspect has gaps.
