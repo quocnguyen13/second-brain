@@ -69,7 +69,7 @@ About 30 minutes, once a week. The first `/lint` takes longest, because it check
 `mine/` is not a learning exercise; it's goal G4. Claude proposes insight drafts into `mine/drafts/`, and you keep the ones you'd defend, in your own words. Module M6 sets up that routine.
 
 ## 6. `system/views/Review.base`
-Mirrored here because project chats can't see `system/`; change both in the same commit. Bases syntax: https://obsidian.md/help/bases/syntax (checked 2026-09-24).
+Mirrored here because project chats can't see `system/`; change both in the same commit. Obsidian rewrites the file in its own style when you change a view, so copy it from the vault after any change. Bases syntax: https://obsidian.md/help/bases/syntax (checked 2026-09-24).
 ```yaml
 properties:
   file.name:
@@ -93,34 +93,36 @@ views:
     name: Needs attention
     filters:
       and:
-        - 'file.inFolder("wiki")'
-        - 'file.ext == "md"'
+        - file.inFolder("wiki")
+        - file.ext == "md"
         - or:
-            - 'status == "unverified"'
-            - 'status == "contested"'
+            - status == "unverified"
+            - status == "contested"
     groupBy:
-      property: note.status
+      property: status
       direction: DESC
     order:
       - file.name
-      - note.type
-      - note.updated
-      - note.sources
+      - type
+      - updated
+      - sources
     sort:
-      - property: note.updated
+      - property: updated
         direction: ASC
+    columnSize:
+      note.type: 103
   - type: table
     name: Draft queue
     filters:
       and:
-        - 'file.inFolder("mine/drafts")'
-        - 'file.ext == "md"'
+        - file.inFolder("mine/drafts")
+        - file.ext == "md"
     order:
       - file.name
-      - note.created
-      - note.origin
-      - note.related
+      - created
+      - origin
+      - related
     sort:
-      - property: note.created
+      - property: created
         direction: ASC
 ```

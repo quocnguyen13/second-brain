@@ -44,8 +44,8 @@ This page is new synthesis, so its evidence is checked again at the source befor
 - Properties: `sources` lists every raw file cited; `created` and `updated` today; one or two tags reused from the pages it drew on.
 
 ## 4. Set status
-- `verified` when every claim in Evidence cites a file in `raw/` and nothing uncited sits in Answer.
-- `unverified` if anything in Answer or Evidence lacks a raw citation, or a claim couldn't be re-checked in step 2.
+- `verified` when every claim in Evidence cites a file in `raw/` and the Answer states no fact that Evidence doesn't hold.
+- `unverified` if a claim in Evidence lacks a raw citation, the Answer states a fact that Evidence doesn't hold, or a claim couldn't be re-checked in step 2.
 - `contested` if the page carries a claim two sources disagree on, shown both ways (D-047).
 - The Answer's conclusion is this page's reasoning from its own Evidence. It needs no separate citation, but it can't go beyond that evidence.
 

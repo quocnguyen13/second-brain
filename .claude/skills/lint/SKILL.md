@@ -30,7 +30,7 @@ Part A writes exactly three things: the report, the ticks in `inbox/checks.md`, 
 
 ### A1. Scan every page
 Read each page in full and check:
-1. **Citations present.** Every claim cites a file in `raw/`, including the one-line definition under the title. Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims. A claim labelled "(general knowledge)" is uncited. On an analysis page only Answer and Evidence need citations; labelled lines under "Caveats and gaps" are allowed there (`file-answer` step 4).
+1. **Citations present.** Every claim cites a file in `raw/`, including the one-line definition under the title. Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims. A claim labelled "(general knowledge)" is uncited. On an analysis page, Evidence cites `raw/`; the Answer needs no citations of its own, but a fact in it that Evidence doesn't hold is uncited (D-051). Labelled lines under "Caveats and gaps" are allowed there.
 2. **PDF citations carry a page:** `([[raw/<name>.pdf#page=N]])` (D-046). Report the ones that don't as a single Low finding for the whole wiki, with the page for each claim you located in A2.
 3. **`sources` matches the body.** The property lists every raw file the page cites, each listed file is cited on the page, and each exists in `raw/`.
 4. **Status matches the page.** `verified` only if every claim is cited. `unverified` if any claim is uncited, and that wins over `contested` until the claim is fixed. `contested` only if the page carries a disputed claim and shows both positions, with citations, under "Where sources disagree". Source pages and `wiki/overview.md` record disagreements and keep their own status (D-047).
@@ -45,7 +45,7 @@ This is the check that catches a citation that doesn't hold: open the cited pass
 - Note where you looked (raw file and line, or PDF page), so each finding can be traced in under a minute.
 
 ### A3. Check across pages
-1. **Contradictions between pages.** Group the claims by the raw file they cite. Where two pages say different things about the same point, open the passage. If one page is wrong, that's the finding, and the fix goes on that page. If the sources themselves disagree, check that each page carrying the point shows both positions and is `contested`. Compare each concept and entity page with its source pages too.
+1. **Contradictions between pages.** Group the claims by the raw file they cite. Where two pages say different things about the same point, open the passage. If one page is wrong, that's the finding, and the fix goes on that page. The finding names both pages with their lines, and which one `raw/` supports. If the sources themselves disagree, check that each page carrying the point shows both positions and is `contested`. Compare each concept and entity page with its source pages too.
 2. **Superseded claims.** A claim that a newer source overturns (use the raw file's `published` or `created` date), not marked "superseded by".
 3. **Stale pages.** `updated` more than six months ago on a fast-moving topic: AI models and tools, vendor figures, prices, benchmarks, regulation.
 4. **Suggestions**, up to three in all: concepts, people or organisations that two or more pages mention with no page of their own; gaps recorded on pages or in `wiki/overview.md` that a new source would fill; questions worth asking.

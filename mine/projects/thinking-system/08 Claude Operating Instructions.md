@@ -308,7 +308,7 @@ Never cite a wiki page as the evidence for a claim; the chain of fact ends in `r
 ````
 
 ### 4.3 `file-answer`
-`.claude/skills/file-answer/SKILL.md`, written in M4 (2026-09-24) and revised after the test run: a raw file that won't open leaves the claim "not re-checked" and the page `unverified`, and Related includes the page behind each disputed position. Run it in the same session as the answer it files. Two points to know:
+`.claude/skills/file-answer/SKILL.md`, written in M4 (2026-09-24) and revised after the test run: a raw file that won't open leaves the claim "not re-checked" and the page `unverified`, and Related includes the page behind each disputed position. In M5 the status rules were reworded to match D-051: the Answer needs no citations, only no facts beyond Evidence. Run it in the same session as the answer it files. Two points to know:
 - **Evidence is checked again at the source.** An analysis is new synthesis, so every evidence claim is re-read in `raw/` before the page is written, and the page cites `raw/` directly ([[07 Decision Log]] D-050).
 - **The conclusion is the page's own reasoning.** It may combine the evidence but add no facts beyond it; the page links back from every page it drew on, under Related, never as evidence ([[07 Decision Log]] D-051).
 
@@ -359,8 +359,8 @@ This page is new synthesis, so its evidence is checked again at the source befor
 - Properties: `sources` lists every raw file cited; `created` and `updated` today; one or two tags reused from the pages it drew on.
 
 ## 4. Set status
-- `verified` when every claim in Evidence cites a file in `raw/` and nothing uncited sits in Answer.
-- `unverified` if anything in Answer or Evidence lacks a raw citation, or a claim couldn't be re-checked in step 2.
+- `verified` when every claim in Evidence cites a file in `raw/` and the Answer states no fact that Evidence doesn't hold.
+- `unverified` if a claim in Evidence lacks a raw citation, the Answer states a fact that Evidence doesn't hold, or a claim couldn't be re-checked in step 2.
 - `contested` if the page carries a claim two sources disagree on, shown both ways (D-047).
 - The Answer's conclusion is this page's reasoning from its own Evidence. It needs no separate citation, but it can't go beyond that evidence.
 
@@ -383,7 +383,7 @@ Before reporting, check every `[[wiki/...]]` link on the new page points to a pa
 ````
 
 ### 4.4 `lint`
-`.claude/skills/lint/SKILL.md`, written in M5 (2026-09-24). Two modes: `/lint` checks and writes a numbered report, and `/lint apply <numbers>` makes the fixes you approve ([[07 Decision Log]] D-055). Three points to know:
+`.claude/skills/lint/SKILL.md`, written in M5 (2026-09-24) and revised after the first run: an analysis page's Answer needs no citations of its own, as D-051 says (the first run flagged one wrongly), and a contradiction finding names both pages. Two modes: `/lint` checks and writes a numbered report, and `/lint apply <numbers>` makes the fixes you approve ([[07 Decision Log]] D-055). Three points to know:
 - **The report run changes nothing in `wiki/`.** `wiki/` is on the allow list, so no prompt would stop an edit; the skill's own rule does. It writes the report, the ticks in `inbox/checks.md` and a log entry, then stops. `apply` works from the report file, so you can read the report in Obsidian first and apply in a later session.
 - **Citations are checked at the source, not counted.** The deep check opens the cited passage in `raw/` for each claim: on every page the first time, then on the pages that changed since the last report, pages with findings not yet applied, and pages named in a check (D-056). A claim whose passage doesn't say it counts as unsourced (D-057).
 - **It reads `inbox/checks.md` last.** The standing checks run first, so the report shows what they found on their own (D-059).
@@ -421,7 +421,7 @@ Part A writes exactly three things: the report, the ticks in `inbox/checks.md`, 
 
 ### A1. Scan every page
 Read each page in full and check:
-1. **Citations present.** Every claim cites a file in `raw/`, including the one-line definition under the title. Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims. A claim labelled "(general knowledge)" is uncited. On an analysis page only Answer and Evidence need citations; labelled lines under "Caveats and gaps" are allowed there (`file-answer` step 4).
+1. **Citations present.** Every claim cites a file in `raw/`, including the one-line definition under the title. Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims. A claim labelled "(general knowledge)" is uncited. On an analysis page, Evidence cites `raw/`; the Answer needs no citations of its own, but a fact in it that Evidence doesn't hold is uncited (D-051). Labelled lines under "Caveats and gaps" are allowed there.
 2. **PDF citations carry a page:** `([[raw/<name>.pdf#page=N]])` (D-046). Report the ones that don't as a single Low finding for the whole wiki, with the page for each claim you located in A2.
 3. **`sources` matches the body.** The property lists every raw file the page cites, each listed file is cited on the page, and each exists in `raw/`.
 4. **Status matches the page.** `verified` only if every claim is cited. `unverified` if any claim is uncited, and that wins over `contested` until the claim is fixed. `contested` only if the page carries a disputed claim and shows both positions, with citations, under "Where sources disagree". Source pages and `wiki/overview.md` record disagreements and keep their own status (D-047).
@@ -436,7 +436,7 @@ This is the check that catches a citation that doesn't hold: open the cited pass
 - Note where you looked (raw file and line, or PDF page), so each finding can be traced in under a minute.
 
 ### A3. Check across pages
-1. **Contradictions between pages.** Group the claims by the raw file they cite. Where two pages say different things about the same point, open the passage. If one page is wrong, that's the finding, and the fix goes on that page. If the sources themselves disagree, check that each page carrying the point shows both positions and is `contested`. Compare each concept and entity page with its source pages too.
+1. **Contradictions between pages.** Group the claims by the raw file they cite. Where two pages say different things about the same point, open the passage. If one page is wrong, that's the finding, and the fix goes on that page. The finding names both pages with their lines, and which one `raw/` supports. If the sources themselves disagree, check that each page carrying the point shows both positions and is `contested`. Compare each concept and entity page with its source pages too.
 2. **Superseded claims.** A claim that a newer source overturns (use the raw file's `published` or `created` date), not marked "superseded by".
 3. **Stale pages.** `updated` more than six months ago on a fast-moving topic: AI models and tools, vendor figures, prices, benchmarks, regulation.
 4. **Suggestions**, up to three in all: concepts, people or organisations that two or more pages mention with no page of their own; gaps recorded on pages or in `wiki/overview.md` that a new source would fill; questions worth asking.
@@ -558,8 +558,10 @@ The wiki as M4 left it, with its real cases; nothing is planted ([[07 Decision L
 | L2 | (same run) | names the contradiction between those pages and the analysis page (or `PARA method`), and says which side `raw/` supports |
 | L3 | (same run) | lists `Karpathy` under "Already flagged", with its general-knowledge full name |
 | L4 | (same run) | ticks the queued check and points it at the L1 findings; `git status` shows only the report, `inbox/checks.md` and `log.md` changed |
-| L5 | `/lint apply <the L1 findings>` | changes only those lines, keeps both pages `contested`, sets `updated`, marks the findings Applied, and logs the apply |
-| L6 | commit, then `/lint` in a fresh session | deep-checks only the pages updated since the first report and those with open findings, drops the fixed claim, and marks the rest "Open since" |
+| L5 | `/lint apply 1 2 3 4 6 7 8 9 10 11 12 13 14` (all but 5) | makes exactly those fixes, keeps both Resources pages `contested`, sets `updated`, marks the findings Applied, logs the apply, and leaves finding 5 alone |
+| L6 | commit, then `/lint` in a fresh session | deep-checks only the pages updated since the first report and those with open findings, reports none of the applied findings again, and doesn't report finding 5 under the revised rule |
+
+**Run 2, first report (2026-09-24): L1–L4 pass.** 14 findings, 13 confirmed against `raw/`. Finding 5 was wrong because of the skill's own wording on analysis pages, fixed the same day (§4.4). Details in `system/test-results.md`.
 
 ## 6. M2 setup steps (Windows)
 Checked against the Claude Code docs on 2026-09-21. Recheck anything more than about three months old; Claude Code changes often.

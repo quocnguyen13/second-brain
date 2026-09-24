@@ -125,11 +125,11 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] `system/views/Review.base` drafted with both views (D-058), mirrored in [[05 Obsidian Essentials]] §6
 - [x] Weekly review written as steps in [[05 Obsidian Essentials]] §4
 - [x] Lint tests L1–L6 written in [[08 Claude Operating Instructions]] §5 and `system/test-results.md` (D-059)
-- [ ] D-055 to D-059 accepted
-- [ ] Files placed: the skill in `.claude/skills/lint/`, `Review.base` in `system/views/` and bookmarked; committed and pushed; `/lint` listed in `/skills`
-- [ ] Views checked: Needs attention shows 8 pages (1 `unverified`, 7 `contested`); Draft queue shows 11
-- [ ] L1–L4: first `/lint`, report read and committed
-- [ ] L5: fixes applied for the Resources claim, reviewed and committed
+- [x] D-055 to D-059 accepted
+- [x] Files placed: the skill in `.claude/skills/lint/`, `Review.base` in `system/views/` and bookmarked; committed and pushed
+- [x] Views checked: Needs attention shows 8 pages (1 `unverified`, 7 `contested`); Draft queue shows 11
+- [x] L1–L4: first `/lint`, report read and committed. 14 findings; 13 confirmed against `raw/`, and finding 5 was the skill's own error, fixed in `lint` and `file-answer`
+- [ ] L5: `/lint apply` for all findings but 5, reviewed and committed
 - [ ] L6: second `/lint` in a fresh session
 - [ ] One weekly review run end to end ([[05 Obsidian Essentials]] §4)
 - [ ] MVP criteria in [[01 Project Charter]] §6 checked; handover written: 19 M5 Handover
