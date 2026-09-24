@@ -21,8 +21,8 @@ flowchart LR
     M2 --> M3[M3<br/>First ingests]
     M3 --> M4[M4<br/>Ask and<br/>file-back]
     M4 --> M5[M5<br/>Lint and<br/>review]
-    M5 -.->|MVP complete| M6[M6<br/>Thinking<br/>layer]
-    M6 --> M7[M7<br/>PO workflows]
+    M5 --> M6[M6<br/>Thinking<br/>layer]
+    M6 -.->|MVP complete| M7[M7<br/>PO workflows]
     M7 --> M8[M8<br/>Retro and<br/>governance]
 ```
 
@@ -36,8 +36,8 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 | **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 10 (Templates) | **Closed 2026-09-22** | Done |
 | **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | **Closed 2026-09-22** | Done |
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | **Closed 2026-09-24** | Done |
-| **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Started 2026-09-24**; exit met 2026-09-24 |
-| **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met | **~2 weeks from M1** |
+| **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Closed 2026-09-24** |
+| **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062) | **At M6's close** |
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; the drafts routine | 5 insight pages you wrote, linked to wiki pages | 3–4 days |
 | **M7 – Product-Owner Workflows** | The system supports real work | Doc 11 (Playbook); skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning | 3 workflows used weekly for 4 weeks | 4 weeks (set by the calendar) |
 | **M8 – Retrospective and Governance** | Decide what comes next, and unpark the rules | Retrospective; doc 12 (Data Governance); Phase 5 scope | Doc 12 written before any work material enters the vault | 1 week |
@@ -119,7 +119,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - A naming rule for a source with no author (test 7 produced `unknown-...`).
 - Analysis page titles are the question word for word, which can be long.
 
-## 8. M5 in progress (started 2026-09-24)
+## 8. M5 closed on 2026-09-24
 - [x] D-053 and D-054 accepted
 - [x] `lint` skill drafted and mirrored in [[08 Claude Operating Instructions]] §4.4; the lint section of `CLAUDE.md` cut to a pointer, and two citation rules added (D-055 to D-057)
 - [x] `system/views/Review.base` drafted with both views (D-058), mirrored in [[05 Obsidian Essentials]] §6
@@ -131,7 +131,13 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] L1–L4: first `/lint`, report read and committed. 14 findings; 13 confirmed against `raw/`, and finding 5 was the skill's own error, fixed in `lint` and `file-answer`
 - [x] L5: `/lint apply` for all findings but 5: exactly those 13 fixes, no status changes, reviewed and committed
 - [x] L6: second `/lint` in a fresh session: 13 pages deep-checked, none of the applied findings back, finding 5 gone, and 3 new real problems found. **Lint tests 6 of 6; M5's exit criterion is met**
-- [ ] D-060 (monthly full deep check) and D-061 (wrong PDF page is Low) accepted; `lint` revised to match
-- [ ] Fixes from report-2026-09-24-2 applied and committed
-- [ ] One weekly review run end to end ([[05 Obsidian Essentials]] §4)
-- [ ] MVP criteria in [[01 Project Charter]] §6 checked; handover written: 19 M5 Handover
+- [x] D-060 (monthly full deep check) and D-061 (wrong PDF page is Low) accepted; `lint` revised to match
+- [x] Fixes from report-2026-09-24-2 applied and committed: 3 findings, 8 pages, no status changes
+- [x] Weekly review steps 1–3 run twice (lint, apply, commit); steps 4–7, including the first pass through the draft queue, move to M6
+- [x] MVP criteria in [[01 Project Charter]] §6 checked: 5 of 6, with the insights criterion moved to M6 (D-062)
+- [x] Handover written: [[19 M5 Handover]]
+- [ ] **Next:** M6 – Thinking Layer
+
+**Parked in M5, to pick up when they start to hurt:**
+- A written rule for uncited lines that only restate cited claims (lint currently reads them as synthesis).
+- Checking `mine/drafts/` claims against `raw/` before you keep one; M6 decides.
