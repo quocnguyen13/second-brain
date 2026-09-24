@@ -35,7 +35,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 | **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[04 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | **Closed 2026-09-21** | Done |
 | **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 10 (Templates) | **Closed 2026-09-22** | Done |
 | **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | **Closed 2026-09-22** | Done |
-| **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | At least 9 of 10 pass; one answer filed as an analysis page | 2–3 days |
+| **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | **Closed 2026-09-24** | Done |
 | **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a planted contradiction and a planted uncited claim | 2 days |
 | **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met | **~2 weeks from M1** |
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; the drafts routine | 5 insight pages you wrote, linked to wiki pages | 3–4 days |
@@ -102,14 +102,19 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - The `ingest` report splitting "updated" into pages that gained a claim and pages that only gained a link.
 - D-040's `skillOverrides` entry, which waits for the list of names in `~/.claude/skills/synced`.
 
-## 7. M4 in progress, started 2026-09-24
-- [x] `ask` and `file-answer` skills drafted (arrive as `ask-SKILL.md` and `file-answer-SKILL.md`), mirrored in [[08 Claude Operating Instructions]] §4.2–4.3; the ask section of `CLAUDE.md` cut to a pointer plus the rules for direct questions
-- [x] Test prompts made concrete for this wiki ([[08 Claude Operating Instructions]] §5); `system/test-results.md` and `test-injection.md` drafted; D-048 to D-052 proposed
-- [ ] D-048 to D-052 accepted
-- [ ] Skills moved into `.claude/skills/ask/` and `.claude/skills/file-answer/`, committed and pushed; `/ask` and `/file-answer` appear in `/skills`
-- [ ] Tests 1–6 run and recorded
-- [ ] Test 7 run with `test-injection.md`; the file deleted afterwards
-- [ ] Test 8 run: one answer filed in `wiki/analyses/`, reviewed and committed
-- [ ] Tests 9 and 10 run and recorded; score of 9 or more
-- [ ] Any fixes made to the skills, and failed tests rerun
-- [ ] Handover written: 18 M4 Handover
+## 7. M4 closed on 2026-09-24
+- [x] `ask` and `file-answer` skills written, mirrored in [[08 Claude Operating Instructions]] §4.2–4.3; the ask section of `CLAUDE.md` cut to a pointer plus the rules for direct questions
+- [x] Test prompts made concrete for this wiki ([[08 Claude Operating Instructions]] §5); `system/test-results.md` and `test-injection.md` written
+- [x] D-048 to D-052 accepted
+- [x] Skills moved into `.claude/skills/ask/` and `.claude/skills/file-answer/`, committed and pushed; both appear in `/skills`
+- [x] Tests 1–6 run and recorded. Test 4 found Poppler missing; you installed it, and Claude installed nothing
+- [x] Test 7 run with `test-injection.md`; the file deleted afterwards
+- [x] Test 8 run: `Compare the PARA method and evergreen notes as ways to organise what I read` filed in `wiki/analyses/`, reviewed and committed. Its re-check caught an unsupported claim, now in `inbox/checks.md`
+- [x] Tests 9 and 10 run: **10 of 10**
+- [x] Fix batch from the test findings: answer sections, recommendation rule (D-053), no installing (D-054), unreadable raw files, Related links. No rerun needed
+- [x] Handover written: [[18 M4 Handover]]
+- [ ] **Next:** M5 – Lint and Review
+
+**Parked in M4, to pick up when they start to hurt:**
+- A naming rule for a source with no author (test 7 produced `unknown-...`).
+- Analysis page titles are the question word for word, which can be long.

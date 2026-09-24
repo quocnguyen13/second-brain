@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M4 – Ask and File-back, started 2026-09-24 (see [[06 Roadmap]] §7)
+**Current module:** M4 closed 2026-09-24 → next, M5 – Lint and Review (see [[06 Roadmap]] §2)
 
 ## Document set
 
@@ -36,7 +36,8 @@ tags: [project/thinking-system, moc]
 | 14 | [[14 M0 Handover]] | Closing state of M0, used to open the M1 chat | Closed |
 | 15 | [[15 M1 Handover]] | Closing state of M1, used to open the M2 chat | Closed |
 | 16 | [[16 M2 Handover]] | Closing state of M2, used to open the M3 chat | Closed |
-| 17 | [[17 M3 Handover]] | Closing state of M3, to open the M4 chat with | Current |
+| 17 | [[17 M3 Handover]] | Closing state of M3, used to open the M4 chat | Closed |
+| 18 | [[18 M4 Handover]] | Closing state of M4, to open the M5 chat with | Current |
 
 **Planned (not written yet)**
 - 11 Workflow Playbook (module M7): product-owner routines
@@ -88,3 +89,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.17 | 2026-09-22 | Source 4 (Contextual Retrieval) ingested, with the first real disagreement between sources recorded on both sides. D-047 proposed and accepted: `contested` belongs on the pages carrying the disputed claim, not on source pages or the overview. Docs 03, 06, 07 and 08 and the `ingest` skill updated |
 | **1.18** | 2026-09-22 | **M3 closed.** Source 5 (The PARA Method) ingested: 6 existing pages updated, 3 with new cited claims, against a bar of 3, and a second disagreement recorded on both sides. Five sources in `raw/`, 26 wiki pages, 11 insight drafts. Doc 17 (M3 Handover) added; docs 00 and 06 updated |
 | **1.19** | 2026-09-24 | **M4 started.** `ask` and `file-answer` skills drafted (arrive as `ask-SKILL.md` and `file-answer-SKILL.md` for you to move into `.claude/skills/`) and mirrored in doc 08 §4.2–4.3; the ask section of `CLAUDE.md` becomes a pointer. Test prompts made concrete, `system/test-results.md` and the test 7 file drafted. D-048 to D-052 proposed. Docs 06, 07, 08 and 13 updated |
+| **1.20** | 2026-09-24 | **M4 closed.** D-048 to D-052 accepted. Test run 1: 10 of 10. First analysis page filed; its re-check caught an unsupported claim on two concept pages, queued for `/lint`. Fix batch: fixed answer sections, recommendation rule (D-053, proposed), no installing when a tool is missing (D-054, proposed), unreadable raw files and Related links in `file-answer`. `CLAUDE.md`, both skills and `system/test-results.md` updated; docs 06, 07 and 08 updated; doc 18 (M4 Handover) added |
