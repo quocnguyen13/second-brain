@@ -3,7 +3,7 @@ type: concept
 status: contested
 sources: ["[[raw/forte-para-method.md]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["knowledge-management", "note-taking"]
 ---
 # PARA method
@@ -39,3 +39,4 @@ A system that files all digital information into four top-level categories: Proj
 - [[wiki/concepts/Evergreen notes]]
 - [[wiki/concepts/Associative indexing]]
 - [[wiki/concepts/Compiled wiki]]
+- [[wiki/analyses/Compare the PARA method and evergreen notes as ways to organise what I read]]

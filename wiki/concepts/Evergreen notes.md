@@ -3,7 +3,7 @@ type: concept
 status: contested
 sources: ["[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["knowledge-management", "note-taking"]
 ---
 # Evergreen notes
@@ -40,3 +40,4 @@ Notes "written and organized to evolve, contribute, and accumulate over time, ac
 - [[wiki/concepts/Compiled wiki]]
 - [[wiki/concepts/PARA method]]
 - [[wiki/concepts/Organizing by actionability]]
+- [[wiki/analyses/Compare the PARA method and evergreen notes as ways to organise what I read]]

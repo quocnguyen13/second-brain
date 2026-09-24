@@ -3,7 +3,7 @@ type: concept
 status: contested
 sources: ["[[raw/forte-para-method.md]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["knowledge-management", "note-taking"]
 ---
 # Organizing by actionability
@@ -42,3 +42,4 @@ Organising information by the projects and goals you are committed to now, not b
 - [[wiki/concepts/Evergreen notes]]
 - [[wiki/concepts/Associative indexing]]
 - [[wiki/concepts/Compiled wiki]]
+- [[wiki/analyses/Compare the PARA method and evergreen notes as ways to organise what I read]]

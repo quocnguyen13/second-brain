@@ -18,3 +18,6 @@ Review: contested narrowed to Compiled wiki and Retrieval-augmented generation; 
 
 ## [2026-09-22] ingest | The PARA Method
 Pages: +4 new (source, entity Tiago Forte, concepts PARA method and Organizing by actionability), 6 updated (Evergreen notes, Associative indexing, Compiled wiki, Source - Evergreen notes, Source - As We May Think, Source - LLM Wiki). Conflict: project-first hierarchy (Forte) vs associative ontology and concept orientation (Matuschak, Bush); contested on PARA method, Organizing by actionability, Evergreen notes, Associative indexing; source pages and overview record it and stay verified. Open point, not contested: compiled wiki's concept pages vs PARA's projects-first order. Flag: clip possibly partial (ends without a conclusion, refers to "this book"). Overview rewritten. 2 draft insights filed in mine/drafts/.
+
+## [2026-09-24] file | Compare the PARA method and evergreen notes as ways to organise what I read
+Pages: +1 analysis, 3 updated (Related links). Status: contested. Reworded: "Resources rank below projects and areas" is not in raw/forte-para-method.md; dropped from Evidence and moved to Caveats as uncited on Organizing by actionability. Other evidence confirmed in raw/.

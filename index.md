@@ -41,3 +41,5 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/concepts/Organizing by actionability]] — organise by current projects and goals, not subjects; contested against concept-oriented, associative notes (4 sources)
 
 ## Analyses
+
+- [[wiki/analyses/Compare the PARA method and evergreen notes as ways to organise what I read]] — PARA files items by project for action; evergreen notes link concepts for thinking and suit reading better; contested on hierarchy vs association (3 sources)
