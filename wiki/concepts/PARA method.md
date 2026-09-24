@@ -28,10 +28,12 @@ A system that files all digital information into four top-level categories: Proj
   - Forte: four top-level folders with subfolders, one home per item, so "you'll know exactly where to put everything, and exactly where to find it" ([[raw/forte-para-method.md]]).
   - Matuschak: "prefer associative ontologies to hierarchical taxonomies" ([[raw/matuschak-evergreen-notes.md]]).
   - Bush: filing an item in one place under one classification path is artificial, because the mind works by association ([[raw/bush-as-we-may-think.pdf#page=14]]).
-  - Scope: Forte is filing working material for action; Matuschak and Bush are linking ideas and records for thinking and recall. The captured Matuschak page gives the principle's title only, not the reasons behind it.
+  - Scope: Forte is filing working material for action; Matuschak and Bush are linking ideas and records for thinking and recall ([[raw/forte-para-method.md]], [[raw/matuschak-evergreen-notes.md]], [[raw/bush-as-we-may-think.pdf#page=14]]). The captured Matuschak page gives the principle's title only, not the reasons behind it.
 
 ## Mentioned in
 - [[wiki/sources/Source - The PARA Method]]
+- [[wiki/sources/Source - As We May Think]]
+- [[wiki/sources/Source - Evergreen notes]]
 
 ## Related
 - [[wiki/entities/Tiago Forte]]

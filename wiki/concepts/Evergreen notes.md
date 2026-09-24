@@ -19,7 +19,7 @@ Notes "written and organized to evolve, contribute, and accumulate over time, ac
 ### Compared with earlier sources
 - **Atomic vs. Bush's items.** Bush links whatever pair of items sits on the memex's viewing positions, whether pages of books or records ([[raw/bush-as-we-may-think.pdf#page=16]]). Evergreen notes make the note itself the atomic unit ([[raw/matuschak-evergreen-notes.md]]).
 - **Atomic vs. compiled-wiki pages.** The compiled wiki organises into entity and concept pages ([[raw/karpathy-llm-wiki.md]]), which matches "concept-oriented" but states no atomicity rule.
-- **Densely linked vs. Bush's trails.** Both reject fixed classification. Bush sets association against filing under one path ([[raw/bush-as-we-may-think.pdf#page=14]]), and Matuschak prefers associative ontologies to hierarchical taxonomies ([[raw/matuschak-evergreen-notes.md]]). Bush's links form ordered, replayable trails ([[raw/bush-as-we-may-think.pdf]]). The captured page does not say what shape Matuschak's links take.
+- **Densely linked vs. Bush's trails.** Both reject fixed classification. Bush sets association against filing under one path ([[raw/bush-as-we-may-think.pdf#page=14]]), and Matuschak prefers associative ontologies to hierarchical taxonomies ([[raw/matuschak-evergreen-notes.md]]). Bush's links form ordered, replayable trails ([[raw/bush-as-we-may-think.pdf#page=16]]). The captured page does not say what shape Matuschak's links take.
 - **Densely linked vs. compiled-wiki cross-references.** In the compiled wiki the LLM maintains cross-references and lint flags missing ones ([[raw/karpathy-llm-wiki.md]]). Evergreen notes are written for yourself ([[raw/matuschak-evergreen-notes.md]]), so there the writer makes the links.
 
 ## Where sources disagree

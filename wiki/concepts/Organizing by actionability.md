@@ -15,12 +15,12 @@ Organising information by the projects and goals you are committed to now, not b
 - Work has "outcomes you are trying to achieve", and in a busy day there is no time to search a vast subject category for one item ([[raw/forte-para-method.md]]).
 - Everything a project needs should sit in one place, ready to go. The way to get there is to file it by project in the first place ([[raw/forte-para-method.md]]).
 - An actionable system "pull[s] those actions closer and make[s] them easier to start and finish" ([[raw/forte-para-method.md]]).
-- Topics are not banned. PARA keeps a **resources** category for topics of interest, but ranks it below projects and areas ([[raw/forte-para-method.md]]).
+- Topics are not banned. PARA keeps a **resources** category for topics of interest ([[raw/forte-para-method.md]]).
 
 ### Compared with earlier sources
 - **With Bush: agree on the problem, disagree on the fix.**
   - Both reject subject classification as the way to find things. Forte objects to "rummaging through a vast category" ([[raw/forte-para-method.md]]); Bush objects to tracing one path down a fixed classification ([[raw/bush-as-we-may-think.pdf#page=14]]).
-  - Forte's fix is a different single home, the project ([[raw/forte-para-method.md]]). Bush's fix is association: the user permanently joins items to each other ([[raw/bush-as-we-may-think.pdf#page=16]]) and chains the joins into trails ([[raw/bush-as-we-may-think.pdf]]).
+  - Forte's fix is a different single home, the project ([[raw/forte-para-method.md]]). Bush's fix is association: the user permanently joins items to each other ([[raw/bush-as-we-may-think.pdf#page=16]]) and chains the joins into trails ([[raw/bush-as-we-may-think.pdf#page=16]]).
 - **With the compiled wiki.**
   - The compiled wiki organises into "entity pages, concept pages" ([[raw/karpathy-llm-wiki.md]]), which is organising by topic.
   - The gist doesn't argue against organising by project, and Forte doesn't argue against concept pages. He argues against broad subject folders as the main organiser ([[raw/forte-para-method.md]]).
@@ -31,10 +31,12 @@ Organising information by the projects and goals you are committed to now, not b
   - Forte: around the projects and goals you are committed to now ([[raw/forte-para-method.md]]).
   - Matuschak: evergreen notes are "concept-oriented" and accumulate "over time, across projects" ([[raw/matuschak-evergreen-notes.md]]). The unit outlives any single project.
   - Forte also files into a hierarchy, while Matuschak prefers "associative ontologies to hierarchical taxonomies" ([[raw/matuschak-evergreen-notes.md]]).
-  - Scope: Forte aims at getting work done; Matuschak aims at "better thinking" ([[raw/matuschak-evergreen-notes.md]]). The captured Matuschak page states its principles as titles only.
+  - Scope: Forte aims at getting work done ([[raw/forte-para-method.md]]); Matuschak aims at "better thinking" ([[raw/matuschak-evergreen-notes.md]]). The captured Matuschak page states its principles as titles only.
 
 ## Mentioned in
 - [[wiki/sources/Source - The PARA Method]]
+- [[wiki/sources/Source - LLM Wiki]]
+- [[wiki/sources/Source - Evergreen notes]]
 
 ## Related
 - [[wiki/concepts/PARA method]]

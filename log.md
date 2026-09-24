@@ -24,3 +24,6 @@ Pages: +1 analysis, 3 updated (Related links). Status: contested. Reworded: "Res
 
 ## [2026-09-24] lint | report-2026-09-24
 Scanned 27 pages, deep-checked 27. Findings: 14 (7 high, 6 medium, 1 low). Checks ticked: 1. No wiki pages changed.
+
+## [2026-09-24] lint | apply report-2026-09-24
+Applied: 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14. Skipped: none (5 not requested). Pages changed: 13. Status changes: none.

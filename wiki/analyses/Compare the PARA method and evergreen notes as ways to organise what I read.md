@@ -30,7 +30,6 @@ The two methods answer different needs, and the sources disagree on how notes sh
   - Scope: Forte files working material for action; Matuschak aims at "better thinking". They may suit different layers more than they compete.
 
 ## Caveats and gaps
-- (uncited on [[wiki/concepts/Organizing by actionability]]) The page says PARA ranks Resources below projects and areas. The raw post lists the four categories but states no ranking, so the claim is left out of Evidence. A check for `inbox/checks.md` is suggested.
 - The captured Matuschak page gives each principle and practice as a title only. His reasons, and how "Write about what you read" works, are in linked notes not yet ingested. Ingesting that note would settle how he handles reading.
 - (general knowledge) Many practitioners combine the two, using PARA folders for working files and a linked-notes area for ideas. Forte's later "Building a Second Brain" material describes distilling notes from what you read. Neither is in the wiki.
 - (general knowledge) The trade-off in effort: PARA costs little per item (just file it), while evergreen notes cost more (rewrite and link each one).
@@ -39,3 +38,4 @@ The two methods answer different needs, and the sources disagree on how notes sh
 - [[wiki/concepts/PARA method]]
 - [[wiki/concepts/Evergreen notes]]
 - [[wiki/concepts/Organizing by actionability]]
+- [[wiki/concepts/Associative indexing]]

@@ -11,7 +11,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - LLM Wiki]] — Karpathy's gist proposing the compiled-wiki pattern: three layers, three operations, index/log; records the Contextual Retrieval disagreement and an open point with PARA (3 sources)
 - [[wiki/sources/Source - As We May Think]] — Bush's 1945 essay proposing the memex and associative indexing as a fix for one-path indexing; records the PARA disagreement (3 sources)
 - [[wiki/sources/Source - Evergreen notes]] — Matuschak's hub page defining evergreen notes and five principles; linked notes not captured; records the PARA disagreement (4 sources)
-- [[wiki/sources/Source - Contextual Retrieval]] — Anthropic's post: long prompt under 200k tokens, else RAG improved by contextualised chunks, BM25 and reranking (1 source)
+- [[wiki/sources/Source - Contextual Retrieval]] — Anthropic's post: long prompt under 200k tokens, else RAG improved by contextualised chunks, BM25 and reranking (2 sources)
 - [[wiki/sources/Source - The PARA Method]] — Forte's four-category system (Projects, Areas, Resources, Archives) organised by actionability; set against Matuschak, Bush and the compiled wiki (4 sources)
 
 ## Entities

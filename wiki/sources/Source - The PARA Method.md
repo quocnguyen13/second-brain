@@ -3,7 +3,7 @@ type: source
 status: verified
 sources: ["[[raw/forte-para-method.md]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["knowledge-management", "note-taking"]
 ---
 # The PARA Method
@@ -58,7 +58,7 @@ Forte proposes [[wiki/concepts/PARA method]], a system that files all digital in
   - Matuschak: prefer associative ontologies to hierarchical taxonomies, and keep notes concept-oriented ([[raw/matuschak-evergreen-notes.md]]).
   - Bush: single-path classification is the problem ([[raw/bush-as-we-may-think.pdf#page=14]]).
   - Both positions are shown on [[wiki/concepts/Organizing by actionability]], [[wiki/concepts/PARA method]], [[wiki/concepts/Evergreen notes]] and [[wiki/concepts/Associative indexing]], which are the pages that carry the claims.
-  - Scope: Forte writes about finding the material for work in progress. Matuschak writes about developing insight over time. Matuschak's reasons for his principles are in notes that were not captured.
+  - Scope: Forte writes about finding the material for work in progress ([[raw/forte-para-method.md]]). Matuschak writes about developing insight over time ([[raw/matuschak-evergreen-notes.md]]). Matuschak's reasons for his principles are in notes that were not captured.
 - **Open point, not contested: the compiled wiki's concept pages.** The gist organises by entity and concept ([[raw/karpathy-llm-wiki.md]]) and does not argue against organising by project. Neither source says whether a compiled wiki would sit inside PARA's Resources category or replace it. That is an open question.
 - **Possibly partial clip.** The clip ends at the second of two numbered points, with no conclusion, and it refers to "this book" ([[raw/forte-para-method.md]]). It has nothing on setting up PARA or moving items between categories. Any later sections are a gap.
 - The biotech-executive anecdote is anonymous. No personal data.

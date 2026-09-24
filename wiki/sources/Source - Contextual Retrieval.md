@@ -1,9 +1,9 @@
 ---
 type: source
 status: verified
-sources: ["[[raw/anthropic-contextual-retrieval.md]]"]
+sources: ["[[raw/anthropic-contextual-retrieval.md]]", "[[raw/karpathy-llm-wiki.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["information-retrieval", "compiled-wiki"]
 ---
 # Contextual Retrieval

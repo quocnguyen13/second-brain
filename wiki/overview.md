@@ -3,7 +3,7 @@ type: overview
 status: verified
 sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval"]
 ---
 # Overview
@@ -15,7 +15,7 @@ The current picture across every source, on one page. Rewritten at each ingest, 
   - three layers: raw sources, wiki, schema
   - three operations: ingest, query, lint
   - navigation through an index and a log ([[raw/karpathy-llm-wiki.md]])
-- **As We May Think.** [[wiki/sources/Source - As We May Think]] (1945) argues that one-path indexing can't keep up with a growing record. It proposes the [[wiki/concepts/Memex]], built on [[wiki/concepts/Associative indexing]]: any two items can be permanently linked, and the trails that result can be replayed, branched and shared ([[raw/bush-as-we-may-think.pdf]]).
+- **As We May Think.** [[wiki/sources/Source - As We May Think]] (1945) argues that one-path indexing can't keep up with a growing record. It proposes the [[wiki/concepts/Memex]], built on [[wiki/concepts/Associative indexing]] ([[raw/bush-as-we-may-think.pdf#page=14]]): any two items can be permanently linked, and the trails that result can be replayed, branched and shared ([[raw/bush-as-we-may-think.pdf#page=16]]).
 - **Evergreen notes.** [[wiki/sources/Source - Evergreen notes]] defines [[wiki/concepts/Evergreen notes]]: notes that accumulate across projects, under five principles, aimed at "better thinking" ([[raw/matuschak-evergreen-notes.md]]). The clip is a hub page and states the principles by title only.
 - **Contextual Retrieval.** [[wiki/sources/Source - Contextual Retrieval]] argues for retrieval rather than compiling:
   - below 200,000 tokens, put the whole knowledge base in the prompt
@@ -36,7 +36,7 @@ The current picture across every source, on one page. Rewritten at each ingest, 
 - **Simplicity of upkeep.**
   - Forte: a system as complex as your life eats the time it should save ([[raw/forte-para-method.md]]).
   - The gist hands upkeep to the LLM because humans abandon wikis when maintenance outgrows value ([[raw/karpathy-llm-wiki.md]]).
-- **Memex as forerunner.** The gist names the [[wiki/concepts/Memex]] as its forerunner, with the LLM doing the upkeep Bush left to people ([[raw/karpathy-llm-wiki.md]], [[raw/bush-as-we-may-think.pdf#page=17]]).
+- **Memex as a kindred idea.** The gist calls itself "related in spirit to" the [[wiki/concepts/Memex]], with the LLM doing the upkeep Bush left to people ([[raw/karpathy-llm-wiki.md]], [[raw/bush-as-we-may-think.pdf#page=17]]).
 - **Small corpora don't need RAG.**
   - The gist reads an index at around 100 sources ([[raw/karpathy-llm-wiki.md]]).
   - Anthropic puts everything in the prompt under 200,000 tokens ([[raw/anthropic-contextual-retrieval.md]]).
@@ -50,7 +50,7 @@ The current picture across every source, on one page. Rewritten at each ingest, 
   - RAG: a chunk of a few hundred tokens ([[raw/anthropic-contextual-retrieval.md]]).
   - PARA: a file or note inside a project, area, resource or archive folder ([[raw/forte-para-method.md]]).
 - **Links.**
-  - Bush: ordered trails ([[raw/bush-as-we-may-think.pdf]]).
+  - Bush: ordered trails ([[raw/bush-as-we-may-think.pdf#page=16]]).
   - Compiled wiki: cross-references maintained by the LLM ([[raw/karpathy-llm-wiki.md]]).
   - Evergreen notes: dense links ([[raw/matuschak-evergreen-notes.md]]).
   - RAG: none, only similarity ([[raw/anthropic-contextual-retrieval.md]]).
@@ -65,7 +65,7 @@ The current picture across every source, on one page. Rewritten at each ingest, 
   - Forte files each item in one home in a four-category hierarchy, by project, so "you'll know exactly where to put everything, and exactly where to find it" ([[raw/forte-para-method.md]]).
   - Matuschak prefers "associative ontologies to hierarchical taxonomies" and "concept-oriented" notes that outlive projects ([[raw/matuschak-evergreen-notes.md]]).
   - Bush calls single-path filing artificial ([[raw/bush-as-we-may-think.pdf#page=14]]).
-  - Scope: Forte is organising material for action; the others are linking ideas and records for thinking and recall.
+  - Scope: Forte is organising material for action; the others are linking ideas and records for thinking and recall ([[raw/forte-para-method.md]], [[raw/matuschak-evergreen-notes.md]], [[raw/bush-as-we-may-think.pdf#page=14]]).
 - **Does RAG build anything up?** Contested on [[wiki/concepts/Compiled wiki]] and [[wiki/concepts/Retrieval-augmented generation]].
   - The gist: "There's no accumulation" ([[raw/karpathy-llm-wiki.md]]).
   - Anthropic: an LLM generates per-chunk context once, at preprocessing ([[raw/anthropic-contextual-retrieval.md]]).

@@ -3,7 +3,7 @@ type: source
 status: verified
 sources: ["[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["knowledge-management", "note-taking"]
 ---
 # Evergreen notes
@@ -25,11 +25,11 @@ A hub page defining [[wiki/concepts/Evergreen notes]]: notes written and organiz
 
 ## Compared with earlier sources
 **Atomic**
-- Matuschak makes the note itself the unit and says it should be atomic ([[raw/matuschak-evergreen-notes.md]]). Bush's unit of linking is whatever sits on a memex viewing position. The user joins two such items at a time ([[raw/bush-as-we-may-think.pdf#page=16]]). In his example the items are pages from an encyclopedia, a history book and elasticity tables, with the user's own notes added along the way ([[raw/bush-as-we-may-think.pdf]]). So Bush links existing documents, while Matuschak links notes the writer composes to be units.
+- Matuschak makes the note itself the unit and says it should be atomic ([[raw/matuschak-evergreen-notes.md]]). Bush's unit of linking is whatever sits on a memex viewing position. The user joins two such items at a time ([[raw/bush-as-we-may-think.pdf#page=16]]). In his example the items are pages from an encyclopedia, a history book and elasticity tables, with the user's own notes added along the way ([[raw/bush-as-we-may-think.pdf#page=16]]). So Bush links existing documents, while Matuschak links notes the writer composes to be units.
 - The compiled wiki's units are "summaries, entity pages, concept pages, comparisons, an overview, a synthesis" ([[raw/karpathy-llm-wiki.md]]). That matches Matuschak's *concept-oriented* principle in name. The gist states no atomicity rule ([[raw/karpathy-llm-wiki.md]]). This vault adds one only for insight pages ("one idea per insight page").
 
 **Densely linked**
-- Bush's links form ordered trails: chains of pairwise joins that can branch and be replayed ([[raw/bush-as-we-may-think.pdf]]). He sets them against indexing that files an item in one place under one classification ([[raw/bush-as-we-may-think.pdf#page=14]]). Matuschak's "prefer associative ontologies to hierarchical taxonomies" rejects hierarchy in the same way ([[raw/matuschak-evergreen-notes.md]]). The hub page does not say whether his links are sequential like trails or a free web; that is in an uncaptured note.
+- Bush's links form ordered trails: chains of pairwise joins that can branch and be replayed ([[raw/bush-as-we-may-think.pdf#page=16]]). He sets them against indexing that files an item in one place under one classification ([[raw/bush-as-we-may-think.pdf#page=14]]). Matuschak's "prefer associative ontologies to hierarchical taxonomies" rejects hierarchy in the same way ([[raw/matuschak-evergreen-notes.md]]). The hub page does not say whether his links are sequential like trails or a free web; that is in an uncaptured note.
 - In the compiled wiki, the LLM maintains the cross-references ([[raw/karpathy-llm-wiki.md]]), and lint checks for orphan pages and missing cross-references ([[raw/karpathy-llm-wiki.md]]). Density is kept up by the maintainer, not by the writer.
 
 ## Entities and concepts

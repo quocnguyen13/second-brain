@@ -3,7 +3,7 @@ type: concept
 status: contested
 sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-09-24"
 tags: ["compiled-wiki", "knowledge-management"]
 ---
 # Compiled wiki
@@ -21,7 +21,7 @@ A knowledge base an LLM incrementally builds and maintains, structured in three 
 - For small corpora both sources skip RAG, by different routes: the compiled wiki reads an index at ~100 sources ([[raw/karpathy-llm-wiki.md]]); Anthropic puts the whole knowledge base in the prompt under 200,000 tokens ([[raw/anthropic-contextual-retrieval.md]]).
 - **Organised by topic, not by project.**
   - The wiki's pages are "summaries, entity pages, concept pages, comparisons, an overview, a synthesis" ([[raw/karpathy-llm-wiki.md]]).
-  - The [[wiki/concepts/PARA method]] puts projects first and keeps topics in a lower-priority "resources" category ([[raw/forte-para-method.md]]).
+  - The [[wiki/concepts/PARA method]] organises by current projects and goals, and keeps topics in its "resources" category ([[raw/forte-para-method.md]]).
   - Neither source addresses the other, so this is an open point, not a disagreement. See [[wiki/concepts/Organizing by actionability]].
 
 ## Where sources disagree
@@ -36,6 +36,7 @@ A knowledge base an LLM incrementally builds and maintains, structured in three 
 - [[wiki/sources/Source - LLM Wiki]]
 - [[wiki/sources/Source - Contextual Retrieval]]
 - [[wiki/sources/Source - The PARA Method]]
+- [[wiki/sources/Source - Evergreen notes]]
 
 ## Related
 - [[wiki/concepts/Wiki ingest]]
