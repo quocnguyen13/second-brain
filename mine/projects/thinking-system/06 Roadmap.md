@@ -22,27 +22,27 @@ flowchart LR
     M3 --> M4[M4<br/>Ask and<br/>file-back]
     M4 --> M5[M5<br/>Lint and<br/>review]
     M5 --> M6[M6<br/>Thinking<br/>layer]
-    M6 -.->|MVP complete| M7[M7<br/>Retrospective<br/>and revision]
-    M7 --> M8[M8 onward<br/>MVP 2,<br/>set by M7]
+    M6 -.->|MVP complete| PM[M0<br/>Retrospective and<br/>MVP 2 scope]
+    PM --> M7[M7 onward<br/>MVP 2,<br/>set by M0]
 ```
 
 ## 2. Modules
-One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6 hours a week, with no curriculum in the path (D-026).
+One standing thread per module ([[09 Working Agreement]] §4, D-071). After its exit, a module's thread stays open to maintain what it built; that work doesn't reopen its row here. Estimates assume more than 6 hours a week, with no curriculum in the path (D-026).
 
 | Module | Goal | Main outputs | Done when | Estimate |
 |---|---|---|---|---|
-| **M0 – Foundation** | Agree the pattern, scope, and ways of working | Documents 00–09, 13, 14 | **Closed 2026-09-19** | Done |
+| **M0 – Project Management** (standing, D-070) | First: agree the pattern, scope and ways of working (Foundation). Since then: keep the scope, plan and decisions current | Documents 00–09, 13, 14; the handovers; doc 21 | **Foundation closed 2026-09-19.** Standing since 2026-09-25 | Done, then ongoing |
 | **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[04 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | **Closed 2026-09-21** | Done |
 | **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 10 (Templates) | **Closed 2026-09-22** | Done |
 | **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | **Closed 2026-09-22** | Done |
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | **Closed 2026-09-24** | Done |
 | **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Closed 2026-09-24** |
 | **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062, D-068) | **Met 2026-09-25: 6 of 6** |
-| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to M7, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
-| **M7 – Retrospective and Revision** | Fit the system to how you work, and scope MVP 2 (D-069) | A retrospective of M0–M6; docs 01 and 06 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | 1 week |
-| **M8 onward – MVP 2** | Set by M7 | Candidates: product-owner workflows (doc 11, skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning); doc 12 (Data Governance), written before any work material enters the vault (D-018); what the retrospective finds | Set by M7 | Set by M7 |
+| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to the revision, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
+| **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 21 (MVP Retrospective) completed; docs 01 and 06 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | 1 week |
+| **M7 onward – MVP 2** | Set by M0 | Candidates: product-owner workflows (doc 11, skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning); doc 12 (Data Governance), written before any work material enters the vault (D-018); what the retrospective finds | Set by M0 | Set by M0 |
 
-**Parked until MVP 2 (scoped in M7):** bank data governance, anything on a bank device, work systems. **Candidates for later:** a local Markdown search tool if `index.md` stops scaling, phone capture and sync, a hook that enforces page status, a scheduled weekly digest.
+**Parked until MVP 2 (scoped in M0):** bank data governance, anything on a bank device, work systems. **Candidates for later:** a local Markdown search tool if `index.md` stops scaling, phone capture and sync, a hook that enforces page status, a scheduled weekly digest.
 
 ## 3. M0 closed on 2026-09-19
 - [x] Documents 00–09 and 13 accepted
@@ -157,11 +157,11 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] R5: second `/drafts` in a fresh session (a7fb417). **Drafts tests 5 of 5; M6's exit criterion is met**
 - [x] `system/context.md` "Current focus" updated (your file, 70cf510)
 - [x] MVP criteria in [[01 Project Charter]] §6 checked: **6 of 6. MVP complete, 2026-09-25**
-- [x] Q-016 answered: the revision is the next module, M7 – Retrospective and Revision (D-069)
+- [x] Q-016 answered: the revision comes next, in the M0 thread (D-069, D-070); every module thread is standing (D-071)
 - [x] Handover written: [[20 M6 Handover]]
-- [ ] **Next:** M7 – Retrospective and Revision
+- [ ] **Next:** in the M0 thread, the retrospective and MVP 2 scope (D-070), starting from doc 21
 
-**Carried to M7, the revision (D-068, D-069):**
+**Carried to the revision in M0 (D-068, D-070):**
 - The five insights are `origin: claude`. Rewrite them, keep them as they are, or archive them.
 - The first decision page in `mine/decisions/`.
 - Two drafts that weren't kept: `The schema doc is the highest-leverage part of this vault to get right` (its Check was clean) and `Per-source review beats batch ingest for this vault`. Git keeps both.

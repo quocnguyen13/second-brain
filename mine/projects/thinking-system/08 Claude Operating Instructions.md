@@ -137,7 +137,7 @@ Runs only when I type `/drafts`; the procedure is `.claude/skills/drafts/SKILL.m
 | `file-answer` | M4 | `/file-answer [title]` | Re-checks the last answer's evidence in `raw/`, files it as `wiki/analyses/<title>.md`, links it from the pages it drew on, then updates the index and log (§4.3) |
 | `lint` | M5 | `/lint`, then `/lint apply <numbers>` | Checks every page, deep-checks the cited passages in `raw/` where pages changed, works through `inbox/checks.md`, and writes a numbered report to `system/lint/`; changes nothing in `wiki/`. `apply` makes the fixes you name, and only those (§4.4) |
 | `drafts` | M6 | `/drafts [draft title]` | Checks each unchecked draft in `mine/drafts/` against `raw/`, writes a Check section and a `checked` date into it, and lists your insights whose wiki pages have changed; writes nothing in `mine/insights/` (§4.5) |
-| `meeting-to-decisions`, `stakeholder-brief` | MVP 2 | | Product-owner workflows; M7 decides whether and when ([[07 Decision Log]] D-069) |
+| `meeting-to-decisions`, `stakeholder-brief` | MVP 2 | | Product-owner workflows; the revision in M0 decides whether and when ([[07 Decision Log]] D-070) |
 
 Every vault skill follows the same pattern ([[07 Decision Log]] D-041):
 - **You start it.** `disable-model-invocation: true` means Claude can't run the skill on its own; only typing the command does. Its text stays out of context until then.

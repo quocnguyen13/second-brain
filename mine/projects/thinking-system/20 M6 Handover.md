@@ -13,7 +13,7 @@ tags: [project/thinking-system, handover]
 
 Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[19 M5 Handover]]
 
-**Module M6 – Thinking Layer · closed 2026-09-25. The MVP is complete, 6 of 6. Next: M7 – Retrospective and Revision.**
+**Module M6 – Thinking Layer · closed 2026-09-25. The MVP is complete, 6 of 6. Next: the retrospective and MVP 2 scope, in the M0 – Project Management thread.** This thread stays open to maintain the thinking layer (D-071).
 
 ## What was done
 - **The drafts routine** (D-063), in [[05 Obsidian Essentials]] §4 step 5. Every draft is kept or deleted at the review where you meet it. Keeping one means writing a new page in `mine/insights/`; a draft never moves there.
@@ -21,7 +21,7 @@ Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[19 M
 - **Rules for insight pages** (D-065): what `origin`, `status` and `reviewed` mean, and how a Relations line reads. **`mine/decisions/` and doc 07 separated** (D-066). **Drafts from `ingest` cite `raw/`** (D-067).
 - **Drafts tests R1–R5 passed, 5 of 5**, on the 11 real drafts with nothing planted. Results are in `system/test-results.md`.
 - **Five insights placed in `mine/insights/`** (D-068). Claude wrote them from the checked drafts, merging 9 of the 11 and fixing what the Checks found, and you accepted them. They carry `origin: claude`. All 11 drafts are deleted; git keeps them at `45526e4`.
-- **Q-016 answered** (D-069): the revision you want before MVP 2 is the next module.
+- **Q-016 answered** (D-069, D-070): the revision you want before MVP 2 comes next, in the M0 thread, which is now M0 – Project Management. Every module thread is standing (D-071).
 
 ## What the tests taught us, and what changed because of it
 | What happened | What changed |
@@ -33,7 +33,7 @@ Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[19 M
 | R5 listed the right insight but couldn't say which operation changed each page, because `lint apply` logs page counts, not page names | Parked: have `lint apply` and `ingest` name the pages they change in `log.md` |
 | R5 noticed a `reviewed` date earlier than `created`, and an uncommitted edit, and changed nothing | No change. This is the behaviour D-064 wants |
 | Obsidian rewrote the Epics insight's properties in its own style (unquoted dates, `related` as a list) when you edited them | No change. Harmless, as with `Review.base` in M5 |
-| You chose to finish the MVP first and write the insights later, if at all | D-068: the five MVP insights are Claude's, marked `origin: claude`. M7 decides what happens to them |
+| You chose to finish the MVP first and write the insights later, if at all | D-068: the five MVP insights are Claude's, marked `origin: claude`. The revision in M0 decides what happens to them |
 
 ## Decisions made in M6
 All accepted.
@@ -44,7 +44,7 @@ All accepted.
 - **D-066:** decisions about the system go in doc 07; your own go in `mine/decisions/`.
 - **D-067:** `ingest` drafts cite `raw/`.
 - **D-068:** the five MVP insights are Claude's, accepted by you.
-- **D-069:** the next module is M7 – Retrospective and Revision.
+- **D-069:** the revision comes next. **D-070:** it runs in the M0 thread, now M0 – Project Management. **D-071:** every module thread is standing.
 
 ## State of the vault
 - **`raw/`:** 5 sources, unchanged since M3.
@@ -54,7 +54,7 @@ All accepted.
 - **Skills:** `ingest`, `ask`, `file-answer`, `lint` and `drafts`.
 - **`log.md`:** the last entry is the R5 run of `/drafts`.
 - **Branch `main`:** at `a7fb417` before this closing commit.
-- **Your file, `system/context.md`:** "Current focus" says M6. Change it to M7 when that chat starts.
+- **Your file, `system/context.md`:** "Current focus" says M6. Change it when the M0 work starts.
 
 ## MVP status ([[01 Project Charter]] §6)
 | Criterion | Status |
@@ -68,27 +68,27 @@ All accepted.
 
 **6 of 6. The MVP is complete as of 2026-09-25.**
 
-## What M7 must produce
-From [[06 Roadmap]] §2 and D-069:
-1. **A retrospective of M0–M6:** what worked, what didn't fit how you work, and what to drop. [[09 Working Agreement]] §4 already asks for one at the end of each phase.
-2. **A revised scope for MVP 2:** docs 01 (Charter) and 06 (Roadmap) rewritten, with a module plan from M8 onward. The candidates are product-owner workflows, doc 12, and whatever the retrospective finds.
+## What the M0 work must produce
+From [[06 Roadmap]] §2, D-069 and D-070. It starts from [[21 MVP Retrospective]], whose record sections are already filled:
+1. **A retrospective of M0–M6:** what worked, what didn't fit how you work, and what to drop, completed in doc 21. [[09 Working Agreement]] §4 asks for one at the end of each phase.
+2. **A revised scope for MVP 2:** docs 01 (Charter) and 06 (Roadmap) rewritten, with a module plan from M7 onward. The candidates are product-owner workflows, doc 12, and whatever the retrospective finds.
 3. **Decisions on the items carried from M6:**
    - the five `origin: claude` insights: rewrite them, keep them as they are, or archive them;
    - whether D-063 (you write every kept insight) stays;
    - the first page in `mine/decisions/`;
    - the parked items below.
-4. **Old module references updated** once the plan is set: [[01 Project Charter]] §4, [[02 System Architecture]] §3, [[09 Working Agreement]] §4, and the M7 and M8 due dates on D-018, Q-004, Q-007 and Q-008 in [[07 Decision Log]].
+4. **Old module references updated** once the plan is set: [[01 Project Charter]] §4, [[02 System Architecture]] §3, and the M7 and M8 due dates on D-018, Q-004, Q-007 and Q-008 in [[07 Decision Log]].
 
-**M7 is done when** you accept MVP 2's scope and module plan, and the retrospective is recorded.
+**The work is done when** you accept MVP 2's scope and module plan, and doc 21 is complete.
 
-**Bring to the M7 chat:** three to five things that felt slow, heavy or unnecessary while building, and three things you want the system to do for your real work. Keep them at a public level: no employer, product or internal detail (D-018).
+**Bring to the M0 thread:** three to five things that felt slow, heavy or unnecessary while building, and three things you want the system to do for your real work. Keep them at a public level: no employer, product or internal detail (D-018).
 
 ## Open questions
 | ID | Question | Due |
 |---|---|---|
 | Q-015 | Hide the synced claude.ai skills (D-040): the `skillOverrides` entry still needs the names from `~/.claude/skills/synced` | When you're next at the terminal |
-| Q-008 | Which product-owner routines matter most | M7 |
-| Q-004 | Your bank's AI-tools policy | Before doc 12; M7 sets when |
+| Q-008 | Which product-owner routines matter most | M0, with the MVP 2 scope |
+| Q-004 | Your bank's AI-tools policy | Before doc 12; M0 sets when |
 
 ## Parked in M6
 - **Page names in `log.md`.** `lint apply` and `ingest` log page counts, so `/drafts` can't say which operation changed a page an insight links to.
@@ -99,7 +99,7 @@ From [[06 Roadmap]] §2 and D-069:
   - The sources lint suggested: Luhmann on the Zettelkasten, Matuschak's associative-ontologies note, and Forte's book chapter on PARA.
   - A weekly reminder.
 
-## Risks to watch in M7
+## Risks to watch in the M0 work
 - **Revising without evidence.** The system has run for a week. Tie each change to something the retrospective found, not to a new idea of what it could do.
 - **Work material creeping in.** Tailoring the system to product-owner work pulls toward real work material. Doc 12 comes first (D-018).
-- **Claude's words becoming yours by default.** The five insights read as yours over time. The `origin: claude` label only helps if someone checks it, which is why M7 decides their fate.
+- **Claude's words becoming yours by default.** The five insights read as yours over time. The `origin: claude` label only helps if someone checks it, which is why the revision decides their fate.

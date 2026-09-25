@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-21
+reviewed: 2026-09-25
 tags: [project/thinking-system, ways-of-working]
 ---
 
@@ -38,8 +38,8 @@ Back to [[00 Project Home]] · Decisions go in [[07 Decision Log]]
 | What | Where | Master copy |
 |---|---|---|
 | Project documents | The vault, at `mine/projects/thinking-system/`, pushed to the private GitHub repo `second-brain` (D-030) | **The vault repo.** Drop Claude's changed files into that folder, check `git diff`, commit, push, then click Sync. |
-| Discussion and first drafts | Chats inside the "Obsidian x Claude" Claude Project | None (working space) |
-| Background for new module chats | Project knowledge, synced from `mine/projects/thinking-system/` in the vault repo | A synced copy of the master |
+| Discussion and first drafts | Module threads in the "Obsidian x Claude" Claude Project, one standing chat per module (§4) | None (working space) |
+| Background for every thread | Project knowledge, synced from `mine/projects/thinking-system/` in the vault repo | A synced copy of the master |
 | Decisions | [[07 Decision Log]] | Vault |
 | Version history | Git, plus the change log in [[00 Project Home]] | Vault repo |
 
@@ -69,29 +69,51 @@ Rules:
 4. **Once you accept a document, Claude sets its `trust` to `working`** and adds an entry to the change log. Only you move a document to `verified`.
 5. **Document numbers never change.** New documents take the next free number.
 
-## 4. Session rhythm: one chat per module
-- **The project is divided into modules M0 to M8** (see [[06 Roadmap]] §2). Each module gets its own chat in this Project, named for example `M1 – Vault and Obsidian Basics`. This chat is M0.
-- **A module can run over several days.** Keep going in the same chat until its exit criteria are met.
-- **Open each module chat** with this brief (copy and paste it, and attach the latest handover plus any documents it names):
+## 4. Module threads
+Every module has **one standing chat** in this Project, named `M<n> – <name>`. It isn't a one-off conversation: it's the permanent home of what that module owns, for the life of the project ([[07 Decision Log]] D-071).
+- **M0 – Project Management** is the thread this project started in. It owns the plan: scope, the roadmap, the decision log, retrospectives, handovers and this agreement (D-070). Foundation was its first piece of work.
+- **Build modules, M1 onward,** each run to an exit in [[06 Roadmap]] §2. When a module meets its exit, Claude writes a handover, and the thread stays open to maintain what the module built.
+- **Work can run over several days.** Keep going in the same chat.
+
+**Who owns what.** Work goes to the thread that owns the part it changes. If it changes the plan or the scope, or needs larger changes in what two threads own, it goes to M0 first. M0 splits it and briefs the owning threads.
+
+| Thread | Owns and maintains |
+|---|---|
+| M0 – Project Management | Docs 00, 01, 02, 03, 06, 07 and 09; the handovers; retrospectives (doc 21); the MVP scope; work that crosses modules |
+| M1 – Vault and Git | Folder structure and naming ([[04 Vault Blueprint]] §1, §7); `.gitignore` and `.gitattributes`; Obsidian settings and the Web Clipper ([[05 Obsidian Essentials]] §1–2) |
+| M2 – Connect Claude Code | `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md` and the templates ([[10 Templates]]); [[08 Claude Operating Instructions]] §1–3 and §6 |
+| M3 – First Ingests | The `ingest` skill (08 §4.1); [[13 Input Zones]]; the `index.md` and `log.md` formats (04 §5–6); reviewing an ingest (05 §3) |
+| M4 – Ask and File-back | The `ask` and `file-answer` skills (08 §4.2–4.3); test prompts 1–10 |
+| M5 – Lint and Review | The `lint` skill (08 §4.4); `Review.base` (05 §6); the weekly review (05 §4); the lint tests |
+| M6 – Thinking Layer | The `drafts` skill (08 §4.5); the rules for `mine/` (04 §2–4); the Insight and Decision templates; 05 §4 step 5 and §5; the drafts tests |
+
+Where two rows touch the same file, the more specific row owns that part. A skill's mirror in doc 08 changes with the skill, in the same commit. A thread may make small edits that follow from its own work in files another thread owns, such as a pointer in `CLAUDE.md`, a line in `system/conventions.md` or a cross-reference, and lists them in its change summary. Anything larger goes to the owning thread as a request.
+
+**Briefs.** Threads can't read each other; the documents in project knowledge carry the context between them. Start work in a thread with one of these:
+- **Opening a new build module:**
   ```
-  Module: M_ – <name>
-  Goal: <from the roadmap>
-  Handover from last module: <paste>
+  Module: M<n> – <name>
+  Goal: <from 06 Roadmap>
+  Handover: <latest handover, in project knowledge>
+  Read first: <documents>
   Time available this week:
   ```
-- **At the end of each working day within a module, Claude provides:**
-  - the files that changed
-  - decisions to log
-  - the next steps
-- **When a module closes, Claude writes a handover** covering:
-  - what was done
-  - decisions made
-  - open questions
-  - the state of the vault
-  - the entry conditions for the next module
+- **A request to an existing thread,** from you or passed on by another thread:
+  ```
+  M<n> · <name> · request from <me | M0 | M<k>>
+  What: <the change, in one or two lines>
+  Why: <decision ID, finding or need>
+  Read first: <documents or files>
+  Done when: <what I'll accept>
+  ```
 
-  Then push, sync, and start the next module's chat with that handover.
-- **At the end of each phase, hold a short retrospective** covering what worked, what to change in the system, and what to change in this agreement.
+**Rules for every thread**
+- **Push and Sync before you start** (§2). A thread works from the synced documents; where they differ from what was said earlier in the chat, the documents win.
+- **Decision IDs** come from the synced [[07 Decision Log]]: the next free number. If two threads take the same ID before a Sync, M0 renumbers the later one.
+- **At the end of each working day, Claude provides:** the files that changed, the decisions to log, and the next steps.
+- **When a build module meets its exit, Claude writes a handover** covering what was done, decisions made, open questions, the state of the vault, and what the next piece of work needs. Push and Sync, then take it to the thread the handover names.
+- **When a thread's work needs a change another thread owns,** Claude names the change and gives you a request brief for that thread.
+- **At the end of each phase, hold a short retrospective in M0,** covering what worked, what to change in the system, and what to change in this agreement.
 
 ## 5. How decisions are made
 - Claude presents options, trade-offs, and a recommendation. **You decide.**
@@ -124,7 +146,7 @@ Rules:
   ```
   M3 · First Ingests · in progress
   ```
-  The states are *starting*, *in progress*, *closing*, and *closed*. Module names and order are in [[06 Roadmap]] §2.
+  A build module is *starting*, *in progress*, *closing* or *closed*. After its exit, its thread is *maintaining* whenever it works on what the module owns, e.g. `M5 · Lint and Review · maintaining`. M0 is *in progress* while it works on the plan. Module names and order are in [[06 Roadmap]] §2.
 - **Answer first, then structure,** with a recommendation. Chat replies stay short enough to read on a phone; the depth goes into the documents.
 - **Language:** English, unless Q-005 decides otherwise.
 - **Speak up if something doesn't fit.** The system should fit how you work, not the other way round.
@@ -137,7 +159,7 @@ The same traffic-light rule that governs the vault applies to anything you paste
 |---|---|---|
 | Time available | More than 6 hours per week | 2026-09-16 |
 | Review method | You comment in chat; Claude revises (see §3) | 2026-09-16 |
-| Session style | One chat per module (see §4) | 2026-09-16 |
+| Session style | One standing thread per module, with M0 for project management (see §4) | 2026-09-16; standing threads from 2026-09-25 |
 | Progress visibility | Every reply opens with a stage marker (see §8) | 2026-09-19 |
 | Guidance style | Steps only; explanations on request, or when a mistake would be expensive to undo (see §7) | 2026-09-21 |
 | Document master | The vault repo; project knowledge syncs `mine/projects/thinking-system/` (see §2) | 2026-09-21 |
