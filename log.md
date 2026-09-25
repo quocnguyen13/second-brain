@@ -33,3 +33,6 @@ Scanned 27 pages, deep-checked 13. Findings: 3 (2 high, 0 medium, 1 low). Checks
 
 ## [2026-09-24] lint | apply report-2026-09-24-2
 Applied: 1, 2, 3. Skipped: none. Pages changed: 8. Status changes: none.
+
+## [2026-09-25] drafts | 11 checked
+Clean: 2. With problems: 9. Already checked: 0. Insights to re-read: 0.

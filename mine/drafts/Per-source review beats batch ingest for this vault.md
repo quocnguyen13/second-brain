@@ -3,6 +3,7 @@ type: insight
 status: draft
 origin: claude
 created: "2026-09-22"
+checked: "2026-09-25"
 related: ["[[wiki/concepts/Wiki ingest]]", "[[wiki/sources/Source - LLM Wiki]]"]
 ---
 # Per-source review beats batch ingest for this vault
@@ -19,3 +20,15 @@ Ingesting sources one at a time with your review in the loop, rather than batchi
 - contradicts::
 - extends::
 - source:: [[wiki/sources/Source - LLM Wiki]]
+
+## Check 2026-09-25
+**Evidence:** 3 problems
+- Per-source review is the author's own preference → holds, uncited · raw/karpathy-llm-wiki.md line 48
+- It lets you guide emphasis before pages compound on a wrong assumption → holds in part: raw/ says he reads summaries, checks updates and guides "what to emphasize"; it gives no reason about compounding errors · raw/karpathy-llm-wiki.md line 48
+- `CLAUDE.md` enforces one source per run and stop-after-report → holds · `CLAUDE.md`, Operation: ingest
+- Schema and conventions still being shaped "in M3" → holds in part: the vault's current focus is M6 · `system/context.md`, Current focus
+- Left out: the source treats batch ingest as an equal option: "It's up to you to develop the workflow that fits your style" · raw/karpathy-llm-wiki.md line 48
+**Reasoning, not in a source:** review pays only if reports are actually read; batch becomes attractive once conventions are stable; batching now would bake early mistakes into many pages
+**Leans on:** no open pages
+**Links:** fine
+**Overlaps:** [[The schema doc is the highest-leverage part of this vault to get right]] · builds on

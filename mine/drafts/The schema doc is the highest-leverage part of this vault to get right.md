@@ -3,6 +3,7 @@ type: insight
 status: draft
 origin: claude
 created: "2026-09-22"
+checked: "2026-09-25"
 related: ["[[wiki/concepts/Compiled wiki]]", "[[wiki/sources/Source - LLM Wiki]]"]
 ---
 # The schema doc is the highest-leverage part of this vault to get right
@@ -19,3 +20,13 @@ Time spent tightening `CLAUDE.md` and `system/conventions.md` pays off more than
 - contradicts::
 - extends::
 - source:: [[wiki/sources/Source - LLM Wiki]]
+
+## Check 2026-09-25
+**Evidence:** clean
+- Quote "the key configuration file — it's what makes the LLM a disciplined wiki maintainer rather than a generic chatbot" → holds, uncited · raw/karpathy-llm-wiki.md line 44
+- Schema is distinct from the raw and wiki layers → holds, uncited · raw/karpathy-llm-wiki.md lines 38–44
+- Schema is co-evolved as you learn your domain → holds, uncited · raw/karpathy-llm-wiki.md line 44
+**Reasoning, not in a source:** every page is filtered through `CLAUDE.md` and `system/conventions.md`; a schema mistake replicates silently, a page mistake stays contained; tightening the schema pays more than any single ingest
+**Leans on:** [[wiki/concepts/Compiled wiki]] · contested: whether RAG builds nothing up (Karpathy vs Anthropic), and RAG as the thing to replace or improve
+**Links:** fine
+**Overlaps:** [[Per-source review beats batch ingest for this vault]] · builds on

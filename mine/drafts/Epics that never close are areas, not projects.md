@@ -3,6 +3,7 @@ type: insight
 status: draft
 origin: claude
 created: "2026-09-22"
+checked: "2026-09-25"
 related: ["[[wiki/concepts/PARA method]]", "[[wiki/concepts/Organizing by actionability]]"]
 ---
 # Epics that never close are areas, not projects
@@ -19,3 +20,13 @@ A backlog full of permanent epics, such as "Onboarding improvements" or "Card fr
 - contradicts:: 
 - extends:: [[wiki/concepts/Organizing by actionability]]
 - source:: [[wiki/sources/Source - The PARA Method]]
+
+## Check 2026-09-25
+**Evidence:** clean
+- A list of areas doesn't show workload; "Hiring" could be one hire or fifty → holds · raw/forte-para-method.md line 128
+- Areas never turn over, which kills motivation → holds · raw/forte-para-method.md lines 144–146
+- Quote "a cadence of regular victories" → holds · raw/forte-para-method.md line 148
+**Reasoning, not in a source:** permanent epics are areas under another name (labelled in the draft); dated, closable outcomes make capacity visible to stakeholders and give the team a cadence
+**Leans on:** [[wiki/concepts/PARA method]] · contested: hierarchy with one home per item vs associative links; [[wiki/concepts/Organizing by actionability]] · contested: organise around projects vs concepts across projects
+**Links:** fine
+**Overlaps:** [[Organise work by project and knowledge by concept]] · builds on
