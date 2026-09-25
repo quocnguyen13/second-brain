@@ -2,9 +2,12 @@
 type: insight
 status: active
 origin: claude
-created: "2026-09-25"
-reviewed: "2026-09-25"
-related: ["[[wiki/concepts/Organizing by actionability]]", "[[wiki/concepts/PARA method]]", "[[wiki/sources/Source - The PARA Method]]"]
+created: 2026-09-25
+reviewed: 2026-09-20
+related:
+  - "[[wiki/concepts/Organizing by actionability]]"
+  - "[[wiki/concepts/PARA method]]"
+  - "[[wiki/sources/Source - The PARA Method]]"
 ---
 # Epics that never close are areas, not projects
 
