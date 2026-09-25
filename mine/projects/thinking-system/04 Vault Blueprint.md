@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-24
+reviewed: 2026-09-25
 tags: [project/thinking-system, vault-design]
 ---
 
@@ -91,7 +91,7 @@ related: ["[[Compiled wiki]]"]
 ---
 ```
 - `status`: `draft` while you write it, `active` once you'd defend it, `archived` when you no longer hold it, with a line saying why. Only you change it (D-065).
-- `origin: me` means you wrote every sentence. Claude's drafts are `origin: claude` and never move into `mine/insights/`; a kept idea is a new page (D-063).
+- `origin: me` means you wrote every sentence. Claude's drafts are `origin: claude` and never move into `mine/insights/`; a kept idea is a new page (D-063). The one exception is the five MVP insights: Claude wrote them from the checked drafts, you accepted them, and they stay `origin: claude` (D-068).
 - `/drafts` adds `checked: <date>` to each draft it checks (D-064).
 
 ## 4. Linking

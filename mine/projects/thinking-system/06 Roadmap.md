@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-24
+reviewed: 2026-09-25
 tags: [project/thinking-system, roadmap]
 ---
 
@@ -38,7 +38,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | **Closed 2026-09-24** | Done |
 | **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Closed 2026-09-24** |
 | **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062) | **At M6's close** |
-| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you wrote, linked to wiki pages; drafts tests 5 of 5 | **Started 2026-09-24**; 3–4 days |
+| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Started 2026-09-24**; 3–4 days |
 | **M7 – Product-Owner Workflows** | The system supports real work | Doc 11 (Playbook); skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning | 3 workflows used weekly for 4 weeks | 4 weeks (set by the calendar) |
 | **M8 – Retrospective and Governance** | Decide what comes next, and unpark the rules | Retrospective; doc 12 (Data Governance); Phase 5 scope | Doc 12 written before any work material enters the vault | 1 week |
 
@@ -148,13 +148,19 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] `drafts` skill drafted and mirrored in [[08 Claude Operating Instructions]] §4.5; `CLAUDE.md` gets its pointer (D-064)
 - [x] Insight page rules: `origin`, `status`, `reviewed` and how Relations read (D-065); `mine/decisions/` versus doc 07 (D-066); drafts from `ingest` cite `raw/` (D-067). Insight template, `system/conventions.md`, `Review.base` and docs 02, 03, 04, 05 and 10 updated to match
 - [x] Drafts tests R1–R5 written in [[08 Claude Operating Instructions]] §5 and `system/test-results.md`
-- [ ] D-063 to D-067 accepted
-- [ ] Files placed: `drafts` skill in `.claude/skills/drafts/`, `ingest` skill replaced, the rest copied over; committed and pushed; `/skills` lists `drafts`
-- [ ] R1–R4: first `/drafts` on the 11 drafts; the checks read in Obsidian and committed
-- [ ] Weekly review steps 4–7, first full cycle: every draft kept or deleted
-- [ ] 5 insights you wrote in `mine/insights/`, each with a Relations line linking `wiki/`
-- [ ] One decision of your own in `mine/decisions/`
+- [x] D-063 to D-067 accepted (2026-09-25)
+- [x] Files placed: `drafts` skill in `.claude/skills/drafts/`, `ingest` skill replaced, the rest copied over; committed and pushed (75f7537); `/skills` lists `drafts`
+- [x] R1–R4: first `/drafts` on the 11 drafts, committed (45526e4). **4 of 4.** 2 clean, 9 with problems; every finding checked against `raw/` and holds, including five beyond the expected ones (`system/test-results.md`)
+- [ ] D-068 accepted: the five MVP insights are written by Claude from the checked drafts and accepted by you
+- [ ] 5 insights placed in `mine/insights/`, each with Relations linking `wiki/`, and all 11 drafts deleted. That completes the first cycle through the Draft queue
+- [ ] Weekly review steps 4, 6 and 7 run once
 - [ ] R5: second `/drafts` in a fresh session. **Drafts tests 5 of 5**
-- [ ] `system/context.md` "Current focus" updated (your file)
+- [x] `system/context.md` "Current focus" updated (your file, 70cf510)
 - [ ] MVP criteria in [[01 Project Charter]] §6 checked: 6 of 6
+- [ ] Q-016 answered: how the post-MVP revision fits M7 and M8
 - [ ] Handover written: 20 M6 Handover
+
+**Carried to the post-MVP revision (D-068):**
+- The five insights are `origin: claude`. Rewrite them, keep them as they are, or archive them.
+- The first decision page in `mine/decisions/`.
+- Two drafts that weren't kept: `The schema doc is the highest-leverage part of this vault to get right` (its Check was clean) and `Per-source review beats batch ingest for this vault`. Git keeps both.

@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-24
+reviewed: 2026-09-25
 tags: [project/thinking-system, moc]
 ---
 
@@ -96,3 +96,5 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | **1.23** | 2026-09-24 | **M5 exit met.** `/lint apply` made the 13 approved fixes; the second `/lint` checked only what changed and found 3 new, real problems. Lint tests 6 of 6. D-060 (monthly full deep check) and D-061 (a wrong PDF page is a Low finding) proposed, and `lint` revised to match. `system/test-results.md` and docs 05, 06, 07 and 08 updated |
 | **1.24** | 2026-09-24 | **M5 closed.** D-060 and D-061 accepted. Second report's 3 fixes applied. MVP at 5 of 6 criteria; D-062 (proposed) moves the insights criterion to M6. Doc 19 (M5 Handover) added; docs 06 and 07 updated |
 | **1.25** | 2026-09-24 | **M6 started.** D-062 accepted. `drafts` skill drafted (arrives as `drafts-SKILL.md` for you to move into `.claude/skills/drafts/`) and mirrored in doc 08 §4.5: it checks drafts against `raw/` and writes its Check into each one, and lists insights to re-read. The drafts routine rewrites weekly review step 5: keeping a draft means writing your own page. Insight pages gain `reviewed`; `mine/decisions/` is separated from doc 07; `ingest` drafts now cite `raw/`. Drafts tests R1–R5 added. D-063 to D-067 proposed. `CLAUDE.md`, `system/conventions.md`, the Insight template, `Review.base` and `system/test-results.md` updated; docs 02, 03, 04, 05, 06, 07, 08 and 10 updated |
+| 1.26 | 2026-09-25 | D-063 to D-067 accepted. M6 files placed and pushed. First `/drafts` run: all 11 drafts checked, 2 clean and 9 with problems. Every finding holds against `raw/`, and R1–R4 pass. `system/test-results.md` and docs 06 and 07 updated |
+| 1.27 | 2026-09-25 | MVP first, then a revision of the whole product before MVP 2 (Q-016 opened). D-068 proposed: Claude writes the five MVP insights from the checked drafts and you accept them; they stay `origin: claude`, and all 11 drafts are deleted. Docs 04, 06 and 07 updated |
