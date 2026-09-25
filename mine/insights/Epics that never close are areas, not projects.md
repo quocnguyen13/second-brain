@@ -3,7 +3,7 @@ type: insight
 status: active
 origin: claude
 created: 2026-09-25
-reviewed: 2026-09-20
+reviewed: 2026-09-25
 related:
   - "[[wiki/concepts/Organizing by actionability]]"
   - "[[wiki/concepts/PARA method]]"

@@ -22,8 +22,8 @@ flowchart LR
     M3 --> M4[M4<br/>Ask and<br/>file-back]
     M4 --> M5[M5<br/>Lint and<br/>review]
     M5 --> M6[M6<br/>Thinking<br/>layer]
-    M6 -.->|MVP complete| M7[M7<br/>PO workflows]
-    M7 --> M8[M8<br/>Retro and<br/>governance]
+    M6 -.->|MVP complete| M7[M7<br/>Retrospective<br/>and revision]
+    M7 --> M8[M8 onward<br/>MVP 2,<br/>set by M7]
 ```
 
 ## 2. Modules
@@ -37,12 +37,12 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 | **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | **Closed 2026-09-22** | Done |
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | **Closed 2026-09-24** | Done |
 | **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Closed 2026-09-24** |
-| **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062) | **At M6's close** |
-| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` and `mine/decisions` in use; the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Started 2026-09-24**; 3–4 days |
-| **M7 – Product-Owner Workflows** | The system supports real work | Doc 11 (Playbook); skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning | 3 workflows used weekly for 4 weeks | 4 weeks (set by the calendar) |
-| **M8 – Retrospective and Governance** | Decide what comes next, and unpark the rules | Retrospective; doc 12 (Data Governance); Phase 5 scope | Doc 12 written before any work material enters the vault | 1 week |
+| **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062, D-068) | **Met 2026-09-25: 6 of 6** |
+| **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to M7, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
+| **M7 – Retrospective and Revision** | Fit the system to how you work, and scope MVP 2 (D-069) | A retrospective of M0–M6; docs 01 and 06 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | 1 week |
+| **M8 onward – MVP 2** | Set by M7 | Candidates: product-owner workflows (doc 11, skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning); doc 12 (Data Governance), written before any work material enters the vault (D-018); what the retrospective finds | Set by M7 | Set by M7 |
 
-**Parked until M8:** bank data governance, anything on a bank device, work systems. **Candidates for later:** a local Markdown search tool if `index.md` stops scaling, phone capture and sync, a hook that enforces page status, a scheduled weekly digest.
+**Parked until MVP 2 (scoped in M7):** bank data governance, anything on a bank device, work systems. **Candidates for later:** a local Markdown search tool if `index.md` stops scaling, phone capture and sync, a hook that enforces page status, a scheduled weekly digest.
 
 ## 3. M0 closed on 2026-09-19
 - [x] Documents 00–09 and 13 accepted
@@ -142,7 +142,7 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - A written rule for uncited lines that only restate cited claims (lint currently reads them as synthesis).
 - Checking `mine/drafts/` claims against `raw/` before you keep one; M6 decides. Proposed in M6 as the `drafts` skill (D-064).
 
-## 9. M6 in progress (started 2026-09-24)
+## 9. M6 closed on 2026-09-25
 - [x] D-062 accepted: the MVP's insights criterion is met at M6's close
 - [x] Drafts routine written: keep means you write a new page, and no draft waits a week (D-063); weekly review step 5 rewritten in [[05 Obsidian Essentials]] §4
 - [x] `drafts` skill drafted and mirrored in [[08 Claude Operating Instructions]] §4.5; `CLAUDE.md` gets its pointer (D-064)
@@ -151,16 +151,17 @@ One chat per module ([[09 Working Agreement]] §4). Estimates assume more than 6
 - [x] D-063 to D-067 accepted (2026-09-25)
 - [x] Files placed: `drafts` skill in `.claude/skills/drafts/`, `ingest` skill replaced, the rest copied over; committed and pushed (75f7537); `/skills` lists `drafts`
 - [x] R1–R4: first `/drafts` on the 11 drafts, committed (45526e4). **4 of 4.** 2 clean, 9 with problems; every finding checked against `raw/` and holds, including five beyond the expected ones (`system/test-results.md`)
-- [ ] D-068 accepted: the five MVP insights are written by Claude from the checked drafts and accepted by you
-- [ ] 5 insights placed in `mine/insights/`, each with Relations linking `wiki/`, and all 11 drafts deleted. That completes the first cycle through the Draft queue
-- [ ] Weekly review steps 4, 6 and 7 run once
-- [ ] R5: second `/drafts` in a fresh session. **Drafts tests 5 of 5**
+- [x] D-068 accepted: the five MVP insights are written by Claude from the checked drafts and accepted by you
+- [x] 5 insights placed in `mine/insights/`, each with Relations linking `wiki/`, and all 11 drafts deleted (1b6beb3). That completes the first cycle through the Draft queue
+- [ ] Weekly review steps 4, 6 and 7: not run in M6. Nothing waited on them (no new lint report, `mine/scratch/` empty); the first full weekly review is next week
+- [x] R5: second `/drafts` in a fresh session (a7fb417). **Drafts tests 5 of 5; M6's exit criterion is met**
 - [x] `system/context.md` "Current focus" updated (your file, 70cf510)
-- [ ] MVP criteria in [[01 Project Charter]] §6 checked: 6 of 6
-- [ ] Q-016 answered: how the post-MVP revision fits M7 and M8
-- [ ] Handover written: 20 M6 Handover
+- [x] MVP criteria in [[01 Project Charter]] §6 checked: **6 of 6. MVP complete, 2026-09-25**
+- [x] Q-016 answered: the revision is the next module, M7 – Retrospective and Revision (D-069)
+- [x] Handover written: [[20 M6 Handover]]
+- [ ] **Next:** M7 – Retrospective and Revision
 
-**Carried to the post-MVP revision (D-068):**
+**Carried to M7, the revision (D-068, D-069):**
 - The five insights are `origin: claude`. Rewrite them, keep them as they are, or archive them.
 - The first decision page in `mine/decisions/`.
 - Two drafts that weren't kept: `The schema doc is the highest-leverage part of this vault to get right` (its Check was clean) and `Per-source review beats batch ingest for this vault`. Git keeps both.

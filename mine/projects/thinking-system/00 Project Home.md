@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M6 – Thinking Layer, started 2026-09-24 (see [[06 Roadmap]] §2 and §9)
+**Current module:** M6 closed 2026-09-25, and with it the **MVP (6 of 6)** → next, M7 – Retrospective and Revision (see [[06 Roadmap]] §2)
 
 ## Document set
 
@@ -39,9 +39,10 @@ tags: [project/thinking-system, moc]
 | 17 | [[17 M3 Handover]] | Closing state of M3, used to open the M4 chat | Closed |
 | 18 | [[18 M4 Handover]] | Closing state of M4, used to open the M5 chat | Closed |
 | 19 | [[19 M5 Handover]] | Closing state of M5, used to open the M6 chat | Closed |
+| 20 | [[20 M6 Handover]] | Closing state of M6 and the MVP, to open the M7 chat with | Current |
 
 **Planned (not written yet)**
-- 11 Workflow Playbook (module M7): product-owner routines
+- 11 Workflow Playbook (MVP 2, if M7 keeps it): product-owner routines
 - 12 Data Governance (parked, before any work material enters the vault)
 
 ## Reading order
@@ -98,3 +99,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | **1.25** | 2026-09-24 | **M6 started.** D-062 accepted. `drafts` skill drafted (arrives as `drafts-SKILL.md` for you to move into `.claude/skills/drafts/`) and mirrored in doc 08 §4.5: it checks drafts against `raw/` and writes its Check into each one, and lists insights to re-read. The drafts routine rewrites weekly review step 5: keeping a draft means writing your own page. Insight pages gain `reviewed`; `mine/decisions/` is separated from doc 07; `ingest` drafts now cite `raw/`. Drafts tests R1–R5 added. D-063 to D-067 proposed. `CLAUDE.md`, `system/conventions.md`, the Insight template, `Review.base` and `system/test-results.md` updated; docs 02, 03, 04, 05, 06, 07, 08 and 10 updated |
 | 1.26 | 2026-09-25 | D-063 to D-067 accepted. M6 files placed and pushed. First `/drafts` run: all 11 drafts checked, 2 clean and 9 with problems. Every finding holds against `raw/`, and R1–R4 pass. `system/test-results.md` and docs 06 and 07 updated |
 | 1.27 | 2026-09-25 | MVP first, then a revision of the whole product before MVP 2 (Q-016 opened). D-068 proposed: Claude writes the five MVP insights from the checked drafts and you accept them; they stay `origin: claude`, and all 11 drafts are deleted. Docs 04, 06 and 07 updated |
+| **1.28** | 2026-09-25 | **M6 closed; MVP complete, 6 of 6.** D-068 accepted; the five insights placed and the 11 drafts deleted. R5 passes, so drafts tests are 5 of 5. Q-016 answered with D-069: the next module is M7 – Retrospective and Revision, and the old M7 and M8 become candidates for MVP 2. Doc 20 (M6 Handover) added; docs 06, 07 and 08 and `system/test-results.md` updated; the Epics insight's `reviewed` date set back after R5 |
