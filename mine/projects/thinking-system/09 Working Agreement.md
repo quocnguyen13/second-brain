@@ -77,15 +77,15 @@ Every module has **one standing chat** in this Project, named `M<n> – <name>`.
 
 **Who owns what.** Work goes to the thread that owns the part it changes. If it changes the plan or the scope, or needs larger changes in what two threads own, it goes to M0 first. M0 splits it and briefs the owning threads.
 
-| Thread | Owns and maintains |
-|---|---|
-| M0 – Project Management | Docs 00, 01, 02, 03, 06, 07 and 09; the handovers; retrospectives (doc 21); the MVP scope; work that crosses modules |
-| M1 – Vault and Git | Folder structure and naming ([[04 Vault Blueprint]] §1, §7); `.gitignore` and `.gitattributes`; Obsidian settings and the Web Clipper ([[05 Obsidian Essentials]] §1–2) |
-| M2 – Connect Claude Code | `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md` and the templates ([[10 Templates]]); [[08 Claude Operating Instructions]] §1–3 and §6 |
-| M3 – First Ingests | The `ingest` skill (08 §4.1); [[13 Input Zones]]; the `index.md` and `log.md` formats (04 §5–6); reviewing an ingest (05 §3) |
-| M4 – Ask and File-back | The `ask` and `file-answer` skills (08 §4.2–4.3); test prompts 1–10 |
-| M5 – Lint and Review | The `lint` skill (08 §4.4); `Review.base` (05 §6); the weekly review (05 §4); the lint tests |
-| M6 – Thinking Layer | The `drafts` skill (08 §4.5); the rules for `mine/` (04 §2–4); the Insight and Decision templates; 05 §4 step 5 and §5; the drafts tests |
+| Thread                   | Owns and maintains                                                                                                                                                      |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| M0 – Project Management  | Docs 00, 01, 02, 03, 06, 07 and 09; the handovers; retrospectives (doc 21); the backlog (doc 22); the MVP scope; work that crosses modules                              |
+| M1 – Vault and Git       | Folder structure and naming ([[04 Vault Blueprint]] §1, §7); `.gitignore` and `.gitattributes`; Obsidian settings and the Web Clipper ([[05 Obsidian Essentials]] §1–2) |
+| M2 – Connect Claude Code | `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md` and the templates ([[10 Templates]]); [[08 Claude Operating Instructions]] §1–3 and §6                    |
+| M3 – First Ingests       | The `ingest` skill (08 §4.1); [[13 Input Zones]]; the `index.md` and `log.md` formats (04 §5–6); reviewing an ingest (05 §3)                                            |
+| M4 – Ask and File-back   | The `ask` and `file-answer` skills (08 §4.2–4.3); test prompts 1–10                                                                                                     |
+| M5 – Lint and Review     | The `lint` skill (08 §4.4); `Review.base` (05 §6); the weekly review (05 §4); the lint tests                                                                            |
+| M6 – Thinking Layer      | The `drafts` skill (08 §4.5); the rules for `mine/` (04 §2–4); the Insight and Decision templates; 05 §4 step 5 and §5; the drafts tests                                |
 
 Where two rows touch the same file, the more specific row owns that part. A skill's mirror in doc 08 changes with the skill, in the same commit. A thread may make small edits that follow from its own work in files another thread owns, such as a pointer in `CLAUDE.md`, a line in `system/conventions.md` or a cross-reference, and lists them in its change summary. Anything larger goes to the owning thread as a request.
 
