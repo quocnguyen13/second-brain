@@ -1,6 +1,6 @@
 # Test results
 
-The test prompts from `mine/projects/thinking-system/08 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10) and six lint tests for M5 (passes at 6 of 6). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
+The test prompts from `mine/projects/thinking-system/08 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10), six lint tests for M5 (passes at 6 of 6) and five drafts tests for M6 (passes at 5 of 5). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
 
 Result: `Pass`, `Fail`, or `Partial` with a note. A `Partial` counts as a fail for the exit bar.
 
@@ -46,3 +46,17 @@ Run on the wiki as M4 left it; nothing is planted. Commit everything first, so `
 **Run 2 check of the first report (2026-09-24).** Both were found: findings 11 and 6. Claude re-checked all 14 findings against `raw/`. 13 hold, including the two misquotes (Bush PDF pages 14 and 15) and the PDF page numbers. Finding 5 is wrong: it asked for citations in the analysis page's Answer, which D-051 says needs none as long as it adds no facts beyond Evidence (it doesn't). The cause was the lint skill's own wording. Fixed in `lint` A1 point 1, with `file-answer` step 4 reworded to match. Finding 5 is not applied.
 
 **Run 2 check of the second report (2026-09-24).** Two of its findings sit on pages the first run deep-checked and passed. Lint is a strong net, not a proof: a run can miss something the next one catches. Under D-056 alone an unchanged page is never deep-checked again, so D-060 adds a full deep check on the first run of each month.
+
+## Run 3 — M6 drafts
+
+Run on the 11 drafts as M3's ingests left them; nothing is planted (D-064). Commit everything first, so `git status` starts clean. R1–R4 are one `/drafts` run. R5 runs after your first cycle through the Draft queue.
+
+| # | Prompt, as typed | Passes if Claude… | Result | Date | Notes |
+|---|---|---|---|---|---|
+| R1 | `/drafts` | checks all 11 drafts: each gets a `## Check <date>` section at the end and `checked: <date>` in its properties. `git diff` shows nothing else changed in any draft (title, text, Relations, `status`, `origin`), and `git status` shows only `mine/drafts/` and `log.md` | | | |
+| R2 | (same run) | for the 7 drafts that cite nothing in `raw/`, gives where each quoted claim sits and confirms the quotes word for word, e.g. "the key configuration file" at `raw/karpathy-llm-wiki.md` line 44, and Bush's "nibbled by a few" on PDF page 7 | | | |
+| R3 | (same run) | flags three problems: `Per-source review beats batch ingest for this vault` gives Karpathy a reason he doesn't state (catching errors before pages compound; line 48 says only that he stays involved and guides the emphasis); `Bush linked documents, evergreen notes link ideas` leaves out that Bush's trails also hold the user's own comments and longhand analysis (PDF pages 16–17); and two drafts label their own reasoning "(general knowledge)" | | | |
+| R4 | (same run) | names at least two overlap groups, the three Bush drafts and the evergreen/PARA pair (`Evergreen-note practice belongs in mine, not in the wiki`, `Organise work by project and knowledge by concept`); notes the `contested` pages drafts lean on, such as `PARA method` and `Compiled wiki`; and gives no keep-or-delete advice | | | |
+| R5 | After the first cycle, with insights written and committed: set one insight's `reviewed` to `2026-09-20`, then run `/drafts` in a fresh session | lists that insight and only that one, with its linked wiki pages updated after 2026-09-20; re-checks no draft that already has `checked`; writes nothing in `mine/insights/`. Set `reviewed` back afterwards, and `git status` shows only `log.md` changed | | | |
+
+**Score:** _ of 5.

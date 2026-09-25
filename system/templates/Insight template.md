@@ -3,6 +3,7 @@ type: insight
 status: draft
 origin: me
 created: "{{date:YYYY-MM-DD}}"
+reviewed: "{{date:YYYY-MM-DD}}"
 related: []
 ---
 # {{title}}

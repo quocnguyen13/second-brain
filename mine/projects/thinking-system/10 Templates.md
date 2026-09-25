@@ -5,7 +5,7 @@ status: active
 trust: ai-draft
 origin: claude
 created: 2026-09-21
-reviewed: 2026-09-22
+reviewed: 2026-09-24
 tags: [project/thinking-system, templates]
 ---
 
@@ -29,7 +29,7 @@ Back to [[00 Project Home]] · Page types in [[04 Vault Blueprint]] §2–3 · R
 | `Project template` | project | You | `mine/projects/` | Goal · Status · Next steps · Links |
 | `Journal template` | journal | You, via Daily notes | `mine/journal/` | Notes · Questions to queue |
 
-**Properties.** Wiki templates carry `type`, `status: unverified`, `sources: []`, `created`, `updated`, `tags`. `mine/` templates carry `type`, `status` (`draft` for insights and decisions, `active` for projects and journals), `origin: me`, `created`, `related`. Claude's insight drafts set `origin: claude`. All as in [[04 Vault Blueprint]] §3.
+**Properties.** Wiki templates carry `type`, `status: unverified`, `sources: []`, `created`, `updated`, `tags`. `mine/` templates carry `type`, `status` (`draft` for insights and decisions, `active` for projects and journals), `origin: me`, `created`, `related`. The Insight template adds `reviewed`, filled with the same date as `created` on insert; you move it on each time you re-read the insight ([[07 Decision Log]] D-065). Claude's insight drafts set `origin: claude` and leave out `reviewed`. All as in [[04 Vault Blueprint]] §3.
 
 **Why wiki templates start `unverified`.** Claude has to set `verified` deliberately, once every claim on the page cites a file in `raw/`. A page that is never checked stays flagged.
 

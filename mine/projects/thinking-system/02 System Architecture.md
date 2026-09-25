@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-21
+reviewed: 2026-09-24
 tags: [project/thinking-system, architecture]
 ---
 
@@ -43,7 +43,7 @@ His summary of the roles fits this project exactly: Obsidian is the IDE, the LLM
 | Reasoning and maintenance | Claude Code, started inside the vault (Windows Terminal, or the Code tab in Claude Desktop) |
 | Navigation | `index.md` (a catalog of every page) and `log.md` (an append-only history) |
 | Rules | `CLAUDE.md`, which imports `system/context.md` and `system/conventions.md` |
-| Procedures | Claude Code skills: `ingest`, `ask`, `file-answer`, `lint` |
+| Procedures | Claude Code skills: `ingest`, `ask`, `file-answer`, `lint`, `drafts` |
 | Enforcement | `.claude/settings.json` permission rules, plus git history |
 
 > [!important] Claude on the web or phone can't see your vault

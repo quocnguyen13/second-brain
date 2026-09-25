@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M5 closed 2026-09-24 → next, M6 – Thinking Layer (see [[06 Roadmap]] §2)
+**Current module:** M6 – Thinking Layer, started 2026-09-24 (see [[06 Roadmap]] §2 and §9)
 
 ## Document set
 
@@ -38,7 +38,7 @@ tags: [project/thinking-system, moc]
 | 16 | [[16 M2 Handover]] | Closing state of M2, used to open the M3 chat | Closed |
 | 17 | [[17 M3 Handover]] | Closing state of M3, used to open the M4 chat | Closed |
 | 18 | [[18 M4 Handover]] | Closing state of M4, used to open the M5 chat | Closed |
-| 19 | [[19 M5 Handover]] | Closing state of M5, to open the M6 chat with | Current |
+| 19 | [[19 M5 Handover]] | Closing state of M5, used to open the M6 chat | Closed |
 
 **Planned (not written yet)**
 - 11 Workflow Playbook (module M7): product-owner routines
@@ -95,3 +95,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | 1.22 | 2026-09-24 | D-055 to D-059 accepted. M5 files placed in the vault and pushed; the review views bookmarked and checked. First `/lint` run: 14 findings, L1–L4 pass. One finding (5) was wrong because the skill's analysis-page rule contradicted D-051, so `lint` and `file-answer` were reworded to match it. `system/test-results.md` updated; docs 05, 06, 07 and 08 updated |
 | **1.23** | 2026-09-24 | **M5 exit met.** `/lint apply` made the 13 approved fixes; the second `/lint` checked only what changed and found 3 new, real problems. Lint tests 6 of 6. D-060 (monthly full deep check) and D-061 (a wrong PDF page is a Low finding) proposed, and `lint` revised to match. `system/test-results.md` and docs 05, 06, 07 and 08 updated |
 | **1.24** | 2026-09-24 | **M5 closed.** D-060 and D-061 accepted. Second report's 3 fixes applied. MVP at 5 of 6 criteria; D-062 (proposed) moves the insights criterion to M6. Doc 19 (M5 Handover) added; docs 06 and 07 updated |
+| **1.25** | 2026-09-24 | **M6 started.** D-062 accepted. `drafts` skill drafted (arrives as `drafts-SKILL.md` for you to move into `.claude/skills/drafts/`) and mirrored in doc 08 §4.5: it checks drafts against `raw/` and writes its Check into each one, and lists insights to re-read. The drafts routine rewrites weekly review step 5: keeping a draft means writing your own page. Insight pages gain `reviewed`; `mine/decisions/` is separated from doc 07; `ingest` drafts now cite `raw/`. Drafts tests R1–R5 added. D-063 to D-067 proposed. `CLAUDE.md`, `system/conventions.md`, the Insight template, `Review.base` and `system/test-results.md` updated; docs 02, 03, 04, 05, 06, 07, 08 and 10 updated |

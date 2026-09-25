@@ -71,10 +71,11 @@ Write nothing until I answer.
 - Rewrite it, don't append: the current picture across all sources, where they agree, where they disagree, and gaps worth a new source. Same citation and status rules as any wiki page.
 
 ## 8. Draft 1–3 insights
-- Read `system/templates/Insight template.md`. Write each draft to `mine/drafts/<claim>.md` with `origin: claude` and `status: draft`, and list the supporting wiki pages in `related`.
+- Read `system/templates/Insight template.md`. Write each draft to `mine/drafts/<claim>.md` with `origin: claude` and `status: draft`, and list the supporting wiki pages in `related`. Leave out `reviewed`; that date is mine.
 - One idea each, titled as a claim I could agree or disagree with, grounded in this source and, where they bear on it, earlier ones.
-- Fill the Relations block with wiki pages and the source page.
-- Write nowhere else in `mine/`.
+- Cite `raw/` inline for every fact, as on a wiki page, with the PDF page where there is one. Words in quotation marks are the source's own. Mark each step no source states "(reasoning)", never "(general knowledge)" (D-067).
+- Fill the Relations block with wiki pages and the source page. Each line reads "this draft *supports / contradicts / extends* the page"; `source::` names the source page.
+- Write nowhere else in `mine/`. `/drafts` checks the drafts before I decide on them.
 
 ## 9. Update index.md and log.md
 - `index.md`: a line for each new page in its section; refresh the summary and the "(N sources)" count on each updated page.

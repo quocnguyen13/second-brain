@@ -51,22 +51,28 @@ The wiki is only trustworthy if someone checks it, and that someone is you. Afte
 
 If you stop doing this, the provenance rules in [[03 Trust and Provenance]] become decoration. Nothing else in this document is load-bearing; this is.
 
-## 4. The weekly review (module M5)
+## 4. The weekly review (modules M5 and M6)
 Two views live in one Bases file, `system/views/Review.base` ([[07 Decision Log]] D-058). Bookmark it once (right-click the file → Bookmark); the view switcher at the top of the table moves between the two.
 - **Needs attention:** wiki pages that are `unverified` or `contested`, `unverified` first. `unverified` means a claim needs a citation or a fix; `contested` means two sources disagree and the call is yours (D-057).
-- **Draft queue:** Claude's insight drafts in `mine/drafts/`, oldest first.
+- **Draft queue:** Claude's insight drafts in `mine/drafts/`, oldest first, with the date `/drafts` checked each one.
 
-About 30 minutes, once a week. The first `/lint` of each month takes longest, because it checks every page against `raw/` (D-060); other weeks check only what changed (D-056).
+About 45 minutes, once a week. The first `/lint` of each month takes longest, because it checks every page against `raw/` (D-060); other weeks check only what changed (D-056).
 1. **Start clean.** At the vault root, `git status`; commit anything left over.
 2. **Lint.** Start `claude` at the vault root and run `/lint`. Open the new report in `system/lint/`. Trace any finding you doubt to `raw/`, as in §3.
 3. **Apply.** Run `/lint apply <numbers>` for the fixes you agree with, adding the letter where a finding offers options, e.g. `/lint apply 1 2 4b`. Then `git add -A`, `git diff --staged`, and `git commit -m "lint: report-YYYY-MM-DD"`. Findings you leave come back next week marked "Open since".
 4. **Needs attention.** For each page, read its one-line reason under "Already flagged" in the report. Leave it, add a check to `inbox/checks.md`, or clip a source that would settle it.
-5. **Draft queue.** For each draft, keep it or delete it. To keep one, move it to `mine/insights/`, rewrite it in your own words, and set `status: active`. Five insights kept or written is the last MVP criterion ([[01 Project Charter]] §6).
+5. **Drafts and insights** ([[07 Decision Log]] D-063 to D-065). Run `/drafts`, then commit its checks: `git add -A`, `git diff --staged`, `git commit -m "drafts: check YYYY-MM-DD"`. Open the Draft queue and decide every draft; none waits for next week.
+   - **Keep:** in the file explorer, right-click `mine/insights` → New note, and title it as your claim. Mod+P → "Templates: Insert template" → Insight template. Right-click the note's tab → Split right, then open the draft in the right pane (Mod+O). Write the idea and your reasons in your own words, copying links but not sentences; leave out anything the Check marks "not in raw/". At least one Relations line links a page in `wiki/`; put the same pages in `related`. Set `status: active`, then delete the draft (right-click → Delete). Commit: `git add -A`, `git commit -m "insight: <title> (from draft: <draft title>)"`.
+   - **Delete:** anything you wouldn't defend. Unsure means delete; git keeps every draft.
+   - **Re-read:** for each insight `/drafts` listed, open the wiki page that changed. Edit the insight if the change matters, or archive it (`status: archived`, plus a line saying why). Either way, set `reviewed` to today.
+   Five insights you wrote is the last MVP criterion ([[01 Project Charter]] §6).
 6. **Scratch.** Empty `mine/scratch/`: a source goes to `inbox/sources/`, a question to `inbox/questions.md`, a doubt about a wiki page to `inbox/checks.md`, your own thinking to `mine/insights/`, `mine/decisions/` or `mine/projects/`. Delete the rest.
 7. **Commit and push.** `git add -A`, `git diff --staged`, `git commit -m "review: YYYY-Www"`, then `git push`.
 
 ## 5. Where the thinking layer fits
-`mine/` is not a learning exercise; it's goal G4. Claude proposes insight drafts into `mine/drafts/`, and you keep the ones you'd defend, in your own words. Module M6 sets up that routine.
+`mine/` is not a learning exercise; it's goal G4. Claude proposes insight drafts into `mine/drafts/` and checks them with `/drafts`; you keep the ones you'd defend by writing your own page (§4 step 5). Two more rules:
+- **Insights** are one claim each. Your reasoning needs no citation; a fact you lean on links to the wiki page that cites it. When you stop holding one, archive it rather than delete it ([[07 Decision Log]] D-065).
+- **Decisions** about your own work and life go in `mine/decisions/`, from the Decision template, at a public level: no employer, product, team or figures. Decisions about this system go in [[07 Decision Log]] (D-066).
 
 ## 6. `system/views/Review.base`
 Mirrored here because project chats can't see `system/`; change both in the same commit. Obsidian rewrites the file in its own style when you change a view, so copy it from the vault after any change. Bases syntax: https://obsidian.md/help/bases/syntax (checked 2026-09-24).
@@ -88,6 +94,8 @@ properties:
     displayName: Origin
   note.related:
     displayName: Related
+  note.checked:
+    displayName: Checked
 views:
   - type: table
     name: Needs attention
@@ -120,7 +128,7 @@ views:
     order:
       - file.name
       - created
-      - origin
+      - checked
       - related
     sort:
       - property: created
