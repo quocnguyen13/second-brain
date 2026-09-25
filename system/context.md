@@ -8,7 +8,8 @@
 - The vault is written in English.
 
 ## Current focus
-- Building this system. Module M3 - First Ingest 
+- Building this system
+- Now focus on building the M6 - Thinking layer
 ## Glossary
 | Term              | Meaning here                                                            |
 | ----------------- | ----------------------------------------------------------------------- |
