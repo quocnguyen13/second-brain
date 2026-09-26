@@ -18,6 +18,12 @@ Back to [[00 Project Home]] · Owned by M0 – Project Management ([[09 Working 
 
 **Reading order:** §1 → §3 for the picture; §4 → §6 for the detail; §8 for failure modes; §11 for terms.
 
+**Reading the diagrams** ([[09 Working Agreement]] §8, D-074):
+- Every group names its level: `Stage`, `Role`, `Location`, `User story` or `Legend`.
+- Shapes: rounded = user action · rectangle = Claude or system step · diamond = check · cylinder = folder, file or store · slanted box = output.
+- Colours are explained by a legend in the diagram, or once per section.
+- Diagrams scale to the window width and use elbow connectors.
+
 ## 1. Product at a glance
 
 ### 1.1 Problem
@@ -75,27 +81,25 @@ A personal knowledge base on Karpathy's **LLM Wiki** pattern: compile sources on
 
 ### 2.1 Components
 ```mermaid
-flowchart LR
-    subgraph PC["User's Windows PC"]
-        WC["Browser + Web Clipper"]
-        OB["Obsidian<br/>read, review, write own notes"]
-        CC["Claude Code<br/>6 commands, started at vault root"]
-        subgraph VT["Vault: Second-Brain/ · git repo"]
-            IN[("inbox/")]
-            RW[("raw/")]
-            WK[("wiki/")]
-            MN[("mine/")]
-            SC["CLAUDE.md · system/ · .claude/"]
-        end
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    subgraph PC["Location · User's Windows PC"]
+        direction TB
+        WC["App · Web Clipper"]
+        OB["App · Obsidian"]
+        CC["App · Claude Code"]
+        VT[("Vault · Second-Brain/<br/>Markdown files in a git repo")]
     end
-    GH[("GitHub<br/>private repo second-brain")]
-    PJ["claude.ai Project<br/>module threads M0–M6"]
-    WC -->|"clips a page"| IN
-    OB <-->|"reads all, writes mine/"| VT
-    CC <-->|"runs commands under the rules"| VT
+    subgraph CL["Location · Cloud"]
+        direction TB
+        GH[("Service · GitHub<br/>private repo second-brain")]
+        PJ["Service · claude.ai Project<br/>module threads M0–M6"]
+    end
+    WC -->|"clips pages<br/>into inbox/sources/"| VT
+    OB <-->|"user reads all,<br/>writes mine/"| VT
+    CC <-->|"runs the 6 commands<br/>under the rules"| VT
     VT -->|"git push"| GH
     GH -->|"Sync: project docs only"| PJ
-    PJ -.->|"changed files, placed by the user"| MN
 ```
 
 | Layer | Component |
@@ -127,62 +131,119 @@ Added on top of Karpathy's pattern: the thinking layer, provenance rules (§4, �
 | Permission rules: `.claude/settings.json` | Allow, ask or block each write | Enforced by Claude Code |
 | Git | Records every change | Safety net: review with `git diff`, roll back anything |
 
-## 3. General flow
+## 3. User stories and end-to-end flow
 
-### 3.1 End to end
+### 3.1 User stories
+Every story is the user's: "As the user, I want to …". IDs never change. All 13 were delivered in the MVP.
+
+| ID | I want to… | so that… | Done when | Built by |
+|---|---|---|---|---|
+| US-01 | capture a web page or file in one step | nothing I read is lost before I compile it | The Web Clipper saves to `inbox/sources/`; one file per source; a file holding only a link is refused | Web Clipper, input zone (M1, M3) |
+| US-02 | have one source compiled into cited wiki pages that update what's already there | the wiki gets better, not just bigger (G1) | A brief comes before any write; I move the file into `raw/`; every claim cites `raw/`; disagreements shown both ways; overview, index and log updated; one claim handed to me to trace | `/ingest` (M3) |
+| US-03 | ask a question and get an answer from my own sources | I can trust and reuse the answer (G2) | Every claim traced to `raw/`; "Nothing in the wiki on this." when true; weak pages named under Caveats; nothing written but the tick | `/ask` (M4) |
+| US-04 | keep a good answer as a page | my explorations compound like my reading does | Evidence re-read in `raw/` before filing; page in `wiki/analyses/`; linked from the pages it drew on | `/file-answer` (M4) |
+| US-05 | get a regular health report on the wiki | it stays honest as it grows (G3) | Contradictions, uncited or mis-cited claims, orphans, missing links and stale pages found; cited passages opened; my queued checks covered; wiki untouched | `/lint` (M5) |
+| US-06 | apply only the fixes I approve | nothing changes without my say | Only the named findings applied, each re-checked first; statuses reset; outcome recorded in the report | `/lint apply` (M5) |
+| US-07 | have Claude's drafts checked before I decide on them | the insights I keep hold up, and every word in them is mine (G4) | Each claim checked, or listed as reasoning; no keep-or-delete advice; keeping means writing my own page | `/drafts`, weekly review step 5 (M6) |
+| US-08 | know when a wiki page behind one of my insights changes | my conclusions don't go stale unnoticed | `/drafts` lists insights whose linked pages changed after their `reviewed` date | `/drafts` (M6) |
+| US-09 | check any claim in under a minute | I never have to take Claude's word for it (G5) | Every claim links its raw file, a PDF at its page; one click in Obsidian | Citation rules (M3, D-046) |
+| US-10 | review and undo any change | Claude can't damage my knowledge | `raw/` blocked; deletions blocked; writes outside the allow list ask first; every change passes through `git diff` | Permission rules, git (M1, M2) |
+| US-11 | keep work material out until rules exist for it | nothing confidential enters the vault or the chats | Claude flags and stops on confidential material; personal and public sources only | Data boundary (D-018) |
+| US-12 | clear every queue in one weekly session | the system stays current without daily effort | 7 steps in about 45 minutes; two views show what needs attention | Weekly review (M5, M6) |
+| US-13 | plan and change the system from any device | it evolves under my control | Threads work from synced docs; changed files only; decisions logged; needs go to the backlog first | Module threads, docs 07, 09, 22 (M0) |
+
+### 3.2 End-to-end flow
+One row per user story, left to right through 4 stages: user input → process → store → output.
+
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart LR
-    subgraph CAP["1 · Capture · User"]
-        U1(["Clip or save a source"])
-        U2(["Have a question"])
-        U3(["Doubt a page"])
+    subgraph C0["User story"]
+        S1["US-01<br/>Capture a source"]
+        S2["US-02<br/>Compile a source"]
+        S3["US-03<br/>Ask the wiki"]
+        S4["US-04<br/>Keep an answer"]
+        S5["US-05<br/>Check the wiki"]
+        S6["US-06<br/>Approve fixes"]
+        S7["US-07, US-08<br/>Own insights"]
+        S8["US-09<br/>Verify a claim"]
+        S9["US-10<br/>Review, undo"]
+        S10["US-13<br/>Change system"]
     end
-    subgraph ZN["2 · Zones · inbox/"]
-        Z1[("sources/")]
-        Z2[("questions.md")]
-        Z3[("checks.md")]
+    subgraph C1["Stage 1 · User input"]
+        I1(["Clip a page or<br/>save a file"])
+        I2(["/ingest"])
+        I3(["/ask, or line in<br/>questions.md"])
+        I4(["/file-answer"])
+        I5(["/lint, doubts<br/>in checks.md"])
+        I6(["/lint apply<br/>1 2 3b"])
+        I7(["/drafts"])
+        I8(["Click a citation"])
+        I9(["git diff --staged"])
+        I10(["Need raised<br/>in a thread"])
     end
-    subgraph CMD["3 · Commands · Claude Code"]
-        C1["/ingest"]
-        C2["/ask"]
-        C3["/file-answer"]
-        C4["/lint"]
-        C5["/lint apply"]
-        C6["/drafts"]
+    subgraph C2["Stage 2 · Process"]
+        P1["Web Clipper<br/>saves Markdown"]
+        P2["Brief · user<br/>moves file ·<br/>write · draft"]
+        P3["Search wiki/ ·<br/>check raw/"]
+        P4["Re-check ·<br/>write · link"]
+        P5["Scan · check<br/>raw/ · queue"]
+        P6["Re-check ·<br/>apply exactly"]
+        P7["Check drafts<br/>against raw/"]
+        P8["Obsidian opens<br/>the raw file"]
+        P9["User reads<br/>every change"]
+        P10["Backlog · M0 ·<br/>thread drafts"]
     end
-    subgraph STO["4 · Stores"]
-        RW[("raw/")]
-        WK[("wiki/ + index.md + log.md")]
-        DR[("mine/drafts/")]
-        RP[("system/lint/")]
-        IS[("mine/insights/")]
+    subgraph C3["Stage 3 · Store"]
+        D1[("inbox/sources/")]
+        D2[("raw/ · wiki/<br/>mine/drafts/<br/>index · log")]
+        D3[("questions.md,<br/>tick only")]
+        D4[("wiki/analyses/<br/>index · log")]
+        D5[("system/lint/<br/>checks · log")]
+        D6[("wiki/ · index<br/>report · log")]
+        D7[("Checks in<br/>drafts · log")]
+        D8[("raw/, read only")]
+        D9[(".git/ → GitHub")]
+        D10[("Staging →<br/>vault → GitHub")]
     end
-    subgraph REV["5 · Review · User"]
-        R1(["Read in Obsidian"])
-        R2(["git diff · commit · push"])
+    subgraph C4["Stage 4 · Output"]
+        O1[/"A file waiting<br/>for /ingest"/]
+        O2[/"Report, claim<br/>to trace"/]
+        O3[/"Cited answer"/]
+        O4[/"Analysis page"/]
+        O5[/"Numbered<br/>findings"/]
+        O6[/"Change report"/]
+        O7[/"Checks,<br/>re-read list"/]
+        O8[/"The source<br/>passage"/]
+        O9[/"Reversible<br/>history"/]
+        O10[/"Updated docs,<br/>decision logged"/]
     end
-    U1 --> Z1 --> C1
-    U2 --> Z2 --> C2
-    U2 -.->|"or typed after /ask"| C2
-    U3 --> Z3 --> C4
-    C1 -->|"user runs the move"| RW
-    C1 --> WK
-    C1 --> DR
-    C2 -->|"answer in session"| C3
-    C3 --> WK
-    C4 --> RP
-    RP -->|"user picks numbers"| C5
-    C5 --> WK
-    DR --> C6
-    C6 -->|"user keeps: writes a new page"| IS
-    WK --> R1
-    IS --> R1
-    R1 --> R2
+    S1 --- I1 --> P1 --> D1 --> O1
+    S2 --- I2 --> P2 --> D2 --> O2
+    S3 --- I3 --> P3 --> D3 --> O3
+    S4 --- I4 --> P4 --> D4 --> O4
+    S5 --- I5 --> P5 --> D5 --> O5
+    S6 --- I6 --> P6 --> D6 --> O6
+    S7 --- I7 --> P7 --> D7 --> O7
+    S8 --- I8 --> P8 --> D8 --> O8
+    S9 --- I9 --> P9 --> D9 --> O9
+    S10 --- I10 --> P10 --> D10 --> O10
+    classDef story fill:#f3f4f6,stroke:#6b7280,color:#111827
+    classDef inp fill:#dcfce7,stroke:#15803d,color:#14532d
+    classDef proc fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
+    classDef sto fill:#fef3c7,stroke:#b45309,color:#78350f
+    classDef out fill:#ede9fe,stroke:#6d28d9,color:#4c1d95
+    class S1,S2,S3,S4,S5,S6,S7,S8,S9,S10 story
+    class I1,I2,I3,I4,I5,I6,I7,I8,I9,I10 inp
+    class P1,P2,P3,P4,P5,P6,P7,P8,P9,P10 proc
+    class D1,D2,D3,D4,D5,D6,D7,D8,D9,D10 sto
+    class O1,O2,O3,O4,O5,O6,O7,O8,O9,O10 out
 ```
+- US-11 applies to every row. US-12 runs rows US-05 to US-10 in one weekly session (§7.2).
 - Nothing runs by itself. Material waits in its zone until the user types the command.
 - Every command ends with a report and stops. The user reviews, then commits.
 
-### 3.2 Cadence
+### 3.3 Cadence
 | When | What | Time |
 |---|---|---|
 | Per source | `/ingest` → review the output (§7.1) → commit | Review: 5 min |
@@ -195,61 +256,44 @@ flowchart LR
 
 ### 4.0 Map
 ```mermaid
-flowchart LR
-    V(["Second-Brain/"])
-    V --> G1["1 · Input<br/>inbox/"]
-    V --> G2["2 · Evidence<br/>raw/"]
-    V --> G3["3 · Compiled knowledge<br/>wiki/"]
-    V --> G4["4 · Navigation"]
-    V --> G5["5 · Thinking layer<br/>mine/"]
-    V --> G6["6 · Rules"]
-    V --> G7["7 · Enforcement and records"]
-    G1 --> I1["sources/"]
-    G1 --> I2["questions.md"]
-    G1 --> I3["checks.md"]
-    G2 --> R1["*.md · *.pdf"]
-    G2 --> R2["assets/"]
-    G3 --> W1["overview.md"]
-    G3 --> W2["sources/"]
-    G3 --> W3["entities/"]
-    G3 --> W4["concepts/"]
-    G3 --> W5["analyses/"]
-    G4 --> N1["index.md"]
-    G4 --> N2["log.md"]
-    G5 --> M1["drafts/"]
-    G5 --> M2["insights/"]
-    G5 --> M3["decisions/"]
-    G5 --> M4["projects/"]
-    G5 --> M5["journal/"]
-    G5 --> M6["scratch/"]
-    G6 --> S1["CLAUDE.md"]
-    G6 --> S2["system/context.md"]
-    G6 --> S3["system/conventions.md"]
-    G6 --> S4["system/templates/"]
-    G6 --> S5[".claude/skills/"]
-    G7 --> E1[".claude/settings.json"]
-    G7 --> E2[".git/ · .gitignore · .gitattributes"]
-    G7 --> E3["system/lint/"]
-    G7 --> E4["system/test-results.md"]
-    G7 --> E5["system/views/Review.base"]
-    G7 --> E6[".obsidian/"]
-    subgraph LG["Legend"]
-        L1["Claude writes, no prompt"]
-        L2["User's; Claude never writes or asks first"]
-        L3["Blocked for Claude"]
-        L4["Shared config; Claude asks first"]
-        L5["Hidden from Claude"]
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    subgraph LEG["Legend · access"]
+        direction LR
+        L1["Writes"]:::claude
+        L2["User's only"]:::user
+        L3["Blocked"]:::locked
+        L4["Asks"]:::ask
+        L5["Can't read"]:::hidden
     end
+    V(["Second-Brain/"]):::vault
+    V ~~~ LEG
+    V --- R1["Role 1<br/>Input<br/>inbox/"]:::role
+    V --- R2["Role 2<br/>Evidence<br/>raw/"]:::role
+    V --- R3["Role 3<br/>Compiled<br/>wiki/"]:::role
+    V --- R4["Role 4<br/>Navigation<br/>root"]:::role
+    V --- R5["Role 5<br/>Thinking<br/>mine/"]:::role
+    V --- R6["Role 6<br/>Rules"]:::role
+    V --- R7["Role 7<br/>Enforcement<br/>records"]:::role
+    R1 --- A1["sources/"]:::user
+    A1 --- A2["questions.md<br/>checks.md"]:::claude
+    R2 --- B1["*.md<br/>*.pdf<br/>assets/"]:::locked
+    R3 --- C1["overview.md<br/>sources/<br/>entities/<br/>concepts/<br/>analyses/"]:::claude
+    R4 --- D1["index.md<br/>log.md"]:::claude
+    R5 --- E1["drafts/"]:::claude
+    E1 --- E2["insights/<br/>decisions/<br/>projects/<br/>journal/<br/>scratch/"]:::user
+    R6 --- F1["system/<br/>context.md"]:::user
+    F1 --- F2["CLAUDE.md<br/>conventions.md<br/>templates/<br/>.claude/<br/>skills/"]:::ask
+    R7 --- G1["system/<br/>lint/"]:::claude
+    G1 --- G2["settings.json<br/>.git/<br/>.gitignore<br/>.gitattributes<br/>test-results.md<br/>Review.base"]:::ask
+    G2 --- G3[".obsidian/"]:::hidden
     classDef claude fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
     classDef user fill:#dcfce7,stroke:#15803d,color:#14532d
     classDef locked fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
     classDef ask fill:#f3f4f6,stroke:#6b7280,color:#111827
     classDef hidden fill:#fef3c7,stroke:#b45309,color:#78350f
-    class I2,I3,W1,W2,W3,W4,W5,N1,N2,M1,E3,L1 claude
-    class I1,M2,M3,M4,M5,M6,S2,L2 user
-    class R1,R2,L3 locked
-    class S1,S3,S4,S5,E1,E2,E4,E5,L4 ask
-    class E6,L5 hidden
+    classDef role fill:#ffffff,stroke:#111827,color:#111827
+    classDef vault fill:#374151,stroke:#9ca3af,color:#ffffff
 ```
 
 **Permission codes** (Claude's rights, from `.claude/settings.json`, §6.4):
@@ -407,37 +451,51 @@ By design the user doesn't edit wiki pages. Corrections go through `inbox/checks
 - **Wrong zone → say so, ask the user to move it.** Never re-route.
 - **Every run ends with a report and stops.** Then the user commits: `git add -A`, `git diff --staged`, `git commit -m "<operation>: <title>"`.
 
-Diagram key: blue cylinder = folder read or written · green = user step · red = run stops.
+```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    subgraph KEY["Legend · node types in §5"]
+        direction TB
+        K1(["User step"]):::user
+        K2["Claude step"]
+        K3{"Check"}
+        K4["Run stops"]:::stop
+        K5[("Folder or file")]:::store
+    end
+    classDef user fill:#dcfce7,stroke:#15803d,color:#14532d
+    classDef stop fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
+    classDef store fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
+```
 
 ### 5.1 `/ingest`: compile one source
 Takes one file from `inbox/sources/`, has the user move it into `raw/`, then writes and updates wiki pages, drafts 1–3 insights, and stops for review.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
-    A(["/ingest, or /ingest file"]) --> B{"Files in<br/>inbox/sources/?"}
-    B -->|"none"| X1["'Nothing in inbox/sources/' · stop"]
-    B -->|"several, none named"| X2["List them · ask which · stop"]
-    B -->|"one, or the named file"| C["Read the whole file<br/>PDF over 10 pages in ranges"]
-    C --> D{"Usable source?"}
+    A(["/ingest<br/>or /ingest file"]) --> B{"Files in<br/>inbox/sources/?"}
+    B -->|"none"| X1["Nothing to<br/>ingest · stop"]
+    B -->|"several,<br/>none named"| X2["List them<br/>ask · stop"]
+    B -->|"one, or<br/>the named file"| C["Read the whole file<br/>PDF in page ranges"]
+    C --> D{"Usable<br/>source?"}
     D -->|"won't open"| X3["Say so · stop<br/>no converted copy"]
-    D -->|"link only, or a question or check"| X4["Say so · ask the user to act · stop"]
-    D -->|"yes"| E["Grep wiki/ and raw/<br/>for its names and terms"]
-    E --> F["Brief: source, takeaways, pages touched,<br/>conflicts, flags, raw name, move command"]
-    F --> G{"Confidential or<br/>personal data?"}
-    G -->|"yes"| X5["Flag · run ends"]
-    G -->|"no"| H(["User runs the move<br/>and says what to emphasise"])
-    H --> I{"File in raw/ and<br/>gone from inbox?"}
-    I -->|"no"| X6["Stop · tell the user"]
-    I -->|"yes"| J["Write the source page"]
-    J --> K["Create or update entity and concept pages<br/>link both ways"]
-    K --> L["Record conflicts · mark superseded claims<br/>set status on every page touched"]
-    L --> M["Rewrite overview.md"]
-    M --> N["Draft 1–3 insights"]
-    N --> O["Update index.md · append log.md"]
-    O --> P["Check every link · report · stop"]
-    P --> Q(["User reviews · commits"])
-    RW[("raw/")] -.-> E
-    WK[("wiki/")] -.-> E
+    D -->|"link, question<br/>or check"| X4["Say so · ask<br/>the user · stop"]
+    D -->|"yes"| E["Grep wiki/ and raw/<br/>for names and terms"]
+    E --> F["Brief: takeaways,<br/>pages touched, conflicts,<br/>flags, move command"]
+    F --> G{"Confidential<br/>or personal?"}
+    G -->|"yes"| X5["Flag<br/>run ends"]
+    G -->|"no"| H(["User runs the move,<br/>says what to stress"])
+    H --> I{"File now<br/>in raw/?"}
+    I -->|"no"| X6["Stop<br/>tell the user"]
+    I -->|"yes"| J["Write the<br/>source page"]
+    J --> K["Create or update<br/>entity, concept pages"]
+    K --> L["Record conflicts<br/>set every status"]
+    L --> M["Rewrite<br/>overview.md"]
+    M --> N["Draft 1–3<br/>insights"]
+    N --> O["Update index.md<br/>append log.md"]
+    O --> P["Check links<br/>report · stop"]
+    P --> Q(["User reviews<br/>commits"])
+    RW[("raw/ · wiki/")] -.-> E
     J -.-> WS[("wiki/sources/")]
     K -.-> WC[("wiki/entities/<br/>wiki/concepts/")]
     N -.-> DR[("mine/drafts/")]
@@ -446,7 +504,7 @@ flowchart TD
     classDef store fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
     class H,Q user
     class X1,X2,X3,X4,X5,X6 stop
-    class RW,WK,WS,WC,DR store
+    class RW,WS,WC,DR store
 ```
 
 **The brief** (step 1, nothing written yet): source (title, author, date, URL) · 3–6 takeaways · pages it would touch · conflicts · flags · proposed raw name · move command:
@@ -479,34 +537,34 @@ flowchart TD
 Answers the question typed after the command, or the oldest open one in `inbox/questions.md`. Traces every claim to `raw/`. Writes nothing but the tick (D-048).
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
-    A(["/ask, or /ask question"]) --> B{"Question typed?"}
+    A(["/ask<br/>or /ask question"]) --> B{"Question<br/>typed?"}
     B -->|"yes"| D
     B -->|"no"| C{"Open line in<br/>questions.md?"}
-    C -->|"none"| X1["'No open questions in<br/>inbox/questions.md' · stop"]
-    C -->|"it's a source or a check"| X2["Say so · ask to move · stop"]
-    C -->|"yes"| D["Read index.md<br/>+ overview.md if the question is broad"]
-    D --> E["Grep wiki/ for terms and synonyms<br/>read pages · follow links one hop"]
-    E --> F["Note each page's status"]
-    F --> G{"Answer turns on<br/>1–2 claims?"}
-    G -->|"yes"| H["Open the cited passages in raw/"]
+    C -->|"none"| X1["No open<br/>questions · stop"]
+    C -->|"a source<br/>or a check"| X2["Say so · ask<br/>to move · stop"]
+    C -->|"yes"| D["Read index.md<br/>+ overview.md if broad"]
+    D --> E["Grep wiki/ · read pages<br/>follow links one hop"]
+    E --> F["Note each<br/>page's status"]
+    F --> G{"Turns on<br/>1–2 claims?"}
+    G -->|"yes"| H["Open the cited<br/>passages in raw/"]
     G -->|"no"| I
-    H --> I{"Wiki covers it?"}
-    I -->|"nothing"| X3["First line: 'Nothing in the wiki on this.'<br/>then labelled general knowledge"]
-    I -->|"all or part"| J["Answer · Evidence · Where sources disagree ·<br/>Caveats · Not in the wiki · Recommendation"]
-    J --> K{"2+ sources, or<br/>a comparison?"}
-    K -->|"yes"| K1["Offer /file-answer"]
+    H --> I{"Wiki<br/>covers it?"}
+    I -->|"nothing"| X3["'Nothing in the wiki<br/>on this.' + labelled<br/>general knowledge"]
+    I -->|"all or part"| J["Answer in the<br/>fixed sections"]
+    J --> K{"2+ sources or<br/>a comparison?"}
+    K -->|"yes"| K1["Offer<br/>/file-answer"]
     K -->|"no"| L
-    K1 --> L["Tick the question if queued · stop"]
+    K1 --> L["Tick the question<br/>if queued · stop"]
     X3 --> L
-    IX[("index.md")] -.-> D
-    WK[("wiki/")] -.-> E
+    IX[("index.md · wiki/")] -.-> D
     RW[("raw/")] -.-> H
-    QQ[("inbox/questions.md")] -.-> C
+    QQ[("questions.md")] -.-> C
     classDef stop fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
     classDef store fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
     class X1,X2 stop
-    class IX,WK,RW,QQ store
+    class IX,RW,QQ store
 ```
 
 **Answer format**, only these sections, in this order, empty ones left out:
@@ -531,29 +589,30 @@ flowchart TD
 Turns the last answer in the session into `wiki/analyses/<title>.md`, after re-checking every piece of evidence at the source (D-050).
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
-    A(["/file-answer, or /file-answer title"]) --> B{"Answer in<br/>this session?"}
-    B -->|"no"| X1["'No answer in this session to file.<br/>Run /ask first.' · stop"]
-    B -->|"began 'Nothing in the wiki'"| X2["No evidence to file · stop"]
-    B -->|"yes"| C["Read Analyses in index.md<br/>Glob wiki/analyses/"]
-    C --> D{"Same question<br/>already filed?"}
-    D -->|"yes"| D1(["User: update it, or file new"])
+    A(["/file-answer<br/>or /file-answer title"]) --> B{"Answer in<br/>this session?"}
+    B -->|"no"| X1["'Run /ask first'<br/>stop"]
+    B -->|"'Nothing in<br/>the wiki'"| X2["No evidence<br/>to file · stop"]
+    B -->|"yes"| C["Check index.md and<br/>wiki/analyses/"]
+    C --> D{"Question<br/>already filed?"}
+    D -->|"yes"| D1(["User: update,<br/>or file new"])
     D -->|"no"| E
-    D1 --> E["Re-open every Evidence passage in raw/"]
-    E --> F{"Passage supports<br/>the claim?"}
+    D1 --> E["Re-open each Evidence<br/>passage in raw/"]
+    E --> F{"Passage<br/>supports it?"}
     F -->|"yes"| F1["Keep"]
-    F -->|"no"| F2["Drop or reword · list in report"]
-    F -->|"no raw citation"| F3["Move to Caveats, labelled"]
-    F -->|"file won't open"| F4["Caveats: 'not re-checked'<br/>page unverified"]
+    F -->|"no"| F2["Drop or<br/>reword"]
+    F -->|"no raw<br/>citation"| F3["To Caveats,<br/>labelled"]
+    F -->|"won't<br/>open"| F4["'Not re-checked'<br/>unverified"]
     F1 --> G
     F2 --> G
     F3 --> G
-    F4 --> G["Write page from the Analysis template"]
+    F4 --> G["Write the page from<br/>the Analysis template"]
     G --> H["Set status"]
-    H --> I["Add to Related on each page drawn on<br/>set their updated"]
-    I --> J["index.md line · log.md entry"]
-    J --> K["Check links · report · stop"]
-    K --> L(["User reviews · commits"])
+    H --> I["Link from the pages<br/>it drew on"]
+    I --> J["index.md line<br/>log.md entry"]
+    J --> K["Check links<br/>report · stop"]
+    K --> L(["User reviews<br/>commits"])
     RW[("raw/")] -.-> E
     G -.-> WA[("wiki/analyses/")]
     classDef user fill:#dcfce7,stroke:#15803d,color:#14532d
@@ -579,6 +638,7 @@ flowchart TD
 Scans every page, deep-checks cited passages where pages changed, works through `inbox/checks.md`, and writes a numbered report. Changes nothing in `wiki/` (D-055).
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
     A(["/lint"]) --> B["Glob wiki/ · read the latest report"]
     B --> C{"A report already<br/>this month?"}
@@ -626,6 +686,7 @@ flowchart TD
 Applies exactly the findings named, from the latest report or the one named, and records the outcome.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
     A(["/lint apply 1 2 3b, or all"]) --> B["Open the latest report, or the one named"]
     B --> C{"Number valid?"}
@@ -654,25 +715,26 @@ flowchart TD
 Checks each unchecked draft in `mine/drafts/` against `raw/`, writes a Check into it, and lists insights whose wiki pages changed since the user last re-read them. Gives no keep-or-delete advice (D-064).
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
-    A(["/drafts, or /drafts title"]) --> B{"Draft named?"}
-    B -->|"yes"| C["Check that draft, even if already checked"]
+    A(["/drafts<br/>or /drafts title"]) --> B{"Draft<br/>named?"}
+    B -->|"yes"| C["Check that draft,<br/>even if checked"]
     B -->|"no"| D{"Drafts without<br/>a checked date?"}
     D -->|"none"| R
     D -->|"yes"| F
-    C --> F["Classify each claim"]
-    F --> F1["Cited: open the passage<br/>holds · in part · not there"]
-    F --> F2["Uncited: search raw/<br/>give the citation, or 'not in raw/'"]
-    F --> F3["About the vault: check against<br/>CLAUDE.md, conventions, the skill"]
-    F --> F4["Reasoning: list it, don't check it<br/>flag a wrong label"]
+    C --> F["Classify<br/>each claim"]
+    F --> F1["Cited: open it<br/>holds · part · not"]
+    F --> F2["Uncited: search<br/>raw/ for it"]
+    F --> F3["About the vault:<br/>check the rules"]
+    F --> F4["Reasoning:<br/>list, don't check"]
     F1 --> G
     F2 --> G
     F3 --> G
-    F4 --> G["Check links and Relations · note status of pages leaned on<br/>name overlaps with other drafts and insights"]
-    G --> H["Write the Check section and checked date<br/>change nothing else in the draft"]
-    H --> R["List insights whose linked wiki pages<br/>changed after their reviewed date"]
-    R --> S["Append log.md · 15-line summary · stop"]
-    S --> T(["User decides every draft: keep = write a new insight, else delete"])
+    F4 --> G["Check links, Relations,<br/>leaned-on pages, overlaps"]
+    G --> H["Write the Check<br/>and checked date"]
+    H --> R["List insights whose<br/>wiki pages changed"]
+    R --> S["Append log.md<br/>summary · stop"]
+    S --> T(["User decides<br/>every draft"])
     DR[("mine/drafts/")] -.-> F
     RW[("raw/")] -.-> F1
     IN[("mine/insights/")] -.-> R
@@ -710,76 +772,91 @@ Core plugins on: Backlinks, Outgoing links, Graph view, Properties view, Bases, 
 
 ### 6.1 Evidence chain
 ```mermaid
-flowchart BT
-    RW[("raw/<br/>evidence · immutable")]
-    WK[("wiki/ pages<br/>compiled claims")]
-    AN[("wiki/analyses/<br/>filed answers")]
-    DR[("mine/drafts/<br/>Claude's proposals")]
-    IS[("mine/insights/<br/>user's conclusions")]
-    NV["index.md · log.md<br/>navigation, never evidence"]
-    WK -->|"every claim cites"| RW
-    AN -->|"Evidence cites directly,<br/>re-checked before filing"| RW
-    DR -->|"cites inline"| RW
-    IS -->|"Relations link"| WK
-    DR -.->|"user rewrites, never moves"| IS
-    NV -.->|"points to"| WK
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    subgraph LEG["Legend · who writes"]
+        direction LR
+        K1["User"]:::us
+        K2["Claude"]:::cl
+        K3["Never edited"]:::ev
+    end
+    IS[("Folder<br/>mine/insights/")]:::us
+    DR[("Folder<br/>mine/drafts/")]:::cl
+    NV["Files<br/>index.md · log.md"]:::cl
+    WK[("Folder<br/>wiki/")]:::cl
+    AN[("Folder<br/>wiki/analyses/")]:::cl
+    RW[("Folder<br/>raw/")]:::ev
+    IS -->|"Relations<br/>link"| WK
+    NV -.->|"points to,<br/>never evidence"| WK
+    WK -->|"every claim<br/>cites"| RW
+    AN -->|"cites directly,<br/>re-checked"| RW
+    DR -->|"cites<br/>inline"| RW
     classDef ev fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
     classDef cl fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
     classDef us fill:#dcfce7,stroke:#15803d,color:#14532d
-    class RW ev
-    class WK,AN,DR cl
-    class IS us
 ```
 - Facts flow one way: from `raw/` up. A summary never becomes evidence for another summary.
 - G5 in practice: insight → wiki page → raw file (PDF at its page), traced in under a minute.
 - Every error the system has caught in itself sat in Claude's synthesis (drafts, claims across pages), not in the sources. The checks that open `raw/` are what caught them ([[21 MVP Retrospective]] §2).
 
 ### 6.2 Wiki page status
-```mermaid
-stateDiagram-v2
-    [*] --> unverified: created from a template
-    unverified --> verified: every claim cites raw/
-    unverified --> contested: claims cited, a dispute shown both ways
-    verified --> contested: a source disagrees
-    verified --> unverified: uncited or mis-cited claim found
-    contested --> unverified: uncited claim found, unverified wins
-    contested --> verified: disputed claim no longer on the page
-```
+| From | To | When |
+|---|---|---|
+| New page | `unverified` | Created from a template |
+| `unverified` | `verified` | Every claim cites `raw/` |
+| `unverified` | `contested` | Every claim cited, and a dispute shown both ways |
+| `verified` | `contested` | A source disagrees |
+| `verified` or `contested` | `unverified` | An uncited or mis-cited claim is found; `unverified` wins (D-057) |
+| `contested` | `verified` | The disputed claim is no longer on the page |
+
 Set by Claude when writing (`/ingest`, `/file-answer`) or fixing (`/lint apply`). `/lint` reports a status that doesn't match the page as a High finding.
 
 ### 6.3 Drafts and insights
 ```mermaid
-stateDiagram-v2
-    direction LR
-    state "Draft, origin claude" as D
-    state "Checked" as C
-    state "Deleted, kept in git" as X
-    state "Insight, active" as A
-    state "Insight, archived" as R
-    [*] --> D: /ingest writes it
-    D --> C: /drafts adds the Check
-    C --> X: user deletes, unsure means delete
-    C --> A: user writes a new page, origin me
-    A --> A: user re-reads, reviewed moves on
-    A --> R: no longer held, reason noted
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    subgraph LEG["Legend · who writes the page"]
+        direction TB
+        L1["Claude"]:::cl
+        L2["User"]:::us
+        L3["Gone"]:::gone
+    end
+    A(["/ingest"]) --> D["Draft<br/>origin: claude"]
+    D -->|"/drafts"| K["Checked"]
+    K -->|"user deletes:<br/>unsure = delete"| X["Deleted<br/>git keeps it"]
+    K -->|"user writes<br/>a new page"| I["Insight, active<br/>origin: me"]
+    I -->|"no longer held,<br/>reason noted"| R["Insight,<br/>archived"]
+    classDef cl fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
+    classDef us fill:#dcfce7,stroke:#15803d,color:#14532d
+    classDef gone fill:#f3f4f6,stroke:#6b7280,color:#111827
+    class D,K cl
+    class I,R us
+    class X gone
 ```
 - No draft waits more than a week: every draft is decided at the weekly review where the user meets it (D-063).
+- Re-reading an insight moves its `reviewed` date on; it stays `active`.
 - `/drafts` lists an insight for re-reading when a wiki page it links changed after its `reviewed` date.
 
 ### 6.4 Permissions
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
-    A["Claude is about to write or run a command"] --> B{"Deny rule matches?"}
-    B -->|"yes"| B1["Blocked, no prompt<br/>Claude stops and tells the user (D-038)"]
-    B -->|"no"| C{"Path in .claude/ or .git/?"}
-    C -->|"yes"| C1(["Always asks"])
-    C -->|"no"| D{"Allow rule matches?"}
-    D -->|"yes"| D1["Runs without a prompt"]
-    D -->|"no"| D2(["Manual mode: asks the user"])
+    subgraph LEG["Legend · node types"]
+        direction TB
+        L1(["User acts"]):::user
+        L2["Blocked"]:::stop
+    end
+    A["Claude is about to write<br/>or run a command"] --> B{"Deny rule<br/>matches?"}
+    B -->|"yes"| B1["Blocked, no prompt<br/>Claude stops, tells<br/>the user (D-038)"]
+    B -->|"no"| C{"Path in .claude/<br/>or .git/?"}
+    C -->|"yes"| C1(["Always<br/>asks"])
+    C -->|"no"| D{"Allow rule<br/>matches?"}
+    D -->|"yes"| D1["Runs without<br/>a prompt"]
+    D -->|"no"| D2(["Manual mode:<br/>asks the user"])
     C1 -->|"approved"| E
     D2 -->|"approved"| E
-    D1 --> E["Change lands in the working tree"]
-    E --> F(["User: git diff · commit · push<br/>or git restore to undo"])
+    D1 --> E["Change lands in<br/>the working tree"]
+    E --> F(["User: git diff · commit<br/>or git restore to undo"])
     classDef user fill:#dcfce7,stroke:#15803d,color:#14532d
     classDef stop fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
     class C1,D2,F user
@@ -825,12 +902,13 @@ Reads inside the vault need no approval, except `.obsidian/` (denied). Instructi
 
 ### 6.5 Git and sync
 ```mermaid
-flowchart LR
-    VT["Vault on the PC<br/>git repo, branch main"] -->|"git push"| GH[("GitHub · second-brain<br/>private")]
-    GH -->|"user clicks Sync<br/>mine/projects/thinking-system/ only"| PK["Project knowledge"]
-    PK --> TH["Module threads M0–M6"]
-    TH -->|"changed files"| SF["Staging folder<br/>Documents/Obsidian x Claude"]
-    SF -->|"user places, reads git diff, commits"| VT
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    VT["PC · Vault, git repo<br/>branch main"] -->|"git push"| GH[("Cloud · GitHub second-brain<br/>private")]
+    GH -->|"user clicks Sync:<br/>mine/projects/thinking-system/ only"| PK["Cloud · claude.ai Project knowledge"]
+    PK -->|"read by"| TH["Cloud · module threads M0–M6"]
+    TH -->|"changed files"| SF["PC · Staging folder<br/>Documents/Obsidian x Claude"]
+    SF -->|"user places files,<br/>reads git diff, commits"| VT
 ```
 - The vault repo is the single source of truth (D-030). Keep it private; give the Claude GitHub app access to that repo only.
 - Commit after every operation, reading `git diff --staged` first. Messages: `ingest:`, `file:`, `lint:`, `drafts:`, `insight:`, `review:`.
@@ -857,13 +935,14 @@ The one routine that isn't optional. Skip it and the provenance rules become dec
 
 ### 7.2 Weekly review (~45 minutes)
 ```mermaid
-flowchart LR
-    S1["1 · Start clean<br/>git status"] --> S2["2 · /lint<br/>read the report"]
-    S2 --> S3["3 · /lint apply<br/>chosen numbers · commit"]
-    S3 --> S4["4 · Needs attention<br/>leave, queue a check, or clip a source"]
-    S4 --> S5["5 · /drafts · commit<br/>decide every draft · re-read listed insights"]
-    S5 --> S6["6 · Empty mine/scratch/<br/>route each note"]
-    S6 --> S7["7 · git diff · commit · push"]
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    S1["Step 1 · Start clean<br/>git status"] --> S2["Step 2 · /lint<br/>read the report"]
+    S2 --> S3["Step 3 · /lint apply<br/>chosen numbers · commit"]
+    S3 --> S4["Step 4 · Needs attention<br/>leave, queue a check, or clip a source"]
+    S4 --> S5["Step 5 · /drafts · commit<br/>decide every draft · re-read listed insights"]
+    S5 --> S6["Step 6 · Empty mine/scratch/<br/>route each note"]
+    S6 --> S7["Step 7 · git diff · commit · push"]
 ```
 - **Step 5, keep:** new note in `mine/insights/`, titled as the claim → Insight template → draft open in a split pane → write in own words, links copied but not sentences, anything marked "not in raw/" left out → ≥1 Relations line to `wiki/`, same pages in `related` → `status: active` → delete the draft → commit `insight: <title> (from draft: <draft title>)`.
 - **Step 5, delete:** anything the user wouldn't defend. Unsure means delete; git keeps it.
@@ -872,12 +951,13 @@ flowchart LR
 
 ### 7.3 Changing the system
 ```mermaid
-flowchart LR
-    N(["New need"]) --> B["Backlog item B-###<br/>doc 22"]
-    B --> M0["M0 schedules it<br/>doc 06, owning thread named"]
-    M0 --> T["Owning module thread<br/>drafts changed files"]
-    T --> D["Decision D-### logged<br/>doc 07, Proposed → Accepted"]
-    D --> V["User places files<br/>diff · commit · push · Sync"]
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TB
+    N(["Stage 1 · Need raised<br/>by the user, in any thread"]) --> B["Stage 2 · Backlog item B-###<br/>doc 22, refined until ready"]
+    B --> M0["Stage 3 · M0 schedules it<br/>doc 06, owning thread named"]
+    M0 --> T["Stage 4 · Owning thread drafts<br/>changed files, proposes D-###"]
+    T --> D["Stage 5 · User accepts the decision<br/>doc 07: Proposed → Accepted"]
+    D --> V(["Stage 6 · User places files<br/>diff · commit · push · Sync"])
 ```
 - **Threads:** one standing chat per module, the permanent home of what it owns (D-071). M0 owns the plan, scope, decisions, backlog, retrospectives, handovers ([[09 Working Agreement]] §4).
 - **Backlog:** New → Refined → Ready → Scheduled → Done, or Dropped with a reason. IDs never change (D-072).

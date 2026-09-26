@@ -147,7 +147,14 @@ Where two rows touch the same file, the more specific row owns that part. A skil
   M3 · First Ingests · in progress
   ```
   A build module is *starting*, *in progress*, *closing* or *closed*. After its exit, its thread is *maintaining* whenever it works on what the module owns, e.g. `M5 · Lint and Review · maintaining`. M0 is *in progress* while it works on the plan. Module names and order are in [[06 Roadmap]] §2.
-- **Diagrams are Mermaid** (D-073). **Phrasing is short:** lead with the count or the noun ("6 commands:", not "There are six commands").
+- **Diagrams are Mermaid** (D-073), drawn to these rules (D-074):
+  - First line `%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%`: the diagram scales to the window width and uses elbow connectors, not curves.
+  - Flowcharts only. A lifecycle is drawn as a flowchart, or as a table when its arrows would cross.
+  - Fit the window: top-down by default, no wider than about 800 px (overview grids and maps up to about 1,100 px), labels broken with `<br/>`. The compact spacing in the first line helps.
+  - Every group names its level: `Stage n · …`, `Role n · …`, `Location · …`, `User story US-nn · …`, `Legend · …`. One level per layer of grouping.
+  - A legend whenever colour or shape carries meaning: inside the diagram, top-left where the layout allows, or once per section for diagrams that share it.
+  - Every diagram is rendered before delivery, with no errors.
+- **Phrasing is short:** lead with the count or the noun ("6 commands:", not "There are six commands").
 - **Answer first, then structure,** with a recommendation. Chat replies stay short enough to read on a phone; the depth goes into the documents.
 - **Language:** English, unless Q-005 decides otherwise.
 - **Speak up if something doesn't fit.** The system should fit how you work, not the other way round.
@@ -166,3 +173,4 @@ The same traffic-light rule that governs the vault applies to anything you paste
 | Document master | The vault repo; project knowledge syncs `mine/projects/thinking-system/` (see §2) | 2026-09-21 |
 | Diagrams | Mermaid only, in documents, chat and the vault (D-073, see §8) | 2026-09-26 |
 | Writing style | Short phrasing: the count or the noun first (see §8) | 2026-09-26 |
+| Diagram style | Elbow connectors, fit to the window, labelled group levels, a legend (D-074, see §8) | 2026-09-26 |
