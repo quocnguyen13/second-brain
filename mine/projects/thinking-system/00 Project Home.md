@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-25
+reviewed: 2026-09-26
 tags: [project/thinking-system, moc]
 ---
 
@@ -42,12 +42,14 @@ tags: [project/thinking-system, moc]
 | 20  | [[20 M6 Handover]]                   | Closing state of M6 and the MVP, to take to the M0 thread      | Current         |
 | 21  | [[21 MVP Retrospective]]             | Retrospective of M0–M6 and the input to MVP 2's scope          | Draft           |
 | 22  | [[22 Product Backlog]]               | Needs and ideas waiting for M0 to schedule them                | Draft           |
+| 23  | [[23 Product Requirements]]          | The whole system for a newcomer: architecture, flows, data, edge cases | Draft           |
 
 **Planned (not written yet)**
 - 11 Workflow Playbook (MVP 2, if the revision keeps it): product-owner routines
 - 12 Data Governance (parked, before any work material enters the vault)
 
 ## Reading order
+New to the project? Start with [[23 Product Requirements]], then go deeper here:
 1. [[09 Working Agreement]]: how we work together.
 2. [[01 Project Charter]]: what the MVP is and isn't.
 3. [[02 System Architecture]]: the pattern we adopted and what we add to it.
@@ -104,3 +106,4 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | **1.28** | 2026-09-25 | **M6 closed; MVP complete, 6 of 6.** D-068 accepted; the five insights placed and the 11 drafts deleted. R5 passes, so drafts tests are 5 of 5. Q-016 answered with D-069: the next module is M7 – Retrospective and Revision, and the old M7 and M8 become candidates for MVP 2. Doc 20 (M6 Handover) added; docs 06, 07 and 08 and `system/test-results.md` updated; the Epics insight's `reviewed` date set back after R5                                                                                                                                                                                                                                                                     |
 | **1.29** | 2026-09-25 | **Threads become standing.** D-070: the revision runs in the M0 thread, now M0 – Project Management. D-071: every module thread is the standing home of what its module owns, with an ownership map, request briefs and rules in doc 09 §4 (supersedes D-015). Doc 21 (MVP Retrospective) drafted with its record sections filled. Docs 06, 07, 08, 09 and 20 updated                                                                                                                                                                                                                                                                                                                            |
 | **1.30** | 2026-09-25 | Doc 22 (Product Backlog) added, owned by M0; D-072 proposed. B-001 (Office documents as sources) and B-002 (Mermaid support) logged as New. Docs 07 and 09 updated                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 1.31     | 2026-09-26 | Doc 23 (Product Requirements) added: the whole system for a newcomer, built from docs 01–22 and the live vault files, with every diagram in Mermaid. D-073 accepted: every diagram is Mermaid. B-002 put on hold. Docs 07, 09 and 22 updated |

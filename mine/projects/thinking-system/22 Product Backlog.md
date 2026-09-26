@@ -5,7 +5,7 @@ status: active
 trust: ai-draft
 origin: claude
 created: 2026-09-25
-reviewed: 2026-09-25
+reviewed: 2026-09-26
 tags: [project/thinking-system, backlog]
 ---
 
@@ -28,6 +28,7 @@ flowchart LR
 - **Ready:** small enough for one module, with a "done when" you'd accept.
 - **Scheduled:** M0 puts it in [[06 Roadmap]] and names the owning thread.
 - **Dropped:** with a line saying why. Items are never deleted.
+- **On hold:** at your request, at any status. The item keeps its status, is marked "on hold", and stays out of scoping until you reopen it.
 
 IDs run from B-001 and never change. Priority stays blank until the MVP 2 scoping sets it.
 
@@ -35,7 +36,7 @@ IDs run from B-001 and never change. Priority stays blank until the MVP 2 scopin
 | ID | Item | Status | Depends on | Would be owned by |
 |---|---|---|---|---|
 | B-001 | Office documents as sources | New | Doc 12, for work files (D-018) | M3 (`ingest`), M1 (naming) |
-| B-002 | Mermaid support | New; scope to confirm | — | M3 or M4, by scope |
+| B-002 | Mermaid support | New; on hold | — | M3 or M4, by scope |
 
 ## 3. Items
 
@@ -60,3 +61,4 @@ IDs run from B-001 and never change. Priority stays blank until the MVP 2 scopin
 
 **Design question for the output reading:** a diagram is a set of claims, one per arrow. The provenance rule (D-021) needs a line for it; for example, a diagram only restates claims cited on the same page, and `lint` checks it like any other claim.
 **Open question:** input, output, or both.
+**On hold:** 2026-09-25, at your request. Out of MVP 2 scoping until you reopen it. The format is settled meanwhile: any diagram is Mermaid (D-073).

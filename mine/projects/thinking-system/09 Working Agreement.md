@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-25
+reviewed: 2026-09-26
 tags: [project/thinking-system, ways-of-working]
 ---
 
@@ -147,6 +147,7 @@ Where two rows touch the same file, the more specific row owns that part. A skil
   M3 · First Ingests · in progress
   ```
   A build module is *starting*, *in progress*, *closing* or *closed*. After its exit, its thread is *maintaining* whenever it works on what the module owns, e.g. `M5 · Lint and Review · maintaining`. M0 is *in progress* while it works on the plan. Module names and order are in [[06 Roadmap]] §2.
+- **Diagrams are Mermaid** (D-073). **Phrasing is short:** lead with the count or the noun ("6 commands:", not "There are six commands").
 - **Answer first, then structure,** with a recommendation. Chat replies stay short enough to read on a phone; the depth goes into the documents.
 - **Language:** English, unless Q-005 decides otherwise.
 - **Speak up if something doesn't fit.** The system should fit how you work, not the other way round.
@@ -163,3 +164,5 @@ The same traffic-light rule that governs the vault applies to anything you paste
 | Progress visibility | Every reply opens with a stage marker (see §8) | 2026-09-19 |
 | Guidance style | Steps only; explanations on request, or when a mistake would be expensive to undo (see §7) | 2026-09-21 |
 | Document master | The vault repo; project knowledge syncs `mine/projects/thinking-system/` (see §2) | 2026-09-21 |
+| Diagrams | Mermaid only, in documents, chat and the vault (D-073, see §8) | 2026-09-26 |
+| Writing style | Short phrasing: the count or the noun first (see §8) | 2026-09-26 |
