@@ -1,16 +1,46 @@
 ---
 type: overview
 status: verified
-sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
 created: "2026-09-22"
-updated: "2026-09-24"
-tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval"]
+updated: "2026-09-28"
+tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation"]
 ---
 # Overview
 
 The current picture across every source, on one page. Rewritten at each ingest, not appended to.
 
-## The picture so far
+The wiki now has two strands that don't yet touch:
+- **Knowledge management:** five sources on how to build and organise a knowledge base.
+- **UK financial regulation:** one source, the statute that sets up the FCA and the PRA.
+
+The sections on agreement, disagreement and comparison below apply to the knowledge-management strand only. With one source, the regulation strand has nothing to compare yet.
+
+## Strand 1: UK financial regulation
+- **FSMA 2000 Part 1A.** [[wiki/sources/Source - FSMA 2000 Part 1A]] sets up the two regulators and their relationship ([[raw/uk-parliament-fsma-2000-part-1a.md]]):
+  - the [[wiki/entities/Financial Conduct Authority]]
+  - the [[wiki/entities/Prudential Regulation Authority]], which is the [[wiki/entities/Bank of England]] acting through its Prudential Regulation Committee
+  - the relationship between them
+- **Who regulates whom.** The FCA supervises every authorised person. The PRA supervises only those whose permission includes at least one PRA-regulated activity. Those firms are dual-regulated; the rest answer to the FCA alone ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1L, 2B(5), 2K). See [[wiki/concepts/Solo and dual regulation]].
+- **Different jobs.** [[wiki/concepts/Regulatory objectives]]:
+  - The FCA works for well-functioning markets through consumer protection, integrity and competition ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B).
+  - The PRA works for the safety and soundness of firms, and explicitly not for zero failures ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 2B, 2G).
+  - Since 2023 both carry a secondary competitiveness and growth objective ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1EB, 2H).
+- **For products.** The FCA's reach is set by [[wiki/concepts/Regulated financial services]], which names payment services and e-money directly ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1H(2)). Its [[wiki/concepts/Consumer protection objective]] weighs product risk, consumer capability and consumer responsibility against firms' duty of care ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1C(2)).
+- **Coordination.** [[wiki/concepts/FCA-PRA coordination]]:
+  - a duty to consult where one regulator's action may harm the other's objectives
+  - a memorandum of understanding reviewed every year
+  - a one-way PRA power to stop FCA action on stability grounds
+  - two-way directions for consolidated group supervision
+  - Treasury orders drawing the boundary between the regulators
+
+  ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 3D–3M)
+- **Treasury levers.** [[wiki/entities/HM Treasury]] holds the political levers: recommendations, reviews, directed rule reviews, and requirements to make rules ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1JA, 1S, 3RC, 3RE).
+- **Open points.** The clip leaves two things unresolved:
+  - which activities are PRA-regulated (s. 22A isn't in the source)
+  - which of the two texts of the s. 3B(1)(c) principle applies where
+
+## Strand 2: knowledge management
 - **LLM Wiki.** [[wiki/sources/Source - LLM Wiki]] describes the compiled-wiki pattern that this vault implements:
   - three layers: raw sources, wiki, schema
   - three operations: ingest, query, lint
@@ -78,6 +108,10 @@ The current picture across every source, on one page. Rewritten at each ingest, 
   - Topic pages vs. project folders: the compiled wiki's concept pages ([[raw/karpathy-llm-wiki.md]]) vs. PARA's projects-first order ([[raw/forte-para-method.md]]). Neither source addresses the other.
 
 ## Gaps worth a new source
+- FSMA s. 22A and the PRA-Regulated Activities Order: the list of activities that makes a firm dual-regulated.
+- The current FCA–PRA memorandum of understanding (s. 3E): how coordination works in practice.
+- FCA conduct rules that build on the consumer protection objective for lending, cards and payments, such as the Consumer Duty and the consumer credit sourcebook, plus the Payment Services Regulations 2017.
+- The rest of FSMA: Schedules 1ZA and 1ZB, and Part 4A permissions.
 - The rest of Forte's PARA material, if the clip is partial: setting it up, moving items between categories, how PARA relates to linking. Also any Forte piece on how PARA and a knowledge base or Zettelkasten fit together.
 - Matuschak's uncaptured notes, especially "concept-oriented" and "prefer associative ontologies to hierarchical taxonomies". They hold the reasons that the PARA disagreement turns on.
 - A head-to-head comparison of a compiled wiki and RAG on the same corpus and questions (carried over).
@@ -92,3 +126,4 @@ The current picture across every source, on one page. Rewritten at each ingest, 
 - [[wiki/sources/Source - Evergreen notes]]: Matuschak's hub page defining evergreen notes and their five principles.
 - [[wiki/sources/Source - Contextual Retrieval]]: Anthropic's post on improving RAG.
 - [[wiki/sources/Source - The PARA Method]]: Forte's four-category system for organising by actionability.
+- [[wiki/sources/Source - FSMA 2000 Part 1A]]: the statute setting up the FCA and PRA, their objectives and their coordination.

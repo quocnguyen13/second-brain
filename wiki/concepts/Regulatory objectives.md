@@ -1,0 +1,51 @@
+---
+type: concept
+status: verified
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+created: "2026-09-28"
+updated: "2026-09-28"
+tags: ["uk-financial-regulation", "financial-regulators"]
+---
+# Regulatory objectives
+
+These are the statutory goals the FCA and the PRA must advance when they make rules, codes, guidance and general policy. They come in tiers: strategic, operational or general, and secondary ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B, 2B, 2H).
+
+## What the sources say
+
+### FCA
+- **Strategic objective.** Ensure that the relevant markets function well ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(2)). Relevant markets are defined in s. 1F.
+- **Operational objectives** ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B(3), 1C–1E):
+  - [[wiki/concepts/Consumer protection objective]]
+  - integrity of the UK financial system, meaning:
+    - its soundness, stability and resilience
+    - no use for financial crime
+    - no insider dealing or market manipulation
+    - orderly markets
+    - transparent price formation
+  - competition in consumers' interests
+- **How they combine.** In its general functions the FCA must act compatibly with the strategic objective and advance one or more operational objectives, "so far as is reasonably possible" ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(1)).
+- **Competition.** Separately, the FCA must promote effective competition, but only as far as compatible with consumer protection and integrity ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(4)). What it may weigh in judging competition includes switching, access (including in deprived areas), barriers to entry and innovation ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1E(2)).
+- **Secondary objective.** Competitiveness and growth: the UK's international competitiveness and medium-to-long-term growth, subject to international standards ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B(4A), 1EB).
+
+### PRA
+- **General objective.** The safety and soundness of PRA-authorised persons ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2B(2)). It is advanced mainly by protecting financial stability, limiting the damage from failures, and protecting the continuity of core services at ring-fenced bodies ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2B(3)).
+- **Insurance objective.** An appropriate degree of protection for policyholders ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2C(2)).
+- **Additional objectives.** The Treasury may specify them when adding activities ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2D).
+- **Secondary objectives.** Competition, and competitiveness and growth ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2H(1)–(1B)).
+- **Limit.** The objectives do not require the PRA to prevent every failure ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2G).
+
+### Accountability for the objectives
+- **Guidance.** Each regulator must publish guidance on how it will advance its objectives, after consulting the other ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1K, 2I).
+- **Rule reviews.** A review of rules directed by the Treasury must report whether the rules advance the regulator's objectives, including the secondary ones ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3RD(2)).
+- **Amendment.** The Treasury may amend some of the FCA's definitions by order ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1J).
+
+## Where sources disagree
+- None found.
+
+## Mentioned in
+- [[wiki/sources/Source - FSMA 2000 Part 1A]]
+
+## Related
+- [[wiki/entities/Financial Conduct Authority]]
+- [[wiki/entities/Prudential Regulation Authority]]
+- [[wiki/concepts/Regulatory principles]]

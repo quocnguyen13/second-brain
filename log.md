@@ -39,3 +39,6 @@ Clean: 2. With problems: 9. Already checked: 0. Insights to re-read: 0.
 
 ## [2026-09-25] drafts | 0 checked
 Clean: 0. With problems: 0. Already checked: 0. Insights to re-read: 1.
+
+## [2026-09-28] ingest | FSMA 2000 Part 1A
+Pages: +11 new, 0 updated. No conflicts. Flags: clip lost section numbers on inserted sections and s. 1H(8) text; s. 3B(1)(c) shown in two versions; s. 22A (PRA-regulated activities) not in source, so Solo and dual regulation is unverified (general knowledge).
