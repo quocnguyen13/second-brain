@@ -5,15 +5,17 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-19
+reviewed: 2026-09-30
 tags: [project/thinking-system]
 ---
 
-# 01 Project Charter
+# 11 Project Charter
 
 Back to [[00 Project Home]]
 
 ## 1. Vision
+> [!note] Superseded as the product vision by [[10 Product Vision]] (D-076). Kept as MVP 1's starting point.
+
 A knowledge base that compounds. I collect sources and ask good questions; Claude compiles what I read into a linked, maintained wiki; and my own conclusions live in a layer I own. Nothing useful disappears into chat history, and Claude always has my context.
 
 ## 2. Problem
@@ -23,7 +25,7 @@ A knowledge base that compounds. I collect sources and ask good questions; Claud
 - Notes kept by hand fall out of date, because the bookkeeping is the tedious part and it never gets done.
 
 ## 3. The bet
-The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging contradictions. I do the sourcing, the questions, and the judgment. See [[02 System Architecture]].
+The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging contradictions. I do the sourcing, the questions, and the judgment. See [[30 System Architecture]].
 
 ## 4. MVP
 **The MVP is the working loop:** ingest a source → the wiki updates itself → ask a question → get an answer with citations → file the good answers back → lint keeps it healthy.
@@ -34,10 +36,10 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 - The three operations: ingest, query, lint
 - `index.md` and `log.md`, maintained by Claude
 - A thinking layer I own, for insights and decisions
-- Enough Obsidian to read, review, and search the vault ([[05 Obsidian Essentials]])
+- Enough Obsidian to read, review, and search the vault ([[70 Obsidian Essentials]])
 
 **Out of scope for the MVP**
-- **Bank data governance (parked as doc 12).** The MVP takes personal and public sources only, so the rules aren't needed yet. They get written before any work material enters the vault.
+- **Bank data governance (parked as doc 36).** The MVP takes personal and public sources only, so the rules aren't needed yet. They get written before any work material enters the vault.
 - Running any of this on a bank device or against bank systems
 - Product-owner workflows (module M7, after the MVP)
 - Sync, phone capture, semantic search, custom tooling
@@ -54,7 +56,7 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 ## 6. Success criteria for the MVP
 - 5 sources ingested; `index.md` and `log.md` current.
 - An ingest of source 5 updates at least 3 existing pages.
-- 10 test prompts: at least 9 answered from the wiki with correct citations ([[08 Claude Operating Instructions]] §5).
+- 10 test prompts: at least 9 answered from the wiki with correct citations ([[40 Claude Operating Instructions]] §5).
 - One query answer filed back as an analysis page.
 - One lint pass that finds a planted contradiction and a planted uncited claim.
 - At least 5 insight pages written or accepted by me in `mine/`.
@@ -62,7 +64,7 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 ## 7. Owner profile
 - Product Owner at a commercial bank
 - Setup: personal Windows PC, Claude Pro, comfortable with the terminal, more than 6 hours a week
-- Still to confirm: note language(s), notes to migrate, phone capture (Q-005 to Q-007 in [[07 Decision Log]])
+- Still to confirm: note language(s), notes to migrate, phone capture (Q-005 to Q-007 in [[03 Decision Log]])
 
 ## 8. Principles
 1. **I own the sources and the conclusions; Claude owns the compilation.**
@@ -70,7 +72,7 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 3. **Plain Markdown in git.** No lock-in, and every change can be undone.
 4. **Start manual, then automate.** Learn the vault by using it before handing over the bookkeeping.
 5. **Minimal tooling.** Core Obsidian features first.
-6. **Personal and public sources only, until doc 12 exists.**
+6. **Personal and public sources only, until doc 36 exists.**
 
 ## 9. Constraints
 - Claude Pro covers Claude Code, but usage limits are shared with claude.ai, so a large batch ingest can eat the day's allowance.
@@ -80,9 +82,9 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 ## 10. Risks
 | Risk | Mitigation |
 |---|---|
-| The wiki becomes confidently wrong | Citation rule, unverified status, lint, git diffs ([[03 Trust and Provenance]]) |
+| The wiki becomes confidently wrong | Citation rule, unverified status, lint, git diffs ([[31 Trust and Provenance]]) |
 | Claude's own summaries get treated as evidence | Wiki pages cite `raw/`, never other wiki pages, as their source of fact |
 | I stop reading what Claude writes | Ingest one source at a time and stay involved; weekly lint |
-| Bank material drifts into the vault before the rules exist | One standing rule in [[03 Trust and Provenance]] §4 until doc 12 is written |
+| Bank material drifts into the vault before the rules exist | One standing rule in [[31 Trust and Provenance]] §4 until doc 36 is written |
 | Claude edits or deletes the wrong thing | Permission rules, manual approval outside the allowed paths, git history |
 | Usage limits run out mid-task | Ingest sources singly; check `/usage` |

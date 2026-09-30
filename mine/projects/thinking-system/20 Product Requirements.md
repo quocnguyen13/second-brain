@@ -5,20 +5,20 @@ status: active
 trust: ai-draft
 origin: claude
 created: 2026-09-26
-reviewed: 2026-09-26
+reviewed: 2026-09-30
 tags: [project/thinking-system, prd]
 ---
 
-# 23 Product Requirements
+# 20 Product Requirements
 
-Back to [[00 Project Home]] · Owned by M0 – Project Management ([[09 Working Agreement]] §4) · Diagrams in Mermaid ([[07 Decision Log]] D-073)
+Back to [[00 Project Home]] · Owned by M0 – Project Management ([[02 Working Agreement]] §4) · Diagrams in Mermaid ([[03 Decision Log]] D-073)
 
 > [!abstract] What this is
-> The whole system, for a reader starting from zero: what it is, how it's built, how each command runs, where data lives, who may write what, and what happens when something goes wrong. Compiled from docs 01–22 and the live vault files on 2026-09-26, after the MVP (M0–M6). Where this page and a source document differ, the source document and the vault files win.
+> The whole system, for a reader starting from zero: what it is, how it's built, how each command runs, where data lives, who may write what, and what happens when something goes wrong. Compiled from the other project docs and the live vault files on 2026-09-26, after the MVP (M0–M6). Where this page and a source document differ, the source document and the vault files win.
 
 **Reading order:** §1 → §3 for the picture; §4 → §6 for the detail; §8 for failure modes; §11 for terms.
 
-**Reading the diagrams** ([[09 Working Agreement]] §8, D-074):
+**Reading the diagrams** ([[02 Working Agreement]] §8, D-074):
 - Every group names its level: `Stage`, `Role`, `Location`, `User story` or `Legend`.
 - Shapes: rounded = user action · rectangle = Claude or system step · diamond = check · cylinder = folder, file or store · slanted box = output.
 - Colours are explained by a legend in the diagram, or once per section.
@@ -57,7 +57,7 @@ A personal knowledge base on Karpathy's **LLM Wiki** pattern: compile sources on
 ### 1.5 Scope
 **In (MVP, complete 2026-09-25):** one vault in git; Claude Code inside it with schema, conventions and permission rules; ingest, ask, file-answer, lint, drafts; `index.md` and `log.md`; a thinking layer the user owns; enough Obsidian to read, review and search.
 
-**Out:** work or bank material until doc 12 (Data Governance) exists (D-018); bank devices and systems; product-owner workflows (candidates for MVP 2); sync, phone capture, semantic search, custom tooling.
+**Out:** work or bank material until doc 36 (Data Governance) exists (D-018); bank devices and systems; product-owner workflows (candidates for MVP 2); sync, phone capture, semantic search, custom tooling.
 
 ### 1.6 Principles
 1. The user owns sources and conclusions; Claude owns the compilation.
@@ -65,7 +65,7 @@ A personal knowledge base on Karpathy's **LLM Wiki** pattern: compile sources on
 3. Plain Markdown in git: no lock-in, every change reversible.
 4. Start manual, then automate: learn the vault by using it before handing over the bookkeeping.
 5. Minimal tooling: core Obsidian features first (D-006).
-6. Personal and public sources only, until doc 12 exists.
+6. Personal and public sources only, until doc 36 exists.
 
 ### 1.7 State on 2026-09-26
 | Item | Count |
@@ -150,7 +150,7 @@ Every story is the user's: "As the user, I want to …". IDs never change. All 1
 | US-10 | review and undo any change | Claude can't damage my knowledge | `raw/` blocked; deletions blocked; writes outside the allow list ask first; every change passes through `git diff` | Permission rules, git (M1, M2) |
 | US-11 | keep work material out until rules exist for it | nothing confidential enters the vault or the chats | Claude flags and stops on confidential material; personal and public sources only | Data boundary (D-018) |
 | US-12 | clear every queue in one weekly session | the system stays current without daily effort | 7 steps in about 45 minutes; two views show what needs attention | Weekly review (M5, M6) |
-| US-13 | plan and change the system from any device | it evolves under my control | Threads work from synced docs; changed files only; decisions logged; needs go to the backlog first | Module threads, docs 07, 09, 22 (M0) |
+| US-13 | plan and change the system from any device | it evolves under my control | Threads work from synced docs; changed files only; decisions logged; needs go to the backlog first | Module threads, docs 03, 02, 22 (M0) |
 
 ### 3.2 End-to-end flow
 One row per user story, left to right through 4 stages: user input → process → store → output.
@@ -303,7 +303,7 @@ flowchart TB
 Three rules hold the structure together: **`raw/` is immutable, `wiki/` is Claude's, `mine/` is the user's.** Every input enters through `inbox/`. Empty folders hold a `.gitkeep` so git keeps them.
 
 ### 4.1 Input · `inbox/`
-One door per command, so an operation always knows what it's handed ([[13 Input Zones]]).
+One door per command, so an operation always knows what it's handed ([[33 Input Zones]]).
 
 | Path | Holds | User | Claude | Permission |
 |---|---|---|---|---|
@@ -379,8 +379,8 @@ By design the user doesn't edit wiki pages. Corrections go through `inbox/checks
 |---|---|---|---|---|
 | `mine/drafts/` | Claude's insight drafts waiting for a decision | Keeps one by writing a new page in `insights/`, else deletes it | Writes 1–3 per ingest; `/drafts` adds a Check section and `checked` | R · W |
 | `mine/insights/` | One claim per page, in the user's words | Writes every one (D-063); re-reads; archives | Reads (`/drafts` only). Never writes | R · Ask (rule: never) |
-| `mine/decisions/` | The user's own work and life decisions. Decisions about this system go in doc 07 (D-066) | Writes, from the Decision template | Doesn't write | R · Ask (rule: never) |
-| `mine/projects/` | Active work. `thinking-system/` holds project docs 00–23 | Writes; places delivered project docs | Doesn't write. Project threads deliver files for the user to place | R · Ask (rule: never) |
+| `mine/decisions/` | The user's own work and life decisions. Decisions about this system go in doc 03 (D-066) | Writes, from the Decision template | Doesn't write | R · Ask (rule: never) |
+| `mine/projects/` | Active work. `thinking-system/` holds the project docs listed in [[00 Project Home]] | Writes; places delivered project docs | Doesn't write. Project threads deliver files for the user to place | R · Ask (rule: never) |
 | `mine/journal/` | Daily notes (Obsidian Daily notes) | Writes | Doesn't write | R · Ask (rule: never) |
 | `mine/scratch/` | Where every new note starts (D-029); emptied weekly | Writes; sorts weekly | Doesn't write | R · Ask (rule: never) |
 
@@ -409,10 +409,10 @@ By design the user doesn't edit wiki pages. Corrections go through `inbox/checks
 | `CLAUDE.md` | The schema: layers, citation discipline, zones, operations, standing rules. Under 200 lines | Approves every change | Loads every session | R · Ask |
 | `system/context.md` | Who the user is, current focus, glossary. Public level | Maintains | Loads every session | R · Ask |
 | `system/conventions.md` | Page types, properties, linking, naming | Approves changes | Loads every session | R · Ask |
-| `system/templates/` | 9 templates, one per page type ([[10 Templates]]) | Inserts into own notes (Mod+P → Insert template) | Reads before creating any page | R · Ask |
+| `system/templates/` | 9 templates, one per page type ([[34 Templates]]) | Inserts into own notes (Mod+P → Insert template) | Reads before creating any page | R · Ask |
 | `.claude/skills/<name>/SKILL.md` | The 5 procedures | Places skill files (Claude can't write here unprompted) | Loads a skill only when its command is typed | R · Ask (protected) |
 
-**Rules:** `CLAUDE.md` is mirrored in doc 08 §2, each skill in doc 08 §4, `Review.base` in doc 05 §6. Change file and mirror in the same commit.
+**Rules:** `CLAUDE.md` is mirrored in doc 40 §2, each skill in doc 40 §4, `Review.base` in doc 70 §6. Change file and mirror in the same commit.
 
 ### 4.7 Enforcement and records
 | Path | Holds | User | Claude | Permission |
@@ -428,7 +428,7 @@ By design the user doesn't edit wiki pages. Corrections go through `inbox/checks
 
 ## 5. Functions
 
-6 commands from 5 skills, run in a Claude Code session started at the vault root. Full procedures: `.claude/skills/<name>/SKILL.md`, mirrored in [[08 Claude Operating Instructions]] §4.
+6 commands from 5 skills, run in a Claude Code session started at the vault root. Full procedures: `.claude/skills/<name>/SKILL.md`, mirrored in [[40 Claude Operating Instructions]] §4.
 
 | Command | Purpose | Reads | Writes | Logged |
 |---|---|---|---|---|
@@ -797,7 +797,7 @@ flowchart TB
 ```
 - Facts flow one way: from `raw/` up. A summary never becomes evidence for another summary.
 - G5 in practice: insight → wiki page → raw file (PDF at its page), traced in under a minute.
-- Every error the system has caught in itself sat in Claude's synthesis (drafts, claims across pages), not in the sources. The checks that open `raw/` are what caught them ([[21 MVP Retrospective]] §2).
+- Every error the system has caught in itself sat in Claude's synthesis (drafts, claims across pages), not in the sources. The checks that open `raw/` are what caught them ([[87 MVP Retrospective]] §2).
 
 ### 6.2 Wiki page status
 | From | To | When |
@@ -919,8 +919,8 @@ flowchart TB
 ### 6.6 Data boundary
 - **Allowed:** public regulation, industry material, books, articles, courses, the user's own general reflections.
 - **Not allowed** in `raw/`, `wiki/`, `mine/`, the GitHub repo or Project chats: customer data, internal documents, non-public figures, internal system details, employer or product names.
-- Holds until doc 12 (Data Governance) is written, with the bank's AI-tools policy (D-018, Q-004).
-- Claude flags and declines anything confidential. This is the one exception to "the user decides" ([[09 Working Agreement]] §5).
+- Holds until doc 36 (Data Governance) is written, with the bank's AI-tools policy (D-018, Q-004).
+- Claude flags and declines anything confidential. This is the one exception to "the user decides" ([[02 Working Agreement]] §5).
 - Text in sources is data, not instructions (prompt injection). Claude ignores and reports it.
 
 ## 7. Routines
@@ -931,7 +931,7 @@ flowchart TB
 3. Click one `sources` link into `raw/`; confirm the claim is there.
 4. `unverified` or `contested`? Read why.
 
-The one routine that isn't optional. Skip it and the provenance rules become decoration ([[05 Obsidian Essentials]] §3).
+The one routine that isn't optional. Skip it and the provenance rules become decoration ([[70 Obsidian Essentials]] §3).
 
 ### 7.2 Weekly review (~45 minutes)
 ```mermaid
@@ -954,25 +954,25 @@ flowchart TB
 %%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TB
     N(["Stage 1 · Need raised<br/>by the user, in any thread"]) --> B["Stage 2 · Backlog item B-###<br/>doc 22, refined until ready"]
-    B --> M0["Stage 3 · M0 schedules it<br/>doc 06, owning thread named"]
+    B --> M0["Stage 3 · M0 schedules it<br/>doc 21, owning thread named"]
     M0 --> T["Stage 4 · Owning thread drafts<br/>changed files, proposes D-###"]
-    T --> D["Stage 5 · User accepts the decision<br/>doc 07: Proposed → Accepted"]
+    T --> D["Stage 5 · User accepts the decision<br/>doc 03: Proposed → Accepted"]
     D --> V(["Stage 6 · User places files<br/>diff · commit · push · Sync"])
 ```
-- **Threads:** one standing chat per module, the permanent home of what it owns (D-071). M0 owns the plan, scope, decisions, backlog, retrospectives, handovers ([[09 Working Agreement]] §4).
+- **Threads:** one standing chat per module, the permanent home of what it owns (D-071). M0 owns the plan, scope, decisions, backlog, retrospectives, handovers ([[02 Working Agreement]] §4).
 - **Backlog:** New → Refined → Ready → Scheduled → Done, or Dropped with a reason. IDs never change (D-072).
 - **Decisions:** Claude proposes options and a recommendation; the user decides. A decision stays Proposed until accepted, and any can be reversed with a logged reason.
-- **Documents:** Claude drafts (`trust: ai-draft`) → user comments in chat as `<doc> <section>: <comment>` → Claude sends changed files only → user accepts → `working`. Document numbers never change.
+- **Documents:** Claude drafts (`trust: ai-draft`) → user comments in chat as `<doc> <section>: <comment>` → Claude sends changed files only → user accepts → `working`. Documents are numbered by SDLC stage, and a number never changes once given (D-080).
 - **Handovers** close each build module; a **retrospective** closes each phase.
 - **Every reply** from a thread opens with a stage marker, e.g. `M3 · First Ingests · in progress`.
-- Mirrored files (`CLAUDE.md`, skills, `Review.base`) change together with their copy in doc 05 or 08, in one commit.
+- Mirrored files (`CLAUDE.md`, skills, `Review.base`) change together with their copy in doc 70 or 40, in one commit.
 
 ## 8. Failure modes and edge cases across the system
 | Situation | What happens | Guard |
 |---|---|---|
-| Claude Code started in a subfolder | `/raw/**` and other rules point at the wrong place | Always start at the vault root (08 §3) |
-| Terminal opened as administrator | Elevated session on an account named Admin | Normal terminal only (15 M1 Handover) |
-| `ANTHROPIC_API_KEY` set | Usage billed to the API, not Pro | Check it's unset; answer No to the prompt (08 §6) |
+| Claude Code started in a subfolder | `/raw/**` and other rules point at the wrong place | Always start at the vault root (40 §3) |
+| Terminal opened as administrator | Elevated session on an account named Admin | Normal terminal only (81 M1 Handover) |
+| `ANTHROPIC_API_KEY` set | Usage billed to the API, not Pro | Check it's unset; answer No to the prompt (40 §6) |
 | A plugin or connector turned on at claude.ai | Syncs into vault sessions | `/mcp` and `claude plugin list` at the start of each module |
 | Project doc open in Obsidian while files are replaced | An edit can be lost (happened in M3) | Close the docs; read `git diff` before committing |
 | Obsidian rewrites properties or `Review.base` in its own style | Harmless reformatting | Copy the vault version back into the mirror |
@@ -983,11 +983,11 @@ flowchart TB
 | Claude's summary drifts from the source | Caught when a check opens `raw/` | `/file-answer` re-check, `/lint` deep check, `/drafts` |
 | A page that never changes | Would never be deep-checked again | Full deep check on the first `/lint` each month (D-060) |
 | Citation to the wrong PDF page | Low finding; status stands when the claim is in the file | D-061 |
-| Two threads take the same decision ID before a Sync | Clash in doc 07 | M0 renumbers the later one |
+| Two threads take the same decision ID before a Sync | Clash in doc 03 | M0 renumbers the later one |
 | Project chat asked about the vault | Can't see it: only synced docs | Draft in chat, paste into a zone at the next vault session |
 | A draft left undecided | Queue grows; Claude's words linger | Every draft decided at the weekly review (D-063) |
 | Insight built on a page that later changed | The insight may no longer hold | `/drafts` re-read list; `reviewed` date |
-| Work material wanted in the vault | Not allowed yet | Doc 12 first (D-018) |
+| Work material wanted in the vault | Not allowed yet | Doc 36 first (D-018) |
 
 ## 9. Quality and acceptance
 | Suite | Tests | Proves | Result |
@@ -997,9 +997,9 @@ flowchart TB
 | Lint L1–L6 | 6 | Catches a mis-cited claim and a contradiction on real cases; ticks checks; applies exactly the named fixes; re-checks only what changed | 6 of 6, 2026-09-24 |
 | Drafts R1–R5 | 5 | Checks every draft against `raw/`, confirms quotes, flags overlaps, gives no advice, lists the right insight to re-read | 5 of 5, 2026-09-25 |
 
-Tests run on the real wiki with nothing planted (D-052, D-059, D-064). Results in `system/test-results.md`; prompts in [[08 Claude Operating Instructions]] §5.
+Tests run on the real wiki with nothing planted (D-052, D-059, D-064). Results in `system/test-results.md`; prompts in [[40 Claude Operating Instructions]] §5.
 
-**MVP criteria ([[01 Project Charter]] §6): 6 of 6, met 2026-09-25.**
+**MVP criteria ([[11 Project Charter]] §6): 6 of 6, met 2026-09-25.**
 1. 5 sources ingested; `index.md` and `log.md` current.
 2. Source 5 updated ≥3 existing pages (it updated 6).
 3. ≥9 of 10 test prompts answered from the wiki with correct citations (10).
@@ -1017,15 +1017,15 @@ Tests run on the real wiki with nothing planted (D-052, D-059, D-064). Results i
 - No re-read check for decision pages.
 - Synced claude.ai skills still load in vault sessions (Q-015 open).
 
-**Parked:** bank data governance (doc 12); anything on a bank device or against work systems; a naming rule for sources with no author; a rule for uncited lines that restate cited claims; lint's suggested sources (Luhmann, Matuschak's associative-ontologies note, Forte's PARA chapter); a weekly reminder.
+**Parked:** bank data governance (doc 36); anything on a bank device or against work systems; a naming rule for sources with no author; a rule for uncited lines that restate cited claims; lint's suggested sources (Luhmann, Matuschak's associative-ontologies note, Forte's PARA chapter); a weekly reminder.
 
 **Backlog ([[22 Product Backlog]])**
 | ID | Item | Status |
 |---|---|---|
-| B-001 | Office documents as sources | New; full value waits on doc 12 |
+| B-001 | Office documents as sources | New; full value waits on doc 36 |
 | B-002 | Mermaid diagrams in wiki pages or as sources | New, on hold. Format settled by D-073 |
 
-**Candidates for MVP 2** (scoped in M0, [[21 MVP Retrospective]]): product-owner workflows (doc 11: meeting notes to decisions, stakeholder briefs, prioritisation reasoning), doc 12, phone capture and sync, a hook that enforces page status, a weekly digest.
+**Candidates for MVP 2** (scoped in M0, [[87 MVP Retrospective]]): product-owner workflows (doc 35: meeting notes to decisions, stakeholder briefs, prioritisation reasoning), doc 36, phone capture and sync, a hook that enforces page status, a weekly digest.
 
 ## 11. Glossary
 | Term | Meaning |
@@ -1052,25 +1052,28 @@ Tests run on the real wiki with nothing planted (D-052, D-059, D-064). Results i
 | Allow / deny rule | A line in `.claude/settings.json` that lets a write run without a prompt / blocks it |
 | Manual mode | Claude Code asks before any write not on the allow list |
 | Module | A unit of the build plan (M0–M6 so far), with its own standing thread |
-| Handover | The document closing a build module (docs 14–20) |
-| D-### / Q-### / B-### | Decision / open question (doc 07) / backlog item (doc 22) |
+| Handover | The document closing a build module (docs 80–86) |
+| D-### / Q-### / B-### | Decision / open question (doc 03) / backlog item (doc 22) |
 | Sync | The button that pulls `mine/projects/thinking-system/` from GitHub into the Project |
 
 ## 12. Document map
+Numbered by SDLC stage (D-080); the full list, with planned documents, is in [[00 Project Home]].
+
 | # | Document | Read for |
 |---|---|---|
-| 00 | [[00 Project Home]] | Document list, change log |
-| 01 | [[01 Project Charter]] | Vision, goals, MVP scope and criteria |
-| 02 | [[02 System Architecture]] | Layers, operations, components |
-| 03 | [[03 Trust and Provenance]] | Citation rules, status, data boundary |
-| 04 | [[04 Vault Blueprint]] | Folders, page types, properties, naming |
-| 05 | [[05 Obsidian Essentials]] | Setup, toolkit, reviewing an ingest, weekly review |
-| 06 | [[06 Roadmap]] | Modules and their exits |
-| 07 | [[07 Decision Log]] | Every decision and open question |
-| 08 | [[08 Claude Operating Instructions]] | `CLAUDE.md`, settings, the 5 skills in full, tests, setup |
-| 09 | [[09 Working Agreement]] | Roles, document loop, threads and ownership |
-| 10 | [[10 Templates]] | The 9 templates |
-| 13 | [[13 Input Zones]] | The three zones |
-| 14–20 | Handovers | What each module built and learnt |
-| 21 | [[21 MVP Retrospective]] | What worked, what didn't, MVP 2 inputs |
-| 22 | [[22 Product Backlog]] | Needs waiting to be scheduled |
+| 00 | [[00 Project Home]] | Document list by stage, what's missing, change log |
+| 02 | [[02 Working Agreement]] | Roles, document loop, threads and ownership, delivery framework |
+| 03 | [[03 Decision Log]] | Every decision and open question |
+| 10 | [[10 Product Vision]] | Target group, needs, measures, milestones, capabilities |
+| 11 | [[11 Project Charter]] | MVP 1: goals, scope and criteria |
+| 21 | [[21 Roadmap]] | Modules and their exits |
+| 22 | [[22 Product Backlog]] | Capabilities and features waiting to be scheduled |
+| 30 | [[30 System Architecture]] | Layers, operations, components |
+| 31 | [[31 Trust and Provenance]] | Citation rules, status, data boundary |
+| 32 | [[32 Vault Blueprint]] | Folders, page types, properties, naming |
+| 33 | [[33 Input Zones]] | The three zones |
+| 34 | [[34 Templates]] | The 9 templates |
+| 40 | [[40 Claude Operating Instructions]] | `CLAUDE.md`, settings, the 5 skills in full, tests, setup |
+| 70 | [[70 Obsidian Essentials]] | Setup, toolkit, reviewing an ingest, weekly review |
+| 80–86 | Handovers | What each module built and learnt |
+| 87 | [[87 MVP Retrospective]] | What worked, what didn't, MVP 2 inputs |

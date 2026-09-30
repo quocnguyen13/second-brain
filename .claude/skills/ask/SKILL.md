@@ -4,7 +4,7 @@ description: Answer one question from the wiki, with citations back to raw/. Run
 disable-model-invocation: true
 argument-hint: "[question]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /ask
 

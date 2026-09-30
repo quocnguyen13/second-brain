@@ -9,20 +9,20 @@ reviewed: 2026-09-24
 tags: [project/thinking-system, handover]
 ---
 
-# 19 M5 Handover
+# 85 M5 Handover
 
-Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[18 M4 Handover]]
+Back to [[00 Project Home]] · Modules in [[21 Roadmap]] §2 · Previous: [[84 M4 Handover]]
 
 **Module M5 – Lint and Review · closed 2026-09-24. Next: M6 – Thinking Layer.**
 
 ## What was done
-- **The `lint` skill**, at `.claude/skills/lint/SKILL.md` and mirrored in [[08 Claude Operating Instructions]] §4.4. It follows the same pattern as the other skills: it runs only when you type the command and carries no `allowed-tools` (D-041). It has two modes:
+- **The `lint` skill**, at `.claude/skills/lint/SKILL.md` and mirrored in [[40 Claude Operating Instructions]] §4.4. It follows the same pattern as the other skills: it runs only when you type the command and carries no `allowed-tools` (D-041). It has two modes:
   - **`/lint`** scans every page, deep-checks cited passages in `raw/`, reads `inbox/checks.md` last, and writes a numbered report to `system/lint/`. It changes nothing in `wiki/` (D-055).
   - **`/lint apply <numbers>`** makes the fixes you name, from the report file, and records them in the report and `log.md`.
 - **`CLAUDE.md`:** the lint section is now a pointer to the skill. Two citation rules were added: a mis-cited claim counts as uncited, and `unverified` wins over `contested` (D-057).
-- **Review views:** `system/views/Review.base` holds **Needs attention** and **Draft queue** (D-058). It is bookmarked and mirrored in [[05 Obsidian Essentials]] §6.
-- **The weekly review:** seven steps in [[05 Obsidian Essentials]] §4.
-- **Lint tests L1–L6 passed, 6 of 6**, on the real cases M4 found, with nothing planted (D-059). Results are in `system/test-results.md`. M5's exit criterion, and the lint criterion in [[01 Project Charter]] §6, are met.
+- **Review views:** `system/views/Review.base` holds **Needs attention** and **Draft queue** (D-058). It is bookmarked and mirrored in [[70 Obsidian Essentials]] §6.
+- **The weekly review:** seven steps in [[70 Obsidian Essentials]] §4.
+- **Lint tests L1–L6 passed, 6 of 6**, on the real cases M4 found, with nothing planted (D-059). Results are in `system/test-results.md`. M5's exit criterion, and the lint criterion in [[11 Project Charter]] §6, are met.
 - **Two lint passes cleaned the wiki:**
   - 13 fixes from the first report and 3 from the second, all approved by number.
   - The unsupported Resources ranking claim is gone from both pages.
@@ -37,7 +37,7 @@ Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[18 M
 | First run: the Resources contradiction was resolved inside finding 1, but the report named the analysis page only in the fix | A contradiction finding now names both pages, with their lines, and says which one `raw/` supports |
 | Second run: two real errors on pages the first run had deep-checked and passed (how the PARA clip ends, and an uncited Scope line) | D-060: the first run of each month deep-checks every page. Otherwise a page that doesn't change would never be deep-checked again |
 | Second run: lint asked whether a citation to the wrong PDF page is High, which would make the page `unverified` | D-061: it's a Low location fix when the claim is in the cited file |
-| Obsidian rewrote `Review.base` in its own style when the view was first used | No change. The doc 05 mirror now copies the vault's version |
+| Obsidian rewrote `Review.base` in its own style when the view was first used | No change. The doc 70 mirror now copies the vault's version |
 | The apply run pointed out a gap its fix didn't cover instead of fixing beyond the report | No change. This is the behaviour D-055 wants |
 
 ## Decisions made in M5
@@ -61,7 +61,7 @@ All accepted on 2026-09-24 except D-062.
 - **Branch `main`**, in step with `origin/main` at `c38e95b`.
 - **Your file, `system/context.md`:** "Current focus" still says M3.
 
-## MVP status ([[01 Project Charter]] §6)
+## MVP status ([[11 Project Charter]] §6)
 | Criterion | Status |
 |---|---|
 | 5 sources ingested; `index.md` and `log.md` current | Met (M3) |
@@ -74,9 +74,9 @@ All accepted on 2026-09-24 except D-062.
 **5 of 6.** D-062 proposes closing M5 on its own exit criterion and meeting the last one in M6. M6's own exit, 5 insight pages you wrote, linked to wiki pages, meets it anyway. If you kept drafts locally and haven't pushed yet, push and this line changes.
 
 ## What M6 must produce
-From [[06 Roadmap]] §2:
+From [[21 Roadmap]] §2:
 1. `mine/insights/` and `mine/decisions/` in use.
-2. The drafts routine: how a Claude draft becomes an insight of yours, or is deleted. [[05 Obsidian Essentials]] §4 step 5 is the current one-line version.
+2. The drafts routine: how a Claude draft becomes an insight of yours, or is deleted. [[70 Obsidian Essentials]] §4 step 5 is the current one-line version.
 3. The weekly review running, with its first full cycle through steps 4–7.
 
 **M6 is done when** 5 insight pages you wrote are in `mine/insights/`, each linked to wiki pages through its Relations block. That also closes the MVP (D-062).
@@ -88,13 +88,13 @@ From [[06 Roadmap]] §2:
 |---|---|---|
 | Q-015 | Hide the synced claude.ai skills (D-040): the `skillOverrides` entry still needs the names from `~/.claude/skills/synced` | When you're next at the terminal |
 | Q-008 | Which product-owner routines matter most | M7 |
-| Q-004 | Your bank's AI-tools policy | M8, with doc 12 |
+| Q-004 | Your bank's AI-tools policy | M8, with doc 36 |
 
 ## Parked in M5
 - **Uncited restating lines.** Lint reads an uncited line that restates claims cited in the same section as synthesis, not as a claim. It made that call on its own. Write it down as a rule if it starts to matter.
 - **Checking drafts.** Lint doesn't check `mine/drafts/` against `raw/`. M6 decides whether a draft's claims get checked before you keep it.
 - **Sources lint suggested:** a primary source on the Zettelkasten (Luhmann, "Communicating with Slip Boxes"), Matuschak's "Prefer associative ontologies to hierarchical taxonomies" note, and Forte's book chapter on PARA.
-- **A weekly reminder or digest.** Still a candidate for later ([[06 Roadmap]] §2).
+- **A weekly reminder or digest.** Still a candidate for later ([[21 Roadmap]] §2).
 
 ## Risks to watch in M6
 - **Keeping drafts by clicking.** Moving a draft to `mine/insights/` without rewriting it makes Claude's words look like yours, which undoes goal G4. Rewrite before you keep.

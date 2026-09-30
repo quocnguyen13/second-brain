@@ -1,6 +1,6 @@
 # Test results
 
-The test prompts from `mine/projects/thinking-system/08 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10), six lint tests for M5 (passes at 6 of 6) and five drafts tests for M6 (passes at 5 of 5). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
+The test prompts from `mine/projects/thinking-system/40 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10), six lint tests for M5 (passes at 6 of 6) and five drafts tests for M6 (passes at 5 of 5). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
 
 Result: `Pass`, `Fail`, or `Partial` with a note. A `Partial` counts as a fail for the exit bar.
 
@@ -23,7 +23,7 @@ Result: `Pass`, `Fail`, or `Partial` with a note. A `Partial` counts as a fail f
 
 ## After the run
 - Commit test 8's analysis page on its own: `git commit -m "file: <title>"`.
-- No fails in run 1. The minor findings went into the fix batch of 2026-09-24 ([[18 M4 Handover]]); none needed a rerun.
+- No fails in run 1. The minor findings went into the fix batch of 2026-09-24 ([[84 M4 Handover]]); none needed a rerun.
 - For each fail: what Claude did, which skill or rule it points to, and the fix. Fixes go in the skill or `CLAUDE.md`, then the failed test is rerun and recorded as a new row.
 
 ## Run 2 — M5 lint
@@ -57,7 +57,7 @@ Run on the 11 drafts as M3's ingests left them; nothing is planted (D-064). Comm
 | R2 | (same run) | for the 7 drafts that cite nothing in `raw/`, gives where each quoted claim sits and confirms the quotes word for word, e.g. "the key configuration file" at `raw/karpathy-llm-wiki.md` line 44, and Bush's "nibbled by a few" on PDF page 7 | Pass | 2026-09-25 | All 7 uncited drafts have every claim located as "holds, uncited", with line or page: "the key configuration file" at line 44, "nibbled by a few" on page 7, and the rest. Checked by Claude in the project chat: every location and quote is right. |
 | R3 | (same run) | flags three problems: `Per-source review beats batch ingest for this vault` gives Karpathy a reason he doesn't state (catching errors before pages compound; line 48 says only that he stays involved and guides the emphasis); `Bush linked documents, evergreen notes link ideas` leaves out that Bush's trails also hold the user's own comments and longhand analysis (PDF pages 16–17); and two drafts label their own reasoning "(general knowledge)" | Pass | 2026-09-25 | Per-source review: "holds in part", no reason about compounding (line 48). Bush linked documents: "Left out", the user's own comments and longhand analysis (pages 16–17). Wrong label on both the Memex and Raw-wiki drafts. |
 | R4 | (same run) | names at least two overlap groups, the three Bush drafts and the evergreen/PARA pair (`Evergreen-note practice belongs in mine, not in the wiki`, `Organise work by project and knowledge by concept`); notes the `contested` pages drafts lean on, such as `PARA method` and `Compiled wiki`; and gives no keep-or-delete advice | Pass | 2026-09-25 | The three Bush drafts point at each other; Evergreen-note practice and Organise work point at each other, and Epics joins them. Every draft names the `contested` pages it leans on. No keep-or-delete advice in the drafts or the session. |
-| R5 | After the first cycle, with insights written and committed: set one insight's `reviewed` to `2026-09-20`, then run `/drafts` in a fresh session | lists that insight and only that one, with its linked wiki pages updated after 2026-09-20; re-checks no draft that already has `checked`; writes nothing in `mine/insights/`. Set `reviewed` back afterwards, and `git status` shows only `log.md` changed | Pass | 2026-09-25 | Commit a7fb417. No drafts to check; listed the Epics insight and no other, with its three linked pages updated 2026-09-24. Wrote only the `log.md` entry; the change to the Epics file is your `reviewed` edit, which Obsidian also reformatted. It noted `reviewed` earlier than `created` and left it alone. It couldn't say which operation changed each page, because `log.md` names page counts, not pages (parked in [[20 M6 Handover]]). |
+| R5 | After the first cycle, with insights written and committed: set one insight's `reviewed` to `2026-09-20`, then run `/drafts` in a fresh session | lists that insight and only that one, with its linked wiki pages updated after 2026-09-20; re-checks no draft that already has `checked`; writes nothing in `mine/insights/`. Set `reviewed` back afterwards, and `git status` shows only `log.md` changed | Pass | 2026-09-25 | Commit a7fb417. No drafts to check; listed the Epics insight and no other, with its three linked pages updated 2026-09-24. Wrote only the `log.md` entry; the change to the Epics file is your `reviewed` edit, which Obsidian also reformatted. It noted `reviewed` earlier than `created` and left it alone. It couldn't say which operation changed each page, because `log.md` names page counts, not pages (parked in [[86 M6 Handover]]). |
 
 **Score:** 5 of 5. M6 exit met.
 

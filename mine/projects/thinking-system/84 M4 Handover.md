@@ -9,14 +9,14 @@ reviewed: 2026-09-24
 tags: [project/thinking-system, handover]
 ---
 
-# 18 M4 Handover
+# 84 M4 Handover
 
-Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[17 M3 Handover]]
+Back to [[00 Project Home]] · Modules in [[21 Roadmap]] §2 · Previous: [[83 M3 Handover]]
 
 **Module M4 – Ask and File-back · closed 2026-09-24. Next: M5 – Lint and Review.**
 
 ## What was done
-- Two skills written, placed in `.claude/skills/`, and mirrored in [[08 Claude Operating Instructions]] §4.2–4.3. Both follow the `ingest` pattern: they run only when you type the command, and carry no `allowed-tools` (D-041).
+- Two skills written, placed in `.claude/skills/`, and mirrored in [[40 Claude Operating Instructions]] §4.2–4.3. Both follow the `ingest` pattern: they run only when you type the command, and carry no `allowed-tools` (D-041).
   - **`/ask`** answers the question typed after the command, or else the oldest open one in `inbox/questions.md`. It searches `wiki/` as well as reading `index.md` (D-049), and traces each claim to a wiki page and then to a file in `raw/`. When the wiki has nothing, it opens with "Nothing in the wiki on this." It writes nothing but the tick in the queue (D-048).
   - **`/file-answer`** files the last answer in the session as a page in `wiki/analyses/`. It re-reads every cited passage in `raw/` first (D-050), and links the new page from the pages it drew on, for context only (D-051). It also updates `index.md` and `log.md`.
 - `CLAUDE.md`'s ask section is now a pointer, plus three rules for questions asked without the command.
@@ -56,8 +56,8 @@ Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[17 M
 - **Your file, `system/context.md`:** "Current focus" still says M3. Update it yourself when convenient.
 
 ## What M5 must produce
-1. The `lint` skill at `.claude/skills/lint/SKILL.md`, following the same pattern: user-invoked only, no `allowed-tools`, mirrored in doc 08 §4. It runs the standing checks in `CLAUDE.md`, works through `inbox/checks.md`, and writes `system/lint/report-<YYYY-MM-DD>.md`. It changes nothing else without your approval.
-2. The two Bases views from [[05 Obsidian Essentials]] §4: **Needs attention** (`unverified` or `contested`) and **Draft queue** (`mine/drafts`). Bases is a core plugin, so D-006 is kept.
+1. The `lint` skill at `.claude/skills/lint/SKILL.md`, following the same pattern: user-invoked only, no `allowed-tools`, mirrored in doc 40 §4. It runs the standing checks in `CLAUDE.md`, works through `inbox/checks.md`, and writes `system/lint/report-<YYYY-MM-DD>.md`. It changes nothing else without your approval.
+2. The two Bases views from [[70 Obsidian Essentials]] §4: **Needs attention** (`unverified` or `contested`) and **Draft queue** (`mine/drafts`). Bases is a core plugin, so D-006 is kept.
 3. The weekly routine: a `/lint` run, both views, and a pass through `mine/scratch`.
 
 **M5 is done when** a lint pass catches a contradiction and an uncited claim.
@@ -72,12 +72,12 @@ Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[17 M
 |---|---|---|
 | Q-015 | Hide the synced claude.ai skills (D-040): the `skillOverrides` entry still needs the names from `~/.claude/skills/synced` | When you're next at the terminal |
 | Q-008 | Which product-owner routines matter most | M7 |
-| Q-004 | Your bank's AI-tools policy | M8, with doc 12 |
+| Q-004 | Your bank's AI-tools policy | M8, with doc 36 |
 
 ## Parked in M4
 - A naming rule for a source with no author.
 - Long analysis titles: the title is the question word for word.
-- Your work-domain sources, such as Basel texts and regulator rules. Test 6 showed the gap, and doc 16 puts them after the MVP.
+- Your work-domain sources, such as Basel texts and regulator rules. Test 6 showed the gap, and doc 82 puts them after the MVP.
 
 ## Risks to watch in M5
 - **Lint that fixes instead of reporting.** `CLAUDE.md` says lint changes nothing without your approval, but `wiki/` is on the allow list, so an edit wouldn't prompt. The skill has to write the report and stop, like `ingest` step 1.

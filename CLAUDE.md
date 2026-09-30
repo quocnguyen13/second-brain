@@ -1,4 +1,4 @@
-<!-- Live schema. Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §2; change both in the same commit. Keep under 200 lines. -->
+<!-- Live schema. Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §2; change both in the same commit. Keep under 200 lines. -->
 # Vault schema
 
 This vault is a compiled knowledge base with three layers:

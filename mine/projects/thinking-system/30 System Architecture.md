@@ -9,9 +9,9 @@ reviewed: 2026-09-24
 tags: [project/thinking-system, architecture]
 ---
 
-# 02 System Architecture
+# 30 System Architecture
 
-Back to [[00 Project Home]] · Related: [[03 Trust and Provenance]] · [[04 Vault Blueprint]] · [[08 Claude Operating Instructions]]
+Back to [[00 Project Home]] · Related: [[31 Trust and Provenance]] · [[32 Vault Blueprint]] · [[40 Claude Operating Instructions]]
 
 ## 1. The pattern we adopted
 From Karpathy's LLM Wiki idea file. Rather than retrieving from raw documents each time a question is asked, the assistant compiles those documents once into a maintained wiki and keeps it current. The knowledge accumulates instead of being re-derived, and the cross-references and contradictions are already there when you ask.
@@ -29,10 +29,10 @@ His summary of the roles fits this project exactly: Obsidian is the IDE, the LLM
 | Addition | Why |
 |---|---|
 | **A thinking layer you own** (`mine/`) | The wiki records what your sources say. It has no home for what *you* conclude. Insights, decisions, and project notes live in `mine/`, where Claude can only leave drafts in `mine/drafts/`. |
-| **Provenance rules** | Every wiki claim cites a source in `raw/`. Uncited claims are marked unverified. This stops Claude's own summaries from becoming evidence for later summaries ([[03 Trust and Provenance]]). |
+| **Provenance rules** | Every wiki claim cites a source in `raw/`. Uncited claims are marked unverified. This stops Claude's own summaries from becoming evidence for later summaries ([[31 Trust and Provenance]]). |
 | **Insight extraction at ingest** | Each ingest also proposes 1–3 single-idea drafts into `mine/drafts/`, so reading feeds your thinking layer, not only the reference layer. |
-| **An enforcement layer** | Permission rules and git, so the zones hold in practice and every change can be undone ([[08 Claude Operating Instructions]]). |
-| **A one-page Obsidian reference** | Just the Obsidian this system needs, picked up while building; no curriculum ([[05 Obsidian Essentials]], D-026). |
+| **An enforcement layer** | Permission rules and git, so the zones hold in practice and every change can be undone ([[40 Claude Operating Instructions]]). |
+| **A one-page Obsidian reference** | Just the Obsidian this system needs, picked up while building; no curriculum ([[70 Obsidian Essentials]], D-026). |
 | **Product-owner workflows** | After the MVP: meeting notes to decisions, stakeholder briefs, prioritization reasoning (module M7). |
 
 ## 4. Components
@@ -65,7 +65,7 @@ flowchart LR
     D --> Y{You review} --> M[(mine/)]
 ```
 
-Each operation has its own input zone, so the three never mix: see [[13 Input Zones]].
+Each operation has its own input zone, so the three never mix: see [[33 Input Zones]].
 
 **Ingest.** You drop a source into `inbox/sources/` and run `/ingest`. Claude reads it, discusses the takeaways with you, writes a summary page, updates every entity and concept page it touches, records contradictions with what's already there, proposes insight drafts, updates `index.md`, and appends to `log.md`. One source can touch ten or more pages. Do them one at a time and stay involved.
 

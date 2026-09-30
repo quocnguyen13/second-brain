@@ -1,6 +1,6 @@
 # Conventions
 
-<!-- Short version of doc 04 Vault Blueprint, loaded every session. Templates are in system/templates/ (doc 10). -->
+<!-- Short version of doc 32 Vault Blueprint, loaded every session. Templates are in system/templates/ (doc 34). -->
 
 ## Page types
 | `type` | Folder | Title | Template |

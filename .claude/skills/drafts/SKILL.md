@@ -4,7 +4,7 @@ description: Check the insight drafts in mine/drafts/ against raw/ before I deci
 disable-model-invocation: true
 argument-hint: "[draft title]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /drafts
 

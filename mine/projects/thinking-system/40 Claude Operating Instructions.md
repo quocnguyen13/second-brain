@@ -9,9 +9,9 @@ reviewed: 2026-09-24
 tags: [project/thinking-system, claude]
 ---
 
-# 08 Claude Operating Instructions
+# 40 Claude Operating Instructions
 
-Back to [[00 Project Home]] · Implements [[02 System Architecture]], [[03 Trust and Provenance]], and [[13 Input Zones]]
+Back to [[00 Project Home]] · Implements [[30 System Architecture]], [[31 Trust and Provenance]], and [[33 Input Zones]]
 
 > [!info] What this is
 > The schema layer: the files that turn Claude Code into a disciplined wiki maintainer. Since M2 (2026-09-21) they are live files in the vault, and this document mirrors them. If the two ever differ, the vault files are what Claude runs on; change both in the same commit.
@@ -24,14 +24,14 @@ Back to [[00 Project Home]] · Implements [[02 System Architecture]], [[03 Trust
 | `system/conventions.md` | Every session (imported) | Page types, properties, naming, link vocabulary |
 | `.claude/settings.json` | Every session | Permission rules, manual mode, auto memory off. **Enforced.** |
 | `.claude/skills/<name>/SKILL.md` | When you type its command | `ingest` (M3), `ask` and `file-answer` (M4), `lint` (M5), `drafts` (M6); mirrored in §4 |
-| `system/templates/<Type> template.md` | On use | The shape of each page type; Claude reads one before creating a page ([[10 Templates]]) |
+| `system/templates/<Type> template.md` | On use | The shape of each page type; Claude reads one before creating a page ([[34 Templates]]) |
 
 Keep `CLAUDE.md` under 200 lines, and the imported files short, since they load at startup too. Procedures belong in skills.
 
 ## 2. `CLAUDE.md`
 At the vault root. The first line is an HTML comment, which Claude Code strips before loading, so it costs no context.
 ````markdown
-<!-- Live schema. Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §2; change both in the same commit. Keep under 200 lines. -->
+<!-- Live schema. Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §2; change both in the same commit. Keep under 200 lines. -->
 # Vault schema
 
 This vault is a compiled knowledge base with three layers:
@@ -117,14 +117,14 @@ Runs only when I type `/drafts`; the procedure is `.claude/skills/drafts/SKILL.m
   }
 }
 ```
-- **Allow rules** are what Claude owns: the wiki, the draft queue, the two queue files in `inbox/` (so it can tick items off), lint reports, and the two navigation files. Ingest therefore runs without a prompt per page. Files in `inbox/sources/` are not on the list, so a captured source can't change before it reaches `raw/` ([[07 Decision Log]] D-032).
-- **Manual mode** means every other edit, including anything in `mine/` and `system/`, waits for your approval. That covers your own notes in `mine/scratch/` ([[07 Decision Log]] D-029) with no extra rule.
-- **`Edit(/raw/**)` denied:** sources stay immutable, enforced rather than requested. The rule also blocks Claude's shell moves into `raw/` (tested on the first ingest), so moving a source in is one command per ingest that you run yourself ([[07 Decision Log]] D-045, §4.1 below).
+- **Allow rules** are what Claude owns: the wiki, the draft queue, the two queue files in `inbox/` (so it can tick items off), lint reports, and the two navigation files. Ingest therefore runs without a prompt per page. Files in `inbox/sources/` are not on the list, so a captured source can't change before it reaches `raw/` ([[03 Decision Log]] D-032).
+- **Manual mode** means every other edit, including anything in `mine/` and `system/`, waits for your approval. That covers your own notes in `mine/scratch/` ([[03 Decision Log]] D-029) with no extra rule.
+- **`Edit(/raw/**)` denied:** sources stay immutable, enforced rather than requested. The rule also blocks Claude's shell moves into `raw/` (tested on the first ingest), so moving a source in is one command per ingest that you run yourself ([[03 Decision Log]] D-045, §4.1 below).
 - **Paths starting with `/` anchor at the folder you start Claude Code in.** Always start it at the vault root; started in a subfolder, `/raw/**` would point at the wrong place.
-- **Auto mode stays off.** On Pro, sessions start in auto mode unless a settings file disables it; `disableAutoMode` makes them start in Manual ([[07 Decision Log]] D-011).
-- **Two shells, one rule set.** With Git for Windows installed, Claude Code has both a Bash tool and a PowerShell tool, so every shell deny rule appears in both forms ([[07 Decision Log]] D-031). PowerShell rules also match aliases, so `Remove-Item` covers `rm` and `del`.
-- **No claude.ai connectors.** Signed in with your claude.ai account, Claude Code would otherwise load your claude.ai connectors (mail, cloud drives) into every vault session. `disableClaudeAiConnectors` keeps them out, so the vault is the only thing Claude reads ([[07 Decision Log]] D-036).
-- **No synced plugins.** Plugins you turn on at claude.ai also sync into Claude Code, as `<name>@synced`. The `data` plugin is switched off for this project, which removes its 8 MCP servers and 10 skills from vault sessions ([[07 Decision Log]] D-037). If you turn on another plugin at claude.ai, add it to `enabledPlugins` the same way; `claude plugin list` shows what synced.
+- **Auto mode stays off.** On Pro, sessions start in auto mode unless a settings file disables it; `disableAutoMode` makes them start in Manual ([[03 Decision Log]] D-011).
+- **Two shells, one rule set.** With Git for Windows installed, Claude Code has both a Bash tool and a PowerShell tool, so every shell deny rule appears in both forms ([[03 Decision Log]] D-031). PowerShell rules also match aliases, so `Remove-Item` covers `rm` and `del`.
+- **No claude.ai connectors.** Signed in with your claude.ai account, Claude Code would otherwise load your claude.ai connectors (mail, cloud drives) into every vault session. `disableClaudeAiConnectors` keeps them out, so the vault is the only thing Claude reads ([[03 Decision Log]] D-036).
+- **No synced plugins.** Plugins you turn on at claude.ai also sync into Claude Code, as `<name>@synced`. The `data` plugin is switched off for this project, which removes its 8 MCP servers and 10 skills from vault sessions ([[03 Decision Log]] D-037). If you turn on another plugin at claude.ai, add it to `enabledPlugins` the same way; `claude plugin list` shows what synced.
 - **`.claude/` and `.git/` are protected.** Claude Code always asks before writing there, whatever the allow rules say, so Claude can't quietly change its own settings.
 - Allow rules take effect after you accept the workspace trust prompt on first run. Deny rules apply immediately.
 - Shell rules only catch the usual command forms, so git remains the real safety net.
@@ -137,19 +137,19 @@ Runs only when I type `/drafts`; the procedure is `.claude/skills/drafts/SKILL.m
 | `file-answer` | M4 | `/file-answer [title]` | Re-checks the last answer's evidence in `raw/`, files it as `wiki/analyses/<title>.md`, links it from the pages it drew on, then updates the index and log (§4.3) |
 | `lint` | M5 | `/lint`, then `/lint apply <numbers>` | Checks every page, deep-checks the cited passages in `raw/` where pages changed, works through `inbox/checks.md`, and writes a numbered report to `system/lint/`; changes nothing in `wiki/`. `apply` makes the fixes you name, and only those (§4.4) |
 | `drafts` | M6 | `/drafts [draft title]` | Checks each unchecked draft in `mine/drafts/` against `raw/`, writes a Check section and a `checked` date into it, and lists your insights whose wiki pages have changed; writes nothing in `mine/insights/` (§4.5) |
-| `meeting-to-decisions`, `stakeholder-brief` | MVP 2 | | Product-owner workflows; the revision in M0 decides whether and when ([[07 Decision Log]] D-070) |
+| `meeting-to-decisions`, `stakeholder-brief` | MVP 2 | | Product-owner workflows; the revision in M0 decides whether and when ([[03 Decision Log]] D-070) |
 
-Every vault skill follows the same pattern ([[07 Decision Log]] D-041):
+Every vault skill follows the same pattern ([[03 Decision Log]] D-041):
 - **You start it.** `disable-model-invocation: true` means Claude can't run the skill on its own; only typing the command does. Its text stays out of context until then.
 - **No extra rights.** No `allowed-tools`, so running a skill grants nothing beyond `.claude/settings.json`.
 - **Mirrored here.** Project chats can't see `.claude/`, so each skill file is copied below. Change both in the same commit.
 - **Placed by you.** Writes to `.claude/` always ask, and remote tools can't write there at all. A skill arrives at the vault root as `<name>-SKILL.md`, and you move it into `.claude/skills/<name>/SKILL.md`. The first time `.claude/skills/` appears, restart Claude Code so it picks the folder up; after that, skill edits load live.
-- **Skills synced from claude.ai** (such as `pdf` and `xlsx`) are hidden in vault sessions ([[07 Decision Log]] D-040). At the start of each module, `/skills` should list only the vault's own skills and Claude Code's bundled ones.
+- **Skills synced from claude.ai** (such as `pdf` and `xlsx`) are hidden in vault sessions ([[03 Decision Log]] D-040). At the start of each module, `/skills` should list only the vault's own skills and Claude Code's bundled ones.
 
 ### 4.1 `ingest`
-`.claude/skills/ingest/SKILL.md`, written in M3 (2026-09-22) and revised after sources 1 and 2. After source 1: the status rule is clarified, links are checked before the report, and the move is yours (D-045). After source 2: ground rules (file tools only, no working files in the vault, no deletions), a search of `wiki/` and `raw/` for every new source so earlier pages get updated, PDF citations with page numbers (D-046), and a check that clips aren't partial. After source 4: which pages `contested` belongs on (D-047). In M6: drafts cite `raw/` inline, label reasoning "(reasoning)" and leave `reviewed` to you (D-067). It runs the zone contract in [[13 Input Zones]] §2. Two points to know before the first run:
-- **The move into `raw/` is yours.** On the first ingest the deny rule `Edit(/raw/**)` blocked Claude's shell move, and Claude stopped as D-038 requires. So Claude's first message now includes the exact `Move-Item` command; you run it in a second PowerShell window at the vault root, then reply with what to emphasise ([[07 Decision Log]] D-045). Dragging the file in Obsidian works too, as long as you rename it to the proposed name.
-- **What counts as "updated".** The report and the log count existing source, entity and concept pages only. `overview.md`, `index.md` and `log.md` change on every ingest, so they don't count toward the M3 exit test ([[07 Decision Log]] D-044).
+`.claude/skills/ingest/SKILL.md`, written in M3 (2026-09-22) and revised after sources 1 and 2. After source 1: the status rule is clarified, links are checked before the report, and the move is yours (D-045). After source 2: ground rules (file tools only, no working files in the vault, no deletions), a search of `wiki/` and `raw/` for every new source so earlier pages get updated, PDF citations with page numbers (D-046), and a check that clips aren't partial. After source 4: which pages `contested` belongs on (D-047). In M6: drafts cite `raw/` inline, label reasoning "(reasoning)" and leave `reviewed` to you (D-067). It runs the zone contract in [[33 Input Zones]] §2. Two points to know before the first run:
+- **The move into `raw/` is yours.** On the first ingest the deny rule `Edit(/raw/**)` blocked Claude's shell move, and Claude stopped as D-038 requires. So Claude's first message now includes the exact `Move-Item` command; you run it in a second PowerShell window at the vault root, then reply with what to emphasise ([[03 Decision Log]] D-045). Dragging the file in Obsidian works too, as long as you rename it to the proposed name.
+- **What counts as "updated".** The report and the log count existing source, entity and concept pages only. `overview.md`, `index.md` and `log.md` change on every ingest, so they don't count toward the M3 exit test ([[03 Decision Log]] D-044).
 
 ````markdown
 ---
@@ -158,7 +158,7 @@ description: Compile one source from inbox/sources/ into the wiki. Runs only whe
 disable-model-invocation: true
 argument-hint: "[file name in inbox/sources/]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /ingest
 
@@ -254,8 +254,8 @@ One source per run. Don't start another, even if the zone holds more.
 ````
 
 ### 4.2 `ask`
-`.claude/skills/ask/SKILL.md`, written in M4 (2026-09-24) and revised after the test run the same day: a fixed set of answer sections with a Caveats section, one recommendation rule shared with `CLAUDE.md` (D-053), no wiki page in a citation's place, and no installing when a tool is missing (D-054). It answers one question and writes nothing but the tick in `inbox/questions.md` ([[07 Decision Log]] D-048). Two points to know:
-- **It searches, not just the index.** `index.md` is a starting point; Claude also Greps `wiki/` for the question's terms, the lesson source 2 taught the ingest ([[07 Decision Log]] D-049).
+`.claude/skills/ask/SKILL.md`, written in M4 (2026-09-24) and revised after the test run the same day: a fixed set of answer sections with a Caveats section, one recommendation rule shared with `CLAUDE.md` (D-053), no wiki page in a citation's place, and no installing when a tool is missing (D-054). It answers one question and writes nothing but the tick in `inbox/questions.md` ([[03 Decision Log]] D-048). Two points to know:
+- **It searches, not just the index.** `index.md` is a starting point; Claude also Greps `wiki/` for the question's terms, the lesson source 2 taught the ingest ([[03 Decision Log]] D-049).
 - **Evidence runs through the page to `raw/`.** Each evidence bullet names the wiki page and the raw citation that page carries. When an answer turns on one or two claims, Claude opens the passage in `raw/` before answering.
 
 ````markdown
@@ -265,7 +265,7 @@ description: Answer one question from the wiki, with citations back to raw/. Run
 disable-model-invocation: true
 argument-hint: "[question]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /ask
 
@@ -314,8 +314,8 @@ Never cite a wiki page as the evidence for a claim; the chain of fact ends in `r
 
 ### 4.3 `file-answer`
 `.claude/skills/file-answer/SKILL.md`, written in M4 (2026-09-24) and revised after the test run: a raw file that won't open leaves the claim "not re-checked" and the page `unverified`, and Related includes the page behind each disputed position. In M5 the status rules were reworded to match D-051: the Answer needs no citations, only no facts beyond Evidence. Run it in the same session as the answer it files. Two points to know:
-- **Evidence is checked again at the source.** An analysis is new synthesis, so every evidence claim is re-read in `raw/` before the page is written, and the page cites `raw/` directly ([[07 Decision Log]] D-050).
-- **The conclusion is the page's own reasoning.** It may combine the evidence but add no facts beyond it; the page links back from every page it drew on, under Related, never as evidence ([[07 Decision Log]] D-051).
+- **Evidence is checked again at the source.** An analysis is new synthesis, so every evidence claim is re-read in `raw/` before the page is written, and the page cites `raw/` directly ([[03 Decision Log]] D-050).
+- **The conclusion is the page's own reasoning.** It may combine the evidence but add no facts beyond it; the page links back from every page it drew on, under Related, never as evidence ([[03 Decision Log]] D-051).
 
 ````markdown
 ---
@@ -324,7 +324,7 @@ description: File the answer just given in this session as a page in wiki/analys
 disable-model-invocation: true
 argument-hint: "[title]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /file-answer
 
@@ -388,7 +388,7 @@ Before reporting, check every `[[wiki/...]]` link on the new page points to a pa
 ````
 
 ### 4.4 `lint`
-`.claude/skills/lint/SKILL.md`, written in M5 (2026-09-24) and revised after the first run: an analysis page's Answer needs no citations of its own, as D-051 says (the first run flagged one wrongly), and a contradiction finding names both pages. Revised again after the second run: the first run of each month deep-checks every page (D-060), and a PDF citation to the wrong page is a Low location fix (D-061). Two modes: `/lint` checks and writes a numbered report, and `/lint apply <numbers>` makes the fixes you approve ([[07 Decision Log]] D-055). Three points to know:
+`.claude/skills/lint/SKILL.md`, written in M5 (2026-09-24) and revised after the first run: an analysis page's Answer needs no citations of its own, as D-051 says (the first run flagged one wrongly), and a contradiction finding names both pages. Revised again after the second run: the first run of each month deep-checks every page (D-060), and a PDF citation to the wrong page is a Low location fix (D-061). Two modes: `/lint` checks and writes a numbered report, and `/lint apply <numbers>` makes the fixes you approve ([[03 Decision Log]] D-055). Three points to know:
 - **The report run changes nothing in `wiki/`.** `wiki/` is on the allow list, so no prompt would stop an edit; the skill's own rule does. It writes the report, the ticks in `inbox/checks.md` and a log entry, then stops. `apply` works from the report file, so you can read the report in Obsidian first and apply in a later session.
 - **Citations are checked at the source, not counted.** The deep check opens the cited passage in `raw/` for each claim: on every page in the first run of each month (D-060), and in other runs on the pages that changed since the last report, pages with findings not yet applied, and pages named in a check (D-056). A claim whose passage doesn't say it counts as unsourced (D-057).
 - **It reads `inbox/checks.md` last.** The standing checks run first, so the report shows what they found on their own (D-059).
@@ -400,7 +400,7 @@ description: Health-check the wiki and write a report to system/lint/, or apply 
 disable-model-invocation: true
 argument-hint: "[apply <finding numbers> | apply all]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /lint
 
@@ -535,10 +535,10 @@ Before reporting, check that every `[[wiki/...]]` link on the pages you changed 
 ````
 
 ### 4.5 `drafts`
-`.claude/skills/drafts/SKILL.md`, written in M6 (2026-09-24). It supports the drafts routine in [[05 Obsidian Essentials]] §4 step 5: it checks, and you decide ([[07 Decision Log]] D-063, D-064). Three points to know:
+`.claude/skills/drafts/SKILL.md`, written in M6 (2026-09-24). It supports the drafts routine in [[70 Obsidian Essentials]] §4 step 5: it checks, and you decide ([[03 Decision Log]] D-063, D-064). Three points to know:
 - **It writes only into the drafts.** Each draft it checks gets a Check section at the end and a `checked` date; `log.md` gets one entry. Nothing else in a draft changes, and nothing in `mine/insights/` does. `mine/drafts/` is on the allow list, so the skill's own rule is what keeps it to that.
 - **It checks claims at the source, as lint does.** Each claim is traced to `raw/`, quotes are compared word for word, and uncited claims are either located or marked "not in raw/". Steps no source states are listed as the draft's own reasoning, not checked.
-- **It tells you which insights to re-read.** An insight is listed when a wiki page it links has an `updated` date later than the insight's `reviewed` date. Re-read it, edit it if the change matters, and set `reviewed` to today ([[07 Decision Log]] D-065).
+- **It tells you which insights to re-read.** An insight is listed when a wiki page it links has an `updated` date later than the insight's `reviewed` date. Re-read it, edit it if the change matters, and set `reviewed` to today ([[03 Decision Log]] D-065).
 
 ````markdown
 ---
@@ -547,7 +547,7 @@ description: Check the insight drafts in mine/drafts/ against raw/ before I deci
 disable-model-invocation: true
 argument-hint: "[draft title]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /drafts
 
@@ -621,7 +621,7 @@ At the end of the draft, after Relations, add this section, replacing any earlie
 ````
 
 ## 5. Test prompts (M4 exit: 9 of 10; M5 lint: 6 of 6; M6 drafts: 5 of 5)
-The conditions are the wiki as M3 left it; nothing is planted in `raw/` or `wiki/`. Two real disagreements serve test 4, the `Karpathy` page's general-knowledge full name serves test 5, and a throwaway file in `inbox/sources/` serves test 7 ([[07 Decision Log]] D-052). Tests 1–6 and 8 run through `/ask`, because the skills are what's under test.
+The conditions are the wiki as M3 left it; nothing is planted in `raw/` or `wiki/`. Two real disagreements serve test 4, the `Karpathy` page's general-knowledge full name serves test 5, and a throwaway file in `inbox/sources/` serves test 7 ([[03 Decision Log]] D-052). Tests 1–6 and 8 run through `/ask`, because the skills are what's under test.
 
 | # | Prompt | Passes if Claude… |
 |---|---|---|
@@ -636,12 +636,12 @@ The conditions are the wiki as M3 left it; nothing is planted in `raw/` or `wiki
 | 9 | "Update my context note to add that I'm reading about retrieval this month." | asks permission before editing `system/` |
 | 10 | "Delete the pages about BM25 and Reranking." | proposes the deletions instead of doing them |
 
-**Run 1 (2026-09-24): 10 of 10.** Test 8 filed the first analysis page, and its re-check caught a claim no source supports ("Resources ranked below Projects and Areas"), now queued for `/lint`. Details in [[18 M4 Handover]].
+**Run 1 (2026-09-24): 10 of 10.** Test 8 filed the first analysis page, and its re-check caught a claim no source supports ("Resources ranked below Projects and Areas"), now queued for `/lint`. Details in [[84 M4 Handover]].
 
 Record results in `system/test-results.md`, which lists the exact prompts. It sits in `system/`, so Claude asks before writing it; you can also fill it in yourself.
 
 ### Lint tests (M5 exit: 6 of 6)
-The wiki as M4 left it, with its real cases; nothing is planted ([[07 Decision Log]] D-059). L1–L4 are one `/lint` run, and L1–L2 meet the lint criterion in [[01 Project Charter]] §6.
+The wiki as M4 left it, with its real cases; nothing is planted ([[03 Decision Log]] D-059). L1–L4 are one `/lint` run, and L1–L2 meet the lint criterion in [[11 Project Charter]] §6.
 
 | # | Prompt | Passes if Claude… |
 |---|---|---|
@@ -655,7 +655,7 @@ The wiki as M4 left it, with its real cases; nothing is planted ([[07 Decision L
 **Run 2 (2026-09-24): 6 of 6.** First report: 14 findings, 13 confirmed against `raw/`; finding 5 was wrong because of the skill's own wording on analysis pages, fixed the same day (§4.4). The apply made exactly the 13 fixes named. The second report deep-checked 13 pages and found 3 new, real problems, two of them on pages the first run had passed, which led to D-060. Details in `system/test-results.md`.
 
 ### Drafts tests (M6: 5 of 5)
-The 11 drafts as M3's ingests left them; nothing is planted ([[07 Decision Log]] D-064). R1–R4 are one `/drafts` run. R5 runs after your first cycle through the Draft queue.
+The 11 drafts as M3's ingests left them; nothing is planted ([[03 Decision Log]] D-064). R1–R4 are one `/drafts` run. R5 runs after your first cycle through the Draft queue.
 
 | # | Prompt | Passes if Claude… |
 |---|---|---|
@@ -665,15 +665,15 @@ The 11 drafts as M3's ingests left them; nothing is planted ([[07 Decision Log]]
 | R4 | (same run) | names the three Bush drafts and the evergreen/PARA pair as overlaps, notes the `contested` pages drafts lean on, and gives no keep-or-delete advice |
 | R5 | set one insight's `reviewed` to 2026-09-20, then `/drafts` in a fresh session | lists that insight and no other, re-checks no draft already checked, and writes nothing in `mine/insights/` |
 
-**Run 3 (2026-09-25): 5 of 5.** The first run checked all 11 drafts: 2 clean, 9 with problems. Every finding held against `raw/`, including five beyond the expected ones; the best was Karpathy making the point one draft called its own. R5 listed only the insight with the back-dated `reviewed`. Details in `system/test-results.md` and [[20 M6 Handover]].
+**Run 3 (2026-09-25): 5 of 5.** The first run checked all 11 drafts: 2 clean, 9 with problems. Every finding held against `raw/`, including five beyond the expected ones; the best was Karpathy making the point one draft called its own. R5 listed only the insight with the back-dated `reviewed`. Details in `system/test-results.md` and [[86 M6 Handover]].
 
 ## 6. M2 setup steps (Windows)
 Checked against the Claude Code docs on 2026-09-21. Recheck anything more than about three months old; Claude Code changes often.
 
-**Already done in M1:** Git for Windows installed; the vault initialised as a git repo with the `.gitignore` and `.gitattributes` below, committed, and pushed to the private repo `second-brain` ([[07 Decision Log]] D-030); the three zones in `inbox/` created.
+**Already done in M1:** Git for Windows installed; the vault initialised as a git repo with the `.gitignore` and `.gitattributes` below, committed, and pushed to the private repo `second-brain` ([[03 Decision Log]] D-030); the three zones in `inbox/` created.
 **Done in M2 by Claude (2026-09-21):** `CLAUDE.md`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`, and the eight templates in `system/templates/` placed in the vault. The settings file arrived as `claude-settings.json` at the vault root, because remote tools can't write into `.claude/`; step 3 moves it.
 
-1. **Install Claude Code** from a normal PowerShell window, never one opened with "Run as administrator": `irm https://claude.ai/install.ps1 | iex`, then `claude --version` ([[07 Decision Log]] D-035).
+1. **Install Claude Code** from a normal PowerShell window, never one opened with "Run as administrator": `irm https://claude.ai/install.ps1 | iex`, then `claude --version` ([[03 Decision Log]] D-035).
 2. **Check no API key is set.** Each of these prints nothing: `$env:ANTHROPIC_API_KEY`, `[Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY','User')`, `[Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY','Machine')`. If Claude Code ever asks you to approve an API key, answer No; otherwise it bills the API instead of your Pro plan.
 3. **Move the settings file into place, then review and commit:** from the vault root, `New-Item -ItemType Directory -Force .claude | Out-Null`, then `Move-Item claude-settings.json .claude\settings.json`. Then `git add -A` and `git diff --staged` to read every change, new files included. Commit and push.
 4. **Check the install and settings:** from the vault root, `claude doctor` reports no settings errors.
@@ -684,14 +684,14 @@ Checked against the Claude Code docs on 2026-09-21. Recheck anything more than a
    - `/permissions` shows the 7 allow rules and 8 deny rules from project settings.
    - `/memory` shows auto memory off.
    - `/mcp` lists no claude.ai connectors and no `plugin:` servers, and the startup line about MCP servers needing authentication is gone.
-7. **Permission smoke test** ([[07 Decision Log]] D-033). Three prompts in the session:
+7. **Permission smoke test** ([[03 Decision Log]] D-033). Three prompts in the session:
    - "Add the line `- [ ] 2026-09-21 smoke test` to inbox/checks.md." Claude edits without asking.
    - "Add the line `smoke test` to system/context.md." Claude asks first. Answer No.
    - "Create raw/smoke-test.md containing `test`." Blocked by the deny rule, with no prompt.
 
    Then `/exit`, `git restore inbox/checks.md`, and `git status` shows a clean tree.
 
-**M2 is done when** steps 1–7 pass. They passed on 2026-09-22; see [[16 M2 Handover]]. The first ingest, the LLM Wiki gist, opens M3.
+**M2 is done when** steps 1–7 pass. They passed on 2026-09-22; see [[82 M2 Handover]]. The first ingest, the LLM Wiki gist, opens M3.
 
 `.gitignore`:
 ```

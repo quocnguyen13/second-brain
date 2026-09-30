@@ -9,9 +9,9 @@ reviewed: 2026-09-25
 tags: [project/thinking-system, vault-design]
 ---
 
-# 04 Vault Blueprint
+# 32 Vault Blueprint
 
-Back to [[00 Project Home]] · Related: [[02 System Architecture]] · [[03 Trust and Provenance]]
+Back to [[00 Project Home]] · Related: [[30 System Architecture]] · [[31 Trust and Provenance]]
 
 ## 1. Structure
 ```
@@ -19,10 +19,10 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 ├── CLAUDE.md              the schema: rules Claude loads every session
 ├── index.md               catalog of every wiki page (Claude maintains)
 ├── log.md                 append-only history of ingests, filings, lints (Claude appends)
-├── .gitignore             files git never tracks (doc 08 §6)
-├── .gitattributes         one line-ending rule for every text file (doc 08 §6)
+├── .gitignore             files git never tracks (doc 40 §6)
+├── .gitattributes         one line-ending rule for every text file (doc 40 §6)
 ├── .obsidian/             Obsidian's own settings; git ignores workspace*.json
-├── inbox/                 THREE INPUT ZONES, one per operation (doc 13)
+├── inbox/                 THREE INPUT ZONES, one per operation (doc 33)
 │   ├── sources/           files awaiting /ingest
 │   ├── questions.md       questions awaiting /ask
 │   └── checks.md          things awaiting /lint
@@ -47,10 +47,10 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 │   ├── conventions.md     short version of this document, for Claude
 │   ├── lint/              dated lint reports
 │   ├── views/             Review.base: the weekly review views (D-058)
-│   └── templates/         one template per page type (doc 10)
+│   └── templates/         one template per page type (doc 34)
 └── .claude/               Claude Code settings and skills (hidden in Obsidian)
 ```
-Three rules make the structure work: **`raw/` is immutable, `wiki/` is Claude's, `mine/` is yours.** Everything enters through `inbox/`, where each operation has its own door ([[13 Input Zones]]).
+Three rules make the structure work: **`raw/` is immutable, `wiki/` is Claude's, `mine/` is yours.** Everything enters through `inbox/`, where each operation has its own door ([[33 Input Zones]]).
 
 Every folder that would otherwise be empty holds a hidden `.gitkeep` file, because git doesn't track empty folders. Without them, a fresh clone of the repo would come back without the structure.
 
@@ -63,7 +63,7 @@ Every folder that would otherwise be empty holds a hidden `.gitkeep` file, becau
 | `analysis` | wiki/analyses | A comparison or filed answer | The question or claim |
 | `overview` | wiki/overview.md | The current picture across all sources, rewritten at each ingest (D-044) | "Overview" |
 | `insight` | mine/insights | One idea of yours | A claim: "Compiled wikis need a provenance rule to stay honest" |
-| `decision` | mine/decisions | A choice in your own work or life: context, options, choice, reasoning. Decisions about this system go in [[07 Decision Log]] (D-066) | "Decision - <topic> - YYYY-MM-DD" |
+| `decision` | mine/decisions | A choice in your own work or life: context, options, choice, reasoning. Decisions about this system go in [[03 Decision Log]] (D-066) | "Decision - <topic> - YYYY-MM-DD" |
 | `project` | mine/projects | Goal, status, links | The project name |
 | `journal` | mine/journal | Daily or weekly note | "YYYY-MM-DD" or "YYYY-Www" |
 

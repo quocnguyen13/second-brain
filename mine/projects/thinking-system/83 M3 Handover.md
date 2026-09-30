@@ -9,14 +9,14 @@ reviewed: 2026-09-22
 tags: [project/thinking-system, handover]
 ---
 
-# 17 M3 Handover
+# 83 M3 Handover
 
-Back to [[00 Project Home]] · Modules in [[06 Roadmap]] §2 · Previous: [[16 M2 Handover]]
+Back to [[00 Project Home]] · Modules in [[21 Roadmap]] §2 · Previous: [[82 M2 Handover]]
 
 **Module M3 – First Ingests · closed 2026-09-22. Next: M4 – Ask and File-back.**
 
 ## What was done
-- The `ingest` skill was written, placed at `.claude/skills/ingest/SKILL.md`, and revised three times as the first ingests exposed gaps. It is mirrored in [[08 Claude Operating Instructions]] §4.1. `CLAUDE.md`'s ingest section is now a three-line pointer (D-012, D-041).
+- The `ingest` skill was written, placed at `.claude/skills/ingest/SKILL.md`, and revised three times as the first ingests exposed gaps. It is mirrored in [[40 Claude Operating Instructions]] §4.1. `CLAUDE.md`'s ingest section is now a three-line pointer (D-012, D-041).
 - Five sources were ingested one at a time, each reviewed before the next (D-022):
   1. Karpathy, LLM Wiki gist
   2. Bush, "As We May Think" (MIT's full-text PDF, after the first clip turned out to be page 1 of 4)
@@ -62,8 +62,8 @@ All accepted on 2026-09-22.
 - **Branch `main`**, in step with `origin/main` once the last batch is pushed.
 
 ## What M4 must produce
-1. The `ask` skill at `.claude/skills/ask/SKILL.md`, and `file-answer`, following the same pattern as `ingest`: user-invoked only, no `allowed-tools`, mirrored in doc 08 §4.
-2. The 10 test prompts in [[08 Claude Operating Instructions]] §5 run and recorded in `system/test-results.md`.
+1. The `ask` skill at `.claude/skills/ask/SKILL.md`, and `file-answer`, following the same pattern as `ingest`: user-invoked only, no `allowed-tools`, mirrored in doc 40 §4.
+2. The 10 test prompts in [[40 Claude Operating Instructions]] §5 run and recorded in `system/test-results.md`.
 3. One answer filed back as a page in `wiki/analyses/`, which is still empty.
 
 **M4 is done when** at least 9 of the 10 prompts pass and one answer is filed as an analysis page.
@@ -78,7 +78,7 @@ All accepted on 2026-09-22.
 |---|---|---|
 | Q-015 | Hide the synced claude.ai skills (D-040): the `skillOverrides` entry still needs the names from `~/.claude/skills/synced` | When you're next at the terminal |
 | Q-008 | Which product-owner routines matter most | M7 |
-| Q-004 | Your bank's AI-tools policy | M8, with doc 12 |
+| Q-004 | Your bank's AI-tools policy | M8, with doc 36 |
 
 ## Parked in M3
 - Matuschak's five principle notes and a primary Zettelkasten source.

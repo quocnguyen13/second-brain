@@ -1,6 +1,6 @@
 # Context
 
-<!-- Loaded into every Claude Code session through CLAUDE.md. You maintain this file; Claude asks before editing it. Keep it short and public-level only: no employer name, products, or internal detail (doc 03 §4). -->
+<!-- Loaded into every Claude Code session through CLAUDE.md. You maintain this file; Claude asks before editing it. Keep it short and public-level only: no employer name, products, or internal detail (doc 31 §4). -->
 
 ## Who I am
 - Product owner at a commercial bank.

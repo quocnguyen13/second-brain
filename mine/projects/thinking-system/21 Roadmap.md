@@ -5,13 +5,15 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-25
+reviewed: 2026-09-30
 tags: [project/thinking-system, roadmap]
 ---
 
-# 06 Roadmap
+# 21 Roadmap
 
-Back to [[00 Project Home]] · MVP defined in [[01 Project Charter]] §4
+Back to [[00 Project Home]] · MVP defined in [[11 Project Charter]] §4
+
+> [!note] Milestones beyond MVP 1 are proposed in [[10 Product Vision]] §4.1. This roadmap gets its MVP 2 module plan once M0 sets that scope.
 
 ## 1. Shape of the plan
 ```mermaid
@@ -27,60 +29,60 @@ flowchart LR
 ```
 
 ## 2. Modules
-One standing thread per module ([[09 Working Agreement]] §4, D-071). After its exit, a module's thread stays open to maintain what it built; that work doesn't reopen its row here. Estimates assume more than 6 hours a week, with no curriculum in the path (D-026).
+One standing thread per module ([[02 Working Agreement]] §4, D-071). After its exit, a module's thread stays open to maintain what it built; that work doesn't reopen its row here. Estimates assume more than 6 hours a week, with no curriculum in the path (D-026).
 
 | Module | Goal | Main outputs | Done when | Estimate |
 |---|---|---|---|---|
-| **M0 – Project Management** (standing, D-070) | First: agree the pattern, scope and ways of working (Foundation). Since then: keep the scope, plan and decisions current | Documents 00–09, 13, 14; the handovers; doc 21 | **Foundation closed 2026-09-19.** Standing since 2026-09-25 | Done, then ongoing |
-| **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[04 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | **Closed 2026-09-21** | Done |
-| **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 10 (Templates) | **Closed 2026-09-22** | Done |
-| **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[13 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | **Closed 2026-09-22** | Done |
+| **M0 – Project Management** (standing, D-070) | First: agree the pattern, scope and ways of working (Foundation). Since then: keep the scope, plan and decisions current | Documents 00, 02, 03, 11, 21, 30–33, 40, 70 and 80; the handovers; doc 87 | **Foundation closed 2026-09-19.** Standing since 2026-09-25 | Done, then ongoing |
+| **M1 – Vault and Git** | A vault built to the blueprint | Obsidian installed and configured; folders from [[32 Vault Blueprint]] §1 including the three `inbox/` zones; git initialised with a first commit; Web Clipper pointed at `inbox/sources/`; documents placed in `mine/projects/thinking-system/` | **Closed 2026-09-21** | Done |
+| **M2 – Connect Claude Code** | Claude runs inside the vault under the rules | Claude Code installed; `CLAUDE.md`, `system/conventions.md`, `system/context.md`, permission settings; the page templates and doc 34 (Templates) | **Closed 2026-09-22** | Done |
+| **M3 – First Ingests** | The compile loop works | The `ingest` skill and its zone contract ([[33 Input Zones]]); 5 sources in `raw/`, starting with the LLM Wiki gist; `wiki/` populated; `index.md` and `log.md` live | **Closed 2026-09-22** | Done |
 | **M4 – Ask and File-back** | Answers are grounded and reusable | The `ask` and `file-answer` skills; 10 test prompts and recorded results | **Closed 2026-09-24** | Done |
 | **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Closed 2026-09-24** |
-| **MVP complete** | | | All criteria in [[01 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062, D-068) | **Met 2026-09-25: 6 of 6** |
+| **MVP complete** | | | All criteria in [[11 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062, D-068) | **Met 2026-09-25: 6 of 6** |
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to the revision, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
-| **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 21 (MVP Retrospective) completed; docs 01 and 06 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | 1 week |
-| **M7 onward – MVP 2** | Set by M0 | Candidates: product-owner workflows (doc 11, skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning); doc 12 (Data Governance), written before any work material enters the vault (D-018); what the retrospective finds | Set by M0 | Set by M0 |
+| **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 87 (MVP Retrospective) completed; docs 11 and 21 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | 1 week |
+| **M7 onward – MVP 2** | Set by M0 | Candidates: product-owner workflows (doc 35, skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning); doc 36 (Data Governance), written before any work material enters the vault (D-018); what the retrospective finds | Set by M0 | Set by M0 |
 
 **Parked until MVP 2 (scoped in M0):** bank data governance, anything on a bank device, work systems. **Candidates for later:** a local Markdown search tool if `index.md` stops scaling, phone capture and sync, a hook that enforces page status, a scheduled weekly digest.
 
 ## 3. M0 closed on 2026-09-19
-- [x] Documents 00–09 and 13 accepted
+- [x] Documents 00, 02, 03, 11, 21, 30–33, 40 and 70 accepted
 - [x] Decisions D-001 to D-025 accepted
 - [x] Q-005 to Q-007 settled or deferred; Q-013 (first sources) moves to the start of M3
-- [x] Handover written: [[14 M0 Handover]]
+- [x] Handover written: [[80 M0 Handover]]
 - [x] Documents moved to a private GitHub repo synced into project knowledge (D-028)
 - [x] M1 run; Q-014 decided at its close (D-030)
 
 ## 4. M1 closed on 2026-09-21
-- [x] Obsidian installed and configured per [[05 Obsidian Essentials]] §1
-- [x] Folder structure matches [[04 Vault Blueprint]] §1, including the three `inbox/` zones and `mine/scratch/` (D-029)
+- [x] Obsidian installed and configured per [[70 Obsidian Essentials]] §1
+- [x] Folder structure matches [[32 Vault Blueprint]] §1, including the three `inbox/` zones and `mine/scratch/` (D-029)
 - [x] Git initialised with `.gitignore` and `.gitattributes`; first commit made
 - [x] Web Clipper saving to `inbox/sources/`
 - [x] Documents in `mine/projects/thinking-system/`, opening through their links
 - [x] Q-014 decided: the vault repo is the single source of truth, pushed to the private repo `second-brain`; the documents repo is archived (D-030)
-- [x] Handover written: [[15 M1 Handover]]
+- [x] Handover written: [[81 M1 Handover]]
 - [x] Next: M2 – Connect Claude Code, started 2026-09-21
 
 ## 5. M2 closed on 2026-09-22
 - [x] Tool facts rechecked against the Claude Code docs (2026-09-21); D-031 to D-035 proposed
-- [x] Vault checked against [[04 Vault Blueprint]] §1: every folder and zone file in place
+- [x] Vault checked against [[32 Vault Blueprint]] §1: every folder and zone file in place
 - [x] Schema files placed in the vault: `CLAUDE.md`, `.claude/settings.json`, `system/context.md`, `system/conventions.md`, `index.md`, `log.md`
-- [x] Eight templates in `system/templates/`; [[10 Templates]] written
+- [x] Eight templates in `system/templates/`; [[34 Templates]] written
 - [x] D-031 to D-038 accepted
 - [x] `system/context.md` filled in by you
-- [x] Claude Code 2.1.278 installed with the native installer; no API key set ([[08 Claude Operating Instructions]] §6 steps 1–2)
+- [x] Claude Code 2.1.278 installed with the native installer; no API key set ([[40 Claude Operating Instructions]] §6 steps 1–2)
 - [x] Schema files committed and pushed (step 3)
 - [x] First run: signed in, trust prompt accepted; `/context` loads 3 memory files
 - [x] Connectors switched off (D-036); auto memory off and permission rules as expected
 - [x] `data` plugin switched off (D-037); `/mcp` empty; `claude doctor` clean (steps 4–6)
 - [x] Permission smoke test passes (step 7); a workaround offer after the `raw/` block led to D-038
-- [x] Handover written: [[16 M2 Handover]]
+- [x] Handover written: [[82 M2 Handover]]
 - [x] Next: M3 – First Ingests, started 2026-09-22
 
 ## 6. M3 closed on 2026-09-22
 - [x] Tool facts rechecked against the Claude Code docs (skills, permissions, settings scopes, tools); D-040 to D-044 proposed
-- [x] `ingest` skill drafted, mirrored in [[08 Claude Operating Instructions]] §4.1; `CLAUDE.md` ingest section cut to a pointer (D-041)
+- [x] `ingest` skill drafted, mirrored in [[40 Claude Operating Instructions]] §4.1; `CLAUDE.md` ingest section cut to a pointer (D-041)
 - [x] Overview page type and template added (D-044)
 - [x] D-040 to D-044 accepted
 - [ ] Q-015 settled: synced skills hidden in vault sessions; `/skills` shows only the vault's and Claude Code's own (D-040)
@@ -92,19 +94,19 @@ One standing thread per module ([[09 Working Agreement]] §4, D-071). After its 
 - [x] Source 3 ingested: Matuschak, "Evergreen notes" — the hub page only, so the five principles are recorded as titles and the 15 linked notes as gaps
 - [x] Source 4 ingested: Anthropic, "Introducing Contextual Retrieval" — the disagreement with source 1 recorded on both sides; D-047 narrows which pages carry `contested`, accepted the same day
 - [x] Source 5 ingested: Forte, "The PARA Method", updating 6 existing pages, 3 of them with new cited claims, against a bar of 3 (D-044). A second disagreement recorded on both sides
-- [x] Each ingest reviewed as in [[05 Obsidian Essentials]] §3 and committed before the next
+- [x] Each ingest reviewed as in [[70 Obsidian Essentials]] §3 and committed before the next
 - [x] One claim traced from a wiki page to its file in `raw/`: `Associative indexing` → Bush on cumbersome rules → `raw/bush-as-we-may-think.pdf` page 14
-- [x] Handover written: [[17 M3 Handover]]
+- [x] Handover written: [[83 M3 Handover]]
 - [x] Next: M4 – Ask and File-back, started 2026-09-24
 
 **Parked in M3, to pick up after the MVP unless they start to hurt:**
-- Matuschak's five principle notes and the Zettelkasten sources. The gaps are recorded in `wiki/overview.md` and on [[07 Decision Log]]'s next-sources list, so nothing is lost.
+- Matuschak's five principle notes and the Zettelkasten sources. The gaps are recorded in `wiki/overview.md` and on [[03 Decision Log]]'s next-sources list, so nothing is lost.
 - The `ingest` report splitting "updated" into pages that gained a claim and pages that only gained a link.
 - D-040's `skillOverrides` entry, which waits for the list of names in `~/.claude/skills/synced`.
 
 ## 7. M4 closed on 2026-09-24
-- [x] `ask` and `file-answer` skills written, mirrored in [[08 Claude Operating Instructions]] §4.2–4.3; the ask section of `CLAUDE.md` cut to a pointer plus the rules for direct questions
-- [x] Test prompts made concrete for this wiki ([[08 Claude Operating Instructions]] §5); `system/test-results.md` and `test-injection.md` written
+- [x] `ask` and `file-answer` skills written, mirrored in [[40 Claude Operating Instructions]] §4.2–4.3; the ask section of `CLAUDE.md` cut to a pointer plus the rules for direct questions
+- [x] Test prompts made concrete for this wiki ([[40 Claude Operating Instructions]] §5); `system/test-results.md` and `test-injection.md` written
 - [x] D-048 to D-052 accepted
 - [x] Skills moved into `.claude/skills/ask/` and `.claude/skills/file-answer/`, committed and pushed; both appear in `/skills`
 - [x] Tests 1–6 run and recorded. Test 4 found Poppler missing; you installed it, and Claude installed nothing
@@ -112,7 +114,7 @@ One standing thread per module ([[09 Working Agreement]] §4, D-071). After its 
 - [x] Test 8 run: `Compare the PARA method and evergreen notes as ways to organise what I read` filed in `wiki/analyses/`, reviewed and committed. Its re-check caught an unsupported claim, now in `inbox/checks.md`
 - [x] Tests 9 and 10 run: **10 of 10**
 - [x] Fix batch from the test findings: answer sections, recommendation rule (D-053), no installing (D-054), unreadable raw files, Related links. No rerun needed
-- [x] Handover written: [[18 M4 Handover]]
+- [x] Handover written: [[84 M4 Handover]]
 - [x] Next: M5 – Lint and Review, started 2026-09-24
 
 **Parked in M4, to pick up when they start to hurt:**
@@ -121,10 +123,10 @@ One standing thread per module ([[09 Working Agreement]] §4, D-071). After its 
 
 ## 8. M5 closed on 2026-09-24
 - [x] D-053 and D-054 accepted
-- [x] `lint` skill drafted and mirrored in [[08 Claude Operating Instructions]] §4.4; the lint section of `CLAUDE.md` cut to a pointer, and two citation rules added (D-055 to D-057)
-- [x] `system/views/Review.base` drafted with both views (D-058), mirrored in [[05 Obsidian Essentials]] §6
-- [x] Weekly review written as steps in [[05 Obsidian Essentials]] §4
-- [x] Lint tests L1–L6 written in [[08 Claude Operating Instructions]] §5 and `system/test-results.md` (D-059)
+- [x] `lint` skill drafted and mirrored in [[40 Claude Operating Instructions]] §4.4; the lint section of `CLAUDE.md` cut to a pointer, and two citation rules added (D-055 to D-057)
+- [x] `system/views/Review.base` drafted with both views (D-058), mirrored in [[70 Obsidian Essentials]] §6
+- [x] Weekly review written as steps in [[70 Obsidian Essentials]] §4
+- [x] Lint tests L1–L6 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md` (D-059)
 - [x] D-055 to D-059 accepted
 - [x] Files placed: the skill in `.claude/skills/lint/`, `Review.base` in `system/views/` and bookmarked; committed and pushed
 - [x] Views checked: Needs attention shows 8 pages (1 `unverified`, 7 `contested`); Draft queue shows 11
@@ -134,8 +136,8 @@ One standing thread per module ([[09 Working Agreement]] §4, D-071). After its 
 - [x] D-060 (monthly full deep check) and D-061 (wrong PDF page is Low) accepted; `lint` revised to match
 - [x] Fixes from report-2026-09-24-2 applied and committed: 3 findings, 8 pages, no status changes
 - [x] Weekly review steps 1–3 run twice (lint, apply, commit); steps 4–7, including the first pass through the draft queue, move to M6
-- [x] MVP criteria in [[01 Project Charter]] §6 checked: 5 of 6, with the insights criterion moved to M6 (D-062)
-- [x] Handover written: [[19 M5 Handover]]
+- [x] MVP criteria in [[11 Project Charter]] §6 checked: 5 of 6, with the insights criterion moved to M6 (D-062)
+- [x] Handover written: [[85 M5 Handover]]
 - [x] Next: M6 – Thinking Layer, started 2026-09-24
 
 **Parked in M5, to pick up when they start to hurt:**
@@ -144,10 +146,10 @@ One standing thread per module ([[09 Working Agreement]] §4, D-071). After its 
 
 ## 9. M6 closed on 2026-09-25
 - [x] D-062 accepted: the MVP's insights criterion is met at M6's close
-- [x] Drafts routine written: keep means you write a new page, and no draft waits a week (D-063); weekly review step 5 rewritten in [[05 Obsidian Essentials]] §4
-- [x] `drafts` skill drafted and mirrored in [[08 Claude Operating Instructions]] §4.5; `CLAUDE.md` gets its pointer (D-064)
-- [x] Insight page rules: `origin`, `status`, `reviewed` and how Relations read (D-065); `mine/decisions/` versus doc 07 (D-066); drafts from `ingest` cite `raw/` (D-067). Insight template, `system/conventions.md`, `Review.base` and docs 02, 03, 04, 05 and 10 updated to match
-- [x] Drafts tests R1–R5 written in [[08 Claude Operating Instructions]] §5 and `system/test-results.md`
+- [x] Drafts routine written: keep means you write a new page, and no draft waits a week (D-063); weekly review step 5 rewritten in [[70 Obsidian Essentials]] §4
+- [x] `drafts` skill drafted and mirrored in [[40 Claude Operating Instructions]] §4.5; `CLAUDE.md` gets its pointer (D-064)
+- [x] Insight page rules: `origin`, `status`, `reviewed` and how Relations read (D-065); `mine/decisions/` versus doc 03 (D-066); drafts from `ingest` cite `raw/` (D-067). Insight template, `system/conventions.md`, `Review.base` and docs 30, 31, 32, 70 and 34 updated to match
+- [x] Drafts tests R1–R5 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md`
 - [x] D-063 to D-067 accepted (2026-09-25)
 - [x] Files placed: `drafts` skill in `.claude/skills/drafts/`, `ingest` skill replaced, the rest copied over; committed and pushed (75f7537); `/skills` lists `drafts`
 - [x] R1–R4: first `/drafts` on the 11 drafts, committed (45526e4). **4 of 4.** 2 clean, 9 with problems; every finding checked against `raw/` and holds, including five beyond the expected ones (`system/test-results.md`)
@@ -156,10 +158,10 @@ One standing thread per module ([[09 Working Agreement]] §4, D-071). After its 
 - [ ] Weekly review steps 4, 6 and 7: not run in M6. Nothing waited on them (no new lint report, `mine/scratch/` empty); the first full weekly review is next week
 - [x] R5: second `/drafts` in a fresh session (a7fb417). **Drafts tests 5 of 5; M6's exit criterion is met**
 - [x] `system/context.md` "Current focus" updated (your file, 70cf510)
-- [x] MVP criteria in [[01 Project Charter]] §6 checked: **6 of 6. MVP complete, 2026-09-25**
+- [x] MVP criteria in [[11 Project Charter]] §6 checked: **6 of 6. MVP complete, 2026-09-25**
 - [x] Q-016 answered: the revision comes next, in the M0 thread (D-069, D-070); every module thread is standing (D-071)
-- [x] Handover written: [[20 M6 Handover]]
-- [ ] **Next:** in the M0 thread, the retrospective and MVP 2 scope (D-070), starting from doc 21
+- [x] Handover written: [[86 M6 Handover]]
+- [ ] **Next:** in the M0 thread, the retrospective and MVP 2 scope (D-070), starting from doc 87
 
 **Carried to the revision in M0 (D-068, D-070):**
 - The five insights are `origin: claude`. Rewrite them, keep them as they are, or archive them.

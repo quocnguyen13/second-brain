@@ -4,7 +4,7 @@ description: File the answer just given in this session as a page in wiki/analys
 disable-model-invocation: true
 argument-hint: "[title]"
 ---
-<!-- Mirrored in mine/projects/thinking-system/08 Claude Operating Instructions §4; change both in the same commit. -->
+<!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
 
 # /file-answer
 

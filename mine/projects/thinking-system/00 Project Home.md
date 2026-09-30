@@ -5,70 +5,174 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-26
+reviewed: 2026-09-30
 tags: [project/thinking-system, moc]
 ---
 
 # Thinking System: Project Home
 
 > [!abstract] What this is
-> A personal knowledge base built on the **LLM Wiki** pattern: you collect sources, Claude compiles and maintains a linked wiki from them, and you read it in Obsidian. On top of that foundation we add a thinking layer you own, provenance rules, and product-owner workflows.
+> A personal knowledge assistant built on the **LLM Wiki** pattern: you collect sources, Claude compiles them into a cited wiki you read in Obsidian, and on top sit a thinking layer you own and, next, defined jobs done to your standards. Where it's going: [[10 Product Vision]]. How it works today: [[20 Product Requirements]].
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Current module:** M6 closed 2026-09-25, and with it the **MVP (6 of 6)** → next, the retrospective and MVP 2 scope in the M0 – Project Management thread (see [[06 Roadmap]] §2)
+**Where we are:** MVP 1 done 2026-09-25 (6 of 6). Next: Release S1 (Showcase), then MVP 2 (Research assistant), each scoped in the M0 – Project Management thread ([[10 Product Vision]] §4.1, D-081).
 
 ## Document set
+Numbered by SDLC stage, in blocks of ten ([[03 Decision Log]] D-080). A document keeps its number; a new one takes the next free number in its stage. Planned documents have their number reserved, shown in *italics* with the backlog item that writes them. Governance runs through every stage, and every module adds a delivery record.
 
-| #   | Document                             | Purpose                                                        | Status          |
-| --- | ------------------------------------ | -------------------------------------------------------------- | --------------- |
-| 00  | [[00 Project Home]]                  | Map of the project (you are here)                              | Draft           |
-| 01  | [[01 Project Charter]]               | Why, what, MVP scope, success criteria                         | **Accepted**    |
-| 02  | [[02 System Architecture]]           | The three layers, the three operations, and what we add on top | **Accepted**    |
-| 03  | [[03 Trust and Provenance]]          | Citation rules, verified and unverified claims, what is parked | **Accepted**    |
-| 04  | [[04 Vault Blueprint]]               | Folders, page types, properties, index and log formats         | **Accepted**    |
-| 05  | [[05 Obsidian Essentials]]           | The one page of Obsidian this system needs                     | **Accepted**    |
-| 06  | [[06 Roadmap]]                       | MVP definition, phases, modules (one standing thread each)     | **Accepted**    |
-| 07  | [[07 Decision Log]]                  | Decisions made and questions still open                        | Living document |
-| 08  | [[08 Claude Operating Instructions]] | The schema file, permission settings, skills, and tests        | **Accepted**    |
-| 09  | [[09 Working Agreement]]             | How you and Claude work together on this project               | **Accepted**    |
-| 10  | [[10 Templates]]                     | One template per page type, in `system/templates/`             | Draft           |
-| 13  | [[13 Input Zones]]                   | One input door per operation, all triggered inside Claude      | **Accepted**    |
-| 14  | [[14 M0 Handover]]                   | Closing state of M0, used to open the M1 chat                  | Closed          |
-| 15  | [[15 M1 Handover]]                   | Closing state of M1, used to open the M2 chat                  | Closed          |
-| 16  | [[16 M2 Handover]]                   | Closing state of M2, used to open the M3 chat                  | Closed          |
-| 17  | [[17 M3 Handover]]                   | Closing state of M3, used to open the M4 chat                  | Closed          |
-| 18  | [[18 M4 Handover]]                   | Closing state of M4, used to open the M5 chat                  | Closed          |
-| 19  | [[19 M5 Handover]]                   | Closing state of M5, used to open the M6 chat                  | Closed          |
-| 20  | [[20 M6 Handover]]                   | Closing state of M6 and the MVP, to take to the M0 thread      | Current         |
-| 21  | [[21 MVP Retrospective]]             | Retrospective of M0–M6 and the input to MVP 2's scope          | Draft           |
-| 22  | [[22 Product Backlog]]               | Needs and ideas waiting for M0 to schedule them                | Draft           |
-| 23  | [[23 Product Requirements]]          | The whole system for a newcomer: user stories, architecture, flows, data, edge cases | Draft           |
+```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TD
+    G["Stage 0 · Governance<br/>docs 00–04"]
+    P1["Stage 1 · Plan: strategy<br/>docs 10–13"]
+    P2["Stage 2 · Plan: scope<br/>docs 20–22"]
+    D["Stage 3 · Design<br/>docs 30–36"]
+    B["Stage 4 · Build<br/>doc 40"]
+    T["Stage 5 · Test<br/>doc 50"]
+    R["Stage 6 · Deploy<br/>doc 60"]
+    M["Stage 7 · Maintain<br/>docs 70–71"]
+    H["Stage 8 · Records<br/>docs 80 onward"]
+    G ~~~ P1
+    P1 --> P2 --> D --> B --> T --> R --> M
+    M -. "next increment" .-> P2
+    R -. "module closes" .-> H
+```
 
-**Planned (not written yet)**
-- 11 Workflow Playbook (MVP 2, if the revision keeps it): product-owner routines
-- 12 Data Governance (parked, before any work material enters the vault)
+### Stage 0 · Governance
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 00 | [[00 Project Home]] | Map of the project (you are here) | Draft |
+| 01 | *Case Study* | The project told for a reader outside it | Planned · B-028 |
+| 02 | [[02 Working Agreement]] | Roles, the document loop, module threads, Definition of Done, the delivery framework | **Accepted** |
+| 03 | [[03 Decision Log]] | Decisions made and questions still open | Living document |
+| 04 | *Risk Register* | Risks, owners and mitigations in one place | Planned · B-033 |
+
+### Stage 1 · Plan: strategy
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 10 | [[10 Product Vision]] | Who it's for, what they need, how success is measured, milestones and capabilities | Draft |
+| 11 | [[11 Project Charter]] | MVP 1: problem, bet, scope, goals, success criteria | **Accepted** |
+| 12 | *Success Metrics* | Definitions, baselines and targets per milestone | Planned · B-031 |
+| 13 | *Market and Alternatives* | What else meets the same needs, and why this one | Planned · B-032 |
+
+### Stage 2 · Plan: scope
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 20 | [[20 Product Requirements]] | The whole system for a newcomer: user stories, architecture, flows, data, edge cases | Draft |
+| 21 | [[21 Roadmap]] | Modules and their exits | **Accepted** |
+| 22 | [[22 Product Backlog]] | Capabilities and features waiting to be scheduled | Draft |
+
+### Stage 3 · Design
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 30 | [[30 System Architecture]] | The three layers, the three operations, and what we add on top | **Accepted** |
+| 31 | [[31 Trust and Provenance]] | Citation rules, page status, the data boundary | **Accepted** |
+| 32 | [[32 Vault Blueprint]] | Folders, page types, properties, index and log formats | **Accepted** |
+| 33 | [[33 Input Zones]] | One input door per operation, all triggered inside Claude | **Accepted** |
+| 34 | [[34 Templates]] | One template per page type, in `system/templates/` | Draft |
+| 35 | *Jobs and Standards* | The jobs Claude does and the standards they follow. Replaces the planned Workflow Playbook | Planned · B-017 |
+| 36 | *Data Governance* | Rules for work material, before any enters the vault (D-018) | Planned · B-022 |
+
+### Stage 4 · Build
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 40 | [[40 Claude Operating Instructions]] | `CLAUDE.md`, permission settings, the skills in full, test prompts, setup steps | **Accepted** |
+
+### Stage 5 · Test
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 50 | *Test Strategy and Results* | Test levels, user stories traced to tests and results. Results today: `system/test-results.md` | Planned · B-034 |
+
+### Stage 6 · Deploy
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 60 | *Release Notes* | What each milestone shipped, and how it was deployed | Planned · B-035 |
+
+### Stage 7 · Maintain
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 70 | [[70 Obsidian Essentials]] | The user guide: setup, toolkit, reviewing an ingest, the weekly review | **Accepted** |
+| 71 | *Operations Runbook* | Routines, deploy, backup, restore and rollback | Planned · B-036 |
+
+### Stage 8 · Delivery records
+Agile reviews and retrospectives, in date order.
+
+| # | Document | Purpose | Status |
+|---|---|---|---|
+| 80 | [[80 M0 Handover]] | Closing state of M0, used to open the M1 chat | Closed |
+| 81 | [[81 M1 Handover]] | Closing state of M1, used to open the M2 chat | Closed |
+| 82 | [[82 M2 Handover]] | Closing state of M2, used to open the M3 chat | Closed |
+| 83 | [[83 M3 Handover]] | Closing state of M3, used to open the M4 chat | Closed |
+| 84 | [[84 M4 Handover]] | Closing state of M4, used to open the M5 chat | Closed |
+| 85 | [[85 M5 Handover]] | Closing state of M5, used to open the M6 chat | Closed |
+| 86 | [[86 M6 Handover]] | Closing state of M6 and MVP 1, to take to the M0 thread | Current |
+| 87 | [[87 MVP Retrospective]] | Retrospective of MVP 1 and the input to MVP 2's scope | Draft |
+
+## What the set was missing
+Checked on 2026-09-30 against the documents a standard SDLC and a Scrum-style process expect, and against what a reviewer of the showcase would look for.
+
+**Already in place:** requirements with acceptance criteria (20 §3.1, "Done when"), architecture and design (30–34), decision records (03), a working agreement with a Definition of Done (02), increment reviews (80–86), a retrospective (87), test prompts with recorded results (40 §5).
+
+| Expected | Where it was | Gap | Filled by |
+|---|---|---|---|
+| Product vision | 11 §1, one paragraph | No target group, needs, metrics or milestones | **Done:** doc 10 |
+| Delivery framework | Implicit in 02 §4 | Roles, events and artefacts not named | **Done:** 02 §11 |
+| Definition of Ready, priority method | — | Missing | **Done:** 22 §1.1–1.2 |
+| Backlog structure | A flat list of 3 items | No capabilities, types or milestones | **Done:** 22 §2, 36 items |
+| Success metrics | 11 §5, MVP 1 only | No North Star, baselines or targets beyond MVP 1 | Started in 10 §3; doc 12 (B-031) |
+| Market and alternatives | — | Missing | Doc 13 (B-032) |
+| Risk register | 11 §10 and the handovers | Scattered, not tracked | Doc 04 (B-033) |
+| Test strategy and traceability | 40 §5, `system/test-results.md` | No strategy; stories not traced to tests | Doc 50 (B-034) |
+| Release notes | The change log below | Tracks documents, not releases | Doc 60 (B-035) |
+| Operations runbook | 70 §4, 20 §7, deploy steps in handovers | Scattered; no backup, restore or rollback | Doc 71 (B-036) |
+| Output standards | Diagram rules in 02 §8 | No home for the standards jobs will use | Doc 35 (B-017) |
+| Data governance | Parked (D-018) | Needed before any work material | Doc 36 (B-022) |
+| Case study, public repo, demo | — | Missing, and needed for the showcase | Doc 01, B-029, B-030 |
+
+## Renumber map, 2026-09-30
+Every reference in the project docs and vault files now uses the new numbers, except the change log below, which keeps the numbers of its time (D-080).
+
+| Old | New | Document | | Old | New | Document |
+|---|---|---|---|---|---|---|
+| 00 | 00 | Project Home | | 13 | 33 | Input Zones |
+| 01 | 11 | Project Charter | | 14 | 80 | M0 Handover |
+| 02 | 30 | System Architecture | | 15 | 81 | M1 Handover |
+| 03 | 31 | Trust and Provenance | | 16 | 82 | M2 Handover |
+| 04 | 32 | Vault Blueprint | | 17 | 83 | M3 Handover |
+| 05 | 70 | Obsidian Essentials | | 18 | 84 | M4 Handover |
+| 06 | 21 | Roadmap | | 19 | 85 | M5 Handover |
+| 07 | 03 | Decision Log | | 20 | 86 | M6 Handover |
+| 08 | 40 | Claude Operating Instructions | | 21 | 87 | MVP Retrospective |
+| 09 | 02 | Working Agreement | | 22 | 22 | Product Backlog |
+| 10 | 34 | Templates | | 23 | 20 | Product Requirements |
+| 11 (planned) | 35 | Workflow Playbook, now Jobs and Standards | | 12 (planned) | 36 | Data Governance |
+| — | 10 | Product Vision (new) | | | | |
 
 ## Reading order
-New to the project? Start with [[23 Product Requirements]], then go deeper here:
-1. [[09 Working Agreement]]: how we work together.
-2. [[01 Project Charter]]: what the MVP is and isn't.
-3. [[02 System Architecture]]: the pattern we adopted and what we add to it.
-4. [[03 Trust and Provenance]]: what keeps a compiled wiki honest.
-5. [[08 Claude Operating Instructions]]: exactly what Claude will be told and allowed to do.
-6. [[07 Decision Log]]: accept or reject the proposed decisions.
-7. [[05 Obsidian Essentials]]: the one page of Obsidian you need.
+New to the project? Start with the first two, then go deeper:
+1. [[10 Product Vision]]: where the product is going.
+2. [[20 Product Requirements]]: the whole system as built.
+3. [[02 Working Agreement]]: how we work together.
+4. [[11 Project Charter]]: what MVP 1 was and wasn't.
+5. [[30 System Architecture]] and [[31 Trust and Provenance]]: the pattern, and what keeps a compiled wiki honest.
+6. [[40 Claude Operating Instructions]]: exactly what Claude is told and allowed to do.
+7. [[03 Decision Log]]: every decision and why.
+8. [[70 Obsidian Essentials]]: the one page of Obsidian you need.
 
 ## Origin of the pattern
-The foundation is Andrej Karpathy's "LLM Wiki" idea file, at https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f. It will also be the first source you ingest, so the vault's first pages will be about the pattern the vault is built on.
+The foundation is Andrej Karpathy's "LLM Wiki" idea file, at https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f. It was the first source ingested, in M3, so the vault's first pages are about the pattern the vault is built on.
 
 ## Learn Obsidian from this document set
 These notes use Obsidian's own syntax, so reading them is your first lesson:
-- `[[01 Project Charter]]` is a **wikilink**. Click it to jump; the target lists this note under **Backlinks**.
+- `[[11 Project Charter]]` is a **wikilink**. Click it to jump; the target lists this note under **Backlinks**.
 - The block between the `---` lines is **Properties** (YAML frontmatter), shown as an editable table.
 - The `> [!abstract]` boxes are **callouts**.
-- The diagrams in [[02 System Architecture]] are **Mermaid** code blocks, which Obsidian draws without a plugin.
+- The diagrams in [[30 System Architecture]] are **Mermaid** code blocks, which Obsidian draws without a plugin.
 
 ## Change log
+
+Entries up to 1.35 use the document numbers of their time; the renumber map above translates them.
+
 | Version  | Date       | Changes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0.1      | 2026-09-16 | First document set (00–07)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -108,3 +212,8 @@ These notes use Obsidian's own syntax, so reading them is your first lesson:
 | **1.30** | 2026-09-25 | Doc 22 (Product Backlog) added, owned by M0; D-072 proposed. B-001 (Office documents as sources) and B-002 (Mermaid support) logged as New. Docs 07 and 09 updated                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 1.31     | 2026-09-26 | Doc 23 (Product Requirements) added: the whole system for a newcomer, built from docs 01–22 and the live vault files, with every diagram in Mermaid. D-073 accepted: every diagram is Mermaid. B-002 put on hold. Docs 07, 09 and 22 updated |
 | 1.32     | 2026-09-26 | Doc 23 revised: §3 becomes User stories and end-to-end flow, with 13 user stories and the flow redrawn as one row per story through input, process, store and output. The folder map is redrawn top-down with its legend top-left, every diagram follows D-074, and wiki page status (§6.2) is now a table. D-074 accepted: rules for Mermaid diagrams. Docs 07 and 09 updated |
+| 1.33     | 2026-09-26 | B-003 (Claude outputs as sources) logged in doc 22 as New, with options a to c |
+| 1.34     | 2026-09-27 | D-075 accepted: Claude outputs can be sources, verified claim by claim at ingest (answers B-003 with option c). B-003 refined with the design for the source path. Docs 07 and 22 updated |
+| 1.35     | 2026-09-30 | Doc 21 revised for MVP 2: your input in §4–§6, Claude's observations marked confirmed or open (§3.1), changes since the MVP closed (§3.2), and a new §7 with six themes, a candidate goal and build order, the tensions with current decisions, and 15 decisions MVP 2 needs. Two Mermaid diagrams added |
+| **1.36** | 2026-09-30 | **Product vision and SDLC restructure.** Doc 10 (Product Vision) added: target group, needs, North Star and measures, milestones (S1 Showcase, MVP 2 to 4) and 9 capabilities. Doc 22 restructured by capability, with a Definition of Ready, types, MoSCoW, and B-004 to B-036 logged. The set renumbered by SDLC stage in blocks of ten, with every reference updated in the project docs, `CLAUDE.md`, the five skills and `system/` files; gaps listed in 00. Doc 02 gains the delivery framework (§11) and a new numbering rule. D-076 proposed; D-077 to D-080 accepted. Docs 00, 02, 03, 11, 20, 21 and 22 updated |
+| 1.37     | 2026-09-30 | D-081 accepted: Release S1 (Showcase) comes next, before MVP 2, and research (MVP 2) and jobs (MVP 3) are separate milestones. Docs 03 and 10 updated |
