@@ -82,10 +82,13 @@ Every module has **one standing chat** in this Project, named `M<n> – <name>`.
 | M0 – Project Management  | Docs 00–04, 10–13, 20–22, 30, 31, 36, 50, 60 and 71; the handovers and retrospectives (80 onward); each milestone's scope; work that crosses modules                              |
 | M1 – Vault and Git       | Folder structure and naming ([[32 Vault Blueprint]] §1, §7); `.gitignore` and `.gitattributes`; Obsidian settings and the Web Clipper ([[70 Obsidian Essentials]] §1–2) |
 | M2 – Connect Claude Code | `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md` and the templates ([[34 Templates]]); [[40 Claude Operating Instructions]] §1–3 and §6                    |
-| M3 – First Ingests       | The `ingest` skill (40 §4.1); [[33 Input Zones]]; the `index.md` and `log.md` formats (32 §5–6); reviewing an ingest (70 §3)                                            |
+| M3 – First Ingests       | The `ingest` skill (40 §4.1) until M7 opens; [[33 Input Zones]]; the `index.md` and `log.md` formats (32 §5–6); reviewing an ingest (70 §3)                                            |
 | M4 – Ask and File-back   | The `ask` and `file-answer` skills (40 §4.2–4.3); test prompts 1–10                                                                                                     |
 | M5 – Lint and Review     | The `lint` skill (40 §4.4); `Review.base` (70 §6); the weekly review (70 §4); the lint tests                                                                            |
 | M6 – Thinking Layer      | The `drafts` skill (40 §4.5); the rules for `mine/` (32 §2–4); the Insight and Decision templates; 70 §4 step 5 and §5; the drafts tests                                |
+| M7 – Batch Ingest and Trust | The `ingest` skill from its opening (D-084), with set ingest, trust levels and conflict review; drafts the rule changes for doc 31 §2–3, which M0 accepts |
+| M8 – Research and Import | The research summary and `/import` skills; Claude's research as a source (B-003) |
+| M9 – Large Documents | Compiling a document in parts across sessions (B-038) |
 
 Where two rows touch the same file, the more specific row owns that part. A skill's mirror in doc 40 changes with the skill, in the same commit. A thread may make small edits that follow from its own work in files another thread owns, such as a pointer in `CLAUDE.md`, a line in `system/conventions.md` or a cross-reference, and lists them in its change summary. Anything larger goes to the owning thread as a request.
 
@@ -134,7 +137,7 @@ Where two rows touch the same file, the more specific row owns that part. A skil
 **For a milestone**
 - [ ] The exit criteria in [[21 Roadmap]] are met
 - [ ] The retrospective is done, and changes to this agreement are recorded
-- [ ] From Release S1 on: release notes written (doc 60) and the case study updated (doc 01)
+- [ ] The showcase gate: you decide whether this MVP is the moment to showcase the product (D-082)
 
 ## 7. Explanations, not lessons
 - **Build first.** Claude gives the steps to take, not a curriculum. No exercises, no stages, no homework (D-026).
@@ -202,5 +205,5 @@ Scrum-style, sized for a team of one ([[03 Decision Log]] D-077).
 1. **Scope:** M0 picks features with MoSCoW and sets the exit.
 2. **Refine:** each picked feature reaches Ready.
 3. **Build:** one module per increment, each closed by a handover.
-4. **Release:** exit met, release notes written, case study updated (D-079).
-5. **Retrospective** in M0, then the next milestone is scoped.
+4. **Release:** exit met, and release notes written once doc 60 exists.
+5. **Retrospective and showcase gate** in M0: you decide whether this MVP is the moment to showcase the product (D-082). Then the next milestone is scoped.

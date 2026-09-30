@@ -41,7 +41,7 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 **Out of scope for the MVP**
 - **Bank data governance (parked as doc 36).** The MVP takes personal and public sources only, so the rules aren't needed yet. They get written before any work material enters the vault.
 - Running any of this on a bank device or against bank systems
-- Product-owner workflows (module M7, after the MVP)
+- Product-owner workflows (now jobs and standards, MVP 3: [[10 Product Vision]] §4.1)
 - Sync, phone capture, semantic search, custom tooling
 
 ## 5. Goals
@@ -88,3 +88,31 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 | Bank material drifts into the vault before the rules exist | One standing rule in [[31 Trust and Provenance]] §4 until doc 36 is written |
 | Claude edits or deletes the wrong thing | Permission rules, manual approval outside the allowed paths, git history |
 | Usage limits run out mid-task | Ingest sources singly; check `/usage` |
+
+## 11. MVP 2 · Research assistant
+Scope accepted 2026-09-30 ([[03 Decision Log]] D-084). Where it sits among the milestones: [[10 Product Vision]] §4.1. Modules: [[21 Roadmap]] §2.
+
+**Goal:** research a topic in one pass, with trust-ranked, verified facts, so an answer from the vault beats a default Claude answer (D-083).
+
+**In scope** ([[22 Product Backlog]])
+- **Must:** B-003 Claude's research as a source · B-004 research summary with sources · B-006 ingest a set · B-007 trust levels · B-008 conflict review · B-009 the UK financial system as the test set · B-024 one move per set · B-037 `/import` · B-038 large documents
+- **Should:** B-011 page names in `log.md` · B-025 Claude commits after your review
+- **Could:** B-015 the five Claude-written insights · B-023 Q-015 · B-026 docs straight into the vault · B-027 no skill mirrors in doc 40
+
+**Out of scope:** jobs and standards (MVP 3); Office files and work material (MVP 4); the showcase, decided at the gate (D-082); everything else in the backlog.
+
+**Success criteria**
+1. **Research:** a new topic returns a summary in which every fact names its source, plus a list of primary sources to clip.
+2. **Import:** `/import` flags a planted duplicate and a planted new version.
+3. **Batch ingest:** 5 or more sources on one topic compiled in one run with one review. The review lists conflicts first, then facts sorted by trust.
+4. **Large documents:** a document of several hundred pages compiled in parts, with progress tracked and every citation pointing to its page or section.
+5. **Side-by-side:** 5 questions on the UK set, asked through `/ask` and in a default Claude chat. Every fact in the `/ask` answers traces to `raw/`, with its trust level.
+6. **Regression:** the 21 MVP 1 tests still pass, so `/ingest`, `/ask`, `/file-answer` and `/lint` keep working.
+
+**Risks**
+| Risk | Mitigation |
+|---|---|
+| A set or a large document uses up the day's Pro allowance mid-run | Runs split into parts that each end cleanly, with progress recorded so the next session resumes |
+| A faster review means you read less of what Claude writes | Conflicts and low-trust facts come first, and the checks that open `raw/` stay ([[10 Product Vision]] §6, principle 7) |
+| Trust levels become Claude's opinion of a source | Levels set by type of source in doc 31, not by judgement, and you can override one |
+| Claude's research is treated as evidence | D-075: an "(AI)" claim stays uncited until a primary source backs it |

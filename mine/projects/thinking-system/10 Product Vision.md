@@ -49,7 +49,7 @@ Back to [[00 Project Home]] · Phase: Plan, strategy · Owned by M0 – Project 
 ### 2.4 Goals
 - **Learn faster:** a new domain becomes usable knowledge in days, with facts I can defend.
 - **Produce faster:** standard PO outputs drafted from my own knowledge, to a consistent standard.
-- **Show the work:** the product and its record demonstrate my product-owner practice, from vision to backlog, decisions, delivery and retrospectives (D-079).
+- **Show the work:** the product and its record demonstrate my product-owner practice, from vision to backlog, decisions, delivery and retrospectives (D-079), once the product is worth showing (D-082).
 
 ## 3. Measures of success
 **North Star: trusted outputs per month.** An output is an answer I file or a job's product, where every fact traces to `raw/` or is labelled. It grows only when the knowledge base is both used and trustworthy.
@@ -93,7 +93,7 @@ flowchart TD
 ```
 
 ### 4.1 Milestones
-The order and the split are accepted (D-081). What goes into each milestone is set when it is scoped, starting with S1.
+The split between research and jobs is accepted (D-081), and MVP 2 comes next (D-082). What goes into each milestone is set when it is scoped.
 
 ```mermaid
 %%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
@@ -106,11 +106,10 @@ flowchart TD
         L3["Later"]:::later
     end
     M1["MVP 1 · Compounding knowledge base<br/>capture, compile, ask, lint, think"]:::done
-    S1["Release S1 · Showcase<br/>MVP 1 as a public case study"]:::next
-    M2["MVP 2 · Research assistant<br/>topic sets, trust levels, fewer steps"]:::prop
+    M2["MVP 2 · Research assistant<br/>topic sets, trust levels, fewer steps"]:::next
     M3["MVP 3 · Work assistant<br/>standards library, PRD job"]:::prop
     M4["MVP 4 · Work-ready<br/>data governance, Office files"]:::later
-    M1 --> S1 --> M2 --> M3 --> M4
+    M1 --> M2 --> M3 --> M4
     classDef done fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
     classDef next fill:#fef3c7,stroke:#b45309,color:#78350f
     classDef prop fill:#dcfce7,stroke:#15803d,color:#14532d
@@ -120,18 +119,19 @@ flowchart TD
 | Milestone | Goal | Capabilities | Needs met | Status |
 |---|---|---|---|---|
 | **MVP 1 · Compounding knowledge base** | The working loop: capture, compile, ask, file back, lint, think | E-01 to E-05, E-07 | N2, N3, N5 (personal) | **Done 2026-09-25**, 6 of 6 criteria |
-| **Release S1 · Showcase** | MVP 1 packaged as a public case study, with the documents an SDLC reviewer expects | E-09 | Goal: show the work | **Next** (D-081). Needs nothing from MVP 2 |
-| **MVP 2 · Research assistant** | Research a topic as a set: trust-ranked, verified facts, with fewer manual steps | E-01, E-02, E-04, E-05, E-07, E-08 | N1 | Proposed |
+| **MVP 2 · Research assistant** | Research a topic as a set, large documents included: trust-ranked, verified facts, with fewer manual steps | E-01, E-02, E-04, E-05, E-07, E-08 | N1 | **Next.** Scope accepted (D-084): [[11 Project Charter]] §11 |
 | **MVP 3 · Work assistant** | Defined jobs to your standards, a PRD first | E-06 | N4 | Proposed |
 | **MVP 4 · Work-ready** | Work material under data governance; Office files as sources | E-01, E-07 | N5 (work) | Later |
 
-Each milestone after S1 ends with the case study updated. This splits the candidate goal in [[87 MVP Retrospective]] §7.2 (research and a PRD job in one milestone) in two, so each ships something usable sooner (D-081).
+**Showcase gate:** at the end of each MVP you decide whether it is the moment to showcase the product (D-082). The bar (D-083): a chat answer from the vault beats a default Claude answer through its fact guarantee, while Claude keeps its ability to research. That takes cited research summaries, batch ingest with conflicts and trust sorting, and `/import` for duplicates and versions, with the four current commands unchanged. The showcase itself is E-09.
+
+The milestones split the candidate goal in [[87 MVP Retrospective]] §7.2 (research and a PRD job in one milestone) in two, so each ships something usable sooner (D-081).
 
 ### 4.2 Capabilities
 | ID | Capability | What it does for the owner | Built in MVP 1 | Features next ([[22 Product Backlog]]) |
 |---|---|---|---|---|
-| E-01 | **Capture** | Gets material in: web clips, files, Claude outputs | Web Clipper and the inbox zones (US-01) | B-001, B-002, B-004, B-005 |
-| E-02 | **Compile and verify** | Turns sources into cited pages, with status, conflicts and trust | `/ingest`, one source per run (US-02, US-09) | B-003, B-006 to B-009 |
+| E-01 | **Capture** | Gets material in: web clips, files, Claude outputs | Web Clipper and the inbox zones (US-01) | B-001, B-002, B-004, B-005, B-037 |
+| E-02 | **Compile and verify** | Turns sources into cited pages, with status, conflicts and trust | `/ingest`, one source per run (US-02, US-09) | B-003, B-006 to B-009, B-038 |
 | E-03 | **Ask and reuse** | Answers from your own sources, and keeps the good ones | `/ask`, `/file-answer` (US-03, US-04) | B-010 |
 | E-04 | **Keep healthy** | Finds what's wrong or stale before you rely on it | `/lint`, the review views, the weekly review (US-05, US-06, US-08, US-12) | B-011 to B-014 |
 | E-05 | **Think** | Holds your own conclusions and decisions | `/drafts`, the insights routine (US-07) | B-015, B-016 |

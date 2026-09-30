@@ -191,4 +191,8 @@ Doc 36 comes before any job or source uses work material (D-018).
 8. The module references still to update: [[11 Project Charter]] §4, [[30 System Architecture]] §3, and the due dates on D-018, Q-004, Q-007 and Q-008.
 
 ## 8. Outcome
-Filled in by the M0 thread once you accept MVP 2's scope: the goal, scope and module plan, the decision IDs, and the revised docs 11 and 21.
+Filled in 2026-09-30.
+- **Vision and milestones:** [[10 Product Vision]] (D-076, proposed). MVP 2 is the research assistant; MVP 3 the work assistant (D-081). No showcase after MVP 1; a showcase gate ends every MVP (D-082), and its bar is D-083.
+- **MVP 2:** goal, scope and success criteria in [[11 Project Charter]] §11; modules M7 – Batch Ingest and Trust, M8 – Research and Import, M9 – Large Documents in [[21 Roadmap]] §2 (D-084).
+- **Framework and documents:** Scrum-style delivery (D-077), the vision's user (D-078), the showcase's form (D-079), documents numbered by SDLC stage (D-080).
+- **The decisions in §7.4:** 9 answered by D-081 and D-084. 10, 11 and 15 are in MVP 2 (B-006 to B-008, B-003), with details settled when M7 and M8 refine them. 12: B-024 Must, B-025 Should. 13: MVP 3. 14: MVP 4 (B-001). Carried: 1 is B-015 (Could); 2 stands until B-015 is decided; 3 is B-016 (later); 4 is MVP 3; 5 is B-022 (MVP 4); 6 is the UK financial system (B-009); 7 is B-011 and B-023 in MVP 2, the rest later; 8 is done in this revision.

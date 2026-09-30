@@ -33,7 +33,7 @@ His summary of the roles fits this project exactly: Obsidian is the IDE, the LLM
 | **Insight extraction at ingest** | Each ingest also proposes 1–3 single-idea drafts into `mine/drafts/`, so reading feeds your thinking layer, not only the reference layer. |
 | **An enforcement layer** | Permission rules and git, so the zones hold in practice and every change can be undone ([[40 Claude Operating Instructions]]). |
 | **A one-page Obsidian reference** | Just the Obsidian this system needs, picked up while building; no curriculum ([[70 Obsidian Essentials]], D-026). |
-| **Product-owner workflows** | After the MVP: meeting notes to decisions, stakeholder briefs, prioritization reasoning (module M7). |
+| **Product-owner workflows** | After the MVP: meeting notes to decisions, stakeholder briefs, prioritization reasoning: now jobs and standards, MVP 3 ([[10 Product Vision]] §4.1). |
 
 ## 4. Components
 | Layer | Component |

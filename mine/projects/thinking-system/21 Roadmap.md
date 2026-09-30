@@ -13,19 +13,29 @@ tags: [project/thinking-system, roadmap]
 
 Back to [[00 Project Home]] · MVP defined in [[11 Project Charter]] §4
 
-> [!note] Milestones beyond MVP 1 are proposed in [[10 Product Vision]] §4.1. This roadmap gets its MVP 2 module plan once M0 sets that scope.
+> [!note] Milestones are set in [[10 Product Vision]] §4.1. MVP 2's scope and success criteria are in [[11 Project Charter]] §11 (D-084); its modules are below.
 
 ## 1. Shape of the plan
 ```mermaid
-flowchart LR
-    M0[M0<br/>Foundation] --> M1[M1<br/>Vault and git]
-    M1 --> M2[M2<br/>Connect<br/>Claude Code]
-    M2 --> M3[M3<br/>First ingests]
-    M3 --> M4[M4<br/>Ask and<br/>file-back]
-    M4 --> M5[M5<br/>Lint and<br/>review]
-    M5 --> M6[M6<br/>Thinking<br/>layer]
-    M6 -.->|MVP complete| PM[M0<br/>Retrospective and<br/>MVP 2 scope]
-    PM --> M7[M7 onward<br/>MVP 2,<br/>set by M0]
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TD
+    subgraph LEG["Legend · status"]
+        direction TB
+        L1["Done"]:::done
+        L2["Next"]:::next
+        L3["Planned"]:::plan
+    end
+    V1["MVP 1 · M0 to M6<br/>closed 2026-09-25"]:::done
+    PM["M0 · Retrospective<br/>and MVP 2 scope"]:::done
+    M7["M7 · Batch ingest<br/>and trust"]:::next
+    M8["M8 · Research<br/>and import"]:::plan
+    M9["M9 · Large<br/>documents"]:::plan
+    G["M0 · Retrospective<br/>and showcase gate"]:::plan
+    V1 --> PM --> M7 --> M8 --> M9
+    M9 -- "MVP 2 complete" --> G
+    classDef done fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
+    classDef next fill:#fef3c7,stroke:#b45309,color:#78350f
+    classDef plan fill:#dcfce7,stroke:#15803d,color:#14532d
 ```
 
 ## 2. Modules
@@ -41,10 +51,13 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 | **M5 – Lint and Review** | The wiki stays honest as it grows | The `lint` skill; the two Bases views; the weekly routine | A lint pass catches a contradiction and an uncited claim, using the real cases M4 found (D-059); lint tests 6 of 6 | **Closed 2026-09-24** |
 | **MVP complete** | | | All criteria in [[11 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062, D-068) | **Met 2026-09-25: 6 of 6** |
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to the revision, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
-| **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 87 (MVP Retrospective) completed; docs 11 and 21 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | 1 week |
-| **M7 onward – MVP 2** | Set by M0 | Candidates: product-owner workflows (doc 35, skills for meeting notes to decisions, stakeholder briefs, prioritization reasoning); doc 36 (Data Governance), written before any work material enters the vault (D-018); what the retrospective finds | Set by M0 | Set by M0 |
+| **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 87 (MVP Retrospective) completed; docs 11 and 21 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | **Closed 2026-09-30** (D-084) |
+| **M7 – Batch Ingest and Trust** | A topic comes in as a set: one run, one review, facts ranked by trust, conflicts resolved | Must: B-006 set ingest, B-007 trust levels (rule in doc 31 §2), B-008 conflict review (doc 31 §3), B-024 one move per set, tested on B-009 (the UK financial system). Should: B-011, B-025. Takes over the `ingest` skill from M3 | 5 or more sources on one topic compiled in one run with one review, conflicts first and facts sorted by trust; the MVP 1 ingest tests still pass | About 1 week |
+| **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version | About 1 week |
+| **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section | About 1 week |
+| **MVP 2 complete** | | | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate in M0 (D-082) | |
 
-**Parked until MVP 2 (scoped in M0):** bank data governance, anything on a bank device, work systems. **Candidates for later:** a local Markdown search tool if `index.md` stops scaling, phone capture and sync, a hook that enforces page status, a scheduled weekly digest.
+**Not in MVP 2:** everything else waits in [[22 Product Backlog]] with a proposed milestone. Work material and bank devices stay out until doc 36 exists (D-018, B-022).
 
 ## 3. M0 closed on 2026-09-19
 - [x] Documents 00, 02, 03, 11, 21, 30–33, 40 and 70 accepted

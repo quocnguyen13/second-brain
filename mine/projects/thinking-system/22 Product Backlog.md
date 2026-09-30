@@ -35,7 +35,7 @@ flowchart TD
 - **Dropped:** with a line saying why. Items are never deleted.
 - **On hold:** at your request, at any status. The item keeps its status, is marked "on hold", and stays out of scoping until you reopen it.
 
-IDs never change: capabilities E-01 onward, features B-001 onward. Next free: **B-037**.
+IDs never change: capabilities E-01 onward, features B-001 onward. Next free: **B-039**.
 
 ### 1.1 Definition of Ready
 - [ ] The need is one sentence from your side, tied to a need or goal in [[10 Product Vision]] §2.
@@ -51,7 +51,7 @@ IDs never change: capabilities E-01 onward, features B-001 onward. Next free: **
 - **Priority:** set when a milestone is scoped, with MoSCoW (Must, Should, Could, Won't this time). Ties go to the item that moves the North Star most for the least effort ([[10 Product Vision]] §3).
 
 ## 2. Backlog by capability
-Milestones: **S1** Showcase · **MVP 2** Research assistant · **MVP 3** Work assistant · **MVP 4** Work-ready · **Later** ([[10 Product Vision]] §4.1).
+Milestones: **MVP 2** Research assistant, scope set by D-084 (priority and module shown as "MVP 2 · Must · M7") · **MVP 3** Work assistant · **MVP 4** Work-ready · **Later** · **Gate**: scheduled when you choose a showcase moment after an MVP (D-082) ([[10 Product Vision]] §4.1).
 
 ### E-01 · Capture
 Gets material in: web clips, files, Claude outputs. Needs N1, N2.
@@ -60,19 +60,21 @@ Gets material in: web clips, files, Claude outputs. Needs N1, N2.
 |---|---|---|---|---|---|---|
 | B-001 | Office documents as sources (§3) | Feature | MVP 4 | New | Doc 36, for work files (D-018) | M3, M1 |
 | B-002 | Mermaid support (§3) | Feature | — | New; on hold | — | M3 or M4 |
-| B-004 | Source finder: Claude lists the primary sources for a topic, and you clip them | Feature | MVP 2 | New | B-003's capture list | M3 |
+| B-004 | Research a topic: Claude researches a new topic and returns a summary in which every fact names its source, plus the primary sources for you to clip (D-075, D-083) | Feature | MVP 2 · Must · M8 | New | B-003 | M3 |
 | B-005 | Phone capture and sync | Feature | Later | New | — | M1 |
+| B-037 | `/import` (§3): before ingest, checks new files against `raw/` for duplicates and newer versions, and recommends what to do (D-083) | Feature | MVP 2 · Must · M8 | New | Doc 31 §3, superseded claims | M3 |
 
 ### E-02 · Compile and verify
 Turns sources into cited pages, with status, conflicts and trust. Needs N1, N3.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-003 | Claude outputs as sources (§3) | Feature | MVP 2 | Refined; direction set by D-075 | Rule in doc 31 | M3, M4, M5, M2; rule by M0 |
-| B-006 | Ingest a set: several sources on one topic in one run, with one review | Feature | MVP 2 | New | D-022 revised | M3 |
-| B-007 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | MVP 2 | New | Rule in doc 31 §2 | M3, M4; rule by M0 |
-| B-008 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | MVP 2 | New | B-007; doc 31 §3 revised | M3, M5; rule by M0 |
-| B-009 | First domain set: the UK financial system and its legal framework | Content | MVP 2 | New; started, FSMA 2000 Part 1A ingested 2026-09-28 | The test set for B-006 | You, with M3 |
+| B-003 | Claude outputs as sources (§3) | Feature | MVP 2 · Must · M8 | Refined; direction set by D-075 | Rule in doc 31 | M3, M4, M5, M2; rule by M0 |
+| B-006 | Ingest a set: several sources on one topic in one run, with one review | Feature | MVP 2 · Must · M7 | New | D-022 revised | M3 |
+| B-007 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | MVP 2 · Must · M7 | New | Rule in doc 31 §2 | M3, M4; rule by M0 |
+| B-008 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | MVP 2 · Must · M7 | New | B-007; doc 31 §3 revised | M3, M5; rule by M0 |
+| B-009 | First domain set: the UK financial system and its legal framework | Content | MVP 2 · Must · M7 | New; started, FSMA 2000 Part 1A ingested 2026-09-28 | The test set for B-006 | You, with M3 |
+| B-038 | Large documents (§3): a 1,000-page book or a full Act compiled in parts across sessions, with progress tracked | Feature | MVP 2 · Must · M9 | New | B-006 | M9 |
 
 ### E-03 · Ask and reuse
 Answers from your own sources, and keeps the good ones. Needs N2, N3.
@@ -86,7 +88,7 @@ Finds what's wrong or stale before you rely on it. Need N3.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-011 | Page names in `log.md`, so `/drafts` can say which operation changed a page | Chore | MVP 2 | New | — | M3 |
+| B-011 | Page names in `log.md`, so `/drafts` can say which operation changed a page | Chore | MVP 2 · Should · M7 | New | — | M3 |
 | B-012 | Re-read check for decision pages | Feature | Later | New | B-016 | M6 |
 | B-013 | A hook that enforces page status | Feature | Later | New | — | M2, M5 |
 | B-014 | A scheduled weekly digest | Feature | Later | New | — | M5 |
@@ -96,7 +98,7 @@ Holds your own conclusions and decisions. Goal: learn faster.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-015 | The five Claude-written insights: rewrite, keep or archive (D-068) | Chore | MVP 2 | New | — | You, with M6 |
+| B-015 | The five Claude-written insights: rewrite, keep or archive (D-068) | Chore | MVP 2 · Could | New | — | You, with M6 |
 | B-016 | The first decision page, and a routine for decisions | Feature | Later | New | — | M6 |
 
 ### E-06 · Jobs and standards
@@ -116,32 +118,32 @@ Nothing changes without your say, and confidential material stays out. Need N5.
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
 | B-022 | Data governance (doc 36), with the bank AI-tools policy (Q-004) | Doc | MVP 4 | New | — | M0 |
-| B-023 | Settle Q-015: claude.ai skills that sync into vault sessions | Chore | MVP 2 | New | — | M2 |
+| B-023 | Settle Q-015: claude.ai skills that sync into vault sessions | Chore | MVP 2 · Could | New | — | M2 |
 
 ### E-08 · Operate
 Keeps running with little effort, and changes safely. Needs N1, N5.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-024 | One move command for a whole set into `raw/`; the deny rule stays (D-045) | Feature | MVP 2 | New | B-006 | M3 |
-| B-025 | Claude commits after your review, with your approval per command; the push stays yours | Feature | MVP 2 | New | D-008 revised | M2 |
-| B-026 | Project docs written straight into the vault through the desktop link, instead of files you copy | Feature | MVP 2 | New | D-028 revised | M0 |
-| B-027 | Skills no longer mirrored in doc 40; it links to the skill files instead | Chore | MVP 2 | New | Your view on the mirrors ([[87 MVP Retrospective]] §3.1) | M2 to M6 |
+| B-024 | One move command for a whole set into `raw/`; the deny rule stays (D-045) | Feature | MVP 2 · Must · M7 | New | B-006 | M3 |
+| B-025 | Claude commits after your review, with your approval per command; the push stays yours | Feature | MVP 2 · Should · M7 | New | D-008 revised | M2 |
+| B-026 | Project docs written straight into the vault through the desktop link, instead of files you copy | Feature | MVP 2 · Could | New | D-028 revised | M0 |
+| B-027 | Skills no longer mirrored in doc 40; it links to the skill files instead | Chore | MVP 2 · Could | New | Your view on the mirrors ([[87 MVP Retrospective]] §3.1) | M2 to M6 |
 
 ### E-09 · Showcase and documentation
-Shows the product and how it was built. Goal: show the work (D-079).
+Shows the product and how it was built. Goal: show the work (D-079), when you decide an MVP is the showcase moment (D-082).
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-028 | Case study (doc 01): problem, your role, approach, key decisions, results, lessons | Doc | S1 | New | — | M0 |
-| B-029 | Public repository: a cleaned copy with a README and a licence. Keeps the system files and project docs; leaves out `raw/` (others' copyright), your notes in `mine/` and anything personal | Feature | S1 | New | D-018 check of every file | M0, M1 |
-| B-030 | Demo: screenshots and a short walkthrough of one ingest and one `/ask` | Doc | S1 | New | — | M0 |
-| B-031 | Success metrics (doc 12): definitions, baselines and targets per milestone | Doc | S1 | New | — | M0 |
-| B-032 | Market and alternatives (doc 13): what else solves N1–N4, and why this one | Doc | S1 | New | Research | M0 |
-| B-033 | Risk register (doc 04), gathering the risks now spread across doc 11 §10 and the handovers | Doc | S1 | New | — | M0 |
-| B-034 | Test strategy and traceability (doc 50): user stories to tests to results | Doc | S1 | New | — | M0, with M4 to M6 |
-| B-035 | Release notes (doc 60), starting with MVP 1 | Doc | S1 | New | — | M0 |
-| B-036 | Operations runbook (doc 71): routines, deploy, backup, restore and rollback | Doc | S1 | New | — | M0 |
+| B-028 | Case study (doc 01): problem, your role, approach, key decisions, results, lessons | Doc | Gate | New | — | M0 |
+| B-029 | Public repository: a cleaned copy with a README and a licence. Keeps the system files and project docs; leaves out `raw/` (others' copyright), your notes in `mine/` and anything personal | Feature | Gate | New | D-018 check of every file | M0, M1 |
+| B-030 | Demo: screenshots and a short walkthrough of one ingest and one `/ask` | Doc | Gate | New | — | M0 |
+| B-031 | Success metrics (doc 12): definitions, baselines and targets per milestone | Doc | Gate | New | — | M0 |
+| B-032 | Market and alternatives (doc 13): what else solves N1–N4, and why this one | Doc | Gate | New | Research | M0 |
+| B-033 | Risk register (doc 04), gathering the risks now spread across doc 11 §10 and the handovers | Doc | Gate | New | — | M0 |
+| B-034 | Test strategy and traceability (doc 50): user stories to tests to results | Doc | Gate | New | — | M0, with M4 to M6 |
+| B-035 | Release notes (doc 60), starting with MVP 1 | Doc | Gate | New | — | M0 |
+| B-036 | Operations runbook (doc 71): routines, deploy, backup, restore and rollback | Doc | Gate | New | — | M0 |
 
 ## 3. Item details
 Items with more than a one-line need. Others get a section here when they are refined.
@@ -191,3 +193,28 @@ Items with more than a one-line need. Others get a section here when they are re
 **Owners when built:** the rule in doc 31 (M0); `CLAUDE.md` and `system/conventions.md` (M2); `ingest` (M3); `ask` (M4); `lint` (M5).
 **To settle in the building thread:** where the capture list lives between sessions (for example, lines in `inbox/checks.md`); whether web search needs an allow rule, since manual mode asks before each search; a size limit for long research reports.
 **Constraint:** the output must pass the same data boundary as any source (D-018).
+
+### B-037 · `/import`: duplicates and versions
+**Need:** every document you bring in is checked for duplicates, and gets a version recommendation when a similar document already exists with small changes, or when it carries clues of a version change.
+**Raised:** 2026-09-30, M0, as part of the showcase bar (D-083).
+**What it would do:** a new skill that runs on files in `inbox/sources/` before `/ingest`. For each file it reports one of:
+- **Duplicate:** the same document is already in `raw/` → recommend not ingesting it.
+- **New version:** a similar document is in `raw/` with small changes, or the file carries version clues (a date, a version number, "amended", "revised") → recommend ingesting it as a new version, so the claims it changes are marked superseded ([[31 Trust and Provenance]] §3).
+- **New:** nothing similar → ready for `/ingest`.
+
+**Open questions:** how "similar" is measured (title, author and URL; text overlap; both); how a new version is named in `raw/`, which stays immutable (for example `-v2`, keeping both files); whether it runs as its own command or as step 0 of `/ingest` on a set (B-006).
+**Constraint:** writes nothing; it recommends, and you decide.
+
+### B-038 · Large documents
+**Need:** handle massive documents, such as a 1,000-page book or a full piece of legislation.
+**Raised:** 2026-09-30, M0, when you accepted MVP 2's scope (D-084).
+**Today:** `/ingest` reads a long PDF in page ranges, but compiles a whole source in one run and one session. A document this size is more than one session can read and write, and Pro usage is shared with claude.ai ([[11 Project Charter]] §9).
+**Options to weigh when refining:**
+- **a. Map first, then parts.** The first run reads the structure (contents, parts, chapters) and writes the source page as a map with a list of parts. Later runs compile one part or a few at a time, and the map records which are done. `/ask` says when an answer may sit in a part not yet compiled. The file stays whole in `raw/`, and citations point to its page or section.
+- **b. You split the file before capture,** for example one file per Part of an Act. Simple, but citations point to parts and the whole-document view is lost.
+- **c. Claude proposes a split plan and you run it,** so the parts become raw files under one parent source page.
+
+Claude's lean: **a**, since it keeps `raw/` immutable and citations exact (D-042).
+**Open questions:** the citation form for a section of a Markdown source (a heading link); where progress is recorded between sessions; how an amended Act is handled (with B-037's new versions); how much one session should take on.
+**Test document:** the full FSMA 2000, which extends the Part 1A source already in the vault. Public legislation, so it can be kept and quoted.
+**Constraint:** a copyrighted book stays private in `raw/` and never goes into a public showcase (D-079).
