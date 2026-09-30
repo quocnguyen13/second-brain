@@ -1,6 +1,7 @@
 ---
 type: source
 status: verified
+trust: primary
 sources: ["[[raw/forte-para-method.md]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]"]
 created: "2026-09-22"
 updated: "2026-09-24"
@@ -8,7 +9,7 @@ tags: ["knowledge-management", "note-taking"]
 ---
 # The PARA Method
 
-**Raw file:** [[raw/forte-para-method.md]] · **Author or publisher:** [[wiki/entities/Tiago Forte]], on the Forte Labs blog (fortelabs.com) · **Published:** 2023-02-24 (clip source: https://fortelabs.com/blog/para/) · **Ingested:** 2026-09-22
+**Raw file:** [[raw/forte-para-method.md]] · **Author or publisher:** [[wiki/entities/Tiago Forte]], on the Forte Labs blog (fortelabs.com) · **Published:** 2023-02-24 (clip source: https://fortelabs.com/blog/para/) · **Trust:** primary (the author's own statement of his method) · **Ingested:** 2026-09-22
 
 ## Summary
 Forte proposes [[wiki/concepts/PARA method]], a system that files all digital information into four top-level categories: Projects, Areas, Resources and Archives. It works in any tool: file system, cloud drive or notes app. The key principle is [[wiki/concepts/Organizing by actionability]]: group material by the projects and goals you are committed to now, not by broad school-style subjects. Most of the piece argues that projects and areas must be kept apart ([[raw/forte-para-method.md]]).

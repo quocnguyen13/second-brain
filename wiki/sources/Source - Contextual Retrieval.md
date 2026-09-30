@@ -1,6 +1,7 @@
 ---
 type: source
 status: verified
+trust: primary
 sources: ["[[raw/anthropic-contextual-retrieval.md]]", "[[raw/karpathy-llm-wiki.md]]"]
 created: "2026-09-22"
 updated: "2026-09-24"
@@ -8,7 +9,7 @@ tags: ["information-retrieval", "compiled-wiki"]
 ---
 # Contextual Retrieval
 
-**Raw file:** [[raw/anthropic-contextual-retrieval.md]] · **Author or publisher:** [[wiki/entities/Anthropic]] (engineering blog); body credits "Research and writing by Daniel Ford" · **Published:** not dated in the clip · **Ingested:** 2026-09-22
+**Raw file:** [[raw/anthropic-contextual-retrieval.md]] · **Author or publisher:** [[wiki/entities/Anthropic]] (engineering blog); body credits "Research and writing by Daniel Ford" · **Published:** not dated in the clip · **Trust:** primary (an organisation's own account of its own method) · **Ingested:** 2026-09-22
 
 ## Summary
 A vendor engineering post arguing that, for knowledge bases too large for a prompt, [[wiki/concepts/Retrieval-augmented generation]] is the scalable answer, and that its main weakness, chunks stripped of their document's context, can be fixed at preprocessing time. The fix, [[wiki/concepts/Contextual Retrieval]], has an LLM write a short situating context for every chunk once, before indexing, and prepends it to the chunk for both embeddings and [[wiki/concepts/BM25]]. Adding [[wiki/concepts/Reranking]] improves retrieval further ([[raw/anthropic-contextual-retrieval.md]]).

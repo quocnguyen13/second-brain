@@ -1,6 +1,7 @@
 ---
 type: source
 status: verified
+trust: primary
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
 created: "2026-09-28"
 updated: "2026-09-28"
@@ -8,7 +9,7 @@ tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - FSMA 2000 Part 1A
 
-**Raw file:** [[raw/uk-parliament-fsma-2000-part-1a.md]] · **Author or publisher:** UK Parliament, via legislation.gov.uk · **Published:** Act of 2000. Part 1A was substituted by the Financial Services Act 2012 and took effect in 2013. The clip is the consolidated text in force on or before 27 September 2026 · **Ingested:** 2026-09-28
+**Raw file:** [[raw/uk-parliament-fsma-2000-part-1a.md]] · **Author or publisher:** UK Parliament, via legislation.gov.uk · **Published:** Act of 2000. Part 1A was substituted by the Financial Services Act 2012 and took effect in 2013. The clip is the consolidated text in force on or before 27 September 2026 · **Trust:** primary (legislation) · **Ingested:** 2026-09-28
 
 ## Summary
 Part 1A of the Financial Services and Markets Act 2000 sets up the UK's two financial regulators ([[raw/uk-parliament-fsma-2000-part-1a.md]]):

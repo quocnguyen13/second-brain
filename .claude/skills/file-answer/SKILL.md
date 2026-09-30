@@ -37,8 +37,8 @@ This page is new synthesis, so its evidence is checked again at the source befor
 - **Title:** the question as I asked it, or the claim the answer makes, in plain language; mine if I typed one after the command. None of `# ^ [ ] | \ / : * " < > ?`.
 - **Question:** the question word for word.
 - **Answer:** the conclusion in a short paragraph. It may combine the evidence and draw a conclusion from it; it adds no facts that aren't in Evidence.
-- **Evidence:** one bullet per claim, citing the raw file directly, with the wiki page it came from for context: `- Claim ([[raw/<name>]]), via [[wiki/concepts/<Page>]]`.
-- **Where sources disagree:** both positions with their raw citations, if the answer carries a disputed claim. Leave the heading out otherwise.
+- **Evidence:** one bullet per claim, citing the raw file directly, with the wiki page it came from for context: `- Claim ([[raw/<name>]]), via [[wiki/concepts/<Page>]]`. A citation keeps the level marker the page gives it (`· secondary`, `· commentary`, `· AI`).
+- **Where sources disagree:** both positions with their raw citations, if the answer carries a disputed claim. For a dispute the page marks "Resolved", keep its resolution line. Leave the heading out otherwise.
 - **Caveats and gaps:** what the wiki doesn't cover, uncited points from step 2, and any source that would settle an open point.
 - **Related:** every wiki page the answer drew on, including the page behind each position under "Where sources disagree". These are links for context, never evidence.
 - Properties: `sources` lists every raw file cited; `created` and `updated` today; one or two tags reused from the pages it drew on.
@@ -55,7 +55,7 @@ This page is new synthesis, so its evidence is checked again at the source befor
 - `log.md`: append
   ```
   ## [YYYY-MM-DD] file | <title>
-  Pages: +1 analysis, N updated (Related links). Status: <status>. <claims dropped or reworded in step 2, or "Evidence confirmed in raw/.">
+  Pages: +1 analysis; N updated, Related links (<titles>). Status: <status>. <claims dropped or reworded in step 2, or "Evidence confirmed in raw/.">
   ```
 
 ## 6. Report, then stop
@@ -64,4 +64,4 @@ Before reporting, check every `[[wiki/...]]` link on the new page points to a pa
 - **Evidence check:** claims confirmed, and any dropped or reworded, with why
 - **Linked from:** the pages whose Related list changed
 - **Check first:** one Evidence bullet for me to trace to its raw file
-- Then remind me to review the page in Obsidian and commit: `git add -A`, `git diff --staged`, then `git commit -m "file: <title>"`.
+- Then ask me to review the page in Obsidian. When I say the review is done, commit as `CLAUDE.md` says, with the message `file: <title>`.

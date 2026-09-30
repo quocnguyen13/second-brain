@@ -1,6 +1,7 @@
 ---
 type: source
 status: verified
+trust: primary
 sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-22"
@@ -8,7 +9,7 @@ tags: ["compiled-wiki", "knowledge-management"]
 ---
 # LLM Wiki
 
-**Raw file:** [[raw/karpathy-llm-wiki.md]] · **Author or publisher:** Karpathy (per the gist URL, `github.com/karpathy`) · **Published:** not dated in the clip · **Ingested:** 2026-09-22
+**Raw file:** [[raw/karpathy-llm-wiki.md]] · **Author or publisher:** Karpathy (per the gist URL, `github.com/karpathy`) · **Published:** not dated in the clip · **Trust:** primary (the author's own statement of his pattern) · **Ingested:** 2026-09-22
 
 ## Summary
 A GitHub Gist proposing a pattern for personal knowledge bases: instead of [[wiki/concepts/Retrieval-augmented generation|RAG]]-style retrieval that rediscovers knowledge from scratch on every query, an LLM incrementally builds and maintains a persistent, interlinked wiki from a curated collection of raw sources. The wiki compounds over time — cross-references, contradictions, and synthesis accumulate rather than being re-derived ([[raw/karpathy-llm-wiki.md]]).

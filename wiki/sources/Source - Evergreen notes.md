@@ -1,6 +1,7 @@
 ---
 type: source
 status: verified
+trust: primary
 sources: ["[[raw/matuschak-evergreen-notes.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-24"
@@ -8,7 +9,7 @@ tags: ["knowledge-management", "note-taking"]
 ---
 # Evergreen notes
 
-**Raw file:** [[raw/matuschak-evergreen-notes.md]] · **Author or publisher:** [[wiki/entities/Andy Matuschak]], on notes.andymatuschak.org (attributed from the clip's URL; the clip's author field is empty) · **Published:** no date given (clip source: https://notes.andymatuschak.org/z5E5QawiXCMbtNtupvxeoEX) · **Ingested:** 2026-09-22
+**Raw file:** [[raw/matuschak-evergreen-notes.md]] · **Author or publisher:** [[wiki/entities/Andy Matuschak]], on notes.andymatuschak.org (attributed from the clip's URL; the clip's author field is empty) · **Published:** no date given (clip source: https://notes.andymatuschak.org/z5E5QawiXCMbtNtupvxeoEX) · **Trust:** primary (the author's own notes on his own concept) · **Ingested:** 2026-09-22
 
 ## Summary
 A hub page defining [[wiki/concepts/Evergreen notes]]: notes written and organized to evolve, contribute and accumulate over time, across projects. It lists five principles and five implementation practices, but it states each one only as the title of a linked note. The reasoning lives in those linked notes, which this clip does not include ([[raw/matuschak-evergreen-notes.md]]). This page compiles only what the hub itself states.

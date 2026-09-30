@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-19
-reviewed: 2026-09-24
+reviewed: 2026-09-30
 tags: [project/thinking-system, operations]
 ---
 
@@ -26,7 +26,7 @@ inbox/
 
 | Zone | What you put there | Command | Where the result goes |
 |---|---|---|---|
-| `inbox/sources/` | Clipped articles, PDFs, notes, saved as files | `/ingest` | `wiki/` pages, insight drafts in `mine/drafts/`, entries in `index.md` and `log.md`; the source file moves to `raw/` |
+| `inbox/sources/` | Clipped articles, PDFs, notes, saved as files | `/ingest` | `wiki/` pages, a set review in `system/ingest/`, insight drafts in `mine/drafts/`, entries in `index.md` and `log.md`; the source files move to `raw/` |
 | `inbox/questions.md` | One question per line, dated | `/ask` | An answer in the session; optionally a page in `wiki/analyses/` |
 | `inbox/checks.md` | "verify X", "this page feels stale", "did source 3 contradict source 1?" | `/lint` | `system/lint/report-YYYY-MM-DD.md`, plus the standing checks |
 
@@ -36,15 +36,36 @@ inbox/
 
 ## 2. Zone 1: sources → `/ingest`
 **What goes in:** anything you want compiled, saved as a file: a Web Clipper clipping (it saves straight to `inbox/sources/`), a downloaded PDF, or a note. Don't ask Claude to fetch a link into the zone. Its web fetch returns a model-processed version of the page, not the page itself, so `raw/` would end up holding Claude's rendering instead of the source ([[03 Decision Log]] D-043). Claude's edit rights in `inbox/` cover only the two queue files, so a captured source can't change before it reaches `raw/` (D-032).
-**Contract:** one file per source, and one source per ingest ([[03 Decision Log]] D-022).
+**Contract:** one file per source, and one set per ingest: every file in the zone, or the files you name, up to 8 on one topic ([[03 Decision Log]] D-085; it replaces D-022's one source per run when M7 exits). A set of one file is an ordinary single ingest.
 **What `/ingest` does** (the `ingest` skill, mirrored in [[40 Claude Operating Instructions]] §4.1):
-1. Reads the next file in the zone. Tells you the key takeaways, the pages it would touch, any conflicts, and anything suspicious in the text, then asks what to emphasise. Nothing is written until you answer.
-2. Gives you the command that moves the file into `raw/`, renamed `<author>-<short-title>` (D-042). You run it yourself: `raw/` is enforced read-only to Claude, shell moves included, which keeps the enforcement real rather than decorative (D-045). Claude then checks the file arrived.
-3. Writes the source page, updates the entity and concept pages it touches, and records contradictions on both sides.
-4. Rewrites `wiki/overview.md` (D-044) and proposes one to three insight drafts in `mine/drafts/`.
-5. Updates `index.md`, appends to `log.md`, and reports what changed, with one claim for you to trace first.
+1. Reads every file in the set, then sends one brief: a row per source with its trust level and proposed raw name, key takeaways for the set, the pages it would touch, likely conflicts, anything suspicious in the text, and one move block. It asks what to emphasise and whether any level should change. Nothing is written until you answer.
+2. You paste the move block once at the vault root. `raw/` stays enforced read-only to Claude, shell moves included, so the move is yours (D-045, D-089). Claude checks every file arrived.
+3. Opens the set review, `system/ingest/set-YYYY-MM-DD.md` (D-086), then compiles each source in turn, primary sources first: the source page with its `trust`, the entity and concept pages it touches, and each conflict on both sides with a proposal ([[31 Trust and Provenance]] §2.1, §3). It ticks each source in the set review as it goes, so a run that stops can resume.
+4. Rewrites `wiki/overview.md` once (D-044), proposes one to three insight drafts for the set, updates `index.md` and `log.md` with the pages named (D-091), and finishes the set review: conflicts first, then facts sorted by trust, weakest first, and one claim per level for you to trace.
+5. You read the set review and decide each conflict with `/ingest resolve 1a 2d` (D-088). When you say the review is done, Claude commits with your approval, and the push stays yours (D-090).
 
-**Done when:** the zone is empty and every citation points at a file in `raw/`.
+```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TD
+    subgraph LEG["Legend · role"]
+        direction TB
+        L1["You"]:::you
+        L2["Claude"]:::claude
+    end
+    A["1 · Clip a set on one topic<br/>into inbox/sources/"]:::you
+    B["2 · /ingest reads the set,<br/>briefs levels and conflicts"]:::claude
+    C["3 · Paste one move block,<br/>say what to emphasise"]:::you
+    D["4 · Compiles every source,<br/>writes the set review"]:::claude
+    E["5 · Read the set review,<br/>decide each conflict"]:::you
+    F["6 · Applies your decisions,<br/>commits with your approval"]:::claude
+    G["7 · git push"]:::you
+    A --> B --> C --> D --> E --> F --> G
+    classDef you fill:#fef3c7,stroke:#b45309,color:#78350f
+    classDef claude fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
+```
+Four steps are yours per set, where MVP 1 took three per source: 4 instead of 15 for five sources ([[87 MVP Retrospective]] §5).
+
+**Done when:** none of the set's files is left in the zone, every citation points at a file in `raw/`, and every conflict in the set review has your decision.
 
 ## 3. Zone 2: questions → `/ask`
 **What goes in:** questions you want the wiki to answer, one per line as `- [ ] YYYY-MM-DD question`. Add them whenever they occur to you, especially while reading what an ingest produced.

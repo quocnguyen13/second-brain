@@ -1,6 +1,7 @@
 ---
 type: source
 status: verified
+trust: primary
 sources: ["[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
 updated: "2026-09-24"
@@ -8,7 +9,7 @@ tags: ["memex", "hypertext", "knowledge-management"]
 ---
 # As We May Think
 
-**Raw file:** [[raw/bush-as-we-may-think.pdf]] · **Author or publisher:** Vannevar Bush, in *The Atlantic Monthly* · **Published:** July 1945 (clip source: https://web.mit.edu/sts.035/www/PDFs/think.pdf) · **Ingested:** 2026-09-22
+**Raw file:** [[raw/bush-as-we-may-think.pdf]] · **Author or publisher:** Vannevar Bush, in *The Atlantic Monthly* · **Published:** July 1945 (clip source: https://web.mit.edu/sts.035/www/PDFs/think.pdf) · **Trust:** primary (the author's own essay proposing his idea) · **Ingested:** 2026-09-22
 
 ## Summary
 Bush, then Director of the U.S. Office of Scientific Research and Development ([[raw/bush-as-we-may-think.pdf#page=1]]), argues that scientific record-keeping has fallen behind the pace of research: too much gets published for any specialist to track ([[raw/bush-as-we-may-think.pdf#page=3]]), and conventional indexing — filing each item in one fixed place — can't keep up ([[raw/bush-as-we-may-think.pdf#page=14]]). He surveys near-future mechanization (microfilm compression, dry photography, speech-to-text, faster calculating machines) ([[raw/bush-as-we-may-think.pdf#page=5]], [[raw/bush-as-we-may-think.pdf#page=7]], [[raw/bush-as-we-may-think.pdf#page=8]], [[raw/bush-as-we-may-think.pdf#page=9]]) and proposes the "memex," a personal device for storing a lifetime of books and records and linking them by association rather than classification, producing reusable, shareable "trails" through the material ([[raw/bush-as-we-may-think.pdf#page=14]], [[raw/bush-as-we-may-think.pdf#page=16]], [[raw/bush-as-we-may-think.pdf#page=17]]).

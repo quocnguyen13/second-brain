@@ -73,5 +73,5 @@ At the end of the draft, after Relations, add this section, replacing any earlie
   Clean: N. With problems: N. Already checked: N. Insights to re-read: N.
   ```
 - In the session, at most fifteen lines: one line per draft checked (title · clean or N problems · overlaps), then each insight to re-read with the page that changed.
-- Then say: "Read each Check in Obsidian and decide every draft. Keep: write your own page in `mine/insights/` from the Insight template, then delete the draft. Otherwise delete it." Remind me to commit the checks first: `git add -A`, `git diff --staged`, then `git commit -m "drafts: check YYYY-MM-DD"`.
+- Then say: "Read each Check in Obsidian and decide every draft. Keep: write your own page in `mine/insights/` from the Insight template, then delete the draft. Otherwise delete it." Offer to commit the checks first, as `CLAUDE.md` says, with the message `drafts: check YYYY-MM-DD`.
 - Stop.

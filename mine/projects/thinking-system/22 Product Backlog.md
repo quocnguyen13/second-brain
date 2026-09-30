@@ -70,10 +70,10 @@ Turns sources into cited pages, with status, conflicts and trust. Needs N1, N3.
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
 | B-003 | Claude outputs as sources (§3) | Feature | MVP 2 · Must · M8 | Refined; direction set by D-075 | Rule in doc 31 | M3, M4, M5, M2; rule by M0 |
-| B-006 | Ingest a set: several sources on one topic in one run, with one review | Feature | MVP 2 · Must · M7 | New | D-022 revised | M3 |
-| B-007 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | MVP 2 · Must · M7 | New | Rule in doc 31 §2 | M3, M4; rule by M0 |
-| B-008 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | MVP 2 · Must · M7 | New | B-007; doc 31 §3 revised | M3, M5; rule by M0 |
-| B-009 | First domain set: the UK financial system and its legal framework | Content | MVP 2 · Must · M7 | New; started, FSMA 2000 Part 1A ingested 2026-09-28 | The test set for B-006 | You, with M3 |
+| B-006 | Ingest a set: several sources on one topic in one run, with one review | Feature | MVP 2 · Must · M7 | Scheduled; design accepted (D-085, D-086) | D-022 revised | M7 (D-084) |
+| B-007 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | MVP 2 · Must · M7 | Scheduled; rule accepted in doc 31 §2.1 (D-087) | Rule in doc 31 §2 | M7; rule by M0 |
+| B-008 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | MVP 2 · Must · M7 | Scheduled; rule accepted in doc 31 §3 (D-088) | B-007; doc 31 §3 revised | M7; rule by M0 |
+| B-009 | First domain set: the UK financial system and its legal framework | Content | MVP 2 · Must · M7 | Started: FSMA 2000 Part 1A ingested 2026-09-28; M7's six sources set (D-092) | The test set for B-006 | You, with M7 |
 | B-038 | Large documents (§3): a 1,000-page book or a full Act compiled in parts across sessions, with progress tracked | Feature | MVP 2 · Must · M9 | New | B-006 | M9 |
 
 ### E-03 · Ask and reuse
@@ -88,7 +88,7 @@ Finds what's wrong or stale before you rely on it. Need N3.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-011 | Page names in `log.md`, so `/drafts` can say which operation changed a page | Chore | MVP 2 · Should · M7 | New | — | M3 |
+| B-011 | Page names in `log.md`, so `/drafts` can say which operation changed a page | Chore | MVP 2 · Should · M7 | Scheduled; built in M7 (D-091) | — | M7 |
 | B-012 | Re-read check for decision pages | Feature | Later | New | B-016 | M6 |
 | B-013 | A hook that enforces page status | Feature | Later | New | — | M2, M5 |
 | B-014 | A scheduled weekly digest | Feature | Later | New | — | M5 |
@@ -125,8 +125,8 @@ Keeps running with little effort, and changes safely. Needs N1, N5.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-024 | One move command for a whole set into `raw/`; the deny rule stays (D-045) | Feature | MVP 2 · Must · M7 | New | B-006 | M3 |
-| B-025 | Claude commits after your review, with your approval per command; the push stays yours | Feature | MVP 2 · Should · M7 | New | D-008 revised | M2 |
+| B-024 | One move command for a whole set into `raw/`; the deny rule stays (D-045) | Feature | MVP 2 · Must · M7 | Scheduled; built in M7 (D-089) | B-006 | M7 |
+| B-025 | Claude commits after your review, with your approval per command; the push stays yours | Feature | MVP 2 · Should · M7 | Scheduled; built in M7 (D-090) | D-008 revised | M7, with M2's settings |
 | B-026 | Project docs written straight into the vault through the desktop link, instead of files you copy | Feature | MVP 2 · Could | New | D-028 revised | M0 |
 | B-027 | Skills no longer mirrored in doc 40; it links to the skill files instead | Chore | MVP 2 · Could | New | Your view on the mirrors ([[87 MVP Retrospective]] §3.1) | M2 to M6 |
 

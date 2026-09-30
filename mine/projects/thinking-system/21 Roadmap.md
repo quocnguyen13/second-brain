@@ -180,3 +180,19 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - The five insights are `origin: claude`. Rewrite them, keep them as they are, or archive them.
 - The first decision page in `mine/decisions/`.
 - Two drafts that weren't kept: `The schema doc is the highest-leverage part of this vault to get right` (its Check was clean) and `Per-source review beats batch ingest for this vault`. Git keeps both.
+
+## 10. M7 in progress
+- [x] Opened 2026-09-30 from the brief. Docs 11 §11, 21 §2, 22, 31 §2–3, 33, 40 §4.1, 86 and 87 §5 read; tool facts rechecked against the Claude Code docs on permissions and skills (2026-09-30)
+- [x] `ingest` reworked for sets: one brief, one move block, one run, one set review with conflicts first and facts by trust, and `/ingest resolve`. Mirrored in [[40 Claude Operating Instructions]] §4.1 (D-085, D-086, D-088, D-089)
+- [x] Trust levels and the conflict review drafted in [[31 Trust and Provenance]] §2.1 and §3, for M0 to accept (D-087, D-088)
+- [x] Commits after your review (D-090) and page names in `log.md` (D-091) carried into `CLAUDE.md`, the settings and the `ask`, `file-answer`, `lint` and `drafts` skills; `system/conventions.md` and the Source template gain `trust`; the six source pages get `trust: primary`
+- [x] Test set and tests I1–I7 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md` (D-092)
+- [x] D-085 to D-092 accepted, with doc 31 §2.1 and §3 (2026-09-30)
+- [ ] Files placed, committed and pushed; `/permissions` shows 8 allow, 2 ask and 10 deny rules; `/skills` lists `ingest` with the new description
+- [ ] The six sources clipped or downloaded into `inbox/sources/`
+- [ ] I1–I2: a set of one and the injection test (MVP 1 regression)
+- [ ] I3–I6: the set of five, its one review, and your decisions on its conflicts
+- [ ] I7: `/ask` on the resolved conflict
+- [ ] M7 exit: 7 of 7; D-022 replaced by D-085
+- [ ] Handover written: doc 88 (M7 Handover)
+- [ ] Next: M8 – Research and Import

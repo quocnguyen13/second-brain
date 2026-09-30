@@ -1,6 +1,7 @@
 ---
 type: source
 status: unverified
+trust:
 sources: []
 created: "{{date:YYYY-MM-DD}}"
 updated: "{{date:YYYY-MM-DD}}"
@@ -8,7 +9,7 @@ tags: []
 ---
 # {{title}}
 
-**Raw file:** link to the file in raw/ · **Author or publisher:** · **Published:** · **Ingested:** {{date:YYYY-MM-DD}}
+**Raw file:** link to the file in raw/ · **Author or publisher:** · **Published:** · **Trust:** level (source type) · **Ingested:** {{date:YYYY-MM-DD}}
 
 ## Summary
 What the source says, in a few sentences.

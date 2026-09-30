@@ -9,7 +9,7 @@
 
 ## Current focus
 - Building this system
-- Now focus on building the M6 - Thinking layer
+- Now focus on building the M7 – Batch Ingest and Trust: testing set ingest
 ## Glossary
 | Term              | Meaning here                                                            |
 | ----------------- | ----------------------------------------------------------------------- |

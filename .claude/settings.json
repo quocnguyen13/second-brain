@@ -14,8 +14,13 @@
       "Edit(/inbox/questions.md)",
       "Edit(/inbox/checks.md)",
       "Edit(/system/lint/**)",
+      "Edit(/system/ingest/**)",
       "Edit(/index.md)",
       "Edit(/log.md)"
+    ],
+    "ask": [
+      "Bash(git commit *)",
+      "PowerShell(git commit *)"
     ],
     "deny": [
       "Edit(/raw/**)",
@@ -23,9 +28,11 @@
       "Bash(rm *)",
       "Bash(git clean *)",
       "Bash(git reset *)",
+      "Bash(git push *)",
       "PowerShell(Remove-Item *)",
       "PowerShell(git clean *)",
-      "PowerShell(git reset *)"
+      "PowerShell(git reset *)",
+      "PowerShell(git push *)"
     ]
   }
 }

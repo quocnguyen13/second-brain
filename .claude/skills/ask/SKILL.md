@@ -29,15 +29,17 @@ Answer exactly one question from the wiki, show where every part of the answer c
 
 ## 2. Check what the pages can support
 - Note each page's `status`. `unverified` and `contested` pages can be used, but the answer says which claims come from them and why they carry that status.
+- Note each claim's trust level: the marker at the end of its citation (`· secondary`, `· commentary`, `· AI`), or primary when there is none. The cited source page's `trust` confirms it.
+- A dispute the page marks "Resolved" is settled: use the claim the page states, and treat the one marked "outweighed by" or "superseded by" as context, not evidence.
 - If the answer turns on one or two claims, open the cited passage in `raw/` and confirm it says what the page says. If it doesn't, say so in the answer and suggest a check for `inbox/checks.md`. Don't fix the page.
 - Decide how much the wiki covers: all of the question, part of it, or nothing.
 
 ## 3. Answer
 Use these sections, in this order, and no others. Leave out any section with nothing in it. Keep it short.
 - **Answer:** 2–5 sentences. Link pages in the sentence with `[[wikilinks]]` for context. Citations belong in Evidence; never put a wiki page where a source citation goes.
-- **Evidence:** one bullet per claim the answer rests on: the claim, the page it's from, and the raw citation that page gives, e.g. `... ([[wiki/concepts/Memex]] → [[raw/bush-as-we-may-think.pdf#page=14]])`. Only use raw citations the page actually carries, or passages you opened in step 2.
-- **Where sources disagree:** both positions with their raw citations, if the answer touches a contested claim. Leave the heading out otherwise.
-- **Caveats:** limits on what the wiki does cover: pages that are `unverified` or `contested`, partial clips, vendor figures, passages you couldn't check in `raw/`.
+- **Evidence:** one bullet per claim the answer rests on: the claim, the page it's from, the raw citation that page gives, and the claim's trust level, e.g. `... ([[wiki/concepts/Memex]] → [[raw/bush-as-we-may-think.pdf#page=14]]) · primary`. Only use raw citations the page actually carries, or passages you opened in step 2.
+- **Where sources disagree:** both positions with their raw citations and levels, if the answer touches a disputed claim. For a dispute the page marks "Resolved", say which claim it states and why. Leave the heading out otherwise.
+- **Caveats:** limits on what the wiki does cover: pages that are `unverified` or `contested`, claims that rest only on commentary or AI sources, partial clips, vendor figures, passages you couldn't check in `raw/`.
 - **Not in the wiki:** only what the question asks that no page covers. If you add general knowledge here, label every such sentence "(general knowledge)" and keep it apart from the evidence.
 - **Recommendation:** one or two lines, when the question asks what to do or the answer shows an obvious next step (a source to ingest, a check to queue). Otherwise leave it out.
 

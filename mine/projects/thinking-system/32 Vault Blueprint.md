@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-25
+reviewed: 2026-09-30
 tags: [project/thinking-system, vault-design]
 ---
 
@@ -46,6 +46,7 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 │   ├── context.md         who you are, current focus, glossary (you maintain)
 │   ├── conventions.md     short version of this document, for Claude
 │   ├── lint/              dated lint reports
+│   ├── ingest/            one set review per /ingest set (D-086)
 │   ├── views/             Review.base: the weekly review views (D-058)
 │   └── templates/         one template per page type (doc 34)
 └── .claude/               Claude Code settings and skills (hidden in Obsidian)
@@ -118,16 +119,16 @@ A catalog, grouped by folder, one line per page, updated on every ingest:
 Claude reads this first when answering, then opens the pages it needs.
 
 ## 6. `log.md`
-Append-only, one entry per operation, always with the same prefix so it can be filtered from a terminal:
+Append-only, one entry per operation, always with the same prefix so it can be filtered from a terminal. Each entry names the pages the operation created or changed, so `/drafts` can say which operation changed a page (D-091):
 ```markdown
-## [2026-09-18] ingest | LLM Wiki gist
-Pages: +4 new, 3 updated. Contradiction noted on [[wiki/concepts/RAG]].
+## [2026-10-01] ingest | UK bank regulators
+Set: set-2026-10-01, 5 sources (3 primary, 1 secondary, 1 commentary). Pages: +3 new (Source - PRA approach to banking supervision, ...); 4 updated (Financial Conduct Authority, FCA-PRA coordination, ...). Conflicts: 1, waiting for your decision. Flags: none.
 ```
 `grep "^## \[" log.md | tail -5` then shows the last five things that happened.
 
 ## 7. Naming
 - Folders are lower case with hyphens; page titles are plain language.
 - Avoid these characters in titles: `# ^ [ ] | \ / : * " < > ?`
-- Files in `raw/` are named as they move in: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. The content is never changed (D-042).
+- Files in `raw/` are named as they move in: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site, e.g. `wikipedia-financial-conduct-authority.md`; for a document in a dated series, the year, e.g. `pra-banking-supervision-approach-2023.pdf`. The content is never changed (D-042, D-089).
 - Dates as `YYYY-MM-DD`.
 - One idea per insight page, titled as a statement you could agree or disagree with.

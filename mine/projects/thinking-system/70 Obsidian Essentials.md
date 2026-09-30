@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-24
+reviewed: 2026-09-30
 tags: [project/thinking-system, obsidian]
 ---
 
@@ -43,11 +43,13 @@ Back to [[00 Project Home]] · Structure in [[32 Vault Blueprint]]
 That is the entire set this system needs. Anything else, look up at help.obsidian.md or ask in the session.
 
 ## 3. The one skill that matters: reviewing an ingest
-The wiki is only trustworthy if someone checks it, and that someone is you. After each ingest, spend five minutes:
-1. Open a new or updated page in `wiki/`.
-2. Read its properties: `status` and `sources`.
-3. Click through one `sources` link into `raw/` and confirm the claim is really there.
-4. If the page says `unverified` or `contested`, read why.
+The wiki is only trustworthy if someone checks it, and that someone is you. After each set, spend ten minutes in its set review, `system/ingest/set-YYYY-MM-DD.md` ([[03 Decision Log]] D-086):
+1. **Conflicts.** Read each one and follow both citations into `raw/`. Decide each with a letter: `/ingest resolve 1a 2d`. Unsure means **d**: leave it open, and the page stays `contested`.
+2. **Weakest facts.** Read the commentary and secondary facts; they rest on the weakest sources. Open the folded Primary list only where something looks off.
+3. **Trace.** Under "Check first", click one claim per level through to `raw/` and confirm it's really there.
+4. **Pages.** Open one new or updated page. Read its properties, `status` and `sources`, and `trust` on a source page. If a page says `unverified` or `contested`, read why.
+
+Then tell Claude the review is done. It shows what changed and commits with your approval; `git push` is yours (D-090).
 
 If you stop doing this, the provenance rules in [[31 Trust and Provenance]] become decoration. Nothing else in this document is load-bearing; this is.
 
