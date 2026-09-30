@@ -6,8 +6,6 @@ I am an ex-product owner of financial products, who barely know about AI (yeah A
 
 This series is to share how I work with my Claude to convert it to something can make me lazy from works that a, but holding everything in order that satisfy my standard - or in short, help me to stay away from grunt works. AI helps me do the work - I verify and guarentee its outcomes. If you looking for a similar thing, welcome onboard. 
 
-
-
 The Concept: 
 The project is built upon 3 cores: 
 - 
