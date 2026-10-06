@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, obsidian]
 ---
 
@@ -49,7 +49,7 @@ The wiki is only trustworthy if someone checks it, and that someone is you. Afte
 3. **Trace.** Under "Check first", click one claim per level through to `raw/` and confirm it's really there.
 4. **Pages.** Open one new or updated page. Read its properties, `status` and `sources`, and `trust` on a source page. If a page says `unverified` or `contested`, read why.
 
-Then tell Claude the review is done. It shows what changed and commits with your approval; `git push` is yours (D-090).
+Then tell Claude the review is done. It shows what changed and commits with your approval; `git push` is yours (D-090). If Claude Code asks to run any shell command other than `git status`, `git add` or `git commit` during an ingest, answer No: the skill edits files with its file tools only.
 
 If you stop doing this, the provenance rules in [[31 Trust and Provenance]] become decoration. Nothing else in this document is load-bearing; this is.
 

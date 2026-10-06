@@ -17,7 +17,7 @@ Page types, properties, naming: @system/conventions.md
 - A claim whose cited passage doesn't say it is unsourced, whatever it cites.
 - Anything you add from general knowledge is labelled "(general knowledge)" and is not a source.
 - Every source has a trust level on its source page (`trust`: primary, secondary, commentary or AI), set by its type from the table in `system/conventions.md`. A fact takes the level of its best source. A citation of a source below primary ends with its level: `([[raw/<name>]] · commentary)`. Level and status are separate: status says whether a claim is cited, the level how strong its source is.
-- When two sources disagree on a fact, you propose which claim to state, by trust level and then date; on a view, you propose nothing. I decide. The claim set aside stays visible, marked "outweighed by" or "superseded by".
+- When two sources disagree on a fact, you propose which claim to state: by trust level, then a body's own statement about itself, then date. On a view, you propose nothing. I decide. The claim set aside stays visible, marked "outweighed by" or "superseded by".
 
 ## Input zones
 - `inbox/sources/` -> `/ingest`   files to compile

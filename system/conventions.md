@@ -33,7 +33,7 @@ One level per source, set by its type. When a source fits no row, or two, propos
 | `ai` | A Claude output saved as a source (D-075). Its claims stay uncited until a primary source backs them | A research report from a Claude chat |
 
 - A fact takes the level of its best source. A citation of a source below primary ends with its level, inside the brackets: `([[raw/<name>]] · secondary)`, `· commentary`, `· AI`. Primary citations carry no marker.
-- A disagreement on a fact is settled by level, then by date; a disagreement of views is never settled by level. I decide either way. The claim set aside stays under "Where sources disagree", marked "outweighed by" or "superseded by", with the date it was resolved.
+- A disagreement on a fact is settled by level, then by a body's own statement about itself over another body's statement about it, then by date; a disagreement of views is never settled by level. I decide either way. The claim set aside stays under "Where sources disagree", marked "outweighed by" or "superseded by", with the date it was resolved.
 
 ## Linking
 - Link in sentences with `[[wikilinks]]`, using page titles.

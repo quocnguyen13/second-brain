@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-19
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, operations]
 ---
 
@@ -39,7 +39,7 @@ inbox/
 **Contract:** one file per source, and one set per ingest: every file in the zone, or the files you name, up to 8 on one topic ([[03 Decision Log]] D-085; it replaces D-022's one source per run when M7 exits). A set of one file is an ordinary single ingest.
 **What `/ingest` does** (the `ingest` skill, mirrored in [[40 Claude Operating Instructions]] §4.1):
 1. Reads every file in the set, then sends one brief: a row per source with its trust level and proposed raw name, key takeaways for the set, the pages it would touch, likely conflicts, anything suspicious in the text, and one move block. It asks what to emphasise and whether any level should change. Nothing is written until you answer.
-2. You paste the move block once at the vault root. `raw/` stays enforced read-only to Claude, shell moves included, so the move is yours (D-045, D-089). Claude checks every file arrived.
+2. You paste the move block once at the vault root and press Enter, because PowerShell holds the last pasted line until you do. `raw/` stays enforced read-only to Claude, shell moves included, so the move is yours (D-045, D-089). Claude checks every file arrived.
 3. Opens the set review, `system/ingest/set-YYYY-MM-DD.md` (D-086), then compiles each source in turn, primary sources first: the source page with its `trust`, the entity and concept pages it touches, and each conflict on both sides with a proposal ([[31 Trust and Provenance]] §2.1, §3). It ticks each source in the set review as it goes, so a run that stops can resume.
 4. Rewrites `wiki/overview.md` once (D-044), proposes one to three insight drafts for the set, updates `index.md` and `log.md` with the pages named (D-091), and finishes the set review: conflicts first, then facts sorted by trust, weakest first, and one claim per level for you to trace.
 5. You read the set review and decide each conflict with `/ingest resolve 1a 2d` (D-088). When you say the review is done, Claude commits with your approval, and the push stays yours (D-090).

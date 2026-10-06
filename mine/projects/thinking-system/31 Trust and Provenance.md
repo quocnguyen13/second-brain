@@ -57,18 +57,18 @@ Status says whether a claim is cited; the trust level says how strong its source
 **Where it shows:** the `trust` property on each source page; the marker on each citation below primary; the set review, which lists facts weakest first ([[33 Input Zones]] §2); `/ask`, which gives each fact's level in Evidence and names facts that rest only on commentary or AI under Caveats; and `/lint`, which checks every marker against its source page.
 
 ## 3. Conflicts, staleness, and gaps
-> [!note] The first two points were revised by M7 and accepted 2026-09-30 ([[03 Decision Log]] D-088).
+> [!note] The first two points were revised by M7 and accepted 2026-09-30 ([[03 Decision Log]] D-088); the own-statement tie-break was added on 2026-10-06 (D-094).
 
 - **Two sources disagree:** Claude records both positions on the page, each with its citation, level and date, marks the page `contested`, and names the sources. It never settles a conflict itself: it proposes, and you decide. `contested` goes on the pages that carry the disputed claim; source pages and `wiki/overview.md` record the conflict and keep their own status ([[03 Decision Log]] D-047).
 
 | Kind | What it is | Claude proposes |
 |---|---|---|
-| fact | Different facts on the same point: a figure, a date, what a rule says | The claim from the higher level; at the same level, the newer one; with no dates to compare, nothing |
+| fact | Different facts on the same point: a figure, a date, what a rule says | The claim from the higher level. At the same level, a body's own statement about itself over another body's statement about it (D-094), then the newer one. With nothing to separate them, nothing |
 | newer | A later source or version updates an earlier statement | The newer claim, with the older marked "superseded by" |
 | scope | The claims stop clashing once each is read with its date or scope | Both hold, reworded with their scope |
 | view | Authors disagree on an approach, an opinion or a prediction | Nothing. Trust levels and dates don't settle views |
 
-- **Your decision,** per conflict, with `/ingest resolve`: **a** the proposal, **b** the other claim, **c** both hold, scoped, **d** leave it open. After a or b, the page states the chosen claim; the other stays under "Where sources disagree", marked "outweighed by" (a higher level, or your decision) or "superseded by" (newer), with the date and a link to the set review. The page is then no longer `contested` for that point. After d, nothing changes. Deleted history is lost history, so a claim set aside is never removed.
+- **Your decision,** per conflict, with `/ingest resolve`: **a** the proposal, **b** the other claim, **c** both hold, scoped, **d** leave it open. After a or b, the page states the chosen claim; the other stays under "Where sources disagree", marked "outweighed by" (a higher level, the body's own statement, or your decision) or "superseded by" (newer), with the date and a link to the set review. The page is then no longer `contested` for that point. After d, nothing changes. Deleted history is lost history, so a claim set aside is never removed.
 - **A newer source supersedes an older claim:** the old claim stays visible, marked as superseded, with a link to what replaced it.
 - **Out of date:** every page carries an `updated` date. Lint flags pages on fast-moving topics that haven't been touched in six months.
 - **Nothing there:** "the wiki has nothing on this" is a required answer when it's true, before Claude falls back to general knowledge.

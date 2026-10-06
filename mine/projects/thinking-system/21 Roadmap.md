@@ -27,8 +27,8 @@ flowchart TD
     end
     V1["MVP 1 · M0 to M6<br/>closed 2026-09-25"]:::done
     PM["M0 · Retrospective<br/>and MVP 2 scope"]:::done
-    M7["M7 · Batch ingest<br/>and trust"]:::next
-    M8["M8 · Research<br/>and import"]:::plan
+    M7["M7 · Batch ingest<br/>and trust"]:::done
+    M8["M8 · Research<br/>and import"]:::next
     M9["M9 · Large<br/>documents"]:::plan
     G["M0 · Retrospective<br/>and showcase gate"]:::plan
     V1 --> PM --> M7 --> M8 --> M9
@@ -52,7 +52,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 | **MVP complete** | | | All criteria in [[11 Project Charter]] §6 met. 5 of 6 at M5's close; the insights criterion is met in M6 (D-062, D-068) | **Met 2026-09-25: 6 of 6** |
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to the revision, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
 | **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 87 (MVP Retrospective) completed; docs 11 and 21 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | **Closed 2026-09-30** (D-084) |
-| **M7 – Batch Ingest and Trust** | A topic comes in as a set: one run, one review, facts ranked by trust, conflicts resolved | Must: B-006 set ingest, B-007 trust levels (rule in doc 31 §2), B-008 conflict review (doc 31 §3), B-024 one move per set, tested on B-009 (the UK financial system). Should: B-011, B-025. Takes over the `ingest` skill from M3 | 5 or more sources on one topic compiled in one run with one review, conflicts first and facts sorted by trust; the MVP 1 ingest tests still pass | About 1 week |
+| **M7 – Batch Ingest and Trust** | A topic comes in as a set: one run, one review, facts ranked by trust, conflicts resolved | Must: B-006 set ingest, B-007 trust levels (rule in doc 31 §2), B-008 conflict review (doc 31 §3), B-024 one move per set, tested on B-009 (the UK financial system). Should: B-011, B-025. Takes over the `ingest` skill from M3 | 5 or more sources on one topic compiled in one run with one review, conflicts first and facts sorted by trust; the MVP 1 ingest tests still pass. Tests I1–I7: 7 of 7 | **Closed 2026-10-06** |
 | **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version | About 1 week |
 | **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section | About 1 week |
 | **MVP 2 complete** | | | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate in M0 (D-082) | |
@@ -181,19 +181,28 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - The first decision page in `mine/decisions/`.
 - Two drafts that weren't kept: `The schema doc is the highest-leverage part of this vault to get right` (its Check was clean) and `Per-source review beats batch ingest for this vault`. Git keeps both.
 
-## 10. M7 in progress
+## 10. M7 closed on 2026-10-06
 - [x] Opened 2026-09-30 from the brief. Docs 11 §11, 21 §2, 22, 31 §2–3, 33, 40 §4.1, 86 and 87 §5 read; tool facts rechecked against the Claude Code docs on permissions and skills (2026-09-30)
 - [x] `ingest` reworked for sets: one brief, one move block, one run, one set review with conflicts first and facts by trust, and `/ingest resolve`. Mirrored in [[40 Claude Operating Instructions]] §4.1 (D-085, D-086, D-088, D-089)
-- [x] Trust levels and the conflict review drafted in [[31 Trust and Provenance]] §2.1 and §3, for M0 to accept (D-087, D-088)
+- [x] Trust levels and the conflict review written into [[31 Trust and Provenance]] §2.1 and §3 (D-087, D-088)
 - [x] Commits after your review (D-090) and page names in `log.md` (D-091) carried into `CLAUDE.md`, the settings and the `ask`, `file-answer`, `lint` and `drafts` skills; `system/conventions.md` and the Source template gain `trust`; the six source pages get `trust: primary`
 - [x] Test set and tests I1–I7 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md` (D-092)
 - [x] D-085 to D-092 accepted, with doc 31 §2.1 and §3 (2026-09-30)
 - [x] Files placed, committed and pushed (e8f4340, 2026-09-30)
 - [x] The six sources clipped or downloaded into `inbox/sources/`
-- [x] I1–I2: a set of one and the injection test (MVP 1 regression). **2 of 2** (2026-10-06, commit 473c5e1). I1 found a real scope conflict, the FCA "established" in 2013 against the FSA renamed, resolved as 1c
-- [x] D-093 accepted during I3: no personal-data flag; the confidentiality stop stays. `ingest` revised with four fixes from I1 (2026-10-06)
-- [ ] I3–I6: the set of five, its one review, and your decisions on its conflicts
-- [ ] I7: `/ask` on the resolved conflict
-- [ ] M7 exit: 7 of 7; D-022 replaced by D-085
-- [ ] Handover written: doc 88 (M7 Handover)
-- [ ] Next: M8 – Research and Import
+- [x] I1–I2: a set of one and the injection test (MVP 1 regression). **2 of 2** (commit 473c5e1). I1 found a real scope conflict, the FCA "established" in 2013 against the FSA renamed, resolved as 1c
+- [x] D-093 accepted during I3: no personal-data flag; the confidentiality stop stays. `ingest` revised with four fixes from I1 (commit d15b457)
+- [x] I3–I6: the set of five in one run, 18 pages new and 10 updated, 58 facts; 3 conflicts decided as 1a 2a 3a (commit 3e474a7). **4 of 4**
+- [x] I7: `/ask` on the resolved conflict gives the FCA's own figure with its level, and Wikipedia's as set aside. **1 of 1**
+- [x] **M7 exit: 7 of 7** (2026-10-06). D-022 replaced by D-085. [[11 Project Charter]] §11 criterion 3 (batch ingest) is met
+- [x] D-094 accepted at the close: at the same level, a body's own statement about itself is proposed before the newer source. `ingest` revised with it and two more fixes (press Enter after the move block; no scripts on vault files)
+- [x] Handover written: [[88 M7 Handover]]
+- [ ] Closing files placed, committed and pushed; Sync
+- [ ] **Next:** M8 – Research and Import, opened from [[88 M7 Handover]]
+
+**Parked in M7, to pick up when they start to hurt:**
+- Resuming a set that stops part-way (D-086) is built but untested; M9's large documents will exercise it.
+- The first `/lint` since M7 hasn't run. It will deep-check about 30 changed pages and is the first use of the trust-level check (A1 point 8).
+- Six insight drafts wait for `/drafts`: three from the FSMA ingest, one from I1 and two from the set of five.
+- `Claude outputs/` at the vault root isn't in the blueprint. It holds a copy of doc 10 and `test-injection.md`.
+- Claude Code adds a "Co-Authored-By" line to the commits it makes. A setting can turn it off.

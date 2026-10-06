@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge assistant built on the **LLM Wiki** pattern: you collect sources, Claude compiles them into a cited wiki you read in Obsidian, and on top sit a thinking layer you own and, next, defined jobs done to your standards. Where it's going: [[10 Product Vision]]. How it works today: [[20 Product Requirements]].
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): **M7 – Batch Ingest and Trust** opened 2026-09-30, with `ingest` reworked for sets, trust levels and a conflict review. D-085 to D-093 accepted. Tests I1 and I2 pass (2 of 7); the set of five is next. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082).
+**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): **M7 – Batch Ingest and Trust closed 2026-10-06**, tests 7 of 7, with the batch-ingest criterion met ([[88 M7 Handover]]). Next: M8 – Research and Import. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082).
 
 ## Document set
 Numbered by SDLC stage, in blocks of ten ([[03 Decision Log]] D-080). A document keeps its number; a new one takes the next free number in its stage. Planned documents have their number reserved, shown in *italics* with the backlog item that writes them. Governance runs through every stage, and every module adds a delivery record.
@@ -105,8 +105,9 @@ Agile reviews and retrospectives, in date order.
 | 83 | [[83 M3 Handover]] | Closing state of M3, used to open the M4 chat | Closed |
 | 84 | [[84 M4 Handover]] | Closing state of M4, used to open the M5 chat | Closed |
 | 85 | [[85 M5 Handover]] | Closing state of M5, used to open the M6 chat | Closed |
-| 86 | [[86 M6 Handover]] | Closing state of M6 and MVP 1, to take to the M0 thread | Current |
+| 86 | [[86 M6 Handover]] | Closing state of M6 and MVP 1, to take to the M0 thread | Closed |
 | 87 | [[87 MVP Retrospective]] | Retrospective of MVP 1 and the input to MVP 2's scope | Draft |
+| 88 | [[88 M7 Handover]] | Closing state of M7, used to open the M8 chat | Current |
 
 ## What the set was missing
 Checked on 2026-09-30 against the documents a standard SDLC and a Scrum-style process expect, and against what a reviewer of the showcase would look for.
@@ -223,3 +224,4 @@ Entries up to 1.35 use the document numbers of their time; the renumber map abov
 | **1.41** | 2026-09-30 | **M7 started.** `ingest` reworked to take a set: one brief, one move block, one run, and one set review in `system/ingest/` with conflicts first and facts sorted by trust; `/ingest resolve` applies your decisions on conflicts. Trust levels (doc 31 §2.1) and the conflict review (doc 31 §3) drafted for M0. Claude commits after your review, with an ask rule on `git commit` and a deny rule on `git push`; log entries name pages. `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md`, the Source template, the five skills and the six source pages updated. Tests I1–I7 on six UK regulation sources. D-085 to D-092 proposed. Docs 00, 03, 21, 22, 31, 32, 33, 40 and 70 and `system/test-results.md` updated |
 | 1.42 | 2026-09-30 | D-085 to D-092 accepted, with doc 31 §2.1 (trust levels) and §3 (conflict review). D-008 revised by D-090. Docs 00, 03, 21, 22, 31, 33 and 40 updated |
 | 1.43 | 2026-10-06 | Tests I1 (a set of one) and I2 (injection) pass. D-093 accepted: no personal-data flag; public material that names people is compiled like any other source, and the confidentiality stop stays. `ingest` revised after I1: where an open dispute sits, `sources` on pages that cite another raw file, conflict notes updated on resolve, one commit for an ingest and its resolve. `CLAUDE.md`, the `ingest` skill and `system/test-results.md` updated; docs 00, 03, 20, 21, 31 and 40 updated |
+| **1.44** | 2026-10-06 | **M7 closed: tests I1–I7 pass, 7 of 7.** Five sources compiled in one run with one review (18 pages new, 10 updated, 58 facts), three conflicts decided, and `/ask` reports the trust level of each fact. Charter §11 criterion 3 met; D-022 replaced by D-085. D-094 accepted: at the same level, a body's own statement about itself is proposed before the newer source. `ingest` revised: press Enter after the move block, and no scripts on vault files. Doc 88 (M7 Handover) added, with the opening brief for M8 and a request for M0. `CLAUDE.md`, `system/conventions.md`, the `ingest` skill and `system/test-results.md` updated; docs 00, 03, 21, 22, 31, 33, 40 and 70 updated |
