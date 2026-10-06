@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, ways-of-working]
 ---
 
@@ -82,11 +82,11 @@ Every module has **one standing chat** in this Project, named `M<n> – <name>`.
 | M0 – Project Management  | Docs 00–04, 10–13, 20–22, 30, 31, 36, 50, 60 and 71; the handovers and retrospectives (80 onward); each milestone's scope; work that crosses modules                              |
 | M1 – Vault and Git       | Folder structure and naming ([[32 Vault Blueprint]] §1, §7); `.gitignore` and `.gitattributes`; Obsidian settings and the Web Clipper ([[70 Obsidian Essentials]] §1–2) |
 | M2 – Connect Claude Code | `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md` and the templates ([[34 Templates]]); [[40 Claude Operating Instructions]] §1–3 and §6                    |
-| M3 – First Ingests       | The `ingest` skill (40 §4.1) until M7 opens; [[33 Input Zones]]; the `index.md` and `log.md` formats (32 §5–6); reviewing an ingest (70 §3)                                            |
+| M3 – First Ingests       | Nothing since M7 opened: the `ingest` skill, the zone contract, the index and log formats and the ingest review all passed to M7 (D-084). The thread keeps the record of the first ingests ([[83 M3 Handover]]) |
 | M4 – Ask and File-back   | The `ask` and `file-answer` skills (40 §4.2–4.3); test prompts 1–10                                                                                                     |
 | M5 – Lint and Review     | The `lint` skill (40 §4.4); `Review.base` (70 §6); the weekly review (70 §4); the lint tests                                                                            |
 | M6 – Thinking Layer      | The `drafts` skill (40 §4.5); the rules for `mine/` (32 §2–4); the Insight and Decision templates; 70 §4 step 5 and §5; the drafts tests                                |
-| M7 – Batch Ingest and Trust | The `ingest` skill from its opening (D-084), with set ingest, trust levels and conflict review; drafts the rule changes for doc 31 §2–3, which M0 accepts |
+| M7 – Batch Ingest and Trust | The `ingest` skill (40 §4.1): sets, trust levels, the conflict review and the set reviews in `system/ingest/`; [[33 Input Zones]]; the `index.md` and `log.md` formats (32 §5–6); reviewing an ingest (70 §3); the trust table in `system/conventions.md`; the ingest set tests I1–I7. Drafts the rule changes for doc 31 §2–3, which M0 accepts |
 | M8 – Research and Import | The research summary and `/import` skills; Claude's research as a source (B-003) |
 | M9 – Large Documents | Compiling a document in parts across sessions (B-038) |
 

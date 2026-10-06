@@ -5,7 +5,7 @@ status: active
 trust: ai-draft
 origin: claude
 created: 2026-09-30
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, vision]
 ---
 
@@ -37,7 +37,7 @@ Back to [[00 Project Home]] · Phase: Plan, strategy · Owned by M0 – Project 
 ### 2.2 Needs
 | # | When I… | I want to… | so that… | Today |
 |---|---|---|---|---|
-| N1 | start a new domain | research it as a set of sources, with facts ranked by trust and conflicts resolved | I learn fast and can defend what I learnt | One source per run, no trust levels ([[87 MVP Retrospective]] §5) |
+| N1 | start a new domain | research it as a set of sources, with facts ranked by trust and conflicts resolved | I learn fast and can defend what I learnt | Partly met by M7: a set of up to 8 sources in one run, with trust levels and a conflict review ([[88 M7 Handover]]). Research summaries (M8) and large documents (M9) to come |
 | N2 | read something useful | keep it where it compounds | nothing useful disappears into chat history | Met by MVP 1 |
 | N3 | rely on a fact | trace it to its source in under a minute | I never have to take Claude's word for it | Met by MVP 1 (G5) |
 | N4 | produce a standard output, such as a PRD or a brief | have it drafted from my knowledge, to my template, style and audience | my time goes on judgement, not grunt work | Not built |
@@ -54,15 +54,15 @@ Back to [[00 Project Home]] · Phase: Plan, strategy · Owned by M0 – Project 
 ## 3. Measures of success
 **North Star: trusted outputs per month.** An output is an answer I file or a job's product, where every fact traces to `raw/` or is labelled. It grows only when the knowledge base is both used and trustworthy.
 
-| Metric | Kind | Baseline, MVP 1 | Target direction |
-|---|---|---|---|
-| Trusted outputs per month | North Star | 1 analysis page filed (M4) | Up |
-| Your steps per source ingested | Effort | 3 of 5, one source per run | Down |
-| Time from a new topic to usable knowledge | Speed | Not measured | Down |
-| Share of wiki pages `verified` | Quality | 19 of 27 at MVP close | Up |
-| Errors caught before use | Guardrail | First lint: 13 real findings; `/drafts`: 9 of 11 drafts flagged | Caught at check time, never after use |
-| Time to trace a claim | Guardrail | Under a minute (G5) | Stays under a minute |
-| Confidential items in the vault | Guardrail | 0 | Stays 0 |
+| Metric | Kind | Baseline, MVP 1 | After M7, 2026-10-06 | Target direction |
+|---|---|---|---|---|
+| Trusted outputs per month | North Star | 1 analysis page filed (M4) | No change: still 1 | Up |
+| Your steps to ingest sources | Effort | 3 for each source: 15 for five | 4 for a whole set: five sources took 4 | Down |
+| Time from a new topic to usable knowledge | Speed | Not measured | Not measured | Down |
+| Share of wiki pages `verified` | Quality | 19 of 27 at MVP close | 48 of 57 | Up |
+| Errors caught before use | Guardrail | First lint: 13 real findings; `/drafts`: 9 of 11 drafts flagged | 4 conflicts found at ingest and decided; no `/lint` yet since M7 | Caught at check time, never after use |
+| Time to trace a claim | Guardrail | Under a minute (G5) | Unchanged | Stays under a minute |
+| Confidential items in the vault | Guardrail | 0 | 0 | Stays 0 |
 
 How each is measured, and the targets per milestone, go in doc 12 (Success Metrics, B-031).
 
@@ -93,7 +93,7 @@ flowchart TD
 ```
 
 ### 4.1 Milestones
-The split between research and jobs is accepted (D-081), and MVP 2 comes next (D-082). What goes into each milestone is set when it is scoped.
+The split between research and jobs is accepted (D-081), and MVP 2 is under way (D-082, D-084). What goes into each milestone is set when it is scoped.
 
 ```mermaid
 %%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
@@ -101,7 +101,7 @@ flowchart TD
     subgraph LEG["Legend · status"]
         direction TB
         L1["Done"]:::done
-        L4["Next"]:::next
+        L4["In progress"]:::next
         L2["Proposed"]:::prop
         L3["Later"]:::later
     end
@@ -119,7 +119,7 @@ flowchart TD
 | Milestone | Goal | Capabilities | Needs met | Status |
 |---|---|---|---|---|
 | **MVP 1 · Compounding knowledge base** | The working loop: capture, compile, ask, file back, lint, think | E-01 to E-05, E-07 | N2, N3, N5 (personal) | **Done 2026-09-25**, 6 of 6 criteria |
-| **MVP 2 · Research assistant** | Research a topic as a set, large documents included: trust-ranked, verified facts, with fewer manual steps | E-01, E-02, E-04, E-05, E-07, E-08 | N1 | **Next.** Scope accepted (D-084): [[11 Project Charter]] §11 |
+| **MVP 2 · Research assistant** | Research a topic as a set, large documents included: trust-ranked, verified facts, with fewer manual steps | E-01, E-02, E-04, E-05, E-07, E-08 | N1 | **In progress.** Scope accepted (D-084). M7 closed 2026-10-06 with the batch-ingest criterion met; M8 is next ([[11 Project Charter]] §11) |
 | **MVP 3 · Work assistant** | Defined jobs to your standards, a PRD first | E-06 | N4 | Proposed |
 | **MVP 4 · Work-ready** | Work material under data governance; Office files as sources | E-01, E-07 | N5 (work) | Later |
 
@@ -128,16 +128,16 @@ flowchart TD
 The milestones split the candidate goal in [[87 MVP Retrospective]] §7.2 (research and a PRD job in one milestone) in two, so each ships something usable sooner (D-081).
 
 ### 4.2 Capabilities
-| ID | Capability | What it does for the owner | Built in MVP 1 | Features next ([[22 Product Backlog]]) |
+| ID | Capability | What it does for the owner | Built so far | Features next ([[22 Product Backlog]]) |
 |---|---|---|---|---|
 | E-01 | **Capture** | Gets material in: web clips, files, Claude outputs | Web Clipper and the inbox zones (US-01) | B-001, B-002, B-004, B-005, B-037 |
-| E-02 | **Compile and verify** | Turns sources into cited pages, with status, conflicts and trust | `/ingest`, one source per run (US-02, US-09) | B-003, B-006 to B-009, B-038 |
-| E-03 | **Ask and reuse** | Answers from your own sources, and keeps the good ones | `/ask`, `/file-answer` (US-03, US-04) | B-010 |
-| E-04 | **Keep healthy** | Finds what's wrong or stale before you rely on it | `/lint`, the review views, the weekly review (US-05, US-06, US-08, US-12) | B-011 to B-014 |
+| E-02 | **Compile and verify** | Turns sources into cited pages, with status, conflicts and trust | `/ingest` for a set of up to 8 sources, with trust levels, a conflict review you decide, and one set review (US-02, US-09; M7: US-14, US-15) | B-003, B-009, B-038 |
+| E-03 | **Ask and reuse** | Answers from your own sources, and keeps the good ones | `/ask`, `/file-answer` (US-03, US-04); since M7, `/ask` gives each fact's trust level | B-010 |
+| E-04 | **Keep healthy** | Finds what's wrong or stale before you rely on it | `/lint`, the review views, the weekly review (US-05, US-06, US-08, US-12); since M7, log entries name pages | B-012 to B-014 |
 | E-05 | **Think** | Holds your own conclusions and decisions | `/drafts`, the insights routine (US-07) | B-015, B-016 |
 | E-06 | **Jobs and standards** | Produces work outputs to your standards | Not built. The diagram rules (D-074) are the first standard | B-017 to B-021 |
 | E-07 | **Control and safety** | Nothing changes without your say; confidential material stays out | Permission rules, git, the data boundary (US-10, US-11) | B-022, B-023 |
-| E-08 | **Operate** | Keeps running with little effort, and changes safely | Module threads, the document loop (US-13) | B-024 to B-027 |
+| E-08 | **Operate** | Keeps running with little effort, and changes safely | Module threads, the document loop (US-13); since M7, one move per set and commits by Claude with your approval (US-16) | B-026, B-027 |
 | E-09 | **Showcase and documentation** | Shows the product and how it was built | This document set; the PRD | B-028 to B-036 |
 
 ## 5. What it is not

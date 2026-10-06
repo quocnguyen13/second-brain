@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system]
 ---
 
@@ -84,13 +84,15 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 |---|---|
 | The wiki becomes confidently wrong | Citation rule, unverified status, lint, git diffs ([[31 Trust and Provenance]]) |
 | Claude's own summaries get treated as evidence | Wiki pages cite `raw/`, never other wiki pages, as their source of fact |
-| I stop reading what Claude writes | Ingest one source at a time and stay involved; weekly lint |
+| I stop reading what Claude writes | One review per set, with conflicts and the weakest facts first, and nothing compiled before I answer the brief (D-085, D-086); weekly lint |
 | Bank material drifts into the vault before the rules exist | One standing rule in [[31 Trust and Provenance]] §4 until doc 36 is written |
 | Claude edits or deletes the wrong thing | Permission rules, manual approval outside the allowed paths, git history |
-| Usage limits run out mid-task | Ingest sources singly; check `/usage` |
+| Usage limits run out mid-task | Sets of up to 8 files; a stopped set resumes from its set review (D-086); check `/usage` |
 
 ## 11. MVP 2 · Research assistant
 Scope accepted 2026-09-30 ([[03 Decision Log]] D-084). Where it sits among the milestones: [[10 Product Vision]] §4.1. Modules: [[21 Roadmap]] §2.
+
+**Status, 2026-10-06:** M7 – Batch Ingest and Trust is closed ([[88 M7 Handover]]). Done: B-006, B-007, B-008, B-011, B-024, B-025; B-009 has 7 sources compiled. Criterion 3 is met. M8 – Research and Import is next.
 
 **Goal:** research a topic in one pass, with trust-ranked, verified facts, so an answer from the vault beats a default Claude answer (D-083).
 
@@ -104,15 +106,15 @@ Scope accepted 2026-09-30 ([[03 Decision Log]] D-084). Where it sits among the m
 **Success criteria**
 1. **Research:** a new topic returns a summary in which every fact names its source, plus a list of primary sources to clip.
 2. **Import:** `/import` flags a planted duplicate and a planted new version.
-3. **Batch ingest:** 5 or more sources on one topic compiled in one run with one review. The review lists conflicts first, then facts sorted by trust.
+3. **Batch ingest:** 5 or more sources on one topic compiled in one run with one review. The review lists conflicts first, then facts sorted by trust. **Met 2026-10-06** (tests I3–I5): 5 sources, 18 pages new, 10 updated, 58 facts, 3 conflicts decided.
 4. **Large documents:** a document of several hundred pages compiled in parts, with progress tracked and every citation pointing to its page or section.
 5. **Side-by-side:** 5 questions on the UK set, asked through `/ask` and in a default Claude chat. Every fact in the `/ask` answers traces to `raw/`, with its trust level.
-6. **Regression:** the 21 MVP 1 tests still pass, so `/ingest`, `/ask`, `/file-answer` and `/lint` keep working.
+6. **Regression:** the 21 MVP 1 tests still pass, so `/ingest`, `/ask`, `/file-answer` and `/lint` keep working. The ingest tests passed again in M7 (I1, I2); the other 19 are rerun at MVP 2's exit, since M7 changed `ask`, `file-answer`, `lint` and `drafts`.
 
 **Risks**
 | Risk | Mitigation |
 |---|---|
-| A set or a large document uses up the day's Pro allowance mid-run | Runs split into parts that each end cleanly, with progress recorded so the next session resumes |
-| A faster review means you read less of what Claude writes | Conflicts and low-trust facts come first, and the checks that open `raw/` stay ([[10 Product Vision]] §6, principle 7) |
+| A set or a large document uses up the day's Pro allowance mid-run | The set review records progress, so the next `/ingest` resumes a stopped set (D-086). Built in M7, not yet tested: 82 PDF pages and two clips compiled in one session. M9 will exercise it |
+| A faster review means you read less of what Claude writes | Conflicts and low-trust facts come first, and the checks that open `raw/` stay ([[10 Product Vision]] §6, principle 7). The set of five listed 58 facts, 41 of them primary and folded, so `/lint` runs after every large set |
 | Trust levels become Claude's opinion of a source | Levels set by type of source in doc 31, not by judgement, and you can override one |
-| Claude's research is treated as evidence | D-075: an "(AI)" claim stays uncited until a primary source backs it |
+| Claude's research is treated as evidence | D-075: a claim marked `· AI` stays uncited, and its page `unverified`, until a primary source backs it (D-087). M8 tests that an AI-only page can't become `verified` |
