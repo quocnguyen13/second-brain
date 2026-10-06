@@ -35,7 +35,7 @@ inbox/
 **Queue format.** `questions.md` and `checks.md` hold one item per line as a checkbox: `- [ ] YYYY-MM-DD text`. The command ticks an item off (`- [ ]` becomes `- [x]`) once it has handled it. Each file's first lines describe the format and are not items.
 
 ## 2. Zone 1: sources → `/ingest`
-**What goes in:** anything you want compiled, saved as a file: a Web Clipper clipping (it saves straight to `inbox/sources/`), a downloaded PDF, or a note. Don't ask Claude to fetch a link into the zone. Its web fetch returns a model-processed version of the page, not the page itself, so `raw/` would end up holding Claude's rendering instead of the source ([[03 Decision Log]] D-043). A file is different: `/import` can download a PDF from a link byte for byte, with your approval, so what lands in the zone is the document itself (D-101, proposed 2026-10-06; §7). Claude's edit rights in `inbox/` cover only the two queue files, so a captured source can't change before it reaches `raw/` (D-032).
+**What goes in:** anything you want compiled, saved as a file: a Web Clipper clipping (it saves straight to `inbox/sources/`), a downloaded PDF, or a note. Don't ask Claude to fetch a link into the zone. Its web fetch returns a model-processed version of the page, not the page itself, so `raw/` would end up holding Claude's rendering instead of the source ([[03 Decision Log]] D-043). A file is different: `/import` can download a PDF from a link byte for byte, with your approval, so what lands in the zone is the document itself (D-101; §7). Claude's edit rights in `inbox/` cover only the two queue files, so a captured source can't change before it reaches `raw/` (D-032).
 **Contract:** one file per source, and one set per ingest: every file in the zone, or the files you name, up to 8 on one topic ([[03 Decision Log]] D-085; it replaces D-022's one source per run when M7 exits). A set of one file is an ordinary single ingest.
 **What `/ingest` does** (the `ingest` skill, mirrored in [[40 Claude Operating Instructions]] §4.1):
 1. Reads every file in the set and checks it against `raw/`, as `/import` does (§7), then sends one brief: a row per source with its trust level and proposed raw name, key takeaways for the set, the pages it would touch, likely conflicts, anything suspicious in the text, and one move block. It asks what to emphasise and whether any level should change. Nothing is written until you answer.
@@ -67,9 +67,9 @@ Four steps are yours per set, where MVP 1 took three per source: 4 instead of 15
 
 **Done when:** none of the set's files is left in the zone, every citation points at a file in `raw/`, and every conflict in the set review has your decision.
 
-**Checking before you ingest: `/import`** ([[03 Decision Log]] D-099, proposed 2026-10-06). `/import` looks at the files in the zone and says which are already in `raw/` (duplicate), which are a changed copy of something there (new version), and which are new. The check writes nothing and moves nothing. The `/ingest` brief runs it too, so the command is for when you want the answer without starting an ingest. Given links, or `capture`, `/import` first loads them: it downloads the PDFs and names the pages for you to clip (D-101, §7).
+**Checking before you ingest: `/import`** ([[03 Decision Log]] D-099). `/import` looks at the files in the zone and says which are already in `raw/` (duplicate), which are a changed copy of something there (new version), and which are new. The check writes nothing and moves nothing. The `/ingest` brief runs it too, so the command is for when you want the answer without starting an ingest. Given links, or `capture`, `/import` first loads them: it downloads the PDFs and names the pages for you to clip (D-101, §7).
 
-**A Claude output in the zone** (D-098, proposed 2026-10-06). A research report, or an answer saved from a Claude chat, named `claude-<YYYY-MM-DD>-<topic>.md` or carrying `source-type: ai`. It joins a set like any file, one per set, and is compiled last. Each of its claims is checked against `raw/`: a backed claim cites the raw file, an unbacked one is kept and marked `· AI`, a contradicted one is left out ([[31 Trust and Provenance]] §2.2). The set review reports the counts.
+**A Claude output in the zone** (D-098). A research report, or an answer saved from a Claude chat, named `claude-<YYYY-MM-DD>-<topic>.md` or carrying `source-type: ai`. It joins a set like any file, one per set, and is compiled last. Each of its claims is checked against `raw/`: a backed claim cites the raw file, an unbacked one is kept and marked `· AI`, a contradicted one is left out ([[31 Trust and Provenance]] §2.2). The set review reports the counts.
 
 ## 3. Zone 2: questions → `/ask`
 **What goes in:** questions you want the wiki to answer, one per line as `- [ ] YYYY-MM-DD question`. Add them whenever they occur to you, especially while reading what an ingest produced.
@@ -92,7 +92,7 @@ Four steps are yours per set, where MVP 1 took three per source: 4 instead of 15
 Claude doesn't guess. If a question turns up in `inbox/sources/`, or a source link in `inbox/questions.md`, it says so and asks you to move it. Silent re-routing would undo the whole point of separating the doors.
 
 ## 7. Research and import: what feeds zone 1
-> [!note] Added by M8 – Research and Import, proposed 2026-10-06 ([[03 Decision Log]] D-095 to D-099, D-101).
+> [!note] Added by M8 – Research and Import, accepted 2026-10-06 ([[03 Decision Log]] D-095 to D-099, D-101).
 
 Neither command is a fourth zone. `/research` takes its topic from what you type, and `/import` fills and reads zone 1 before `/ingest` does. Both exist to put the right files into `inbox/sources/`.
 

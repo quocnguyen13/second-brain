@@ -58,7 +58,7 @@ Status says whether a claim is cited; the trust level says how strong its source
 **Where it shows:** the `trust` property on each source page; the marker on each citation below primary; the set review, which lists facts weakest first ([[33 Input Zones]] §2); `/ask`, which gives each fact's level in Evidence and names facts that rest only on commentary or AI under Caveats; and `/lint`, which checks every marker against its source page.
 
 ### 2.2 Claude's research and Claude outputs
-> [!note] Drafted by M8 – Research and Import, proposed 2026-10-06 ([[03 Decision Log]] D-095 to D-098, D-101). M0 accepts it.
+> [!note] Drafted by M8 – Research and Import and accepted 2026-10-06 ([[03 Decision Log]] D-095 to D-098, D-101).
 
 Claude can research for you, and what it writes can enter the vault. Neither changes the citation rule in §1.
 
@@ -92,7 +92,7 @@ Claude can research for you, and what it writes can enter the vault. Neither cha
 
 - **Your decision,** per conflict, with `/ingest resolve`: **a** the proposal, **b** the other claim, **c** both hold, scoped, **d** leave it open. After a or b, the page states the chosen claim; the other stays under "Where sources disagree", marked "outweighed by" (a higher level, the body's own statement, or your decision) or "superseded by" (newer), with the date and a link to the set review. The page is then no longer `contested` for that point. After d, nothing changes. Deleted history is lost history, so a claim set aside is never removed.
 - **A newer source supersedes an older claim:** the old claim stays visible, marked as superseded, with a link to what replaced it.
-- **A new version of a document already in `raw/`:** `/import`, and the `/ingest` brief, recognise it by its origin, its identity or its text. It enters `raw/` beside the older file under a dated name, and never replaces it. Each claim it changes is a **newer** conflict: Claude proposes the newer claim and you decide. A duplicate is left out ([[03 Decision Log]] D-099, proposed 2026-10-06).
+- **A new version of a document already in `raw/`:** `/import`, and the `/ingest` brief, recognise it by its origin, its identity or its text. It enters `raw/` beside the older file under a dated name, and never replaces it. Each claim it changes is a **newer** conflict: Claude proposes the newer claim and you decide. A duplicate is left out ([[03 Decision Log]] D-099).
 - **Out of date:** every page carries an `updated` date. Lint flags pages on fast-moving topics that haven't been touched in six months.
 - **Nothing there:** "the wiki has nothing on this" is a required answer when it's true, before Claude falls back to general knowledge.
 

@@ -216,8 +216,9 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] Claude outputs through `/ingest`: the supporting file `ai-source.md`, with four outcomes per claim, the "AI source check" in the set review, and the upgrade of an `· AI` claim by a later source (D-098). `ingest` gains 12 lines; `lint` and `ask` change by two lines each
 - [x] Rule text drafted for M0: [[31 Trust and Provenance]] §1, §2.2, §3 and §5. [[32 Vault Blueprint]] §1 and §7 and [[33 Input Zones]] §2 and §7 updated to match
 - [x] Tests IM1–IM6, RS1–RS4 and AI1–AI4 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md`, Run 5 (D-100)
-- [ ] D-095 to D-101 accepted, with doc 31 §2.2
-- [ ] Files placed, committed and pushed; Sync. `/skills` lists `research` and `import`; `/permissions` shows 9 allow, 3 ask and 13 deny rules
+- [x] Files placed, committed and pushed (4b33a82, 2026-10-06); Sync
+- [x] D-095 to D-101 accepted, with doc 31 §2.2 (2026-10-06)
+- [ ] In a fresh session: `/skills` lists `research` and `import`, and `/permissions` shows 9 allow, 3 ask and 13 deny rules
 - [ ] `system/context.md` "Current focus" changed to M8 (your file)
 - [ ] The first `/lint` since M7, before the tests add pages
 - [ ] IM1–IM4: the planted duplicate and the planted new version
