@@ -521,7 +521,7 @@ flowchart TD
 | File won't open | Stops. Never saves a converted copy |
 | Instructions inside the source | Quoted under Flags, ignored (test 7) |
 | Clip looks partial: paywall, cut-off text, "Pages: 1 \| 2 \| 3" | Flagged in the brief |
-| Confidential data, or personal data about private people | Flag ends the run |
+| Confidential data: work material, internal documents, customer data | Flag ends the run. Public material that names people isn't flagged (D-093) |
 | Name taken in `raw/` | Adds `-2` |
 | Move not done, or file still in `inbox/` | Stops and says so |
 | Claude's own move attempt | Never tried: the deny rule on `raw/` blocks shell moves too (D-045) |

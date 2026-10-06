@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, roadmap]
 ---
 
@@ -188,9 +188,10 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] Commits after your review (D-090) and page names in `log.md` (D-091) carried into `CLAUDE.md`, the settings and the `ask`, `file-answer`, `lint` and `drafts` skills; `system/conventions.md` and the Source template gain `trust`; the six source pages get `trust: primary`
 - [x] Test set and tests I1–I7 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md` (D-092)
 - [x] D-085 to D-092 accepted, with doc 31 §2.1 and §3 (2026-09-30)
-- [ ] Files placed, committed and pushed; `/permissions` shows 8 allow, 2 ask and 10 deny rules; `/skills` lists `ingest` with the new description
-- [ ] The six sources clipped or downloaded into `inbox/sources/`
-- [ ] I1–I2: a set of one and the injection test (MVP 1 regression)
+- [x] Files placed, committed and pushed (e8f4340, 2026-09-30)
+- [x] The six sources clipped or downloaded into `inbox/sources/`
+- [x] I1–I2: a set of one and the injection test (MVP 1 regression). **2 of 2** (2026-10-06, commit 473c5e1). I1 found a real scope conflict, the FCA "established" in 2013 against the FSA renamed, resolved as 1c
+- [x] D-093 accepted during I3: no personal-data flag; the confidentiality stop stays. `ingest` revised with four fixes from I1 (2026-10-06)
 - [ ] I3–I6: the set of five, its one review, and your decisions on its conflicts
 - [ ] I7: `/ask` on the resolved conflict
 - [ ] M7 exit: 7 of 7; D-022 replaced by D-085

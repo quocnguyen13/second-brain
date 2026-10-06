@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, governance]
 ---
 
@@ -78,6 +78,8 @@ Doc 36 (Data Governance) is deliberately not written yet. Until it is, one rule 
 
 > [!warning] Personal and public sources only
 > Nothing confidential from work goes into `raw/`, `wiki/`, `mine/`, the vault's GitHub repo, or these chats: no customer data, no internal documents, no non-public figures, no internal system details. Public regulation, industry material, books, articles, courses, and your own general reflections are all fine.
+
+**Public material that names people is public material.** A news report, an encyclopedia article, a court judgment or a regulator's enforcement notice is compiled like any other source, with no flag ([[03 Decision Log]] D-093). Personal data from work, such as customer data, is confidential and stays out, as the rule above says.
 
 This isn't a feature waiting to be built. It's the condition that makes parking the governance work safe: while the vault holds nothing confidential, there's nothing to govern. Doc 36 gets written before the first piece of work material goes in, along with your bank's policy position.
 

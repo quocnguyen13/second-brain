@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, moc]
 ---
 
@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge assistant built on the **LLM Wiki** pattern: you collect sources, Claude compiles them into a cited wiki you read in Obsidian, and on top sit a thinking layer you own and, next, defined jobs done to your standards. Where it's going: [[10 Product Vision]]. How it works today: [[20 Product Requirements]].
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): **M7 – Batch Ingest and Trust** opened 2026-09-30, with `ingest` reworked for sets, trust levels and a conflict review. D-085 to D-092 accepted. Next: place the files, then run tests I1–I7. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082).
+**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): **M7 – Batch Ingest and Trust** opened 2026-09-30, with `ingest` reworked for sets, trust levels and a conflict review. D-085 to D-093 accepted. Tests I1 and I2 pass (2 of 7); the set of five is next. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082).
 
 ## Document set
 Numbered by SDLC stage, in blocks of ten ([[03 Decision Log]] D-080). A document keeps its number; a new one takes the next free number in its stage. Planned documents have their number reserved, shown in *italics* with the backlog item that writes them. Governance runs through every stage, and every module adds a delivery record.
@@ -222,3 +222,4 @@ Entries up to 1.35 use the document numbers of their time; the renumber map abov
 | **1.40** | 2026-09-30 | **MVP 2 scoped.** D-084 accepted: Must, Should and Could items, success criteria in doc 11 §11, and modules M7 – Batch Ingest and Trust, M8 – Research and Import, M9 – Large Documents in doc 21. B-038 (large documents) logged. Doc 87 §8 filled. Old M7 and M8 references updated in docs 03, 11 and 30. Docs 02, 03, 10, 11, 21, 22, 30 and 87 updated |
 | **1.41** | 2026-09-30 | **M7 started.** `ingest` reworked to take a set: one brief, one move block, one run, and one set review in `system/ingest/` with conflicts first and facts sorted by trust; `/ingest resolve` applies your decisions on conflicts. Trust levels (doc 31 §2.1) and the conflict review (doc 31 §3) drafted for M0. Claude commits after your review, with an ask rule on `git commit` and a deny rule on `git push`; log entries name pages. `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md`, the Source template, the five skills and the six source pages updated. Tests I1–I7 on six UK regulation sources. D-085 to D-092 proposed. Docs 00, 03, 21, 22, 31, 32, 33, 40 and 70 and `system/test-results.md` updated |
 | 1.42 | 2026-09-30 | D-085 to D-092 accepted, with doc 31 §2.1 (trust levels) and §3 (conflict review). D-008 revised by D-090. Docs 00, 03, 21, 22, 31, 33 and 40 updated |
+| 1.43 | 2026-10-06 | Tests I1 (a set of one) and I2 (injection) pass. D-093 accepted: no personal-data flag; public material that names people is compiled like any other source, and the confidentiality stop stays. `ingest` revised after I1: where an open dispute sits, `sources` on pages that cite another raw file, conflict notes updated on resolve, one commit for an ingest and its resolve. `CLAUDE.md`, the `ingest` skill and `system/test-results.md` updated; docs 00, 03, 20, 21, 31 and 40 updated |
