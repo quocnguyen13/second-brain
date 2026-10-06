@@ -38,7 +38,7 @@ Regulation agreements and disagreements sit in Strand 1. The sections from "Wher
 ### Coordination and accountability
 - [[wiki/concepts/FCA-PRA coordination]]: a statutory duty to consult, the MoU, a one-way PRA veto decided by the PRC, and consolidated-supervision directions ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 3D–3M; [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=17]]). The [[wiki/entities/Financial Policy Committee]] can direct the PRA on macroprudential tools ([[raw/pra-approach-banking-supervision-2023.pdf#page=15]]).
 - [[wiki/entities/HM Treasury]] holds the political levers ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1JA, 1S, 3RC, 3RE).
-- **Outside views.** The Commons Library (2016) said the FCA is criticised most on enforcement and redress ([[raw/edmonds-financial-conduct-authority-2016.pdf#page=2]] · secondary); Wikipedia records later criticism, including a 2024 APPG report ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
+- **Outside views.** The Commons Library (2016) said the FCA is criticised most on investigating and punishing breaches, when it can't sort out "scandals" ([[raw/edmonds-financial-conduct-authority-2016.pdf#page=2]] · secondary); Wikipedia records later criticism, including a 2024 APPG report ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
 
 ### Where the regulation sources agree
 - **Objectives.** The statute, the FCA's page, the PRA's approach and the MoU state the same objectives ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B; [[raw/fca-about-the-fca.md]]; [[raw/pra-approach-banking-supervision-2023.pdf#page=8]]; [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=2]]).

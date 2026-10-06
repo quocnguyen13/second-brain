@@ -12,7 +12,7 @@ A PSD2 requirement, brought in by the FCA from 14 September 2019, that payment s
 
 ## What the sources say
 - **When and why.** The FCA introduced SCA rules from 14 September 2019 as required by the Revised Payment Services Directive (PSD2), aiming to reduce fraud and improve security ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
-- **The rule.** For online payments over €30 in the EEA, providers use two of: something known (PIN or password), something inherent (biometrics such as a fingerprint), something possessed (a device such as a phone) ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
+- **The rule.** For online payments over €30 in the EEA, providers use two of three types of authentication: a PIN or password; biometrics such as a fingerprint; a physical device such as a phone ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
 - **Level.** The only source so far is commentary. The FCA's SCA page and the Payment Services Regulations would be the primary sources.
 
 ## Where sources disagree

@@ -12,7 +12,7 @@ tags: ["uk-financial-regulation", "financial-regulators"]
 **Raw file:** [[raw/fca-about-the-fca.md]] · **Author or publisher:** Financial Conduct Authority (fca.org.uk) · **Published:** first published 2016-04-17. Last updated 2026-07-09, when the firm numbers were updated after the Annual Report. Clipped 2026-09-30 · **Trust:** primary (an organisation's own statement about itself) · **Ingested:** 2026-10-06
 
 ## Summary
-This is the FCA's own "About" page. It covers what the [[wiki/entities/Financial Conduct Authority]] regulates and how many firms that covers. It also covers the FCA's origins, objectives, funding and accountability, and how it works: it makes rules, authorises firms, supervises them and enforces ([[raw/fca-about-the-fca.md]]). The objectives it lists match the statute in [[wiki/sources/Source - FSMA 2000 Part 1A]]. What this page adds is the regulator's own account of its scale and its methods.
+This is the FCA's own "About" page. It covers what the [[wiki/entities/Financial Conduct Authority]] regulates and how many firms that covers. It also covers the FCA's origins, objectives, funding and accountability, and how it works: it makes rules, authorises firms, supervises them and enforces ([[raw/fca-about-the-fca.md]]). The objectives it lists match the statute ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B(2)–(4A)); see [[wiki/sources/Source - FSMA 2000 Part 1A]]. What this page adds is the regulator's own account of its scale and its methods.
 
 ## Key claims
 

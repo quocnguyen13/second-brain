@@ -19,7 +19,7 @@ How a firm gets permission to take deposits in the UK: one application, assessed
 - **Early engagement.** The PRA and FCA offer pre-application meetings to help produce a complete application; the PRA answers questions but gives no consultancy ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]).
 - **Proportionate.** All applicants get a minimum assessment; beyond that, work scales with the potential impact of the firm's failure. The aim is to keep barriers to entry to the minimum consistent with the PRA's objectives ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]).
 - **New Bank Start-up Unit.** A joint initiative of the regulators to help new banks enter the market and through their early days ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]).
-- **Senior managers.** The people in SMF roles need approval by both regulators ([[raw/pra-approach-banking-supervision-2023.pdf#page=23]]). See [[wiki/concepts/Senior Managers and Certification Regime]].
+- **Senior managers.** People in SMF roles that the PRA approves need both regulators satisfied ([[raw/pra-approach-banking-supervision-2023.pdf#page=23]]); the FCA alone approves customer-facing SMFs ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]]). See [[wiki/concepts/Senior Managers and Certification Regime]].
 - **Overseas banks.** Branches are generally not allowed to take retail and small-company deposits beyond de minimis levels; material deposit-taking needs a subsidiary ([[raw/pra-approach-banking-supervision-2023.pdf#page=56]]).
 
 ## Where sources disagree

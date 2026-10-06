@@ -40,7 +40,7 @@ The PRA's standing statement of how it supervises deposit-takers and designated 
 - **Not a fraud regulator.** Onsite inspections are not designed to uncover all malpractice ([[raw/pra-approach-banking-supervision-2023.pdf#page=49]]).
 
 ### Governance, capital and liquidity
-- **Senior managers.** Under the [[wiki/concepts/Senior Managers and Certification Regime]], SMF candidates need approval, granted only if both the PRA and the FCA are satisfied the person is fit and proper ([[raw/pra-approach-banking-supervision-2023.pdf#page=23]]).
+- **Senior managers.** Under the [[wiki/concepts/Senior Managers and Certification Regime]], Candidates for SMFs that need the PRA's approval are approved only if both the PRA and the FCA are satisfied the person is fit and proper ([[raw/pra-approach-banking-supervision-2023.pdf#page=23]]).
 - **Capital.** Pillar 1 plus Pillar 2A is the minimum at all times; the combined buffer and a non-public PRA buffer sit on top; using the combined buffer restricts distributions ([[raw/pra-approach-banking-supervision-2023.pdf#page=30]], [[raw/pra-approach-banking-supervision-2023.pdf#page=31]]). Leverage ratio minimum 3.25% ([[raw/pra-approach-banking-supervision-2023.pdf#page=33]]). See [[wiki/concepts/Regulatory capital framework]].
 - **Liquidity.** NSFR is the starting point for funding; LCR for the liquid-asset buffer; buffers are meant to be used in stress ([[raw/pra-approach-banking-supervision-2023.pdf#page=34]], [[raw/pra-approach-banking-supervision-2023.pdf#page=35]]).
 - **Operational resilience.** Firms set impact tolerances for important business services and must stay within them in severe but plausible scenarios ([[raw/pra-approach-banking-supervision-2023.pdf#page=36]]).

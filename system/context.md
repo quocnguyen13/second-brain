@@ -9,7 +9,7 @@
 
 ## Current focus
 - Building this system
-- Now focus on building the M7 – Batch Ingest and Trust: testing set ingest
+- Now focus on building the M8 – Research and Import module
 ## Glossary
 | Term              | Meaning here                                                            |
 | ----------------- | ----------------------------------------------------------------------- |

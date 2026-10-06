@@ -54,3 +54,9 @@ Set: set-2026-10-06-2, 5 sources (3 primary, 1 secondary, 1 commentary). Pages: 
 
 ## [2026-10-06] ingest | resolve set-2026-10-06-2
 Decided: 1a, 2a, 3a. Skipped: none. Pages changed: Prudential Regulation Authority, Solo and dual regulation, Financial Conduct Authority (and the conflict notes on Source - Bank of England prudential regulation page, Source - About the FCA, Source - Wikipedia on the FCA, Source - FSMA 2000 Part 1A, overview). Status changes: Prudential Regulation Authority: contested → verified; Financial Conduct Authority: contested → verified.
+
+## [2026-10-06] lint | report-2026-10-06
+Scanned 57 pages, deep-checked 57. Findings: 7 (6 high, 0 medium, 1 low). Checks ticked: 0. No wiki pages changed.
+
+## [2026-10-06] lint | apply report-2026-10-06
+Applied: 1a, 2, 3, 4, 5, 6. Skipped: none (7 not requested). Pages changed: 11 (Senior Managers and Certification Regime, New bank authorisation, FCA-PRA coordination, Solo and dual regulation, Financial Conduct Authority, Source - The PRA's approach to banking supervision, Source - About the FCA, Source - FCA and Bank of England MoU 2024, Source - Commons Library briefing on the FCA 2016, Strong customer authentication, overview). Status changes: none.
