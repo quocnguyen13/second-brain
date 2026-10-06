@@ -42,3 +42,9 @@ Clean: 0. With problems: 0. Already checked: 0. Insights to re-read: 1.
 
 ## [2026-09-28] ingest | FSMA 2000 Part 1A
 Pages: +11 new, 0 updated. No conflicts. Flags: clip lost section numbers on inserted sections and s. 1H(8) text; s. 3B(1)(c) shown in two versions; s. 22A (PRA-regulated activities) not in source, so Solo and dual regulation is unverified (general knowledge).
+
+## [2026-10-06] ingest | FCA self-description
+Set: set-2026-10-06, 1 source (1 primary, 0 secondary, 0 commentary). Pages: +1 new (Source - About the FCA); 7 updated (Financial Conduct Authority, Prudential Regulation Authority, HM Treasury, Regulatory objectives, Solo and dual regulation, Regulatory principles, Source - FSMA 2000 Part 1A). Draft: FCA authorisation is a gate, not a licence, so a regulated product carries supervision cost for its whole life. Conflicts: 1, waiting for my decision. Flags: PRA figure is the FCA's statement, not the PRA's; £14-per-£1 is a self-estimate; clip has split link text and one undated change-log entry.
+
+## [2026-10-06] ingest | resolve set-2026-10-06
+Decided: 1c. Skipped: none. Pages changed: Financial Conduct Authority (and the conflict notes on Source - About the FCA, Source - FSMA 2000 Part 1A, overview). Status changes: Financial Conduct Authority: contested → verified.

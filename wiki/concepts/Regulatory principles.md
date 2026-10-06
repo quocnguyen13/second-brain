@@ -1,9 +1,9 @@
 ---
 type: concept
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Regulatory principles
@@ -22,6 +22,7 @@ These are the principles in s. 3B that both the FCA and the PRA must have regard
   - (h) exercising functions as transparently as possible
 - **Coordination.** Where both regulators act on matters of common regulatory interest, the coordination duty requires both to honour principles (a) and (b) ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3D(1)(c)).
 - **Treasury recommendations.** Treasury recommendations to the FCA may cover how it applies these principles ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1JA(1)(d)).
+- **The FCA's wording.** The FCA says it considers "the principles of good regulation" in its work ([[raw/fca-about-the-fca.md]]). Its page uses that phrase and doesn't cite s. 3B, so the wiki has no source yet that says the two names cover the same list.
 - **Open point on (c).** The clip shows two texts for (c), both marked as a 2023 substitution "for specified purposes" ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3B(1)(c), note F89):
   - "the desirability of sustainable growth in the economy of the United Kingdom in the medium or long term"
   - "the need to contribute towards achieving compliance" with the UK net-zero target (Climate Change Act 2008 s. 1) and environmental targets (Environment Act 2021 s. 5)
@@ -33,6 +34,7 @@ These are the principles in s. 3B that both the FCA and the PRA must have regard
 
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
+- [[wiki/sources/Source - About the FCA]]
 
 ## Related
 - [[wiki/concepts/Regulatory objectives]]

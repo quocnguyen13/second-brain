@@ -1,9 +1,9 @@
 ---
 type: concept
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Regulatory objectives
@@ -25,7 +25,8 @@ These are the statutory goals the FCA and the PRA must advance when they make ru
   - competition in consumers' interests
 - **How they combine.** In its general functions the FCA must act compatibly with the strategic objective and advance one or more operational objectives, "so far as is reasonably possible" ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(1)).
 - **Competition.** Separately, the FCA must promote effective competition, but only as far as compatible with consumer protection and integrity ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(4)). What it may weigh in judging competition includes switching, access (including in deprived areas), barriers to entry and innovation ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1E(2)).
-- **Secondary objective.** Competitiveness and growth: the UK's international competitiveness and medium-to-long-term growth, subject to international standards ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B(4A), 1EB).
+- **Secondary objective.** Competitiveness and growth: the UK's international competitiveness and medium-to-long-term growth, subject to international standards ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B(4A), 1EB; [[raw/fca-about-the-fca.md]]).
+- **The FCA's own statement.** The FCA's About page lists the same strategic, operational and secondary objectives as the Act ([[raw/fca-about-the-fca.md]]).
 
 ### PRA
 - **General objective.** The safety and soundness of PRA-authorised persons ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2B(2)). It is advanced mainly by protecting financial stability, limiting the damage from failures, and protecting the continuity of core services at ring-fenced bodies ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2B(3)).
@@ -44,6 +45,7 @@ These are the statutory goals the FCA and the PRA must advance when they make ru
 
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
+- [[wiki/sources/Source - About the FCA]]
 
 ## Related
 - [[wiki/entities/Financial Conduct Authority]]

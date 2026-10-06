@@ -1,9 +1,9 @@
 ---
 type: overview
 status: verified
-sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
 created: "2026-09-22"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation"]
 ---
 # Overview
@@ -12,20 +12,28 @@ The current picture across every source, on one page. Rewritten at each ingest, 
 
 The wiki now has two strands that don't yet touch:
 - **Knowledge management:** five sources on how to build and organise a knowledge base.
-- **UK financial regulation:** one source, the statute that sets up the FCA and the PRA.
+- **UK financial regulation:** two primary sources, the statute that sets up the FCA and the PRA, and the FCA's own account of itself.
 
-The sections on agreement, disagreement and comparison below apply to the knowledge-management strand only. With one source, the regulation strand has nothing to compare yet.
+Regulation agreements and disagreements sit in Strand 1. The sections from "Where sources agree" on apply to the knowledge-management strand.
 
 ## Strand 1: UK financial regulation
 - **FSMA 2000 Part 1A.** [[wiki/sources/Source - FSMA 2000 Part 1A]] sets up the two regulators and their relationship ([[raw/uk-parliament-fsma-2000-part-1a.md]]):
   - the [[wiki/entities/Financial Conduct Authority]]
   - the [[wiki/entities/Prudential Regulation Authority]], which is the [[wiki/entities/Bank of England]] acting through its Prudential Regulation Committee
   - the relationship between them
+- **About the FCA.** [[wiki/sources/Source - About the FCA]] is the FCA's own page: its scale, its methods, its funding and its accountability ([[raw/fca-about-the-fca.md]]).
 - **Who regulates whom.** The FCA supervises every authorised person. The PRA supervises only those whose permission includes at least one PRA-regulated activity. Those firms are dual-regulated; the rest answer to the FCA alone ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1L, 2B(5), 2K). See [[wiki/concepts/Solo and dual regulation]].
+- **How many firms.** These are the FCA's figures as of 2026-07-09 ([[raw/fca-about-the-fca.md]]):
+  - conduct regulation: ~35,500 firms
+  - FCA prudential supervision: ~34,000 firms
+  - subject to the FCA Handbook's prudential standards: ~14,000 firms
+  - PRA prudential regulation: ~1,500 banks, building societies, credit unions, insurers and major investment firms (the FCA's figure)
+- **How the FCA works.** It makes rules and runs market studies. It authorises firms against requirements, supervises them proportionately by risk, and enforces, up to criminal prosecution ([[raw/fca-about-the-fca.md]]). It is funded by fees from regulated firms and is accountable to the Treasury and Parliament ([[raw/fca-about-the-fca.md]]).
 - **Different jobs.** [[wiki/concepts/Regulatory objectives]]:
   - The FCA works for well-functioning markets through consumer protection, integrity and competition ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B).
   - The PRA works for the safety and soundness of firms, and explicitly not for zero failures ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 2B, 2G).
   - Since 2023 both carry a secondary competitiveness and growth objective ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1EB, 2H).
+  - **Agreement.** The FCA's own page lists the same strategic, operational and secondary objectives as the Act ([[raw/fca-about-the-fca.md]], [[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B).
 - **For products.** The FCA's reach is set by [[wiki/concepts/Regulated financial services]], which names payment services and e-money directly ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1H(2)). Its [[wiki/concepts/Consumer protection objective]] weighs product risk, consumer capability and consumer responsibility against firms' duty of care ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1C(2)).
 - **Coordination.** [[wiki/concepts/FCA-PRA coordination]]:
   - a duty to consult where one regulator's action may harm the other's objectives
@@ -36,9 +44,11 @@ The sections on agreement, disagreement and comparison below apply to the knowle
 
   ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 3D–3M)
 - **Treasury levers.** [[wiki/entities/HM Treasury]] holds the political levers: recommendations, reviews, directed rule reviews, and requirements to make rules ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1JA, 1S, 3RC, 3RE).
-- **Open points.** The clip leaves two things unresolved:
-  - which activities are PRA-regulated (s. 22A isn't in the source)
-  - which of the two texts of the s. 3B(1)(c) principle applies where
+- **Origins, scoped.** In law the FCA is the Financial Services Authority, renamed ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1A(1)). It began operating as the FCA on 1 April 2013 ([[raw/fca-about-the-fca.md]]). This looked like a conflict and was resolved by scope on 2026-10-06.
+- **Open points.**
+  - Which activities are PRA-regulated: s. 22A isn't in either source.
+  - Which of the two texts of the s. 3B(1)(c) principle applies where.
+  - How the FCA's ~34,000 prudentially supervised firms relate to the ~14,000 under its Handbook's prudential standards.
 
 ## Strand 2: knowledge management
 - **LLM Wiki.** [[wiki/sources/Source - LLM Wiki]] describes the compiled-wiki pattern that this vault implements:
@@ -109,6 +119,9 @@ The sections on agreement, disagreement and comparison below apply to the knowle
 
 ## Gaps worth a new source
 - FSMA s. 22A and the PRA-Regulated Activities Order: the list of activities that makes a firm dual-regulated.
+- A PRA source on its own firm population, to check the FCA's figure of ~1,500.
+- The FCA's approach to supervision and its prudential supervision page: what "prudentially supervise" and "subject to the prudential standards" each cover.
+- The Financial Services Act 2012: how the FSA became the FCA on 1 April 2013.
 - The current FCA–PRA memorandum of understanding (s. 3E): how coordination works in practice.
 - FCA conduct rules that build on the consumer protection objective for lending, cards and payments, such as the Consumer Duty and the consumer credit sourcebook, plus the Payment Services Regulations 2017.
 - The rest of FSMA: Schedules 1ZA and 1ZB, and Part 4A permissions.
@@ -127,3 +140,4 @@ The sections on agreement, disagreement and comparison below apply to the knowle
 - [[wiki/sources/Source - Contextual Retrieval]]: Anthropic's post on improving RAG.
 - [[wiki/sources/Source - The PARA Method]]: Forte's four-category system for organising by actionability.
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]: the statute setting up the FCA and PRA, their objectives and their coordination.
+- [[wiki/sources/Source - About the FCA]]: the FCA's own account of its scale, methods, funding and accountability.

@@ -1,9 +1,9 @@
 ---
 type: concept
 status: unverified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Solo and dual regulation
@@ -27,13 +27,16 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
   - directions on consolidated supervision of groups
 
   ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 3E, 3I, 3M)
-- **Which activities are PRA-regulated** (general knowledge, not in this source): accepting deposits, effecting or carrying out contracts of insurance, and dealing in investments as principal by investment firms the PRA has designated. In practice banks, building societies, credit unions, insurers and designated investment firms are dual-regulated. Payment institutions, e-money institutions and consumer credit firms that take no deposits are FCA-only. Section 22A and the PRA-Regulated Activities Order would confirm this.
+- **Which firms the PRA regulates.** The FCA describes the PRA as the prudential regulator of around 1,500 banks, building societies, credit unions, insurers and major investment firms ([[raw/fca-about-the-fca.md]]). Because the FCA supervises every authorised person, those firms answer to both regulators ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1L(1), 2K).
+- **How many firms in each group.** The FCA regulates the conduct of about 35,500 firms and prudentially supervises about 34,000 ([[raw/fca-about-the-fca.md]]). The page doesn't say that the gap between the two figures is the PRA's population.
+- **Which activities are PRA-regulated** (general knowledge, not in any source yet): accepting deposits, effecting or carrying out contracts of insurance, and dealing in investments as principal by investment firms the PRA has designated. Payment institutions, e-money institutions and consumer credit firms that take no deposits are FCA-only. Section 22A and the PRA-Regulated Activities Order would confirm this.
 
 ## Where sources disagree
 - None found.
 
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
+- [[wiki/sources/Source - About the FCA]]
 
 ## Related
 - [[wiki/entities/Financial Conduct Authority]]

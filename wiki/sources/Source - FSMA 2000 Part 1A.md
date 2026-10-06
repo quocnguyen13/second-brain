@@ -2,9 +2,9 @@
 type: source
 status: verified
 trust: primary
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - FSMA 2000 Part 1A
@@ -90,7 +90,7 @@ See [[wiki/concepts/FCA-PRA coordination]]. Briefly:
 - [[wiki/concepts/FCA-PRA coordination]]
 
 ## Conflicts and open points
-- No conflicts with other sources. This is the first financial-regulation source.
+- **Renamed, or established in 2013 (scope).** This Act says the FCA is the renamed Financial Services Authority (s. 1A(1)). [[wiki/sources/Source - About the FCA]] says the FCA was "established on 1 April 2013" ([[raw/fca-about-the-fca.md]]). Not a conflict once scoped: legal identity versus operating start. Resolved 2026-10-06, [[system/ingest/set-2026-10-06]] conflict 1; see [[wiki/entities/Financial Conduct Authority]].
 - **Which activities are PRA-regulated is not in this source.** Section 22A and its order are needed to say which firms are dual-regulated.
 - **The clip shows two versions of s. 3B(1)(c).** One is "sustainable growth"; the other is the net-zero and environmental targets. The amendment note says the substitution came in "for specified purposes" in 2023 and 2025. Which version applies to which functions is unclear from the clip.
 - **The clip has formatting losses.** Several inserted sections lost their numbers in the headings (1EB, 1MA, 1QA, 1RA, 2A, 2H, 2LA, 2MA, 2NA, 3RE); this page names them from the amendment notes. The s. 1H(8) definitions are empty.

@@ -1,9 +1,9 @@
 ---
 type: entity
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Prudential Regulation Authority
@@ -13,6 +13,7 @@ The PRA is the Bank of England acting through its Prudential Regulation Committe
 ## What the sources say
 - **Identity.** The PRA "is the Bank of England". It exercises its functions only through the Prudential Regulation Committee under Part 3A of the Bank of England Act 1998 ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2A(1)–(2)).
 - **Population.** Its population is PRA-authorised persons: authorised persons whose permission includes at least one PRA-regulated activity under s. 22A ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2B(5)). It must maintain arrangements for supervising them ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2K). See [[wiki/concepts/Solo and dual regulation]].
+- **Size of that population, as the FCA states it.** The FCA describes the PRA as the prudential regulator of around 1,500 banks, building societies, credit unions, insurers and major investment firms ([[raw/fca-about-the-fca.md]]). No PRA source in the wiki gives the figure yet.
 - **General objective.** Its general objective is promoting the safety and soundness of PRA-authorised persons. It pursues it mainly in three ways ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2B(2)–(3)):
   - making sure their business avoids any adverse effect on UK financial stability
   - minimising the effect of a failure
@@ -28,6 +29,7 @@ The PRA is the Bank of England acting through its Prudential Regulation Committe
 
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
+- [[wiki/sources/Source - About the FCA]]
 
 ## Related
 - [[wiki/entities/Bank of England]]

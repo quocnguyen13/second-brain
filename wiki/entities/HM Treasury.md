@@ -1,9 +1,9 @@
 ---
 type: entity
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # HM Treasury
@@ -18,10 +18,12 @@ In FSMA 2000 Part 1A, "the Treasury" holds the statutory levers over the FCA and
 - **Recommendations.** It must send the FCA recommendations on the government's economic policy at least once each Parliament. It publishes them and the FCA's responses, and lays them before Parliament ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1JA).
 - **Reviews.** It can appoint an independent person to review the FCA's use of resources ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1S). It can direct a regulator to review specified rules that have been in force for at least 12 months ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3RC). It can require rules to be made on a specified activity, but not their content or outcome ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3RE).
 - **Panels.** Its approval is needed to appoint or dismiss the chair of each statutory panel ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1N(3), 1O(4), 1P(3), 1Q(3), 2M(3)).
+- **The FCA's account.** The FCA describes itself as accountable to the Treasury, "which is responsible for the UK's financial system", and to Parliament ([[raw/fca-about-the-fca.md]]).
 - **Coordination.** It receives the FCA–PRA memorandum of understanding and lays it before Parliament ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3E(5)–(6)). It also receives copies of PRA directions to the FCA under s. 3I ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3L(5)).
 
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
+- [[wiki/sources/Source - About the FCA]]
 
 ## Related
 - [[wiki/entities/Financial Conduct Authority]]
