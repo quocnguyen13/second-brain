@@ -2,7 +2,7 @@
 type: source
 status: verified
 trust: primary
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/wikipedia-financial-conduct-authority.md]]"]
 created: "2026-09-28"
 updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
@@ -88,8 +88,15 @@ See [[wiki/concepts/FCA-PRA coordination]]. Briefly:
 - [[wiki/concepts/Regulated financial services]]
 - [[wiki/concepts/Regulatory principles]]
 - [[wiki/concepts/FCA-PRA coordination]]
+- [[wiki/concepts/Ring-fencing]]
+- [[wiki/concepts/Resolvability]]
+- [[wiki/entities/Financial Policy Committee]]
+- [[wiki/entities/Prudential Regulation Committee]]
+- [[wiki/entities/Financial Services Compensation Scheme]]
+- [[wiki/entities/Payment Systems Regulator]]
 
 ## Conflicts and open points
+- **Renamed or abolished (fact).** Wikipedia says the Financial Services Act 2012 "abolished" the FSA, against s. 1A(1)'s "renamed" ([[raw/wikipedia-financial-conduct-authority.md]] · commentary). Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]] conflict 3: this Act's "renamed" is stated; "abolished" is marked outweighed, higher level, on [[wiki/entities/Financial Conduct Authority]].
 - **Renamed, or established in 2013 (scope).** This Act says the FCA is the renamed Financial Services Authority (s. 1A(1)). [[wiki/sources/Source - About the FCA]] says the FCA was "established on 1 April 2013" ([[raw/fca-about-the-fca.md]]). Not a conflict once scoped: legal identity versus operating start. Resolved 2026-10-06, [[system/ingest/set-2026-10-06]] conflict 1; see [[wiki/entities/Financial Conduct Authority]].
 - **Which activities are PRA-regulated is not in this source.** Section 22A and its order are needed to say which firms are dual-regulated.
 - **The clip shows two versions of s. 3B(1)(c).** One is "sustainable growth"; the other is the net-zero and environmental targets. The amendment note says the substitution came in "for specified purposes" in 2023 and 2025. Which version applies to which functions is unclear from the clip.

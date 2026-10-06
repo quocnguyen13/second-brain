@@ -2,7 +2,7 @@
 type: source
 status: verified
 trust: primary
-sources: ["[[raw/fca-about-the-fca.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/fca-about-the-fca.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/wikipedia-financial-conduct-authority.md]]"]
 created: "2026-10-06"
 updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
@@ -74,5 +74,7 @@ All rows cite [[raw/fca-about-the-fca.md]].
 - **The prudential figures aren't explained.** The page doesn't say how the ~34,000 firms the FCA "prudentially supervises" relate to the ~14,000 "subject to the prudential standards in our Handbook".
 - **The figures may reconcile, but the page doesn't say so.** 35,500 − 34,000 = 1,500, the same as the PRA figure. The page never states that the FCA prudentially supervises every conduct-regulated firm except the PRA's. A PRA source would settle this.
 - **The PRA figure is second-hand.** The FCA states it, not the PRA.
+- **PRA firm count (fact).** The PRA's own page, updated 2026-09-21, gives ~1,292, against this page's ~1,500 ([[raw/bank-of-england-prudential-regulation.md]]). Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]] conflict 1: the PRA's ~1,292 is stated and this page's ~1,500 is marked superseded, newer, on [[wiki/entities/Prudential Regulation Authority]] and [[wiki/concepts/Solo and dual regulation]]. With ~1,292 the 35,500 − 34,000 reconciliation above no longer holds.
+- **FCA conduct firm count (fact).** Wikipedia gives "around 58,000", citing a 2010 source, against this page's ~35,500 ([[raw/wikipedia-financial-conduct-authority.md]] · commentary). Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]] conflict 2: this page's ~35,500 is stated; Wikipedia's figure is marked outweighed, higher level, on [[wiki/entities/Financial Conduct Authority]].
 - **Self-reported.** The £14-per-£1 estimate is the FCA's own estimate of its impact.
 - **Clip quality.** The clip looks complete. The link text is split ("[P] [rotect consumers]"), and one change-log entry has no date.

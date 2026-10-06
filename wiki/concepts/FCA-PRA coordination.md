@@ -1,9 +1,9 @@
 ---
 type: concept
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # FCA-PRA coordination
@@ -69,14 +69,46 @@ These are the statutory mechanisms that make the FCA and the PRA act as a system
 - **Panel membership.** Anyone paid by the FCA, the PRA, the Payment Systems Regulator, the Bank or the Treasury is disqualified from sitting on the statutory panels, unless Treasury regulations say otherwise ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1MA, 2LA).
 - **Services.** The regulators may provide services to each other ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3R(1)).
 
+### 7. The PRA's account of the relationship
+- **Separate mandates.** The FCA is the conduct regulator for the firms the PRA regulates prudentially. The key principle is that each regulator focuses on the key risks to its own objectives while staying aware of the other's concerns ([[raw/pra-approach-banking-supervision-2023.pdf#page=16]]).
+- **Sharing and colleges.** Conclusions materially relevant to the other regulator are exchanged; information on dual-regulated firms is shared; domestic supervisory colleges meet at a frequency reflecting the firm's importance to the other regulator ([[raw/pra-approach-banking-supervision-2023.pdf#page=16]]). The PRA uses the FCA's findings on key conduct risks, including money laundering, where they bear on its objectives ([[raw/pra-approach-banking-supervision-2023.pdf#page=49]]).
+- **Cross-membership.** The PRA CEO sits on the FCA Board and the FCA CEO on the PRC; both CEOs sit on the FPC ([[raw/pra-approach-banking-supervision-2023.pdf#page=16]]).
+- **Joint gates.** A new deposit-taker needs both regulators satisfied on their Threshold Conditions, with the PRA leading and deciding ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]). An SMF candidate needs both satisfied on fitness and propriety ([[raw/pra-approach-banking-supervision-2023.pdf#page=23]]).
+
+### 8. Who leads on what: the 2024 MoU
+The current memorandum, signed 2024-03-26 under ss. 3D and 3E, replaces the 2019 one ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=1]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=2]]). For a dual-regulated bank:
+
+| Process | Lead | The other regulator's role |
+|---|---|---|
+| Permissions: grant, vary by adding an activity, remove | PRA | FCA **consent** (a veto); FCA consulted before cancellation ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]) |
+| Senior managers (SMFs designated by PRA rules) | PRA | FCA consent ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]]) |
+| Customer-facing SMFs (client assets, AML, compliance) | FCA alone | PRA consulted for a subset ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]]) |
+| Change in control of the bank | PRA | Consults FCA; FCA may direct an objection on AML/terrorist-financing grounds ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]]) |
+| Prudential supervision | PRA | Not joint; each assesses against its own objectives ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]]) |
+| Conduct supervision, listing and securities | FCA | Consults PRA before key listing decisions on dual-regulated firms ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=11]]) |
+| FSCS depositor protection rules | PRA | FCA makes rules for other schemes ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=11]]) |
+| Banking and ring-fencing transfer schemes (Part VII) | PRA | FCA reviews consumer notices ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=24]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=25]]) |
+| Register of firms and senior managers | FCA | single register for both ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]]) |
+| Investigations and enforcement | Agreed case by case | early notification; joint or single ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=12]]) |
+
+- **Lead regulator, in general.** The PRA leads for dual-regulated firms and the FCA for solo-regulated firms and designated activities; the lead runs a single administrative process ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]]).
+- **Routine sharing.** PRA to FCA: recovery-plan conclusions, PIF position, capital and liquidity details. FCA to PRA: key conduct-risk findings and material prudential risks in subsidiaries ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=7]]).
+- **Escalation.** Serious policy conflicts go to the FCA CEO and the Deputy Governor for Prudential Regulation, then to the FCA Board and the PRC ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=4]]).
+- **The veto in practice.** A s. 3I direction is decided by the PRC after a meeting at CEO and Deputy Governor level ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=17]]). It doesn't reach the FCA's concurrent competition powers ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=16]]).
+- **Review.** Co-ordination is reviewed each half-year ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=19]]).
+
 ## Where sources disagree
 - None found.
 
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
+- [[wiki/sources/Source - The PRA's approach to banking supervision]]
+- [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 
 ## Related
 - [[wiki/concepts/Solo and dual regulation]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/entities/HM Treasury]]
+- [[wiki/concepts/New bank authorisation]]
+- [[wiki/concepts/Senior Managers and Certification Regime]]

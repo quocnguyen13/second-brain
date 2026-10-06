@@ -1,7 +1,7 @@
 ---
 type: concept
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]"]
 created: "2026-09-28"
 updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
@@ -26,6 +26,8 @@ These are the statutory goals the FCA and the PRA must advance when they make ru
 - **How they combine.** In its general functions the FCA must act compatibly with the strategic objective and advance one or more operational objectives, "so far as is reasonably possible" ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(1)).
 - **Competition.** Separately, the FCA must promote effective competition, but only as far as compatible with consumer protection and integrity ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(4)). What it may weigh in judging competition includes switching, access (including in deprived areas), barriers to entry and innovation ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1E(2)).
 - **Secondary objective.** Competitiveness and growth: the UK's international competitiveness and medium-to-long-term growth, subject to international standards ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B(4A), 1EB; [[raw/fca-about-the-fca.md]]).
+- **Before 2023.** A January 2016 Commons Library briefing lists only the strategic and three operational objectives, consistent with the secondary objective arriving later ([[raw/edmonds-financial-conduct-authority-2016.pdf#page=2]] · secondary).
+- **In the MoU.** The regulators restate the same FCA objectives, noting that consumer protection includes wholesale consumers ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=2]]).
 - **The FCA's own statement.** The FCA's About page lists the same strategic, operational and secondary objectives as the Act ([[raw/fca-about-the-fca.md]]).
 
 ### PRA
@@ -34,6 +36,12 @@ These are the statutory goals the FCA and the PRA must advance when they make ru
 - **Additional objectives.** The Treasury may specify them when adding activities ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2D).
 - **Secondary objectives.** Competition, and competitiveness and growth ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2H(1)–(1B)).
 - **Limit.** The objectives do not require the PRA to prevent every failure ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2G).
+- **The PRA's own statement.** Its banking approach lists the same two primary and two secondary objectives as the Act ([[raw/pra-approach-banking-supervision-2023.pdf#page=8]]). It adds:
+  - "Safety and soundness" means resilience against failure, now and in future, and avoiding harm from disruption to the continuity of financial services ([[raw/pra-approach-banking-supervision-2023.pdf#page=10]]).
+  - The secondary objectives apply when it makes policies, codes and rules ([[raw/pra-approach-banking-supervision-2023.pdf#page=9]]).
+  - The competition objective means considering, but not being required to adopt, options with greater benefits to competition ([[raw/pra-approach-banking-supervision-2023.pdf#page=9]]).
+  - The competitiveness and growth objective carries more weight than the earlier "have regard" duty it replaced ([[raw/pra-approach-banking-supervision-2023.pdf#page=9]]).
+  - The general objective includes the [[wiki/concepts/Ring-fencing]] of core services ([[raw/pra-approach-banking-supervision-2023.pdf#page=8]]).
 
 ### Accountability for the objectives
 - **Guidance.** Each regulator must publish guidance on how it will advance its objectives, after consulting the other ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1K, 2I).
@@ -46,6 +54,9 @@ These are the statutory goals the FCA and the PRA must advance when they make ru
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - About the FCA]]
+- [[wiki/sources/Source - The PRA's approach to banking supervision]]
+- [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
+- [[wiki/sources/Source - Commons Library briefing on the FCA 2016]]
 
 ## Related
 - [[wiki/entities/Financial Conduct Authority]]

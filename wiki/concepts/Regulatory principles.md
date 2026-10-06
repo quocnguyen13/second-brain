@@ -1,7 +1,7 @@
 ---
 type: concept
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]"]
 created: "2026-09-28"
 updated: "2026-10-06"
 tags: ["uk-financial-regulation", "financial-regulators"]
@@ -28,6 +28,7 @@ These are the principles in s. 3B that both the FCA and the PRA must have regard
   - "the need to contribute towards achieving compliance" with the UK net-zero target (Climate Change Act 2008 s. 1) and environmental targets (Environment Act 2021 s. 5)
 
   The clip doesn't say which applies where.
+- **The PRA's reading.** The PRA lists the principles it has regard to as: efficient use of resources; proportionality; senior management responsibility; differences between authorised persons; transparency; disclosure of information about persons on whom requirements are imposed; and consumers taking responsibility. It adds that the 2023 Act requires it to "have regard" to contributing to the government's 2050 net-zero and environmental targets where its functions are relevant ([[raw/pra-approach-banking-supervision-2023.pdf#page=13]]). Its list doesn't include the sustainable-growth text. This bears on the (c) open point for the PRA but doesn't say which text applies to the FCA.
 
 ## Where sources disagree
 - None found. The (c) point is an ambiguity within one source, not a disagreement between sources.
@@ -35,6 +36,7 @@ These are the principles in s. 3B that both the FCA and the PRA must have regard
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - About the FCA]]
+- [[wiki/sources/Source - The PRA's approach to banking supervision]]
 
 ## Related
 - [[wiki/concepts/Regulatory objectives]]
