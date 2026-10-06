@@ -14,7 +14,7 @@ tags: ["uk-financial-regulation", "financial-regulators"]
 Page citations use the PDF's page numbers, which match the printed ones.
 
 ## Summary
-A four-page background note for a Commons debate on the FCA on 1 February 2016. It describes where the FCA came from, its objectives, accountability and four broad areas of work, then explains why the FCA is criticised most for failing to "sort out" scandals, with interest rate hedging products and the Connaught income fund as examples ([[raw/edmonds-financial-conduct-authority-2016.pdf#page=2]] · secondary). It is a snapshot from January 2016: it predates the FCA's 2023 secondary objective ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(4A), note F12) and says nothing on the PRA beyond one line.
+A four-page background note for a Commons debate on the FCA on 1 February 2016. It describes where the FCA came from, its objectives, accountability and four broad areas of work, then explains why the FCA is criticised most for failing to "sort out" scandals, with interest rate hedging products and the Connaught income fund as examples ([[raw/edmonds-financial-conduct-authority-2016.pdf#page=2]], [[raw/edmonds-financial-conduct-authority-2016.pdf#page=3]] · secondary). It is a snapshot from January 2016: it predates the FCA's 2023 secondary objective ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(4A), note F12) and says nothing on the PRA beyond one line.
 
 ## Key claims
 - **Origins.** Section 6 of the Financial Services Act 2012 "established three new regulatory bodies" after the 2008 crisis; the FCA "assumed most of the functions" of the FSA, which had been heavily criticised for its supervisory failings pre-crisis ([[raw/edmonds-financial-conduct-authority-2016.pdf#page=2]] · secondary).

@@ -60,3 +60,6 @@ Scanned 57 pages, deep-checked 57. Findings: 7 (6 high, 0 medium, 1 low). Checks
 
 ## [2026-10-06] lint | apply report-2026-10-06
 Applied: 1a, 2, 3, 4, 5, 6. Skipped: none (7 not requested). Pages changed: 11 (Senior Managers and Certification Regime, New bank authorisation, FCA-PRA coordination, Solo and dual regulation, Financial Conduct Authority, Source - The PRA's approach to banking supervision, Source - About the FCA, Source - FCA and Bank of England MoU 2024, Source - Commons Library briefing on the FCA 2016, Strong customer authentication, overview). Status changes: none.
+
+## [2026-10-06] lint | apply report-2026-10-06
+Applied: 7. Skipped: none. Pages changed: 5 (Source - The PRA's approach to banking supervision, Prudential Regulation Authority, Source - Commons Library briefing on the FCA 2016, FCA-PRA coordination, overview). Status changes: none.

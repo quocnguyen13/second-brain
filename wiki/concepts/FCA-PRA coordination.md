@@ -76,7 +76,7 @@ These are the statutory mechanisms that make the FCA and the PRA act as a system
 - **Joint gates.** A new deposit-taker needs both regulators satisfied on their Threshold Conditions, with the PRA leading and deciding ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]). A candidate for an SMF the PRA approves needs both satisfied on fitness and propriety ([[raw/pra-approach-banking-supervision-2023.pdf#page=23]]).
 
 ### 8. Who leads on what: the 2024 MoU
-The current memorandum, signed 2024-03-26 under ss. 3D and 3E, replaces the 2019 one ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=1]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=2]]). For a dual-regulated bank:
+The current memorandum, signed 2024-03-26 under ss. 3D and 3E, replaces the 2019 one ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=1]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=2]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=20]]). For a dual-regulated bank:
 
 | Process | Lead | The other regulator's role |
 |---|---|---|
