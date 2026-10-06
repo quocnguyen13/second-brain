@@ -13,8 +13,11 @@
 | `insight` | `mine/drafts/` when you draft one. A kept insight is a new page I write in `mine/insights/` | A claim someone could disagree with | `system/templates/Insight template.md` |
 | `decision`, `project`, `journal` | `mine/decisions/`, `mine/projects/`, `mine/journal/` | Mine only; you never create these | |
 | `ingest-set` | `system/ingest/` | `set-YYYY-MM-DD` | The format is in the `ingest` skill |
+| `research` | `system/research/` | `research-YYYY-MM-DD-<topic>` | The format is in the `research` skill |
 
 When you create a page, read its template first and follow its properties and headings. Replace `{{title}}` and `{{date:YYYY-MM-DD}}` yourself.
+
+`system/research/capture.md` is the capture list: the sources for me to clip, one line each under `## To clip`. `/research` and `/ingest` add lines, `/import capture` downloads the PDFs on it and names the pages to clip, and `/ingest` ticks a line when its source is compiled.
 
 ## Properties
 - Wiki pages: `type`, `status` (verified | unverified | contested), `sources` (links into `raw/`), `created`, `updated`, `tags`. Source pages also carry `trust` (primary | secondary | commentary | ai).
@@ -30,9 +33,9 @@ One level per source, set by its type. When a source fits no row, or two, propos
 | `primary` | The origin of the facts, speaking for itself: legislation and regulations; a regulator's, government's, court's or standard-setter's own publications; official statistics; an organisation's own statements about itself; an author's own statement of their own idea or work | FSMA Part 1A; the PRA's supervision approach; the FCA's own website; Karpathy's gist on his pattern |
 | `secondary` | Independent, accountable analysis of primary material: parliamentary library briefings and committee reports; academic papers and textbooks; reports by other public bodies; professional bodies' guidance | A House of Commons Library briefing |
 | `commentary` | Opinion, news and general-audience writing: news articles, blogs, law-firm and consultancy briefings, encyclopedias including Wikipedia, forums, my own notes | A Wikipedia article |
-| `ai` | A Claude output saved as a source (D-075). Its claims stay uncited until a primary source backs them | A research report from a Claude chat |
+| `ai` | A Claude output saved as a source (D-075). Its claims stay uncited until a primary source backs them | A research report from a Claude chat or from `/research` |
 
-- A fact takes the level of its best source. A citation of a source below primary ends with its level, inside the brackets: `([[raw/<name>]] · secondary)`, `· commentary`, `· AI`. Primary citations carry no marker.
+- A fact takes the level of its best source. A citation of a source below primary ends with its level, inside the brackets: `([[raw/<name>]] · secondary)`, `· commentary`, `· AI`. Primary citations carry no marker. A claim marked `· AI` counts as uncited, so its page is `unverified`. A URL is never a citation.
 - A disagreement on a fact is settled by level, then by a body's own statement about itself over another body's statement about it, then by date; a disagreement of views is never settled by level. I decide either way. The claim set aside stays under "Where sources disagree", marked "outweighed by" or "superseded by", with the date it was resolved.
 
 ## Linking
@@ -50,10 +53,12 @@ Append-only. One entry per operation, newest at the bottom, naming the pages it 
 ```
 ## [YYYY-MM-DD] ingest | <topic>
 Set: set-YYYY-MM-DD, N sources (N primary, N secondary, N commentary). Pages: +N new (<titles>); N updated (<titles>). Conflicts: N. Flags: <or "none">.
+## [YYYY-MM-DD] research | <topic>
+Report: research-YYYY-MM-DD-<topic>, N facts from N sources (N primary, N secondary, N commentary). To clip: N (<titles>). Searches: N; pages read: N. No wiki pages changed.
 ```
 
 ## Naming
 - Folders: lower case with hyphens. Page titles: plain language.
-- Files in `raw/`: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site (`fca-...`, `wikipedia-...`); add the year for a document in a dated series. Named when they move in; content never changed.
+- Files in `raw/`: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site (`fca-...`, `wikipedia-...`); add the year for a document in a dated series. A new version of a document already in `raw/` takes the same stem with its year, or year and month (`fca-about-the-fca-2026-10.md`); the older file stays. A Claude output is `claude-<YYYY-MM-DD>-<topic>.md`. Named when they move in; content never changed.
 - Never use these characters in titles: `# ^ [ ] | \ / : * " < > ?`
 - One idea per insight page. Your drafts cite `raw/` inline, as wiki pages do, and mark reasoning no source states "(reasoning)".

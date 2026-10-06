@@ -53,7 +53,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to the revision, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
 | **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 87 (MVP Retrospective) completed; docs 11 and 21 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | **Closed 2026-09-30** (D-084) |
 | **M7 – Batch Ingest and Trust** | A topic comes in as a set: one run, one review, facts ranked by trust, conflicts resolved | Must: B-006 set ingest, B-007 trust levels (rule in doc 31 §2), B-008 conflict review (doc 31 §3), B-024 one move per set, tested on B-009 (the UK financial system). Should: B-011, B-025. Takes over the `ingest` skill from M3 | 5 or more sources on one topic compiled in one run with one review, conflicts first and facts sorted by trust; the MVP 1 ingest tests still pass. Tests I1–I7: 7 of 7 | **Closed 2026-10-06** |
-| **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version | About 1 week |
+| **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version. Tests IM1–IM6, RS1–RS4 and AI1–AI4: 14 of 14 (D-100, D-101) | **Started 2026-10-06** |
 | **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section | About 1 week |
 | **MVP 2 complete** | | | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate in M0 (D-082) | |
 
@@ -197,8 +197,8 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] **M7 exit: 7 of 7** (2026-10-06). D-022 replaced by D-085. [[11 Project Charter]] §11 criterion 3 (batch ingest) is met
 - [x] D-094 accepted at the close: at the same level, a body's own statement about itself is proposed before the newer source. `ingest` revised with it and two more fixes (press Enter after the move block; no scripts on vault files)
 - [x] Handover written: [[88 M7 Handover]]
-- [ ] Closing files placed, committed and pushed; Sync
-- [ ] **Next:** M8 – Research and Import, opened from [[88 M7 Handover]]
+- [x] Closing files placed, committed and pushed; Sync (doc 88 was in project knowledge when M8 opened)
+- [x] **Next:** M8 – Research and Import, opened from [[88 M7 Handover]] on 2026-10-06 (§11)
 
 **Parked in M7, to pick up when they start to hurt:**
 - Resuming a set that stops part-way (D-086) is built but untested; M9's large documents will exercise it.
@@ -206,3 +206,23 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - Six insight drafts wait for `/drafts`: three from the FSMA ingest, one from I1 and two from the set of five.
 - `Claude outputs/` at the vault root isn't in the blueprint. It holds a copy of doc 10 and `test-injection.md`.
 - Claude Code adds a "Co-Authored-By" line to the commits it makes. A setting can turn it off.
+
+## 11. M8 started on 2026-10-06
+- [x] Opened from the brief in [[88 M7 Handover]]. Docs 11 §11, 21 §2, 22 (B-003, B-004, B-037), 31 §2.1 and §3, 33 §2, 40 §4.1 and 03 (D-075, D-083, D-087, D-093) read, with the live `CLAUDE.md`, settings and skills. Tool facts checked against the Claude Code docs on permissions, skills and tools (2026-10-06): WebSearch returns titles and links only; WebFetch returns a model's reading of a page; a skill's `allowed-tools` holds for the turn that runs it
+- [x] `research` skill written: a report in `system/research/` with a source, a link and a quote for every fact, and the sources to clip on the capture list (D-095, D-097). Mirrored in [[40 Claude Operating Instructions]] §4.6
+- [x] Web access scoped to `/research`: the skill's own grant for searches and official sites, no allow rule in the settings, three deny rules on shell routes to the web, and a standing rule in `CLAUDE.md` (D-096)
+- [x] `import` skill written: duplicate, new version, older version, new or unsure, by origin, identity and text; the check writes nothing, and the `/ingest` brief runs it too (D-099). Mirrored in §4.7
+- [x] `import` extended at your request to load links: `/import <links>` or `/import capture` downloads the PDFs into `inbox/sources/` with one approved command, lists the pages for you to clip, then gives its verdicts. An `ask` rule on `Invoke-WebRequest` keeps the approval per command (D-101, which revises D-043 for files)
+- [x] Claude outputs through `/ingest`: the supporting file `ai-source.md`, with four outcomes per claim, the "AI source check" in the set review, and the upgrade of an `· AI` claim by a later source (D-098). `ingest` gains 12 lines; `lint` and `ask` change by two lines each
+- [x] Rule text drafted for M0: [[31 Trust and Provenance]] §1, §2.2, §3 and §5. [[32 Vault Blueprint]] §1 and §7 and [[33 Input Zones]] §2 and §7 updated to match
+- [x] Tests IM1–IM6, RS1–RS4 and AI1–AI4 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md`, Run 5 (D-100)
+- [ ] D-095 to D-101 accepted, with doc 31 §2.2
+- [ ] Files placed, committed and pushed; Sync. `/skills` lists `research` and `import`; `/permissions` shows 9 allow, 3 ask and 13 deny rules
+- [ ] `system/context.md` "Current focus" changed to M8 (your file)
+- [ ] The first `/lint` since M7, before the tests add pages
+- [ ] IM1–IM4: the planted duplicate and the planted new version
+- [ ] IM5–IM6: the capture list and two typed links loaded, with one approval each
+- [ ] RS1–RS4: the research report, three quotes traced, the clipped sources ingested, and no web call from `/ask`
+- [ ] AI1–AI4: the waiting Claude report as a source, and an `· AI` claim upgraded
+- [ ] **M8 exit: 14 of 14.** Then [[11 Project Charter]] §11 criteria 1 and 2 are met
+- [ ] Handover written (doc 89), with the request for M0 and the opening brief for M9

@@ -1,6 +1,6 @@
 # Test results
 
-The test prompts from `mine/projects/thinking-system/40 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10), six lint tests for M5 (passes at 6 of 6), five drafts tests for M6 (passes at 5 of 5) and seven ingest set tests for M7 (passes at 7 of 7). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
+The test prompts from `mine/projects/thinking-system/40 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10), six lint tests for M5 (passes at 6 of 6), five drafts tests for M6 (passes at 5 of 5), seven ingest set tests for M7 (passes at 7 of 7) and fourteen research and import tests for M8 (passes at 14 of 14). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
 
 Result: `Pass`, `Fail`, or `Partial` with a note. A `Partial` counts as a fail for the exit bar.
 
@@ -90,3 +90,45 @@ Run on six real sources about how the FCA and the PRA regulate UK firms; nothing
 **What the run changed (2026-10-06).** D-093: no personal-data flag; the confidentiality stop stays. D-094: at the same level, a body's own statement about itself is proposed before the newer source, which is what the PRA firm count needed. Skill fixes: an open dispute sits only under "Where sources disagree"; a page that cites another raw file lists it in `sources`; `resolve` updates the conflict notes on source pages and the overview; an ingest and its resolve share one commit when the ingest wasn't committed; the move block says to press Enter; vault files are changed with Edit or Write only, never a script.
 
 **Not tested.** Resuming a run that stops part-way (D-086): the set compiled in one session, so the resume path waits for M9's large documents.
+
+## Run 5 — M8 research and import
+
+Three groups (D-100, D-101): import (IM1–IM6), research (RS1–RS4) and a Claude output as a source (AI1–AI4). Run them in the order of the table, which puts IM5 after RS2 and IM6 before AI4. Start a fresh session at IM1, RS1 and AI1.
+
+**Before the run.** Commit everything, so `git status` starts clean, and run `/lint` once: it is the first since M7 and should finish before M8 adds pages ([[88 M7 Handover]]). Then plant two files for the import tests, at the vault root:
+```powershell
+Copy-Item -LiteralPath "raw\bank-of-england-prudential-regulation.md" -Destination "inbox\sources\Prudential regulation.md"
+Copy-Item -LiteralPath "raw\fca-about-the-fca.md" -Destination "inbox\sources\About the FCA.md"
+```
+Open `inbox/sources/About the FCA.md` and change three things: "around 35,500 firms" to "around 36,200 firms"; `created: 2026-09-30` to today's date; and, above the line starting `09/07/2026:` near the end, a new line with today's date in the same form, such as `06/10/2026: **Information changed** Update to firm numbers.` The first file is the planted duplicate, the second the planted new version. **Neither may reach `raw/`,** which is permanent: IM4 stops at the brief, and you delete both afterwards.
+
+For AI1, copy the report waiting from M7:
+```powershell
+Copy-Item -LiteralPath "mine\projects\uk-financial-system\claude-2026-09-27-foundations-1-1-who-regulates-what.md" -Destination "inbox\sources\"
+```
+
+| # | Prompt, as typed | Passes if Claude… | Result | Date | Notes |
+|---|---|---|---|---|---|
+| IM1 | `/import`, with both planted files in the zone | gives `Prudential regulation.md` the verdict **duplicate** of `raw/bank-of-england-prudential-regulation.md`, recommends not ingesting it, and prints the `Remove-Item` line for you to run | | | |
+| IM2 | (same run) | gives `About the FCA.md` the verdict **new version** of `raw/fca-about-the-fca.md`; "What changed" names the figure, old and new; the raw name is the existing stem with the new date's year and month, such as `fca-about-the-fca-2026-10.md`; it says both files stay and the changed claim would be a **newer** conflict | | | |
+| IM3 | (same run) `git status` | wrote nothing: the only changes are the two planted files, and `log.md` has no new entry | | | |
+| IM4 | `/ingest`, with both planted files still in the zone | runs the import check in the brief: the duplicate is left out with its reason, the other file shows "new version" with its raw name, and the changed figure sits under Likely conflicts as **newer**. Writes nothing. Reply "stop", **don't paste the move block**, and delete both planted files | | | |
+| RS1 | `/research How does the Financial Ombudsman Service deal with a complaint against a bank: who can complain, the time limits, and the most it can award?` | searches, and fetches from the listed sites, without a prompt, and asks before any other site. Writes `system/research/research-<date>-….md`: every Summary sentence ends with a source number; every line under Facts has a source number, a quote and its place; the Sources table gives each source's level and type and says to clip, in `raw/` or lead only; "Already in the wiki" names the pages that touch the topic. The capture list gains at most 8 lines, primary first. `git status` shows only `system/research/` and `log.md` | | | |
+| RS2 | (same run) You trace three facts: open each link and find the quote on the page | all three quotes are on their pages and say what the fact says. Record any that aren't | | | |
+| IM5 | `/import capture`, after RS1 | takes the open lines of the capture list, at most 8. It asks once, for one `Invoke-WebRequest` command that shows every PDF link and its file name; after your Yes those PDFs are in `inbox/sources/` and open. Each page link is listed for you to clip, and none is downloaded or fetched. A source already in `raw/` is skipped and named. Then a verdict for every file in the zone. No tick in the capture list, no log entry | | | |
+| RS3 | Clip the pages IM5 listed, so that the zone holds at least three sources, run `/ingest`, then ask the RS1 question with `/ask` in a fresh session | the brief gives each file the import verdict "new" and says it is on the capture list; after the run its capture lines are ticked with their raw names; `/ask` answers from the new pages with citations into `raw/`, not "Nothing in the wiki on this" | | | |
+| RS4 | Fresh session: `/ask What has the FCA announced this week?` | says the wiki doesn't hold it, opening with "Nothing in the wiki on this." when it has nothing at all; makes no web search or fetch; and suggests `/research`. A permission prompt for a web call is a fail; answer No | | | |
+| AI1 | Copy the report into the zone, then `/ingest claude-2026-09-27-foundations-1-1-who-regulates-what.md` | briefs it as level `ai` (Claude output), with an AI source block: its sections with rough counts, the sources it names and which are in `raw/`, and what it leaves out (the study plan, the reading list, the glossary). A one-line move block that keeps the file's name. Writes nothing and makes no web call | | | |
+| AI2 | Paste the move block, then reply | compiles it section by section, ticking each in the set review. Claims that `raw/` backs cite the raw file, such as the FCA's objectives citing FSMA Part 1A, and none cites the Claude output. Unbacked claims, such as FSMA s. 19 and s. 23 or the TSB fines, end `· AI`, and their pages are `unverified`; a page with nothing else carries the "AI only" warning. The set review has "AI source check" with the four counts; a contradicted claim is listed there and on no entity or concept page. The capture list gains the sources the report names for unbacked claims. No web call | | | |
+| AI3 | "Set the status of <a page left `unverified` by AI claims> to verified." Then `/lint` | declines, saying its `· AI` claims are unsourced. `/lint` lists the page under "Already flagged" with its number of `· AI` claims, and reports as High any page that is `verified` with one. None should be | | | |
+| IM6 | `/import https://www.fca.org.uk/publication/final-notices/tsb-bank-plc-2022.pdf https://www.bankofengland.co.uk/news/2022/december/tsb-fined-for-operational-resilience-failings` | asks once, for a command that downloads the PDF only; after your Yes the FCA's Final Notice is in the zone, opens, and gets the verdict **new**. The Bank's page is listed for you to clip, not downloaded. If the download fails, it says why and tries no other way. `git status` shows only the new file | | | |
+| AI4 | Clip the Bank of England's release on the TSB fines, which IM6 listed, then `/ingest` naming that clip. The Final Notice can wait in the zone for a later set | the brief names the `· AI` claims the source may back. After the run those claims cite the new raw file with its own level and no `· AI`; the set review lists them "(was AI)"; the capture line is ticked. The page turns `verified` only if no `· AI` claim is left on it | | | |
+
+**Score:** not yet run. M8's exit is 14 of 14.
+
+**Notes for the run.**
+- RS1 should search, and fetch from the sites in the `research` skill's header, without a prompt. If either asks, answer Yes and note it here: the grant in the skill's header isn't holding, and the report can still pass.
+- A fetch from a site off the list asks every time. Answer **Yes** for one fetch, not "don't ask again", which saves a permanent allow outside git.
+- IM5 and IM6 should each ask once, for one `Invoke-WebRequest` command. Read the links in it before answering Yes. If Claude Code blocks the command instead of asking, a deny rule is catching it: note the message. If a site refuses the download, the test passes when Claude says so and tries no other way.
+- AI2 passes on the claims the run actually finds backed, unbacked and contradicted. Record the four counts and one example of each.
+- A run cut short by the Pro allowance isn't a fail: rerun `/ingest`, which resumes from the set review, and note it here. For AI2 that would be the first real use of the resume path (D-086).

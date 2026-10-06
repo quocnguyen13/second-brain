@@ -30,7 +30,7 @@ Part A writes exactly three things: the report, the ticks in `inbox/checks.md`, 
 
 ### A1. Scan every page
 Read each page in full and check:
-1. **Citations present.** Every claim cites a file in `raw/`, including the one-line definition under the title. Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims. A claim labelled "(general knowledge)" is uncited. On an analysis page, Evidence cites `raw/`; the Answer needs no citations of its own, but a fact in it that Evidence doesn't hold is uncited (D-051). Labelled lines under "Caveats and gaps" are allowed there.
+1. **Citations present.** Every claim cites a file in `raw/`, including the one-line definition under the title. Statements about the wiki itself (what's missing, how many sources cover a topic) aren't claims. A claim labelled "(general knowledge)" is uncited, and so is a claim whose only citation is marked `· AI` (D-075). On an analysis page, Evidence cites `raw/`; the Answer needs no citations of its own, but a fact in it that Evidence doesn't hold is uncited (D-051). Labelled lines under "Caveats and gaps" are allowed there.
 2. **PDF citations carry the right page:** `([[raw/<name>.pdf#page=N]])` (D-046). Report citations with no page, or with a page that doesn't hold all of the claim, as a single Low finding for the whole wiki, with the right pages for each claim you located in A2. When the claim is in the cited file, a wrong page is a location fix, not an unsupported claim, and the page's status stands (D-061).
 3. **`sources` matches the body.** The property lists every raw file the page cites, each listed file is cited on the page, and each exists in `raw/`.
 4. **Status matches the page.** `verified` only if every claim is cited. `unverified` if any claim is uncited, and that wins over `contested` until the claim is fixed. `contested` only if the page carries a disputed claim and shows both positions, with citations, under "Where sources disagree". A dispute marked "Resolved" is no longer open: the page states the chosen claim and keeps the other, marked "outweighed by" or "superseded by" (D-088). Source pages and `wiki/overview.md` record disagreements and keep their own status (D-047).
@@ -95,7 +95,7 @@ N. **Low · PDF citations without the right page** · one line per citation: pag
 - **Every fix is exact enough to apply without judgement.** When it needs a decision from me, give lettered options (3a, 3b) and say which you'd pick. Every option must leave the wiki honest: removing or rewording an unsupported claim, or labelling it uncited and making the page `unverified`. Keeping a claim with a citation that doesn't support it is never an option.
 - One finding per problem. If an uncited claim also leaves the page's status wrong, the fix for that claim says so; it isn't a second finding.
 - A finding also in the earlier report and not applied ends with "Open since report-YYYY-MM-DD".
-- **Already flagged** lists every `unverified` and `contested` page, with the reason the page itself gives. If the reason no longer holds, it's a finding instead.
+- **Already flagged** lists every `unverified` and `contested` page, with the reason the page itself gives. If the reason no longer holds, it's a finding instead. For a page that is `unverified` because of `· AI` claims, give how many it carries; they wait for a source in `raw/`, and `/research` on its own looks for one.
 
 ### A6. Log, then stop
 - Append to `log.md`:

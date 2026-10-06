@@ -15,12 +15,14 @@
       "Edit(/inbox/checks.md)",
       "Edit(/system/lint/**)",
       "Edit(/system/ingest/**)",
+      "Edit(/system/research/**)",
       "Edit(/index.md)",
       "Edit(/log.md)"
     ],
     "ask": [
       "Bash(git commit *)",
-      "PowerShell(git commit *)"
+      "PowerShell(git commit *)",
+      "PowerShell(Invoke-WebRequest *)"
     ],
     "deny": [
       "Edit(/raw/**)",
@@ -29,10 +31,13 @@
       "Bash(git clean *)",
       "Bash(git reset *)",
       "Bash(git push *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
       "PowerShell(Remove-Item *)",
       "PowerShell(git clean *)",
       "PowerShell(git reset *)",
-      "PowerShell(git push *)"
+      "PowerShell(git push *)",
+      "PowerShell(Invoke-RestMethod *)"
     ]
   }
 }

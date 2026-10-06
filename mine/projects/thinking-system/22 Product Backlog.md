@@ -60,16 +60,16 @@ Gets material in: web clips, files, Claude outputs. Needs N1, N2.
 |---|---|---|---|---|---|---|
 | B-001 | Office documents as sources (§3) | Feature | MVP 4 | New | Doc 36, for work files (D-018) | M3, M1 |
 | B-002 | Mermaid support (§3) | Feature | — | New; on hold | — | M3 or M4 |
-| B-004 | Research a topic: Claude researches a new topic and returns a summary in which every fact names its source, plus the primary sources for you to clip (D-075, D-083) | Feature | MVP 2 · Must · M8 | New | B-003 | M3 |
+| B-004 | Research a topic: Claude researches a new topic and returns a summary in which every fact names its source, plus the primary sources for you to clip (D-075, D-083) | Feature | MVP 2 · Must · M8 | **In progress:** built in M8, tests RS1–RS4 to run (D-095 to D-097, proposed 2026-10-06) | B-003 | M8 (D-084) |
 | B-005 | Phone capture and sync | Feature | Later | New | — | M1 |
-| B-037 | `/import` (§3): before ingest, checks new files against `raw/` for duplicates and newer versions, and recommends what to do (D-083) | Feature | MVP 2 · Must · M8 | New | Doc 31 §3, superseded claims | M3 |
+| B-037 | `/import` (§3): before ingest, checks new files against `raw/` for duplicates and newer versions, and recommends what to do (D-083) | Feature | MVP 2 · Must · M8 | **In progress:** built in M8, tests IM1–IM6 to run (D-099 and D-101, proposed 2026-10-06) | Doc 31 §3, superseded claims | M8 (D-084) |
 
 ### E-02 · Compile and verify
 Turns sources into cited pages, with status, conflicts and trust. Needs N1, N3.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-003 | Claude outputs as sources (§3) | Feature | MVP 2 · Must · M8 | Refined; direction set by D-075 | Rule in doc 31 | M3, M4, M5, M2; rule by M0 |
+| B-003 | Claude outputs as sources (§3) | Feature | MVP 2 · Must · M8 | **In progress:** built in M8, tests AI1–AI4 to run (D-096, D-098, proposed 2026-10-06); direction set by D-075 | Rule in doc 31 §2.2 | M8 (D-084), with small edits in what M2, M4, M5 and M7 own; rule by M0 |
 | B-006 | Ingest a set: several sources on one topic in one run, with one review | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-085, D-086; tests I1, I3–I5). Resume after a stopped run is untested, for M9 | D-022 revised | M7 (D-084) |
 | B-007 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-087; tests I4, I7) | Rule in doc 31 §2 | M7; rule by M0 |
 | B-008 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-088, D-094; tests I5, I6) | B-007; doc 31 §3 revised | M7; rule by M0 |
@@ -192,7 +192,20 @@ Items with more than a one-line need. Others get a section here when they are re
 
 **Owners when built:** the rule in doc 31 (M0); `CLAUDE.md` and `system/conventions.md` (M2); `ingest` (M3); `ask` (M4); `lint` (M5).
 **To settle in the building thread:** where the capture list lives between sessions (for example, lines in `inbox/checks.md`); whether web search needs an allow rule, since manual mode asks before each search; a size limit for long research reports.
+**Settled in M8 (proposed 2026-10-06):**
+- The capture list is one file, `system/research/capture.md` (D-097).
+- Web search gets no allow rule. `/ingest` doesn't use the web at all: the sources an output names go on the capture list, and `/research` looks for the rest (D-096, which refines step 2 above).
+- No size limit beyond one Claude output per set. A long one compiles section by section, with each section ticked in the set review (D-098).
+- The label is `· AI`, as D-087 set it, where the design above says "(AI)".
+
 **Constraint:** the output must pass the same data boundary as any source (D-018).
+
+### B-004 · Research a topic
+**Need:** Claude researches a new topic and gives back a summary I can check, with the sources to bring in.
+**Raised:** 2026-09-30, M0, as part of the showcase bar (D-083).
+**Built in M8 (proposed 2026-10-06):** the `research` skill (D-095). `/research <topic>` checks the wiki, searches the web, and writes a report in `system/research/` in which every fact names its source with a link and a quote. The sources to clip go on the capture list (D-097). With no topic it looks for sources for the wiki's `· AI` claims.
+**Boundaries:** the report is level AI and changes nothing in the wiki; a fetched page is never saved (D-043). The web is reached only from this skill, with official sites pre-approved and any other site asking first (D-096).
+**Limits per run:** 25 facts, 8 sources to clip, about 12 searches and 15 fetches.
 
 ### B-037 · `/import`: duplicates and versions
 **Need:** every document you bring in is checked for duplicates, and gets a version recommendation when a similar document already exists with small changes, or when it carries clues of a version change.
@@ -202,7 +215,13 @@ Items with more than a one-line need. Others get a section here when they are re
 - **New version:** a similar document is in `raw/` with small changes, or the file carries version clues (a date, a version number, "amended", "revised") → recommend ingesting it as a new version, so the claims it changes are marked superseded ([[31 Trust and Provenance]] §3).
 - **New:** nothing similar → ready for `/ingest`.
 
-**Open questions:** how "similar" is measured (title, author and URL; text overlap; both); how a new version is named in `raw/`, which stays immutable (for example `-v2`, keeping both files); whether it runs as its own command or as step 0 of `/ingest` on a set (B-006).
+**Settled in M8 (D-099, proposed 2026-10-06):**
+- **Similar** is measured three ways, in order: the same origin (the clip's `source` URL), the same identity (title and publisher), the same text (three sampled passages).
+- **A new version** takes the existing raw name's stem with its year, or year and month. Both files stay.
+- **Both:** its own command, and the first step of the `/ingest` brief, which reads the same procedure.
+- Two more verdicts: **older version** and **unsure**.
+
+**Extended on 2026-10-06, at your request (D-101, proposed):** `/import <links>` and `/import capture` load documents before the check. A PDF is downloaded byte for byte into `inbox/sources/`, in one command you approve. A web page is listed for you to clip, because no saved form of a page is both exact and readable in Obsidian. The constraint above now reads: the check writes nothing, and the load writes only the files you approve.
 **Constraint:** writes nothing; it recommends, and you decide.
 
 ### B-038 · Large documents

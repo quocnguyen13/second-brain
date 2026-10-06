@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-09-30
+reviewed: 2026-10-06
 tags: [project/thinking-system, vault-design]
 ---
 
@@ -47,6 +47,7 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 │   ├── conventions.md     short version of this document, for Claude
 │   ├── lint/              dated lint reports
 │   ├── ingest/            one set review per /ingest set (D-086)
+│   ├── research/          research reports and capture.md, the sources to clip (D-095, D-097)
 │   ├── views/             Review.base: the weekly review views (D-058)
 │   └── templates/         one template per page type (doc 34)
 └── .claude/               Claude Code settings and skills (hidden in Obsidian)
@@ -129,6 +130,6 @@ Set: set-2026-10-01, 5 sources (3 primary, 1 secondary, 1 commentary). Pages: +3
 ## 7. Naming
 - Folders are lower case with hyphens; page titles are plain language.
 - Avoid these characters in titles: `# ^ [ ] | \ / : * " < > ?`
-- Files in `raw/` are named as they move in: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site, e.g. `wikipedia-financial-conduct-authority.md`; for a document in a dated series, the year, e.g. `pra-banking-supervision-approach-2023.pdf`. The content is never changed (D-042, D-089).
+- Files in `raw/` are named as they move in: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site, e.g. `wikipedia-financial-conduct-authority.md`; for a document in a dated series, the year, e.g. `pra-banking-supervision-approach-2023.pdf`. The content is never changed (D-042, D-089). A new version of a document already in `raw/` takes the same stem with its year, or year and month, e.g. `fca-about-the-fca-2026-10.md`, and the older file stays (D-099). A Claude output is `claude-<YYYY-MM-DD>-<topic>.md` (D-075).
 - Dates as `YYYY-MM-DD`.
 - One idea per insight page, titled as a statement you could agree or disagree with.
