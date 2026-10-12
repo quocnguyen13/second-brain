@@ -63,3 +63,5 @@ Applied: 1a, 2, 3, 4, 5, 6. Skipped: none (7 not requested). Pages changed: 11 (
 
 ## [2026-10-06] lint | apply report-2026-10-06
 Applied: 7. Skipped: none. Pages changed: 5 (Source - The PRA's approach to banking supervision, Prudential Regulation Authority, Source - Commons Library briefing on the FCA 2016, FCA-PRA coordination, overview). Status changes: none.
+## [2026-10-12] research | Financial Ombudsman Service complaints against a bank
+Report: research-2026-10-12-financial-ombudsman-bank-complaints, 25 facts from 9 sources (9 primary, 0 secondary, 0 commentary). To clip: 8 (FSMA 2000 s. 228; DISP 2.7; Glossary micro-enterprise; Glossary small business; DISP 1.6; DISP 2.8; DISP 3.7; FOS Complain to the financial business). Searches: 7; pages read: 10. No wiki pages changed.
