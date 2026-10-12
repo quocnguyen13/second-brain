@@ -219,9 +219,9 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] Files placed, committed and pushed (4b33a82, 2026-10-06); Sync
 - [x] D-095 to D-101 accepted, with doc 31 §2.2 (2026-10-06)
 - [ ] In a fresh session: `/skills` lists `research` and `import`, and `/permissions` shows 9 allow, 3 ask and 13 deny rules
-- [ ] `system/context.md` "Current focus" changed to M8 (your file)
-- [ ] The first `/lint` since M7, before the tests add pages
-- [ ] IM1–IM4: the planted duplicate and the planted new version
+- [x] `system/context.md` "Current focus" changed to M8 (your file, 2026-10-06)
+- [x] The first `/lint` since M7, before the tests add pages: report-2026-10-06, 57 pages deep-checked, 7 findings (6 high, 1 low), all on UK pages compiled in M7, all applied (ca76dcc, 454140b). The set review hadn't caught them, so `/lint` after every large set stays the backstop
+- [ ] IM1–IM4: the planted duplicate and the planted new version. IM1, IM3 and IM4 pass (2026-10-12). IM2 partial: the report didn't say a new version raises **newer** conflicts; `import` step 4 fixed, rerun pending
 - [ ] IM5–IM6: the capture list and two typed links loaded, with one approval each
 - [ ] RS1–RS4: the research report, three quotes traced, the clipped sources ingested, and no web call from `/ask`
 - [ ] AI1–AI4: the waiting Claude report as a source, and an `· AI` claim upgraded

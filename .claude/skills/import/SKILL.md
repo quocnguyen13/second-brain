@@ -88,7 +88,7 @@ For a file on the capture list, say so: match its origin or title against the li
 In the session:
 - **When links were loaded,** a table first, one row per link: link · what happened: downloaded as `<file>`, a page to clip, already in the zone, already in `raw/` as `<file>`, failed (why), or left out (why).
 - A table, one row per file in the zone: `#` · file · verdict · the raw file it matches · why, in a few words · what I'd do.
-- For each new version: what changed, and the raw name.
+- For each new version: what changed, the raw name, and what ingesting it does: both files stay in `raw/`, and each changed claim becomes a **newer** conflict for me to decide.
 - One PowerShell line per duplicate, and per download that isn't a PDF, for me to run at the vault root if I agree:
   ```powershell
   Remove-Item -LiteralPath "inbox\sources\<file>"

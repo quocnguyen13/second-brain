@@ -1032,7 +1032,7 @@ Up to 200 words. Every sentence that states a fact ends with its source: [S1], o
 ````
 
 ### 4.7 `import`
-`.claude/skills/import/SKILL.md`, written in M8 (2026-10-06; [[03 Decision Log]] D-099) and extended the same day at your request to load documents from links (D-101); both accepted 2026-10-06. It answers B-037: nothing enters `raw/` twice, and a changed document enters as a version. Five points to know:
+`.claude/skills/import/SKILL.md`, written in M8 (2026-10-06; [[03 Decision Log]] D-099) and extended the same day at your request to load documents from links (D-101); both accepted 2026-10-06. Revised after test IM2 (2026-10-12): the report says what ingesting a new version does. It answers B-037: nothing enters `raw/` twice, and a changed document enters as a version. Five points to know:
 - **It loads files, not pages.** `/import <links>`, or `/import capture` for the open lines of the capture list, downloads each PDF byte for byte, so the file in the zone is the document itself. A web page can't be saved that way: Claude's fetch returns its own reading of the page, and raw HTML can't be read in Obsidian. So pages are listed for you to clip (D-043 stands for pages).
 - **The download asks every time.** One `Invoke-WebRequest` command for the set, one line per file, shown to you with every link and file name before it runs (§3). It is the only shell command the skill uses.
 - **The check writes nothing.** No tick, no log entry. It recommends; you delete, move or ingest.
@@ -1130,7 +1130,7 @@ For a file on the capture list, say so: match its origin or title against the li
 In the session:
 - **When links were loaded,** a table first, one row per link: link · what happened: downloaded as `<file>`, a page to clip, already in the zone, already in `raw/` as `<file>`, failed (why), or left out (why).
 - A table, one row per file in the zone: `#` · file · verdict · the raw file it matches · why, in a few words · what I'd do.
-- For each new version: what changed, and the raw name.
+- For each new version: what changed, the raw name, and what ingesting it does: both files stay in `raw/`, and each changed claim becomes a **newer** conflict for me to decide.
 - One PowerShell line per duplicate, and per download that isn't a PDF, for me to run at the vault root if I agree:
   ```powershell
   Remove-Item -LiteralPath "inbox\sources\<file>"
