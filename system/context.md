@@ -9,7 +9,7 @@
 
 ## Current focus
 - Building this system
-- Now focus on building the M8 – Research and Import module
+- Now focus on building the M9 – Large Document support
 ## Glossary
 | Term              | Meaning here                                                            |
 | ----------------- | ----------------------------------------------------------------------- |
