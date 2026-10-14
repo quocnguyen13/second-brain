@@ -1,9 +1,9 @@
 ---
 type: entity
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]"]
 created: "2026-09-28"
-updated: "2026-10-06"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Financial Conduct Authority
@@ -50,6 +50,7 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - **Product powers.** It can set minimum standards and requirements on products, ban a product for up to a year while considering a permanent ban, order misleading promotions withdrawn and publish that, investigate, and freeze assets of those under investigation ([[raw/wikipedia-financial-conduct-authority.md]] · commentary). Example: the 2023 WealthTek case, a worldwide freezing order and, in December 2024, fraud charges against its principal partner ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
 - **Leadership.** Chief executive Nikhil Rathi since 1 October 2020, reappointed in April 2025 to 2030; chair Ashley Alder since 2023 ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
 - **Complaints and criticism.** Complaints against the FCA go to the independent Financial Regulators Complaints Commissioner. Critics include the Parliamentary Commission on Banking Standards (2013, on swaps mis-selling) and an APPG (2024 and 2025 reports) ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
+- **Complaint handling.** Through DISP in the FCA Handbook, firms must answer complaints within set deadlines and point complainants to the [[wiki/entities/Financial Ombudsman Service]]. When it assesses a firm's response to a complaint, the FCA may look at the quality of the response as well as its speed ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2R, Speed and quality of response). See [[wiki/concepts/Complaint handling time limits]].
 - **The PRA's veto.** It can be directed by the PRA not to use its powers where stability is at risk. It need not comply if compliance would breach an international obligation of the UK ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3I(8)).
 
 ## Where sources disagree
@@ -70,6 +71,7 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Commons Library briefing on the FCA 2016]]
 - [[wiki/sources/Source - Wikipedia on the FCA]]
+- [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]]
 
 ## Related
 - [[wiki/entities/Prudential Regulation Authority]]
@@ -79,3 +81,5 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/concepts/Regulated financial services]]
 - [[wiki/concepts/New bank authorisation]]
 - [[wiki/concepts/Senior Managers and Certification Regime]]
+- [[wiki/entities/Financial Ombudsman Service]]
+- [[wiki/concepts/Complaint handling time limits]]

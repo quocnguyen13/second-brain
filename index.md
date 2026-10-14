@@ -4,7 +4,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 
 ## Overview
 
-- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA (12 sources)
+- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14 (19 sources)
 
 ## Sources
 
@@ -20,6 +20,13 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - Bank of England prudential regulation page]] — the PRA's landing page: ~1,292 firms, Rulebook, purpose of supervision; its figure stated after conflict 1 (2 sources)
 - [[wiki/sources/Source - Commons Library briefing on the FCA 2016]] — secondary: 2016 briefing on the FCA's origins, four areas of work and enforcement criticism (IRHP, Connaught) (2 sources)
 - [[wiki/sources/Source - Wikipedia on the FCA]] — commentary: FCA history, payments (PSR, SCA), product powers, leaders, criticism; its two conflicting claims outweighed (3 sources)
+- [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]] — FCA rules: acknowledge, 8 weeks, 15/35 business days for payment and e-money complaints; what a final response must contain; stated over the FOS guide in two conflicts (2 sources)
+- [[wiki/sources/Source - DISP 2.7 Complainant eligibility]] — FCA rules: who may complain to the FOS; business tiers, group test, benefit of the doubt, APP fraud, PEPs, exclusions (2 sources)
+- [[wiki/sources/Source - DISP 2.8 Referral time limits]] — FCA rules: FOS only after final response or deadline; 6 months, 6 years / 3 years; exceptions; PPI and endowment regimes (1 source)
+- [[wiki/sources/Source - DISP 3.7 Ombudsman awards]] — FCA rules: money, interest, costs, directions; cap £455k / £205k from April 2026, CPI-indexed; compliance (1 source)
+- [[wiki/sources/Source - FCA glossary small business]] — DISP small business: turnover < £6.5m and < 50 staff or balance sheet < £5m; COMP meaning < £1m (1 source)
+- [[wiki/sources/Source - FCA glossary micro-enterprise]] — micro-enterprise: < 10 staff and turnover or balance sheet ≤ €2m, from PSD (1 source)
+- [[wiki/sources/Source - FOS How to complain]] — the FOS's own consumer guide: business first, 8 weeks, "15 days", 6 months, free, AI guidance; its "15 days" and "fraud and scams" outweighed by DISP (3 sources)
 
 ## Entities
 
@@ -28,7 +35,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/entities/Andy Matuschak]] — author of the "Evergreen notes" page (1 source)
 - [[wiki/entities/Anthropic]] — publisher of the Contextual Retrieval post; maker of Claude and prompt caching (1 source)
 - [[wiki/entities/Tiago Forte]] — author of the PARA method post; former productivity coach (1 source)
-- [[wiki/entities/Financial Conduct Authority]] — UK regulator of all authorised persons; conduct regulator for dual-regulated firms; responsibilities per the MoU; product powers and history; ~35,500 conduct firms and "renamed" stated, Wikipedia's claims outweighed (6 sources)
+- [[wiki/entities/Financial Conduct Authority]] — UK regulator of all authorised persons; conduct regulator for dual-regulated firms; responsibilities per the MoU; product powers and history; ~35,500 conduct firms and "renamed" stated, Wikipedia's claims outweighed; complaint-handling rules (7 sources)
 - [[wiki/entities/Prudential Regulation Authority]] — the Bank of England acting as prudential regulator; lead regulator for dual-regulated firms; supervisory approach; ~1,292 firms by its own count, the FCA's ~1,500 superseded (5 sources)
 - [[wiki/entities/HM Treasury]] — holds the levers over both regulators: recommendations, reviews, boundary orders, rule directions, designated activities; receives regulatory-failure reports (5 sources)
 - [[wiki/entities/Bank of England]] — is the PRA through its Prudential Regulation Committee; monetary policy, financial stability, resolution authority, liquidity facilities (4 sources)
@@ -36,6 +43,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/entities/Prudential Regulation Committee]] — the Bank committee that is the PRA's decision-maker; decides the s. 3I veto (3 sources)
 - [[wiki/entities/Financial Services Compensation Scheme]] — compensation fund of last resort; seven-day depositor payout target; rules split PRA/FCA (3 sources)
 - [[wiki/entities/Payment Systems Regulator]] — payment-systems regulator set up by the FCA in 2015; mostly commentary (2 sources)
+- [[wiki/entities/Financial Ombudsman Service]] — takes complaints after the firm's final response or deadline, within time limits; eligibility, awards, its own guide (5 sources)
 
 ## Concepts
 
@@ -69,6 +77,11 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/concepts/Senior Managers and Certification Regime]] — SMF approval by both regulators; who leads which SMFs (2 sources)
 - [[wiki/concepts/Regulatory capital framework]] — Pillar 1, Pillar 2A, combined and PRA buffers, 3.25% leverage ratio (1 source)
 - [[wiki/concepts/Strong customer authentication]] — PSD2 two-factor rule for online payments from 2019; commentary only (1 source)
+- [[wiki/concepts/Complaint handling time limits]] — a firm's deadlines: 8 weeks; 15/35 business days for EMD and PSD complaints only; the FOS guide's "15 days" and "fraud and scams" outweighed (4 sources)
+- [[wiki/concepts/Final response]] — the decision, FOS leaflet, website, right to refer, waiver statement; starts the 6 months (3 sources)
+- [[wiki/concepts/Ombudsman referral time limits]] — when the FOS can take a complaint: after final response or deadline; 6 months, 6 years / 3 years; exceptions (3 sources)
+- [[wiki/concepts/Eligible complainant]] — classes and relationship test; micro-enterprise and small-business tiers, group test, benefit of the doubt (3 sources)
+- [[wiki/concepts/Ombudsman awards]] — money up to a CPI-indexed cap (£455k from April 2026), interest, costs, directions; enforceable (1 source)
 
 ## Analyses
 

@@ -1,17 +1,22 @@
 ---
 type: overview
 status: verified
-sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]"]
 created: "2026-09-22"
-updated: "2026-10-06"
-tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation"]
+updated: "2026-10-14"
+tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation", "complaints"]
 ---
 # Overview
 
 The current picture across every source, on one page. Rewritten at each ingest, not appended to.
 
 The wiki has two strands that don't yet touch:
-- **UK financial regulation:** seven sources. Five primary (the statute, the FCA's and the PRA's own pages, the PRA's banking supervision approach, the FCA–Bank MoU), one secondary (a 2016 Commons Library briefing), one commentary (Wikipedia).
+- **UK financial regulation:** fourteen sources.
+  - Twelve primary: the statute; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; and the Financial Ombudsman Service's own guide.
+  - One secondary: a 2016 Commons Library briefing.
+  - One commentary: Wikipedia.
+
+  The 2026-10-14 set added complaints and the FOS.
 - **Knowledge management:** five sources on how to build and organise a knowledge base.
 
 Regulation agreements and disagreements sit in Strand 1. The sections from "Where sources agree" on apply to the knowledge-management strand.
@@ -35,6 +40,13 @@ Regulation agreements and disagreements sit in Strand 1. The sections from "Wher
 - The FCA's reach is set by [[wiki/concepts/Regulated financial services]], which names payment services and e-money ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1H(2)). Its [[wiki/concepts/Consumer protection objective]] weighs product risk and consumer capability against firms' duty of care ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1C(2)).
 - Commentary adds payments history: consumer credit from the OFT in 2014, the [[wiki/entities/Payment Systems Regulator]] from 2015, and [[wiki/concepts/Strong customer authentication]] from 2019 ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
 
+### Complaints and the Financial Ombudsman Service (emphasis 2026-10-14)
+- **The bank's deadlines.** On receipt, the bank sends a prompt acknowledgement and keeps the complainant informed. It must send a final response, or a written delay response, within eight weeks ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.1R, 1.6.2R). EMD and PSD complaints must be answered within 15 business days, or within 35 with a holding response in exceptional circumstances ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2AR). See [[wiki/concepts/Complaint handling time limits]].
+- **What a final response contains.** It accepts the complaint, offers redress or rejects it with reasons. It encloses the FOS leaflet, gives the FOS website, says the complainant may now go to the FOS, and says whether the bank waives the time limits, all prominently ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2R(1)). It must also mention the six-month limit ([[raw/fca-disp-2-8-referral-time-limits.md]]). See [[wiki/concepts/Final response]].
+- **When the FOS can act.** After the final response or a missed deadline. A complaint is out of time six months after the final response, or six years after the event or three years after awareness, unless there are exceptional circumstances or the firm consents, which it cannot withdraw ([[raw/fca-disp-2-8-referral-time-limits.md]], DISP 2.8.1R, 2.8.2R). See [[wiki/concepts/Ombudsman referral time limits]].
+- **Business customers.** These are eligible as a micro-enterprise (fewer than 10 staff, and turnover or balance sheet up to €2 million) or a small business (turnover under £6.5 million, and fewer than 50 staff or a balance sheet under £5 million). Group enterprises count, and a firm in doubt should treat the business as eligible ([[raw/fca-glossary-micro-enterprise.md]]; [[raw/fca-glossary-small-business.md]]; [[raw/fca-disp-2-7-complainant-eligibility.md]]). APP fraud victims are eligible against an involved firm even when the complaint isn't a PSD complaint ([[raw/fca-disp-2-7-complainant-eligibility.md]], DISP 2.7.6R(2B)). See [[wiki/concepts/Eligible complainant]].
+- **What it can award.** For complaints referred from 1 April 2026: up to £455,000 for acts on or after 1 April 2019, and £205,000 for earlier acts. The cap is CPI-indexed each April. Interest, costs and directions come on top, and firms must comply promptly ([[raw/fca-disp-3-7-ombudsman-awards.md]]). See [[wiki/concepts/Ombudsman awards]] and [[wiki/entities/Financial Ombudsman Service]].
+
 ### Coordination and accountability
 - [[wiki/concepts/FCA-PRA coordination]]: a statutory duty to consult, the MoU, a one-way PRA veto decided by the PRC, and consolidated-supervision directions ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 3D–3M; [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=17]]). The [[wiki/entities/Financial Policy Committee]] can direct the PRA on macroprudential tools ([[raw/pra-approach-banking-supervision-2023.pdf#page=15]]).
 - [[wiki/entities/HM Treasury]] holds the political levers ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1JA, 1S, 3RC, 3RE).
@@ -46,7 +58,11 @@ Regulation agreements and disagreements sit in Strand 1. The sections from "Wher
 - **Funding.** Both regulators are funded by fees on firms ([[raw/fca-about-the-fca.md]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=17]]).
 
 ### Where the regulation sources disagree
-None open. Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
+None open. Resolved 2026-10-14, [[system/ingest/set-2026-10-14]], both on [[wiki/concepts/Complaint handling time limits]]:
+- **Conflict 1, 15 days or 15 business days.** DISP 1.6.2AR's 15 business days, or 35, is stated ([[raw/fca-disp-1-6-complaints-time-limits.md]]). The FOS guide's "only 15 days" ([[raw/financial-ombudsman-how-to-complain.md]]) is marked outweighed, as DISP is the FCA's own statement.
+- **Conflict 2, fraud and scams.** DISP's scope is stated: the short deadline is for EMD and PSD complaints only ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2AR). DISP also recognises APP fraud complaints that are not PSD complaints ([[raw/fca-disp-2-7-complainant-eligibility.md]], DISP 2.7.6R(2B)). The FOS guide's "fraud and scams" ([[raw/financial-ombudsman-how-to-complain.md]]) is marked outweighed, as DISP is the FCA's own statement.
+
+Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - **PRA firm count (conflict 1):** ~1,292 per the PRA, updated 2026-09-21 ([[raw/bank-of-england-prudential-regulation.md]]), stated; ~1,500 per the FCA, updated 2026-07-09 ([[raw/fca-about-the-fca.md]]), superseded, newer.
 - **FCA conduct count (conflict 2):** ~35,500 per the FCA ([[raw/fca-about-the-fca.md]]) stated; ~58,000 on Wikipedia, sourced to 2010 ([[raw/wikipedia-financial-conduct-authority.md]] · commentary), outweighed, higher level.
 - **FSA renamed or abolished (conflict 3):** "renamed" per FSMA s. 1A(1) ([[raw/uk-parliament-fsma-2000-part-1a.md]]) stated; "abolished" per Wikipedia ([[raw/wikipedia-financial-conduct-authority.md]] · commentary), outweighed, higher level.
@@ -56,6 +72,7 @@ None open. Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - Which activities are PRA-regulated: the MoU names deposit-taking, insurance and certain large-scale investment business ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=15]]), but s. 22A isn't in any source, and the FCA-only status of payment and e-money institutions is still general knowledge.
 - Which text of the s. 3B(1)(c) principle applies to the FCA. The PRA says the net-zero "have regard" applies to it ([[raw/pra-approach-banking-supervision-2023.pdf#page=13]]).
 - How the FCA's ~34,000 prudentially supervised firms relate to the ~14,000 under its Handbook's prudential standards.
+- Which body runs the "ombudsman scheme" in FSMA s. 1C(2). No source in the wiki says it is the FOS.
 
 ## Strand 2: knowledge management
 - **LLM Wiki.** [[wiki/sources/Source - LLM Wiki]] describes the compiled-wiki pattern that this vault implements:
@@ -125,6 +142,10 @@ None open. Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
   - Topic pages vs. project folders: the compiled wiki's concept pages ([[raw/karpathy-llm-wiki.md]]) vs. PARA's projects-first order ([[raw/forte-para-method.md]]). Neither source addresses the other.
 
 ## Gaps worth a new source
+- FSMA s. 228 (the FOS's "fair and reasonable" test), still on the capture list.
+- The Glossary definitions of "consumer", "PSD complaint" and "EMD complaint", and DISP 1 Annex 3R (the waiver wording a final response must use).
+- DISP 1.3 complaint-handling rules and DISP 3.6 on how the Ombudsman decides.
+- FOS guidance on APP fraud complaints: which deadline applies to them in practice.
 - FSMA s. 22A and the PRA-Regulated Activities Order: the list of activities that makes a firm dual-regulated.
 - The FCA's own approach to supervision, and its prudential supervision page: what "prudentially supervise" and "subject to the prudential standards" each cover.
 - The Financial Services Act 2012 itself: settles renamed vs abolished at primary level beyond Part 1A.
@@ -155,3 +176,10 @@ None open. Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - [[wiki/sources/Source - Bank of England prudential regulation page]]: the PRA's own landing page and firm count.
 - [[wiki/sources/Source - Commons Library briefing on the FCA 2016]]: a 2016 parliamentary briefing on the FCA and its critics (secondary).
 - [[wiki/sources/Source - Wikipedia on the FCA]]: history, powers, leaders and criticism of the FCA (commentary).
+- [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]]: a firm's complaint deadlines and what a final response must contain.
+- [[wiki/sources/Source - DISP 2.7 Complainant eligibility]]: who can take a complaint to the FOS.
+- [[wiki/sources/Source - DISP 2.8 Referral time limits]]: when the FOS can and can't take a complaint.
+- [[wiki/sources/Source - DISP 3.7 Ombudsman awards]]: what the FOS can award, and the cap.
+- [[wiki/sources/Source - FCA glossary small business]]: the small-business test.
+- [[wiki/sources/Source - FCA glossary micro-enterprise]]: the micro-enterprise test.
+- [[wiki/sources/Source - FOS How to complain]]: the FOS's own three-step guide for consumers.

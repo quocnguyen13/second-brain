@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
 created: "2026-09-28"
-updated: "2026-09-28"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "consumer-protection"]
 ---
 # Consumer protection objective
@@ -41,3 +41,4 @@ This is the FCA's operational objective of "securing an appropriate degree of pr
 - [[wiki/concepts/Regulatory objectives]]
 - [[wiki/concepts/Regulated financial services]]
 - [[wiki/entities/Financial Conduct Authority]]
+- [[wiki/entities/Financial Ombudsman Service]]: for context on the "ombudsman scheme" named in s. 1C(2). No source here states that the two are the same body.
