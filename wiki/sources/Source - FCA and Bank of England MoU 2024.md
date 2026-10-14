@@ -4,7 +4,7 @@ status: verified
 trust: primary
 sources: ["[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
 created: "2026-10-06"
-updated: "2026-10-06"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - FCA and Bank of England MoU 2024
@@ -46,6 +46,7 @@ The high-level framework the FCA and the PRA use to co-ordinate and co-operate, 
 - **Review.** Co-ordination is reviewed every half-year, with a summary in each regulator's annual report ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=19]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=20]]).
 
 ## Entities and concepts
+- [[wiki/entities/Monetary Policy Committee]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/entities/Bank of England]]

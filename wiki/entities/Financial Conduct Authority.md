@@ -83,3 +83,5 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/concepts/Senior Managers and Certification Regime]]
 - [[wiki/entities/Financial Ombudsman Service]]
 - [[wiki/concepts/Complaint handling time limits]]
+- [[wiki/entities/TSB Bank]]
+- [[wiki/concepts/Operational resilience]]

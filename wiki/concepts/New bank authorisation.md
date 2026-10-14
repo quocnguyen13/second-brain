@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-06"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "prudential-supervision"]
 ---
 # New bank authorisation
@@ -34,3 +34,4 @@ How a firm gets permission to take deposits in the UK: one application, assessed
 - [[wiki/concepts/FCA-PRA coordination]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/entities/Financial Conduct Authority]]
+- [[wiki/entities/Financial Services and Markets Bill 2026–27]]

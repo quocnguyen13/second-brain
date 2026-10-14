@@ -4,7 +4,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 
 ## Overview
 
-- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14 (19 sources)
+- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14; operational resilience; AI-only leads on TSB and the 2026 Bill (20 sources)
 
 ## Sources
 
@@ -27,6 +27,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - FCA glossary small business]] — DISP small business: turnover < £6.5m and < 50 staff or balance sheet < £5m; COMP meaning < £1m (1 source)
 - [[wiki/sources/Source - FCA glossary micro-enterprise]] — micro-enterprise: < 10 staff and turnover or balance sheet ≤ €2m, from PSD (1 source)
 - [[wiki/sources/Source - FOS How to complain]] — the FOS's own consumer guide: business first, 8 weeks, "15 days", 6 months, free, AI guidance; its "15 days" and "fraud and scams" outweighed by DISP (3 sources)
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; ~1,500 PRA firms left out (6 sources)
 
 ## Entities
 
@@ -42,8 +43,11 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/entities/Financial Policy Committee]] — the Bank's macroprudential committee; recommendations and directions to the PRA (2 sources)
 - [[wiki/entities/Prudential Regulation Committee]] — the Bank committee that is the PRA's decision-maker; decides the s. 3I veto (3 sources)
 - [[wiki/entities/Financial Services Compensation Scheme]] — compensation fund of last resort; seven-day depositor payout target; rules split PRA/FCA (3 sources)
-- [[wiki/entities/Payment Systems Regulator]] — payment-systems regulator set up by the FCA in 2015; mostly commentary (2 sources)
+- [[wiki/entities/Payment Systems Regulator]] — payment-systems regulator set up by the FCA in 2015; mostly commentary; unverified (AI: to move into the FCA under the 2026 Bill) (3 sources)
 - [[wiki/entities/Financial Ombudsman Service]] — takes complaints after the firm's final response or deadline, within time limits; eligibility, awards, its own guide (5 sources)
+- [[wiki/entities/Monetary Policy Committee]] — the Bank's monetary-policy committee; accountable to Parliament; unverified (Bank Rate and 2% target AI only) (3 sources)
+- [[wiki/entities/TSB Bank]] — AI only: 2018 migration failure, FCA £29.75m and PRA £18.9m fines in 2022, Principles 2 and 3, capital deadline (1 source)
+- [[wiki/entities/Financial Services and Markets Bill 2026–27]] — AI only: Lords to Commons Sep 2026; PSR into FCA, FOS reform, provisional licences, ring-fencing (1 source)
 
 ## Concepts
 
@@ -62,7 +66,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/concepts/Prompt caching]] — caching prompt content between API calls; makes long prompts and Contextual Retrieval cheaper (1 source)
 - [[wiki/concepts/PARA method]] — Projects, Areas, Resources, Archives; projects end, areas don't; contested on hierarchy vs association (3 sources)
 - [[wiki/concepts/Organizing by actionability]] — organise by current projects and goals, not subjects; contested against concept-oriented, associative notes (4 sources)
-- [[wiki/concepts/Solo and dual regulation]] — FCA supervises every authorised person; any PRA-regulated activity adds the PRA; MoU definitions and firm types; ~1,292 PRA firms; unverified (FCA-only payment/e-money firms still general knowledge) (5 sources)
+- [[wiki/concepts/Solo and dual regulation]] — FCA supervises every authorised person; any PRA-regulated activity adds the PRA; MoU definitions and firm types; ~1,292 PRA firms; unverified (FCA-only payment/e-money firms, bank vs EMI, TSB example are AI only) (6 sources)
 - [[wiki/concepts/Regulatory objectives]] — FCA and PRA objectives compared; both regulators' own documents and the MoU agree with the Act (5 sources)
 - [[wiki/concepts/Consumer protection objective]] — FCA's "appropriate degree of protection", weighing risk, capability, consumer responsibility and firms' duty of care (1 source)
 - [[wiki/concepts/Regulated financial services]] — the s. 1H(2) list setting the FCA's reach, naming payment services and e-money (1 source)
@@ -82,6 +86,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/concepts/Ombudsman referral time limits]] — when the FOS can take a complaint: after final response or deadline; 6 months, 6 years / 3 years; exceptions (3 sources)
 - [[wiki/concepts/Eligible complainant]] — classes and relationship test; micro-enterprise and small-business tiers, group test, benefit of the doubt (3 sources)
 - [[wiki/concepts/Ombudsman awards]] — money up to a CPI-indexed cap (£455k from April 2026), interest, costs, directions; enforceable (1 source)
+- [[wiki/concepts/Operational resilience]] — the PRA's prudential expectation: impact tolerances, board accountability; unverified (TSB case AI only) (2 sources)
 
 ## Analyses
 

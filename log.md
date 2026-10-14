@@ -71,3 +71,6 @@ Set: set-2026-10-14, 7 sources (7 primary, 0 secondary, 0 commentary). Pages: +1
 
 ## [2026-10-14] ingest | resolve set-2026-10-14
 Decided: 1a, 2a. Skipped: none. Pages changed: Complaint handling time limits (and the conflict notes on Source - FOS How to complain, Source - DISP 1.6 Complaints time limit rules, Source - DISP 2.7 Complainant eligibility, overview). Status changes: Complaint handling time limits: contested → verified.
+
+## [2026-10-14] ingest | Who regulates what in UK banking (Claude output)
+Set: set-2026-10-14-2, 1 source (0 primary, 0 secondary, 0 commentary, 1 AI). Pages: +5 new (Source - Claude on who regulates what (2026-09-27), TSB Bank, Financial Services and Markets Bill 2026–27, Monetary Policy Committee, Operational resilience); 10 updated (Solo and dual regulation, Payment Systems Regulator, Bank of England, Financial Conduct Authority, Prudential Regulation Authority, Financial Ombudsman Service, Ring-fencing, New bank authorisation, Source - The PRA's approach to banking supervision, Source - FCA and Bank of England MoU 2024). Conflicts: none. Flags: the note refers to a "principal file" and "live issues register" not in the vault. AI claims: 28 backed, 67 unbacked, 1 contradicted.

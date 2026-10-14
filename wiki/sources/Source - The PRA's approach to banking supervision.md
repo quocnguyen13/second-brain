@@ -4,7 +4,7 @@ status: verified
 trust: primary
 sources: ["[[raw/pra-approach-banking-supervision-2023.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-06"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - The PRA's approach to banking supervision
@@ -54,6 +54,8 @@ The PRA's standing statement of how it supervises deposit-takers and designated 
 - **FSCS.** The [[wiki/entities/Financial Services Compensation Scheme]] is the compensation fund of last resort ([[raw/pra-approach-banking-supervision-2023.pdf#page=16]]).
 
 ## Entities and concepts
+- [[wiki/concepts/Operational resilience]]
+- [[wiki/entities/Monetary Policy Committee]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Bank of England]]

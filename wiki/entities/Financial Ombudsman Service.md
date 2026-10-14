@@ -32,3 +32,4 @@ The Financial Ombudsman Service is the body that considers complaints against fi
 - [[wiki/concepts/Eligible complainant]]
 - [[wiki/concepts/Ombudsman awards]]
 - [[wiki/entities/Financial Conduct Authority]]
+- [[wiki/entities/Financial Services and Markets Bill 2026–27]]

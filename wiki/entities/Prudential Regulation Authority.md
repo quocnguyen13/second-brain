@@ -3,7 +3,7 @@ type: entity
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]"]
 created: "2026-09-28"
-updated: "2026-10-06"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Prudential Regulation Authority
@@ -56,3 +56,5 @@ The PRA is the Bank of England acting through its Prudential Regulation Committe
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/concepts/Regulatory objectives]]
 - [[wiki/concepts/Regulatory principles]]
+- [[wiki/concepts/Operational resilience]]
+- [[wiki/entities/TSB Bank]]

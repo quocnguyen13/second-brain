@@ -1,9 +1,9 @@
 ---
 type: concept
 status: unverified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]"]
 created: "2026-09-28"
-updated: "2026-10-06"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Solo and dual regulation
@@ -34,7 +34,15 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - **Firm types on each side.** The PRA authorises (with the FCA) and prudentially supervises deposit-takers (banks, building societies, credit unions), insurers (including friendly societies) and designated investment firms ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=4]]). The FCA prudentially supervises firms that are not PRA-regulated ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=3]]).
 - **Groups can mix both.** In some groups, some entities are prudentially supervised by the PRA and others by the FCA, with the PRA as consolidated supervisor ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]]).
 - **How many firms in each group.** The FCA regulates the conduct of about 35,500 firms and prudentially supervises about 34,000 ([[raw/fca-about-the-fca.md]]). The page doesn't say that the gap between the two figures is the PRA's population.
-- **Which activities are PRA-regulated.** The sources now name the firm types (deposit-takers, insurers, designated investment firms: [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=4]]) and treat "deposit-taking, insurance, certain large-scale investment business" as the PRA-regulated activities ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=15]]). Still general knowledge, not in any source: payment institutions, e-money institutions and consumer credit firms that take no deposits are FCA-only. Section 22A and the PRA-Regulated Activities Order would confirm this.
+- **Which activities are PRA-regulated.** The sources now name the firm types (deposit-takers, insurers, designated investment firms: [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=4]]) and treat "deposit-taking, insurance, certain large-scale investment business" as the PRA-regulated activities ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=15]]). No primary source yet names the FCA-only firm types. Section 22A and the PRA-Regulated Activities Order would confirm them. A Claude output lists them (see the next point).
+- **Solo-regulated firm types (AI only).**
+  - E-money institutions, payment institutions, non-bank lenders and brokers are solo-regulated by the FCA ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+  - For those firms, the FCA sets both the prudential and the conduct rules. The MoU backs that part: the FCA prudentially supervises firms that are not PRA-regulated ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=3]]).
+  - Examples: Monzo and Starling, as banks, are dual-regulated. Wise's UK e-money business deals only with the FCA ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+- **Why the split shapes the business model (AI only).**
+  - A bank can lend out deposits and offer FSCS protection ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+  - An e-money institution must safeguard customer money and cannot lend it ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+- **One incident, two regulators.** For a dual-regulated bank, one failure can bring a conduct case from the FCA and a prudential case from the PRA. TSB's 2018 migration did both ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI). See [[wiki/entities/TSB Bank]].
 
 ## Where sources disagree
 - **How many firms the PRA regulates (fact).**
@@ -48,8 +56,10 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Bank of England prudential regulation page]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
+- [[wiki/entities/TSB Bank]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/entities/HM Treasury]]
