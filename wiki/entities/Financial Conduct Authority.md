@@ -72,6 +72,7 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/sources/Source - Commons Library briefing on the FCA 2016]]
 - [[wiki/sources/Source - Wikipedia on the FCA]]
 - [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
 - [[wiki/entities/Prudential Regulation Authority]]

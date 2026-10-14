@@ -2,7 +2,7 @@
 type: source
 status: verified
 trust: primary
-sources: ["[[raw/financial-ombudsman-how-to-complain.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]"]
+sources: ["[[raw/financial-ombudsman-how-to-complain.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]"]
 created: "2026-10-14"
 updated: "2026-10-14"
 tags: ["uk-financial-regulation", "complaints"]
@@ -34,6 +34,6 @@ The [[wiki/entities/Financial Ombudsman Service]]'s own three-step guide for con
 ## Conflicts and open points
 - **15 days or 15 business days (fact).** This page says "only 15 days" for payment-services and e-money complaints. DISP 1.6.2AR says 15 business days, or 35 in exceptional circumstances ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2AR). Resolved 2026-10-14, [[system/ingest/set-2026-10-14]] conflict 1: DISP's 15 business days is stated, and this page's "15 days" is marked outweighed, as DISP is the FCA's own statement. See [[wiki/concepts/Complaint handling time limits]].
 - **Fraud and scams on the 15-day clock (fact).** This page puts all fraud and scam complaints on the short clock. DISP applies it to EMD and PSD complaints ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2AR), and it recognises authorised push payment fraud complaints that are not PSD complaints ([[raw/fca-disp-2-7-complainant-eligibility.md]], DISP 2.7.6R(2B)). Resolved 2026-10-14, [[system/ingest/set-2026-10-14]] conflict 2: DISP's scope (EMD and PSD complaints only) is stated, and this page's "fraud and scams" is marked outweighed, as DISP is the FCA's own statement. See [[wiki/concepts/Complaint handling time limits]].
-- **Six months, worded differently.** The page counts six months "from the date on your final response". DISP counts from the date the firm sent it. Read together, these don't clash.
+- **Six months, worded differently.** The page counts six months "from the date on your final response" ([[raw/financial-ombudsman-how-to-complain.md]]). DISP counts from the date the firm sent it ([[raw/fca-disp-2-8-referral-time-limits.md]], DISP 2.8.2R(1)). Read together, these don't clash.
 - **The capture list.** The capture list's link, `…/how-to-complain/complain-financial-business`, redirects to this page (you checked this on 2026-10-14).
 - **Video not captured.** The page embeds a video. Its transcript PDF is linked but not captured.

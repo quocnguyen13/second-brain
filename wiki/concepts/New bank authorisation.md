@@ -28,6 +28,7 @@ How a firm gets permission to take deposits in the UK: one application, assessed
 ## Mentioned in
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
 - [[wiki/concepts/Solo and dual regulation]]

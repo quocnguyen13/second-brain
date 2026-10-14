@@ -24,6 +24,7 @@ The Financial Ombudsman Service is the body that considers complaints against fi
 - [[wiki/sources/Source - DISP 3.7 Ombudsman awards]]
 - [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]]
 - [[wiki/sources/Source - FOS How to complain]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
 - [[wiki/concepts/Ombudsman referral time limits]]

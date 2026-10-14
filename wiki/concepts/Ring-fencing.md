@@ -34,6 +34,7 @@ The regime that separates core retail banking services, deposits with their rela
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
 - [[wiki/entities/Prudential Regulation Authority]]

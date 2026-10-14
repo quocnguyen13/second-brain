@@ -3,7 +3,7 @@ type: entity
 status: verified
 sources: ["[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-06"
+updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Prudential Regulation Committee
@@ -22,6 +22,7 @@ The Bank of England committee through which the Bank acts as the PRA, and which 
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
 - [[wiki/entities/Bank of England]]

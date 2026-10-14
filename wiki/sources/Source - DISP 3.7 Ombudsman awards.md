@@ -45,5 +45,5 @@ These are the FCA Handbook rules on what the Ombudsman can award when it upholds
 - [[wiki/concepts/Ombudsman awards]]
 
 ## Conflicts and open points
-- **The years the table skips.** It has no row for 1 April 2021, so the 2020 figures presumably still applied that year (reasoning; the source doesn't say).
-- **How the Note is kept.** It "will be updated before any new limit takes effect".
+- **The years the table skips.** It has no row for 1 April 2021, and the source doesn't say which cap applied that year ([[raw/fca-disp-3-7-ombudsman-awards.md]], Note).
+- **How the Note is kept.** It "will be updated before any new limit takes effect" ([[raw/fca-disp-3-7-ombudsman-awards.md]], Note).

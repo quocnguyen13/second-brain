@@ -4,7 +4,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 
 ## Overview
 
-- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14; operational resilience; AI-only leads on TSB and the 2026 Bill (20 sources)
+- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14; operational resilience; AI-only leads on TSB and the 2026 Bill (19 sources)
 
 ## Sources
 
@@ -25,8 +25,8 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - DISP 2.8 Referral time limits]] — FCA rules: FOS only after final response or deadline; 6 months, 6 years / 3 years; exceptions; PPI and endowment regimes (1 source)
 - [[wiki/sources/Source - DISP 3.7 Ombudsman awards]] — FCA rules: money, interest, costs, directions; cap £455k / £205k from April 2026, CPI-indexed; compliance (1 source)
 - [[wiki/sources/Source - FCA glossary small business]] — DISP small business: turnover < £6.5m and < 50 staff or balance sheet < £5m; COMP meaning < £1m (1 source)
-- [[wiki/sources/Source - FCA glossary micro-enterprise]] — micro-enterprise: < 10 staff and turnover or balance sheet ≤ €2m, from PSD (1 source)
-- [[wiki/sources/Source - FOS How to complain]] — the FOS's own consumer guide: business first, 8 weeks, "15 days", 6 months, free, AI guidance; its "15 days" and "fraud and scams" outweighed by DISP (3 sources)
+- [[wiki/sources/Source - FCA glossary micro-enterprise]] — micro-enterprise: < 10 staff and turnover or balance sheet ≤ €2m, from PSD (2 sources)
+- [[wiki/sources/Source - FOS How to complain]] — the FOS's own consumer guide: business first, 8 weeks, "15 days", 6 months, free, AI guidance; its "15 days" and "fraud and scams" outweighed by DISP (4 sources)
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; ~1,500 PRA firms left out (6 sources)
 
 ## Entities

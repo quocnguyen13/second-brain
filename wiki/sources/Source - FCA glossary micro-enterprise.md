@@ -2,7 +2,7 @@
 type: source
 status: verified
 trust: primary
-sources: ["[[raw/fca-glossary-micro-enterprise.md]]"]
+sources: ["[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/fca-glossary-small-business.md]]"]
 created: "2026-10-14"
 updated: "2026-10-14"
 tags: ["uk-financial-regulation", "complaints"]
@@ -23,5 +23,5 @@ This is the FCA Handbook Glossary definition of "micro-enterprise". It is the sm
 - [[wiki/concepts/Eligible complainant]]
 
 ## Conflicts and open points
-- **Euros, not pounds.** The threshold is in euros (€2 million), while the small-business tier is in pounds.
+- **Euros, not pounds.** The threshold is in euros (€2 million) ([[raw/fca-glossary-micro-enterprise.md]]), while the small-business tier is in pounds ([[raw/fca-glossary-small-business.md]], (2)).
 - **What the clip lacks.** It shows no title or date. The inbox file was named "FCA Handbook.md", and the term was identified from its URL, G2623.

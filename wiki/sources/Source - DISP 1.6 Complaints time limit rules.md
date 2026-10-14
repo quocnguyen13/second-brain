@@ -24,7 +24,7 @@ These are the FCA Handbook rules on what a firm must do once a complaint arrives
   - **Exceptional circumstances.** If reasons beyond the firm's control prevent that, it must send a holding response within 15 business days giving the reasons and the deadline, then a final response within 35 business days.
   - **Format.** The final response must be on paper, or on another durable medium if agreed.
 - **Mixed complaints.** The payment-services part of a mixed complaint follows the 15-day rule. Because that limit is shorter, a firm may choose to treat the whole complaint under it, and must tell the complainant if it deals with the complaint in parts ([[raw/fca-disp-1-6-complaints-time-limits.md]]).
-- **Written acceptance.** The eight-week rule does not apply if the complainant has already accepted a response in writing, provided that response gave the FOS information. For payment-services and e-money complaints, a final response must always be sent ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.4R).
+- **Written acceptance.** The eight-week rule does not apply if the complainant has already accepted a response in writing, provided that response gave the FOS information. For payment-services and e-money complaints, a final response must always be sent unless DISP 1.5.1R applies ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.4R).
 - **Speed and quality.** Almost all complaints are expected to be substantively addressed within eight weeks. The FCA may judge a firm's response on its quality as well as its speed ([[raw/fca-disp-1-6-complaints-time-limits.md]], Speed and quality of response).
 
 ### What a final response must contain (emphasis)
@@ -35,7 +35,7 @@ These are the FCA Handbook rules on what a firm must do once a complaint arrives
   - tell the complainant they may now refer the complaint to the FOS;
   - say whether the firm consents to waive the DISP 2.8 time limits, using the wording in DISP 1 Annex 3R.
 - **A delay response.** The written response sent at eight weeks without a final answer must explain why and say when the firm expects to answer. It must also say the complainant may now go to the FOS and whether the firm would waive the time limits, and it must enclose the leaflet and give the website address ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2R(2)).
-- **Prominence.** The FOS information must be "clear, comprehensible", easily accessible and prominent within the text ([[raw/fca-disp-1-6-complaints-time-limits.md]]).
+- **Prominence.** The FOS information must be set out "clearly, comprehensibly, in an easily accessible way and prominently" within the text ([[raw/fca-disp-1-6-complaints-time-limits.md]]).
 - **Pensions Ombudsman.** Where relevant, a firm may also refer to the Pensions Ombudsman, using DISP 1 Annex 4G wording ([[raw/fca-disp-1-6-complaints-time-limits.md]]).
 
 ## Entities and concepts

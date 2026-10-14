@@ -50,6 +50,7 @@ The PRA is the Bank of England acting through its Prudential Regulation Committe
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Bank of England prudential regulation page]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
 - [[wiki/entities/Bank of England]]

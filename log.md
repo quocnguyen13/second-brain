@@ -74,3 +74,9 @@ Decided: 1a, 2a. Skipped: none. Pages changed: Complaint handling time limits (a
 
 ## [2026-10-14] ingest | Who regulates what in UK banking (Claude output)
 Set: set-2026-10-14-2, 1 source (0 primary, 0 secondary, 0 commentary, 1 AI). Pages: +5 new (Source - Claude on who regulates what (2026-09-27), TSB Bank, Financial Services and Markets Bill 2026–27, Monetary Policy Committee, Operational resilience); 10 updated (Solo and dual regulation, Payment Systems Regulator, Bank of England, Financial Conduct Authority, Prudential Regulation Authority, Financial Ombudsman Service, Ring-fencing, New bank authorisation, Source - The PRA's approach to banking supervision, Source - FCA and Bank of England MoU 2024). Conflicts: none. Flags: the note refers to a "principal file" and "live issues register" not in the vault. AI claims: 28 backed, 67 unbacked, 1 contradicted.
+
+## [2026-10-14] lint | report-2026-10-14
+Scanned 75 pages, deep-checked 48. Findings: 7 (5 high, 2 medium, 0 low). Checks ticked: 0. No wiki pages changed.
+
+## [2026-10-14] lint | apply report-2026-10-14
+Applied: 1, 2, 3, 4, 5, 6a, 7a. Skipped: none. Pages changed: 12 (Source - DISP 1.6 Complaints time limit rules, Source - FCA glossary micro-enterprise, Source - FOS How to complain, Source - DISP 3.7 Ombudsman awards, Financial Conduct Authority, Prudential Regulation Authority, Bank of England, Financial Ombudsman Service, Prudential Regulation Committee, Ring-fencing, New bank authorisation, overview), plus index.md counts. Status changes: none.
