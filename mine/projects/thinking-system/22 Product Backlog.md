@@ -5,7 +5,7 @@ status: active
 trust: ai-draft
 origin: claude
 created: 2026-09-25
-reviewed: 2026-10-06
+reviewed: 2026-10-14
 tags: [project/thinking-system, backlog]
 ---
 
@@ -60,20 +60,20 @@ Gets material in: web clips, files, Claude outputs. Needs N1, N2.
 |---|---|---|---|---|---|---|
 | B-001 | Office documents as sources (§3) | Feature | MVP 4 | New | Doc 36, for work files (D-018) | M3, M1 |
 | B-002 | Mermaid support (§3) | Feature | — | New; on hold | — | M3 or M4 |
-| B-004 | Research a topic: Claude researches a new topic and returns a summary in which every fact names its source, plus the primary sources for you to clip (D-075, D-083) | Feature | MVP 2 · Must · M8 | **In progress:** built in M8, tests RS1–RS4 to run (D-095 to D-097, accepted 2026-10-06) | B-003 | M8 (D-084) |
+| B-004 | Research a topic: Claude researches a new topic and returns a summary in which every fact names its source, plus the primary sources for you to clip (D-075, D-083) | Feature | MVP 2 · Must · M8 | **Done 2026-10-14** (D-095 to D-097; tests RS1–RS4) | B-003 | M8 (D-084) |
 | B-005 | Phone capture and sync | Feature | Later | New | — | M1 |
-| B-037 | `/import` (§3): before ingest, checks new files against `raw/` for duplicates and newer versions, and recommends what to do (D-083) | Feature | MVP 2 · Must · M8 | **In progress:** built in M8, tests IM1–IM6 to run (D-099 and D-101, accepted 2026-10-06) | Doc 31 §3, superseded claims | M8 (D-084) |
+| B-037 | `/import` (§3): before ingest, checks new files against `raw/` for duplicates and newer versions, and recommends what to do (D-083) | Feature | MVP 2 · Must · M8 | **Done 2026-10-14** (D-099, D-101; tests IM1–IM6) | Doc 31 §3, superseded claims | M8 (D-084) |
 
 ### E-02 · Compile and verify
 Turns sources into cited pages, with status, conflicts and trust. Needs N1, N3.
 
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
-| B-003 | Claude outputs as sources (§3) | Feature | MVP 2 · Must · M8 | **In progress:** built in M8, tests AI1–AI4 to run (D-096 and D-098, accepted 2026-10-06); direction set by D-075 | Rule in doc 31 §2.2 | M8 (D-084), with small edits in what M2, M4, M5 and M7 own; rule by M0 |
+| B-003 | Claude outputs as sources (§3) | Feature | MVP 2 · Must · M8 | **Done 2026-10-14** (D-096, D-098; tests AI1–AI4); direction set by D-075 | Rule in doc 31 §2.2 | M8 (D-084), with small edits in what M2, M4, M5 and M7 own; rule by M0 |
 | B-006 | Ingest a set: several sources on one topic in one run, with one review | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-085, D-086; tests I1, I3–I5). Resume after a stopped run is untested, for M9 | D-022 revised | M7 (D-084) |
 | B-007 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-087; tests I4, I7) | Rule in doc 31 §2 | M7; rule by M0 |
 | B-008 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-088, D-094; tests I5, I6) | B-007; doc 31 §3 revised | M7; rule by M0 |
-| B-009 | First domain set: the UK financial system and its legal framework | Content | MVP 2 · Must · M7 | Started: 7 sources compiled (FSMA 2000 Part 1A, and M7's six on 2026-10-06). M8 and M9 add to it | The test set for B-006 | You, with M7 |
+| B-009 | First domain set: the UK financial system and its legal framework | Content | MVP 2 · Must · M7 | Started: 16 sources compiled. FSMA 2000 Part 1A and M7's six; in M8, the Ombudsman set of seven, a Claude study note and the FCA's Final Notice to TSB. M9 adds the full FSMA | The test set for B-006 | You, with M7 |
 | B-038 | Large documents (§3): a 1,000-page book or a full Act compiled in parts across sessions, with progress tracked | Feature | MVP 2 · Must · M9 | New | B-006 | M9 |
 
 ### E-03 · Ask and reuse
@@ -118,7 +118,7 @@ Nothing changes without your say, and confidential material stays out. Need N5.
 | ID | Item | Type | Milestone | Status | Depends on | Owner |
 |---|---|---|---|---|---|---|
 | B-022 | Data governance (doc 36), with the bank AI-tools policy (Q-004) | Doc | MVP 4 | New | — | M0 |
-| B-023 | Settle Q-015: claude.ai skills that sync into vault sessions | Chore | MVP 2 · Could | New | — | M2 |
+| B-023 | Settle Q-015: claude.ai skills that sync into vault sessions | Chore | MVP 2 · Could | New. More pressing since M8: a run suggested the synced `deep-research` skill in place of `/research` | — | M2 |
 
 ### E-08 · Operate
 Keeps running with little effort, and changes safely. Needs N1, N5.

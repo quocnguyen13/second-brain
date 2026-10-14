@@ -5,12 +5,19 @@ disable-model-invocation: true
 argument-hint: "[topic or question | nothing, for the wiki's AI claims]"
 allowed-tools:
   - "WebSearch"
+  - "WebFetch(domain:gov.uk)"
   - "WebFetch(domain:*.gov.uk)"
+  - "WebFetch(domain:parliament.uk)"
   - "WebFetch(domain:*.parliament.uk)"
+  - "WebFetch(domain:fca.org.uk)"
   - "WebFetch(domain:*.fca.org.uk)"
+  - "WebFetch(domain:bankofengland.co.uk)"
   - "WebFetch(domain:*.bankofengland.co.uk)"
+  - "WebFetch(domain:financial-ombudsman.org.uk)"
   - "WebFetch(domain:*.financial-ombudsman.org.uk)"
+  - "WebFetch(domain:fscs.org.uk)"
   - "WebFetch(domain:*.fscs.org.uk)"
+  - "WebFetch(domain:psr.org.uk)"
   - "WebFetch(domain:*.psr.org.uk)"
 ---
 <!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
@@ -47,7 +54,7 @@ Split the topic into 3–6 sub-questions, gaps first. They become the headings u
 - For each sub-question, search, then open the pages that matter. Go to the origin of a fact first: legislation, the regulator's or body's own site, official statistics, an author's own text (the `primary` row of the trust table in `system/conventions.md`). Use secondary sources for analysis. Use commentary to find leads, or when nothing better exists.
 - A search result's title or snippet is never enough for a fact. Open the page.
 - Ask each fetch for the words: "Quote, word for word, the sentences that state <point>, with the heading they sit under and any date the page gives (published, last updated, version, in force from)."
-- For each page you use, record: title, author or publisher, date (or "undated"), URL, source type and level.
+- For each page you use, record: title, author or publisher, date (or "undated"), source type, level, and the URL exactly as you opened it, after any redirect. Never shorten, rewrite or build a URL; a link I can't open is no use to me.
 - **A fact goes in the report only with its source and a short quote**, 25 words at most, that the fetch returned. No quote for the point: fetch again with a narrower question, or drop the fact.
 - Never fill a gap from general knowledge. Anything you do add from it is labelled "(general knowledge)" and goes under Open points, never under Facts.
 - A figure, limit, fee, threshold or office-holder is a dated fact: record the date the source gives for it.
@@ -61,12 +68,12 @@ Write `system/research/research-<YYYY-MM-DD>-<topic-in-a-few-words>.md`, lower c
 - Append one line per source under `## To clip` in `system/research/capture.md`, primary sources first:
   `- [ ] YYYY-MM-DD <title> · <publisher> · <date> · <URL> · <level> · <Web Clipper | PDF download> · [[system/research/<report>]]`
 - List every primary source a fact rests on. List a secondary source only when it carries analysis no primary source has. Don't list commentary unless I asked for it.
-- When a site offers the same document as a PDF, give the PDF's link and write "PDF download": `/import capture` can download a PDF, while a page waits for me to clip it.
+- Write "PDF download" only for a link you opened that returned a PDF: `/import capture` can download it, while a page waits for me to clip it. Never build a PDF link from a page's address. A site that offers a PDF only through a button, with no link, is a page for the Web Clipper.
 - Skip a source already in `raw/` (its URL is the `source` property of a clip there, or its title is on a source page) and one already on the list.
 - Change nothing else in the file.
 
 ### A6. Log, report, stop
-- Append to `log.md`:
+- Append to `log.md`, after a blank line:
   ```
   ## [YYYY-MM-DD] research | <topic>
   Report: research-YYYY-MM-DD-<topic>, N facts from N sources (N primary, N secondary, N commentary). To clip: N (<titles>). Searches: N; pages read: N. No wiki pages changed.
@@ -141,5 +148,6 @@ Up to 200 words. Every sentence that states a fact ends with its source: [S1], o
 ```
 
 - Leave out "Where sources disagree" when there is nothing in it. Every other heading stays, with "None." when empty.
+- The facts count on the Result line is the number of lines under Facts.
 - Number sources S1, S2, … in the order the Summary uses them. A fact with two sources names both.
 - A quote is the source's own words as the fetch returned them. If I can't find the quote on the page, the fact is wrong until shown otherwise.

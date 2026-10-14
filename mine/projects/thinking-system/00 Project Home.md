@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-06
+reviewed: 2026-10-14
 tags: [project/thinking-system, moc]
 ---
 
@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge assistant built on the **LLM Wiki** pattern: you collect sources, Claude compiles them into a cited wiki you read in Obsidian, and on top sit a thinking layer you own and, next, defined jobs done to your standards. Where it's going: [[10 Product Vision]]. How it works today: [[20 Product Requirements]].
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): **M7 – Batch Ingest and Trust closed 2026-10-06**, tests 7 of 7, with the batch-ingest criterion met ([[88 M7 Handover]]). **M8 – Research and Import started 2026-10-06:** the `research` and `import` skills, the path for Claude outputs through `/ingest`, and fourteen tests are written and in the vault, and D-095 to D-101 are accepted. Tests under way: IM1, IM3 and IM4 pass, and IM2 reruns after a one-line fix ([[21 Roadmap]] §11). The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082).
+**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): M7 – Batch Ingest and Trust closed 2026-10-06 (7 of 7), and **M8 – Research and Import closed 2026-10-14**, tests 14 of 14, with the research and import criteria met ([[89 M8 Handover]]). Next: M9 – Large Documents. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082).
 
 ## Document set
 Numbered by SDLC stage, in blocks of ten ([[03 Decision Log]] D-080). A document keeps its number; a new one takes the next free number in its stage. Planned documents have their number reserved, shown in *italics* with the backlog item that writes them. Governance runs through every stage, and every module adds a delivery record.
@@ -107,7 +107,8 @@ Agile reviews and retrospectives, in date order.
 | 85 | [[85 M5 Handover]] | Closing state of M5, used to open the M6 chat | Closed |
 | 86 | [[86 M6 Handover]] | Closing state of M6 and MVP 1, to take to the M0 thread | Closed |
 | 87 | [[87 MVP Retrospective]] | Retrospective of MVP 1 and the input to MVP 2's scope | Draft |
-| 88 | [[88 M7 Handover]] | Closing state of M7, used to open the M8 chat | Current |
+| 88 | [[88 M7 Handover]] | Closing state of M7, used to open the M8 chat | Closed |
+| 89 | [[89 M8 Handover]] | Closing state of M8, used to open the M9 chat | Current |
 
 ## What the set was missing
 Checked on 2026-09-30 against the documents a standard SDLC and a Scrum-style process expect, and against what a reviewer of the showcase would look for.
@@ -229,3 +230,4 @@ Entries up to 1.35 use the document numbers of their time; the renumber map abov
 | **1.46** | 2026-10-06 | **M8 started.** Two new skills: `research`, which writes a report in `system/research/` where every fact names its source, with a link and a quote, and lists the sources to clip in `system/research/capture.md`; and `import`, which loads documents from links (PDFs downloaded with your approval, pages left for you to clip) and checks `inbox/sources/` against `raw/` for duplicates and newer versions. `ingest` extended: the import check in its brief, Claude outputs checked claim by claim through the supporting file `ai-source.md`, `· AI` claims re-cited when a later source states them, and capture lines ticked. The web is searched and read only from `/research`: its own grant for searches and official sites, no allow rule, three deny rules on shell routes, and an ask rule on the one download command `/import` uses. Tests IM1–IM6, RS1–RS4 and AI1–AI4 added. D-095 to D-101 proposed, with doc 31 §2.2; D-101 revises D-043 for files. `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md`, the `ingest`, `lint` and `ask` skills and `system/test-results.md` updated; docs 00, 03, 21, 22, 31, 32, 33 and 40 updated |
 | 1.47 | 2026-10-06 | M8 opening files placed and pushed (4b33a82). D-095 to D-101 accepted, with doc 31 §2.2: D-096 makes one exception to D-041 and moves D-075's web search to `/research`; D-101 revises D-043 for files. Docs 00, 03, 21, 22, 31, 33 and 40 updated |
 | 1.48 | 2026-10-12 | First `/lint` since M7 (2026-10-06): 7 findings, 6 high, all on UK pages from M7, all applied. M8 tests begin: IM1, IM3 and IM4 pass; IM2 partial, so `import` step 4 now says what ingesting a new version does. `import` skill and `system/test-results.md` updated; docs 00, 21 and 40 updated |
+| **1.49** | 2026-10-14 | **M8 closed: tests 14 of 14.** A research report on the Financial Ombudsman Service, with every fact sourced and quoted, led to seven primary sources clipped and compiled, and `/ask` answered from them. A Claude study note went through `/ingest` as an AI source: 108 statements, 67 kept as `· AI` leads, then 20 of them re-cited to the FCA's Final Notice on TSB. `/import` caught a planted duplicate and a planted new version, and downloaded a real PDF on one approval. Charter §11 criteria 1 and 2 met. Second lint: 5 high findings, applied. `research` fixed for links it built; D-102 (where AI claims go) and D-103 (lint after a large set) accepted. Doc 89 (M8 Handover) added, with the opening brief for M9 and a request for M0. The `research`, `ingest` skills, `ai-source.md` and `system/test-results.md` updated; docs 00, 03, 21, 22, 31 and 40 updated |

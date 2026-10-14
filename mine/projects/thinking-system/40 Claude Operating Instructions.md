@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-06
+reviewed: 2026-10-14
 tags: [project/thinking-system, claude]
 ---
 
@@ -173,7 +173,7 @@ Every vault skill follows the same pattern ([[03 Decision Log]] D-041):
 - **Skills synced from claude.ai** (such as `pdf` and `xlsx`) are hidden in vault sessions ([[03 Decision Log]] D-040). At the start of each module, `/skills` should list only the vault's own skills and Claude Code's bundled ones.
 
 ### 4.1 `ingest`
-`.claude/skills/ingest/SKILL.md`, written in M3 (2026-09-22) and reworked in M7 (2026-09-30) to take a set of sources in one run (D-085 to D-091, accepted 2026-09-30). From M3 it keeps: the brief before any write, your move into `raw/` (D-045), the search of `wiki/` and `raw/` for every source, PDF page citations (D-046), the partial-clip check, `contested` only where the disputed claim sits (D-047), and drafts that cite `raw/` (D-067). M7 adds sets, trust levels, the conflict review and commits. Revised on 2026-10-06 after tests I1 to I3: no flag for public material that names people (D-093); an open dispute sits only under "Where sources disagree"; a page that cites another source's raw file lists it in `sources`; `resolve` also updates the conflict notes on source pages and the overview; and an ingest not yet committed shares one commit with its resolve. Revised again at M7's close, after I3 to I7: at the same level a body's own statement about itself is proposed before the newer source (D-094); the move block says to press Enter; and vault files are changed with Edit or Write only, never a script. Extended in M8 (2026-10-06; D-096, D-098 and D-099, accepted the same day): the brief runs the import check, so a duplicate leaves the set and a new version gets a dated raw name; a Claude output in a set follows the supporting file `ai-source.md`, mirrored below the skill; a later source that states an `· AI` claim re-cites it; and compiled sources are ticked on the capture list. `/ingest` itself never uses the web. Four points to know:
+`.claude/skills/ingest/SKILL.md`, written in M3 (2026-09-22) and reworked in M7 (2026-09-30) to take a set of sources in one run (D-085 to D-091, accepted 2026-09-30). From M3 it keeps: the brief before any write, your move into `raw/` (D-045), the search of `wiki/` and `raw/` for every source, PDF page citations (D-046), the partial-clip check, `contested` only where the disputed claim sits (D-047), and drafts that cite `raw/` (D-067). M7 adds sets, trust levels, the conflict review and commits. Revised on 2026-10-06 after tests I1 to I3: no flag for public material that names people (D-093); an open dispute sits only under "Where sources disagree"; a page that cites another source's raw file lists it in `sources`; `resolve` also updates the conflict notes on source pages and the overview; and an ingest not yet committed shares one commit with its resolve. Revised again at M7's close, after I3 to I7: at the same level a body's own statement about itself is proposed before the newer source (D-094); the move block says to press Enter; and vault files are changed with Edit or Write only, never a script. Extended in M8 (2026-10-06; D-096, D-098 and D-099, accepted the same day): the brief runs the import check, so a duplicate leaves the set and a new version gets a dated raw name; a Claude output in a set follows the supporting file `ai-source.md`, mirrored below the skill; a later source that states an `· AI` claim re-cites it; and compiled sources are ticked on the capture list. `/ingest` itself never uses the web. Revised at M8's close (2026-10-14): unbacked AI claims go on a page only when they're about its subject (D-102), and a large set ends by recommending `/lint` (D-103). Four points to know:
 - **A set is every file in the zone, or the ones you name.** Up to 8 files; `/ingest <file>` gives a set of one, which runs as MVP 1's ingest did. The brief comes first and writes nothing; then you paste one move block and reply, and the whole set compiles without another stop (D-085, D-089).
 - **Everything you review is in one file.** `system/ingest/set-YYYY-MM-DD.md` lists conflicts first, then facts sorted by trust, weakest first, with the primary facts folded away, then one claim per level to trace. The same file records progress while the set compiles, so if a run stops, for example on the Pro allowance, the next `/ingest` picks it up where it stopped (D-086).
 - **Claude proposes, you decide.** Each conflict has a kind (fact, newer, scope, view) and, except for views, a proposal by trust level and then date. `/ingest resolve 1a 2d`, or a reply naming them, applies your decisions; the claim set aside stays on the page, marked "outweighed by" or "superseded by" (D-087, D-088; [[31 Trust and Provenance]] §2.1, §3).
@@ -324,7 +324,7 @@ Before reporting, check that every `[[wiki/...]]` link you wrote points to a pag
 - claims that lost their `· AI` marker, and capture-list lines ticked;
 - the set review's path.
 
-Then say: "Read the set review in Obsidian: conflicts first, then facts from the weakest sources. Decide the conflicts with `/ingest resolve`, e.g. `/ingest resolve 1a 2d`. With none to decide, tell me when the review is done." Then stop.
+Then say: "Read the set review in Obsidian: conflicts first, then facts from the weakest sources. Decide the conflicts with `/ingest resolve`, e.g. `/ingest resolve 1a 2d`. With none to decide, tell me when the review is done." When the set had three or more sources, a PDF over 50 pages, or a Claude output, add: "Run `/lint` before the next set. The review samples one claim per level; lint opens every cited passage on the pages this set changed." (D-103) Then stop.
 
 A reply that names conflicts by number and letter counts as `/ingest resolve` with those decisions. "Yes" or "looks good" names none: ask which.
 
@@ -471,6 +471,12 @@ Take one section at a time. For each statement of fact, search `raw/`:
 - A contradicted claim is not a conflict for me to decide: an AI claim never outweighs a source. If you think the source is the one that's wrong, say so under Flags.
 - Write unbacked claims so that a later source can back them one sentence at a time.
 
+**Where an unbacked claim goes** (D-102)
+- Always on the output's own source page.
+- On a page this set creates.
+- On an existing page only when the claim is about that page's own subject: a claim about the PSR's future goes on the PSR page, but FSMA s. 19 doesn't go on the FCA page. Otherwise keep it on the source page, with a link to the page it concerns.
+- An existing `verified` page that gains an unbacked claim turns `unverified`. Name each one in the set review under "Placement".
+
 **Pages**
 - The output's source page: `trust: ai`. Under Key claims, group them: "Backed by raw/", each citing its raw file; "Unbacked (AI)", each citing the output with `· AI`. Under "Conflicts and open points", list each contradicted claim with what `raw/` says and its citation, ending "Left out of the wiki." `sources` lists the output and every raw file a backed claim cites.
 - A new entity or concept page whose every claim is `· AI` opens, under the title, with: `> [!warning] AI only: no source in raw/ backs this page yet.` Remove the line when one does.
@@ -492,6 +498,7 @@ After Conflicts, add:
 - **Contradicted by raw/ · N**, left out:
   - "<the claim>" · raw says: <what the passage says> ([[raw/<name>]], s. N)
 - **Not claims of fact · N**, left out: <the kinds, such as a study plan or a reading list>
+- **Placement:** existing pages that gained `· AI` claims, and those that turned `unverified`; claims kept on the source page only, and why
 ```
 
 - The Result line ends with "· N AI claims waiting".
@@ -877,7 +884,7 @@ At the end of the draft, after Relations, add this section, replacing any earlie
 ````
 
 ### 4.6 `research`
-`.claude/skills/research/SKILL.md`, written in M8 (2026-10-06; [[03 Decision Log]] D-095 and D-096, accepted the same day). It answers B-004: a new topic comes back as a report in which every fact names its source, with the primary sources listed for you to clip. Four points to know:
+`.claude/skills/research/SKILL.md`, written in M8 (2026-10-06; [[03 Decision Log]] D-095 and D-096, accepted the same day). Revised at M8's close after tests RS1 and IM5: links are recorded exactly as opened, "PDF download" only for a link that returned a PDF, and each listed site's bare address is pre-approved beside its subdomains. It answers B-004: a new topic comes back as a report in which every fact names its source, with the primary sources listed for you to clip. Four points to know:
 - **It is the only skill that searches and reads the web, and the only one with `allowed-tools`.** Searches, and fetches from the official sites in its header, run without a prompt during the turn that runs `/research`. Any other site asks you: answer **Yes** for that one fetch. "Yes, and don't ask again" saves a permanent allow for the site in `.claude/settings.local.json`, which git ignores, and it then holds in every session. To pre-approve a site for good, add it to the skill's header, where the change shows in `git diff`.
 - **The report points at evidence; it isn't evidence.** WebFetch hands Claude a model's reading of a page, not the page. So each fact carries a link and a quote for you to check, the report is level AI, and nothing reaches the wiki until you clip the sources and run `/ingest` (D-043, D-075).
 - **It checks the vault first,** so a run goes to what the wiki lacks, and the report says what the wiki already holds.
@@ -891,12 +898,19 @@ disable-model-invocation: true
 argument-hint: "[topic or question | nothing, for the wiki's AI claims]"
 allowed-tools:
   - "WebSearch"
+  - "WebFetch(domain:gov.uk)"
   - "WebFetch(domain:*.gov.uk)"
+  - "WebFetch(domain:parliament.uk)"
   - "WebFetch(domain:*.parliament.uk)"
+  - "WebFetch(domain:fca.org.uk)"
   - "WebFetch(domain:*.fca.org.uk)"
+  - "WebFetch(domain:bankofengland.co.uk)"
   - "WebFetch(domain:*.bankofengland.co.uk)"
+  - "WebFetch(domain:financial-ombudsman.org.uk)"
   - "WebFetch(domain:*.financial-ombudsman.org.uk)"
+  - "WebFetch(domain:fscs.org.uk)"
   - "WebFetch(domain:*.fscs.org.uk)"
+  - "WebFetch(domain:psr.org.uk)"
   - "WebFetch(domain:*.psr.org.uk)"
 ---
 <!-- Mirrored in mine/projects/thinking-system/40 Claude Operating Instructions §4; change both in the same commit. -->
@@ -933,7 +947,7 @@ Split the topic into 3–6 sub-questions, gaps first. They become the headings u
 - For each sub-question, search, then open the pages that matter. Go to the origin of a fact first: legislation, the regulator's or body's own site, official statistics, an author's own text (the `primary` row of the trust table in `system/conventions.md`). Use secondary sources for analysis. Use commentary to find leads, or when nothing better exists.
 - A search result's title or snippet is never enough for a fact. Open the page.
 - Ask each fetch for the words: "Quote, word for word, the sentences that state <point>, with the heading they sit under and any date the page gives (published, last updated, version, in force from)."
-- For each page you use, record: title, author or publisher, date (or "undated"), URL, source type and level.
+- For each page you use, record: title, author or publisher, date (or "undated"), source type, level, and the URL exactly as you opened it, after any redirect. Never shorten, rewrite or build a URL; a link I can't open is no use to me.
 - **A fact goes in the report only with its source and a short quote**, 25 words at most, that the fetch returned. No quote for the point: fetch again with a narrower question, or drop the fact.
 - Never fill a gap from general knowledge. Anything you do add from it is labelled "(general knowledge)" and goes under Open points, never under Facts.
 - A figure, limit, fee, threshold or office-holder is a dated fact: record the date the source gives for it.
@@ -947,12 +961,12 @@ Write `system/research/research-<YYYY-MM-DD>-<topic-in-a-few-words>.md`, lower c
 - Append one line per source under `## To clip` in `system/research/capture.md`, primary sources first:
   `- [ ] YYYY-MM-DD <title> · <publisher> · <date> · <URL> · <level> · <Web Clipper | PDF download> · [[system/research/<report>]]`
 - List every primary source a fact rests on. List a secondary source only when it carries analysis no primary source has. Don't list commentary unless I asked for it.
-- When a site offers the same document as a PDF, give the PDF's link and write "PDF download": `/import capture` can download a PDF, while a page waits for me to clip it.
+- Write "PDF download" only for a link you opened that returned a PDF: `/import capture` can download it, while a page waits for me to clip it. Never build a PDF link from a page's address. A site that offers a PDF only through a button, with no link, is a page for the Web Clipper.
 - Skip a source already in `raw/` (its URL is the `source` property of a clip there, or its title is on a source page) and one already on the list.
 - Change nothing else in the file.
 
 ### A6. Log, report, stop
-- Append to `log.md`:
+- Append to `log.md`, after a blank line:
   ```
   ## [YYYY-MM-DD] research | <topic>
   Report: research-YYYY-MM-DD-<topic>, N facts from N sources (N primary, N secondary, N commentary). To clip: N (<titles>). Searches: N; pages read: N. No wiki pages changed.
@@ -1027,6 +1041,7 @@ Up to 200 words. Every sentence that states a fact ends with its source: [S1], o
 ```
 
 - Leave out "Where sources disagree" when there is nothing in it. Every other heading stays, with "None." when empty.
+- The facts count on the Result line is the number of lines under Facts.
 - Number sources S1, S2, … in the order the Summary uses them. A fact with two sources names both.
 - A quote is the source's own words as the fetch returned them. If I can't find the quote on the page, the fact is wrong until shown otherwise.
 ````
@@ -1140,7 +1155,7 @@ In the session:
 Stop. `/import` never starts an ingest.
 ````
 
-## 5. Test prompts (M4 exit: 9 of 10; M5 lint: 6 of 6; M6 drafts: 5 of 5; M7 ingest sets: 7 of 7; M8 research and import: 14 tests, not yet run)
+## 5. Test prompts (M4 exit: 9 of 10; M5 lint: 6 of 6; M6 drafts: 5 of 5; M7 ingest sets: 7 of 7; M8 research and import: 14 of 14)
 The conditions are the wiki as M3 left it; nothing is planted in `raw/` or `wiki/`. Two real disagreements serve test 4, the `Karpathy` page's general-knowledge full name serves test 5, and a throwaway file in `inbox/sources/` serves test 7 ([[03 Decision Log]] D-052). Tests 1–6 and 8 run through `/ask`, because the skills are what's under test.
 
 | # | Prompt | Passes if Claude… |
@@ -1248,6 +1263,8 @@ Copy-Item -LiteralPath "mine\projects\uk-financial-system\claude-2026-09-27-foun
 | AI4 | Clip the Bank of England's release on the TSB fines, which IM6 listed, then `/ingest` naming that clip. The Final Notice can wait in the zone for a later set | the brief names the `· AI` claims the source may back. After the run those claims cite the new raw file with its own level and no `· AI`; the set review lists them "(was AI)"; the capture line is ticked. The page turns `verified` only if no `· AI` claim is left on it |
 
 IM1–IM2 and RS1–RS2 are the two MVP 2 criteria M8 owns ([[11 Project Charter]] §11, criteria 1 and 2). AI3 is the test [[88 M7 Handover]] asked for: a page resting on AI claims can't become `verified`. If a search, or a fetch from a listed site, asks for approval in RS1, the skill's `allowed-tools` grant isn't holding: answer Yes, note it, and RS1 passes on the report while the grant is fixed. IM5 and IM6 should each ask once, for one download command; if Claude Code blocks the command instead of asking, a deny rule is catching it, so note the message. Record results in `system/test-results.md`, Run 5.
+
+**Run 5 (2026-10-12 to 2026-10-14): 14 of 14.** IM2 passed on a rerun after a one-line fix to `import` step 4. The research run found and cited 9 primary sources, but built one PDF link and recorded two links in a form that didn't open; both are fixed in the skill. The Claude report gave 108 statements: 28 backed, 67 kept as `· AI`, 1 contradicted, 12 not claims of fact. The FCA's Final Notice then re-cited 20 of TSB Bank's `· AI` claims to primary. Lint after each large set found 5 or 6 high errors the set review had missed (D-103). Details in `system/test-results.md` and [[89 M8 Handover]].
 
 ## 6. M2 setup steps (Windows)
 Checked against the Claude Code docs on 2026-09-21. Recheck anything more than about three months old; Claude Code changes often.

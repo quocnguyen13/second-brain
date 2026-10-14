@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-06
+reviewed: 2026-10-14
 tags: [project/thinking-system, roadmap]
 ---
 
@@ -28,8 +28,8 @@ flowchart TD
     V1["MVP 1 · M0 to M6<br/>closed 2026-09-25"]:::done
     PM["M0 · Retrospective<br/>and MVP 2 scope"]:::done
     M7["M7 · Batch ingest<br/>and trust"]:::done
-    M8["M8 · Research<br/>and import"]:::next
-    M9["M9 · Large<br/>documents"]:::plan
+    M8["M8 · Research<br/>and import"]:::done
+    M9["M9 · Large<br/>documents"]:::next
     G["M0 · Retrospective<br/>and showcase gate"]:::plan
     V1 --> PM --> M7 --> M8 --> M9
     M9 -- "MVP 2 complete" --> G
@@ -53,7 +53,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 | **M6 – Thinking Layer** | Your own conclusions accumulate | `mine/insights` in use (`mine/decisions` moved to the revision, D-068); the drafts routine and the `drafts` skill (D-063 to D-067) | 5 insight pages you accepted, linked to wiki pages (D-068); drafts tests 5 of 5 | **Closed 2026-09-25** |
 | **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 87 (MVP Retrospective) completed; docs 11 and 21 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | **Closed 2026-09-30** (D-084) |
 | **M7 – Batch Ingest and Trust** | A topic comes in as a set: one run, one review, facts ranked by trust, conflicts resolved | Must: B-006 set ingest, B-007 trust levels (rule in doc 31 §2), B-008 conflict review (doc 31 §3), B-024 one move per set, tested on B-009 (the UK financial system). Should: B-011, B-025. Takes over the `ingest` skill from M3 | 5 or more sources on one topic compiled in one run with one review, conflicts first and facts sorted by trust; the MVP 1 ingest tests still pass. Tests I1–I7: 7 of 7 | **Closed 2026-10-06** |
-| **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version. Tests IM1–IM6, RS1–RS4 and AI1–AI4: 14 of 14 (D-100, D-101) | **Started 2026-10-06** |
+| **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version. Tests IM1–IM6, RS1–RS4 and AI1–AI4: 14 of 14 (D-100, D-101) | **Closed 2026-10-14** |
 | **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section | About 1 week |
 | **MVP 2 complete** | | | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate in M0 (D-082) | |
 
@@ -207,7 +207,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - `Claude outputs/` at the vault root isn't in the blueprint. It holds a copy of doc 10 and `test-injection.md`.
 - Claude Code adds a "Co-Authored-By" line to the commits it makes. A setting can turn it off.
 
-## 11. M8 started on 2026-10-06
+## 11. M8 closed on 2026-10-14
 - [x] Opened from the brief in [[88 M7 Handover]]. Docs 11 §11, 21 §2, 22 (B-003, B-004, B-037), 31 §2.1 and §3, 33 §2, 40 §4.1 and 03 (D-075, D-083, D-087, D-093) read, with the live `CLAUDE.md`, settings and skills. Tool facts checked against the Claude Code docs on permissions, skills and tools (2026-10-06): WebSearch returns titles and links only; WebFetch returns a model's reading of a page; a skill's `allowed-tools` holds for the turn that runs it
 - [x] `research` skill written: a report in `system/research/` with a source, a link and a quote for every fact, and the sources to clip on the capture list (D-095, D-097). Mirrored in [[40 Claude Operating Instructions]] §4.6
 - [x] Web access scoped to `/research`: the skill's own grant for searches and official sites, no allow rule in the settings, three deny rules on shell routes to the web, and a standing rule in `CLAUDE.md` (D-096)
@@ -218,12 +218,23 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] Tests IM1–IM6, RS1–RS4 and AI1–AI4 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md`, Run 5 (D-100)
 - [x] Files placed, committed and pushed (4b33a82, 2026-10-06); Sync
 - [x] D-095 to D-101 accepted, with doc 31 §2.2 (2026-10-06)
-- [ ] In a fresh session: `/skills` lists `research` and `import`, and `/permissions` shows 9 allow, 3 ask and 13 deny rules
+- [x] `research` and `import` ran from fresh sessions, and the `ask` rule on downloads asked as designed (IM5, IM6)
 - [x] `system/context.md` "Current focus" changed to M8 (your file, 2026-10-06)
 - [x] The first `/lint` since M7, before the tests add pages: report-2026-10-06, 57 pages deep-checked, 7 findings (6 high, 1 low), all on UK pages compiled in M7, all applied (ca76dcc, 454140b). The set review hadn't caught them, so `/lint` after every large set stays the backstop
-- [ ] IM1–IM4: the planted duplicate and the planted new version. IM1, IM3 and IM4 pass (2026-10-12). IM2 partial: the report didn't say a new version raises **newer** conflicts; `import` step 4 fixed, rerun pending
-- [ ] IM5–IM6: the capture list and two typed links loaded, with one approval each
-- [ ] RS1–RS4: the research report, three quotes traced, the clipped sources ingested, and no web call from `/ask`
-- [ ] AI1–AI4: the waiting Claude report as a source, and an `· AI` claim upgraded
-- [ ] **M8 exit: 14 of 14.** Then [[11 Project Charter]] §11 criteria 1 and 2 are met
-- [ ] Handover written (doc 89), with the request for M0 and the opening brief for M9
+- [x] IM1–IM4: the planted duplicate and the planted new version. **4 of 4** (2026-10-12); IM2 passed on a rerun after a one-line fix to `import` step 4
+- [x] IM5–IM6: the capture list and two typed links loaded, one approval each. **2 of 2.** IM5 caught a "PDF" that was a web page; IM6 downloaded the FCA's 115-page Final Notice
+- [x] RS1–RS4: the research report on the Financial Ombudsman Service (d27dfe2), three quotes traced, seven sources clipped and ingested (312fa73), and no web call from `/ask`. **4 of 4.** The research skill fixed for links it built or shortened
+- [x] AI1–AI4: the Claude report as an AI source, 108 statements sorted into four outcomes (c0d0267); an AI-only page refused `verified`; 20 `· AI` claims re-cited to the FCA's Final Notice (43c4c52). **4 of 4**
+- [x] Second lint (report-2026-10-14): 7 findings, 5 high, all applied (d524b76). With the first, the case for D-103
+- [x] D-102 (where an unbacked AI claim goes) and D-103 (lint after a large set) accepted at the close; `research`, `ingest` and `ai-source.md` revised with them and the RS1 fixes
+- [x] **M8 exit: 14 of 14** (2026-10-14). [[11 Project Charter]] §11 criteria 1 (research) and 2 (import) are met
+- [x] Handover written: [[89 M8 Handover]], with the request for M0 and the opening brief for M9
+- [ ] Closing files placed, committed and pushed; Sync
+- [ ] **Next:** M9 – Large Documents, opened from [[89 M8 Handover]]
+
+**Parked in M8, to pick up when they start to hurt:**
+- Resuming a stopped set (D-086) is still untested; M9 will exercise it.
+- Synced claude.ai skills still load in vault sessions (Q-015, B-023): one run suggested `/deep-research`. Hiding them needs the names `/skills` lists.
+- Claude used read-only shell commands twice against the skills' ground rules (lint counting files, ingest reading `log.md` with `tail`), harmless and reported. Whether to allow read-only shell is for M0.
+- Claude in Chrome can't press the Web Clipper, and computer use only reads browser windows, so clipping stays your step. The FCA Handbook's "View as PDF" has no link for `/import`.
+- Eleven drafts wait for `/drafts`.

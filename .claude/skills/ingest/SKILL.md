@@ -142,7 +142,7 @@ Before reporting, check that every `[[wiki/...]]` link you wrote points to a pag
 - claims that lost their `· AI` marker, and capture-list lines ticked;
 - the set review's path.
 
-Then say: "Read the set review in Obsidian: conflicts first, then facts from the weakest sources. Decide the conflicts with `/ingest resolve`, e.g. `/ingest resolve 1a 2d`. With none to decide, tell me when the review is done." Then stop.
+Then say: "Read the set review in Obsidian: conflicts first, then facts from the weakest sources. Decide the conflicts with `/ingest resolve`, e.g. `/ingest resolve 1a 2d`. With none to decide, tell me when the review is done." When the set had three or more sources, a PDF over 50 pages, or a Claude output, add: "Run `/lint` before the next set. The review samples one claim per level; lint opens every cited passage on the pages this set changed." (D-103) Then stop.
 
 A reply that names conflicts by number and letter counts as `/ingest resolve` with those decisions. "Yes" or "looks good" names none: ask which.
 

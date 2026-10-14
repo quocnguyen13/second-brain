@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-06
+reviewed: 2026-10-14
 tags: [project/thinking-system, governance]
 ---
 
@@ -74,7 +74,8 @@ Claude can research for you, and what it writes can enter the vault. Neither cha
 | not a claim of fact | A plan, advice, an opinion, a prediction | Nothing |
 
 - A claim marked `· AI` counts as uncited: its page is `unverified` and shows under Needs attention. A page that rests only on such claims says so in its first line. Nothing turns such a page `verified` except a source in `raw/` that states the claim; asked to mark it so, Claude leaves the status and says which claims need a source.
-- **The upgrade.** When a later source states an `· AI` claim, `/ingest` re-cites the claim to that source and the marker goes.
+- **Where they sit** ([[03 Decision Log]] D-102, accepted 2026-10-14). On the output's own source page always; on another page only when the claim is about that page's subject. A primary-built page doesn't turn `unverified` over a lead about something else.
+- **The upgrade.** When a later source states an `· AI` claim, `/ingest` re-cites the claim to that source and the marker goes. M8 showed it: the FCA's Final Notice re-cited 20 of TSB Bank's claims to primary.
 - **The capture list,** `system/research/capture.md`, holds the sources waiting for you to clip: the ones a research report's facts rest on, and the ones a Claude output names for its unbacked claims. `/ingest` ticks a line when its source is compiled (D-097).
 - **Only `/research` searches and reads the web** (D-096). `/import` can download a file from a link, byte for byte and with your approval, and does nothing else on the web (D-101). `/ingest` never calls out: it reads files you may not have read yet, so it is given no way to send anything out.
 

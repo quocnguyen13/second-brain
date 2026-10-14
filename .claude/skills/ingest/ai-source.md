@@ -42,6 +42,12 @@ Take one section at a time. For each statement of fact, search `raw/`:
 - A contradicted claim is not a conflict for me to decide: an AI claim never outweighs a source. If you think the source is the one that's wrong, say so under Flags.
 - Write unbacked claims so that a later source can back them one sentence at a time.
 
+**Where an unbacked claim goes** (D-102)
+- Always on the output's own source page.
+- On a page this set creates.
+- On an existing page only when the claim is about that page's own subject: a claim about the PSR's future goes on the PSR page, but FSMA s. 19 doesn't go on the FCA page. Otherwise keep it on the source page, with a link to the page it concerns.
+- An existing `verified` page that gains an unbacked claim turns `unverified`. Name each one in the set review under "Placement".
+
 **Pages**
 - The output's source page: `trust: ai`. Under Key claims, group them: "Backed by raw/", each citing its raw file; "Unbacked (AI)", each citing the output with `· AI`. Under "Conflicts and open points", list each contradicted claim with what `raw/` says and its citation, ending "Left out of the wiki." `sources` lists the output and every raw file a backed claim cites.
 - A new entity or concept page whose every claim is `· AI` opens, under the title, with: `> [!warning] AI only: no source in raw/ backs this page yet.` Remove the line when one does.
@@ -63,6 +69,7 @@ After Conflicts, add:
 - **Contradicted by raw/ · N**, left out:
   - "<the claim>" · raw says: <what the passage says> ([[raw/<name>]], s. N)
 - **Not claims of fact · N**, left out: <the kinds, such as a study plan or a reading list>
+- **Placement:** existing pages that gained `· AI` claims, and those that turned `unverified`; claims kept on the source page only, and why
 ```
 
 - The Result line ends with "· N AI claims waiting".
