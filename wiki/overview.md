@@ -1,7 +1,7 @@
 ---
 type: overview
 status: verified
-sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]"]
 created: "2026-09-22"
 updated: "2026-10-14"
 tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation", "complaints"]
@@ -11,13 +11,13 @@ tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "informa
 The current picture across every source, on one page. Rewritten at each ingest, not appended to.
 
 The wiki has two strands that don't yet touch:
-- **UK financial regulation:** fifteen sources.
-  - Twelve primary: the statute; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; and the Financial Ombudsman Service's own guide.
+- **UK financial regulation:** sixteen sources.
+  - Thirteen primary: the statute; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
   - One secondary: a 2016 Commons Library briefing.
   - One commentary: Wikipedia.
   - One AI: a Claude study note on who regulates what (2026-09-27). Its unbacked claims stay marked `· AI` and are kept off this page.
 
-  The 2026-10-14 sets added complaints and the FOS, and the Claude note.
+  The 2026-10-14 sets added complaints and the FOS, the Claude note, and the TSB Final Notice, the wiki's first enforcement case.
 - **Knowledge management:** five sources on how to build and organise a knowledge base.
 
 Regulation agreements and disagreements sit in Strand 1. The sections from "Where sources agree" on apply to the knowledge-management strand.
@@ -35,8 +35,16 @@ Regulation agreements and disagreements sit in Strand 1. The sections from "Wher
 - **Authorising a new bank.** One application to the PRA, assessed jointly. The bank is authorised only if both regulators are satisfied on their [[wiki/concepts/Threshold Conditions]], including whether it could be resolved in an orderly way; the PRA decides ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]). See [[wiki/concepts/New bank authorisation]] and [[wiki/concepts/Senior Managers and Certification Regime]].
 - **How close to failure.** The PRA puts every bank in one of four [[wiki/concepts/Potential impact categories]] and one of five [[wiki/concepts/Proactive Intervention Framework]] stages, from low risk to viability (1) to resolution (5), with escalating actions such as distribution limits and balance-sheet caps at stage 3. The PIF stage isn't disclosed to the firm, but it is shared with the FCA ([[raw/pra-approach-banking-supervision-2023.pdf#page=20]], [[raw/pra-approach-banking-supervision-2023.pdf#page=45]], [[raw/pra-approach-banking-supervision-2023.pdf#page=46]], [[raw/pra-approach-banking-supervision-2023.pdf#page=47]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=7]]).
 - **Ring-fencing.** Core services, "retail deposits and related payment and overdraft services", sit in ring-fenced bodies protected from the rest of the group; RFBs face extra requirements and group restructuring powers ([[raw/pra-approach-banking-supervision-2023.pdf#page=8]], [[raw/pra-approach-banking-supervision-2023.pdf#page=54]]). See [[wiki/concepts/Ring-fencing]].
-- **Operational resilience is prudential.** The PRA expects banks to manage operational as well as financial risks. It assumes disruptions will happen, and expects firms to stay within impact tolerances for their important business services; the board is accountable ([[raw/pra-approach-banking-supervision-2023.pdf#page=36]]). See [[wiki/concepts/Operational resilience]]. The wiki's worked case, [[wiki/entities/TSB Bank]]'s 2018 migration with fines from both regulators, is AI-only so far: the FCA Final Notice and the Bank's release are on the capture list.
+- **Operational resilience is prudential.** The PRA expects banks to manage operational as well as financial risks. It assumes disruptions will happen, and expects firms to stay within impact tolerances for their important business services; the board is accountable ([[raw/pra-approach-banking-supervision-2023.pdf#page=36]]). See [[wiki/concepts/Operational resilience]]. The FCA's side of the worked case, [[wiki/entities/TSB Bank]], is now primary-sourced (next section); the PRA's side waits for the Bank's release.
 - **Capital and failure.** Pillar 1 plus 2A is the minimum, with buffers on top and a 3.25% leverage ratio ([[raw/pra-approach-banking-supervision-2023.pdf#page=31]], [[raw/pra-approach-banking-supervision-2023.pdf#page=33]]); small banks fail through insolvency with FSCS payout targeted within seven days ([[raw/pra-approach-banking-supervision-2023.pdf#page=38]]). See [[wiki/concepts/Regulatory capital framework]], [[wiki/concepts/Resolvability]], [[wiki/entities/Financial Services Compensation Scheme]].
+
+### A failed migration: TSB, 2018 (emphasis 2026-10-14-3)
+- **What happened.** TSB moved its customer services from the Lloyds Banking Group platform to Proteo4UK, built and run by Sabadell's IT subsidiary SABIS, with go-live on 22 April 2018. The data migrated, but digital, telephone and branch banking failed; business as usual returned only on 10 December 2018, after 225,492 complaints and £32.7m in redress ([[raw/fca-final-notice-tsb-2022.pdf#page=2]], [[raw/fca-final-notice-tsb-2022.pdf#page=3]], paras 2.4–2.8; [[raw/fca-final-notice-tsb-2022.pdf#page=14]], para 4.4). See [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]].
+- **The finding.** The FCA fined TSB £29.75m for breaching [[wiki/concepts/Principles for Businesses]] 2 and 3 ([[raw/fca-final-notice-tsb-2022.pdf#page=1]], para 1.1; [[raw/fca-final-notice-tsb-2022.pdf#page=10]], para 2.33). The amount came from the five DEPP steps, ending with a 30% settlement discount; see [[wiki/entities/Financial Conduct Authority]] ([[raw/fca-final-notice-tsb-2022.pdf#page=101]], paras 6.24–6.25).
+- **Go-live attestations.** After a February 2018 change, business functions signed off non-functional requirements relying on the IT function's confirmation of testing; the board wasn't explicitly told of the change, and the test report's two-page summary reached the business functions at 17.19 on 17 April, the day before the board's go-ahead meeting ([[raw/fca-final-notice-tsb-2022.pdf#page=66]], [[raw/fca-final-notice-tsb-2022.pdf#page=67]], paras 4.201–4.205).
+- **Testing scope.** Performance testing was cut to one data centre in an informal decision outside governance; testing in the live two-centre set-up would likely have found the fault that took digital banking down ([[raw/fca-final-notice-tsb-2022.pdf#page=5]], para 2.14; [[raw/fca-final-notice-tsb-2022.pdf#page=65]], para 4.195).
+- **Outsourcer readiness.** TSB never formally assessed SABIS's capability and accepted readiness letters that were statements of expectation, not fact ([[raw/fca-final-notice-tsb-2022.pdf#page=93]], para 5.3; [[raw/fca-final-notice-tsb-2022.pdf#page=79]], para 4.258). The rules it fell short of are on [[wiki/concepts/Outsourcing of critical or important functions]].
+- **Two regulators.** The FCA set its penalty taking account of a PRA penalty proposed for the same events ([[raw/fca-final-notice-tsb-2022.pdf#page=100]], para 6.18). The PRA's amount and framing aren't in `raw/` yet.
 
 ### Products and payments
 - The FCA's reach is set by [[wiki/concepts/Regulated financial services]], which names payment services and e-money ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1H(2)). Its [[wiki/concepts/Consumer protection objective]] weighs product risk and consumer capability against firms' duty of care ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1C(2)).
@@ -147,7 +155,9 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
   - Topic pages vs. project folders: the compiled wiki's concept pages ([[raw/karpathy-llm-wiki.md]]) vs. PARA's projects-first order ([[raw/forte-para-method.md]]). Neither source addresses the other.
 
 ## Gaps worth a new source
-- To back the Claude note (all on the capture list): the FCA Final Notice to TSB (2022) and the Bank's release on the TSB fines; FSMA ss. 19, 23 and 55E–55F; the Bill's page and Parliament's report-stage news item; FCA PRIN and the PRA Fundamental Rules; the SBV's own page on its role.
+- To back the Claude note (all on the capture list): the Bank of England's release on the TSB fines (the PRA's £18.9m and framing); FSMA ss. 19, 23 and 55E–55F; the Bill's page and Parliament's report-stage news item; FCA PRIN and the PRA Fundamental Rules; the SBV's own page on its role.
+- Current SYSC 8 (outsourcing) and SYSC 4.1 (business continuity), and the FCA's and PRA's operational resilience rules: the TSB notice quotes SYSC only as in force in 2015–2018.
+- DEPP 6.5A and the Enforcement Guide themselves, rather than the notice's account of them.
 - No source named in the note: Bank Rate and the 2% inflation target, the BNPL rules, the loan-to-income mortgage cap, and e-money safeguarding. These need `/research`.
 - FSMA s. 228 (the FOS's "fair and reasonable" test), still on the capture list.
 - The Glossary definitions of "consumer", "PSD complaint" and "EMD complaint", and DISP 1 Annex 3R (the waiver wording a final response must use).
@@ -190,4 +200,5 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - [[wiki/sources/Source - FCA glossary small business]]: the small-business test.
 - [[wiki/sources/Source - FCA glossary micro-enterprise]]: the micro-enterprise test.
 - [[wiki/sources/Source - FOS How to complain]]: the FOS's own three-step guide for consumers.
+- [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]]: the FCA's £29.75m penalty on TSB for its 2018 migration.
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]: a Claude study note, at AI level. Its backed claims cite `raw/`; the rest are leads.

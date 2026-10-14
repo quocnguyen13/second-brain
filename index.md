@@ -4,7 +4,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 
 ## Overview
 
-- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14; operational resilience; AI-only leads on TSB and the 2026 Bill (19 sources)
+- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14; operational resilience; TSB's 2018 migration from the FCA's Final Notice (attestations, testing scope, outsourcer readiness); AI-only leads on the PRA's TSB fine and the 2026 Bill (20 sources)
 
 ## Sources
 
@@ -27,7 +27,8 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - FCA glossary small business]] — DISP small business: turnover < £6.5m and < 50 staff or balance sheet < £5m; COMP meaning < £1m (1 source)
 - [[wiki/sources/Source - FCA glossary micro-enterprise]] — micro-enterprise: < 10 staff and turnover or balance sheet ≤ €2m, from PSD (2 sources)
 - [[wiki/sources/Source - FOS How to complain]] — the FOS's own consumer guide: business first, 8 weeks, "15 days", 6 months, free, AI guidance; its "15 days" and "fraud and scams" outweighed by DISP (4 sources)
-- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; ~1,500 PRA firms left out (6 sources)
+- [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]] — FCA's £29.75m penalty on TSB for its 2018 migration: Principles 2 and 3, go-live attestations, testing scope, SABIS readiness, business continuity, DEPP five steps, SYSC rules (2 sources)
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; TSB claims now mostly backed by the FCA notice; ~1,500 PRA firms left out (7 sources)
 
 ## Entities
 
@@ -36,7 +37,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/entities/Andy Matuschak]] — author of the "Evergreen notes" page (1 source)
 - [[wiki/entities/Anthropic]] — publisher of the Contextual Retrieval post; maker of Claude and prompt caching (1 source)
 - [[wiki/entities/Tiago Forte]] — author of the PARA method post; former productivity coach (1 source)
-- [[wiki/entities/Financial Conduct Authority]] — UK regulator of all authorised persons; conduct regulator for dual-regulated firms; responsibilities per the MoU; product powers and history; ~35,500 conduct firms and "renamed" stated, Wikipedia's claims outweighed; complaint-handling rules (7 sources)
+- [[wiki/entities/Financial Conduct Authority]] — UK regulator of all authorised persons; conduct regulator for dual-regulated firms; responsibilities per the MoU; product powers and history; ~35,500 conduct firms and "renamed" stated, Wikipedia's claims outweighed; complaint-handling rules; s. 206 penalties and the DEPP five steps (8 sources)
 - [[wiki/entities/Prudential Regulation Authority]] — the Bank of England acting as prudential regulator; lead regulator for dual-regulated firms; supervisory approach; ~1,292 firms by its own count, the FCA's ~1,500 superseded (5 sources)
 - [[wiki/entities/HM Treasury]] — holds the levers over both regulators: recommendations, reviews, boundary orders, rule directions, designated activities; receives regulatory-failure reports (5 sources)
 - [[wiki/entities/Bank of England]] — is the PRA through its Prudential Regulation Committee; monetary policy, financial stability, resolution authority, liquidity facilities (4 sources)
@@ -46,7 +47,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/entities/Payment Systems Regulator]] — payment-systems regulator set up by the FCA in 2015; mostly commentary; unverified (AI: to move into the FCA under the 2026 Bill) (3 sources)
 - [[wiki/entities/Financial Ombudsman Service]] — takes complaints after the firm's final response or deadline, within time limits; eligibility, awards, its own guide (5 sources)
 - [[wiki/entities/Monetary Policy Committee]] — the Bank's monetary-policy committee; accountable to Parliament; unverified (Bank Rate and 2% target AI only) (3 sources)
-- [[wiki/entities/TSB Bank]] — AI only: 2018 migration failure, FCA £29.75m and PRA £18.9m fines in 2022, Principles 2 and 3, capital deadline (1 source)
+- [[wiki/entities/TSB Bank]] — 2018 migration failure, Sabadell and SABIS, FCA £29.75m fine for Principles 2 and 3, capital deadline; unverified (PRA £18.9m fine and framing AI only) (2 sources)
 - [[wiki/entities/Financial Services and Markets Bill 2026–27]] — AI only: Lords to Commons Sep 2026; PSR into FCA, FOS reform, provisional licences, ring-fencing (1 source)
 
 ## Concepts
@@ -66,7 +67,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/concepts/Prompt caching]] — caching prompt content between API calls; makes long prompts and Contextual Retrieval cheaper (1 source)
 - [[wiki/concepts/PARA method]] — Projects, Areas, Resources, Archives; projects end, areas don't; contested on hierarchy vs association (3 sources)
 - [[wiki/concepts/Organizing by actionability]] — organise by current projects and goals, not subjects; contested against concept-oriented, associative notes (4 sources)
-- [[wiki/concepts/Solo and dual regulation]] — FCA supervises every authorised person; any PRA-regulated activity adds the PRA; MoU definitions and firm types; ~1,292 PRA firms; unverified (FCA-only payment/e-money firms, bank vs EMI, TSB example are AI only) (6 sources)
+- [[wiki/concepts/Solo and dual regulation]] — FCA supervises every authorised person; any PRA-regulated activity adds the PRA; MoU definitions and firm types; ~1,292 PRA firms; TSB: FCA penalty and a PRA penalty for the same events; unverified (FCA-only payment/e-money firms, bank vs EMI, conduct/prudential framing are AI only) (7 sources)
 - [[wiki/concepts/Regulatory objectives]] — FCA and PRA objectives compared; both regulators' own documents and the MoU agree with the Act (5 sources)
 - [[wiki/concepts/Consumer protection objective]] — FCA's "appropriate degree of protection", weighing risk, capability, consumer responsibility and firms' duty of care (1 source)
 - [[wiki/concepts/Regulated financial services]] — the s. 1H(2) list setting the FCA's reach, naming payment services and e-money (1 source)
@@ -86,7 +87,9 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/concepts/Ombudsman referral time limits]] — when the FOS can take a complaint: after final response or deadline; 6 months, 6 years / 3 years; exceptions (3 sources)
 - [[wiki/concepts/Eligible complainant]] — classes and relationship test; micro-enterprise and small-business tiers, group test, benefit of the doubt (3 sources)
 - [[wiki/concepts/Ombudsman awards]] — money up to a CPI-indexed cap (£455k from April 2026), interest, costs, directions; enforceable (1 source)
-- [[wiki/concepts/Operational resilience]] — the PRA's prudential expectation: impact tolerances, board accountability; unverified (TSB case AI only) (2 sources)
+- [[wiki/concepts/Operational resilience]] — the PRA's prudential expectation: impact tolerances, board accountability; FCA business continuity rules (SYSC 4.1); TSB case; unverified (PRA's TSB framing AI only) (3 sources)
+- [[wiki/concepts/Principles for Businesses]] — the FCA's fundamental obligations of firms; Principles 2 and 3 and the TSB breach; unverified (Principle 11 AI only) (2 sources)
+- [[wiki/concepts/Outsourcing of critical or important functions]] — SYSC 8.1 as at 2015–2018: firm stays fully responsible, due diligence, conditions, written agreement, group providers; TSB and SABIS (1 source)
 
 ## Analyses
 

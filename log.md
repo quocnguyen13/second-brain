@@ -80,3 +80,6 @@ Scanned 75 pages, deep-checked 48. Findings: 7 (5 high, 2 medium, 0 low). Checks
 
 ## [2026-10-14] lint | apply report-2026-10-14
 Applied: 1, 2, 3, 4, 5, 6a, 7a. Skipped: none. Pages changed: 12 (Source - DISP 1.6 Complaints time limit rules, Source - FCA glossary micro-enterprise, Source - FOS How to complain, Source - DISP 3.7 Ombudsman awards, Financial Conduct Authority, Prudential Regulation Authority, Bank of England, Financial Ombudsman Service, Prudential Regulation Committee, Ring-fencing, New bank authorisation, overview), plus index.md counts. Status changes: none.
+
+## [2026-10-14] ingest | FCA Final Notice to TSB Bank (2018 migration)
+Set: set-2026-10-14-3, 1 source (1 primary, 0 secondary, 0 commentary). Pages: +3 new (Source - FCA Final Notice to TSB Bank 2022, Principles for Businesses, Outsourcing of critical or important functions); 5 updated (TSB Bank, Operational resilience, Solo and dual regulation, Financial Conduct Authority, Source - Claude on who regulates what (2026-09-27)). Conflicts: none. Flags: the notice gives the migration weekend as both "20 - 22 April" and "21/22 April" 2018; 22 April stated as go-live. AI claims backed: 20 on TSB Bank, plus the FCA half of one on each of TSB Bank, Operational resilience and Solo and dual regulation. Capture list: 1 line ticked.

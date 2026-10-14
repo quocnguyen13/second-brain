@@ -2,7 +2,7 @@
 type: source
 status: unverified
 trust: ai
-sources: ["[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]"]
+sources: ["[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]"]
 created: "2026-10-14"
 updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
@@ -73,7 +73,11 @@ All of these were already on the wiki's pages, so this note added none of them.
 - The UK has no credit growth quotas ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - The UK has no rate caps on mainstream products; high-cost short-term credit is the exception ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 
-**TSB's 2018 migration (emphasis).** See [[wiki/entities/TSB Bank]] for the full set: 23 unbacked claims on the history, the outage, the two fines, the FCA's Principle 2 and 3 findings, the customer cost, the PRA's framing and the capital deadline. The note credits them to the FCA Final Notice of 20 December 2022 and the Bank of England's release of the same day; neither is in `raw/`.
+**TSB's 2018 migration (emphasis).** The note credits its TSB claims to the FCA Final Notice of 20 December 2022 and the Bank of England's release of the same day. The Final Notice is now in `raw/` ([[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]], ingested 2026-10-14), and 20 of the claims on [[wiki/entities/TSB Bank]] now cite it: the history, the outage, the FCA fine and its 30% discount, the Principle 2 and 3 findings, the customer cost and the capital deadline. Still AI, waiting for the Bank's release (on the capture list):
+- In December 2022 the PRA fined TSB £18.9m ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+- The two fines totalled £48.65m ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+- The PRA treated the events as a safety-and-soundness failure ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+- The Bank's release said governance, operational risk, business continuity and outsourcing management have long been part of prudential rules ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 
 **The Bill and the PRC.** See [[wiki/entities/Financial Services and Markets Bill 2026–27]] for 13 unbacked claims on its stages, its scope and the PSR. The note's PRC point is backed and already on [[wiki/entities/Prudential Regulation Committee]].
 
@@ -85,7 +89,8 @@ All of these were already on the wiki's pages, so this note added none of them.
 - [[wiki/concepts/Solo and dual regulation]]
 - [[wiki/entities/Payment Systems Regulator]]
 - [[wiki/entities/Financial Conduct Authority]], [[wiki/entities/Prudential Regulation Authority]], [[wiki/entities/Bank of England]], [[wiki/entities/Financial Ombudsman Service]], [[wiki/concepts/Ring-fencing]], [[wiki/concepts/New bank authorisation]] (links only)
-- Mentioned without a page: HM Treasury's perimeter, the general prohibition, Principle 11 and Fundamental Rule 7, and the SBV.
+- [[wiki/concepts/Principles for Businesses]] (Principle 11, AI only)
+- Mentioned without a page: HM Treasury's perimeter, the general prohibition, Fundamental Rule 7, and the SBV.
 
 ## Conflicts and open points
 - **Contradicted, left out of the wiki.** "The PRA is the prudential regulator for around 1,500 banks, building societies, credit unions, insurers and major investment firms." The FCA's page does say ~1,500 ([[raw/fca-about-the-fca.md]]), but the PRA's own count is "around 1,292" as of 2026-09-21 ([[raw/bank-of-england-prudential-regulation.md]]). The ~1,500 was marked superseded on 2026-10-06 ([[system/ingest/set-2026-10-06-2]] conflict 1). Left out of the wiki.

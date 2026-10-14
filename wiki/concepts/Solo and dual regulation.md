@@ -1,7 +1,7 @@
 ---
 type: concept
 status: unverified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]"]
 created: "2026-09-28"
 updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
@@ -42,7 +42,7 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - **Why the split shapes the business model (AI only).**
   - A bank can lend out deposits and offer FSCS protection ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
   - An e-money institution must safeguard customer money and cannot lend it ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
-- **One incident, two regulators.** For a dual-regulated bank, one failure can bring a conduct case from the FCA and a prudential case from the PRA. TSB's 2018 migration did both ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI). See [[wiki/entities/TSB Bank]].
+- **One incident, two regulators.** For a dual-regulated bank, one failure can bring a case from each regulator. TSB's 2018 migration brought an FCA penalty, and in setting it the FCA took account of "the action proposed by the PRA to impose a financial penalty on TSB arising from the same events and substantially the same facts and matters" ([[raw/fca-final-notice-tsb-2022.pdf#page=100]], para 6.18). That the FCA's case was about conduct and the PRA's prudential is AI only ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI). See [[wiki/entities/TSB Bank]].
 
 ## Where sources disagree
 - **How many firms the PRA regulates (fact).**
@@ -56,6 +56,7 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Bank of England prudential regulation page]]
+- [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related

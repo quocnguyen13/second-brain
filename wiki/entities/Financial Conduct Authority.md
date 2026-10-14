@@ -1,7 +1,7 @@
 ---
 type: entity
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]"]
 created: "2026-09-28"
 updated: "2026-10-14"
 tags: ["uk-financial-regulation", "financial-regulators"]
@@ -51,6 +51,14 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - **Leadership.** Chief executive Nikhil Rathi since 1 October 2020, reappointed in April 2025 to 2030; chair Ashley Alder since 2023 ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
 - **Complaints and criticism.** Complaints against the FCA go to the independent Financial Regulators Complaints Commissioner. Critics include the Parliamentary Commission on Banking Standards (2013, on swaps mis-selling) and an APPG (2024 and 2025 reports) ([[raw/wikipedia-financial-conduct-authority.md]] · commentary).
 - **Complaint handling.** Through DISP in the FCA Handbook, firms must answer complaints within set deadlines and point complainants to the [[wiki/entities/Financial Ombudsman Service]]. When it assesses a firm's response to a complaint, the FCA may look at the quality of the response as well as its speed ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2R, Speed and quality of response). See [[wiki/concepts/Complaint handling time limits]].
+- **Financial penalties.** Under s. 206 FSMA the FCA may fine an authorised person that has contravened a requirement imposed by or under the Act ([[raw/fca-final-notice-tsb-2022.pdf#page=103]], Annex A 1.2). A breach of its [[wiki/concepts/Principles for Businesses]] is enough ([[raw/fca-final-notice-tsb-2022.pdf#page=1]], para 1.1). For conduct from 6 March 2010 it sets the amount in five steps under DEPP 6.5A ([[raw/fca-final-notice-tsb-2022.pdf#page=96]], para 6.1):
+  1. disgorgement of any financial benefit from the breach
+  2. a figure for seriousness: a percentage of revenue from the relevant products or business area where that revenue indicates the harm, otherwise set from other relevant factors
+  3. adjustment for aggravating and mitigating factors
+  4. adjustment for deterrence
+  5. a settlement discount reflecting the stage at which the firm agreed
+
+  ([[raw/fca-final-notice-tsb-2022.pdf#page=97]], paras 6.2, 6.5, 6.7; [[raw/fca-final-notice-tsb-2022.pdf#page=99]], para 6.16; [[raw/fca-final-notice-tsb-2022.pdf#page=100]], paras 6.20, 6.23). Agreement at Stage 1 gives 30% ([[raw/fca-final-notice-tsb-2022.pdf#page=101]], para 6.24). Example: [[wiki/entities/TSB Bank]], £50m at seriousness level 4, minus 15% for mitigation to £42.50m, minus 30% to £29.75m ([[raw/fca-final-notice-tsb-2022.pdf#page=99]], para 6.15; [[raw/fca-final-notice-tsb-2022.pdf#page=100]], para 6.19; [[raw/fca-final-notice-tsb-2022.pdf#page=101]], para 6.25). In that case it took account of a PRA penalty proposed for the same events ([[raw/fca-final-notice-tsb-2022.pdf#page=100]], para 6.18).
 - **The PRA's veto.** It can be directed by the PRA not to use its powers where stability is at risk. It need not comply if compliance would breach an international obligation of the UK ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3I(8)).
 
 ## Where sources disagree
@@ -72,6 +80,7 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/sources/Source - Commons Library briefing on the FCA 2016]]
 - [[wiki/sources/Source - Wikipedia on the FCA]]
 - [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]]
+- [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
@@ -86,3 +95,5 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/concepts/Complaint handling time limits]]
 - [[wiki/entities/TSB Bank]]
 - [[wiki/concepts/Operational resilience]]
+- [[wiki/concepts/Principles for Businesses]]
+- [[wiki/concepts/Outsourcing of critical or important functions]]
