@@ -14,6 +14,7 @@ tags: [project/thinking-system, roadmap]
 Back to [[00 Project Home]] · MVP defined in [[11 Project Charter]] §4
 
 > [!note] Milestones are set in [[10 Product Vision]] §4.1. MVP 2's scope and success criteria are in [[11 Project Charter]] §11 (D-084); its modules are below.
+> In Jira (project KAN, D-104), each module from M7 on is a sprint and each milestone a release; the status of each backlog item is kept there, not here.
 
 ## 1. Shape of the plan
 ```mermaid
@@ -57,7 +58,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 | **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section | About 1 week |
 | **MVP 2 complete** | | | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate in M0 (D-082) | |
 
-**Not in MVP 2:** everything else waits in [[22 Product Backlog]] with a proposed milestone. Work material and bank devices stay out until doc 36 exists (D-018, B-022).
+**Not in MVP 2:** everything else waits in the backlog, in Jira and [[22 Product Backlog]], with a proposed milestone. Work material and bank devices stay out until doc 36 exists (D-018, B-022).
 
 ## 3. M0 closed on 2026-09-19
 - [x] Documents 00, 02, 03, 11, 21, 30–33, 40 and 70 accepted

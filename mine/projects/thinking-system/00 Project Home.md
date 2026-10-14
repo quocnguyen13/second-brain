@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge assistant built on the **LLM Wiki** pattern: you collect sources, Claude compiles them into a cited wiki you read in Obsidian, and on top sit a thinking layer you own and, next, defined jobs done to your standards. Where it's going: [[10 Product Vision]]. How it works today: [[20 Product Requirements]].
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): M7 – Batch Ingest and Trust closed 2026-10-06 (7 of 7), and **M8 – Research and Import closed 2026-10-14**, tests 14 of 14, with the research and import criteria met ([[89 M8 Handover]]). Next: M9 – Large Documents. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082).
+**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): M7 – Batch Ingest and Trust closed 2026-10-06 (7 of 7), and **M8 – Research and Import closed 2026-10-14**, tests 14 of 14, with the research and import criteria met ([[89 M8 Handover]]). Next: M9 – Large Documents. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082). **The backlog lives in Jira** since 2026-10-12: project Second Brain (KAN) holds each item's status, priority and sprint, and [[22 Product Backlog]] keeps the rules (D-104).
 
 ## Document set
 Numbered by SDLC stage, in blocks of ten ([[03 Decision Log]] D-080). A document keeps its number; a new one takes the next free number in its stage. Planned documents have their number reserved, shown in *italics* with the backlog item that writes them. Governance runs through every stage, and every module adds a delivery record.
@@ -50,7 +50,7 @@ flowchart TD
 ### Stage 1 · Plan: strategy
 | # | Document | Purpose | Status |
 |---|---|---|---|
-| 10 | [[10 Product Vision]] | Who it's for, what they need, how success is measured, milestones and capabilities | Draft |
+| 10 | [[10 Product Vision]] | Who it's for, what they need, how success is measured, milestones and capabilities | **Accepted** |
 | 11 | [[11 Project Charter]] | MVP 1: problem, bet, scope, goals, success criteria | **Accepted** |
 | 12 | *Success Metrics* | Definitions, baselines and targets per milestone | Planned · B-031 |
 | 13 | *Market and Alternatives* | What else meets the same needs, and why this one | Planned · B-032 |
@@ -60,7 +60,7 @@ flowchart TD
 |---|---|---|---|
 | 20 | [[20 Product Requirements]] | The whole system for a newcomer: user stories, architecture, flows, data, edge cases | Draft |
 | 21 | [[21 Roadmap]] | Modules and their exits | **Accepted** |
-| 22 | [[22 Product Backlog]] | Capabilities and features waiting to be scheduled | Draft |
+| 22 | [[22 Product Backlog]] | The backlog's rules and each item's detail, listed by Jira key; status lives in Jira (D-104) | Draft |
 
 ### Stage 3 · Design
 | # | Document | Purpose | Status |
@@ -231,3 +231,6 @@ Entries up to 1.35 use the document numbers of their time; the renumber map abov
 | 1.47 | 2026-10-06 | M8 opening files placed and pushed (4b33a82). D-095 to D-101 accepted, with doc 31 §2.2: D-096 makes one exception to D-041 and moves D-075's web search to `/research`; D-101 revises D-043 for files. Docs 00, 03, 21, 22, 31, 33 and 40 updated |
 | 1.48 | 2026-10-12 | First `/lint` since M7 (2026-10-06): 7 findings, 6 high, all on UK pages from M7, all applied. M8 tests begin: IM1, IM3 and IM4 pass; IM2 partial, so `import` step 4 now says what ingesting a new version does. `import` skill and `system/test-results.md` updated; docs 00, 21 and 40 updated |
 | **1.49** | 2026-10-14 | **M8 closed: tests 14 of 14.** A research report on the Financial Ombudsman Service, with every fact sourced and quoted, led to seven primary sources clipped and compiled, and `/ask` answered from them. A Claude study note went through `/ingest` as an AI source: 108 statements, 67 kept as `· AI` leads, then 20 of them re-cited to the FCA's Final Notice on TSB. `/import` caught a planted duplicate and a planted new version, and downloaded a real PDF on one approval. Charter §11 criteria 1 and 2 met. Second lint: 5 high findings, applied. `research` fixed for links it built; D-102 (where AI claims go) and D-103 (lint after a large set) accepted. Doc 89 (M8 Handover) added, with the opening brief for M9 and a request for M0. The `research`, `ingest` skills, `ai-source.md` and `system/test-results.md` updated; docs 00, 03, 21, 22, 31 and 40 updated |
+| **1.50** | 2026-10-12 | **Backlog in Jira.** D-104 accepted: the Jira project Second Brain (KAN) holds every item with its status, priority, capability, milestone and module; doc 22 keeps the lifecycle, the Definition of Ready and the detail. 38 items and 9 epics imported, B-001 to B-038 as KAN-1 to KAN-38 and E-01 to E-09 as KAN-39 to KAN-47. D-105 proposed: new items take their Jira key, from KAN-48. Drafted as D-102 and D-103 and renumbered after M8's. Doc 22: lifecycle with Jira's statuses, new §1.3 on the mapping and who moves what, keys and decisions in §2 instead of milestone and status. Doc 02 §2, §4 and §11; doc 21's note; doc 03's register gains the Atlassian connector. Deployed with 1.51 |
+| 1.51 | 2026-10-14 | M8's request to M0 done: the as-built descriptions now cover research, import and Claude outputs as sources. Doc 20: §1.7 state, §2.1 components, US-01 widened and US-17 to US-19 added with their rows in §3.2, §5.7 `/research` and §5.8 `/import` as functions (Obsidian functions move to §5.9), §5.1 and §6.2 for AI sources, §6.4 at 9 allow, 3 ask and 13 deny, §6.6 the web boundary, §9 to §11. Doc 10 §2.2 N1 and §4.1–4.2; doc 11 §11, criteria 1 and 2 marked met; doc 30 §3 to §5 and §7; doc 02 §4, M8's row. D-106 proposed: skills keep to Glob, Grep and Read, and the shell stays for git and `/import`'s download. In Jira, KAN-3, KAN-4 and KAN-37 moved to Done |
+| **1.52** | 2026-10-14 | **Pending decisions accepted:** D-076 (the product vision), D-105 (new backlog items take their Jira key) and D-106 (skills keep to Glob, Grep and Read; the shell stays for git and `/import`'s download). Doc 10 accepted and promoted to `working`. Docs 03, 10, 20 and 22 updated. D-106 goes to M2 (`CLAUDE.md`) and M7 (`ingest`) as requests |

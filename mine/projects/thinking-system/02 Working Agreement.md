@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-06
+reviewed: 2026-10-14
 tags: [project/thinking-system, ways-of-working]
 ---
 
@@ -40,6 +40,7 @@ Back to [[00 Project Home]] · Decisions go in [[03 Decision Log]]
 | Project documents | The vault, at `mine/projects/thinking-system/`, pushed to the private GitHub repo `second-brain` (D-030) | **The vault repo.** Drop Claude's changed files into that folder, check `git diff`, commit, push, then click Sync. |
 | Discussion and first drafts | Module threads in the "Obsidian x Claude" Claude Project, one standing chat per module (§4) | None (working space) |
 | Background for every thread | Project knowledge, synced from `mine/projects/thinking-system/` in the vault repo | A synced copy of the master |
+| Backlog items and their status | Jira, project Second Brain (key KAN), on your personal Atlassian site (D-104) | **Jira.** [[22 Product Backlog]] keeps the rules and each item's detail |
 | Decisions | [[03 Decision Log]] | Vault |
 | Version history | Git, plus the change log in [[00 Project Home]] | Vault repo |
 
@@ -79,7 +80,7 @@ Every module has **one standing chat** in this Project, named `M<n> – <name>`.
 
 | Thread                   | Owns and maintains                                                                                                                                                      |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| M0 – Project Management  | Docs 00–04, 10–13, 20–22, 30, 31, 36, 50, 60 and 71; the handovers and retrospectives (80 onward); each milestone's scope; work that crosses modules                              |
+| M0 – Project Management  | Docs 00–04, 10–13, 20–22, 30, 31, 36, 50, 60 and 71; the handovers and retrospectives (80 onward); each milestone's scope; work that crosses modules; the Jira project: items, epics, sprints and releases (D-104) |
 | M1 – Vault and Git       | Folder structure and naming ([[32 Vault Blueprint]] §1, §7); `.gitignore` and `.gitattributes`; Obsidian settings and the Web Clipper ([[70 Obsidian Essentials]] §1–2) |
 | M2 – Connect Claude Code | `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md` and the templates ([[34 Templates]]); [[40 Claude Operating Instructions]] §1–3 and §6                    |
 | M3 – First Ingests       | Nothing since M7 opened: the `ingest` skill, the zone contract, the index and log formats and the ingest review all passed to M7 (D-084). The thread keeps the record of the first ingests ([[83 M3 Handover]]) |
@@ -87,7 +88,7 @@ Every module has **one standing chat** in this Project, named `M<n> – <name>`.
 | M5 – Lint and Review     | The `lint` skill (40 §4.4); `Review.base` (70 §6); the weekly review (70 §4); the lint tests                                                                            |
 | M6 – Thinking Layer      | The `drafts` skill (40 §4.5); the rules for `mine/` (32 §2–4); the Insight and Decision templates; 70 §4 step 5 and §5; the drafts tests                                |
 | M7 – Batch Ingest and Trust | The `ingest` skill (40 §4.1): sets, trust levels, the conflict review and the set reviews in `system/ingest/`; [[33 Input Zones]]; the `index.md` and `log.md` formats (32 §5–6); reviewing an ingest (70 §3); the trust table in `system/conventions.md`; the ingest set tests I1–I7. Drafts the rule changes for doc 31 §2–3, which M0 accepts |
-| M8 – Research and Import | The research summary and `/import` skills; Claude's research as a source (B-003) |
+| M8 – Research and Import | The `research` and `import` skills (40 §4.6–4.7); `ingest/ai-source.md`, a Claude output's path through `/ingest` (B-003, D-098, D-102); `system/research/`, its reports and the capture list (D-097); [[33 Input Zones]] §7; the tests IM1–IM6, RS1–RS4 and AI1–AI4. Closed 2026-10-14; the thread maintains them |
 | M9 – Large Documents | Compiling a document in parts across sessions (B-038) |
 
 Where two rows touch the same file, the more specific row owns that part. A skill's mirror in doc 40 changes with the skill, in the same commit. A thread may make small edits that follow from its own work in files another thread owns, such as a pointer in `CLAUDE.md`, a line in `system/conventions.md` or a cross-reference, and lists them in its change summary. Anything larger goes to the owning thread as a request.
@@ -114,6 +115,7 @@ Where two rows touch the same file, the more specific row owns that part. A skil
 - **Push and Sync before you start** (§2). A thread works from the synced documents; where they differ from what was said earlier in the chat, the documents win.
 - **Decision IDs** come from the synced [[03 Decision Log]]: the next free number. If two threads take the same ID before a Sync, M0 renumbers the later one.
 - **At the end of each working day, Claude provides:** the files that changed, the decisions to log, and the next steps.
+- **Jira** (D-104, [[22 Product Backlog]] §1.3). M0 puts a module's items in its sprint before the opening brief. The module thread moves them to In Progress when work starts and to In Review when the tests have run, and lists each item's status in the end-of-day summary. An item goes to Done or Dropped on your word. Jira is reached from these threads only, never from a vault session (D-036).
 - **When a build module meets its exit, Claude writes a handover** covering what was done, decisions made, open questions, the state of the vault, and what the next piece of work needs. Push and Sync, then take it to the thread the handover names.
 - **When a thread's work needs a change another thread owns,** Claude names the change and gives you a request brief for that thread.
 - **At the end of each phase, hold a short retrospective in M0,** covering what worked, what to change in the system, and what to change in this agreement.
@@ -183,27 +185,27 @@ The same traffic-light rule that governs the vault applies to anything you paste
 ## 11. Delivery framework
 Scrum-style, sized for a team of one ([[03 Decision Log]] D-077).
 
-**How the product breaks down:** vision ([[10 Product Vision]]) → capability (epic, E-nn) → feature (B-nnn, [[22 Product Backlog]]) → user story (US-nn, [[20 Product Requirements]] §3.1). Milestones pick features; modules deliver them.
+**How the product breaks down:** vision ([[10 Product Vision]]) → capability (epic, E-nn) → feature (B-nnn, or its Jira key from KAN-48; [[22 Product Backlog]]) → user story (US-nn, [[20 Product Requirements]] §3.1). Milestones pick features; modules deliver them. The backlog and its status live in Jira, project KAN (D-104).
 
 | Scrum element | Here |
 |---|---|
 | Product Owner | You: the vision, priorities and every acceptance (§1) |
 | Developers | Claude: in this Project as architect and drafter, in Claude Code as builder |
 | Scrum Master | No one person. The M0 thread keeps the process, and this agreement is its rulebook |
-| Product backlog | [[22 Product Backlog]], owned by M0 |
-| Sprint | A module: one increment, run in its standing thread to an exit in [[21 Roadmap]]. Its length follows the work, not a fixed two weeks |
+| Product backlog | Jira, project KAN: every item with its status, priority, epic, release and sprint. [[22 Product Backlog]] keeps the rules and the detail. Owned by M0 (D-104) |
+| Sprint | A module: one increment, run in its standing thread to an exit in [[21 Roadmap]], and a Jira sprint named after the thread. Its length follows the work, not a fixed two weeks |
 | Sprint goal | The module's goal in [[21 Roadmap]] §2 |
 | Sprint planning | The opening brief (§4) |
-| Backlog refinement | M0 moves items from New to Ready ([[22 Product Backlog]] §1) |
+| Backlog refinement | M0 moves items from Idea to Ready in Jira ([[22 Product Backlog]] §1) |
 | Definition of Ready / Done | [[22 Product Backlog]] §1.1 / §6 here |
 | Daily scrum | The end-of-day summary: files changed, decisions, next steps (§4) |
 | Sprint review | The handover (docs 80 onward): what was built, tested and accepted |
 | Retrospective | At the end of each milestone, in M0 ([[87 MVP Retrospective]] for MVP 1) |
-| Release | A milestone whose exit is met, with release notes in doc 60 |
+| Release | A milestone whose exit is met: a Jira release (MVP 2 onward), with release notes in doc 60 |
 
 **A milestone, start to finish**
-1. **Scope:** M0 picks features with MoSCoW and sets the exit.
+1. **Scope:** M0 picks features with MoSCoW, sets the exit, and adds them to the milestone's release in Jira.
 2. **Refine:** each picked feature reaches Ready.
-3. **Build:** one module per increment, each closed by a handover.
+3. **Build:** one module per increment, each a Jira sprint closed by a handover.
 4. **Release:** exit met, and release notes written once doc 60 exists.
 5. **Retrospective and showcase gate** in M0: you decide whether this MVP is the moment to showcase the product (D-082). Then the next milestone is scoped.

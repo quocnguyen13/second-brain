@@ -14,28 +14,35 @@ tags: [project/thinking-system, backlog]
 Back to [[00 Project Home]] · Phase: Plan, scope · Owned by M0 – Project Management ([[02 Working Agreement]] §4) · Vision in [[10 Product Vision]] · Scheduled work in [[21 Roadmap]]
 
 > [!abstract] What this is
-> Every feature the product could get, grouped by the capability it serves ([[10 Product Vision]] §4.2). An item enters here, gets refined, and moves into a module only when M0 schedules it. Nothing here commits the project to building anything ([[03 Decision Log]] D-072). The milestone column is a proposal until the scoping of each milestone sets it.
+> Every feature the product could get, grouped by the capability it serves ([[10 Product Vision]] §4.2). An item enters the backlog, gets refined, and moves into a module only when M0 schedules it. Nothing here commits the project to building anything ([[03 Decision Log]] D-072).
+>
+> **Since 2026-10-12 the items live in Jira** (D-104): project Second Brain, key KAN, holds each item's status, priority, capability, milestone and module. This document keeps the rules (§1) and the detail (§3), and lists the items by key (§2).
 
 ## 1. How items move
 ```mermaid
 %%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart TD
-    N["New<br/>need in one line"] --> R["Refined<br/>options, questions answered"]
+    N["Idea<br/>need in one line"] --> R["Refined<br/>options, questions answered"]
     R --> Y["Ready<br/>meets the Definition of Ready"]
-    Y --> S["Scheduled<br/>in a milestone and module"]
-    S --> D["Done<br/>meets the Definition of Done"]
+    Y --> S["To Do<br/>in a module's sprint"]
+    S --> P["In Progress<br/>being built"]
+    P --> V["In Review<br/>tests run, waiting for you"]
+    V --> D["Done<br/>meets the Definition of Done"]
     N -.-> X["Dropped<br/>with a reason"]
     R -.-> X
 ```
-- **New:** captured as said, with the need in one line.
+The names are Jira's statuses (§1.3).
+- **Idea:** captured as said, with the need in one line.
 - **Refined:** scope, options, dependencies and open questions written, and the questions answered.
 - **Ready:** meets the Definition of Ready (§1.1).
-- **Scheduled:** M0 puts it in [[21 Roadmap]], in a milestone and a module, and names the owning thread.
-- **Done:** meets the Definition of Done ([[02 Working Agreement]] §6).
-- **Dropped:** with a line saying why. Items are never deleted.
-- **On hold:** at your request, at any status. The item keeps its status, is marked "on hold", and stays out of scoping until you reopen it.
+- **To Do:** M0 schedules it: a milestone, a module and the owning thread, in [[21 Roadmap]] and in that module's sprint.
+- **In Progress:** the module thread is building it.
+- **In Review:** built and tested, waiting for your acceptance.
+- **Done:** meets the Definition of Done ([[02 Working Agreement]] §6), on your word.
+- **Dropped:** with a line saying why, on your word. Items are never deleted.
+- **On hold:** at your request, at any status. The item keeps its status, is flagged, and stays out of scoping until you reopen it.
 
-IDs never change: capabilities E-01 onward, features B-001 onward. Next free: **B-039**.
+IDs never change. B-001 to B-038 are KAN-1 to KAN-38, and E-01 to E-09 are KAN-39 to KAN-47. A new item is created in Jira and known by its key, from **KAN-48**; a new capability is an epic named E-10 onward (D-105).
 
 ### 1.1 Definition of Ready
 - [ ] The need is one sentence from your side, tied to a need or goal in [[10 Product Vision]] §2.
@@ -48,102 +55,124 @@ IDs never change: capabilities E-01 onward, features B-001 onward. Next free: **
 
 ### 1.2 Types and priority
 - **Types:** *Feature* (new behaviour), *Content* (sources or pages in the vault), *Chore* (a fix or tidy-up with no new behaviour), *Doc* (a project document).
-- **Priority:** set when a milestone is scoped, with MoSCoW (Must, Should, Could, Won't this time). Ties go to the item that moves the North Star most for the least effort ([[10 Product Vision]] §3).
+- **Priority:** set when a milestone is scoped, with MoSCoW (Must, Should, Could, Won't this time). Ties go to the item that moves the North Star most for the least effort ([[10 Product Vision]] §3). Both are kept in Jira (§1.3).
+
+### 1.3 In Jira
+Project **Second Brain**, key **KAN**, on your personal Atlassian site (D-104). Jira holds each item's status, priority, capability, milestone and module. This document holds the rules and the detail. Threads read this document through project knowledge; Jira is not in project knowledge, so a rule written only in Jira reaches no thread.
+
+| Here | In Jira |
+|---|---|
+| Capability E-nn | Epic, named "E-nn · name" |
+| Feature B-nnn | Work item named "B-nnn · title", under its epic: a Feature for Feature and Content items, a Task for Chore and Doc items |
+| Type | Label: `feature`, `content`, `chore` or `doc` |
+| Milestone | Release: MVP 2, MVP 3, MVP 4. Labels `later` and `showcase-gate` for the rest |
+| Priority (MoSCoW) | Priority: Must is Highest, Should High, Could Medium, Won't this time Low; Lowest until scored |
+| Module | Sprint, named after its thread, such as "M8 – Research and Import" |
+| Status (§1) | Status: Idea, Refined, Ready, To Do, In Progress, In Review, Done, Dropped |
+| On hold | Flag, with the label `on-hold` |
+| Detail (§3) | The description gives the need, depends-on, owner and decisions, and points here |
+
+**Who moves what**
+- **M0** creates items, refines them to Ready, sets priority and milestone, and schedules them into a module's sprint.
+- **The module thread** moves its sprint's items to In Progress when work starts, and to In Review when the tests have run.
+- **You** accept. An item goes to Done or Dropped only on your word; Claude makes the move when you say so.
+- Vault sessions don't connect to Jira (D-036); the connector is used from this Project's threads.
+- Jira holds titles, needs and pointers, nothing from `raw/` or `mine/` beyond that, and nothing from work (D-018).
 
 ## 2. Backlog by capability
-Milestones: **MVP 2** Research assistant, scope set by D-084 (priority and module shown as "MVP 2 · Must · M7") · **MVP 3** Work assistant · **MVP 4** Work-ready · **Later** · **Gate**: scheduled when you choose a showcase moment after an MVP (D-082) ([[10 Product Vision]] §4.1).
+Each item's status, priority, milestone and module are in Jira (§1.3); the key is in the second column, and the last column lists the decisions that shaped or delivered it. Milestones: **MVP 2** Research assistant, scope set by D-084 · **MVP 3** Work assistant · **MVP 4** Work-ready · **Later** · **Gate**: scheduled when you choose a showcase moment after an MVP (D-082) ([[10 Product Vision]] §4.1).
 
-### E-01 · Capture
+### E-01 · Capture · KAN-39
 Gets material in: web clips, files, Claude outputs. Needs N1, N2.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-001 | Office documents as sources (§3) | Feature | MVP 4 | New | Doc 36, for work files (D-018) | M3, M1 |
-| B-002 | Mermaid support (§3) | Feature | — | New; on hold | — | M3 or M4 |
-| B-004 | Research a topic: Claude researches a new topic and returns a summary in which every fact names its source, plus the primary sources for you to clip (D-075, D-083) | Feature | MVP 2 · Must · M8 | **Done 2026-10-14** (D-095 to D-097; tests RS1–RS4) | B-003 | M8 (D-084) |
-| B-005 | Phone capture and sync | Feature | Later | New | — | M1 |
-| B-037 | `/import` (§3): before ingest, checks new files against `raw/` for duplicates and newer versions, and recommends what to do (D-083) | Feature | MVP 2 · Must · M8 | **Done 2026-10-14** (D-099, D-101; tests IM1–IM6) | Doc 31 §3, superseded claims | M8 (D-084) |
+| B-001 | KAN-1 | Office documents as sources (§3) | Feature | Doc 36, for work files (D-018) | M3, M1 | — |
+| B-002 | KAN-2 | Mermaid support (§3) | Feature | — | M3 or M4 | — |
+| B-004 | KAN-4 | Research a topic: Claude researches a new topic and returns a summary in which every fact names its source, plus the primary sources for you to clip (D-075, D-083) | Feature | B-003 | M8 (D-084) | D-095 to D-097 |
+| B-005 | KAN-5 | Phone capture and sync | Feature | — | M1 | — |
+| B-037 | KAN-37 | `/import` (§3): before ingest, checks new files against `raw/` for duplicates and newer versions, and recommends what to do (D-083) | Feature | Doc 31 §3, superseded claims | M8 (D-084) | D-099, D-101 |
 
-### E-02 · Compile and verify
+### E-02 · Compile and verify · KAN-40
 Turns sources into cited pages, with status, conflicts and trust. Needs N1, N3.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-003 | Claude outputs as sources (§3) | Feature | MVP 2 · Must · M8 | **Done 2026-10-14** (D-096, D-098; tests AI1–AI4); direction set by D-075 | Rule in doc 31 §2.2 | M8 (D-084), with small edits in what M2, M4, M5 and M7 own; rule by M0 |
-| B-006 | Ingest a set: several sources on one topic in one run, with one review | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-085, D-086; tests I1, I3–I5). Resume after a stopped run is untested, for M9 | D-022 revised | M7 (D-084) |
-| B-007 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-087; tests I4, I7) | Rule in doc 31 §2 | M7; rule by M0 |
-| B-008 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-088, D-094; tests I5, I6) | B-007; doc 31 §3 revised | M7; rule by M0 |
-| B-009 | First domain set: the UK financial system and its legal framework | Content | MVP 2 · Must · M7 | Started: 16 sources compiled. FSMA 2000 Part 1A and M7's six; in M8, the Ombudsman set of seven, a Claude study note and the FCA's Final Notice to TSB. M9 adds the full FSMA | The test set for B-006 | You, with M7 |
-| B-038 | Large documents (§3): a 1,000-page book or a full Act compiled in parts across sessions, with progress tracked | Feature | MVP 2 · Must · M9 | New | B-006 | M9 |
+| B-003 | KAN-3 | Claude outputs as sources (§3) | Feature | Rule in doc 31 §2.2 | M8 (D-084), with small edits in what M2, M4, M5 and M7 own; rule by M0 | D-075, D-096, D-098 |
+| B-006 | KAN-6 | Ingest a set: several sources on one topic in one run, with one review | Feature | D-022 revised | M7 (D-084) | D-085, D-086 |
+| B-007 | KAN-7 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | Rule in doc 31 §2 | M7; rule by M0 | D-087 |
+| B-008 | KAN-8 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | B-007; doc 31 §3 revised | M7; rule by M0 | D-088, D-094 |
+| B-009 | KAN-9 | First domain set: the UK financial system and its legal framework | Content | The test set for B-006 | You, with M7 | — |
+| B-038 | KAN-38 | Large documents (§3): a 1,000-page book or a full Act compiled in parts across sessions, with progress tracked | Feature | B-006 | M9 | — |
 
-### E-03 · Ask and reuse
+### E-03 · Ask and reuse · KAN-41
 Answers from your own sources, and keeps the good ones. Needs N2, N3.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-010 | Local Markdown search, once `index.md` stops scaling | Feature | Later | New | — | M4 |
+| B-010 | KAN-10 | Local Markdown search, once `index.md` stops scaling | Feature | — | M4 | — |
 
-### E-04 · Keep healthy
+### E-04 · Keep healthy · KAN-42
 Finds what's wrong or stale before you rely on it. Need N3.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-011 | Page names in `log.md`, so `/drafts` can say which operation changed a page | Chore | MVP 2 · Should · M7 | **Done 2026-10-06** (D-091) | — | M7 |
-| B-012 | Re-read check for decision pages | Feature | Later | New | B-016 | M6 |
-| B-013 | A hook that enforces page status | Feature | Later | New | — | M2, M5 |
-| B-014 | A scheduled weekly digest | Feature | Later | New | — | M5 |
+| B-011 | KAN-11 | Page names in `log.md`, so `/drafts` can say which operation changed a page | Chore | — | M7 | D-091 |
+| B-012 | KAN-12 | Re-read check for decision pages | Feature | B-016 | M6 | — |
+| B-013 | KAN-13 | A hook that enforces page status | Feature | — | M2, M5 | — |
+| B-014 | KAN-14 | A scheduled weekly digest | Feature | — | M5 | — |
 
-### E-05 · Think
+### E-05 · Think · KAN-43
 Holds your own conclusions and decisions. Goal: learn faster.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-015 | The five Claude-written insights: rewrite, keep or archive (D-068) | Chore | MVP 2 · Could | New | — | You, with M6 |
-| B-016 | The first decision page, and a routine for decisions | Feature | Later | New | — | M6 |
+| B-015 | KAN-15 | The five Claude-written insights: rewrite, keep or archive (D-068) | Chore | — | You, with M6 | — |
+| B-016 | KAN-16 | The first decision page, and a routine for decisions | Feature | — | M6 | — |
 
-### E-06 · Jobs and standards
+### E-06 · Jobs and standards · KAN-44
 Produces work outputs to your standards. Need N4.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-017 | Standards library: content, inputs, template, diagram style and audience for each output, as files in the vault, specified in doc 35 | Feature | MVP 3 | New | — | New module |
-| B-018 | PRD job | Feature | MVP 3 | New | B-017 | New module |
-| B-019 | Stakeholder brief job | Feature | Later | New | B-017 | New module |
-| B-020 | Meeting notes to decisions job | Feature | Later | New | B-017; doc 36 for work notes | New module |
-| B-021 | Prioritisation reasoning job | Feature | Later | New | B-017 | New module |
+| B-017 | KAN-17 | Standards library: content, inputs, template, diagram style and audience for each output, as files in the vault, specified in doc 35 | Feature | — | New module | — |
+| B-018 | KAN-18 | PRD job | Feature | B-017 | New module | — |
+| B-019 | KAN-19 | Stakeholder brief job | Feature | B-017 | New module | — |
+| B-020 | KAN-20 | Meeting notes to decisions job | Feature | B-017; doc 36 for work notes | New module | — |
+| B-021 | KAN-21 | Prioritisation reasoning job | Feature | B-017 | New module | — |
 
-### E-07 · Control and safety
+### E-07 · Control and safety · KAN-45
 Nothing changes without your say, and confidential material stays out. Need N5.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-022 | Data governance (doc 36), with the bank AI-tools policy (Q-004) | Doc | MVP 4 | New | — | M0 |
-| B-023 | Settle Q-015: claude.ai skills that sync into vault sessions | Chore | MVP 2 · Could | New. More pressing since M8: a run suggested the synced `deep-research` skill in place of `/research` | — | M2 |
+| B-022 | KAN-22 | Data governance (doc 36), with the bank AI-tools policy (Q-004) | Doc | — | M0 | — |
+| B-023 | KAN-23 | Settle Q-015: claude.ai skills that sync into vault sessions | Chore | — | M2 | — |
 
-### E-08 · Operate
+### E-08 · Operate · KAN-46
 Keeps running with little effort, and changes safely. Needs N1, N5.
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-024 | One move command for a whole set into `raw/`; the deny rule stays (D-045) | Feature | MVP 2 · Must · M7 | **Done 2026-10-06** (D-089) | B-006 | M7 |
-| B-025 | Claude commits after your review, with your approval per command; the push stays yours | Feature | MVP 2 · Should · M7 | **Done 2026-10-06** (D-090) | D-008 revised | M7, with M2's settings |
-| B-026 | Project docs written straight into the vault through the desktop link, instead of files you copy | Feature | MVP 2 · Could | New | D-028 revised | M0 |
-| B-027 | Skills no longer mirrored in doc 40; it links to the skill files instead | Chore | MVP 2 · Could | New | Your view on the mirrors ([[87 MVP Retrospective]] §3.1) | M2 to M6 |
+| B-024 | KAN-24 | One move command for a whole set into `raw/`; the deny rule stays (D-045) | Feature | B-006 | M7 | D-089 |
+| B-025 | KAN-25 | Claude commits after your review, with your approval per command; the push stays yours | Feature | D-008 revised | M7, with M2's settings | D-090 |
+| B-026 | KAN-26 | Project docs written straight into the vault through the desktop link, instead of files you copy | Feature | D-028 revised | M0 | — |
+| B-027 | KAN-27 | Skills no longer mirrored in doc 40; it links to the skill files instead | Chore | Your view on the mirrors ([[87 MVP Retrospective]] §3.1) | M2 to M6 | — |
 
-### E-09 · Showcase and documentation
+### E-09 · Showcase and documentation · KAN-47
 Shows the product and how it was built. Goal: show the work (D-079), when you decide an MVP is the showcase moment (D-082).
 
-| ID | Item | Type | Milestone | Status | Depends on | Owner |
+| ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
-| B-028 | Case study (doc 01): problem, your role, approach, key decisions, results, lessons | Doc | Gate | New | — | M0 |
-| B-029 | Public repository: a cleaned copy with a README and a licence. Keeps the system files and project docs; leaves out `raw/` (others' copyright), your notes in `mine/` and anything personal | Feature | Gate | New | D-018 check of every file | M0, M1 |
-| B-030 | Demo: screenshots and a short walkthrough of one ingest and one `/ask` | Doc | Gate | New | — | M0 |
-| B-031 | Success metrics (doc 12): definitions, baselines and targets per milestone | Doc | Gate | New | — | M0 |
-| B-032 | Market and alternatives (doc 13): what else solves N1–N4, and why this one | Doc | Gate | New | Research | M0 |
-| B-033 | Risk register (doc 04), gathering the risks now spread across doc 11 §10 and the handovers | Doc | Gate | New | — | M0 |
-| B-034 | Test strategy and traceability (doc 50): user stories to tests to results | Doc | Gate | New | — | M0, with M4 to M6 |
-| B-035 | Release notes (doc 60), starting with MVP 1 | Doc | Gate | New | — | M0 |
-| B-036 | Operations runbook (doc 71): routines, deploy, backup, restore and rollback | Doc | Gate | New | — | M0 |
+| B-028 | KAN-28 | Case study (doc 01): problem, your role, approach, key decisions, results, lessons | Doc | — | M0 | — |
+| B-029 | KAN-29 | Public repository: a cleaned copy with a README and a licence. Keeps the system files and project docs; leaves out `raw/` (others' copyright), your notes in `mine/` and anything personal | Feature | D-018 check of every file | M0, M1 | — |
+| B-030 | KAN-30 | Demo: screenshots and a short walkthrough of one ingest and one `/ask` | Doc | — | M0 | — |
+| B-031 | KAN-31 | Success metrics (doc 12): definitions, baselines and targets per milestone | Doc | — | M0 | — |
+| B-032 | KAN-32 | Market and alternatives (doc 13): what else solves N1–N4, and why this one | Doc | Research | M0 | — |
+| B-033 | KAN-33 | Risk register (doc 04), gathering the risks now spread across doc 11 §10 and the handovers | Doc | — | M0 | — |
+| B-034 | KAN-34 | Test strategy and traceability (doc 50): user stories to tests to results | Doc | — | M0, with M4 to M6 | — |
+| B-035 | KAN-35 | Release notes (doc 60), starting with MVP 1 | Doc | — | M0 | — |
+| B-036 | KAN-36 | Operations runbook (doc 71): routines, deploy, backup, restore and rollback | Doc | — | M0 | — |
 
 ## 3. Item details
 Items with more than a one-line need. Others get a section here when they are refined.
