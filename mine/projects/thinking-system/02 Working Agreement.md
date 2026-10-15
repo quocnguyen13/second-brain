@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-14
+reviewed: 2026-10-15
 tags: [project/thinking-system, ways-of-working]
 ---
 
@@ -37,7 +37,7 @@ Back to [[00 Project Home]] · Decisions go in [[03 Decision Log]]
 ## 2. Where things live
 | What | Where | Master copy |
 |---|---|---|
-| Project documents | The vault, at `mine/projects/thinking-system/`, pushed to the private GitHub repo `second-brain` (D-030) | **The vault repo.** Drop Claude's changed files into that folder, check `git diff`, commit, push, then click Sync. |
+| Project documents | The vault, at `mine/projects/thinking-system/`, pushed to the private GitHub repo `second-brain` (D-030) | **The vault repo.** Claude's changed files arrive in the staging folder; you copy them in, check `git diff`, commit, push, then click Sync (§3, rule 2). |
 | Discussion and first drafts | Module threads in the "Obsidian x Claude" Claude Project, one standing chat per module (§4) | None (working space) |
 | Background for every thread | Project knowledge, synced from `mine/projects/thinking-system/` in the vault repo | A synced copy of the master |
 | Backlog items and their status | Jira, project Second Brain (key KAN), on your personal Atlassian site (D-104) | **Jira.** [[22 Product Backlog]] keeps the rules and each item's detail |
@@ -48,14 +48,15 @@ Claude reads the documents through project knowledge, which syncs only `mine/pro
 
 ## 3. The document loop
 ```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
 flowchart LR
-    A[Claude drafts<br/>trust: ai-draft] --> B[You read it<br/>in Obsidian or on your phone]
-    B --> C[You comment<br/>in chat]
-    C --> D[Claude revises and sends<br/>changed files only]
-    D --> E[You replace the files<br/>in your vault]
+    A["Claude drafts<br/>trust: ai-draft"] --> B["You read it<br/>in Obsidian or on your phone"]
+    B --> C["You comment<br/>in chat"]
+    C --> D["Claude writes the changed files<br/>to the staging folder"]
+    D --> E["You copy them into the vault,<br/>commit, push, Sync"]
     E --> B
-    B -->|happy with it| F[You say 'accept'<br/>Claude sets trust: working]
-    F --> G[Decisions logged<br/>change log updated]
+    B -->|"happy with it"| F["You say 'accept'<br/>Claude sets trust: working"]
+    F --> G["Decisions logged<br/>change log updated"]
 ```
 Rules:
 1. **Comment in chat, pointing to where the comment applies:** document number, then section. For example:
@@ -65,7 +66,21 @@ Rules:
    03 D-006: accept
    ```
    Short replies such as "accept 10, 22" are fine.
-2. **Claude delivers only the files that changed**, with a short summary of the changes. Replace those files in `mine/projects/thinking-system/`, read `git diff`, then commit and push. You get a full zip only when you ask for one, or at the end of a phase.
+2. **Claude's files go through the staging folder, never straight into the vault** (D-114): `C:\Users\Admin\Documents\Obsidian x Claude`.
+   - **One folder per batch,** named after the thread and the work, such as `M0-staging-rule`. Inside it, `vault\` holds only the files that changed, at their vault paths (`vault\mine\projects\thinking-system\02 Working Agreement.md`), and `_DEPLOY.md` gives a short summary of the changes and the steps below. Each batch is built on the vault's current files. You get a full zip only when you ask for one, or at the end of a phase.
+   - **Staging → vault → commit → push,** in PowerShell with Obsidian closed:
+     ```powershell
+     cd "C:\Users\Admin\Vaults\Second-Brain"
+     git status
+     robocopy "C:\Users\Admin\Documents\Obsidian x Claude\<batch>\vault" . /E
+     git add "<each file the batch lists>"
+     git status
+     git commit -m "<thread>: <what changed>"
+     git push
+     ```
+     Then click Sync (§2). `git add` names the batch's files, so nothing else rides along. If the first `git status` shows work not yet committed, commit that first, in the thread it came from.
+   - **Every thread's deployment steps use this path and these steps.** Claude doesn't write project files into the vault, and doesn't attach them to the chat. A file Claude's tools can't write into the folder, such as a skill under `.claude\`, comes as a zip with the same paths, for you to extract into the batch's `vault\` folder.
+   - **After the push,** Claude checks that the vault matches the batch and says the folder can go. You delete it; Claude can't delete files there.
 3. **If you edit a file directly in Obsidian, commit, push, and Sync first.** Otherwise Claude's next revision will overwrite your edits.
 4. **Once you accept a document, Claude sets its `trust` to `working`** and adds an entry to the change log. Only you move a document to `verified`.
 5. **Documents are numbered by SDLC stage, in blocks of ten** (D-080). A document keeps its number; a new one takes the next free number in its stage ([[00 Project Home]]).

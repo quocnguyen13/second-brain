@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-14
+reviewed: 2026-10-15
 tags: [project/thinking-system, moc]
 ---
 
@@ -236,3 +236,4 @@ Entries up to 1.35 use the document numbers of their time; the renumber map abov
 | **1.52** | 2026-10-14 | **Pending decisions accepted:** D-076 (the product vision), D-105 (new backlog items take their Jira key) and D-106 (skills keep to Glob, Grep and Read; the shell stays for git and `/import`'s download). Doc 10 accepted and promoted to `working`. Docs 03, 10, 20 and 22 updated. D-106 goes to M2 (`CLAUDE.md`) and M7 (`ingest`) as requests |
 | 1.53 | 2026-10-14 | M9 opened from [[89 M8 Handover]]. D-107 to D-113 proposed: a large document stays whole in `raw/`, is mapped first and compiled one part per run with `/ingest part`, with progress on the map and in the set review; the full FSMA as one PDF; the `/import` verdict **part**; amended Acts as dated versions; citations with their page or heading. New supporting file `ingest/large-source.md`; small edits in `ingest`, `import`, `ask`, `CLAUDE.md` and `system/conventions.md`; tests LD1–LD8. Docs 00, 03, 21, 22 and 40 updated |
 | 1.54 | 2026-10-15 | D-107 to D-113 accepted: large documents mapped first and compiled one part per run, progress on the map, the full FSMA as one PDF, the `/import` verdict **part**, amended Acts as dated versions, citations with their page or heading, and tests LD1–LD8. Docs 00, 03, 21, 22 and 40 updated |
+| 1.55 | 2026-10-15 | D-114 accepted, at your request: Claude's files reach the vault through the staging folder `Documents\Obsidian x Claude`, one folder per batch with vault paths and a `_DEPLOY.md`; you copy, commit, push and Sync. Doc 02 §2 and §3 (rule 2 and the loop diagram) updated |
