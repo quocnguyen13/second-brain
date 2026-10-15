@@ -5,7 +5,7 @@
 ## Page types
 | `type` | Folder | Title | Template |
 |---|---|---|---|
-| `source` | `wiki/sources/` | `Source - <title>` | `system/templates/Source template.md` |
+| `source` | `wiki/sources/` | `Source - <title>`. A large document has a map, `Source - <title>`, and a page per compiled part, `Source - <title> - Part <label>` | `system/templates/Source template.md` |
 | `entity` | `wiki/entities/` | The name | `system/templates/Entity template.md` |
 | `concept` | `wiki/concepts/` | The term | `system/templates/Concept template.md` |
 | `analysis` | `wiki/analyses/` | The question or claim | `system/templates/Analysis template.md` |
@@ -42,6 +42,7 @@ One level per source, set by its type. When a source fits no row, or two, propos
 - Link in sentences with `[[wikilinks]]`, using page titles.
 - Every entity and concept page links to the source pages that mention it, and each source page links back.
 - Cite a claim inline with a link to the raw file, e.g. `([[raw/karpathy-llm-wiki.md]])`. For a PDF, add the page, e.g. `([[raw/bush-as-we-may-think.pdf#page=16]])`; Obsidian opens the PDF at that page. For legislation, add the section, e.g. `([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3D(1))`. Add the level marker last.
+- In a document compiled in parts, every citation carries its place: the PDF page, plus the section for legislation (`([[raw/uk-parliament-fsma-2000-2026-10.pdf#page=N]], s. 55E(2))`); in Markdown, a link to the heading the passage sits under, copied as written but without `# | ^ \ [ ] %` (`([[raw/<name>.md#<heading>]], s. 19(1))`).
 - Insight pages end with a Relations block: `- supports:: [[...]]`, `- contradicts:: [[...]]`, `- extends:: [[...]]`, `- source:: [[...]]`. Read each line as "this insight supports / contradicts / extends the page"; `source::` names the source page the idea came from.
 
 ## `index.md`
@@ -59,6 +60,6 @@ Report: research-YYYY-MM-DD-<topic>, N facts from N sources (N primary, N second
 
 ## Naming
 - Folders: lower case with hyphens. Page titles: plain language.
-- Files in `raw/`: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site (`fca-...`, `wikipedia-...`); add the year for a document in a dated series. A new version of a document already in `raw/` takes the same stem with its year, or year and month (`fca-about-the-fca-2026-10.md`); the older file stays. A Claude output is `claude-<YYYY-MM-DD>-<topic>.md`. Named when they move in; content never changed.
+- Files in `raw/`: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site (`fca-...`, `wikipedia-...`); add the year for a document in a dated series. A new version of a document already in `raw/` takes the same stem with its year, or year and month (`fca-about-the-fca-2026-10.md`); the older file stays. A Claude output is `claude-<YYYY-MM-DD>-<topic>.md`. Consolidated legislation ends with the year and month it is "up to date" to (`uk-parliament-fsma-2000-2026-10.pdf`). Named when they move in; content never changed.
 - Never use these characters in titles: `# ^ [ ] | \ / : * " < > ?`
 - One idea per insight page. Your drafts cite `raw/` inline, as wiki pages do, and mark reasoning no source states "(reasoning)".

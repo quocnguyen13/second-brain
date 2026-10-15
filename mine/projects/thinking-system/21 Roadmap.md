@@ -230,8 +230,8 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] D-102 (where an unbacked AI claim goes) and D-103 (lint after a large set) accepted at the close; `research`, `ingest` and `ai-source.md` revised with them and the RS1 fixes
 - [x] **M8 exit: 14 of 14** (2026-10-14). [[11 Project Charter]] §11 criteria 1 (research) and 2 (import) are met
 - [x] Handover written: [[89 M8 Handover]], with the request for M0 and the opening brief for M9
-- [ ] Closing files placed, committed and pushed; Sync
-- [ ] **Next:** M9 – Large Documents, opened from [[89 M8 Handover]]
+- [x] Closing files placed, committed and pushed; Sync (doc 89 was in project knowledge when M9 opened)
+- [x] **Next:** M9 – Large Documents, opened from [[89 M8 Handover]] on 2026-10-14 (§12)
 
 **Parked in M8, to pick up when they start to hurt:**
 - Resuming a stopped set (D-086) is still untested; M9 will exercise it.
@@ -239,3 +239,16 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - Claude used read-only shell commands twice against the skills' ground rules (lint counting files, ingest reading `log.md` with `tail`), harmless and reported. Whether to allow read-only shell is for M0.
 - Claude in Chrome can't press the Web Clipper, and computer use only reads browser windows, so clipping stays your step. The FCA Handbook's "View as PDF" has no link for `/import`.
 - Eleven drafts wait for `/drafts`.
+
+## 12. M9 – Large Documents
+- [x] Opened 2026-10-14 from the brief in [[89 M8 Handover]]. Docs 11 §11, 21 §2, 22 (B-038), 31 §2.2, 40 §4.1 and §4.7, and 03 (D-042, D-086, D-099, D-102, D-104, D-106) read, with the live `CLAUDE.md`, settings and skills. KAN-38 moved to In Progress. Tool facts checked (2026-10-14): Read takes a PDF at most 20 pages a call, rendered as images, and refuses a text file over 256 KB without a range; Pro has a five-hour session limit and a weekly limit, shared with claude.ai; usage per request grows with the session
+- [x] The handover's questions settled: map first and one part per run (D-107); progress on the map and in the set review, and one part of about 60 pages per session (D-108); the full Act as one PDF (D-109); the verdict **part** and a compare for Part 1A (D-110); amended Acts as dated versions (D-111); citations with their page or heading (D-112)
+- [x] `ingest/large-source.md` written, beside `ai-source.md`. Small edits in what other threads own: `ingest` (M7: A0, A1, the set review note, and the PDF ground rule as D-106 asked), `import` (M8: the verdict **part**, extent, legislation names), `ask` (M4: one line on parts not compiled), `CLAUDE.md` and `system/conventions.md` (M2: a pointer, the part page title, the citation form, legislation names). Mirrored in [[40 Claude Operating Instructions]] §2 and §4
+- [x] Tests LD1–LD8 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md`, Run 6 (D-113)
+- [x] D-107 to D-113 accepted (2026-10-15)
+- [ ] Files placed, committed and pushed; Sync
+- [ ] LD1–LD3: the Act downloaded, briefed and mapped
+- [ ] LD4–LD7: parts compiled across sessions, one run stopped and resumed, `/lint` after each part, the FSMA leads backed
+- [ ] LD8: `/ask` on a part not compiled
+- [ ] **M9 exit: 8 of 8**; [[11 Project Charter]] §11 criterion 4 met
+- [ ] Handover written; next, MVP 2's exit: criteria 5 (side-by-side) and 6 (regression)

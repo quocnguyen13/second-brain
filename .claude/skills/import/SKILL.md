@@ -1,6 +1,6 @@
 ---
 name: import
-description: Load documents from links into inbox/sources/, then check the files there against raw/ for duplicates and newer versions, with a recommendation for each. Runs only when I type /import.
+description: Load documents from links into inbox/sources/, then check the files there against raw/ for duplicates, newer versions and overlapping parts, with a recommendation for each. Runs only when I type /import.
 disable-model-invocation: true
 argument-hint: "[links | capture | file names in inbox/sources/]"
 ---
@@ -55,7 +55,8 @@ Read enough of each file to record its identity. For a Markdown file, the proper
 - **Origin:** the link it was downloaded from in step L, the URL in the `source` property of a Web Clipper clip, or one printed in the document.
 - **Title, and author or publisher.**
 - **Date:** the published or last-updated date the document gives. A clip's `created` property is the day it was clipped, not a date of the document: call it "retrieved YYYY-MM-DD".
-- **Version clues:** a version or edition number; "amended", "revised", "updated", "as at", "in force from", "consolidated to"; a year in the title or file name.
+- **Version clues:** a version or edition number; "amended", "revised", "updated", "as at", "in force from", "consolidated to"; a year in the title or file name. For consolidated legislation, the date it is "up to date" to.
+- **Extent:** the whole document, or one part of it (a Part or section of an Act, a chapter), and which.
 - **Size:** lines for Markdown, pages for a PDF.
 - **Three passages:** one sentence of 12 words or more from near the start, one from the middle and one from near the end, chosen for distinctive wording. Skip menus, cookie notices, headers and footers.
 
@@ -65,7 +66,7 @@ A candidate is a raw file that may be the same document. Look in this order, and
 2. **Same identity.** Grep `wiki/sources/` and `index.md` for the title's distinctive words and for the publisher. Each source page names its raw file, publisher and published date. Glob `raw/` for names built from the same publisher and title words.
 3. **Same text.** Grep `raw/` for a run of 8–10 words from each of the three passages. This finds Markdown sources only. For PDFs, use the candidates from 1 and 2.
 
-Also compare the new files with each other: two files in the zone can be the same document.
+Also compare the new files with each other: two files in the zone can be the same document. A raw file with the same title and publisher but a different extent (the Act's Part 1A against the whole Act) is a candidate too.
 
 ## 3. Compare, then give a verdict
 Open each candidate. For a short Markdown file, read both in full. For a long file or a PDF, compare the title, the date and version line, the list of headings or the contents page, the size, and the three passages at the matching place. Ignore the clip's properties other than `source` and `published`, and ignore menus, cookie notices and layout. What counts is the sentences that carry facts.
@@ -75,12 +76,17 @@ Open each candidate. For a short Markdown file, read both in full. For a long fi
 | **duplicate** | Same origin or identity, the same date or version, and nothing that carries a fact differs | Don't ingest it. I delete it from the zone |
 | **new version** | Same origin or identity, and a later date, a later version, or passages that differ | Ingest it as a new version. Both files stay in `raw/`; the claims it changes are raised as **newer** conflicts, and the older claims are marked "superseded by" when I decide them |
 | **older version** | Same origin or identity, and an earlier date or version than the file in `raw/` | Leave it out, unless I want the history. If ingested, its claims never supersede the newer ones |
+| **part** | One file is a part of the other: same title and publisher, and the smaller one's heading is a division in the larger one's contents or headings | **The whole arrives after a part:** ingest it; both stay, and that part is compiled later as a compare (`ingest/large-source.md` §8). **A part arrives after the whole:** if the whole's map shows the part compiled from text of the same date, don't ingest it; if not compiled, run `/ingest part` on the whole instead; if the part is the later text, ingest it as a new version of that part |
 | **new** | No candidate, or the candidates turn out to be different documents | Ready for `/ingest` |
 | **unsure** | A candidate exists and you can't tell: a file that won't open, the same title from two publishers, no dates on either | Say what I should check |
 
 For a **new version**, also give:
 - **What changed:** up to five differences, each with the old and new wording or figure, and where it sits. If you compared only by sample, say so.
 - **The raw name:** the stem of the existing raw name, then this version's year: `pra-approach-banking-supervision-2025.pdf`. If that name is taken, or the document is a web page that changes without notice, the year and month of its date, or of its retrieval when it gives none: `fca-about-the-fca-2026-10.md`. The existing file keeps its name.
+
+For a **part**, say which file is the whole, which part overlaps, and the dates of both.
+
+For consolidated legislation, the proposed raw name ends with the year and month of its "up to date" date, or of its retrieval when it gives none, whatever the verdict: `uk-parliament-fsma-2000-2026-10.pdf`. A file over 150 PDF pages or 3,000 lines is a large document: say it will be mapped first and compiled in parts.
 
 For a file on the capture list, say so: match its origin or title against the lines in `system/research/capture.md`.
 

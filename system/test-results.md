@@ -1,6 +1,6 @@
 # Test results
 
-The test prompts from `mine/projects/thinking-system/40 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10), six lint tests for M5 (passes at 6 of 6), five drafts tests for M6 (passes at 5 of 5), seven ingest set tests for M7 (passes at 7 of 7) and fourteen research and import tests for M8 (passes at 14 of 14). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
+The test prompts from `mine/projects/thinking-system/40 Claude Operating Instructions` §5: ten for M4 (passes at 9 of 10), six lint tests for M5 (passes at 6 of 6), five drafts tests for M6 (passes at 5 of 5), seven ingest set tests for M7 (passes at 7 of 7) fourteen research and import tests for M8 (passes at 14 of 14) and eight large-document tests for M9 (passes at 8 of 8). Run each in a fresh vault session unless the table says otherwise, and record the result the same day.
 
 Result: `Pass`, `Fail`, or `Partial` with a note. A `Partial` counts as a fail for the exit bar.
 
@@ -136,3 +136,29 @@ Copy-Item -LiteralPath "mine\projects\uk-financial-system\claude-2026-09-27-foun
 **What the run changed (2026-10-12 to 2026-10-14).** `import` step 4 says what ingesting a new version does. `research`: links recorded exactly as opened, "PDF download" only for a link that returned a PDF, bare site addresses pre-approved, the facts count matches, a blank line before the log entry. D-102: where unbacked AI claims go. D-103: `/ingest` recommends `/lint` after a large set, because lint found 6 high errors after M7's set and 5 after the Ombudsman set and the Claude output.
 
 **Not tested.** Resuming a stopped set (D-086): AI2's eight sections and the 115-page notice each compiled in one session. M9's large documents will exercise it.
+
+## Run 6 — M9 large documents
+
+Eight tests (D-113) on one document: the Financial Services and Markets Act 2000 as revised, the whole Act as one PDF. LD1–LD3 map it; LD4–LD7 compile parts across sessions; LD8 asks about a part left out. Start each run in a fresh session, and `/clear` between runs.
+
+**Before the run.** Commit everything, so `git status` starts clean. The capture list's line for ss. 19, 23 and 55E–55F points at the Act's contents page; LD1 types the PDF link instead.
+
+| # | Prompt, as typed | Passes if Claude… | Result | Date | Notes |
+|---|---|---|---|---|---|
+| LD1 | `/import https://www.legislation.gov.uk/ukpga/2000/8/data.pdf` | asks once, for one `Invoke-WebRequest` line; after your Yes the whole revised Act is in the zone and opens as a PDF. Gives the verdict **part**: the whole Act, of which `raw/uk-parliament-fsma-2000-part-1a.md` is Part 1A, with both dates. Says it is on the capture list (the ss. 19, 23, 55E–55F line), that it is a large document, and proposes `uk-parliament-fsma-2000-<yyyy-mm>.pdf` from its "up to date" date. Writes nothing |  |  |  |
+| LD2 | `/ingest` | briefs it as a large document: its page count; a map of every Part and Schedule from the contents, with any part over about 60 pages split; a numbered plan that puts first the parts backing the `· AI` leads (ss. 19 and 23, Part II; ss. 55E–55F, Part 4A) and the s. 228 capture line (Part XVI); Part 1A marked **compare**; a one-line move block. Reads the contents and a few pages only. Writes nothing and makes no web call |  |  |  |
+| LD3 | Paste the move block, then reply | writes the map, `Source - FSMA 2000 (<yyyy-mm>)`: every Part and Schedule in the Parts table, statuses `planned <n>` or `not compiled`, Part 1A `compare` with a heading link to the clip, and pages for the parts it located. A set review with row `M` ticked; overview, index and log updated; no part compiled. Ends with "Run `/clear`, then `/ingest part`". You check the count of Parts and Schedules against the contents on legislation.gov.uk |  |  |  |
+| LD4 | `/clear`, then `/ingest part fsma` | takes plan item 1, briefs it (pages, sections, the leads it may back) and waits. After your reply it compiles chunk by chunk, ticking each; writes `Source - FSMA 2000 (<yyyy-mm>) - Part <label>`; every citation into the Act has `#page=N` and a section; the map row turns `compiled` with its links. The report ends "Run `/clear`, then `/lint` before the next part". Review, then commit |  |  |  |
+| LD5 | In the next part run, once at least one chunk is ticked, press Esc and `/exit`. Fresh session: `/ingest` | says a set is compiling and resumes at the first chunk not ticked; completes the pages that chunk had started; adds no claim twice (`git diff` shows no repeated lines); finishes the part. The first real run of the resume path (D-086) |  |  |  |
+| LD6 | Run parts until Part II, the part holding ss. 55E–55F and Part XVI are compiled, and Part 1A has run as a compare; `/lint` after each part, applying what it finds | at least four parts across at least three sessions. The map shows each with its date, page and set review, and "Compiled: N of M parts". The compare writes nothing for an unchanged claim and raises any change as a **newer** conflict. You trace three citations, one per part, to their page and section, and click the heading link on Part 1A's row. The last lint finds no citation into the Act without a page and a section |  |  |  |
+| LD7 | (from the runs above) | the `· AI` claims on FSMA ss. 19, 23 and 55E–55F cite the Act with page and section and no `· AI`, are listed "(was AI)" in their set reviews, and sit on the pages of their subjects (D-102). You check them against the sections. The capture lines for ss. 19, 23, 55E–55F and for s. 228 are ticked with the raw name and the part |  |  |  |
+| LD8 | Fresh session: `/ask Under FSMA, when can a court order a firm to pay restitution?` | the part holding it (Part XXV, injunctions and restitution) is `not compiled`: says the Act is in `raw/` but that part isn't compiled, names the part and its place if located, and gives the `/ingest part` command. Doesn't read the part to answer and makes no web call; any general knowledge is labelled |  |  |  |
+
+**Score:** to run.
+
+**Notes for the run.**
+- If the LD1 download fails, or what arrives isn't a PDF, Claude says so and tries no other way. Then open https://www.legislation.gov.uk/ukpga/2000/8/contents, choose Print options, "PDF The Whole Act", save it into `inbox/sources/` and run `/import` again. If legislation.gov.uk offers no whole-Act PDF, stop and bring it to the M9 thread: the fallback is the whole-Act web page through the Web Clipper, which needs a change to the plan.
+- After each run, note what `/usage` showed for it. The 60-page cap on a part (D-108) is a first estimate; these figures set it for later documents.
+- A run cut short by the Pro allowance is not a fail. It is LD5 arriving early: resume with `/ingest` and record it under LD5.
+- The plan is Claude's proposal. You can reorder it in your reply to the brief, as long as LD6's parts are in it.
+- If the map shows Part XXV planned or compiled, ask LD8 about another part left `not compiled`, and note which.

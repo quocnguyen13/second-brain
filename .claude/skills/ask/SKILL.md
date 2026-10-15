@@ -26,6 +26,7 @@ Answer exactly one question from the wiki, show where every part of the answer c
 - Read `index.md`, and `wiki/overview.md` when the question is broad.
 - Then Grep `wiki/` for the question's key terms, including synonyms and other spellings. The index is a starting point, not the search: a page it doesn't mention can still be the right one.
 - Read every page that looks relevant, then follow its links one hop where they bear on the question.
+- A source page with a **Parts** table maps a large document. If the question falls in a part whose status is `planned` or `not compiled`, say so under Not in the wiki: the part, where it sits in the raw file, and `/ingest part <document> <part>`. Don't read the uncompiled part to answer.
 - A page in `wiki/analyses/` is an earlier filed answer. Use it to find evidence, but take the evidence from the raw citations it gives, and say you started from it.
 
 ## 2. Check what the pages can support

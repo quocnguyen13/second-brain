@@ -103,7 +103,7 @@ Turns sources into cited pages, with status, conflicts and trust. Needs N1, N3.
 | B-007 | KAN-7 | Trust levels: one per source (for example primary, secondary, commentary, AI); a fact takes the level of its best source; shown on pages and in `/ask` | Feature | Rule in doc 31 §2 | M7; rule by M0 | D-087 |
 | B-008 | KAN-8 | Conflict resolution: Claude proposes one by trust and date, you decide, and the other claim stays visible | Feature | B-007; doc 31 §3 revised | M7; rule by M0 | D-088, D-094 |
 | B-009 | KAN-9 | First domain set: the UK financial system and its legal framework | Content | The test set for B-006 | You, with M7 | — |
-| B-038 | KAN-38 | Large documents (§3): a 1,000-page book or a full Act compiled in parts across sessions, with progress tracked | Feature | B-006 | M9 | — |
+| B-038 | KAN-38 | Large documents (§3): a 1,000-page book or a full Act compiled in parts across sessions, with progress tracked | Feature | B-006 | M9 | D-107 to D-113 |
 
 ### E-03 · Ask and reuse · KAN-41
 Answers from your own sources, and keeps the good ones. Needs N2, N3.
@@ -265,4 +265,12 @@ Items with more than a one-line need. Others get a section here when they are re
 Claude's lean: **a**, since it keeps `raw/` immutable and citations exact (D-042).
 **Open questions:** the citation form for a section of a Markdown source (a heading link); where progress is recorded between sessions; how an amended Act is handled (with B-037's new versions); how much one session should take on.
 **Test document:** the full FSMA 2000, which extends the Part 1A source already in the vault. Public legislation, so it can be kept and quoted.
+**Settled in M9 (D-107 to D-113, accepted 2026-10-15):**
+- **Option a.** A document over 150 PDF pages or 3,000 lines stays whole in `raw/`. Its first run writes its source page as a map: every part, where it sits, a plan and a status. Each later run, `/ingest part <document>`, compiles one part, with its own brief, set review, commit and source page (D-107). The procedure is `ingest/large-source.md`.
+- **Progress** sits on the map between runs and in the set review within one, one row per chunk of up to 20 PDF pages, so a stopped run resumes at the next chunk (D-108).
+- **One session:** one part, at most about 60 PDF pages or 2,000 lines; `/clear` between runs and `/lint` before the next part (D-108).
+- **Capture:** the full Act as one PDF of the revised text, loaded by `/import` (D-109).
+- **Overlaps and amendments:** `/import` gains the verdict **part**. The full Act and the Part 1A clip both stay, and Part 1A is compiled as a compare (D-110). A consolidated text is named with the year and month it is up to date to, and a later capture is a new version whose parts are compared when chosen (D-111).
+- **Citation form:** a PDF page plus the section; in Markdown, a link to the heading plus the section (D-112).
+- **Tests:** LD1–LD8 on the full Act (D-113).
 **Constraint:** a copyrighted book stays private in `raw/` and never goes into a public showcase (D-079).
