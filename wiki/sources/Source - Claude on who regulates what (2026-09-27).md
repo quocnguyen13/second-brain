@@ -2,9 +2,9 @@
 type: source
 status: unverified
 trust: ai
-sources: ["[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]"]
+sources: ["[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-10-14"
-updated: "2026-10-14"
+updated: "2026-10-17"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - Claude on who regulates what (2026-09-27)
@@ -32,14 +32,16 @@ All of these were already on the wiki's pages, so this note added none of them.
 - The PRA expects firms to manage operational as well as financial risks ([[raw/pra-approach-banking-supervision-2023.pdf#page=36]]). The note says this in the context of TSB; the passage says it in general.
 - The FCA describes itself as an independent public body ([[raw/fca-about-the-fca.md]]).
 
+**Backed on 2026-10-17 by FSMA Part II** ([[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]], [[system/ingest/set-2026-10-17-2]]). These were `· AI` until then.
+- HM Treasury decides which activities need authorisation: a regulated activity is one of a kind it specifies by order, and only an authorised or exempt person may carry one on ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=56]], s. 22(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=57]], s. 22(5); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=51]], s. 19(1)). The Act doesn't use the word "perimeter".
+- HM Treasury lists the kinds of regulated activity in an order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=57]], s. 22(5)).
+- FSMA s. 19 sets the "general prohibition" on carrying on a regulated activity without being authorised or exempt ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=51]], s. 19).
+- FSMA s. 23 makes breaching the general prohibition an offence ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=60]], s. 23(1)).
+
 ### Unbacked (AI)
 **The map**
 - UK financial regulation is divided by purpose, not by type of firm ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
-- HM Treasury decides which activities need authorisation: the perimeter ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
-- HM Treasury lists the regulated activities in secondary legislation ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - HM Treasury formally tells the PRA, as well as the FCA, what to weigh ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI). Section 1JA in `raw/` covers only the FCA.
-- FSMA s. 19 sets the "general prohibition" on carrying on a regulated activity without being authorised or exempt ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
-- FSMA s. 23 makes breaching the general prohibition an offence ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - FSMA ss. 55E and 55F set separate FCA and PRA routes for giving permission ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - The 2007–08 crisis showed that no single body clearly owned financial stability ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - The [[wiki/entities/Monetary Policy Committee]] sets Bank Rate ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
@@ -90,7 +92,8 @@ All of these were already on the wiki's pages, so this note added none of them.
 - [[wiki/entities/Payment Systems Regulator]]
 - [[wiki/entities/Financial Conduct Authority]], [[wiki/entities/Prudential Regulation Authority]], [[wiki/entities/Bank of England]], [[wiki/entities/Financial Ombudsman Service]], [[wiki/concepts/Ring-fencing]], [[wiki/concepts/New bank authorisation]] (links only)
 - [[wiki/concepts/Principles for Businesses]] (Principle 11, AI only)
-- Mentioned without a page: HM Treasury's perimeter, the general prohibition, Fundamental Rule 7, and the SBV.
+- [[wiki/concepts/General prohibition]], [[wiki/entities/HM Treasury]] (claims backed 2026-10-17)
+- Mentioned without a page: Fundamental Rule 7, and the SBV.
 
 ## Conflicts and open points
 - **Contradicted, left out of the wiki.** "The PRA is the prudential regulator for around 1,500 banks, building societies, credit unions, insurers and major investment firms." The FCA's page does say ~1,500 ([[raw/fca-about-the-fca.md]]), but the PRA's own count is "around 1,292" as of 2026-09-21 ([[raw/bank-of-england-prudential-regulation.md]]). The ~1,500 was marked superseded on 2026-10-06 ([[system/ingest/set-2026-10-06-2]] conflict 1). Left out of the wiki.

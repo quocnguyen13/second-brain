@@ -86,3 +86,6 @@ Set: set-2026-10-14-3, 1 source (1 primary, 0 secondary, 0 commentary). Pages: +
 
 ## [2026-10-17] ingest | FSMA 2000 (2026-09), map
 Set: set-2026-10-17, 1 source with its contents companion (1 primary, 0 secondary, 0 commentary). Pages: +1 new (the map: Source - FSMA 2000 (2026-09)); 0 updated. Plan: 8 parts (II, 4A, XVI, 1A compare, Sch 6, XV–15A, 9B, Sch 2), all located. Conflicts: none. Flags: PDF includes prospective provisions; PDF (10 Sep 2026) and contents (17 Oct 2026) differ in date; Part 1A in the PDF is older than the clip. Capture list: no ticks (lines tick as parts compile).
+
+## [2026-10-17] ingest | FSMA 2000 (2026-09), Part II
+Set: set-2026-10-17-2, 1 source, part II (pp. 51–70) of 8 planned parts, primary. Pages: +3 new (Source - FSMA 2000 (2026-09) - Part II; General prohibition; Financial promotion); 7 updated (Source - FSMA 2000 (2026-09), the map: Part II compiled, 1 of 8; Source - FSMA 2000 Part 1A; Source - Claude on who regulates what (2026-09-27): 4 claims lose `· AI`; Regulated financial services; Solo and dual regulation; HM Treasury; Financial Conduct Authority). Draft: For a lender, a permission gap puts the loan book at risk, not just a compliance finding. Conflicts: none. Flags: none; no prospective text in Part II. Capture list: no ticks (the ss. 19, 23, 55E–55F line waits for Part 4A).

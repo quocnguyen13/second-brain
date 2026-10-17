@@ -1,9 +1,9 @@
 ---
 type: concept
 status: unverified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-14"
+updated: "2026-10-17"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Solo and dual regulation
@@ -34,7 +34,8 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - **Firm types on each side.** The PRA authorises (with the FCA) and prudentially supervises deposit-takers (banks, building societies, credit unions), insurers (including friendly societies) and designated investment firms ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=4]]). The FCA prudentially supervises firms that are not PRA-regulated ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=3]]).
 - **Groups can mix both.** In some groups, some entities are prudentially supervised by the PRA and others by the FCA, with the PRA as consolidated supervisor ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]]).
 - **How many firms in each group.** The FCA regulates the conduct of about 35,500 firms and prudentially supervises about 34,000 ([[raw/fca-about-the-fca.md]]). The page doesn't say that the gap between the two figures is the PRA's population.
-- **Which activities are PRA-regulated.** The sources now name the firm types (deposit-takers, insurers, designated investment firms: [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=4]]) and treat "deposit-taking, insurance, certain large-scale investment business" as the PRA-regulated activities ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=15]]). No primary source yet names the FCA-only firm types. Section 22A and the PRA-Regulated Activities Order would confirm them. A Claude output lists them (see the next point).
+- **Which activities are PRA-regulated.** The sources now name the firm types (deposit-takers, insurers, designated investment firms: [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=4]]) and treat "deposit-taking, insurance, certain large-scale investment business" as the PRA-regulated activities ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=15]]). No primary source yet names the FCA-only firm types. Section 22A doesn't list the PRA-regulated activities either: it lets the Treasury specify them by order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=59]], s. 22A(1)). That order is not in `raw/`. A Claude output lists the FCA-only firm types (see the next point).
+- **Parliament's control over the line.** The first s. 22A order, and any later one that makes an activity PRA-regulated or takes one out, needs a draft approved by both Houses, unless made urgently, when it lapses after 28 days without their approval ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=59]], s. 22B(1)–(5); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=60]], s. 22B(6)).
 - **Solo-regulated firm types (AI only).**
   - E-money institutions, payment institutions, non-bank lenders and brokers are solo-regulated by the FCA ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
   - For those firms, the FCA sets both the prudential and the conduct rules. The MoU backs that part: the FCA prudentially supervises firms that are not PRA-regulated ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=3]]).
@@ -58,6 +59,7 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - [[wiki/sources/Source - Bank of England prudential regulation page]]
 - [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
 
 ## Related
 - [[wiki/entities/TSB Bank]]

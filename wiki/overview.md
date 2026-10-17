@@ -1,7 +1,7 @@
 ---
 type: overview
 status: verified
-sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]"]
+sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-22"
 updated: "2026-10-17"
 tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation", "complaints"]
@@ -12,17 +12,22 @@ The current picture across every source, on one page. Rewritten at each ingest, 
 
 The wiki has two strands that don't yet touch:
 - **UK financial regulation:** seventeen sources.
-  - Fourteen primary: the statute's Part 1A; the whole Act (2026-09), mapped but no part compiled yet; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
+  - Fourteen primary: the statute's Part 1A; the whole Act (2026-09), mapped, with Part II compiled; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
   - One secondary: a 2016 Commons Library briefing.
   - One commentary: Wikipedia.
   - One AI: a Claude study note on who regulates what (2026-09-27). Its unbacked claims stay marked `· AI` and are kept off this page.
 
-  The 2026-10-14 sets added complaints and the FOS, the Claude note, and the TSB Final Notice, the wiki's first enforcement case. On 2026-10-17 the whole of FSMA 2000 entered `raw/`. [[wiki/sources/Source - FSMA 2000 (2026-09)]] maps its Parts and Schedules; eight parts are planned, one per run, starting with Part II (the perimeter), Part 4A (permission) and Part XVI (the ombudsman scheme).
+  The 2026-10-14 sets added complaints and the FOS, the Claude note, and the TSB Final Notice, the wiki's first enforcement case. On 2026-10-17 the whole of FSMA 2000 entered `raw/`. [[wiki/sources/Source - FSMA 2000 (2026-09)]] maps its Parts and Schedules; eight parts are planned, one per run, starting with Part II (the perimeter), Part 4A (permission) and Part XVI (the ombudsman scheme). Part II was compiled the same day: [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]].
 - **Knowledge management:** five sources on how to build and organise a knowledge base.
 
 Regulation agreements and disagreements sit in Strand 1. The sections from "Where sources agree" on apply to the knowledge-management strand.
 
 ## Strand 1: UK financial regulation
+
+### The perimeter (FSMA Part II, emphasis 2026-10-17)
+- **What needs authorisation.** The [[wiki/concepts/General prohibition]]: no one may carry on a regulated activity in the UK unless authorised or exempt. A regulated activity is one of a kind [[wiki/entities/HM Treasury]] specifies by order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=51]], s. 19(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=56]], s. 22(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=57]], s. 22(5)). Breaching it is a crime, and the customer can walk away from the deal ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=60]], s. 23(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=63]], s. 26(1)–(2)).
+- **Outside permission.** An authorised firm acting outside its permission breaches a regulator's requirement, but it is not an offence and its contracts stand, except for credit ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=52]], s. 20(1)–(2)). For credit-related activities it is an offence, and the agreements can't be enforced against borrowers unless the FCA allows it ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=60]], s. 23(1A); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=63]], s. 26A(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=67]], s. 28A(3)).
+- **Promotions.** [[wiki/concepts/Financial promotion]]: only an authorised person may communicate an invitation or inducement to engage in investment activity, or approve one, and approving others' promotions needs FCA permission under s. 55NA (from 2024). Breach is an offence, and resulting agreements are unenforceable against the customer ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=53]], s. 21(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(2)–(2A); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=55]], F136; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=62]], s. 25(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=69]], s. 30(2)).
 
 ### The two regulators
 - **Statute.** [[wiki/sources/Source - FSMA 2000 Part 1A]] sets up the [[wiki/entities/Financial Conduct Authority]] and the [[wiki/entities/Prudential Regulation Authority]], which is the [[wiki/entities/Bank of England]] acting through its [[wiki/entities/Prudential Regulation Committee]] ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1A, 2A).
@@ -81,7 +86,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - **Resolved earlier, by scope:** the FCA "established on 1 April 2013" vs "renamed" (set-2026-10-06). The Commons Library's "established three new regulatory bodies" fits the same reading ([[raw/edmonds-financial-conduct-authority-2016.pdf#page=2]] · secondary).
 
 ### Open points
-- Which activities are PRA-regulated: the MoU names deposit-taking, insurance and certain large-scale investment business ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=15]]), but s. 22A isn't in any source. The FCA-only status of payment and e-money institutions now rests only on the Claude note, which is AI level.
+- Which activities are PRA-regulated: the MoU names deposit-taking, insurance and certain large-scale investment business ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=15]]). Section 22A leaves the list to a Treasury order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=59]], s. 22A(1)), which isn't in `raw/`. The FCA-only status of payment and e-money institutions now rests only on the Claude note, which is AI level.
 - The Claude note's "around 1,500" PRA firms repeats the FCA's superseded figure. It was left out of the wiki.
 - Which text of the s. 3B(1)(c) principle applies to the FCA. The PRA says the net-zero "have regard" applies to it ([[raw/pra-approach-banking-supervision-2023.pdf#page=13]]).
 - How the FCA's ~34,000 prudentially supervised firms relate to the ~14,000 under its Handbook's prudential standards.
@@ -155,7 +160,8 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
   - Topic pages vs. project folders: the compiled wiki's concept pages ([[raw/karpathy-llm-wiki.md]]) vs. PARA's projects-first order ([[raw/forte-para-method.md]]). Neither source addresses the other.
 
 ## Gaps worth a new source
-- FSMA ss. 19, 23, 22A, 55E–55F and 228 are in `raw/` since 2026-10-17, inside the whole Act, and wait for their part runs: Part II (plan 1), Part 4A (plan 2), Part XVI (plan 3). See [[wiki/sources/Source - FSMA 2000 (2026-09)]].
+- FSMA ss. 55E–55F, 55NA–55NB and 228 are in `raw/` inside the whole Act and wait for their part runs: Part 4A (plan 2), Part XVI (plan 3). Part II (ss. 19–30) is compiled. See [[wiki/sources/Source - FSMA 2000 (2026-09)]].
+- The Treasury's orders behind Part II: the Regulated Activities Order (with Schedule 2, plan 8), the Financial Promotion Order (exemptions under s. 21(5)), and the order designating credit-related regulated activities (s. 23(1B)).
 - To back the Claude note (all on the capture list): the Bank of England's release on the TSB fines (the PRA's £18.9m and framing); the Bill's page and Parliament's report-stage news item; FCA PRIN and the PRA Fundamental Rules; the SBV's own page on its role.
 - Current SYSC 8 (outsourcing) and SYSC 4.1 (business continuity), and the FCA's and PRA's operational resilience rules: the TSB notice quotes SYSC only as in force in 2015–2018.
 - DEPP 6.5A and the Enforcement Guide themselves, rather than the notice's account of them.
@@ -163,7 +169,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - The Glossary definitions of "consumer", "PSD complaint" and "EMD complaint", and DISP 1 Annex 3R (the waiver wording a final response must use).
 - DISP 1.3 complaint-handling rules and DISP 3.6 on how the Ombudsman decides.
 - FOS guidance on APP fraud complaints: which deadline applies to them in practice.
-- The PRA-Regulated Activities Order (s. 22A itself waits for Part II's run): the list of activities that makes a firm dual-regulated.
+- The PRA-Regulated Activities Order: the list of activities that makes a firm dual-regulated. Section 22A gives the Treasury the power but names no activities.
 - The FCA's own approach to supervision, and its prudential supervision page: what "prudentially supervise" and "subject to the prudential standards" each cover.
 - The Financial Services Act 2012 itself: settles renamed vs abolished at primary level beyond Part 1A.
 - The PRA's approach to insurance supervision (the companion document), if insurers matter.
@@ -188,6 +194,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - [[wiki/sources/Source - The PARA Method]]: Forte's four-category system for organising by actionability.
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]: the statute setting up the FCA and PRA, their objectives and their coordination.
 - [[wiki/sources/Source - FSMA 2000 (2026-09)]]: the whole Act, revised text; a map of its Parts and Schedules, compiled one part per run.
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]: the perimeter: general prohibition, financial promotion, regulated activities, offences, and unenforceable agreements.
 - [[wiki/sources/Source - About the FCA]]: the FCA's own account of its scale, methods, funding and accountability.
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]: the PRA's 2023 statement of how it supervises banks.
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]: who leads on what between the FCA and the PRA.

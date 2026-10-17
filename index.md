@@ -4,7 +4,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 
 ## Overview
 
-- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14; operational resilience; TSB's 2018 migration from the FCA's Final Notice (attestations, testing scope, outsourcer readiness); AI-only leads on the PRA's TSB fine and the 2026 Bill (20 sources)
+- [[wiki/overview.md]] — two strands. UK financial regulation: statute, both regulators' own pages, the PRA's banking approach, the FCA–Bank MoU, a Commons briefing and Wikipedia; who leads for a dual-regulated bank, PIF, ring-fencing, new-bank authorisation; three conflicts resolved 2026-10-06. Knowledge management: compiled wiki, memex, evergreen notes, retrieval, PARA; complaints and the FOS (deadlines, final response, eligibility, awards), two conflicts resolved 2026-10-14; operational resilience; TSB's 2018 migration from the FCA's Final Notice (attestations, testing scope, outsourcer readiness); AI-only leads on the PRA's TSB fine and the 2026 Bill; the perimeter from FSMA Part II (general prohibition, promotions, credit outside permission) (21 sources)
 
 ## Sources
 
@@ -13,8 +13,9 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - Evergreen notes]] — Matuschak's hub page defining evergreen notes and five principles; linked notes not captured; records the PARA disagreement (4 sources)
 - [[wiki/sources/Source - Contextual Retrieval]] — Anthropic's post: long prompt under 200k tokens, else RAG improved by contextualised chunks, BM25 and reranking (2 sources)
 - [[wiki/sources/Source - The PARA Method]] — Forte's four-category system (Projects, Areas, Resources, Archives) organised by actionability; set against Matuschak, Bush and the compiled wiki (4 sources)
-- [[wiki/sources/Source - FSMA 2000 Part 1A]] — UK statute setting up the FCA and PRA: solo vs dual regulation, objectives, product-owner lens, FCA–PRA coordination; "renamed" stated over Wikipedia's "abolished" (3 sources)
-- [[wiki/sources/Source - FSMA 2000 (2026-09)]] — map of the whole Act (1,263 pp., revised to 10 Sep 2026): every Part and Schedule, where planned parts sit, 0 of 8 planned parts compiled; Part 1A to be compared with the clip (2 sources)
+- [[wiki/sources/Source - FSMA 2000 Part 1A]] — UK statute setting up the FCA and PRA: solo vs dual regulation, objectives, product-owner lens, FCA–PRA coordination; "renamed" stated over Wikipedia's "abolished" (4 sources)
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]] — map of the whole Act (1,263 pp., revised to 10 Sep 2026): every Part and Schedule, where planned parts sit, 1 of 8 planned parts compiled (Part II); Part 1A to be compared with the clip (2 sources)
+  - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]] — ss. 19–30, pp. 51–70: general prohibition, s. 20 outside permission, financial promotion and the s. 55NA approver gateway, regulated and PRA-regulated activities by Treasury order, offences, unenforceable agreements, the credit regime (ss. 23(1A), 26A, 28A) (1 source)
 - [[wiki/sources/Source - About the FCA]] — the FCA's own page: firm numbers by what they count, authorise–supervise–enforce, fees-funded, accountable to Treasury and Parliament; its ~35,500 stated, its ~1,500 PRA figure superseded (4 sources)
 - [[wiki/sources/Source - The PRA's approach to banking supervision]] — the PRA's July 2023 approach: three principles, impact categories, PIF, ring-fencing, capital, resolvability, new-bank authorisation (1 source)
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]] — FCA–PRA MoU of March 2024: lead regulator, consent and consultation per process, information sharing, s. 3I veto via the PRC (2 sources)
@@ -29,7 +30,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - FCA glossary micro-enterprise]] — micro-enterprise: < 10 staff and turnover or balance sheet ≤ €2m, from PSD (2 sources)
 - [[wiki/sources/Source - FOS How to complain]] — the FOS's own consumer guide: business first, 8 weeks, "15 days", 6 months, free, AI guidance; its "15 days" and "fraud and scams" outweighed by DISP (4 sources)
 - [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]] — FCA's £29.75m penalty on TSB for its 2018 migration: Principles 2 and 3, go-live attestations, testing scope, SABIS readiness, business continuity, DEPP five steps, SYSC rules (2 sources)
-- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; TSB claims now mostly backed by the FCA notice; ~1,500 PRA firms left out (7 sources)
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; TSB claims now mostly backed by the FCA notice; s. 19, s. 23 and the Treasury perimeter backed by FSMA Part II; ~1,500 PRA firms left out (8 sources)
 
 ## Entities
 
@@ -38,9 +39,9 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/entities/Andy Matuschak]] — author of the "Evergreen notes" page (1 source)
 - [[wiki/entities/Anthropic]] — publisher of the Contextual Retrieval post; maker of Claude and prompt caching (1 source)
 - [[wiki/entities/Tiago Forte]] — author of the PARA method post; former productivity coach (1 source)
-- [[wiki/entities/Financial Conduct Authority]] — UK regulator of all authorised persons; conduct regulator for dual-regulated firms; responsibilities per the MoU; product powers and history; ~35,500 conduct firms and "renamed" stated, Wikipedia's claims outweighed; complaint-handling rules; s. 206 penalties and the DEPP five steps (8 sources)
+- [[wiki/entities/Financial Conduct Authority]] — UK regulator of all authorised persons; conduct regulator for dual-regulated firms; responsibilities per the MoU; product powers and history; ~35,500 conduct firms and "renamed" stated, Wikipedia's claims outweighed; complaint-handling rules; s. 206 penalties and the DEPP five steps; s. 20 breaches and promotion approvals (9 sources)
 - [[wiki/entities/Prudential Regulation Authority]] — the Bank of England acting as prudential regulator; lead regulator for dual-regulated firms; supervisory approach; ~1,292 firms by its own count, the FCA's ~1,500 superseded (5 sources)
-- [[wiki/entities/HM Treasury]] — holds the levers over both regulators: recommendations, reviews, boundary orders, rule directions, designated activities; receives regulatory-failure reports (5 sources)
+- [[wiki/entities/HM Treasury]] — holds the levers over both regulators: sets the perimeter and the PRA-regulated activities by order, recommendations, reviews, boundary orders, rule directions, designated activities; receives regulatory-failure reports (6 sources)
 - [[wiki/entities/Bank of England]] — is the PRA through its Prudential Regulation Committee; monetary policy, financial stability, resolution authority, liquidity facilities (4 sources)
 - [[wiki/entities/Financial Policy Committee]] — the Bank's macroprudential committee; recommendations and directions to the PRA (2 sources)
 - [[wiki/entities/Prudential Regulation Committee]] — the Bank committee that is the PRA's decision-maker; decides the s. 3I veto (3 sources)
@@ -68,10 +69,12 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/concepts/Prompt caching]] — caching prompt content between API calls; makes long prompts and Contextual Retrieval cheaper (1 source)
 - [[wiki/concepts/PARA method]] — Projects, Areas, Resources, Archives; projects end, areas don't; contested on hierarchy vs association (3 sources)
 - [[wiki/concepts/Organizing by actionability]] — organise by current projects and goals, not subjects; contested against concept-oriented, associative notes (4 sources)
-- [[wiki/concepts/Solo and dual regulation]] — FCA supervises every authorised person; any PRA-regulated activity adds the PRA; MoU definitions and firm types; ~1,292 PRA firms; TSB: FCA penalty and a PRA penalty for the same events; unverified (FCA-only payment/e-money firms, bank vs EMI, conduct/prudential framing are AI only) (7 sources)
+- [[wiki/concepts/Solo and dual regulation]] — FCA supervises every authorised person; any PRA-regulated activity adds the PRA; MoU definitions and firm types; ~1,292 PRA firms; TSB: FCA penalty and a PRA penalty for the same events; unverified (FCA-only payment/e-money firms, bank vs EMI, conduct/prudential framing are AI only); s. 22A leaves the PRA list to a Treasury order (8 sources)
 - [[wiki/concepts/Regulatory objectives]] — FCA and PRA objectives compared; both regulators' own documents and the MoU agree with the Act (5 sources)
 - [[wiki/concepts/Consumer protection objective]] — FCA's "appropriate degree of protection", weighing risk, capability, consumer responsibility and firms' duty of care (1 source)
-- [[wiki/concepts/Regulated financial services]] — the s. 1H(2) list setting the FCA's reach, naming payment services and e-money (1 source)
+- [[wiki/concepts/Regulated financial services]] — the s. 1H(2) list setting the FCA's reach, naming payment services and e-money; links to the credit rules in FSMA Part II (2 sources)
+- [[wiki/concepts/General prohibition]] — s. 19: no regulated activity in the UK unless authorised or exempt; offence, unenforceable agreements, deposits (2 sources)
+- [[wiki/concepts/Financial promotion]] — s. 21: only authorised persons communicate or approve; s. 55NA approver gateway since 2024; offence (s. 25), unenforceable agreements (s. 30) (2 sources)
 - [[wiki/concepts/Regulatory principles]] — s. 3B principles binding both regulators; two texts of (c) unresolved; PRA applies the net-zero "have regard" (3 sources)
 - [[wiki/concepts/FCA-PRA coordination]] — duty to coordinate, one-way PRA veto, Treasury boundary; who-leads-on-what table from the 2024 MoU (3 sources)
 - [[wiki/concepts/New bank authorisation]] — one PRA-led application, joint assessment, FCA consent, Threshold Conditions and resolvability (2 sources)

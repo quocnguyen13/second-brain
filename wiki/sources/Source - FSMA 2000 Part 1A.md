@@ -2,9 +2,9 @@
 type: source
 status: verified
 trust: primary
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/wikipedia-financial-conduct-authority.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-06"
+updated: "2026-10-17"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - FSMA 2000 Part 1A
@@ -81,6 +81,7 @@ See [[wiki/concepts/FCA-PRA coordination]]. Briefly:
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/entities/HM Treasury]]
+- [[wiki/concepts/General prohibition]] (s. 1F(c)), [[wiki/concepts/Financial promotion]] (s. 1H(2)(c)), linked 2026-10-17
 - [[wiki/entities/Bank of England]]
 - [[wiki/concepts/Solo and dual regulation]]
 - [[wiki/concepts/Regulatory objectives]]
@@ -98,7 +99,7 @@ See [[wiki/concepts/FCA-PRA coordination]]. Briefly:
 ## Conflicts and open points
 - **Renamed or abolished (fact).** Wikipedia says the Financial Services Act 2012 "abolished" the FSA, against s. 1A(1)'s "renamed" ([[raw/wikipedia-financial-conduct-authority.md]] · commentary). Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]] conflict 3: this Act's "renamed" is stated; "abolished" is marked outweighed, higher level, on [[wiki/entities/Financial Conduct Authority]].
 - **Renamed, or established in 2013 (scope).** This Act says the FCA is the renamed Financial Services Authority (s. 1A(1)). [[wiki/sources/Source - About the FCA]] says the FCA was "established on 1 April 2013" ([[raw/fca-about-the-fca.md]]). Not a conflict once scoped: legal identity versus operating start. Resolved 2026-10-06, [[system/ingest/set-2026-10-06]] conflict 1; see [[wiki/entities/Financial Conduct Authority]].
-- **Which activities are PRA-regulated is not in this source.** Section 22A and its order are needed to say which firms are dual-regulated.
+- **Which activities are PRA-regulated is not in this source.** Section 22A and its order are needed to say which firms are dual-regulated. Section 22A is now in `raw/` and leaves the list to a Treasury order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=59]], s. 22A(1)); the order itself is still missing. See [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]].
 - **The clip shows two versions of s. 3B(1)(c).** One is "sustainable growth"; the other is the net-zero and environmental targets. The amendment note says the substitution came in "for specified purposes" in 2023 and 2025. Which version applies to which functions is unclear from the clip.
 - **The clip has formatting losses.** Several inserted sections lost their numbers in the headings (1EB, 1MA, 1QA, 1RA, 2A, 2H, 2LA, 2MA, 2NA, 3RE); this page names them from the amendment notes. The s. 1H(8) definitions are empty.
 - The text is a point-in-time consolidation. legislation.gov.uk notes changes not yet in force.

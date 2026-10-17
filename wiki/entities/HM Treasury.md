@@ -1,9 +1,9 @@
 ---
 type: entity
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-06"
+updated: "2026-10-17"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # HM Treasury
@@ -11,6 +11,8 @@ tags: ["uk-financial-regulation", "financial-regulators"]
 In FSMA 2000 Part 1A, "the Treasury" holds the statutory levers over the FCA and the PRA: orders, directions, regulations and recommendations on "the economic policy of Her Majesty's Government" ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1JA, 3G, 3RC, 3RE).
 
 ## What the sources say
+- **The perimeter.** It decides which activities need authorisation: a regulated activity is one of a kind the Treasury specifies by order, and the [[wiki/concepts/General prohibition]] forbids carrying one on in the UK unless authorised or exempt ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=56]], s. 22(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=57]], s. 22(5); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=51]], s. 19(1)). It also specifies by order which regulated activities are PRA-regulated, under parliamentary control ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=59]], ss. 22A(1), 22B).
+- **Financial promotion.** It specifies by order the investments and activities that [[wiki/concepts/Financial promotion]] covers, and the circumstances in which the restriction doesn't apply ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(5), (8)–(10); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=55]], s. 21(15)).
 - **Scope and objectives.** It can amend parts of the FCA's competition objective, the definition of "consumer", and the definition of "regulated financial services" ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1J). It can make activities PRA-regulated and give the PRA an extra objective for them ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2D).
 - **The FCA–PRA boundary.**
   - It can specify by order which matters are, or are mainly, one regulator's responsibility for PRA-authorised persons ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3G).
@@ -32,8 +34,12 @@ In FSMA 2000 Part 1A, "the Treasury" holds the statutory levers over the FCA and
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Commons Library briefing on the FCA 2016]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 
 ## Related
+- [[wiki/concepts/General prohibition]]
+- [[wiki/concepts/Financial promotion]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/concepts/FCA-PRA coordination]]

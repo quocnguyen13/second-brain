@@ -1,9 +1,9 @@
 ---
 type: entity
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-14"
+updated: "2026-10-17"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Financial Conduct Authority
@@ -28,7 +28,9 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - **Objectives.** Its strategic objective is that the relevant markets function well. Its operational objectives are consumer protection, integrity and competition. In its general functions it must act compatibly with the strategic objective and advance at least one operational objective ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(1)–(3)). The FCA's own page lists the same objectives ([[raw/fca-about-the-fca.md]]). See [[wiki/concepts/Regulatory objectives]].
 - **Competition duty.** It must promote effective competition in the interests of consumers, as far as that is compatible with the consumer protection and integrity objectives ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(4)).
 - **Secondary objective.** Since 29 August 2023 it has competitiveness and growth: facilitating the UK's international competitiveness and its medium-to-long-term growth, "subject to aligning with relevant international standards" ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1B(4A), 1EB; [[raw/fca-about-the-fca.md]]).
-- **Relevant markets.** These are the financial markets, the markets for regulated financial services, and services provided without breaching the general prohibition by persons who are not authorised ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1F).
+- **Relevant markets.** These are the financial markets, the markets for regulated financial services, and services provided without breaching the [[wiki/concepts/General prohibition]] by persons who are not authorised ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1F).
+- **Firms acting outside their permission.** An authorised person that carries on a regulated activity outside its permission is treated as breaching a requirement imposed by the FCA; a PRA-authorised person, a requirement imposed by both the FCA and the PRA ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=52]], s. 20(1), (1A)).
+- **Approving financial promotions.** An authorised person may approve another person's promotion only where s. 55NA permits it, "with FCA permission", or an exemption under s. 55NB applies ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(2A)). See [[wiki/concepts/Financial promotion]].
 - **Supervision.** It supervises every authorised person, not only those the PRA leaves out ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1L(1)). It also monitors and enforces against certain persons who are not authorised ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1L(2)–(3)).
 - **General functions.** These are making rules, making technical standards, issuing codes, giving general guidance, and setting general policy ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(6)).
 - **Other duties.** It must have regard to the [[wiki/concepts/Regulatory principles]] and to minimising the use of firms for financial crime ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(5)).
@@ -82,8 +84,11 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]]
 - [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
 
 ## Related
+- [[wiki/concepts/General prohibition]]
+- [[wiki/concepts/Financial promotion]]
 - [[wiki/entities/Prudential Regulation Authority]]
 - [[wiki/concepts/Solo and dual regulation]]
 - [[wiki/concepts/FCA-PRA coordination]]
