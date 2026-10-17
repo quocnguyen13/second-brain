@@ -11,7 +11,7 @@ What changes when a source is too big for one run: a PDF over 150 pages, a Markd
 - **Not every part needs compiling.** A part nobody needs stays `not compiled` on the map, and `/ask` says so when a question falls in one.
 
 ## 1. Which run this is
-- **The file is in `inbox/sources/` and is large:** the map run (§2–§4). It is a set of its own. If the zone holds other files, leave them for the next set and say so in the brief.
+- **The file is in `inbox/sources/` and is large:** the map run (§2–§4). It is a set of its own, with its contents page when §2 needs one. If the zone holds other files, leave them for the next set and say so in the brief.
 - **`/ingest part <document> [<part>]`:** a part run (§5–§7). The document is its raw name, or words from its map's title. With no part named, take the first part with status `planned`, lowest number first. With no document named, list each map with parts `planned` or `not compiled`, and ask. The file is already in `raw/`, so there is no import check and no move.
 - **A set review with `status: compiling`:** a run that stopped. A0 resumes it at the first row not ticked (§6).
 
@@ -19,10 +19,18 @@ What changes when a source is too big for one run: a PDF over 150 pages, a Markd
 Read only what the map needs, never the whole file:
 - **PDF:** the first pages until the contents ends, in ranges of up to 20 pages, then the last page. If the contents prints page numbers, open one page it names to find the offset between printed and PDF page numbers.
 - **Markdown:** Grep its headings (`^#{1,4} `) for their line numbers, and Read the first 200 lines.
+- **A PDF with no contents pages,** such as legislation.gov.uk's whole-Act PDF, which opens on the text: the parts come from the publisher's contents page instead (D-115). If a clip of it is in the zone, it joins this set as the contents companion (below). If not, say so in the brief, ask me to clip it into `inbox/sources/`, and stop. Never name or describe a part from general knowledge, on the map or in the brief.
+
+**The contents companion** is a clip of the publisher's contents page for this document. It lists the parts and sections and holds none of their text.
+- Read it with Grep for its Part, Chapter and Schedule headings, then Read the lines between them as needed. Check it ends with the document's last division (for an Act, its last Schedule); if it stops short, say so and stop.
+- Raw name: the document's stem, `-contents`, and the year and month of its own "up to date" line: `uk-parliament-fsma-2000-contents-2026-10.md`.
+- No source page of its own. The map is its source page: the header line names it, `sources` lists it, and it backs only the map's Parts table and Summary. No other page cites it.
+- It never ticks a capture line, even when its link matches one.
+- Its date can differ from the document's. Where a located part's heading in the document differs from the contents, the map follows the document and notes the difference under "Conflicts and open points".
 
 Then send the brief as A1 describes, with these changes:
-- **Set:** the document alone: "large: N pages (or lines); this run maps it, and each part compiles in a run of its own".
-- **Sources:** one row, with the import verdict. A whole document whose part is already in `raw/` gets **part** (§8). A consolidated text's raw name ends with the year and month of its "up to date" date (§8).
+- **Set:** the document alone, or with its contents companion: "large: N pages (or lines); this run maps it, and each part compiles in a run of its own".
+- **Sources:** one row, or two with the contents companion, with the import verdict. A whole document whose part is already in `raw/` gets **part** (§8). A consolidated text's raw name ends with the year and month of its "up to date" date (§8).
 - **Map:** the document's divisions in order (Parts, Chapters, Schedules), each with what it covers and its size where known. Split a division over about 60 pages or 2,000 lines at its next level (Chapters, cross-headings), and group small neighbours, so that each part fits one run. Label each part as the document does (`II`, `4A`, `Sch 17`), with `.1`, `.2` for a split.
 - **Plan:** the parts to compile, numbered in order. First those that would back an `· AI` claim or a line on the capture list, or that touch existing pages; then the others the topic needs. Name the parts you'd leave `not compiled`, and why. A part another raw file already covers is marked **compare** (§8).
 - **Touches** and **Likely conflicts:** for the planned parts, from their titles and a Grep of `wiki/` and `raw/`. Say they firm up part by part.
@@ -49,7 +57,7 @@ Where a part sits goes on the map as soon as it is known.
   | 1A | The regulators | not located yet | planned 4 · compare: also in [[raw/uk-parliament-fsma-2000-part-1a.md#The Regulators]] |
   | VI | Official listing | not located yet | not compiled |
   ```
-  Status is one of: `compiled <date>` or `compared <date>`, each with the part's source page and set review; `in progress` with its set review; `planned <n>`; `not compiled`. A part another raw file covers adds `· compare:` and a link to that file. Under the table: "Parts and what they cover, from the contents ([[raw/<name>.pdf#page=N]] to page N)." Where and Status describe the file and the wiki, not what the document says, and need no citation.
+  Status is one of: `compiled <date>` or `compared <date>`, each with the part's source page and set review; `in progress` with its set review; `planned <n>`; `not compiled`. A part another raw file covers adds `· compare:` and a link to that file. Under the table: "Parts and what they cover, from the contents ([[raw/<name>.pdf#page=N]] to page N)", or "from the publisher's contents page ([[raw/<stem>-contents-<yyyy-mm>.md]])" for a contents companion. Where and Status describe the file and the wiki, not what the document says, and need no citation.
 - `status` on the map follows A4.4, for its Summary and Covers.
 - **Overview, index, log:** add the document to `overview.md` among the sources and the gaps, without a rewrite; a line for the map in `index.md`; the log entry as A7, "Pages: +1 new (the map)".
 - **Capture list:** no ticks yet; lines are ticked as parts are compiled (§7).

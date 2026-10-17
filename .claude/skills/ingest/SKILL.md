@@ -36,7 +36,7 @@ Two modes. `/ingest` on its own, or with file names, compiles a set of sources: 
   - a duplicate of a file already in `raw/`, found by the import check in A1;
   - a file that won't open.
 - **A Claude output in the set** (named `claude-...`, or with `source-type: ai` or `type: research` in its properties) is compiled by its own rules. Read `.claude/skills/ingest/ai-source.md` before the brief and follow it for that file. One Claude output per set: with more, take the oldest and leave the rest for the next set. If a file reads like a Claude output but carries no mark, ask me in the brief.
-- **A large document** (a PDF over 150 pages, a Markdown file over 3,000 lines, or a file I call large) is a set of its own, mapped in this run and compiled part by part later. Read `.claude/skills/ingest/large-source.md` before the brief and follow it. Leave the other files for the next set.
+- **A large document** (a PDF over 150 pages, a Markdown file over 3,000 lines, or a file I call large) is a set of its own, mapped in this run and compiled part by part later. Read `.claude/skills/ingest/large-source.md` before the brief and follow it. Leave the other files for the next set, except the document's contents page (`large-source.md` §2).
 
 ### A1. Read and brief, then wait
 Read every file in the set: Markdown in full, a PDF over 10 pages in page ranges, a large document only as far as `large-source.md` §2 says.

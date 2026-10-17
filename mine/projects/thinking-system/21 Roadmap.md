@@ -246,8 +246,10 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] `ingest/large-source.md` written, beside `ai-source.md`. Small edits in what other threads own: `ingest` (M7: A0, A1, the set review note, and the PDF ground rule as D-106 asked), `import` (M8: the verdict **part**, extent, legislation names), `ask` (M4: one line on parts not compiled), `CLAUDE.md` and `system/conventions.md` (M2: a pointer, the part page title, the citation form, legislation names). Mirrored in [[40 Claude Operating Instructions]] §2 and §4
 - [x] Tests LD1–LD8 written in [[40 Claude Operating Instructions]] §5 and `system/test-results.md`, Run 6 (D-113)
 - [x] D-107 to D-113 accepted (2026-10-15)
-- [ ] Files placed, committed and pushed; Sync
-- [ ] LD1–LD3: the Act downloaded, briefed and mapped
+- [x] Files placed, committed and pushed (1df0f61, 2026-10-15); Sync. M0's staging rule followed the same day (D-114, 362803c)
+- [x] LD1: `/import` downloaded the whole Act, 1,263 pages, one approval, verdict **part** against the Part 1A clip. **Pass** (2026-10-15). The PDF is up to date to 2026-09-10, a month behind the site's text, so the Part 1A clip and the capture lines are the later texts (D-111)
+- [ ] LD2: first run **Partial** (2026-10-15). Plan, move block and no writes as the test asks, but the PDF has no contents pages, so the map couldn't name every Part. D-115, accepted 2026-10-17: the map takes its parts from a clip of the contents page. `large-source.md`, `ingest` and `import` revised. The move block had been run, so the PDF goes back to the zone for the rerun
+- [ ] LD3: the map written
 - [ ] LD4–LD7: parts compiled across sessions, one run stopped and resumed, `/lint` after each part, the FSMA leads backed
 - [ ] LD8: `/ask` on a part not compiled
 - [ ] **M9 exit: 8 of 8**; [[11 Project Charter]] §11 criterion 4 met

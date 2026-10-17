@@ -86,6 +86,8 @@ For a **new version**, also give:
 
 For a **part**, say which file is the whole, which part overlaps, and the dates of both.
 
+A publisher's contents page for a document in the zone or in `raw/` is not a part: it holds none of the document's text. Give it **new**, say it is that document's contents page for its map (`ingest/large-source.md` §2), and propose the name the map run gives it.
+
 For consolidated legislation, the proposed raw name ends with the year and month of its "up to date" date, or of its retrieval when it gives none, whatever the verdict: `uk-parliament-fsma-2000-2026-10.pdf`. A file over 150 PDF pages or 3,000 lines is a large document: say it will be mapped first and compiled in parts.
 
 For a file on the capture list, say so: match its origin or title against the lines in `system/research/capture.md`.
