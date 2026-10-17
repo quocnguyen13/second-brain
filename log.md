@@ -83,3 +83,6 @@ Applied: 1, 2, 3, 4, 5, 6a, 7a. Skipped: none. Pages changed: 12 (Source - DISP 
 
 ## [2026-10-14] ingest | FCA Final Notice to TSB Bank (2018 migration)
 Set: set-2026-10-14-3, 1 source (1 primary, 0 secondary, 0 commentary). Pages: +3 new (Source - FCA Final Notice to TSB Bank 2022, Principles for Businesses, Outsourcing of critical or important functions); 5 updated (TSB Bank, Operational resilience, Solo and dual regulation, Financial Conduct Authority, Source - Claude on who regulates what (2026-09-27)). Conflicts: none. Flags: the notice gives the migration weekend as both "20 - 22 April" and "21/22 April" 2018; 22 April stated as go-live. AI claims backed: 20 on TSB Bank, plus the FCA half of one on each of TSB Bank, Operational resilience and Solo and dual regulation. Capture list: 1 line ticked.
+
+## [2026-10-17] ingest | FSMA 2000 (2026-09), map
+Set: set-2026-10-17, 1 source with its contents companion (1 primary, 0 secondary, 0 commentary). Pages: +1 new (the map: Source - FSMA 2000 (2026-09)); 0 updated. Plan: 8 parts (II, 4A, XVI, 1A compare, Sch 6, XV–15A, 9B, Sch 2), all located. Conflicts: none. Flags: PDF includes prospective provisions; PDF (10 Sep 2026) and contents (17 Oct 2026) differ in date; Part 1A in the PDF is older than the clip. Capture list: no ticks (lines tick as parts compile).

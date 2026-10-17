@@ -3,7 +3,7 @@ type: overview
 status: verified
 sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]"]
 created: "2026-09-22"
-updated: "2026-10-14"
+updated: "2026-10-17"
 tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation", "complaints"]
 ---
 # Overview
@@ -11,13 +11,13 @@ tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "informa
 The current picture across every source, on one page. Rewritten at each ingest, not appended to.
 
 The wiki has two strands that don't yet touch:
-- **UK financial regulation:** sixteen sources.
-  - Thirteen primary: the statute; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
+- **UK financial regulation:** seventeen sources.
+  - Fourteen primary: the statute's Part 1A; the whole Act (2026-09), mapped but no part compiled yet; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
   - One secondary: a 2016 Commons Library briefing.
   - One commentary: Wikipedia.
   - One AI: a Claude study note on who regulates what (2026-09-27). Its unbacked claims stay marked `· AI` and are kept off this page.
 
-  The 2026-10-14 sets added complaints and the FOS, the Claude note, and the TSB Final Notice, the wiki's first enforcement case.
+  The 2026-10-14 sets added complaints and the FOS, the Claude note, and the TSB Final Notice, the wiki's first enforcement case. On 2026-10-17 the whole of FSMA 2000 entered `raw/`. [[wiki/sources/Source - FSMA 2000 (2026-09)]] maps its Parts and Schedules; eight parts are planned, one per run, starting with Part II (the perimeter), Part 4A (permission) and Part XVI (the ombudsman scheme).
 - **Knowledge management:** five sources on how to build and organise a knowledge base.
 
 Regulation agreements and disagreements sit in Strand 1. The sections from "Where sources agree" on apply to the knowledge-management strand.
@@ -155,15 +155,15 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
   - Topic pages vs. project folders: the compiled wiki's concept pages ([[raw/karpathy-llm-wiki.md]]) vs. PARA's projects-first order ([[raw/forte-para-method.md]]). Neither source addresses the other.
 
 ## Gaps worth a new source
-- To back the Claude note (all on the capture list): the Bank of England's release on the TSB fines (the PRA's £18.9m and framing); FSMA ss. 19, 23 and 55E–55F; the Bill's page and Parliament's report-stage news item; FCA PRIN and the PRA Fundamental Rules; the SBV's own page on its role.
+- FSMA ss. 19, 23, 22A, 55E–55F and 228 are in `raw/` since 2026-10-17, inside the whole Act, and wait for their part runs: Part II (plan 1), Part 4A (plan 2), Part XVI (plan 3). See [[wiki/sources/Source - FSMA 2000 (2026-09)]].
+- To back the Claude note (all on the capture list): the Bank of England's release on the TSB fines (the PRA's £18.9m and framing); the Bill's page and Parliament's report-stage news item; FCA PRIN and the PRA Fundamental Rules; the SBV's own page on its role.
 - Current SYSC 8 (outsourcing) and SYSC 4.1 (business continuity), and the FCA's and PRA's operational resilience rules: the TSB notice quotes SYSC only as in force in 2015–2018.
 - DEPP 6.5A and the Enforcement Guide themselves, rather than the notice's account of them.
 - No source named in the note: Bank Rate and the 2% inflation target, the BNPL rules, the loan-to-income mortgage cap, and e-money safeguarding. These need `/research`.
-- FSMA s. 228 (the FOS's "fair and reasonable" test), still on the capture list.
 - The Glossary definitions of "consumer", "PSD complaint" and "EMD complaint", and DISP 1 Annex 3R (the waiver wording a final response must use).
 - DISP 1.3 complaint-handling rules and DISP 3.6 on how the Ombudsman decides.
 - FOS guidance on APP fraud complaints: which deadline applies to them in practice.
-- FSMA s. 22A and the PRA-Regulated Activities Order: the list of activities that makes a firm dual-regulated.
+- The PRA-Regulated Activities Order (s. 22A itself waits for Part II's run): the list of activities that makes a firm dual-regulated.
 - The FCA's own approach to supervision, and its prudential supervision page: what "prudentially supervise" and "subject to the prudential standards" each cover.
 - The Financial Services Act 2012 itself: settles renamed vs abolished at primary level beyond Part 1A.
 - The PRA's approach to insurance supervision (the companion document), if insurers matter.
@@ -171,7 +171,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - FCA conduct rules for lending, cards and payments: the Consumer Duty and the consumer credit sourcebook.
 - The New Bank Start-up Unit's guidance: what a new bank's application must contain.
 - The PRA's ring-fencing rules and the Banking Reform Act 2013: which firms must ring-fence and the threshold.
-- The rest of FSMA: Schedules 1ZA and 1ZB, and Part 4A permissions.
+- The rest of FSMA is in `raw/` but not compiled: Schedules 1ZA and 1ZB are not in the plan; Part 4A is plan 2.
 - The rest of Forte's PARA material, if the clip is partial.
 - Matuschak's uncaptured notes, especially "concept-oriented" and "prefer associative ontologies to hierarchical taxonomies".
 - A head-to-head comparison of a compiled wiki and RAG on the same corpus and questions (carried over).
@@ -187,6 +187,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - [[wiki/sources/Source - Contextual Retrieval]]: Anthropic's post on improving RAG.
 - [[wiki/sources/Source - The PARA Method]]: Forte's four-category system for organising by actionability.
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]: the statute setting up the FCA and PRA, their objectives and their coordination.
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]: the whole Act, revised text; a map of its Parts and Schedules, compiled one part per run.
 - [[wiki/sources/Source - About the FCA]]: the FCA's own account of its scale, methods, funding and accountability.
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]: the PRA's 2023 statement of how it supervises banks.
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]: who leads on what between the FCA and the PRA.
