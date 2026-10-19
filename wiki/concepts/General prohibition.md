@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-2026-09.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
 created: "2026-10-17"
-updated: "2026-10-17"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "regulatory-perimeter"]
 ---
 # General prohibition
@@ -26,6 +26,7 @@ The FSMA rule that no person may carry on a regulated activity in the UK, or pur
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Financial promotion]]

@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-2026-09.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
 created: "2026-10-17"
-updated: "2026-10-17"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "regulatory-perimeter"]
 ---
 # Financial promotion
@@ -29,6 +29,7 @@ An invitation or inducement, communicated in the course of business, to engage i
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/General prohibition]]

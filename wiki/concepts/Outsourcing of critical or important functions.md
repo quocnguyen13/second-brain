@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/fca-final-notice-tsb-2022.pdf]]"]
 created: "2026-10-14"
-updated: "2026-10-14"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "operational-resilience"]
 ---
 # Outsourcing of critical or important functions
@@ -26,7 +26,7 @@ The rules below are as the FCA quoted them for 16 December 2015 to 2018, in its 
   - both have a disaster-recovery contingency plan, with periodic testing of backup facilities
 - **In writing.** Rights and obligations must be clearly allocated in a written agreement (SYSC 8.1.9R, [[raw/fca-final-notice-tsb-2022.pdf#page=107]]). From 3 January 2018 the MiFID Org Regulation adds that sub-outsourcing needs the firm's written consent (Art. 31(3), [[raw/fca-final-notice-tsb-2022.pdf#page=112]]).
 - **Within a group.** When provider and firm are in the same group, the firm may take into account how far it controls or influences the provider (SYSC 8.1.10R, [[raw/fca-final-notice-tsb-2022.pdf#page=108]]).
-- **Applied: TSB and SABIS.** The FCA found that [[wiki/entities/TSB Bank]] breached Principle 2 because, among other things, it never formally assessed whether SABIS, a Sabadell group company, had the ability and capacity to deliver and run its new platform, and got too little assurance on SABIS's 85 fourth parties and on its readiness ([[raw/fca-final-notice-tsb-2022.pdf#page=93]], [[raw/fca-final-notice-tsb-2022.pdf#page=94]], para 5.3; [[raw/fca-final-notice-tsb-2022.pdf#page=76]], para 4.247). It had no contract with the fourth parties but kept its regulatory responsibility for them ([[raw/fca-final-notice-tsb-2022.pdf#page=76]], para 4.247).
+- **Applied: TSB and SABIS.** The FCA found that [[wiki/entities/TSB Bank]] breached Principle 2 because, among other things, it never formally assessed whether SABIS, a Sabadell group company ([[raw/fca-final-notice-tsb-2022.pdf#page=27]], para 4.53), had the ability and capacity to deliver and run its new platform, and got too little assurance on SABIS's 85 fourth parties and on its readiness ([[raw/fca-final-notice-tsb-2022.pdf#page=93]], [[raw/fca-final-notice-tsb-2022.pdf#page=94]], para 5.3; [[raw/fca-final-notice-tsb-2022.pdf#page=76]], para 4.247). It had no contract with the fourth parties but kept its regulatory responsibility for them ([[raw/fca-final-notice-tsb-2022.pdf#page=76]], para 4.247).
 
 ## Where sources disagree
 - None found.

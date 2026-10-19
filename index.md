@@ -14,7 +14,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - Contextual Retrieval]] — Anthropic's post: long prompt under 200k tokens, else RAG improved by contextualised chunks, BM25 and reranking (2 sources)
 - [[wiki/sources/Source - The PARA Method]] — Forte's four-category system (Projects, Areas, Resources, Archives) organised by actionability; set against Matuschak, Bush and the compiled wiki (4 sources)
 - [[wiki/sources/Source - FSMA 2000 Part 1A]] — UK statute setting up the FCA and PRA: solo vs dual regulation, objectives, product-owner lens, FCA–PRA coordination; "renamed" stated over Wikipedia's "abolished" (4 sources)
-- [[wiki/sources/Source - FSMA 2000 (2026-09)]] — map of the whole Act (1,263 pp., revised to 10 Sep 2026): every Part and Schedule, where planned parts sit, 1 of 8 planned parts compiled (Part II); Part 1A to be compared with the clip (2 sources)
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]] — map of the whole Act (1,263 pp., revised to 10 Sep 2026): every Part and Schedule, where planned parts sit, 1 of 8 planned parts compiled (Part II); Part 1A to be compared with the clip (3 sources)
   - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]] — ss. 19–30, pp. 51–70: general prohibition, s. 20 outside permission, financial promotion and the s. 55NA approver gateway, regulated and PRA-regulated activities by Treasury order, offences, unenforceable agreements, the credit regime (ss. 23(1A), 26A, 28A) (1 source)
 - [[wiki/sources/Source - About the FCA]] — the FCA's own page: firm numbers by what they count, authorise–supervise–enforce, fees-funded, accountable to Treasury and Parliament; its ~35,500 stated, its ~1,500 PRA figure superseded (4 sources)
 - [[wiki/sources/Source - The PRA's approach to banking supervision]] — the PRA's July 2023 approach: three principles, impact categories, PIF, ring-fencing, capital, resolvability, new-bank authorisation (1 source)
@@ -30,7 +30,7 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 - [[wiki/sources/Source - FCA glossary micro-enterprise]] — micro-enterprise: < 10 staff and turnover or balance sheet ≤ €2m, from PSD (2 sources)
 - [[wiki/sources/Source - FOS How to complain]] — the FOS's own consumer guide: business first, 8 weeks, "15 days", 6 months, free, AI guidance; its "15 days" and "fraud and scams" outweighed by DISP (4 sources)
 - [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]] — FCA's £29.75m penalty on TSB for its 2018 migration: Principles 2 and 3, go-live attestations, testing scope, SABIS readiness, business continuity, DEPP five steps, SYSC rules (2 sources)
-- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; TSB claims now mostly backed by the FCA notice; s. 19, s. 23 and the Treasury perimeter backed by FSMA Part II; ~1,500 PRA firms left out (8 sources)
+- [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]] — AI: Claude study note on UK regulators, solo/dual, coordination, Vietnam ↔ UK, TSB 2018, the 2026 Bill; backed claims cite raw/, the rest are `· AI` leads; TSB claims now mostly backed by the FCA notice; s. 19, s. 23 and the Treasury perimeter backed by FSMA Part II; ~1,500 PRA firms left out (7 sources)
 
 ## Entities
 

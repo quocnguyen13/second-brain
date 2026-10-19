@@ -2,9 +2,9 @@
 type: source
 status: unverified
 trust: ai
-sources: ["[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
+sources: ["[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-10-14"
-updated: "2026-10-17"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - Claude on who regulates what (2026-09-27)

@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-14"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "prudential-supervision"]
 ---
 # New bank authorisation
@@ -29,6 +29,7 @@ How a firm gets permission to take deposits in the UK: one application, assessed
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Solo and dual regulation]]

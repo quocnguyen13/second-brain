@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-17"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "consumer-protection"]
 ---
 # Regulated financial services
@@ -38,6 +38,7 @@ This is the statutory list of services that sets the reach of the FCA's consumer
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Financial promotion]]

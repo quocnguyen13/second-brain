@@ -3,7 +3,7 @@ type: entity
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-17"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Financial Conduct Authority
@@ -85,6 +85,7 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/General prohibition]]

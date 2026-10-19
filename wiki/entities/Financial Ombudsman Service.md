@@ -3,7 +3,7 @@ type: entity
 status: verified
 sources: ["[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]"]
 created: "2026-10-14"
-updated: "2026-10-14"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "complaints"]
 ---
 # Financial Ombudsman Service
@@ -25,6 +25,7 @@ The Financial Ombudsman Service is the body that considers complaints against fi
 - [[wiki/sources/Source - DISP 1.6 Complaints time limit rules]]
 - [[wiki/sources/Source - FOS How to complain]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Ombudsman referral time limits]]

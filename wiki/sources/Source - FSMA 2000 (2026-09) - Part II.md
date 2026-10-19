@@ -4,7 +4,7 @@ status: verified
 trust: primary
 sources: ["[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-10-17"
-updated: "2026-10-17"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "regulatory-perimeter"]
 ---
 # Source - FSMA 2000 (2026-09) - Part II
@@ -13,7 +13,7 @@ tags: ["uk-financial-regulation", "regulatory-perimeter"]
 **Part of:** [[wiki/sources/Source - FSMA 2000 (2026-09)]] · **Pages:** 51–70 · **Sections:** 19–30
 
 ## Summary
-Part II, "Regulated and Prohibited Activities", draws the perimeter of UK financial regulation. Section 19 forbids anyone to carry on a regulated activity in the UK unless they are authorised or exempt ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=51]], s. 19(1)). Section 22 makes "regulated activity" whatever the Treasury specifies by order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=56]], s. 22(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=57]], s. 22(5)). Section 21 puts a parallel restriction on financial promotion ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=53]], s. 21(1)). The rest of the Part sets the consequences: criminal offences (ss. 23–25), and agreements that can't be enforced against the customer (ss. 26–30), with a separate regime for credit in which the FCA, not the court, decides whether a tainted agreement may still be enforced ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=60]], s. 23; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=63]], s. 26; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=67]], s. 28A(3)).
+Part II, "Regulated and Prohibited Activities", draws the perimeter of UK financial regulation. Section 19 forbids anyone to carry on a regulated activity in the UK unless they are authorised or exempt ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=51]], s. 19(1)). Section 22 makes "regulated activity" whatever the Treasury specifies by order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=56]], s. 22(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=57]], s. 22(5)). Section 21 puts a parallel restriction on financial promotion ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=53]], s. 21(1)). The rest of the Part sets the consequences: criminal offences (ss. 23–25), and agreements that can't be enforced against the customer (ss. 26–30), with a separate regime for credit in which the FCA, not the court, decides whether a tainted agreement may still be enforced ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=60]], s. 23; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=62]], ss. 24–25; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=63]], s. 26; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=64]], s. 27; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=69]], s. 30; [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=67]], s. 28A(3)).
 
 ## Key claims
 

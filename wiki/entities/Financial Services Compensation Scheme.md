@@ -3,7 +3,7 @@ type: entity
 status: verified
 sources: ["[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-06"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Financial Services Compensation Scheme
@@ -21,6 +21,7 @@ The UK's compensation fund of last resort for customers of authorised financial 
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Resolvability]]

@@ -3,7 +3,7 @@ type: concept
 status: unverified
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-17"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Solo and dual regulation
@@ -60,6 +60,7 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - [[wiki/sources/Source - FCA Final Notice to TSB Bank 2022]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/entities/TSB Bank]]

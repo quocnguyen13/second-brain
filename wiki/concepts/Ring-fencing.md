@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-14"
+updated: "2026-10-18"
 tags: ["uk-financial-regulation", "prudential-supervision"]
 ---
 # Ring-fencing
@@ -35,6 +35,7 @@ The regime that separates core retail banking services, deposits with their rela
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/entities/Prudential Regulation Authority]]
