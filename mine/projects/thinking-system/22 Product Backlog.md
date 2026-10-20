@@ -111,7 +111,7 @@ Answers from your own sources, and keeps the good ones. Needs N2, N3.
 | ID | Key | Item | Type | Depends on | Owner | Decisions |
 |---|---|---|---|---|---|---|
 | B-010 | KAN-10 | Local Markdown search, once `index.md` stops scaling | Feature | — | M4 | — |
-| — | KAN-48 | `ask`: report the wiki's own state correctly, and one path when no page covers the subject (MVP 2 regression, tests 3 and 6) | Chore | — | M4 | D-117 |
+| — | KAN-48 | `ask`: report the wiki's own state correctly, and one path when no page covers the subject (MVP 2 regression, tests 3 and 6). **Done 2026-10-20** | Chore | — | M4 | D-117, D-119 |
 
 ### E-04 · Keep healthy · KAN-42
 Finds what's wrong or stale before you rely on it. Need N3.
@@ -149,7 +149,7 @@ Nothing changes without your say, and confidential material stays out. Need N5.
 |---|---|---|---|---|---|---|
 | B-022 | KAN-22 | Data governance (doc 36), with the bank AI-tools policy (Q-004) | Doc | — | M0 | — |
 | B-023 | KAN-23 | Settle Q-015: claude.ai skills that sync into vault sessions | Chore | — | M2 | — |
-| — | KAN-49 | `CLAUDE.md`: no offer to delete "as an exception to the rule" (MVP 2 regression, test 10) | Chore | — | M2 | D-117 |
+| — | KAN-49 | `CLAUDE.md`: no offer to delete "as an exception to the rule" (MVP 2 regression, test 10). **Done 2026-10-20** | Chore | — | M2 | D-117, D-120 |
 
 ### E-08 · Operate · KAN-46
 Keeps running with little effort, and changes safely. Needs N1, N5.
@@ -287,3 +287,4 @@ Claude's lean: **a**, since it keeps `raw/` immutable and citations exact (D-042
 - **Test 6, Partial.** `/ask What does the wiki say about the Consumer Duty?` opened "No wiki page covers the Consumer Duty", not the exact "Nothing in the wiki on this.", and used headings of its own. No page covers the subject, but nearby pages exist, and the skill names only two cases: nothing, or the standard sections.
 - **Minor.** Test 5: an `unverified` page's reason given as a line number, not the reason the page states; `/research` proposed for sources already open on the capture list, where `/import capture` loads them. Test 8: `file-answer` §5 doesn't say where the backlink goes when a source page is under Related, since source pages have no Related list; lint's check 6 expects one.
 **Owner:** M4. **Done when:** the fix is in `ask` and `file-answer`, mirrored in [[40 Claude Operating Instructions]] §4; tests 3 and 6 rerun and pass, recorded as new rows in Run 7.
+**Fixed in M4, Done 2026-10-20 on your word:** a question about the wiki itself is answered from the overview's text, strand by strand, with its open points and gaps; "Nothing" means no page makes a claim about the subject, and takes one path (D-119); status reasons in words; the capture list checked before `/research`; `file-answer` keeps source pages out of Related. Commits 28644bd and 071a054. Test 6 passed on its first rerun, test 3 on its second.

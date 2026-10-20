@@ -67,10 +67,12 @@ Rules:
    ```
    Short replies such as "accept 10, 22" are fine.
 2. **Claude's files go through the staging folder, never straight into the vault** (D-114): `C:\Users\Admin\Documents\Obsidian x Claude`.
-   - **One folder per batch,** named after the thread and the work, such as `M0-staging-rule`. Inside it, `vault\` holds only the files that changed, at their vault paths (`vault\mine\projects\thinking-system\02 Working Agreement.md`), and `_DEPLOY.md` gives a short summary of the changes and the steps below. Each batch is built on the vault's current files. You get a full zip only when you ask for one, or at the end of a phase.
+   - **One folder per batch,** named after the thread and the work, such as `M0-staging-rule`. Inside it, `vault\` holds only the files that changed, at their vault paths (`vault\mine\projects\thinking-system\02 Working Agreement.md`), and `_DEPLOY.md` gives a short summary of the changes and the steps below. Each batch is built on the vault's current files, and `_DEPLOY.md` names the commit they were at: **Built on:** the hash in `.git\refs\heads\main`, staged with them (D-121). You get a full zip only when you ask for one, or at the end of a phase.
    - **Staging → vault → commit → push,** in PowerShell with Obsidian closed:
      ```powershell
      cd "C:\Users\Admin\Vaults\Second-Brain"
+     git pull
+     git log --oneline <built-on>..HEAD -- "<each file the batch lists>"
      git status
      robocopy "C:\Users\Admin\Documents\Obsidian x Claude\<batch>\vault" . /E
      git add "<each file the batch lists>"
@@ -78,7 +80,7 @@ Rules:
      git commit -m "<thread>: <what changed>"
      git push
      ```
-     Then click Sync (§2). `git add` names the batch's files, so nothing else rides along. If the first `git status` shows work not yet committed, commit that first, in the thread it came from.
+     Then click Sync (§2). `git add` names the batch's files, so nothing else rides along. If `git log` prints a line, stop: another thread changed one of the batch's files after it was built, so tell that batch's thread, which restages and rebuilds (D-121). If the first `git status` shows work not yet committed, commit that first, in the thread it came from.
    - **Every thread's deployment steps use this path and these steps.** Claude doesn't write project files into the vault, and doesn't attach them to the chat. A file Claude's tools can't write into the folder, such as a skill under `.claude\`, comes as a zip with the same paths, for you to extract into the batch's `vault\` folder.
    - **After the push,** Claude checks that the vault matches the batch and says the folder can go. You delete it; Claude can't delete files there.
 3. **If you edit a file directly in Obsidian, commit, push, and Sync first.** Otherwise Claude's next revision will overwrite your edits.
