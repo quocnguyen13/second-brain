@@ -122,3 +122,9 @@ Applied: 1a, 3a. Skipped: none. Pages changed: 5 (Financial Ombudsman Service, S
 
 ## [2026-10-20] ingest | FSMA 2000 (2026-09), Part 1A
 Set: set-2026-10-20-3, 1 source, part 1A (pp. 5–51) of 8 planned parts, primary; a compare against the Part 1A clip. Pages: +0 new; 1 updated (Source - FSMA 2000 (2026-09): Part 1A row compared, open point on s. 3B(1)(c) answered). Conflicts: none; the two texts match word for word across ss. 1A–3T. Flags: the PDF does not settle the s. 3B(1)(c) open point; two stray read-only shell commands (`wc -l` on the clip, `git show HEAD:log.md`).
+
+## [2026-10-20] lint | report-2026-10-20-3
+Scanned 85 pages, deep-checked 7. Findings: 1 (0 high, 1 medium, 0 low). Checks ticked: 0. No wiki pages changed.
+
+## [2026-10-20] lint | apply report-2026-10-20-3
+Applied: 1. Skipped: none. Pages changed: 0, plus the Financial Ombudsman Service line in index.md. Status changes: none.
