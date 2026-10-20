@@ -11,7 +11,7 @@ argument-hint: "[file names in inbox/sources/ | part <document> [<part>] | resol
 Two modes. `/ingest` on its own, or with file names, compiles a set of sources: one brief, one move, one run, one review (Part A). `/ingest resolve 1a 2d` applies my decisions on the conflicts in the latest set review, and nothing else (Part B). A set of one file is an ordinary single ingest. A large document is mapped first and then compiled one part per run, with `/ingest part <document>`, following `large-source.md`. The brief first checks the set against `raw/` for duplicates and newer versions, as `/import` does. `CLAUDE.md` and `system/conventions.md` apply throughout; this file is the procedure.
 
 **Ground rules for the whole run**
-- Look around with your file tools (Glob, Grep, Read), not shell commands such as `ls`, `cat` or `tail`. The git commands in A10 are the only shell commands you run.
+- Look around with your file tools (Glob, Grep, Read), not shell commands such as `ls`, `cat` or `tail`. The only shell commands you run are git: `git status` and `git diff` to see what a stopped run wrote, and the commands in A10 (D-106).
 - Change every vault file, `index.md` and `log.md` included, with Edit or Write, one edit at a time. Never run a script or a shell command to read or rewrite a vault file. If an edit fails, read the file again and retry.
 - Write only in `wiki/`, `mine/drafts/`, `system/ingest/`, `index.md` and `log.md`, plus ticks and lines in `system/research/capture.md` (A7). No working files anywhere else in the vault. Read a PDF with Read, by page range; never print it to the terminal or save a converted copy (D-106).
 - If a file won't open with Read, say so and leave it out of the set. Don't save a converted copy.
@@ -137,7 +137,7 @@ Once, after the last source. Rewrite it, don't append: the current picture acros
 Fill the remaining sections in the format below and update the Result line. Set `status: review` if any conflict waits for my decision, otherwise `status: done`.
 
 ### A9. Report, then stop
-Before reporting, check that every `[[wiki/...]]` link you wrote points to a page that exists, under its exact file name. Then, in the session, at most fifteen lines:
+Before reporting, check with Glob that every `[[wiki/...]]` link you wrote points to a page that exists, under its exact file name; never with a shell command. Then, in the session, at most fifteen lines:
 - counts: sources by level, pages new and updated, conflicts, facts by level;
 - each conflict in one line, with your proposal;
 - each page left `unverified`, and why;

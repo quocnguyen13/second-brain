@@ -46,7 +46,7 @@ Where a part sits goes on the map as soon as it is known.
 
 ## 4. The map run: write the map (A3–A4)
 - **Set review** as usual, topic `<title>, map`, with one row under "Plan and progress": `M`.
-- **The map** is `wiki/sources/Source - <title>.md`, from the Source template. For a consolidated text, the title carries the year and month: `Source - FSMA 2000 (2026-10)`. Add to the header line: `**Size:** N pages · **Compiled:** 0 of N parts`.
+- **The map** is `wiki/sources/Source - <title>.md`, from the Source template. For a consolidated text, the title carries the year and month: `Source - FSMA 2000 (2026-10)`. Add to the header line: `**Size:** N pages · **Compiled:** 0 of N planned parts`.
 - **Summary:** what the document is and how it is organised, citing the contents pages.
 - **Parts,** after Summary, one row per part in the document's order, every part listed. For example:
   ```
@@ -59,6 +59,8 @@ Where a part sits goes on the map as soon as it is known.
   ```
   Status is one of: `compiled <date>` or `compared <date>`, each with the part's source page and set review; `in progress` with its set review; `planned <n>`; `not compiled`. A part another raw file covers adds `· compare:` and a link to that file. Under the table: "Parts and what they cover, from the contents ([[raw/<name>.pdf#page=N]] to page N)", or "from the publisher's contents page ([[raw/<stem>-contents-<yyyy-mm>.md]])" for a contents companion. Where and Status describe the file and the wiki, not what the document says, and need no citation.
 - `status` on the map follows A4.4, for its Summary and Covers.
+- **`sources` and links.** The map's `sources` lists the document, its contents companion, and every raw file a row links to, such as the file a `compare` points at. Each page the map links under "Entities and concepts" lists the map under "Mentioned in".
+- **My emphasis** goes on the map, under "Conflicts and open points", as "Emphasis for every part run" with its date. Each part run applies it, with anything I add in my reply to that part's brief.
 - **Overview, index, log:** add the document to `overview.md` among the sources and the gaps, without a rewrite; a line for the map in `index.md`; the log entry as A7, "Pages: +1 new (the map)".
 - **Capture list:** no ticks yet; lines are ticked as parts are compiled (§7).
 - Tick `M`, finish the set review and report: the number of parts, the plan, and "Run `/clear`, then `/ingest part <document>` for part 1 of the plan." No `/lint` line yet, since nothing is compiled. Commit as A10 when I say the review is done.
@@ -72,12 +74,14 @@ Short, and nothing written until I answer:
 
 ## 6. A part run: compile (A3–A4)
 - **Set review** as usual, topic `<title>, Part <label>`. Under "Plan and progress", one row per chunk, `1a`, `1b`, …: a chapter or cross-heading group, or at most 20 PDF pages (one Read) or about 500 lines, whichever ends first. Set the part's map row to `in progress` with the set review's link.
+- **Mark a chunk `started YYYY-MM-DD`** under "Plan and progress" before writing anything from it, and save the set review.
 - **Read one chunk at a time,** with Read: `pages` for a PDF, `offset` and `limit` for Markdown. Never print a PDF to the terminal or save a converted copy.
 - **The part's source page** is `wiki/sources/Source - <title> - Part <label>.md`, from the Source template, with this under the header line: `**Part of:** [[wiki/sources/Source - <title>]] · **Pages:** a–b · **Sections:** …`. Write it with the first chunk and add to it as each chunk is done. `sources` lists the raw file.
 - **Every citation carries its place** (D-112): `([[raw/<name>.pdf#page=N]], s. 55E(2))` for legislation in a PDF; `([[raw/<name>.pdf#page=N]])` for a book, with the PDF's own page number from the page you read. In Markdown, link the heading the passage sits under, copied as written but without `# | ^ \ [ ] %`, then the section for legislation: `([[raw/uk-parliament-fsma-2000-part-1a.md#1LSupervision, monitoring and enforcementU.K.]], s. 1L(2))`.
+- **Prospective text.** A provision the document marks as not yet in force is stated as prospective, with the note that says so, never as current law: `… (prospective: [[raw/<name>.pdf#page=N]], s. 55E(2), F12)`. Say under "Conflicts and open points" whether the part holds any.
 - Entity, concept and conflict work runs as A4.2–A4.4. A claim marked `· AI` anywhere in the wiki that this part states is re-cited as A4.2 says: open the section and check it states all of the claim. Backed now, it also belongs on the page of its subject, if it isn't there yet (D-102).
-- **Tick each chunk** with the date, and save the set review before the next. If the run stops, the next `/ingest` resumes at the first chunk not ticked: read the part's source page and the pages earlier chunks touched, and complete them. Never add a claim a page already makes from this file.
-- **When the last chunk is done,** set the part's map row to `compiled <date>` with its links, fill in Where, update "Compiled: N of M parts", and set the map's `updated`.
+- **Tick each chunk** with the date once its pages are written, and save the set review before the next. If the run stops, the next `/ingest` resumes at the first chunk not ticked. A chunk marked `started` may already be on the pages: read the part's source page and the pages it touched, record under Facts by trust what is already there, and complete the rest. Never add a claim a page already makes from this file.
+- **When the last chunk is done,** set the part's map row to `compiled <date>` with its links, fill in Where, update "Compiled: N of M planned parts", and set the map's `updated`.
 
 ## 7. A part run: finish (A5–A10)
 - **A5:** revise only the paragraphs of `overview.md` this part bears on.

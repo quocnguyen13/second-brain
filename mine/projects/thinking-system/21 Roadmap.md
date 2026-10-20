@@ -248,9 +248,16 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] D-107 to D-113 accepted (2026-10-15)
 - [x] Files placed, committed and pushed (1df0f61, 2026-10-15); Sync. M0's staging rule followed the same day (D-114, 362803c)
 - [x] LD1: `/import` downloaded the whole Act, 1,263 pages, one approval, verdict **part** against the Part 1A clip. **Pass** (2026-10-15). The PDF is up to date to 2026-09-10, a month behind the site's text, so the Part 1A clip and the capture lines are the later texts (D-111)
-- [ ] LD2: first run **Partial** (2026-10-15). Plan, move block and no writes as the test asks, but the PDF has no contents pages, so the map couldn't name every Part. D-115, accepted 2026-10-17: the map takes its parts from a clip of the contents page. `large-source.md`, `ingest` and `import` revised. The move block had been run, so the PDF goes back to the zone for the rerun
-- [ ] LD3: the map written
-- [ ] LD4–LD7: parts compiled across sessions, one run stopped and resumed, `/lint` after each part, the FSMA leads backed
+- [x] LD2: first run **Partial** (2026-10-15): the PDF has no contents pages, so the map couldn't name every Part. D-115, accepted 2026-10-17: the map takes its parts from a clip of the contents page; `large-source.md`, `ingest` and `import` revised (c43f43d). Rerun **Pass** (2026-10-17)
+- [x] LD3: the map, 49 Parts and 36 Schedules, all 8 planned parts located. **Pass** (9a235a3)
+- [x] LD4: Part II compiled, 36 facts, six citations traced to the PDF. **Pass** (546570b). `/lint` after it found 4 findings, none high and none on facts, against 6 and 5 high after M7's and M8's sets (86bae7c)
+- [x] LD5: Part 4A stopped after chunk 1a was written but before it was ticked; the next `/ingest` recorded 1a, compiled 1b, and added nothing twice. **Pass** (2026-10-20). The first real run of the resume path (D-086)
+- [x] Skill fixes from LD3–LD5: the map holds your emphasis and lists every raw file it links; a chunk is marked started before it is written; prospective text is stated as prospective; links are checked with Glob; read-only git may show what a stopped run wrote (D-106)
+- [ ] LD6–LD7: Part XVI and the Part 1A compare, `/lint` after each; three citations traced; the s. 228 capture line ticked
 - [ ] LD8: `/ask` on a part not compiled
 - [ ] **M9 exit: 8 of 8**; [[11 Project Charter]] §11 criterion 4 met
 - [ ] Handover written; next, MVP 2's exit: criteria 5 (side-by-side) and 6 (regression)
+
+**Parked in M9 so far:**
+- A set whose files were moved into `raw/` but whose reply never came leaves them there with no set review, and the next `/ingest` sees an empty zone (seen 2026-10-15, when the Act was moved back by hand). For the handover.
+- Skills reaching for the shell: four times in M8 and M9, each harmless and reported. The `ingest` wording now names what is allowed.
