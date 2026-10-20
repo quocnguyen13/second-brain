@@ -24,6 +24,9 @@ Answer exactly one question from the wiki, show where every part of the answer c
 
 ## 1. Find the pages
 - Read `index.md`, and `wiki/overview.md` when the question is broad.
+- **A question about the wiki itself** (how far my reading has got, what it holds, what's disputed or unverified) is answered from `wiki/overview.md`'s own text:
+  - Take counts of sources, parts and pages from the overview's sentences. An index line's "(N sources)" is the length of that page's `sources` property, not a count of the wiki, and a page's list can leave sources out by design (the overview's leaves out the Claude note).
+  - A heading's statement covers only that heading. "None open" under one strand's disputes says nothing about another strand. Read every strand's own "Where sources disagree" and report open and resolved disputes strand by strand.
 - Then Grep `wiki/` for the question's key terms, including synonyms and other spellings. The index is a starting point, not the search: a page it doesn't mention can still be the right one.
 - Read every page that looks relevant, then follow its links one hop where they bear on the question.
 - A source page with a **Parts** table maps a large document. If the question falls in a part whose status is `planned` or `not compiled`, say so under Not in the wiki: the part, where it sits in the raw file, and `/ingest part <document> <part>`. Don't read the uncompiled part to answer.
@@ -34,7 +37,8 @@ Answer exactly one question from the wiki, show where every part of the answer c
 - Note each claim's trust level: the marker at the end of its citation (`· secondary`, `· commentary`, `· AI`), or primary when there is none. The cited source page's `trust` confirms it.
 - A dispute the page marks "Resolved" is settled: use the claim the page states, and treat the one marked "outweighed by" or "superseded by" as context, not evidence.
 - If the answer turns on one or two claims, open the cited passage in `raw/` and confirm it says what the page says. If it doesn't, say so in the answer and suggest a check for `inbox/checks.md`. Don't fix the page.
-- Decide how much the wiki covers: all of the question, part of it, or nothing.
+- When the answer names a page's status, give the reason in words, as the page states it: the claim labelled "(general knowledge)", how many claims are marked `· AI`, or the dispute under "Where sources disagree". A line number can point to it, never stand in for it.
+- Decide how much the wiki covers: all of the question, part of it, or nothing. **Nothing** means no page makes a claim about the subject itself. Pages on neighbouring subjects, or a gap list that names the subject, don't make it partial.
 
 ## 3. Answer
 Use these sections, in this order, and no others. Leave out any section with nothing in it. Keep it short.
@@ -45,7 +49,14 @@ Use these sections, in this order, and no others. Leave out any section with not
 - **Not in the wiki:** only what the question asks that no page covers. If you add general knowledge here, label every such sentence "(general knowledge)" and keep it apart from the evidence.
 - **Recommendation:** one or two lines, when the question asks what to do or the answer shows an obvious next step (a source to ingest, a check to queue). Otherwise leave it out.
 
-If the wiki has nothing on the question, the first line of the reply is exactly: **Nothing in the wiki on this.** Then answer from general knowledge, labelled as such, and name a source type that would fill the gap, or suggest `/research <topic>`.
+**Suggesting a source.** Before suggesting `/research` for a source, Grep `system/research/capture.md` for it. An open line (`- [ ]`) means it's found already: suggest `/import capture` for a PDF, or clipping the page, not `/research`. A ticked line means it's compiled: look in the wiki again.
+
+**When the wiki has nothing** (step 2), use this path and no other:
+- The first line of the reply is exactly: **Nothing in the wiki on this.**
+- Leave out Answer, Evidence and Where sources disagree.
+- **Caveats:** the nearby pages, if any, each with what it covers and why it doesn't answer the question, and whether `wiki/overview.md` lists the subject as a gap. Nothing from them is offered as the answer.
+- **Not in the wiki:** the answer from general knowledge, every sentence labelled "(general knowledge)".
+- **Recommendation:** a source type that would fill the gap, following "Suggesting a source".
 
 Never cite a wiki page as the evidence for a claim; the chain of fact ends in `raw/`. Never present general knowledge as something the wiki says.
 

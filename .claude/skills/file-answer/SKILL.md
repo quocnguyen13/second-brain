@@ -40,7 +40,7 @@ This page is new synthesis, so its evidence is checked again at the source befor
 - **Evidence:** one bullet per claim, citing the raw file directly, with the wiki page it came from for context: `- Claim ([[raw/<name>]]), via [[wiki/concepts/<Page>]]`. A citation keeps the level marker the page gives it (`· secondary`, `· commentary`, `· AI`).
 - **Where sources disagree:** both positions with their raw citations, if the answer carries a disputed claim. For a dispute the page marks "Resolved", keep its resolution line. Leave the heading out otherwise.
 - **Caveats and gaps:** what the wiki doesn't cover, uncited points from step 2, and any source that would settle an open point.
-- **Related:** every wiki page the answer drew on, including the page behind each position under "Where sources disagree". These are links for context, never evidence.
+- **Related:** every entity, concept and analysis page the answer drew on, including the page that carries each position under "Where sources disagree". These are links for context, never evidence. Source pages stay out of Related: they have no Related list to link back from, so lint check 6 would find a one-way link. A source page the evidence came through is named in Evidence ("via"), and its raw file is in `sources`.
 - Properties: `sources` lists every raw file cited; `created` and `updated` today; one or two tags reused from the pages it drew on.
 
 ## 4. Set status
@@ -50,7 +50,7 @@ This page is new synthesis, so its evidence is checked again at the source befor
 - The Answer's conclusion is this page's reasoning from its own Evidence. It needs no separate citation, but it can't go beyond that evidence.
 
 ## 5. Link it in
-- On each page listed under Related, add the analysis to that page's `Related` list and set `updated` to today. Change nothing else on those pages.
+- On each page listed under Related, add the analysis to that page's `Related` list and set `updated` to today. Change nothing else on those pages. Every page under Related now links back, so the links run both ways (lint check 6).
 - `index.md`: add a line under Analyses: `- [[wiki/analyses/<title>]] — one-line answer (N sources)`.
 - `log.md`: append
   ```
