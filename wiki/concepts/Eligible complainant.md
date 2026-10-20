@@ -56,6 +56,7 @@ An eligible complainant is someone who may take a complaint to the Financial Omb
 - [[wiki/sources/Source - DISP 2.7 Complainant eligibility]]
 - [[wiki/sources/Source - FCA glossary small business]]
 - [[wiki/sources/Source - FCA glossary micro-enterprise]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part XVI]]
 
 ## Related

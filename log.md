@@ -110,3 +110,12 @@ Applied: 1, 2a, 3a, 4, 5. Skipped: none. Pages changed: 6 (Source - FSMA 2000 (2
 
 ## [2026-10-20] ingest | FSMA 2000 (2026-09), Part XVI
 Set: set-2026-10-20-2, 1 source, part XVI (pp. 596–609) of 8 planned parts, primary. Pages: +1 new (Source - FSMA 2000 (2026-09) - Part XVI); 5 updated (Source - FSMA 2000 (2026-09), the map: Part XVI compiled, 3 of 8; Financial Ombudsman Service; Ombudsman awards; Eligible complainant; Financial Conduct Authority). Draft: An ombudsman decision binds the bank only when the complainant accepts it, so complaint journeys should plan for both outcomes. Conflicts: none. Flags: none; no prospective text in Part XVI; ss. 226A and 234A omitted. Capture list: ticked the s. 228 line.
+
+## [2026-10-20] lint | report-2026-10-20-2
+Scanned 85 pages, deep-checked 7. Findings: 4 (2 high, 1 medium, 1 low). Checks ticked: 0. No wiki pages changed.
+
+## [2026-10-20] lint | apply report-2026-10-20-2
+Applied: 2, 4. Skipped: 1, 3 (options, no letter given). Pages changed: 3 (Financial Ombudsman Service, Financial Conduct Authority, Source - FSMA 2000 (2026-09) - Part XVI). Status changes: none.
+
+## [2026-10-20] lint | apply report-2026-10-20-2
+Applied: 1a, 3a. Skipped: none. Pages changed: 5 (Financial Ombudsman Service, Source - FSMA 2000 (2026-09) - Part XVI, Ombudsman awards, Eligible complainant, overview), plus the Part XVI line in index.md. Status changes: none.
