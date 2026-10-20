@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-14
+reviewed: 2026-10-20
 tags: [project/thinking-system, roadmap]
 ---
 
@@ -56,7 +56,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 | **M7 – Batch Ingest and Trust** | A topic comes in as a set: one run, one review, facts ranked by trust, conflicts resolved | Must: B-006 set ingest, B-007 trust levels (rule in doc 31 §2), B-008 conflict review (doc 31 §3), B-024 one move per set, tested on B-009 (the UK financial system). Should: B-011, B-025. Takes over the `ingest` skill from M3 | 5 or more sources on one topic compiled in one run with one review, conflicts first and facts sorted by trust; the MVP 1 ingest tests still pass. Tests I1–I7: 7 of 7 | **Closed 2026-10-06** |
 | **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version. Tests IM1–IM6, RS1–RS4 and AI1–AI4: 14 of 14 (D-100, D-101) | **Closed 2026-10-14** |
 | **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section. Tests LD1–LD8: 8 of 8 (D-113) | **Closed 2026-10-20** |
-| **MVP 2 complete** | | | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate in M0 (D-082) | |
+| **MVP 2 exit, in M0** (D-117) | The last two criteria, then the retrospective and the showcase gate | Run 7 in `system/test-results.md`; doc 91 (MVP 2 Retrospective); the showcase decision | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate (D-082). Plan in §13 | Regression 21–22 Oct; side-by-side 23 Oct; retrospective and gate 26 Oct |
 
 **Not in MVP 2:** everything else waits in the backlog, in Jira and [[22 Product Backlog]], with a proposed milestone. Work material and bank devices stay out until doc 36 exists (D-018, B-022).
 
@@ -261,8 +261,27 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] D-116 accepted at the close (2026-10-20): a claim leaning on another part cites `raw/`; a compare adds no claims; a chunk marked started; prospective text. `large-source.md` revised, and `CLAUDE.md` gains D-106's file-tool lines
 - [x] Handover written: [[90 M9 Handover]], with the request for M0
 - [ ] Closing files placed, committed and pushed; Sync
-- [ ] **Next:** MVP 2's exit, criteria 5 (side-by-side) and 6 (regression), then the retrospective and the showcase gate, scheduled by M0
+- [x] **Next:** MVP 2's exit, criteria 5 (side-by-side) and 6 (regression), then the retrospective and the showcase gate, scheduled by M0 in the M0 thread (§13, D-117). KAN-38 moved to Done on your word (2026-10-20)
 
 **Parked in M9 so far:**
 - A set whose files were moved into `raw/` but whose reply never came leaves them there with no set review, and the next `/ingest` sees an empty zone (seen 2026-10-15, when the Act was moved back by hand). For the handover.
 - Skills reaching for the shell: four times in M8 and M9, each harmless and reported. The `ingest` wording now names what is allowed.
+
+## 13. MVP 2 exit, planned in M0
+Run in the M0 thread (D-117). Each step's results go into `system/test-results.md`, Run 7.
+
+| Date | Step | Done when |
+|---|---|---|
+| Tue 20 Oct | M0's as-built update for M9 placed, committed and pushed; Sync. `system/context.md` "Current focus" changed to the MVP 2 exit (your file) | Project knowledge holds doc 90 and this plan |
+| Wed 21 Oct, first | M0 writes the five side-by-side questions, SB1–SB5, and the rerun notes for MVP 1 tests that depended on MVP 1's wiki, into [[40 Claude Operating Instructions]] §5. You agree the questions | The questions are fixed before any test runs |
+| Wed 21 – Thu 22 Oct | **Criterion 6, regression:** test prompts 1–10 (answers, filing, injection, permissions), L1–L6 (`lint`), R1–R5 (`drafts`), each in a fresh vault session | 21 of 21, or each failure fixed in the thread that owns the skill and rerun |
+| Fri 23 Oct | **Criterion 5, side-by-side:** SB1–SB5 through `/ask` and in a default Claude chat with no project; every `/ask` fact traced to `raw/` with its level; the default chat's facts checked against the same raw files | 5 of 5 `/ask` answers fully traced; the comparison recorded |
+| Mon 26 Oct | **Retrospective** (doc 91) and **showcase gate** (D-082, D-083), in M0 | Doc 91 written with you; the gate decided and logged; MVP 3's scoping, or the showcase, scheduled |
+
+- [ ] Placed, committed and pushed; Sync
+- [ ] SB1–SB5 agreed; rerun notes written
+- [ ] Criterion 6: regression, 21 of 21
+- [ ] Criterion 5: side-by-side, 5 of 5
+- [ ] **MVP 2 exit: 6 of 6 criteria** ([[11 Project Charter]] §11)
+- [ ] Retrospective, doc 91
+- [ ] Showcase gate decided

@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-06
+reviewed: 2026-10-20
 tags: [project/thinking-system, vault-design]
 ---
 
@@ -28,10 +28,10 @@ Second-Brain/              ← the vault; a git repository pushed to the private
 │   └── checks.md          things awaiting /lint
 ├── raw/                   YOUR sources, after ingest. Claude reads, never edits.
 │   ├── assets/            images and attachments
-│   └── *.md, *.pdf
+│   └── *.md, *.pdf       a large document stays whole, one file (D-107)
 ├── wiki/                  CLAUDE'S compiled pages. You read.
 │   ├── overview.md        the current picture, in one page
-│   ├── sources/           one summary page per source
+│   ├── sources/           one summary page per source; for a large document, a map and one page per compiled part
 │   ├── entities/          people, organisations, products, tools
 │   ├── concepts/          ideas, methods, patterns, regulations
 │   └── analyses/          comparisons and answers worth keeping
@@ -131,5 +131,8 @@ Set: set-2026-10-01, 5 sources (3 primary, 1 secondary, 1 commentary). Pages: +3
 - Folders are lower case with hyphens; page titles are plain language.
 - Avoid these characters in titles: `# ^ [ ] | \ / : * " < > ?`
 - Files in `raw/` are named as they move in: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`. With no author, the organisation or site, e.g. `wikipedia-financial-conduct-authority.md`; for a document in a dated series, the year, e.g. `pra-banking-supervision-approach-2023.pdf`. The content is never changed (D-042, D-089). A new version of a document already in `raw/` takes the same stem with its year, or year and month, e.g. `fca-about-the-fca-2026-10.md`, and the older file stays (D-099). A Claude output is `claude-<YYYY-MM-DD>-<topic>.md` (D-075).
+- **Consolidated legislation** takes the stem, then the year and month of its "up to date" line: `uk-parliament-fsma-2000-2026-09.pdf`. A later consolidation is a new version with its own year and month, and both files stay (D-111).
+- **A contents companion,** the clip of a publisher's contents page for a document that has none of its own, takes the document's stem, `-contents`, and the year and month of its own "up to date" line: `uk-parliament-fsma-2000-contents-2026-10.md`. It has no source page of its own: the document's map lists it in `sources` (D-115).
+- **A large document's wiki pages:** the map is `Source - <title>`, with the year and month for a consolidated text, e.g. `Source - FSMA 2000 (2026-09)`; each compiled part is `Source - <title> - Part <label>`, labelled as the document does, e.g. `Source - FSMA 2000 (2026-09) - Part II` (D-107).
 - Dates as `YYYY-MM-DD`.
 - One idea per insight page, titled as a statement you could agree or disagree with.

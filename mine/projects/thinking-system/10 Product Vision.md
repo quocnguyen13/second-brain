@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-30
-reviewed: 2026-10-14
+reviewed: 2026-10-20
 tags: [project/thinking-system, vision]
 ---
 
@@ -37,7 +37,7 @@ Back to [[00 Project Home]] · Phase: Plan, strategy · Owned by M0 – Project 
 ### 2.2 Needs
 | # | When I… | I want to… | so that… | Today |
 |---|---|---|---|---|
-| N1 | start a new domain | research it as a set of sources, with facts ranked by trust and conflicts resolved | I learn fast and can defend what I learnt | Mostly met. `/research` returns a report in which every fact names its source, with a quote; `/import` brings the sources in once, PDFs downloaded on your approval and pages listed for you to clip; `/ingest` compiles them as a set with trust levels and a conflict review (M7, M8: [[89 M8 Handover]]). Large documents (M9) to come |
+| N1 | start a new domain | research it as a set of sources, with facts ranked by trust and conflicts resolved | I learn fast and can defend what I learnt | Met by MVP 2's build modules, pending its exit tests. `/research` returns a report in which every fact names its source, with a quote; `/import` brings the sources in once; `/ingest` compiles them as a set with trust levels and a conflict review; a document of a thousand pages is mapped and compiled one part per run (M7 to M9: [[90 M9 Handover]]) |
 | N2 | read something useful | keep it where it compounds | nothing useful disappears into chat history | Met by MVP 1 |
 | N3 | rely on a fact | trace it to its source in under a minute | I never have to take Claude's word for it | Met by MVP 1 (G5) |
 | N4 | produce a standard output, such as a PRD or a brief | have it drafted from my knowledge, to my template, style and audience | my time goes on judgement, not grunt work | Not built |
@@ -119,7 +119,7 @@ flowchart TD
 | Milestone | Goal | Capabilities | Needs met | Status |
 |---|---|---|---|---|
 | **MVP 1 · Compounding knowledge base** | The working loop: capture, compile, ask, file back, lint, think | E-01 to E-05, E-07 | N2, N3, N5 (personal) | **Done 2026-09-25**, 6 of 6 criteria |
-| **MVP 2 · Research assistant** | Research a topic as a set, large documents included: trust-ranked, verified facts, with fewer manual steps | E-01, E-02, E-04, E-05, E-07, E-08 | N1 | **In progress.** Scope accepted (D-084). M7 closed 2026-10-06 (criterion 3 met) and M8 on 2026-10-14 (criteria 1 and 2 met); M9 is next ([[11 Project Charter]] §11) |
+| **MVP 2 · Research assistant** | Research a topic as a set, large documents included: trust-ranked, verified facts, with fewer manual steps | E-01, E-02, E-04, E-05, E-07, E-08 | N1 | **In progress.** Scope accepted (D-084). M7, M8 and M9 closed by 2026-10-20, with criteria 1 to 4 met; the exit tests for criteria 5 and 6 run 21–23 October, then the retrospective and showcase gate on 26 October (D-117; [[11 Project Charter]] §11) |
 | **MVP 3 · Work assistant** | Defined jobs to your standards, a PRD first | E-06 | N4 | Proposed |
 | **MVP 4 · Work-ready** | Work material under data governance; Office files as sources | E-01, E-07 | N5 (work) | Later |
 
@@ -131,7 +131,7 @@ The milestones split the candidate goal in [[87 MVP Retrospective]] §7.2 (resea
 | ID | Capability | What it does for the owner | Built so far | Features next ([[22 Product Backlog]]) |
 |---|---|---|---|---|
 | E-01 | **Capture** | Gets material in: web clips, files, Claude outputs | Web Clipper and the inbox zones (US-01). Since M8: `/research` writes a report in which every fact names its source, with the sources to clip on the capture list (US-17); `/import` downloads PDFs from links on your approval and checks every file against `raw/` for duplicates and new versions (US-18); a Claude output can be saved as a source (US-19) | B-001, B-002, B-005 |
-| E-02 | **Compile and verify** | Turns sources into cited pages, with status, conflicts and trust | `/ingest` for a set of up to 8 sources, with trust levels, a conflict review you decide, and one set review (US-02, US-09; M7: US-14, US-15). Since M8, a Claude output is compiled claim by claim at level AI; a claim no source backs is kept as an `· AI` lead until a primary source backs it, and goes on an existing page only when it is about that page's subject (US-19, D-098, D-102) | B-009, B-038 |
+| E-02 | **Compile and verify** | Turns sources into cited pages, with status, conflicts and trust | `/ingest` for a set of up to 8 sources, with trust levels, a conflict review you decide, and one set review (US-02, US-09; M7: US-14, US-15). Since M8, a Claude output is compiled claim by claim at level AI; a claim no source backs is kept as an `· AI` lead until a primary source backs it, and goes on an existing page only when it is about that page's subject (US-19, D-098, D-102). Since M9, a document of several hundred pages, such as a full Act, stays whole in `raw/`: the first run maps it, and each later run, `/ingest part`, compiles one part, with every citation at its page and section (US-20, D-107 to D-116) | B-009 |
 | E-03 | **Ask and reuse** | Answers from your own sources, and keeps the good ones | `/ask`, `/file-answer` (US-03, US-04); since M7, `/ask` gives each fact's trust level | B-010 |
 | E-04 | **Keep healthy** | Finds what's wrong or stale before you rely on it | `/lint`, the review views, the weekly review (US-05, US-06, US-08, US-12); since M7, log entries name pages; since M8, `/ingest` recommends `/lint` after a large set (D-103) | B-012 to B-014 |
 | E-05 | **Think** | Holds your own conclusions and decisions | `/drafts`, the insights routine (US-07) | B-015, B-016 |

@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-14
+reviewed: 2026-10-20
 tags: [project/thinking-system]
 ---
 
@@ -92,7 +92,9 @@ The LLM does the bookkeeping: summarizing, cross-referencing, filing, flagging c
 ## 11. MVP 2 · Research assistant
 Scope accepted 2026-09-30 ([[03 Decision Log]] D-084). Where it sits among the milestones: [[10 Product Vision]] §4.1. Modules: [[21 Roadmap]] §2.
 
-**Status, 2026-10-14:** M7 – Batch Ingest and Trust closed 2026-10-06 ([[88 M7 Handover]]) and M8 – Research and Import closed 2026-10-14 ([[89 M8 Handover]]). Done: B-003, B-004, B-006, B-007, B-008, B-011, B-024, B-025, B-037; B-009 has 16 sources compiled. Criteria 1, 2 and 3 are met. M9 – Large Documents is next.
+**Status, 2026-10-20:** M7 – Batch Ingest and Trust closed 2026-10-06 ([[88 M7 Handover]]), M8 – Research and Import on 2026-10-14 ([[89 M8 Handover]]) and M9 – Large Documents on 2026-10-20 ([[90 M9 Handover]]). Done: B-003, B-004, B-006, B-007, B-008, B-011, B-024, B-025, B-037, B-038; B-009 holds 18 raw files, the whole FSMA 2000 among them. Criteria 1 to 4 are met.
+
+**Exit, run in M0** (D-117): criterion 6, the regression, on 21–22 October; criterion 5, the side-by-side, on 23 October; then the retrospective and the showcase gate on 26 October ([[21 Roadmap]] §13).
 
 **Goal:** research a topic in one pass, with trust-ranked, verified facts, so an answer from the vault beats a default Claude answer (D-083).
 
@@ -107,14 +109,14 @@ Scope accepted 2026-09-30 ([[03 Decision Log]] D-084). Where it sits among the m
 1. **Research:** a new topic returns a summary in which every fact names its source, plus a list of primary sources to clip. **Met 2026-10-14** (tests RS1–RS4): a report on the Financial Ombudsman Service, every fact with its source and a quote; three quotes traced; seven sources clipped and compiled; `/ask` made no web call.
 2. **Import:** `/import` flags a planted duplicate and a planted new version. **Met 2026-10-12** (tests IM1–IM4); IM5–IM6 also loaded the capture list and two typed links, one approval each.
 3. **Batch ingest:** 5 or more sources on one topic compiled in one run with one review. The review lists conflicts first, then facts sorted by trust. **Met 2026-10-06** (tests I3–I5): 5 sources, 18 pages new, 10 updated, 58 facts, 3 conflicts decided.
-4. **Large documents:** a document of several hundred pages compiled in parts, with progress tracked and every citation pointing to its page or section.
-5. **Side-by-side:** 5 questions on the UK set, asked through `/ask` and in a default Claude chat. Every fact in the `/ask` answers traces to `raw/`, with its trust level.
-6. **Regression:** the 21 MVP 1 tests still pass, so `/ingest`, `/ask`, `/file-answer` and `/lint` keep working. The ingest tests passed again in M7 (I1, I2); all 21 are rerun at MVP 2's exit, since M7 and M8 changed `ingest`, `ask`, `file-answer`, `lint` and `drafts`.
+4. **Large documents:** a document of several hundred pages compiled in parts, with progress tracked and every citation pointing to its page or section. **Met 2026-10-20** (tests LD3–LD6): the whole FSMA 2000, 1,263 pages, mapped into 49 Parts and 36 Schedules; Parts II, 4A and XVI compiled and Part 1A compared, across four sessions; all 522 citations into the Act carry a page.
+5. **Side-by-side:** 5 questions on the UK set, asked through `/ask` and in a default Claude chat. Every fact in the `/ask` answers traces to `raw/`, with its trust level. The questions sit on compiled parts and `verified` pages, chosen with the FSMA map open: a question in a part not compiled tests LD8's behaviour, not the fact guarantee. On 23 October.
+6. **Regression:** the 21 MVP 1 tests still pass, so `/ingest`, `/ask`, `/file-answer` and `/lint` keep working. The ingest tests passed again in M7 (I1, I2); all 21 are rerun at MVP 2's exit, since M7, M8 and M9 changed `ingest`, `import`, `ask`, `file-answer`, `lint`, `drafts` and `CLAUDE.md`. On 21–22 October.
 
 **Risks**
 | Risk | Mitigation |
 |---|---|
-| A set or a large document uses up the day's Pro allowance mid-run | The set review records progress, so the next `/ingest` resumes a stopped set (D-086). Built in M7, not yet tested: the largest source so far, the FCA's 115-page Final Notice, compiled in one session in M8. M9 will exercise it |
+| A set or a large document uses up the day's Pro allowance mid-run | The set review records progress, so the next `/ingest` resumes a stopped set (D-086). A large document runs one part of about 60 pages per session, with `/clear` between runs (D-108). Tested in M9 (LD5): a run stopped after a chunk was written and before it was ticked; the next `/ingest` resumed it and added nothing twice. Since then a chunk is marked `started` before it is written (D-116). `/usage` wasn't recorded per run, so the 60-page cap is still an estimate |
 | A faster review means you read less of what Claude writes | Conflicts and low-trust facts come first, and the checks that open `raw/` stay ([[10 Product Vision]] §6, principle 7). The set of five listed 58 facts, 41 of them primary and folded. Lint then found errors the set reviews had passed, 6 after M7 and 5 after M8, so `/ingest` now recommends `/lint` after a large set (D-103) |
 | Trust levels become Claude's opinion of a source | Levels set by type of source in doc 31, not by judgement, and you can override one |
 | Claude's research is treated as evidence | D-075: a claim marked `· AI` stays uncited, and its page `unverified`, until a primary source backs it (D-087). Tested in M8: asked to mark a page resting on AI claims `verified`, Claude declined and listed the claims (AI3). An unbacked claim goes on an existing page only when it is about that page's subject (D-102) |

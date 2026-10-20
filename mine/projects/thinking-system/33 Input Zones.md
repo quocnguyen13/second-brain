@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-19
-reviewed: 2026-10-06
+reviewed: 2026-10-20
 tags: [project/thinking-system, operations]
 ---
 
@@ -70,6 +70,8 @@ Four steps are yours per set, where MVP 1 took three per source: 4 instead of 15
 **Checking before you ingest: `/import`** ([[03 Decision Log]] D-099). `/import` looks at the files in the zone and says which are already in `raw/` (duplicate), which are a changed copy of something there (new version), and which are new. The check writes nothing and moves nothing. The `/ingest` brief runs it too, so the command is for when you want the answer without starting an ingest. Given links, or `capture`, `/import` first loads them: it downloads the PDFs and names the pages for you to clip (D-101, §7).
 
 **A Claude output in the zone** (D-098). A research report, or an answer saved from a Claude chat, named `claude-<YYYY-MM-DD>-<topic>.md` or carrying `source-type: ai`. It joins a set like any file, one per set, and is compiled last. Each of its claims is checked against `raw/`: a backed claim cites the raw file, an unbacked one is kept and marked `· AI`, a contradicted one is left out ([[31 Trust and Provenance]] §2.2). The set review reports the counts.
+
+**A large document in the zone** (D-107, D-115). A PDF over 150 pages or a Markdown file over 3,000 lines is a set of its own: the first `/ingest` maps it, and `/ingest part <document>` then compiles one part per run, straight from `raw/`, with no zone involved. If the PDF has no contents pages, as legislation.gov.uk's whole-Act PDF has none, clip the publisher's contents page into the zone as well. It joins the map run as the **contents companion**: it gets no source page of its own, backs only the map's list of parts, and never ticks a capture line. Without it, the map run asks you to clip it and stops. Other files in the zone wait for the next set. `/import` gives a whole document whose part is already in `raw/` the verdict **part** (D-110).
 
 ## 3. Zone 2: questions → `/ask`
 **What goes in:** questions you want the wiki to answer, one per line as `- [ ] YYYY-MM-DD question`. Add them whenever they occur to you, especially while reading what an ingest produced.

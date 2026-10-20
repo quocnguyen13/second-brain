@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-14
+reviewed: 2026-10-20
 tags: [project/thinking-system, governance]
 ---
 
@@ -21,6 +21,8 @@ Back to [[00 Project Home]] · Related: [[30 System Architecture]]
 - Facts inside a page cite the specific source they came from.
 - **A wiki page never cites another wiki page as evidence.** It may link to one for context, but the chain of fact always ends in `raw/`.
 - Anything Claude adds from its own general knowledge is labelled as such and does not count as a source.
+- **A citation carries its place** (D-112). Into a PDF it names the page, `([[raw/<name>.pdf#page=N]])`, and for legislation the section too: `([[raw/<name>.pdf#page=N]], s. 55E(2))`. Into Markdown it links the heading the passage sits under. A reader lands on the passage, not just the file.
+- **A large document compiled in parts is still one source** (D-107, D-116). Its map and part pages are wiki pages, so a claim in one part that leans on another part cites the raw file at that part's page and section, never that part's page. A provision the document marks as not yet in force is stated as prospective, with the note that says so.
 - **A web page is never a source.** Only a file in `raw/` is. What Claude reads on the web during `/research` reaches it as a model's reading of the page, so a link can point you at evidence but can't stand in for it (§2.2).
 
 ## 2. Page status and trust levels

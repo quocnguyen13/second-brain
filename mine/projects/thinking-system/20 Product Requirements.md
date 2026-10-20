@@ -5,7 +5,7 @@ status: active
 trust: ai-draft
 origin: claude
 created: 2026-09-26
-reviewed: 2026-10-14
+reviewed: 2026-10-20
 tags: [project/thinking-system, prd]
 ---
 
@@ -14,7 +14,7 @@ tags: [project/thinking-system, prd]
 Back to [[00 Project Home]] · Owned by M0 – Project Management ([[02 Working Agreement]] §4) · Diagrams in Mermaid ([[03 Decision Log]] D-073)
 
 > [!abstract] What this is
-> The whole system, for a reader starting from zero: what it is, how it's built, how each command runs, where data lives, who may write what, and what happens when something goes wrong. Compiled from the other project docs and the live vault files on 2026-09-26, after MVP 1 (M0–M6), brought up to date on 2026-10-06 with what M7 built: set ingest, trust levels, the conflict review and commits ([[88 M7 Handover]]), and on 2026-10-14 with what M8 built: research, import and Claude outputs as sources ([[89 M8 Handover]]). Where this page and a source document differ, the source document and the vault files win.
+> The whole system, for a reader starting from zero: what it is, how it's built, how each command runs, where data lives, who may write what, and what happens when something goes wrong. Compiled from the other project docs and the live vault files on 2026-09-26, after MVP 1 (M0–M6), brought up to date on 2026-10-06 with what M7 built: set ingest, trust levels, the conflict review and commits ([[88 M7 Handover]]), on 2026-10-14 with what M8 built: research, import and Claude outputs as sources ([[89 M8 Handover]]), and on 2026-10-20 with what M9 built: large documents, mapped and compiled one part per run ([[90 M9 Handover]]). Where this page and a source document differ, the source document and the vault files win.
 
 **Reading order:** §1 → §3 for the picture; §4 → §6 for the detail; §8 for failure modes; §11 for terms.
 
@@ -42,7 +42,7 @@ A personal knowledge base on Karpathy's **LLM Wiki** pattern: compile sources on
 | Role | Who | Does |
 |---|---|---|
 | User | Product owner at a commercial bank; personal Windows PC; Claude Pro | Captures sources, runs commands, reviews output, decides conflicts, writes insights, approves each commit, pushes, decides everything |
-| Builder | Claude Code, started at the vault root | Runs the 9 commands under `CLAUDE.md`, the skills and the permission rules |
+| Builder | Claude Code, started at the vault root | Runs the 10 commands under `CLAUDE.md`, the skills and the permission rules |
 | Planner | Claude in the claude.ai Project "Obsidian x Claude", one standing thread per module | Designs, drafts and revises project documents. Sees only the synced project docs, never the vault |
 
 ### 1.4 Goals
@@ -57,7 +57,7 @@ A personal knowledge base on Karpathy's **LLM Wiki** pattern: compile sources on
 ### 1.5 Scope
 **In (MVP, complete 2026-09-25):** one vault in git; Claude Code inside it with schema, conventions and permission rules; ingest, ask, file-answer, lint, drafts; `index.md` and `log.md`; a thinking layer the user owns; enough Obsidian to read, review and search.
 
-**In (MVP 2, in progress: [[11 Project Charter]] §11):** sets of sources in one run, trust levels, the conflict review and commits with approval, built in M7 (2026-10-06); research summaries, `/import` and Claude outputs as sources, built in M8 (2026-10-14). Still to come: large documents (M9).
+**In (MVP 2, in progress: [[11 Project Charter]] §11):** sets of sources in one run, trust levels, the conflict review and commits with approval, built in M7 (2026-10-06); research summaries, `/import` and Claude outputs as sources, built in M8 (2026-10-14); large documents mapped and compiled in parts, built in M9 (2026-10-20). Still to come: the exit tests, criteria 5 and 6 (D-117).
 
 **Out:** work or bank material until doc 36 (Data Governance) exists (D-018); bank devices and systems; jobs and standards (MVP 3); sync, phone capture, semantic search, custom tooling.
 
@@ -69,19 +69,20 @@ A personal knowledge base on Karpathy's **LLM Wiki** pattern: compile sources on
 5. Minimal tooling: core Obsidian features first (D-006).
 6. Personal and public sources only, until doc 36 exists.
 
-### 1.7 State on 2026-10-14
+### 1.7 State on 2026-10-20
 | Item | Count |
 |---|---|
-| Sources in `raw/` | 21: 5 on knowledge systems, 7 on UK financial regulation (M7), 7 on the Financial Ombudsman Service, 1 Claude output, and the FCA's Final Notice to TSB Bank |
-| Wiki pages | 78: 1 overview, 21 source, 17 entity, 38 concept, 1 analysis. 62 `verified`, 7 `contested`, 9 `unverified` |
-| Set reviews | 5 in `system/ingest/` |
-| Lint reports | 4 in `system/lint/`, all findings in the last one applied |
-| Research | 1 report in `system/research/`; 10 open lines on the capture list |
-| Insights and drafts | 5 insights, all `origin: claude` (D-068). 11 drafts waiting for `/drafts` |
-| Skills | 7, giving 9 commands |
+| Sources in `raw/` | 23: 5 on knowledge systems, 7 on UK financial regulation (M7), 7 on the Financial Ombudsman Service, 1 Claude output, the FCA's Final Notice to TSB Bank, and the whole FSMA 2000 (1,263 pages) with its contents page |
+| Wiki pages | 85: 1 overview, 25 source (the FSMA map and three part pages among them), 17 entity, 41 concept, 1 analysis. 69 `verified`, 7 `contested`, 9 `unverified` |
+| Large documents | 1 mapped: FSMA 2000, 49 Parts and 36 Schedules; 3 of 8 planned parts compiled (II, 4A, XVI) and Part 1A compared |
+| Set reviews | 10 in `system/ingest/`, all `done` |
+| Lint reports | 8 in `system/lint/`, all applied |
+| Research | 1 report in `system/research/`; 8 open lines on the capture list |
+| Insights and drafts | 5 insights, all `origin: claude` (D-068). 14 drafts waiting for `/drafts` |
+| Skills | 7, giving 10 commands; `ingest` has two supporting files, `ai-source.md` and `large-source.md` |
 | Permission rules | 9 allow, 3 ask, 13 deny |
-| Tests passed | 42 of 42: 21 in MVP 1, 7 in M7, 14 in M8 |
-| Decisions logged | D-001 to D-106 |
+| Tests passed | 50 of 50: 21 in MVP 1, 7 in M7, 14 in M8, 8 in M9 |
+| Decisions logged | D-001 to D-117 |
 
 ## 2. Architecture
 
@@ -104,7 +105,7 @@ flowchart TB
     end
     WC -->|"clips pages<br/>into inbox/sources/"| VT
     OB <-->|"user reads all,<br/>writes mine/"| VT
-    CC <-->|"runs the 9 commands<br/>under the rules"| VT
+    CC <-->|"runs the 10 commands<br/>under the rules"| VT
     WB -->|"read by /research;<br/>PDFs by /import"| CC
     VT -->|"git push"| GH
     GH -->|"Sync: project docs only"| PJ
@@ -119,7 +120,7 @@ flowchart TB
 | Reasoning and maintenance | Claude Code, started at the vault root (Windows Terminal, or the Code tab in Claude Desktop) |
 | Navigation | `index.md` (catalogue) and `log.md` (history). No search engine or embeddings at this scale |
 | Rules | `CLAUDE.md`, importing `system/context.md` and `system/conventions.md` |
-| Procedures | 7 skills in `.claude/skills/`: `research`, `import`, `ingest`, `ask`, `file-answer`, `lint`, `drafts` |
+| Procedures | 7 skills in `.claude/skills/`: `research`, `import`, `ingest`, `ask`, `file-answer`, `lint`, `drafts`. `ingest` has two supporting files: `ai-source.md` for a Claude output, `large-source.md` for a large document |
 | Enforcement | `.claude/settings.json` permission rules, plus git history |
 | Planning | claude.ai Project; project knowledge syncs `mine/projects/thinking-system/` only |
 
@@ -143,7 +144,7 @@ Added on top of Karpathy's pattern: the thinking layer, provenance rules (§4, �
 ## 3. User stories and end-to-end flow
 
 ### 3.1 User stories
-Every story is the user's: "As the user, I want to …". IDs never change. US-01 to US-13 were delivered in MVP 1. M7 widened US-02 from one source to a set and delivered US-14 to US-16. M8 widened US-01 to PDFs downloaded from links and delivered US-17 to US-19.
+Every story is the user's: "As the user, I want to …". IDs never change. US-01 to US-13 were delivered in MVP 1. M7 widened US-02 from one source to a set and delivered US-14 to US-16. M8 widened US-01 to PDFs downloaded from links and delivered US-17 to US-19. M9 delivered US-20.
 
 | ID | I want to… | so that… | Done when | Built by |
 |---|---|---|---|---|
@@ -166,6 +167,7 @@ Every story is the user's: "As the user, I want to …". IDs never change. US-01
 | US-17 | have Claude research a new topic and give back a summary I can check | I learn a domain fast without taking Claude's word for it (D-083) | Every fact in the report names its source, with a quote and where it sits; the primary sources to clip go on the capture list; nothing in `wiki/`, `raw/` or `inbox/` changes; only `/research` reaches the web | `/research` (M8, D-095 to D-097) |
 | US-18 | bring each document in once | nothing enters `raw/` twice, and a changed document enters as a version | Every file in `inbox/sources/` gets a verdict against `raw/` (duplicate, new version, older version, new or unsure) with a recommendation; the check writes nothing; the `/ingest` brief runs it too; a new version enters beside the old one, and the claims it changes become **newer** conflicts | `/import` (M8, D-099, D-101) |
 | US-19 | keep a Claude output as a source without treating it as evidence | nothing useful is lost in chat history, and the wiki never rests on Claude's say-so | The output goes through `/ingest` at level AI. Each statement is backed by `raw/`, kept as an `· AI` lead, contradicted, or not a claim of fact; a page resting on `· AI` claims stays `unverified`; a later primary source re-cites the lead | `/ingest` with `ai-source.md` (M8, D-098, D-102) |
+| US-20 | have a document of hundreds of pages, such as a full Act, compiled in parts across sessions | I can learn from a whole Act or book and cite it to the page and section, though no single run can read it all | The file stays whole in `raw/`; the first run writes a map of every part with a plan; `/ingest part` compiles one part per run, chunk by chunk, with its own set review and commit; a stopped run resumes without adding anything twice; every citation carries its page and section; `/ask` names a part not compiled yet | `/ingest` with `large-source.md` (M9, D-107 to D-116) |
 
 ### 3.2 End-to-end flow
 One row per user story or pair of stories, left to right through 4 stages: user input → process → store → output.
@@ -178,6 +180,7 @@ flowchart LR
         S13["US-18<br/>Bring sources in once"]
         S1["US-01<br/>Capture a source"]
         S2["US-02, US-14, US-19<br/>Compile a set"]
+        S14["US-20<br/>Compile a large<br/>document in parts"]
         S11["US-15<br/>Decide conflicts"]
         S3["US-03<br/>Ask the wiki"]
         S4["US-04<br/>Keep an answer"]
@@ -193,6 +196,7 @@ flowchart LR
         I13(["/import capture<br/>or links"])
         I1(["Clip a page or<br/>save a file"])
         I2(["/ingest"])
+        I14(["/ingest part<br/>document"])
         I11(["/ingest resolve<br/>1a 2d"])
         I3(["/ask, or line in<br/>questions.md"])
         I4(["/file-answer"])
@@ -208,6 +212,7 @@ flowchart LR
         P13["Download PDFs ·<br/>check against raw/"]
         P1["Web Clipper<br/>saves Markdown"]
         P2["Brief · user<br/>moves the set ·<br/>compile · draft"]
+        P14["Map first, then<br/>one part, chunk<br/>by chunk"]
         P11["Re-read ·<br/>apply exactly"]
         P3["Search wiki/ ·<br/>check raw/"]
         P4["Re-check ·<br/>write · link"]
@@ -223,6 +228,7 @@ flowchart LR
         D13[("inbox/sources/,<br/>nothing else")]
         D1[("inbox/sources/")]
         D2[("raw/ · wiki/<br/>drafts · index · log<br/>system/ingest/")]
+        D14[("The map · part page<br/>set review · log")]
         D11[("wiki/ · index<br/>set review · log")]
         D3[("questions.md,<br/>tick only")]
         D4[("wiki/analyses/<br/>index · log")]
@@ -238,6 +244,7 @@ flowchart LR
         O13[/"A verdict<br/>per file"/]
         O1[/"A file waiting<br/>for /ingest"/]
         O2[/"Set review:<br/>conflicts, facts<br/>by trust"/]
+        O14[/"Part compiled,<br/>map updated"/]
         O11[/"One claim stated,<br/>the other kept"/]
         O3[/"Cited answer"/]
         O4[/"Analysis page"/]
@@ -252,6 +259,7 @@ flowchart LR
     S13 --- I13 --> P13 --> D13 --> O13
     S1 --- I1 --> P1 --> D1 --> O1
     S2 --- I2 --> P2 --> D2 --> O2
+    S14 --- I14 --> P14 --> D14 --> O14
     S11 --- I11 --> P11 --> D11 --> O11
     S3 --- I3 --> P3 --> D3 --> O3
     S4 --- I4 --> P4 --> D4 --> O4
@@ -266,11 +274,11 @@ flowchart LR
     classDef proc fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
     classDef sto fill:#fef3c7,stroke:#b45309,color:#78350f
     classDef out fill:#ede9fe,stroke:#6d28d9,color:#4c1d95
-    class S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13 story
-    class I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13 inp
-    class P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13 proc
-    class D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13 sto
-    class O1,O2,O3,O4,O5,O6,O7,O8,O9,O10,O11,O12,O13 out
+    class S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14 story
+    class I1,I2,I3,I4,I5,I6,I7,I8,I9,I10,I11,I12,I13,I14 inp
+    class P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14 proc
+    class D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14 sto
+    class O1,O2,O3,O4,O5,O6,O7,O8,O9,O10,O11,O12,O13,O14 out
 ```
 - US-11 applies to every row. US-12 runs rows US-05 to US-10 in one weekly session (§7.2).
 - Nothing runs by itself. Material waits in its zone until the user types the command.
@@ -281,6 +289,7 @@ flowchart LR
 |---|---|---|
 | Per new topic | `/research` → read the report → `/import capture`, then clip the pages it lists (§5.7, §5.8) | Varies with the topic |
 | Per set of sources | `/ingest` → read the set review (§7.1) → `/ingest resolve` → Claude commits, you push. After a large set, `/lint` (D-103) | Review: about 10 min |
+| Per large document | `/ingest` maps it; then per part: `/clear`, `/ingest part`, read the set review, commit; `/clear`, `/lint`, apply, commit (D-108) | About one session per part |
 | Any time | `/ask`; `/file-answer` when an answer is worth keeping | Minutes |
 | Weekly | Weekly review: `/lint`, fixes, Needs attention, `/drafts`, scratch, push (§7.2) | ~45 min |
 | Monthly | The first `/lint` of the month deep-checks every page (D-060) | Longer run |
@@ -362,9 +371,10 @@ One door per command, so an operation always knows what it's handed ([[33 Input 
 
 **Provenance rules: raw file**
 - Immutable: content never changes after the move.
-- Named on arrival: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`; `-2` if the name is taken (D-042). With no author, the organisation or site (`fca-...`, `wikipedia-...`); for a document in a dated series, the year (D-089).
+- Named on arrival: `<author>-<short-title>.<ext>`, lower case with hyphens, e.g. `karpathy-llm-wiki.md`; `-2` if the name is taken (D-042). With no author, the organisation or site (`fca-...`, `wikipedia-...`); for a document in a dated series, the year (D-089). Consolidated legislation ends with the year and month of its "up to date" line, and a contents companion with `-contents` and its own year and month (D-111, D-115; [[32 Vault Blueprint]] §7).
 - Every chain of evidence ends here. A claim anywhere in the vault is only as good as the passage it points to.
-- PDF citations carry the page: `[[raw/<name>.pdf#page=N]]`, opened by Obsidian at that page (D-046). Citations of legislation carry the section: `([[raw/<name>]], s. 3D(1))`.
+- PDF citations carry the page: `[[raw/<name>.pdf#page=N]]`, opened by Obsidian at that page (D-046). Citations of legislation carry the section: `([[raw/<name>]], s. 3D(1))`; into a PDF, both: `([[raw/<name>.pdf#page=N]], s. 55E(2))`. A Markdown citation links the heading the passage sits under (D-112).
+- A large document stays whole, one file, however many parts it is compiled in (D-107).
 
 ### 4.3 Compiled knowledge · `wiki/`
 | Path | Holds | User | Claude | Permission |
@@ -468,13 +478,14 @@ By design the user doesn't edit wiki pages. Corrections go through `inbox/checks
 
 ## 5. Functions
 
-9 commands from 7 skills, run in a Claude Code session started at the vault root. Full procedures: `.claude/skills/<name>/SKILL.md`, mirrored in [[40 Claude Operating Instructions]] §4.
+10 commands from 7 skills, run in a Claude Code session started at the vault root. Full procedures: `.claude/skills/<name>/SKILL.md`, mirrored in [[40 Claude Operating Instructions]] §4.
 
 | Command | Purpose | Reads | Writes | Logged |
 |---|---|---|---|---|
 | `/research [topic]` | Research a topic on the web: a report in which every fact names its source, with a quote. With no topic, look for sources for the wiki's `· AI` claims | `index.md`, `wiki/`, file names in `raw/`, the capture list; the web | A report in `system/research/`, lines in the capture list, `log.md` | `research` |
 | `/import`, `/import <links>`, `/import capture` | Load PDFs from links or the capture list, then check every file in `inbox/sources/` against `raw/` | The links or the capture list, `inbox/sources/`, `raw/`, `wiki/sources/`, `index.md` | Only the PDFs it downloads, after approval | No |
 | `/ingest [files]` | Compile a set of sources into the wiki: one brief, one move, one run, one review | `inbox/sources/`, `wiki/`, `raw/`, templates, `system/ingest/` | `wiki/`, `mine/drafts/`, `system/ingest/`, `index.md`, `log.md`, ticks in the capture list | `ingest` |
+| `/ingest part <document> [part]` | Compile one part of a mapped large document: one brief, chunk by chunk, one review | The map, the raw file's pages, `wiki/`, `raw/`, `system/ingest/` | The part page and the pages it touches, the map, `system/ingest/`, `index.md`, `log.md`, ticks in the capture list | `ingest` |
 | `/ingest resolve <decisions>` | Apply the user's decisions on the conflicts in a set review | The set review, `wiki/` | `wiki/`, `index.md`, the set review, `log.md` | `ingest` |
 | `/ask [question]` | Answer one question, evidence traced to `raw/` | `inbox/questions.md`, `index.md`, `wiki/`, `raw/` | The tick in `questions.md` only | No |
 | `/file-answer [title]` | Keep the last answer as an analysis page | The session's answer, `raw/`, `index.md` | `wiki/analyses/`, Related lists, `index.md`, `log.md` | `file` |
@@ -484,7 +495,7 @@ By design the user doesn't edit wiki pages. Corrections go through `inbox/checks
 
 ### 5.0 Rules every command follows
 - **User-started only.** `disable-model-invocation: true`: Claude can't run a skill on its own. No `allowed-tools`, so a skill grants no rights beyond the settings file (D-041). One exception: `research` pre-approves web search and a list of official sites for its own turn (D-096).
-- **One item per run:** one set of sources (up to 8 on one topic), one research topic, up to 8 links to load, one question, one report, one answer.
+- **One item per run:** one set of sources (up to 8 on one topic), one part of a large document, one research topic, up to 8 links to load, one question, one report, one answer.
 - **File tools** (Glob, Grep, Read), not shell browsing. Vault files change through Edit or Write only, never a script. No working files in the vault. The shell runs git and `/import`'s download, nothing else; no read-only shell commands either (D-106).
 - **The web is `/research`'s alone,** plus `/import`'s download, which asks each time. Every other command stays inside the vault (D-096, D-101).
 - **Never delete.** Claude names what should go; the user deletes.
@@ -645,7 +656,8 @@ flowchart TD
 | One file in the zone, or one named | A set of one: the same steps, with its trust level and a set review |
 | More than 8 files | Lists them, proposes sets of up to 8 by topic, asks which to take first, stops |
 | Files on different topics, or PDFs past about 200 pages in all | Says so in the brief and proposes which to leave for another set |
-| A set left `compiling`, e.g. the Pro allowance ran out | The next `/ingest` resumes it at the first source not ticked, before taking anything new. Built, not yet tested (M9) |
+| A PDF over 150 pages or Markdown over 3,000 lines | A set of its own: the map run, then `/ingest part` (below) |
+| A set left `compiling`, e.g. the Pro allowance ran out | The next `/ingest` resumes it at the first source, or chunk, not ticked, before taking anything new. Tested in M9 (LD5): nothing was added twice |
 | A set left at `review` | Reminds the user its conflicts wait for `/ingest resolve`, then carries on |
 | File is a question or a check | Left out of the set; the user is asked to move it |
 | File holds only a link | Left out. The user clips the page, or runs `/import <link>` for a PDF (D-043, D-101) |
@@ -672,6 +684,53 @@ flowchart TD
 | Near-duplicate page exists (plural, synonym) | Updates the existing page, including one written earlier in the same set |
 | PDF page uncertain | Cites the file alone and says so in the report |
 | Claim only in general knowledge | Greps `raw/` first; else labelled "(general knowledge)", page `unverified` |
+
+#### Large documents: the map run, then `/ingest part`
+A PDF over 150 pages or a Markdown file over 3,000 lines, such as a full Act or a 1,000-page book, follows `ingest/large-source.md` (D-107 to D-116). The file stays whole in `raw/`. The first `/ingest` **maps** it: the document's source page becomes a map of every part, where it sits in the file, a numbered plan and each part's status. Each later run, `/ingest part <document> [<part>]`, **compiles one part** of about 60 pages or 2,000 lines, chunk by chunk, with its own short brief, set review, source page and commit. The user clears the session between runs and runs `/lint` after each part (D-108).
+
+```mermaid
+%%{init: {"flowchart": {"curve": "step", "useMaxWidth": true, "nodeSpacing": 12, "rankSpacing": 25, "padding": 8, "subGraphTitleMargin": {"top": 4, "bottom": 8}}}}%%
+flowchart TD
+    A(["/ingest<br/>a large file in the zone"]) --> B{"Contents pages<br/>in the file?"}
+    B -->|"no, and no clip"| X1["Asks for a clip of the<br/>publisher's contents page · stop"]
+    B -->|"yes, or a clip<br/>in the zone"| C["Brief: parts, plan,<br/>verdict, move block"]
+    C --> U(["User pastes the move,<br/>replies"])
+    U --> M["Writes the map:<br/>every part, Where, Status"]
+    M --> P(["/clear, then<br/>/ingest part document"])
+    P --> Q["Part brief: pages, sections,<br/>pages it touches, AI leads"]
+    Q --> R["Each chunk: mark started,<br/>read, write, tick"]
+    R --> S{"Last chunk<br/>done?"}
+    S -->|"no"| R
+    S -->|"yes"| T["Map row compiled,<br/>log, report · stop"]
+    T --> L(["/clear, /lint,<br/>then the next part"])
+    RW[("raw/: the whole file")] -.-> R
+    SR[("system/ingest/<br/>set review")] -.-> R
+    classDef user fill:#dcfce7,stroke:#15803d,color:#14532d
+    classDef stop fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
+    classDef store fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
+    class A,U,P,L user
+    class X1 stop
+    class RW,SR store
+```
+
+- **The map** (`Source - <title>`, with the year and month for a consolidated text): a Parts table, one row per part in the document's order, with what it covers, where it sits (pages or lines) and its status: `compiled` or `compared` with links, `in progress`, `planned <n>` or `not compiled`. The header counts "Compiled: N of M planned parts". Your emphasis for every part run is recorded on it.
+- **The contents companion** (D-115): when the PDF has no contents pages, a clip of the publisher's contents page joins the map run. It has no source page; the map lists it in `sources`, and it backs only the Parts table.
+- **Locating a part:** from the contents' page numbers, or by opening a page at an estimate and stepping to the part's first and last page. Never by reading through the document.
+- **A part page** (`Source - <title> - Part <label>`) states the part's pages and sections, and every citation carries its place: `([[raw/<name>.pdf#page=N]], s. 55E(2))` (D-112). A claim that leans on another part cites the raw file at that part's page, never its part page; text not yet in force is stated as prospective (D-116).
+- **A part already in another raw file** is a **compare**: claims citing the other file are checked against the same passage; same wording writes nothing, different wording is a conflict (D-110, D-116).
+- **Capture lines** are ticked once every section a line names sits in a compiled part.
+
+| Edge case | Behaviour |
+|---|---|
+| No part named | Takes the first `planned` part, lowest number first |
+| No document named | Lists each map with parts `planned` or `not compiled`, and asks |
+| A run stops mid-part | The next `/ingest` resumes at the first chunk not ticked. A chunk marked `started` is checked against the pages first, so nothing is added twice (tested in LD5) |
+| A question in a part not compiled | `/ask` names the part and the command to compile it, and labels any general knowledge (LD8) |
+| A newer consolidation of a mapped document | A new version with its own map; parts compiled from the older text are compared when chosen (D-111) |
+| The plan changes | Only the map changes: a part added, reordered, or set back to `not compiled` |
+| Files moved into `raw/` and the reply never came | Parked: the next `/ingest` sees an empty zone, and no set review knows the files. Move them back and rerun |
+
+Commits: `ingest: <title>, map (set-YYYY-MM-DD)` for the map run, then `ingest: <title>, Part <label> (set-YYYY-MM-DD)`, one per part.
 
 ### 5.2 `/ask`: answer one question
 Answers the question typed after the command, or the oldest open one in `inbox/questions.md`. Traces every claim to `raw/`. Writes nothing but the tick (D-048).
@@ -720,6 +779,7 @@ flowchart TD
 | No question typed, queue empty | "No open questions in inbox/questions.md", stop |
 | Queued line is a link or a check | Says so, asks the user to move it; doesn't answer |
 | Wiki has nothing | First line exactly "Nothing in the wiki on this.", then labelled general knowledge and a source type that would fill the gap (test 6) |
+| Question falls in a part of a large document not compiled yet | Names the part and the command to compile it; any general knowledge labelled (LD8) |
 | Page `unverified` or `contested` | Used, but named under Caveats with the reason |
 | Fact rests only on a commentary or AI source | Given with its level, and named under Caveats |
 | Dispute already resolved | Answers with the claim the page states, not the one set aside (test I7) |
@@ -998,6 +1058,7 @@ flowchart TD
 | **duplicate** | Same origin or identity, same date or version, and nothing that carries a fact differs | Don't ingest; the user deletes it, with the `Remove-Item` line given |
 | **new version** | Same origin or identity, and a later date or version, or passages that differ | Ingest it under the existing name's stem with its year, or year and month (`fca-about-the-fca-2026-10.md`). Both files stay in `raw/`; up to five changes are listed, and each changed claim becomes a **newer** conflict |
 | **older version** | An earlier date or version than the file in `raw/` | Leave it out, unless the user wants the history; its claims never supersede the newer ones |
+| **part** | A whole document of which a part is already in `raw/`, such as the full Act after a Part 1A clip; or a part that arrives after its whole | Ingest it; both files stay. The map marks the part already in `raw/` as a compare (D-110) |
 | **new** | No candidate, or the candidates are different documents | Ready for `/ingest` |
 | **unsure** | A candidate exists and Claude can't tell, or the file won't open | Says what the user should check |
 
@@ -1276,7 +1337,9 @@ flowchart TB
 | A plugin or connector turned on at claude.ai | Syncs into vault sessions | `/mcp` and `claude plugin list` at the start of each module |
 | Project doc open in Obsidian while files are replaced | An edit can be lost (happened in M3) | Close the docs; read `git diff` before committing |
 | Obsidian rewrites properties or `Review.base` in its own style | Harmless reformatting | Copy the vault version back into the mirror |
-| Usage limit hit mid-task | Session stops; Pro limits are shared with claude.ai | Sets of up to 8 files and about 200 PDF pages; the set review records progress, so the next `/ingest` resumes the set (D-086; built, not yet tested); check `/usage` |
+| Usage limit hit mid-task | Session stops; Pro limits are shared with claude.ai | Sets of up to 8 files and about 200 PDF pages; a large document one part of about 60 pages per run, with `/clear` between runs (D-108). The set review records progress, chunk by chunk, so the next `/ingest` resumes (tested in LD5); check `/usage` |
+| Files moved into `raw/`, and the reply to the brief never came | No set review knows them; the next `/ingest` sees an empty zone (seen once in M9) | Parked: move them back into the zone and rerun. A check for raw files no source page names is a candidate fix |
+| A part run's wording goes further than the Act | A claim states more than its section does (two high findings after Part XVI) | `/lint` after every part (D-108); read the set review's "Check first" lines |
 | Source contains instructions | Quoted and ignored | Tests 7 and I2 |
 | A weak source contradicts a strong one | Both shown; the page is `contested` until the user decides | Claude proposes by trust level, then a body's own statement, then date; the claim set aside stays, marked (D-088, D-094) |
 | A long set review read too fast | Errors could hide among the folded primary facts; lint found 6 after M7 and 5 after M8 that the reviews had passed | Conflicts and the weakest facts come first; `/ingest` recommends `/lint` after a large set (D-103) |
@@ -1310,6 +1373,7 @@ flowchart TB
 | Import IM1–IM6 | 6 | A planted duplicate and a planted new version caught, with the raw name and what changed; the capture list and two typed links loaded on one approval each; a "PDF" that was a web page caught | 6 of 6, 2026-10-14 |
 | Research RS1–RS4 | 4 | A report on a topic the wiki lacked, every fact sourced and quoted; three quotes traced to their pages; the clipped sources ingested and the question asked again; no web call from `/ask` | 4 of 4, 2026-10-14 |
 | Claude output AI1–AI4 | 4 | A Claude report compiled at level AI, 108 statements sorted into four outcomes; a page resting on AI claims refused `verified`; `· AI` claims re-cited to a later primary source | 4 of 4, 2026-10-14 |
+| Large documents LD1–LD8 | 8 | The whole FSMA 2000 downloaded on one approval, verdict **part**; mapped from its contents page; Parts II, 4A and XVI compiled with citations traced; a stopped run resumed without duplicates; the Part 1A compare wrote nothing; FSMA leads backed and moved; `/ask` names a part not compiled | 8 of 8, 2026-10-20 |
 
 Tests run on the real wiki with nothing planted (D-052, D-059, D-064, D-092), except M8's two planted files for `/import`, deleted before any move (D-100). Results in `system/test-results.md`; prompts in [[40 Claude Operating Instructions]] §5.
 
@@ -1321,19 +1385,20 @@ Tests run on the real wiki with nothing planted (D-052, D-059, D-064, D-092), ex
 5. One lint pass found a contradiction and an uncited claim.
 6. ≥5 insight pages written or accepted by the user in `mine/` (5 accepted, D-068).
 
-**MVP 2 criteria ([[11 Project Charter]] §11): 3 of 6 met on 2026-10-14.**
+**MVP 2 criteria ([[11 Project Charter]] §11): 4 of 6 met on 2026-10-20.** Criteria 5 and 6 run at the exit, in M0: regression 21–22 October, side-by-side 23 October (D-117).
 1. **Research summary with sources: met** (RS1–RS4, 2026-10-14).
 2. **`/import` flags a duplicate and a new version: met** (IM1–IM4, 2026-10-12).
 3. **Batch ingest: met** (tests I3–I5): 5 sources in one run with one review, 18 pages new, 10 updated, 58 facts, 3 conflicts decided.
-4. Large documents in parts: M9.
+4. **Large documents in parts: met** (LD3–LD6, 2026-10-20).
 5. Side-by-side against a default Claude chat: at MVP 2's exit.
-6. Regression: the ingest tests passed again in M7 (I1, I2). All 21 MVP 1 tests are rerun at MVP 2's exit, because `ingest`, `ask`, `file-answer`, `lint` and `drafts` changed in M7 and M8.
+6. Regression: the ingest tests passed again in M7 (I1, I2). All 21 MVP 1 tests are rerun at MVP 2's exit, because `ingest`, `import`, `ask`, `file-answer`, `lint`, `drafts` and `CLAUDE.md` changed in M7 to M9.
 
 ## 10. Known limits, parked items, backlog
 **Limits today**
 - Sources: Markdown and PDF only. Office files → B-001. A link is not a source.
-- A set is up to 8 files and about 200 PDF pages. Larger documents wait for M9 (B-038).
-- Resuming a stopped set is built but untested; M9 will exercise it.
+- A set is up to 8 files and about 200 PDF pages. A larger document is mapped, then compiled one part of about 60 pages per run; the 60-page cap is an estimate, since `/usage` wasn't recorded per run (D-108).
+- Of the FSMA plan, items 5–8 are open (Schedule 6, Parts XV–15A, Part 9B, Schedule 2). Every other Part is `not compiled`.
+- A run resumes after a stop (tested once, in LD5). Files moved into `raw/` before the reply to the brief are not resumed: move them back by hand.
 - Pages are clipped by the user. Claude can't press the Web Clipper, and a PDF offered only through a button (the FCA Handbook's "View as PDF") has no link for `/import`.
 - A research run takes about 12 searches and 15 fetches, 25 facts and 8 sources to clip. A fetch from a site not on the list asks each time.
 - Claude Code's own read-only shell commands run without a prompt, so a skill that uses one against its rules isn't stopped, only reported (D-106).
@@ -1368,6 +1433,11 @@ Tests run on the real wiki with nothing planted (D-052, D-059, D-064, D-092), ex
 | Outweighed | A claim set aside for a higher level, a body's own statement, or the user's decision. Kept and marked, never deleted |
 | Superseded | A claim a newer source overturns. Kept and marked, never deleted |
 | Deep check | Opening the cited passage in `raw/` to confirm a claim |
+| Large document | A PDF over 150 pages or a Markdown file over 3,000 lines, compiled in parts (D-107) |
+| Map | A large document's source page: every part, where it sits, a plan and each part's status |
+| Part run | `/ingest part`: one part of a mapped document, compiled chunk by chunk with its own set review |
+| Contents companion | A clip of the publisher's contents page for a document that has none; backs only the map (D-115) |
+| Compare | A part run on a part already in another raw file: same wording writes nothing; a difference is a conflict (D-110) |
 | Research report | The file `/research` writes in `system/research/`: every fact with its source, a quote and where it sits. Level AI; a lead, never evidence |
 | Capture list | `system/research/capture.md`: one line per source to clip, ticked when `/ingest` compiles it |
 | Import verdict | What `/import` says of a file against `raw/`: duplicate, new version, older version, new or unsure |
@@ -1382,8 +1452,8 @@ Tests run on the real wiki with nothing planted (D-052, D-059, D-064, D-092), ex
 | Skill | A procedure file in `.claude/skills/`, run by typing its command |
 | Allow / ask / deny rule | A line in `.claude/settings.json` that lets a write run without a prompt / always asks / blocks it. Ask and deny rules also cover shell commands |
 | Manual mode | Claude Code asks before any write not on the allow list |
-| Module | A unit of the build plan (M0–M8 so far; M9 planned), with its own standing thread |
-| Handover | The document closing a build module (docs 80–86, 88 and 89) |
+| Module | A unit of the build plan (M0–M9 so far; MVP 2 has none left), with its own standing thread |
+| Handover | The document closing a build module (docs 80–86 and 88–90) |
 | D-### / Q-### / B-### / KAN-## | Decision / open question (doc 03) / backlog item (doc 22) / its Jira key; new items take the key only (D-105) |
 | Sync | The button that pulls `mine/projects/thinking-system/` from GitHub into the Project |
 
@@ -1406,5 +1476,5 @@ Numbered by SDLC stage (D-080); the full list, with planned documents, is in [[0
 | 34 | [[34 Templates]] | The 9 templates |
 | 40 | [[40 Claude Operating Instructions]] | `CLAUDE.md`, settings, the 7 skills in full, tests, setup |
 | 70 | [[70 Obsidian Essentials]] | Setup, toolkit, reviewing an ingest, weekly review |
-| 80–86, 88, 89 | Handovers | What each module built and learnt |
+| 80–86, 88–90 | Handovers | What each module built and learnt |
 | 87 | [[87 MVP Retrospective]] | What worked, what didn't, MVP 2 inputs |

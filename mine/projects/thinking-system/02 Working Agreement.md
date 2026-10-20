@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-15
+reviewed: 2026-10-20
 tags: [project/thinking-system, ways-of-working]
 ---
 
@@ -95,7 +95,7 @@ Every module has **one standing chat** in this Project, named `M<n> – <name>`.
 
 | Thread                   | Owns and maintains                                                                                                                                                      |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| M0 – Project Management  | Docs 00–04, 10–13, 20–22, 30, 31, 36, 50, 60 and 71; the handovers and retrospectives (80 onward); each milestone's scope; work that crosses modules; the Jira project: items, epics, sprints and releases (D-104) |
+| M0 – Project Management  | Docs 00–04, 10–13, 20–22, 30, 31, 36, 50, 60 and 71; the handovers and retrospectives (80 onward); each milestone's scope; work that crosses modules; the Jira project: items, epics, sprints and releases (D-104); MVP 2's exit tests (D-117) |
 | M1 – Vault and Git       | Folder structure and naming ([[32 Vault Blueprint]] §1, §7); `.gitignore` and `.gitattributes`; Obsidian settings and the Web Clipper ([[70 Obsidian Essentials]] §1–2) |
 | M2 – Connect Claude Code | `CLAUDE.md`, `.claude/settings.json`, `system/conventions.md` and the templates ([[34 Templates]]); [[40 Claude Operating Instructions]] §1–3 and §6                    |
 | M3 – First Ingests       | Nothing since M7 opened: the `ingest` skill, the zone contract, the index and log formats and the ingest review all passed to M7 (D-084). The thread keeps the record of the first ingests ([[83 M3 Handover]]) |
@@ -104,7 +104,7 @@ Every module has **one standing chat** in this Project, named `M<n> – <name>`.
 | M6 – Thinking Layer      | The `drafts` skill (40 §4.5); the rules for `mine/` (32 §2–4); the Insight and Decision templates; 70 §4 step 5 and §5; the drafts tests                                |
 | M7 – Batch Ingest and Trust | The `ingest` skill (40 §4.1): sets, trust levels, the conflict review and the set reviews in `system/ingest/`; [[33 Input Zones]]; the `index.md` and `log.md` formats (32 §5–6); reviewing an ingest (70 §3); the trust table in `system/conventions.md`; the ingest set tests I1–I7. Drafts the rule changes for doc 31 §2–3, which M0 accepts |
 | M8 – Research and Import | The `research` and `import` skills (40 §4.6–4.7); `ingest/ai-source.md`, a Claude output's path through `/ingest` (B-003, D-098, D-102); `system/research/`, its reports and the capture list (D-097); [[33 Input Zones]] §7; the tests IM1–IM6, RS1–RS4 and AI1–AI4. Closed 2026-10-14; the thread maintains them |
-| M9 – Large Documents | Compiling a document in parts across sessions (B-038) |
+| M9 – Large Documents | `ingest/large-source.md`, the procedure for a large document (40 §4.1): the map run and `/ingest part`; the FSMA 2000 map and its part pages; the tests LD1–LD8. Closed 2026-10-20; the thread maintains them, and compiles the open parts of the FSMA plan when you ask |
 
 Where two rows touch the same file, the more specific row owns that part. A skill's mirror in doc 40 changes with the skill, in the same commit. A thread may make small edits that follow from its own work in files another thread owns, such as a pointer in `CLAUDE.md`, a line in `system/conventions.md` or a cross-reference, and lists them in its change summary. Anything larger goes to the owning thread as a request.
 

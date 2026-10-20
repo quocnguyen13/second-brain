@@ -5,7 +5,7 @@ status: active
 trust: working
 origin: claude
 created: 2026-09-16
-reviewed: 2026-10-14
+reviewed: 2026-10-20
 tags: [project/thinking-system, architecture]
 ---
 
@@ -47,7 +47,7 @@ His summary of the roles fits this project exactly: Obsidian is the IDE, the LLM
 | Reasoning and maintenance | Claude Code, started inside the vault (Windows Terminal, or the Code tab in Claude Desktop) |
 | Navigation | `index.md` (a catalog of every page) and `log.md` (an append-only history) |
 | Rules | `CLAUDE.md`, which imports `system/context.md` and `system/conventions.md` |
-| Procedures | Claude Code skills: `research`, `import`, `ingest`, `ask`, `file-answer`, `lint`, `drafts` |
+| Procedures | Claude Code skills: `research`, `import`, `ingest`, `ask`, `file-answer`, `lint`, `drafts`. `ingest` has two supporting files: `ai-source.md` for a Claude output and `large-source.md` for a large document |
 | Enforcement | `.claude/settings.json` permission rules, plus git history |
 
 > [!important] Claude on the web or phone can't see your vault
@@ -99,6 +99,8 @@ Each operation has its own input zone, so the three never mix: see [[33 Input Zo
 A set of five sources touched 28 pages in M7's test, so the review is where you stay involved ([[33 Input Zones]] §2; [[03 Decision Log]] D-085 to D-090).
 
 **A Claude output** goes through the same ingest, at level AI. Each statement is checked against `raw/`: one a source states is cited to that source; one no source backs is kept as an `· AI` lead, uncited, until a primary source backs it; one a source contradicts stays out of the wiki (D-098, D-102). After a large set, Claude recommends `/lint` before the next one (D-103).
+
+**A large document,** such as a full Act or a 1,000-page book, stays whole in `raw/` (D-107 to D-116). The first `/ingest` maps it: the document's source page becomes a map of every part, where it sits in the file, a plan and each part's status. Each later run, `/ingest part <document>`, compiles one part of about 60 pages, chunk by chunk, with its own brief, set review and commit, and its own source page. You clear the session between runs and run `/lint` after each part. Progress lives on the map and in the set review, so a run that stops resumes at the next chunk. A PDF with no contents pages is mapped from a clip of the publisher's contents page. Every citation carries its page and section, and `/ask` says when a question falls in a part not compiled yet. Tested on the whole FSMA 2000, 1,263 pages: mapped into 49 Parts and 36 Schedules, with three Parts compiled and one compared across four sessions ([[90 M9 Handover]]).
 
 **Query.** You ask a question. Claude reads `index.md`, opens the relevant pages, follows links, and answers with links to pages and citations to sources, each with its trust level. A good answer can be filed back as an analysis page, so your explorations compound the same way your reading does.
 
