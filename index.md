@@ -101,3 +101,4 @@ Catalog of every wiki page, one line each. Claude maintains it; format in `syste
 ## Analyses
 
 - [[wiki/analyses/Compare the PARA method and evergreen notes as ways to organise what I read]] — PARA files items by project for action; evergreen notes link concepts for thinking and suit reading better; contested on hierarchy vs association (3 sources)
+- [[wiki/analyses/Compare Bush's memex trails with the compiled wiki's index and log as ways to find things again]] — trails replay a hand-built line of thought; the index finds pages by topic, the log by date; the wiki's nearer match to trails is its LLM-kept cross-references (2 sources)

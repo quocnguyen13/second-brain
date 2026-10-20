@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/bush-as-we-may-think.pdf]]", "[[raw/karpathy-llm-wiki.md]]"]
 created: "2026-09-22"
-updated: "2026-09-24"
+updated: "2026-10-20"
 tags: ["memex", "hypertext"]
 ---
 # Memex
@@ -30,3 +30,4 @@ A hypothetical desk-based personal device, proposed by [[wiki/entities/Vannevar 
 - [[wiki/concepts/Associative indexing]]
 - [[wiki/entities/Vannevar Bush]]
 - [[wiki/concepts/Compiled wiki]]
+- [[wiki/analyses/Compare Bush's memex trails with the compiled wiki's index and log as ways to find things again]]

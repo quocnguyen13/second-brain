@@ -128,3 +128,6 @@ Scanned 85 pages, deep-checked 7. Findings: 1 (0 high, 1 medium, 0 low). Checks 
 
 ## [2026-10-20] lint | apply report-2026-10-20-3
 Applied: 1. Skipped: none. Pages changed: 0, plus the Financial Ombudsman Service line in index.md. Status changes: none.
+
+## [2026-10-20] file | Compare Bush's memex trails with the compiled wiki's index and log as ways to find things again
+Pages: +1 analysis; 4 updated, Related links (Memex, Associative indexing, Wiki index and log, Compiled wiki). Status: verified. Evidence confirmed in raw/. Source - As We May Think listed under Related but has no Related list, so not back-linked.

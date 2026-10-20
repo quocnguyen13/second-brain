@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]"]
 created: "2026-09-22"
-updated: "2026-09-22"
+updated: "2026-10-20"
 tags: ["compiled-wiki"]
 ---
 # Wiki index and log
@@ -30,3 +30,4 @@ The two navigation files that keep a compiled wiki usable as it grows: `index.md
 - [[wiki/concepts/Compiled wiki]]
 - [[wiki/concepts/Wiki ingest]]
 - [[wiki/concepts/Retrieval-augmented generation]]
+- [[wiki/analyses/Compare Bush's memex trails with the compiled wiki's index and log as ways to find things again]]

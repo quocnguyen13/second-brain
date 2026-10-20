@@ -3,7 +3,7 @@ type: concept
 status: contested
 sources: ["[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
-updated: "2026-09-24"
+updated: "2026-10-20"
 tags: ["hypertext", "information-retrieval"]
 ---
 # Associative indexing
@@ -36,3 +36,4 @@ The idea, proposed by [[wiki/entities/Vannevar Bush]], that records should be fi
 - [[wiki/concepts/PARA method]]
 - [[wiki/concepts/Organizing by actionability]]
 - [[wiki/analyses/Compare the PARA method and evergreen notes as ways to organise what I read]]
+- [[wiki/analyses/Compare Bush's memex trails with the compiled wiki's index and log as ways to find things again]]

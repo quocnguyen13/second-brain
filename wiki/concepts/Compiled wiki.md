@@ -3,7 +3,7 @@ type: concept
 status: contested
 sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]"]
 created: "2026-09-22"
-updated: "2026-09-24"
+updated: "2026-10-20"
 tags: ["compiled-wiki", "knowledge-management"]
 ---
 # Compiled wiki
@@ -50,3 +50,4 @@ A knowledge base an LLM incrementally builds and maintains, structured in three 
 - [[wiki/concepts/Contextual Retrieval]]
 - [[wiki/concepts/PARA method]]
 - [[wiki/concepts/Organizing by actionability]]
+- [[wiki/analyses/Compare Bush's memex trails with the compiled wiki's index and log as ways to find things again]]
