@@ -4,7 +4,7 @@ status: verified
 trust: primary
 sources: ["[[raw/pra-approach-banking-supervision-2023.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-14"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - The PRA's approach to banking supervision
@@ -36,7 +36,7 @@ The PRA's standing statement of how it supervises deposit-takers and designated 
 - **Risk element framework.** Gross risk (potential impact, external context, business risk) overlaid with mitigating factors (management and governance, risk management and controls, capital, liquidity, operational resilience, resolvability) ([[raw/pra-approach-banking-supervision-2023.pdf#page=18]], [[raw/pra-approach-banking-supervision-2023.pdf#page=19]]).
 - **PIF (emphasis).** Each firm has a PIF stage, 1 to 5, reflecting its proximity to failure; the PRA does not routinely disclose it to the market or the firm ([[raw/pra-approach-banking-supervision-2023.pdf#page=44]], [[raw/pra-approach-banking-supervision-2023.pdf#page=45]]). See [[wiki/concepts/Proactive Intervention Framework]].
 - **Periodic Summary Meetings** set each firm's supervisory strategy; a letter follows, and the firm must allocate an SMF to each key risk ([[raw/pra-approach-banking-supervision-2023.pdf#page=47]], [[raw/pra-approach-banking-supervision-2023.pdf#page=48]]).
-- **Tools and powers.** Data validation, onsite reviews, s. 166 skilled persons reports (routinely used, no presumption of wrongdoing), Part 4A powers to vary a permission or impose requirements, and enforcement: financial penalties, public censure, prohibition ([[raw/pra-approach-banking-supervision-2023.pdf#page=43]], [[raw/pra-approach-banking-supervision-2023.pdf#page=44]], [[raw/pra-approach-banking-supervision-2023.pdf#page=50]], [[raw/pra-approach-banking-supervision-2023.pdf#page=51]]).
+- **Tools and powers.** Data validation, onsite reviews, s. 166 skilled persons reports (routinely used, no presumption of wrongdoing), [[wiki/concepts/Part 4A permission|Part 4A]] powers to vary a permission or impose requirements, and enforcement: financial penalties, public censure, prohibition ([[raw/pra-approach-banking-supervision-2023.pdf#page=43]], [[raw/pra-approach-banking-supervision-2023.pdf#page=44]], [[raw/pra-approach-banking-supervision-2023.pdf#page=50]], [[raw/pra-approach-banking-supervision-2023.pdf#page=51]]).
 - **Not a fraud regulator.** Onsite inspections are not designed to uncover all malpractice ([[raw/pra-approach-banking-supervision-2023.pdf#page=49]]).
 
 ### Governance, capital and liquidity
@@ -54,6 +54,7 @@ The PRA's standing statement of how it supervises deposit-takers and designated 
 - **FSCS.** The [[wiki/entities/Financial Services Compensation Scheme]] is the compensation fund of last resort ([[raw/pra-approach-banking-supervision-2023.pdf#page=16]]).
 
 ## Entities and concepts
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/concepts/Operational resilience]]
 - [[wiki/entities/Monetary Policy Committee]]
 - [[wiki/entities/Prudential Regulation Authority]]

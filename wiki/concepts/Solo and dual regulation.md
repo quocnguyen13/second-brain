@@ -3,7 +3,7 @@ type: concept
 status: unverified
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-18"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Solo and dual regulation
@@ -19,6 +19,7 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
   - authorised with one or more PRA-regulated activities: FCA and PRA (dual)
 
   ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 1L(1), 2B(5), 2K)
+- **Crossing the line, firm by firm.** A firm becomes dual-regulated through its own permission. An FCA-only firm that wants to add an activity including a PRA-regulated one applies to the PRA, which may add it with the FCA's consent ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(3)). The FCA can't add a PRA-regulated activity itself ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=88]], s. 55H(2)(a)). A new applicant whose activities include a PRA-regulated one applies to the PRA from the start ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(2)(a)). See [[wiki/concepts/Part 4A permission]].
 - **Moving the line.** The Treasury can make further activities PRA-regulated by order under s. 22A ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2D(1)). For a dual-regulated firm, it can specify which matters are, or are mainly, one regulator's responsibility ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3G).
 - **Insurance is contingent.** The PRA's insurance objective and the with-profits provisions apply "only if" effecting or carrying out insurance contracts is a PRA-regulated activity ([[raw/uk-parliament-fsma-2000-part-1a.md]], ss. 2C(3), 3F(4)).
 - **What dual regulation means in practice.** It brings in the coordination machinery in [[wiki/concepts/FCA-PRA coordination]]:
@@ -61,8 +62,10 @@ Under FSMA, every authorised person is supervised by the FCA. Those whose permis
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]
 
 ## Related
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/entities/TSB Bank]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Prudential Regulation Authority]]

@@ -3,7 +3,7 @@ type: concept
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-2026-09.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
 created: "2026-10-17"
-updated: "2026-10-18"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "regulatory-perimeter"]
 ---
 # Financial promotion
@@ -16,6 +16,11 @@ An invitation or inducement, communicated in the course of business, to engage i
   - an authorised person, in its own right
   - anyone, if an authorised person has approved the content ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(2))
 - **The approver gateway.** An authorised person may approve another's promotion only if the approval is permitted under s. 55NA, with FCA permission, or falls within an exemption in regulations under s. 55NB ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(2A)). Inserted by the Financial Services and Markets Act 2023; fully in force since 7 February 2024 ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=55]], F136).
+- **The approver permission (s. 55NA).** An authorised person must not approve the content of a communication for s. 21 without the FCA's permission under s. 55NA; approving outside it counts as breaching an FCA requirement ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=100]], s. 55NA(1)–(2)). It is separate from a [[wiki/concepts/Part 4A permission]] ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(6)).
+  - **Who may apply:** an authorised person, or an applicant for Part 4A permission not yet decided ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=100]], s. 55NA(3)).
+  - **Terms:** as sought, which may be a general permission to approve, or other terms such as a narrower description; the FCA must set them out ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=100]], s. 55NA(4), (6)).
+  - **Refusal and removal:** the FCA may refuse to advance its operational objectives, and may vary or cancel on its own initiative if the firm has for at least 12 months failed to give, or refuse to give, approvals in line with the permission, or to advance its operational objectives ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=100]], s. 55NA(5), (7)–(8)).
+  - **Exemptions:** Treasury regulations under s. 55NB may exempt specified persons, classes, activities or circumstances, subject to conditions ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=101]], ss. 55NA(11), 55NB). Section 55NA(1) is excluded by exemption regulations from 27 September 2023, and temporarily by the Public Offers and Admissions to Trading Regulations 2025 from 19 January 2026 ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=101]], C165, C166).
 - **Reach.** "Communicate" includes causing a communication to be made ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=55]], s. 21(13)). A communication from outside the UK is caught only if it is capable of having an effect in the UK ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(3)).
 - **Scope set by the Treasury.** "Engaging in investment activity" means entering or offering to enter an agreement that is a controlled activity, or exercising rights under a controlled investment; both are of kinds the Treasury specifies by order ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(8)–(10); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=55]], s. 21(15)). The Treasury may also specify by order when the restriction doesn't apply, which may include compliance with financial promotion rules ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(5)–(6)).
 - **Cryptoassets.** "Investment" includes a cryptoasset ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=55]], s. 21(14)). Section 21 is modified for specified purposes from 25 February 2026 by the FSMA 2000 (Cryptoassets) Regulations 2026 ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=55]], C78).
@@ -30,8 +35,10 @@ An invitation or inducement, communicated in the course of business, to engage i
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]
 
 ## Related
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/concepts/General prohibition]]
 - [[wiki/concepts/Regulated financial services]]
 - [[wiki/entities/Financial Conduct Authority]]

@@ -95,3 +95,9 @@ Scanned 82 pages, deep-checked 40. Findings: 4 (0 high, 3 medium, 1 low). Checks
 
 ## [2026-10-18] lint | apply report-2026-10-18
 Applied: 1a, 2a, 3a, 4. Skipped: none. Pages changed: 15 (Source - Claude on who regulates what (2026-09-27), Source - FSMA 2000 (2026-09), Source - FSMA 2000 (2026-09) - Part II, Outsourcing of critical or important functions, General prohibition, Financial promotion, Regulated financial services, Solo and dual regulation, HM Treasury, Financial Conduct Authority, New bank authorisation, Threshold Conditions, Financial Ombudsman Service, Financial Services Compensation Scheme, Ring-fencing), plus index.md counts. Status changes: none.
+
+## [2026-10-20] ingest | FSMA 2000 (2026-09), Part 4A
+Set: set-2026-10-20, 1 source, part 4A (pp. 82–119) of 8 planned parts, primary. Pages: +2 new (Source - FSMA 2000 (2026-09) - Part 4A; Part 4A permission); 12 updated (Source - FSMA 2000 (2026-09), the map: Part 4A compiled, 2 of 8; Source - FSMA 2000 Part 1A; Source - FCA and Bank of England MoU 2024; Source - The PRA's approach to banking supervision; Source - Claude on who regulates what (2026-09-27): 2 claims lose `· AI`; Threshold Conditions; New bank authorisation; FCA-PRA coordination, now contested; Solo and dual regulation; Financial promotion; Financial Conduct Authority; Prudential Regulation Authority). Draft: A product that needs a new regulated activity should be planned around a six-month clock that starts only when the application is complete. Conflicts: 1, waiting for my decision. Flags: none; no prospective text in Part 4A. Capture list: ticked the ss. 19, 23, 55E–55F line.
+
+## [2026-10-20] ingest | resolve set-2026-10-20
+Decided: 1c. Skipped: none. Pages changed: FCA-PRA coordination; Source - FSMA 2000 (2026-09) - Part 4A; Source - FCA and Bank of England MoU 2024; overview.md; index.md. Status changes: FCA-PRA coordination: contested → verified.

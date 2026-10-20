@@ -3,7 +3,7 @@ type: entity
 status: verified
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-18"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Financial Conduct Authority
@@ -31,6 +31,8 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - **Relevant markets.** These are the financial markets, the markets for regulated financial services, and services provided without breaching the [[wiki/concepts/General prohibition]] by persons who are not authorised ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1F).
 - **Firms acting outside their permission.** An authorised person that carries on a regulated activity outside its permission is treated as breaching a requirement imposed by the FCA; a PRA-authorised person, a requirement imposed by both the FCA and the PRA ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=52]], s. 20(1), (1A)).
 - **Approving financial promotions.** An authorised person may approve another person's promotion only where s. 55NA permits it, "with FCA permission", or an exemption under s. 55NB applies ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=54]], s. 21(2A)). See [[wiki/concepts/Financial promotion]].
+- **Giving and changing permissions.** The FCA gives a [[wiki/concepts/Part 4A permission]] where the activities include no PRA-regulated activity, consulting the PRA if the applicant's group includes a PRA-authorised person ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(2)(b); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=86]], s. 55E(2)–(3)). It varies or cancels FCA-only firms' permissions on application, and may refuse to advance its operational objectives ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=88]], s. 55H(2)–(4)). The PRA gives permission only with its consent, and it may withhold consent to a PRA variation to advance its operational objectives ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=86]], s. 55F(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(5)).
+- **Own-initiative powers.** It may vary or cancel any firm's Part 4A permission, or impose requirements on it, where the firm is failing or likely to fail the FCA's threshold conditions, has not used a permitted activity for 12 months, or where that is desirable to advance its operational objectives ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55J(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=91]], s. 55J(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=97]], s. 55L(2)–(3)). For a PRA-authorised firm it must consult the PRA, and needs its consent to add an activity or widen a description ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=91]], s. 55J(4)).
 - **Supervision.** It supervises every authorised person, not only those the PRA leaves out ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1L(1)). It also monitors and enforces against certain persons who are not authorised ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1L(2)–(3)).
 - **General functions.** These are making rules, making technical standards, issuing codes, giving general guidance, and setting general policy ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(6)).
 - **Other duties.** It must have regard to the [[wiki/concepts/Regulatory principles]] and to minimising the use of firms for financial crime ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 1B(5)).
@@ -86,8 +88,10 @@ The FCA is the UK regulator for all authorised persons ([[raw/uk-parliament-fsma
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]
 
 ## Related
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/concepts/General prohibition]]
 - [[wiki/concepts/Financial promotion]]
 - [[wiki/entities/Prudential Regulation Authority]]

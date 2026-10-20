@@ -4,7 +4,7 @@ status: unverified
 trust: ai
 sources: ["[[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-10-14"
-updated: "2026-10-18"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - Claude on who regulates what (2026-09-27)
@@ -38,11 +38,14 @@ All of these were already on the wiki's pages, so this note added none of them.
 - FSMA s. 19 sets the "general prohibition" on carrying on a regulated activity without being authorised or exempt ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=51]], s. 19).
 - FSMA s. 23 makes breaching the general prohibition an offence ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=60]], s. 23(1)).
 
+**Backed on 2026-10-20 by FSMA Part 4A** ([[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]], [[system/ingest/set-2026-10-20]]). These were `· AI` until then.
+- FSMA ss. 55E and 55F set separate FCA and PRA routes for giving permission: the FCA gives it on its own, the PRA only with the FCA's consent, and which one applies depends on whether the activities include a PRA-regulated activity ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=86]], ss. 55E(2), 55F(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(2)).
+- A firm that needs a regulated activity its permission doesn't cover must apply to vary its permission; it can't apply for a fresh one ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(3); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=88]], s. 55H(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1)). Narrowed: the Act speaks of activities, not products.
+
 ### Unbacked (AI)
 **The map**
 - UK financial regulation is divided by purpose, not by type of firm ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - HM Treasury formally tells the PRA, as well as the FCA, what to weigh ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI). Section 1JA in `raw/` covers only the FCA.
-- FSMA ss. 55E and 55F set separate FCA and PRA routes for giving permission ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - The 2007–08 crisis showed that no single body clearly owned financial stability ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - The [[wiki/entities/Monetary Policy Committee]] sets Bank Rate ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - The MPC sets Bank Rate to meet the government's 2% inflation target ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
@@ -58,8 +61,7 @@ All of these were already on the wiki's pages, so this note added none of them.
 - An e-money institution must safeguard customer money and cannot lend it ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 
 **Working with two regulators**
-- A product that needs a regulated activity the firm has no permission for needs a variation of permission ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
-- A variation of permission can take months ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
+- A variation of permission can take months ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI). Checked 2026-10-20 against FSMA s. 55V, which sets only the maximum (6 months from a complete application), not how long decisions take: still unbacked. See [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]].
 - FCA Principle 11 requires firms to tell the FCA anything it would reasonably expect to know ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - PRA Fundamental Rule 7 places the same duty towards the PRA ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
 - That duty can cover a significant new product or a risky change programme ([[raw/claude-2026-09-27-foundations-1-1-who-regulates-what.md]] · AI).
@@ -93,6 +95,7 @@ All of these were already on the wiki's pages, so this note added none of them.
 - [[wiki/entities/Financial Conduct Authority]], [[wiki/entities/Prudential Regulation Authority]], [[wiki/entities/Bank of England]], [[wiki/entities/Financial Ombudsman Service]], [[wiki/concepts/Ring-fencing]], [[wiki/concepts/New bank authorisation]] (links only)
 - [[wiki/concepts/Principles for Businesses]] (Principle 11, AI only)
 - [[wiki/concepts/General prohibition]], [[wiki/entities/HM Treasury]] (claims backed 2026-10-17)
+- [[wiki/concepts/Part 4A permission]] (claims backed 2026-10-20)
 - Mentioned without a page: Fundamental Rule 7, and the SBV.
 
 ## Conflicts and open points

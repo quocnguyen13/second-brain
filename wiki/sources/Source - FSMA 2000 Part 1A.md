@@ -4,7 +4,7 @@ status: verified
 trust: primary
 sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-17"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - FSMA 2000 Part 1A
@@ -84,6 +84,7 @@ See [[wiki/concepts/FCA-PRA coordination]]. Briefly:
 - [[wiki/concepts/General prohibition]] (s. 1F(c)), [[wiki/concepts/Financial promotion]] (s. 1H(2)(c)), linked 2026-10-17
 - [[wiki/entities/Bank of England]]
 - [[wiki/concepts/Solo and dual regulation]]
+- [[wiki/concepts/Part 4A permission]] (ss. 2B(5), 3E(2)), linked 2026-10-20
 - [[wiki/concepts/Regulatory objectives]]
 - [[wiki/concepts/Consumer protection objective]]
 - [[wiki/concepts/Regulated financial services]]

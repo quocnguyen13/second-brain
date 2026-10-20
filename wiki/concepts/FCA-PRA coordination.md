@@ -1,9 +1,9 @@
 ---
 type: concept
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-06"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # FCA-PRA coordination
@@ -27,7 +27,7 @@ These are the statutory mechanisms that make the FCA and the PRA act as a system
 ### 2. The memorandum of understanding (ss. 3E–3F)
 - **What it must describe.** Each regulator's role on matters of common interest, and how the regulators will comply with s. 3D ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3E(1)).
 - **What it may cover** ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3E(2)):
-  - Part 4A permissions and variations
+  - [[wiki/concepts/Part 4A permission]]s and variations
   - requirements
   - information
   - groups mixing PRA-authorised and other authorised persons
@@ -80,7 +80,7 @@ The current memorandum, signed 2024-03-26 under ss. 3D and 3E, replaces the 2019
 
 | Process | Lead | The other regulator's role |
 |---|---|---|
-| Permissions: grant, vary by adding an activity, remove | PRA | FCA **consent** (a veto); FCA consulted before cancellation ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]) |
+| Permissions, on a firm's application: grant, vary by adding an activity, remove | PRA | FCA **consent** (a veto); FCA consulted before cancellation ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]). On the PRA's own initiative, see section 9 |
 | Senior managers (SMFs designated by PRA rules) | PRA | FCA consent ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]]) |
 | Customer-facing SMFs (client assets, AML, compliance) | FCA alone | PRA consulted for a subset ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]]) |
 | Change in control of the bank | PRA | Consults FCA; FCA may direct an objection on AML/terrorist-financing grounds ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]]) |
@@ -97,15 +97,27 @@ The current memorandum, signed 2024-03-26 under ss. 3D and 3E, replaces the 2019
 - **The veto in practice.** A s. 3I direction is decided by the PRC after a meeting at CEO and Deputy Governor level ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=17]]). It doesn't reach the FCA's concurrent competition powers ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=16]]).
 - **Review.** Co-ordination is reviewed each half-year ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=19]]).
 
+### 9. Consent and consultation on permissions: Part 4A
+- **Giving permission.** The PRA may give a [[wiki/concepts/Part 4A permission]] only with the FCA's consent, which may be conditional on how the PRA words it. The FCA, giving permission itself, must consult the PRA if the applicant's group includes a PRA-authorised person ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=86]], ss. 55E(3), 55F(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=87]], s. 55F(5)).
+- **Requirements.** The FCA must consult the PRA before imposing or varying a requirement on a PRA-authorised person or a member of its group; the PRA must consult the FCA before imposing or varying any requirement ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=98]], s. 55L(7); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=99]], s. 55M(7)).
+- **The FCA's grounds to say no.** It may withhold consent to a PRA variation on a firm's application to advance its operational objectives ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(5)). The MoU treats consent as a veto: disagreements must be resolved before the decision ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]).
+- **The FCA's consent runs on the PRA's clock.** Where a decision needs the other regulator's consent, that regulator must decide within the same statutory period: 6 months from a complete application, 12 at most for an incomplete one ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=110]], s. 55V(1)–(3)). A PRA notice granting a permission or variation must state that the FCA has consented ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=110]], s. 55V(7)).
+- **Information flows.** The PRA must notify the FCA as soon as practicable when it receives, or an applicant withdraws, an application for permission, for a variation, or about a requirement ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=111]], s. 55W). On an application to the PRA, either regulator may ask for further information; the PRA consults the FCA before setting directions or requirements for a class of applications ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=108]], s. 55U(5)–(6); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=109]], s. 55U(9)).
+- **Duties survive other routes.** Using the powers for an overseas regulator, or imposing requirements after a change of control, leaves the duties to consult or obtain consent in place ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=102]], s. 55O(4); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=105]], s. 55Q(3)).
+- **Varying and cancelling, on a firm's application.** The PRA needs the FCA's consent to add, remove or re-describe an activity, and consults it before cancelling ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1)–(2)). The MoU says the same for applications to grant, vary or cancel a permission ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]).
+- **Varying and cancelling, on the PRA's own initiative.** It needs the FCA's consent only to add an activity or widen a description; removing an activity or cancelling needs consultation ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=91]], s. 55J(5); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=94]], s. 55J(9)).
+
 ## Where sources disagree
-- None found.
+- Not a conflict once scoped: the MoU paragraph covers applications, where it matches the Act; the Act's narrower consent rule applies only to the PRA's own-initiative action. Resolved 2026-10-20, [[system/ingest/set-2026-10-20]] conflict 1.
 
 ## Mentioned in
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]
 
 ## Related
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/concepts/Solo and dual regulation]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/entities/Prudential Regulation Authority]]

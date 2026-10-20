@@ -1,9 +1,9 @@
 ---
 type: entity
 status: verified
-sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]"]
+sources: ["[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-28"
-updated: "2026-10-14"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Prudential Regulation Authority
@@ -31,7 +31,8 @@ The PRA is the Bank of England acting through its Prudential Regulation Committe
 - **Its own account of its objectives** matches the Act: two primary objectives (safety and soundness; policyholder protection for insurers) and two secondary ones (competition; competitiveness and growth) ([[raw/pra-approach-banking-supervision-2023.pdf#page=8]]). It reads the competition objective as a duty to consider, not to adopt, options that favour competition ([[raw/pra-approach-banking-supervision-2023.pdf#page=9]]).
 - **How it supervises banks.** Judgement-based, forward-looking and focused on key risks, applied proportionately ([[raw/pra-approach-banking-supervision-2023.pdf#page=5]], [[raw/pra-approach-banking-supervision-2023.pdf#page=14]]). Each firm has a potential impact category and a PIF stage; see [[wiki/concepts/Potential impact categories]] and [[wiki/concepts/Proactive Intervention Framework]]. Each firm's supervisory strategy is set at a Periodic Summary Meeting and sent to it by letter ([[raw/pra-approach-banking-supervision-2023.pdf#page=47]]).
 - **Leads bank authorisation.** It leads a single administrative process for deposit-takers and is the decision maker, with the FCA assessing conduct ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]). See [[wiki/concepts/New bank authorisation]].
-- **Powers.** Information gathering, s. 166 skilled persons reports, Part 4A powers to vary permissions or impose requirements, ring-fenced group restructuring, and enforcement (penalties, censure, prohibition) ([[raw/pra-approach-banking-supervision-2023.pdf#page=50]], [[raw/pra-approach-banking-supervision-2023.pdf#page=51]]).
+- **Giving and changing permissions, in the Act.** The PRA is the appropriate regulator where the activities include a PRA-regulated activity, and gives a [[wiki/concepts/Part 4A permission]] only with the FCA's consent ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(2)(a); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=86]], s. 55F(2)). On a PRA-authorised firm's application it varies the permission with the FCA's consent, and cancels it after consulting the FCA; it may refuse to advance any of its objectives ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1)–(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(4)). On its own initiative it may vary, cancel or impose requirements where a PRA-authorised firm is failing or likely to fail its threshold conditions, has not used a permitted activity for 12 months, or where that advances any of its objectives; it must consult the FCA, and needs its consent to add an activity or widen a description ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55J(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=91]], s. 55J(3), (5); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=98]], s. 55M(2)–(3)).
+- **Powers.** Information gathering, s. 166 skilled persons reports, [[wiki/concepts/Part 4A permission|Part 4A]] powers to vary permissions or impose requirements, ring-fenced group restructuring, and enforcement (penalties, censure, prohibition) ([[raw/pra-approach-banking-supervision-2023.pdf#page=50]], [[raw/pra-approach-banking-supervision-2023.pdf#page=51]]).
 - **Not a fraud regulator.** Its inspections are not designed to uncover all malpractice ([[raw/pra-approach-banking-supervision-2023.pdf#page=49]]).
 - **Decisions.** Its most important decisions are made by the [[wiki/entities/Prudential Regulation Committee]] ([[raw/pra-approach-banking-supervision-2023.pdf#page=48]]). The [[wiki/entities/Financial Policy Committee]] can make recommendations and give directions to it ([[raw/pra-approach-banking-supervision-2023.pdf#page=15]]).
 
@@ -51,8 +52,10 @@ The PRA is the Bank of England acting through its Prudential Regulation Committe
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - Bank of England prudential regulation page]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]
 
 ## Related
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/entities/Bank of England]]
 - [[wiki/entities/Financial Conduct Authority]]
 - [[wiki/concepts/Regulatory objectives]]

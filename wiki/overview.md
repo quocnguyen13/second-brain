@@ -3,7 +3,7 @@ type: overview
 status: verified
 sources: ["[[raw/karpathy-llm-wiki.md]]", "[[raw/bush-as-we-may-think.pdf]]", "[[raw/matuschak-evergreen-notes.md]]", "[[raw/anthropic-contextual-retrieval.md]]", "[[raw/forte-para-method.md]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/fca-about-the-fca.md]]", "[[raw/pra-approach-banking-supervision-2023.pdf]]", "[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/bank-of-england-prudential-regulation.md]]", "[[raw/edmonds-financial-conduct-authority-2016.pdf]]", "[[raw/wikipedia-financial-conduct-authority.md]]", "[[raw/fca-disp-1-6-complaints-time-limits.md]]", "[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-disp-2-8-referral-time-limits.md]]", "[[raw/fca-disp-3-7-ombudsman-awards.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/financial-ombudsman-how-to-complain.md]]", "[[raw/fca-final-notice-tsb-2022.pdf]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-09-22"
-updated: "2026-10-17"
+updated: "2026-10-20"
 tags: ["compiled-wiki", "knowledge-management", "memex", "note-taking", "information-retrieval", "uk-financial-regulation", "complaints"]
 ---
 # Overview
@@ -17,7 +17,7 @@ The wiki has two strands that don't yet touch:
   - One commentary: Wikipedia.
   - One AI: a Claude study note on who regulates what (2026-09-27). Its unbacked claims stay marked `· AI` and are kept off this page.
 
-  The 2026-10-14 sets added complaints and the FOS, the Claude note, and the TSB Final Notice, the wiki's first enforcement case. On 2026-10-17 the whole of FSMA 2000 entered `raw/`. [[wiki/sources/Source - FSMA 2000 (2026-09)]] maps its Parts and Schedules; eight parts are planned, one per run, starting with Part II (the perimeter), Part 4A (permission) and Part XVI (the ombudsman scheme). Part II was compiled the same day: [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]].
+  The 2026-10-14 sets added complaints and the FOS, the Claude note, and the TSB Final Notice, the wiki's first enforcement case. On 2026-10-17 the whole of FSMA 2000 entered `raw/`. [[wiki/sources/Source - FSMA 2000 (2026-09)]] maps its Parts and Schedules; eight parts are planned, one per run, starting with Part II (the perimeter), Part 4A (permission) and Part XVI (the ombudsman scheme). Part II was compiled the same day: [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]. Part 4A followed on 2026-10-20: [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]], with the new [[wiki/concepts/Part 4A permission]].
 - **Knowledge management:** five sources on how to build and organise a knowledge base.
 
 Regulation agreements and disagreements sit in Strand 1. The sections from "Where sources agree" on apply to the knowledge-management strand.
@@ -37,7 +37,8 @@ Regulation agreements and disagreements sit in Strand 1. The sections from "Wher
 
 ### For a dual-regulated bank (emphasis this set)
 - **Who leads.** The PRA leads for dual-regulated firms and the FCA for solo-regulated ones; supervision isn't joint, and each assesses risk against its own objectives ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]]). The PRA leads permissions (with FCA consent, a veto), PRA-designated senior managers, change in control and banking transfer schemes; the FCA alone approves customer-facing senior managers and keeps the single register ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=6]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=22]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=24]]). Full table in [[wiki/concepts/FCA-PRA coordination]].
-- **Authorising a new bank.** One application to the PRA, assessed jointly. The bank is authorised only if both regulators are satisfied on their [[wiki/concepts/Threshold Conditions]], including whether it could be resolved in an orderly way; the PRA decides ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]). See [[wiki/concepts/New bank authorisation]] and [[wiki/concepts/Senior Managers and Certification Regime]].
+- **Authorising a new bank.** One application to the PRA, assessed jointly. The bank is authorised only if both regulators are satisfied on their [[wiki/concepts/Threshold Conditions]], including whether it could be resolved in an orderly way; the PRA decides ([[raw/pra-approach-banking-supervision-2023.pdf#page=42]]). In the Act, the PRA may give the permission only with the FCA's consent, and must decide within 6 months of a complete application (12 at most for an incomplete one), the FCA's consent included ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=86]], s. 55F(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=110]], s. 55V(1)–(3)). See [[wiki/concepts/New bank authorisation]] and [[wiki/concepts/Senior Managers and Certification Regime]].
+- **A new product outside the permission (FSMA Part 4A, emphasis 2026-10-20).** A firm can hold one [[wiki/concepts/Part 4A permission]], a list of described activities; to carry on another regulated activity it applies to vary it. A bank applies to the PRA, which needs the FCA's consent; the same 6-month maximum applies ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(3); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=110]], s. 55V(1)). Either regulator can also vary the permission or impose requirements on its own initiative, with a right to refer to the Tribunal ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55J(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=118]], s. 55Z3(2)).
 - **How close to failure.** The PRA puts every bank in one of four [[wiki/concepts/Potential impact categories]] and one of five [[wiki/concepts/Proactive Intervention Framework]] stages, from low risk to viability (1) to resolution (5), with escalating actions such as distribution limits and balance-sheet caps at stage 3. The PIF stage isn't disclosed to the firm, but it is shared with the FCA ([[raw/pra-approach-banking-supervision-2023.pdf#page=20]], [[raw/pra-approach-banking-supervision-2023.pdf#page=45]], [[raw/pra-approach-banking-supervision-2023.pdf#page=46]], [[raw/pra-approach-banking-supervision-2023.pdf#page=47]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=7]]).
 - **Ring-fencing.** Core services, "retail deposits and related payment and overdraft services", sit in ring-fenced bodies protected from the rest of the group; RFBs face extra requirements and group restructuring powers ([[raw/pra-approach-banking-supervision-2023.pdf#page=8]], [[raw/pra-approach-banking-supervision-2023.pdf#page=54]]). See [[wiki/concepts/Ring-fencing]].
 - **Operational resilience is prudential.** The PRA expects banks to manage operational as well as financial risks. It assumes disruptions will happen, and expects firms to stay within impact tolerances for their important business services; the board is accountable ([[raw/pra-approach-banking-supervision-2023.pdf#page=36]]). See [[wiki/concepts/Operational resilience]]. The FCA's side of the worked case, [[wiki/entities/TSB Bank]], is now primary-sourced (next section); the PRA's side waits for the Bank's release.
@@ -75,7 +76,12 @@ Regulation agreements and disagreements sit in Strand 1. The sections from "Wher
 - **Funding.** Both regulators are funded by fees on firms ([[raw/fca-about-the-fca.md]], [[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=17]]).
 
 ### Where the regulation sources disagree
-None open. Resolved 2026-10-14, [[system/ingest/set-2026-10-14]], both on [[wiki/concepts/Complaint handling time limits]]:
+None open.
+
+Resolved 2026-10-20 as scope (c), [[system/ingest/set-2026-10-20]] conflict 1, on [[wiki/concepts/FCA-PRA coordination]]:
+- **Consent or consultation on varying and cancelling a permission.** Not a conflict once scoped. The MoU says the PRA obtains the FCA's consent before granting, removing or adding an activity, and consults before cancelling ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]). The Act says the same for a firm's application, but on the PRA's own initiative only adding an activity or widening a description needs consent ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1)–(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=91]], s. 55J(5)). The MoU paragraph sits under "Applications to grant, vary or cancel a regulatory permission", so it describes the application route ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]).
+
+Resolved 2026-10-14, [[system/ingest/set-2026-10-14]], both on [[wiki/concepts/Complaint handling time limits]]:
 - **Conflict 1, 15 days or 15 business days.** DISP 1.6.2AR's 15 business days, or 35, is stated ([[raw/fca-disp-1-6-complaints-time-limits.md]]). The FOS guide's "only 15 days" ([[raw/financial-ombudsman-how-to-complain.md]]) is marked outweighed, as DISP is the FCA's own statement.
 - **Conflict 2, fraud and scams.** DISP's scope is stated: the short deadline is for EMD and PSD complaints only ([[raw/fca-disp-1-6-complaints-time-limits.md]], DISP 1.6.2AR). DISP also recognises APP fraud complaints that are not PSD complaints ([[raw/fca-disp-2-7-complainant-eligibility.md]], DISP 2.7.6R(2B)). The FOS guide's "fraud and scams" ([[raw/financial-ombudsman-how-to-complain.md]]) is marked outweighed, as DISP is the FCA's own statement.
 
@@ -160,7 +166,9 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
   - Topic pages vs. project folders: the compiled wiki's concept pages ([[raw/karpathy-llm-wiki.md]]) vs. PARA's projects-first order ([[raw/forte-para-method.md]]). Neither source addresses the other.
 
 ## Gaps worth a new source
-- FSMA ss. 55E–55F, 55NA–55NB and 228 are in `raw/` inside the whole Act and wait for their part runs: Part 4A (plan 2), Part XVI (plan 3). Part II (ss. 19–30) is compiled. See [[wiki/sources/Source - FSMA 2000 (2026-09)]].
+- FSMA s. 228 is in `raw/` inside the whole Act and waits for Part XVI (plan 3). Parts II and 4A are compiled. See [[wiki/sources/Source - FSMA 2000 (2026-09)]].
+- What the threshold conditions are: Schedule 6 (plan 5). Schedule 6A, the FCA's additional power to vary or cancel, is not in the plan. S.I. 2025/859, which excludes s. 55B(3) for specified purposes, is not in `raw/`.
+- How long permission and variation decisions take in practice: the Act gives only the 6- and 12-month maximums. The regulators' published service standards would answer it.
 - The Treasury's orders behind Part II: the Regulated Activities Order (with Schedule 2, plan 8), the Financial Promotion Order (exemptions under s. 21(5)), and the order designating credit-related regulated activities (s. 23(1B)).
 - To back the Claude note (all on the capture list): the Bank of England's release on the TSB fines (the PRA's £18.9m and framing); the Bill's page and Parliament's report-stage news item; FCA PRIN and the PRA Fundamental Rules; the SBV's own page on its role.
 - Current SYSC 8 (outsourcing) and SYSC 4.1 (business continuity), and the FCA's and PRA's operational resilience rules: the TSB notice quotes SYSC only as in force in 2015–2018.
@@ -177,7 +185,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - FCA conduct rules for lending, cards and payments: the Consumer Duty and the consumer credit sourcebook.
 - The New Bank Start-up Unit's guidance: what a new bank's application must contain.
 - The PRA's ring-fencing rules and the Banking Reform Act 2013: which firms must ring-fence and the threshold.
-- The rest of FSMA is in `raw/` but not compiled: Schedules 1ZA and 1ZB are not in the plan; Part 4A is plan 2.
+- The rest of FSMA is in `raw/` but not compiled: Schedules 1ZA and 1ZB are not in the plan.
 - The rest of Forte's PARA material, if the clip is partial.
 - Matuschak's uncaptured notes, especially "concept-oriented" and "prefer associative ontologies to hierarchical taxonomies".
 - A head-to-head comparison of a compiled wiki and RAG on the same corpus and questions (carried over).
@@ -195,6 +203,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
 - [[wiki/sources/Source - FSMA 2000 Part 1A]]: the statute setting up the FCA and PRA, their objectives and their coordination.
 - [[wiki/sources/Source - FSMA 2000 (2026-09)]]: the whole Act, revised text; a map of its Parts and Schedules, compiled one part per run.
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part II]]: the perimeter: general prohibition, financial promotion, regulated activities, offences, and unenforceable agreements.
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]: permission: applying, giving, varying and cancelling, requirements, own-initiative powers, the s. 55NA approver permission, decision deadlines and the Tribunal.
 - [[wiki/sources/Source - About the FCA]]: the FCA's own account of its scale, methods, funding and accountability.
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]: the PRA's 2023 statement of how it supervises banks.
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]: who leads on what between the FCA and the PRA.

@@ -2,9 +2,9 @@
 type: source
 status: verified
 trust: primary
-sources: ["[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]"]
+sources: ["[[raw/fca-boe-memorandum-of-understanding-2024.pdf]]", "[[raw/uk-parliament-fsma-2000-part-1a.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-10-06"
-updated: "2026-10-14"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "financial-regulators"]
 ---
 # Source - FCA and Bank of England MoU 2024
@@ -58,10 +58,11 @@ The high-level framework the FCA and the PRA use to co-ordinate and co-operate, 
 - [[wiki/concepts/New bank authorisation]]
 - [[wiki/concepts/Senior Managers and Certification Regime]]
 - [[wiki/concepts/Threshold Conditions]]
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/concepts/Proactive Intervention Framework]]
 - [[wiki/concepts/Ring-fencing]]
 - [[wiki/concepts/Regulatory objectives]]
 
 ## Conflicts and open points
-- None with other sources.
+- **Consent on permissions (scope), resolved 2026-10-20 as c:** the MoU covers applications, where it matches the Act. Annex 1 para 1 says that, "as provided for in FSMA", the PRA obtains the FCA's consent before granting or removing a permission or adding an activity, and consults it before cancelling ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=21]]). The Act matches this when the firm applies, and goes further there, since varying a description also needs consent ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=86]], s. 55F(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1)–(2)). On the PRA's own initiative, only adding an activity or widening a description needs consent, and removal needs consultation ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=91]], s. 55J(5)). [[system/ingest/set-2026-10-20]] conflict 1, on [[wiki/concepts/FCA-PRA coordination]].
 - **Review frequency.** FSMA requires the MoU itself to be reviewed at least once a calendar year ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 3E(4)). This MoU describes half-yearly reviews of co-ordination ([[raw/fca-boe-memorandum-of-understanding-2024.pdf#page=19]]). They are different things, so not a conflict. The 2024 MoU replaced one from 2019, so the wiki doesn't show yearly reissues.
