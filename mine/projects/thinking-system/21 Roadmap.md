@@ -278,8 +278,8 @@ Run in the M0 thread (D-117). Each step's results go into `system/test-results.m
 | Fri 23 Oct | **Criterion 5, side-by-side:** SB1–SB5 through `/ask` and in a default Claude chat with no project; every `/ask` fact traced to `raw/` with its level; the default chat's facts checked against the same raw files | 5 of 5 `/ask` answers fully traced; the comparison recorded |
 | Mon 26 Oct | **Retrospective** (doc 91) and **showcase gate** (D-082, D-083), in M0 | Doc 91 written with you; the gate decided and logged; MVP 3's scoping, or the showcase, scheduled |
 
-- [ ] Placed, committed and pushed; Sync
-- [ ] SB1–SB5 agreed; rerun notes written
+- [x] Placed, committed and pushed; Sync (2026-10-20)
+- [x] SB1–SB5 agreed; rerun notes written (2026-10-20, D-118): [[40 Claude Operating Instructions]] §5, "MVP 2 exit tests"; Run 7 set up in `system/test-results.md`
 - [ ] Criterion 6: regression, 21 of 21
 - [ ] Criterion 5: side-by-side, 5 of 5
 - [ ] **MVP 2 exit: 6 of 6 criteria** ([[11 Project Charter]] §11)
