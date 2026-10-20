@@ -45,7 +45,7 @@ Runs only when I type `/lint`; the procedure and the standing checks are in `.cl
 Runs only when I type `/drafts`; the procedure is `.claude/skills/drafts/SKILL.md`. It checks the drafts in `mine/drafts/` against `raw/`, writes its Check into each draft, lists my insights whose wiki pages have changed, and logs the run. It never writes in `mine/insights/`, and it doesn't tell me which drafts to keep: keeping one means I write my own page.
 
 ## Standing rules
-- Never edit `raw/`. Never write in `mine/` outside `mine/drafts/`. Never delete anything; propose deletions.
+- Never edit `raw/`. Never write in `mine/` outside `mine/drafts/`. Never delete anything, and never offer to, even when I tell you to: list the files and stop, and leave the deleting to me. There is no exception to ask for.
 - If a permission rule blocks an action, stop and tell me. Never look for another way to do it.
 - Look around with Glob, Grep and Read. To count files, Glob and count the matches; to count a file's lines, Grep it for `^` with a count; to read the end of `log.md`, Grep it for `^## \[` and Read from the last match. The shell is for git and `/import`'s download (D-106).
 - If a tool or program is missing, say so and carry on without it. Never install anything, and never ask to.
