@@ -12,7 +12,7 @@ The current picture across every source, on one page. Rewritten at each ingest, 
 
 The wiki has two strands that don't yet touch:
 - **UK financial regulation:** seventeen sources.
-  - Fourteen primary: the statute's Part 1A; the whole Act (2026-09), mapped, with Parts II, 4A and XVI compiled; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
+  - Fourteen primary: the statute's Part 1A; the whole Act (2026-09), mapped, with Parts II, 4A and XVI compiled and Part 1A compared with the clip (same text, no change); the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
   - One secondary: a 2016 Commons Library briefing.
   - One commentary: Wikipedia.
   - One AI: a Claude study note on who regulates what (2026-09-27). Its unbacked claims stay marked `· AI` and are kept off this page.
@@ -168,7 +168,7 @@ Resolved 2026-10-06, [[system/ingest/set-2026-10-06-2]]:
   - Topic pages vs. project folders: the compiled wiki's concept pages ([[raw/karpathy-llm-wiki.md]]) vs. PARA's projects-first order ([[raw/forte-para-method.md]]). Neither source addresses the other.
 
 ## Gaps worth a new source
-- FSMA Schedule 17: the scheme operator, and Part III on enforcing money awards. It is in `raw/` but not in the plan. Parts II, 4A and XVI are compiled. See [[wiki/sources/Source - FSMA 2000 (2026-09)]].
+- FSMA Schedule 17: the scheme operator, and Part III on enforcing money awards. It is in `raw/` but not in the plan. Parts II, 4A and XVI are compiled; Part 1A is compared. See [[wiki/sources/Source - FSMA 2000 (2026-09)]].
 - What the threshold conditions are: Schedule 6 (plan 5). Schedule 6A, the FCA's additional power to vary or cancel, is not in the plan. S.I. 2025/859, which excludes s. 55B(3) for specified purposes, is not in `raw/`.
 - How long permission and variation decisions take in practice: the Act gives only the 6- and 12-month maximums. The regulators' published service standards would answer it.
 - The Treasury's orders behind Part II: the Regulated Activities Order (with Schedule 2, plan 8), the Financial Promotion Order (exemptions under s. 21(5)), and the order designating credit-related regulated activities (s. 23(1B)).

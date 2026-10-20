@@ -119,3 +119,6 @@ Applied: 2, 4. Skipped: 1, 3 (options, no letter given). Pages changed: 3 (Finan
 
 ## [2026-10-20] lint | apply report-2026-10-20-2
 Applied: 1a, 3a. Skipped: none. Pages changed: 5 (Financial Ombudsman Service, Source - FSMA 2000 (2026-09) - Part XVI, Ombudsman awards, Eligible complainant, overview), plus the Part XVI line in index.md. Status changes: none.
+
+## [2026-10-20] ingest | FSMA 2000 (2026-09), Part 1A
+Set: set-2026-10-20-3, 1 source, part 1A (pp. 5–51) of 8 planned parts, primary; a compare against the Part 1A clip. Pages: +0 new; 1 updated (Source - FSMA 2000 (2026-09): Part 1A row compared, open point on s. 3B(1)(c) answered). Conflicts: none; the two texts match word for word across ss. 1A–3T. Flags: the PDF does not settle the s. 3B(1)(c) open point; two stray read-only shell commands (`wc -l` on the clip, `git show HEAD:log.md`).
