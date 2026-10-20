@@ -9,7 +9,7 @@
 
 ## Current focus
 - Building this system
-- Now focus on building the M9 – Large Document support
+- Now focus on revise the MVP2 to close the MVP
 ## Glossary
 | Term              | Meaning here                                                            |
 | ----------------- | ----------------------------------------------------------------------- |
