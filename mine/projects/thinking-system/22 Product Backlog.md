@@ -273,5 +273,6 @@ Claude's lean: **a**, since it keeps `raw/` immutable and citations exact (D-042
 - **Overlaps and amendments:** `/import` gains the verdict **part**. The full Act and the Part 1A clip both stay, and Part 1A is compiled as a compare (D-110). A consolidated text is named with the year and month it is up to date to, and a later capture is a new version whose parts are compared when chosen (D-111).
 - **Citation form:** a PDF page plus the section; in Markdown, a link to the heading plus the section (D-112).
 - **Tests:** LD1–LD8 on the full Act (D-113).
+**Built in M9 (closed 2026-10-20), tests 8 of 8:** the whole FSMA 2000 mapped (49 Parts, 36 Schedules) from its contents page, Parts II, 4A and XVI compiled and Part 1A compared, across four sessions, with one stop and resume. Every citation into the Act gives its page and section. Rules added at the close: D-116. KAN-38 is In Review; Done on your word.
 - **A file with no contents pages,** such as the whole-Act PDF, is mapped from a clip of the publisher's contents page, the map's companion with no source page of its own (D-115, accepted 2026-10-17).
 **Constraint:** a copyrighted book stays private in `raw/` and never goes into a public showcase (D-079).

@@ -30,8 +30,8 @@ flowchart TD
     PM["M0 · Retrospective<br/>and MVP 2 scope"]:::done
     M7["M7 · Batch ingest<br/>and trust"]:::done
     M8["M8 · Research<br/>and import"]:::done
-    M9["M9 · Large<br/>documents"]:::next
-    G["M0 · Retrospective<br/>and showcase gate"]:::plan
+    M9["M9 · Large<br/>documents"]:::done
+    G["M0 · MVP 2 exit tests,<br/>retrospective and<br/>showcase gate"]:::next
     V1 --> PM --> M7 --> M8 --> M9
     M9 -- "MVP 2 complete" --> G
     classDef done fill:#dbeafe,stroke:#1d4ed8,color:#1e3a8a
@@ -55,7 +55,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 | **M0 · Retrospective and MVP 2 scope** | Fit the system to how you work, and scope MVP 2 (D-069, D-070) | Doc 87 (MVP Retrospective) completed; docs 11 and 21 revised for MVP 2; decisions on the items carried from M6 | You accept MVP 2's scope and module plan | **Closed 2026-09-30** (D-084) |
 | **M7 – Batch Ingest and Trust** | A topic comes in as a set: one run, one review, facts ranked by trust, conflicts resolved | Must: B-006 set ingest, B-007 trust levels (rule in doc 31 §2), B-008 conflict review (doc 31 §3), B-024 one move per set, tested on B-009 (the UK financial system). Should: B-011, B-025. Takes over the `ingest` skill from M3 | 5 or more sources on one topic compiled in one run with one review, conflicts first and facts sorted by trust; the MVP 1 ingest tests still pass. Tests I1–I7: 7 of 7 | **Closed 2026-10-06** |
 | **M8 – Research and Import** | Claude researches for you, and nothing enters twice | Must: B-004 research summary with sources, B-003 Claude's research as a source (D-075), B-037 `/import` | A new topic returns a summary in which every fact names its source, plus sources to clip; `/import` flags a planted duplicate and a planted new version. Tests IM1–IM6, RS1–RS4 and AI1–AI4: 14 of 14 (D-100, D-101) | **Closed 2026-10-14** |
-| **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section | About 1 week |
+| **M9 – Large Documents** | A 1,000-page book or a full Act can be compiled | Must: B-038 | A document of several hundred pages, such as the full FSMA 2000, compiled in parts across sessions, with progress tracked and every citation pointing to its page or section. Tests LD1–LD8: 8 of 8 (D-113) | **Closed 2026-10-20** |
 | **MVP 2 complete** | | | All six criteria in [[11 Project Charter]] §11, including the side-by-side test against a default Claude chat (D-083). Then the retrospective and the showcase gate in M0 (D-082) | |
 
 **Not in MVP 2:** everything else waits in the backlog, in Jira and [[22 Product Backlog]], with a proposed milestone. Work material and bank devices stay out until doc 36 exists (D-018, B-022).
@@ -240,7 +240,7 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - Claude in Chrome can't press the Web Clipper, and computer use only reads browser windows, so clipping stays your step. The FCA Handbook's "View as PDF" has no link for `/import`.
 - Eleven drafts wait for `/drafts`.
 
-## 12. M9 – Large Documents
+## 12. M9 closed on 2026-10-20
 - [x] Opened 2026-10-14 from the brief in [[89 M8 Handover]]. Docs 11 §11, 21 §2, 22 (B-038), 31 §2.2, 40 §4.1 and §4.7, and 03 (D-042, D-086, D-099, D-102, D-104, D-106) read, with the live `CLAUDE.md`, settings and skills. KAN-38 moved to In Progress. Tool facts checked (2026-10-14): Read takes a PDF at most 20 pages a call, rendered as images, and refuses a text file over 256 KB without a range; Pro has a five-hour session limit and a weekly limit, shared with claude.ai; usage per request grows with the session
 - [x] The handover's questions settled: map first and one part per run (D-107); progress on the map and in the set review, and one part of about 60 pages per session (D-108); the full Act as one PDF (D-109); the verdict **part** and a compare for Part 1A (D-110); amended Acts as dated versions (D-111); citations with their page or heading (D-112)
 - [x] `ingest/large-source.md` written, beside `ai-source.md`. Small edits in what other threads own: `ingest` (M7: A0, A1, the set review note, and the PDF ground rule as D-106 asked), `import` (M8: the verdict **part**, extent, legislation names), `ask` (M4: one line on parts not compiled), `CLAUDE.md` and `system/conventions.md` (M2: a pointer, the part page title, the citation form, legislation names). Mirrored in [[40 Claude Operating Instructions]] §2 and §4
@@ -253,10 +253,15 @@ One standing thread per module ([[02 Working Agreement]] §4, D-071). After its 
 - [x] LD4: Part II compiled, 36 facts, six citations traced to the PDF. **Pass** (546570b). `/lint` after it found 4 findings, none high and none on facts, against 6 and 5 high after M7's and M8's sets (86bae7c)
 - [x] LD5: Part 4A stopped after chunk 1a was written but before it was ticked; the next `/ingest` recorded 1a, compiled 1b, and added nothing twice. **Pass** (2026-10-20). The first real run of the resume path (D-086)
 - [x] Skill fixes from LD3–LD5: the map holds your emphasis and lists every raw file it links; a chunk is marked started before it is written; prospective text is stated as prospective; links are checked with Glob; read-only git may show what a stopped run wrote (D-106)
-- [ ] LD6–LD7: Part XVI and the Part 1A compare, `/lint` after each; three citations traced; the s. 228 capture line ticked
-- [ ] LD8: `/ask` on a part not compiled
-- [ ] **M9 exit: 8 of 8**; [[11 Project Charter]] §11 criterion 4 met
-- [ ] Handover written; next, MVP 2's exit: criteria 5 (side-by-side) and 6 (regression)
+- [x] Part 4A (e95badf), Part XVI (69e9232) and the Part 1A compare (b20a36c), `/lint` after each (5686667, 2465ed8, c81ef14): 5, 4 and 1 findings, of them 1, 2 and 0 high
+- [x] LD6: four parts across four sessions, the compare wrote nothing, citations traced in every part, all 522 citations into the Act with a page. **Pass**
+- [x] LD7: the FSMA leads on ss. 19, 23 and 55E–55F backed and moved to their subjects' pages; capture lines 8 and 16 ticked. **Pass**
+- [x] LD8: `/ask` on Part XXV says it isn't compiled and gives the command; general knowledge labelled. **Pass**
+- [x] **M9 exit: 8 of 8** (2026-10-20). [[11 Project Charter]] §11 criterion 4 (large documents) is met. KAN-38 In Review
+- [x] D-116 accepted at the close (2026-10-20): a claim leaning on another part cites `raw/`; a compare adds no claims; a chunk marked started; prospective text. `large-source.md` revised, and `CLAUDE.md` gains D-106's file-tool lines
+- [x] Handover written: [[90 M9 Handover]], with the request for M0
+- [ ] Closing files placed, committed and pushed; Sync
+- [ ] **Next:** MVP 2's exit, criteria 5 (side-by-side) and 6 (regression), then the retrospective and the showcase gate, scheduled by M0
 
 **Parked in M9 so far:**
 - A set whose files were moved into `raw/` but whose reply never came leaves them there with no set review, and the next `/ingest` sees an empty zone (seen 2026-10-15, when the Act was moved back by hand). For the handover.

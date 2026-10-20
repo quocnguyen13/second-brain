@@ -15,7 +15,7 @@ tags: [project/thinking-system, moc]
 > A personal knowledge assistant built on the **LLM Wiki** pattern: you collect sources, Claude compiles them into a cited wiki you read in Obsidian, and on top sit a thinking layer you own and, next, defined jobs done to your standards. Where it's going: [[10 Product Vision]]. How it works today: [[20 Product Requirements]].
 
 **Setup:** personal Windows PC · Claude Pro · Claude Code running inside the vault
-**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): M7 – Batch Ingest and Trust closed 2026-10-06 (7 of 7), and **M8 – Research and Import closed 2026-10-14**, tests 14 of 14, with the research and import criteria met ([[89 M8 Handover]]). Next: M9 – Large Documents. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082). **The backlog lives in Jira** since 2026-10-12: project Second Brain (KAN) holds each item's status, priority and sprint, and [[22 Product Backlog]] keeps the rules (D-104).
+**Where we are:** MVP 1 done 2026-09-25 (6 of 6). MVP 2 (Research assistant) in progress ([[11 Project Charter]] §11, D-084): M7 – Batch Ingest and Trust closed 2026-10-06 (7 of 7), M8 – Research and Import closed 2026-10-14 (14 of 14), and **M9 – Large Documents closed 2026-10-20**, tests 8 of 8, with the large-documents criterion met ([[90 M9 Handover]]). Next: MVP 2's exit tests, criteria 5 and 6, scheduled by M0. The showcase waits for a thinking layer worth showing; you decide after each MVP (D-082). **The backlog lives in Jira** since 2026-10-12: project Second Brain (KAN) holds each item's status, priority and sprint, and [[22 Product Backlog]] keeps the rules (D-104).
 
 ## Document set
 Numbered by SDLC stage, in blocks of ten ([[03 Decision Log]] D-080). A document keeps its number; a new one takes the next free number in its stage. Planned documents have their number reserved, shown in *italics* with the backlog item that writes them. Governance runs through every stage, and every module adds a delivery record.
@@ -108,7 +108,8 @@ Agile reviews and retrospectives, in date order.
 | 86 | [[86 M6 Handover]] | Closing state of M6 and MVP 1, to take to the M0 thread | Closed |
 | 87 | [[87 MVP Retrospective]] | Retrospective of MVP 1 and the input to MVP 2's scope | Draft |
 | 88 | [[88 M7 Handover]] | Closing state of M7, used to open the M8 chat | Closed |
-| 89 | [[89 M8 Handover]] | Closing state of M8, used to open the M9 chat | Current |
+| 89 | [[89 M8 Handover]] | Closing state of M8, used to open the M9 chat | Closed |
+| 90 | [[90 M9 Handover]] | Closing state of M9 and the last build module of MVP 2, to take to the M0 thread | Current |
 
 ## What the set was missing
 Checked on 2026-09-30 against the documents a standard SDLC and a Scrum-style process expect, and against what a reviewer of the showcase would look for.
@@ -240,3 +241,4 @@ Entries up to 1.35 use the document numbers of their time; the renumber map abov
 | 1.56 | 2026-10-15 | M9 tests begin. LD1 passes: the whole Act downloaded, 1,263 pages, verdict **part**. LD2 partial: the PDF has no contents pages, so the map couldn't name every Part. D-115 proposed: a large PDF with no contents is mapped from the publisher's contents page, clipped as a companion with no source page of its own. `large-source.md`, `ingest`, `import` and `system/test-results.md` revised; docs 00, 03, 21, 22 and 40 updated |
 | 1.57 | 2026-10-17 | D-115 accepted: a large PDF with no contents pages is mapped from a clip of the publisher's contents page. Docs 00, 03, 21, 22 and 40 updated |
 | 1.58 | 2026-10-20 | M9 tests LD2 (rerun), LD3, LD4 and LD5 pass. The Act is mapped (49 Parts, 36 Schedules) and Parts II and 4A are compiled; a run stopped mid-part resumed without adding anything twice. Small fixes in `large-source.md` and `ingest` from the runs. Docs 00, 21 and 40 and `system/test-results.md` updated |
+| **1.59** | 2026-10-20 | **M9 closed: tests 8 of 8.** The whole FSMA 2000 (1,263 pages) mapped from its contents page; Parts II, 4A and XVI compiled and Part 1A compared, across four sessions; one run stopped part-way and resumed without adding anything twice. Every citation into the Act gives its page and section. Criterion 4 of [[11 Project Charter]] §11 met. D-116 accepted. `large-source.md` and `CLAUDE.md` revised. Handover: [[90 M9 Handover]]. Docs 00, 03, 21, 22, 40 and 90 updated |
