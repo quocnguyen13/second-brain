@@ -27,6 +27,7 @@ Answer exactly one question from the wiki, show where every part of the answer c
 - **A question about the wiki itself** (how far my reading has got, what it holds, what's disputed or unverified) is answered from `wiki/overview.md`'s own text:
   - Take counts of sources, parts and pages from the overview's sentences. An index line's "(N sources)" is the length of that page's `sources` property, not a count of the wiki, and a page's list can leave sources out by design (the overview's leaves out the Claude note).
   - A heading's statement covers only that heading. "None open" under one strand's disputes says nothing about another strand. Read every strand's own "Where sources disagree" and report open and resolved disputes strand by strand.
+  - Summarise the overview's open points and its "Gaps worth a new source" under Not in the wiki, naming the main ones per strand. A gap mentioned only in the Recommendation doesn't count as reported.
 - Then Grep `wiki/` for the question's key terms, including synonyms and other spellings. The index is a starting point, not the search: a page it doesn't mention can still be the right one.
 - Read every page that looks relevant, then follow its links one hop where they bear on the question.
 - A source page with a **Parts** table maps a large document. If the question falls in a part whose status is `planned` or `not compiled`, say so under Not in the wiki: the part, where it sits in the raw file, and `/ingest part <document> <part>`. Don't read the uncompiled part to answer.
