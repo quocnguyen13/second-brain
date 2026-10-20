@@ -5,7 +5,7 @@ Sources for me to clip into `inbox/sources/`. `/research` and `/ingest` add line
 Format: `- [ ] YYYY-MM-DD title · publisher · date · link · level · Web Clipper or PDF download · the report or Claude output that asked for it`
 
 ## To clip
-- [ ] 2026-10-12 Financial Services and Markets Act 2000, s. 228 · legislation.gov.uk · revised, up to date 2026-10-12 · https://www.legislation.gov.uk/ukpga/2000/8/section/228 · primary · Web Clipper · [[system/research/research-2026-10-12-financial-ombudsman-bank-complaints]]
+- [x] 2026-10-12 Financial Services and Markets Act 2000, s. 228 · legislation.gov.uk · revised, up to date 2026-10-12 · https://www.legislation.gov.uk/ukpga/2000/8/section/228 · primary · Web Clipper · [[system/research/research-2026-10-12-financial-ombudsman-bank-complaints]] → [[raw/uk-parliament-fsma-2000-2026-09.pdf]], Part XVI
 - [x] 2026-10-12 DISP 2.7 Is the complainant eligible? · FCA Handbook · 2025-11-28 · https://www.handbook.fca.org.uk/handbook/DISP/2/7.pdf · primary · PDF download · [[system/research/research-2026-10-12-financial-ombudsman-bank-complaints]] → [[raw/fca-disp-2-7-complainant-eligibility.md]]
 - [x] 2026-10-12 Glossary: micro-enterprise · FCA Handbook · undated · https://handbook.fca.org.uk/glossary/G2623 · primary · Web Clipper · [[system/research/research-2026-10-12-financial-ombudsman-bank-complaints]] → [[raw/fca-glossary-micro-enterprise.md]]
 - [x] 2026-10-12 Glossary: small business · FCA Handbook · undated · https://handbook.fca.org.uk/handbook/glossary/G1095.html · primary · Web Clipper · [[system/research/research-2026-10-12-financial-ombudsman-bank-complaints]] → [[raw/fca-glossary-small-business.md]]

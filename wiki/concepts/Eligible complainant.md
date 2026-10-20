@@ -1,9 +1,9 @@
 ---
 type: concept
 status: verified
-sources: ["[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]"]
+sources: ["[[raw/fca-disp-2-7-complainant-eligibility.md]]", "[[raw/fca-glossary-small-business.md]]", "[[raw/fca-glossary-micro-enterprise.md]]", "[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-10-14"
-updated: "2026-10-14"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "complaints"]
 ---
 # Eligible complainant
@@ -11,6 +11,7 @@ tags: ["uk-financial-regulation", "complaints"]
 An eligible complainant is someone who may take a complaint to the Financial Ombudsman Service. They must be in an eligible class, such as a consumer or a small business, and the complaint must arise from a listed relationship with the firm ([[raw/fca-disp-2-7-complainant-eligibility.md]]).
 
 ## What the sources say
+- **The legal basis.** Under FSMA, a complainant is eligible for the compulsory jurisdiction if they fall within a class that the rules specify. The rules may make persons other than individuals eligible, but may make authorised persons eligible only in specified circumstances or for complaints of a specified kind ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=598]], s. 226(6)–(7)). The classes below are those rules.
 - **The classes** ([[raw/fca-disp-2-7-complainant-eligibility.md]], Eligible complainants):
   - consumer;
   - micro-enterprise;
@@ -46,7 +47,7 @@ An eligible complainant is someone who may take a complaint to the Financial Omb
   - guarantor;
   - recipient of a banker's reference;
   - a person the bank has pursued for payment under a credit agreement.
-- **PEPs.** Someone the firm has identified as a politically exposed person, or as a family member or known close associate of one, can complain about that identification and what followed from it ([[raw/fca-disp-2-7-complainant-eligibility.md]]).
+- **PEPs.** Someone the firm has identified as a politically exposed person, or as a family member or known close associate of one, can complain about that identification and what followed from it ([[raw/fca-disp-2-7-complainant-eligibility.md]]). The Act requires the rules to provide for this ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=598]], s. 226(7A)–(7D)).
 
 ## Where sources disagree
 - None found.
@@ -55,6 +56,7 @@ An eligible complainant is someone who may take a complaint to the Financial Omb
 - [[wiki/sources/Source - DISP 2.7 Complainant eligibility]]
 - [[wiki/sources/Source - FCA glossary small business]]
 - [[wiki/sources/Source - FCA glossary micro-enterprise]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09) - Part XVI]]
 
 ## Related
 - [[wiki/entities/Financial Ombudsman Service]]
