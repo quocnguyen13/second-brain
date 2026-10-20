@@ -4,7 +4,7 @@ status: verified
 trust: primary
 sources: ["[[raw/uk-parliament-fsma-2000-2026-09.pdf]]"]
 created: "2026-10-17"
-updated: "2026-10-18"
+updated: "2026-10-20"
 tags: ["uk-financial-regulation", "regulatory-perimeter"]
 ---
 # Source - FSMA 2000 (2026-09) - Part II
@@ -78,6 +78,7 @@ Part II, "Regulated and Prohibited Activities", draws the perimeter of UK financ
 - [[wiki/concepts/Solo and dual regulation]]
 - [[wiki/entities/HM Treasury]]
 - [[wiki/entities/Financial Conduct Authority]]
+- [[wiki/concepts/Part 4A permission]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]: claims backed
 
 ## Conflicts and open points

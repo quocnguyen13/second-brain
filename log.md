@@ -101,3 +101,9 @@ Set: set-2026-10-20, 1 source, part 4A (pp. 82–119) of 8 planned parts, primar
 
 ## [2026-10-20] ingest | resolve set-2026-10-20
 Decided: 1c. Skipped: none. Pages changed: FCA-PRA coordination; Source - FSMA 2000 (2026-09) - Part 4A; Source - FCA and Bank of England MoU 2024; overview.md; index.md. Status changes: FCA-PRA coordination: contested → verified.
+
+## [2026-10-20] lint | report-2026-10-20
+Scanned 84 pages, deep-checked 23. Findings: 5 (1 high, 2 medium, 2 low). Checks ticked: 0. No wiki pages changed.
+
+## [2026-10-20] lint | apply report-2026-10-20
+Applied: 1, 2a, 3a, 4, 5. Skipped: none. Pages changed: 6 (Source - FSMA 2000 (2026-09) - Part 4A, Source - FSMA 2000 (2026-09) - Part II, Part 4A permission, FCA-PRA coordination, Prudential Regulation Authority, overview). Status changes: none.

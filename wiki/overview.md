@@ -12,7 +12,7 @@ The current picture across every source, on one page. Rewritten at each ingest, 
 
 The wiki has two strands that don't yet touch:
 - **UK financial regulation:** seventeen sources.
-  - Fourteen primary: the statute's Part 1A; the whole Act (2026-09), mapped, with Part II compiled; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
+  - Fourteen primary: the statute's Part 1A; the whole Act (2026-09), mapped, with Parts II and 4A compiled; the FCA's and the PRA's own pages; the PRA's banking supervision approach; the FCA–Bank MoU; four DISP sections and two Glossary terms from the FCA Handbook; the Financial Ombudsman Service's own guide; and the FCA's Final Notice to TSB (2022).
   - One secondary: a 2016 Commons Library briefing.
   - One commentary: Wikipedia.
   - One AI: a Claude study note on who regulates what (2026-09-27). Its unbacked claims stay marked `· AI` and are kept off this page.

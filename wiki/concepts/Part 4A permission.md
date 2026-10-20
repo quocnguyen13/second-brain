@@ -21,7 +21,7 @@ The permission, given by the FCA or the PRA under Part 4A of FSMA, to carry on o
 - **It decides solo or dual.** A "PRA-authorised person" is one whose permission covers at least one PRA-regulated activity ([[raw/uk-parliament-fsma-2000-part-1a.md]], s. 2B(5)). See [[wiki/concepts/Solo and dual regulation]].
 
 ### Changing it at the firm's request (emphasis)
-- **A new product outside the permission.** To carry on a regulated activity its permission doesn't cover, a firm applies to vary the permission by adding the activity or changing its description: to the FCA if it isn't PRA-authorised and the activity isn't PRA-regulated; to the PRA, which needs the FCA's consent, if the firm is PRA-authorised or the new activity is PRA-regulated ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(3); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=88]], s. 55H(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(3)). Carrying it on without the variation breaches a regulator's requirement ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=52]], s. 20(1)). See [[wiki/concepts/General prohibition]].
+- **A new product outside the permission.** To carry on a regulated activity its permission doesn't cover, a firm applies to vary the permission by adding the activity or changing its description: to the FCA if it isn't PRA-authorised and the activity isn't PRA-regulated; to the PRA, which needs the FCA's consent, if the firm is PRA-authorised or the new activity is PRA-regulated ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=83]], s. 55A(3); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=88]], s. 55H(2); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(1); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(3)). Carrying it on without the variation breaches a regulator's requirement ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=52]], s. 20(1), (1A)). See [[wiki/concepts/General prohibition]].
 - **Grounds to refuse.** The FCA may refuse to advance its operational objectives; the PRA to advance any of its objectives; and the FCA may withhold consent to a PRA variation to advance its operational objectives ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=88]], s. 55H(4); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(4)–(5)).
 - **Cancelling.** The firm may apply to cancel: to the FCA if it isn't PRA-authorised, or to the PRA, which consults the FCA ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=88]], s. 55H(3); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55I(2)). A permission left with no activities must be cancelled once it is no longer needed ([[raw/uk-parliament-fsma-2000-2026-09.pdf#page=89]], s. 55H(6); [[raw/uk-parliament-fsma-2000-2026-09.pdf#page=90]], s. 55I(6)).
 
@@ -54,6 +54,7 @@ The permission, given by the FCA or the PRA under Part 4A of FSMA, to carry on o
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Threshold Conditions]]

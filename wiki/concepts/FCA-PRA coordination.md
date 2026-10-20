@@ -115,6 +115,7 @@ The current memorandum, signed 2024-03-26 under ss. 3D and 3E, replaces the 2019
 - [[wiki/sources/Source - The PRA's approach to banking supervision]]
 - [[wiki/sources/Source - FCA and Bank of England MoU 2024]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Part 4A permission]]

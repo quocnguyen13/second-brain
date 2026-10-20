@@ -53,6 +53,7 @@ The PRA is the Bank of England acting through its Prudential Regulation Committe
 - [[wiki/sources/Source - Bank of England prudential regulation page]]
 - [[wiki/sources/Source - Claude on who regulates what (2026-09-27)]]
 - [[wiki/sources/Source - FSMA 2000 (2026-09) - Part 4A]]
+- [[wiki/sources/Source - FSMA 2000 (2026-09)]]
 
 ## Related
 - [[wiki/concepts/Part 4A permission]]
